@@ -7,6 +7,10 @@ let typedInput = ""; // 用户在输入框中输入的内容
 let currentWordToPronounce = ""; // 存储当前要发音的单词
 let currentLoadedFilename = ""; // 记录当前加载的文件名，用于保存进度
 
+// 会话内缓存：避免同一单词重复请求后端（配合后端磁盘缓存，重复词延迟接近 0）
+const translationCache = new Map(); // 单词 -> 中文翻译
+const audioUrlCache = new Map();    // 单词 -> 音频 Blob URL
+
 // DOM 元素引用
 const originalTextDisplay = document.getElementById('original-text-display');
 const typingInput = document.getElementById('typing-input');
@@ -69,60 +73,90 @@ function renderOriginalText() {
 }
 
 
-// --- 获取单词翻译 (现在只获取中文翻译) ---
+// --- 获取单词翻译 (现在只获取中文翻译，带会话内缓存) ---
 async function getWordTranslationAndDefinition(word) {
-    try {
-        const cleanedWordForApi = cleanWord(word);
-        if (!cleanedWordForApi) {
-            return { definition: "", translation: "无效单词" }; // 返回空定义，确保结构
-        }
+    const cleanedWordForApi = cleanWord(word);
+    if (!cleanedWordForApi) {
+        return { definition: "", translation: "无效单词" };
+    }
 
-        // 调用后端API，后端现在只返回翻译
+    // 命中缓存直接返回，不发请求
+    if (translationCache.has(cleanedWordForApi)) {
+        return { definition: "", translation: translationCache.get(cleanedWordForApi) };
+    }
+
+    try {
         const response = await fetch(`/api/translate/${encodeURIComponent(cleanedWordForApi)}`);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
-        
-        return {
-            definition: data.definition || "", // 保持这个字段，但它应该会是空的
-            translation: data.translation || "未找到中文翻译。"
-        };
+
+        const translation = data.translation || "未找到中文翻译。";
+        translationCache.set(cleanedWordForApi, translation);
+        return { definition: "", translation };
     } catch (error) {
         console.error("获取单词翻译失败:", error);
         return { definition: "", translation: "（获取翻译失败）" };
     }
 }
 
-// --- 获取单词发音并播放 ---
+// --- 获取单词发音并播放（带会话内缓存） ---
 async function playWordPronunciation(word) {
     if (!word) return;
+
+    const cleanedWordForApi = cleanWord(word);
+    if (!cleanedWordForApi) return;
 
     pronounceButton.disabled = true;
     pronounceButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
     try {
-        const cleanedWordForApi = cleanWord(word);
-        const response = await fetch(`/api/pronounce/${encodeURIComponent(cleanedWordForApi)}`);
-        if (!response.ok) {
-            const errorData = await response.json();
-            throw new Error(`HTTP error! status: ${response.status}: ${errorData.detail}`);
+        let audioUrl = audioUrlCache.get(cleanedWordForApi);
+        if (!audioUrl) {
+            const response = await fetch(`/api/pronounce/${encodeURIComponent(cleanedWordForApi)}`);
+            if (!response.ok) {
+                const errorData = await response.json().catch(() => ({}));
+                throw new Error(`HTTP ${response.status}: ${errorData.detail || '请求失败'}`);
+            }
+            const audioBlob = await response.blob();
+            audioUrl = URL.createObjectURL(audioBlob);
+            audioUrlCache.set(cleanedWordForApi, audioUrl); // 缓存供本会话复用，不 revoke
         }
-        const audioBlob = await response.blob();
-        const audioUrl = URL.createObjectURL(audioBlob);
         audioPlayer.src = audioUrl;
         audioPlayer.play();
         audioPlayer.onended = () => {
-            URL.revokeObjectURL(audioUrl);
             pronounceButton.disabled = false;
             pronounceButton.innerHTML = '<i class="fas fa-volume-up"></i>';
         };
     } catch (error) {
+        // 发音失败只记录日志：不打断翻译显示（两者现在是并行请求）
         console.error("获取或播放发音失败:", error);
-        // 如果发音失败，只在解释栏显示错误信息，不影响单词显示
-        resultDefinitionSpan.textContent = "发音失败: " + error.message; 
-        // resultWordSpan.textContent = ""; // 不清除单词
         pronounceButton.disabled = false;
         pronounceButton.innerHTML = '<i class="fas fa-volume-up"></i>';
+    }
+}
+
+// --- 预取下一个单词的发音和翻译（用户打字时后台提前准备好，完成时接近零等待） ---
+function prefetchNextWord() {
+    if (currentWordIndex >= originalWords.length) return;
+    const nextWord = cleanWord(originalWords[currentWordIndex]);
+    if (!nextWord) return;
+
+    if (!translationCache.has(nextWord)) {
+        fetch(`/api/translate/${encodeURIComponent(nextWord)}`)
+            .then(r => r.ok ? r.json() : null)
+            .then(data => {
+                if (data && data.translation) translationCache.set(nextWord, data.translation);
+            })
+            .catch(() => {});
+    }
+    if (!audioUrlCache.has(nextWord)) {
+        fetch(`/api/pronounce/${encodeURIComponent(nextWord)}`)
+            .then(r => r.ok ? r.blob() : null)
+            .then(blob => {
+                if (blob) audioUrlCache.set(nextWord, URL.createObjectURL(blob));
+            })
+            .catch(() => {});
     }
 }
 
@@ -148,6 +182,7 @@ async function loadText(filename, initialWordIndex = 0) {
         resultDefinitionSpan.textContent = ""; // 清空之前显示的解释
         
         renderOriginalText();
+        prefetchNextWord(); // 预取当前首个单词，用户打完第一个词时无需等待
         typingInput.focus();
         alert(`文本 "${filename}" 加载成功！从第 ${initialWordIndex + 1} 个单词开始。`);
 
@@ -284,11 +319,12 @@ typingInput.addEventListener('input', async (e) => {
         typingInput.classList.remove('incorrect-input-border');
         
         currentWordToPronounce = currentTargetWord;
-        
-        await playWordPronunciation(currentWordToPronounce);
 
-        // 只解构 translation，因为我们只用它
-        const { translation } = await getWordTranslationAndDefinition(currentTargetWord); 
+        // 发音和翻译并行请求（原来是先等发音完成再请求翻译，延迟是两者之和）
+        const [, { translation }] = await Promise.all([
+            playWordPronunciation(currentWordToPronounce),
+            getWordTranslationAndDefinition(currentTargetWord)
+        ]);
         
         // 只显示中文翻译，并处理可能的错误信息
         if (translation && translation !== "无效单词" && !translation.includes("（翻译服务出错") && !translation.includes("（后端翻译功能未启用")) {
@@ -307,6 +343,9 @@ typingInput.addEventListener('input', async (e) => {
         currentWordIndex++;
         typingInput.value = '';
         typedInput = '';
+
+        // 后台预取下一个单词，用户打完下一个词时几乎零等待
+        prefetchNextWord();
 
         await saveProgress();
 

@@ -1,6 +1,8 @@
 import os
 import re
 import json
+import asyncio
+import sqlite3
 from pathlib import Path
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.responses import HTMLResponse, FileResponse, JSONResponse, StreamingResponse
@@ -8,6 +10,7 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from typing import Optional
 from gtts import gTTS
+import edge_tts
 import aiofiles
 import requests # 仍然需要requests，因为googletrans可能内部用到，或者未来扩展
 
@@ -40,6 +43,95 @@ AUDIO_CACHE_DIR.mkdir(exist_ok=True)
 
 # 进度文件路径
 PROGRESS_FILE = Path("progress.json")
+
+# 翻译缓存文件路径（googletrans 每次都实时请求 Google，很慢且不稳定，必须缓存）
+TRANSLATION_CACHE_FILE = Path("translation_cache.json")
+
+# 访问 Google（gTTS/googletrans）的超时秒数：网络不稳时快速失败，避免请求无限挂起
+EXTERNAL_REQUEST_TIMEOUT = 8.0
+
+# 启动时加载磁盘上的翻译缓存
+translation_cache: dict = {}
+if TRANSLATION_CACHE_FILE.exists():
+    try:
+        with open(TRANSLATION_CACHE_FILE, "r", encoding="utf-8") as f:
+            translation_cache = json.load(f)
+        print(f"已加载翻译缓存，共 {len(translation_cache)} 个单词。")
+    except Exception as e:
+        print(f"警告：加载翻译缓存失败: {e}")
+
+
+def _save_translation_cache():
+    try:
+        with open(TRANSLATION_CACHE_FILE, "w", encoding="utf-8") as f:
+            json.dump(translation_cache, f, ensure_ascii=False, indent=2)
+    except Exception as e:
+        print(f"警告：写入翻译缓存失败: {e}")
+
+
+# 本地离线词典（ECDICT 英汉词典）：查词零网络、毫秒级，避免依赖 Google 翻译
+DICT_DB_FILE = Path("ecdict.sqlite")
+
+dict_conn: Optional[sqlite3.Connection] = None
+if DICT_DB_FILE.exists():
+    try:
+        dict_conn = sqlite3.connect(str(DICT_DB_FILE), check_same_thread=False)
+        dict_conn.execute("SELECT translation FROM entries WHERE word = 'test'").fetchone()
+        print("ECDICT 本地词典已加载，单词翻译将优先走本地查词。")
+    except Exception as e:
+        dict_conn = None
+        print(f"警告：加载 ECDICT 词典失败: {e}，翻译将回退到在线方式。")
+else:
+    print("提示：未找到 ecdict.sqlite，翻译将使用在线方式。")
+
+
+def lookup_local_dict(word: str) -> Optional[str]:
+    """查本地词典，返回中文释义；未命中返回 None"""
+    if dict_conn is None:
+        return None
+    try:
+        row = dict_conn.execute(
+            "SELECT translation FROM entries WHERE word = ? AND translation != ''", (word,)
+        ).fetchone()
+    except sqlite3.Error:
+        return None
+    if row and row[0]:
+        # 释义按换行分隔多条（含字面 \n），合并为一行便于前端展示
+        merged = row[0].replace('\\n', '；').replace('\r', '').replace('\n', '；')
+        return re.sub(r'；+', '；', merged).strip('； ')
+    return None
+
+
+def translate_via_youdao(word: str) -> Optional[str]:
+    """有道词典查词（国内访问快、无需 API key）；失败返回 None"""
+    try:
+        resp = requests.get(
+            "https://dict.youdao.com/jsonapi_s",
+            params={"doctype": "json", "jsonversion": "4", "q": word},
+            timeout=EXTERNAL_REQUEST_TIMEOUT,
+        )
+        data = resp.json()
+        # 优先取英汉词典释义（带词性），如 "n. 象，大象"
+        ec_word = (data.get("ec") or {}).get("word") or {}
+        lines = [
+            f"{t.get('pos', '')} {t.get('tran', '')}".strip()
+            for t in (ec_word.get("trs") or []) if t.get("tran")
+        ]
+        if lines:
+            return "；".join(lines)
+        # 回退：网络释义第一条
+        web = (data.get("web_trans") or {}).get("web-translation") or []
+        if web:
+            trans = web[0].get("trans") or []
+            if trans and trans[0].get("value"):
+                return str(trans[0]["value"]).strip()
+    except Exception as e:
+        print(f"youdao 查询失败: {e}")
+    return None
+
+
+# 发音服务：edge-tts 走微软国内可达节点，作为首选；gTTS 作为备用
+TTS_VOICE = "en-US-AriaNeural"
 
 # 硬编码的单词解释 (这个现在彻底不需要了，留空即可)
 WORD_DEFINITIONS = {}
@@ -140,12 +232,23 @@ async def pronounce_word(word: str):
     audio_file_path = AUDIO_CACHE_DIR / f"{cleaned_word}.mp3"
 
     if not audio_file_path.exists():
+        # 首选 edge-tts：微软服务国内直连、速度快，原生异步不阻塞事件循环
         try:
-            tts = gTTS(text=cleaned_word, lang='en', slow=False)
-            tts.save(audio_file_path)
+            communicate = edge_tts.Communicate(cleaned_word, TTS_VOICE)
+            await asyncio.wait_for(communicate.save(str(audio_file_path)), timeout=EXTERNAL_REQUEST_TIMEOUT)
         except Exception as e:
-            print(f"gTTS 生成发音失败: {e}")
-            raise HTTPException(status_code=500, detail=f"生成发音失败: {e}")
+            print(f"edge-tts 生成发音失败: {e}，回退 gTTS...")
+            # 备用 gTTS（同步阻塞库，放线程池 + 超时）
+            def generate_via_gtts():
+                tts = gTTS(text=cleaned_word, lang='en', slow=False)
+                tts.save(audio_file_path)
+            try:
+                await asyncio.wait_for(asyncio.to_thread(generate_via_gtts), timeout=EXTERNAL_REQUEST_TIMEOUT)
+            except asyncio.TimeoutError:
+                raise HTTPException(status_code=504, detail="生成发音超时（TTS 服务不可达），请稍后重试")
+            except Exception as e2:
+                print(f"gTTS 生成发音失败: {e2}")
+                raise HTTPException(status_code=500, detail=f"生成发音失败: {e2}")
 
     def iterfile():
         with open(audio_file_path, mode="rb") as file_like:
@@ -157,7 +260,8 @@ async def pronounce_word(word: str):
 @app.get("/api/translate/{word}")
 async def get_word_translation(word: str):
     """
-    通过 googletrans 获取单词的中文翻译。
+    获取单词的中文翻译：优先本地 ECDICT 离线词典（毫秒级），
+    未命中再走 googletrans 在线翻译（带缓存与超时）。
     """
     cleaned_word = re.sub(r'[^a-zA-Z0-9]', '', word).lower() # 清理单词，只保留字母和数字
     if not cleaned_word:
@@ -165,15 +269,40 @@ async def get_word_translation(word: str):
         # 尽管我们只用translation，但为了兼容性，可以返回空definition
         return JSONResponse(content={"translation": "无效单词", "definition": ""})
 
-    if translator:
+    # 本地离线词典优先：零网络、毫秒级
+    local_result = lookup_local_dict(cleaned_word)
+    if local_result:
+        return JSONResponse(content={"translation": local_result, "definition": ""})
+
+    # 在线翻译缓存（有道/googletrans 的历史结果）
+    cached = translation_cache.get(cleaned_word)
+    if cached:
+        return JSONResponse(content={"translation": cached, "definition": ""})
+
+    # 有道词典（国内访问快）→ googletrans 兜底；两者都是同步库，放线程池 + 超时
+    translated_text = None
+    try:
+        translated_text = await asyncio.wait_for(
+            asyncio.to_thread(translate_via_youdao, cleaned_word), timeout=EXTERNAL_REQUEST_TIMEOUT
+        )
+    except asyncio.TimeoutError:
+        print("youdao 翻译超时")
+
+    if not translated_text and translator:
         try:
-            # 假设源语言是英文，目标语言是中文
-            translated_text = translator.translate(cleaned_word, dest='zh-cn').text
-            # 返回时，definition字段为空字符串，确保前端只显示translation
-            return JSONResponse(content={"translation": translated_text, "definition": ""})
+            translated_text = await asyncio.wait_for(
+                asyncio.to_thread(lambda: translator.translate(cleaned_word, dest='zh-cn').text),
+                timeout=EXTERNAL_REQUEST_TIMEOUT,
+            )
+        except asyncio.TimeoutError:
+            return JSONResponse(content={"translation": "（翻译超时，请稍后重试）", "definition": ""})
         except Exception as e:
             print(f"使用 googletrans 翻译失败: {e}")
-            return JSONResponse(content={"translation": f"（翻译服务出错：{e}）", "definition": ""})
-    else:
-        return JSONResponse(content={"translation": "（后端翻译功能未启用，请检查 googletrans 安装）", "definition": ""})
+
+    if translated_text:
+        translation_cache[cleaned_word] = translated_text
+        _save_translation_cache()
+        return JSONResponse(content={"translation": translated_text, "definition": ""})
+
+    return JSONResponse(content={"translation": "（翻译服务暂不可用，请稍后重试）", "definition": ""})
 

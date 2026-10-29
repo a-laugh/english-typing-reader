@@ -1,5 +1,8 @@
 .history
 __pycache__
 audio_cache
+ecdict.sqlite
 progress.json
+translation_cache.json
 texts
+.venv
