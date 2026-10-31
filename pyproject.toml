@@ -1,7 +1,7 @@
 [project]
-name = "little-typist"
+name = "english-typing-reader"
 version = "0.1.0"
-description = "Add your description here"
+description = "英语打字阅读练习 Web 应用：逐词打字跟读，带发音与中文翻译"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
