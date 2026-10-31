@@ -42,19 +42,25 @@ function renderOriginalText() {
     const startIndex = Math.max(0, currentWordIndex - DISPLAY_WORDS_AROUND_CURRENT);
     const endIndex = Math.min(originalWords.length, currentWordIndex + DISPLAY_WORDS_AROUND_CURRENT);
 
-    const wordsToRender = [];
+    // 用 DOM API + textContent 构建：上传文本中的内容只作纯文本渲染，
+    // 拼进 innerHTML 会让文本里携带的 HTML/脚本被执行（存储型 XSS）
+    const frag = document.createDocumentFragment();
     for (let i = startIndex; i < endIndex; i++) {
         const word = originalWords[i];
         let spanClass = '';
         if (i < currentWordIndex) {
-            spanClass = 'word-correct'; 
+            spanClass = 'word-correct';
         } else if (i === currentWordIndex) {
-            spanClass = 'current-word'; 
+            spanClass = 'current-word';
         }
-        wordsToRender.push(`<span class="${spanClass}">${word}</span>`);
+        const span = document.createElement('span');
+        if (spanClass) span.className = spanClass;
+        span.textContent = word;
+        frag.appendChild(span);
+        frag.appendChild(document.createTextNode(' '));
     }
 
-    originalTextDisplay.innerHTML = wordsToRender.join(' ');
+    originalTextDisplay.replaceChildren(frag);
 
     const currentWordSpan = originalTextDisplay.querySelector('.current-word');
     if (currentWordSpan) {
@@ -93,7 +99,11 @@ async function getWordTranslationAndDefinition(word) {
         const data = await response.json();
 
         const translation = data.translation || "未找到中文翻译。";
-        translationCache.set(cleanedWordForApi, translation);
+        // 以「（」开头的都是后端瞬时错误文案（超时/服务不可用），
+        // 不进会话缓存，服务恢复后重试还能拿到真实翻译
+        if (!translation.startsWith("（")) {
+            translationCache.set(cleanedWordForApi, translation);
+        }
         return { definition: "", translation };
     } catch (error) {
         console.error("获取单词翻译失败:", error);
@@ -146,7 +156,10 @@ function prefetchNextWord() {
         fetch(`/api/translate/${encodeURIComponent(nextWord)}`)
             .then(r => r.ok ? r.json() : null)
             .then(data => {
-                if (data && data.translation) translationCache.set(nextWord, data.translation);
+                // 瞬时错误文案（以「（」开头）同样不进缓存
+                if (data && data.translation && !data.translation.startsWith("（")) {
+                    translationCache.set(nextWord, data.translation);
+                }
             })
             .catch(() => {});
     }
@@ -248,8 +261,9 @@ async function loadAndApplyProgress() {
             const filenameFromUrl = new URLSearchParams(window.location.search).get('file'); // 如果是通过URL参数加载
             const cleanedFilenameFromUrl = filenameFromUrl ? filenameFromUrl.trim().toLowerCase() : '';
 
-            // 检查URL参数中的文件名（如果存在）与进度文件名是否匹配
-            if (cleanedProgressFilename === cleanedFilenameFromUrl) {
+            // URL 带 ?file= 参数时以它为准做匹配；不带参数视为无覆盖，
+            // 直接匹配进度文件——否则页面加载时的自动续读永远不会触发
+            if (!cleanedFilenameFromUrl || cleanedProgressFilename === cleanedFilenameFromUrl) {
                 // 使用正确的字段名来显示和加载
                 const confirmLoad = confirm(`检测到上次学习 "${progress.current_text_filename}" 进行到第 ${progress.current_word_index + 1} 个单词。是否从此处继续？`);
                 if (confirmLoad) {
@@ -317,32 +331,26 @@ typingInput.addEventListener('input', async (e) => {
     if (isWordEnded && cleanedTypedInput === cleanedTargetWord) {
         typingInput.classList.add('correct-input-border');
         typingInput.classList.remove('incorrect-input-border');
-        
-        currentWordToPronounce = currentTargetWord;
 
-        // 发音和翻译并行请求（原来是先等发音完成再请求翻译，延迟是两者之和）
-        const [, { translation }] = await Promise.all([
-            playWordPronunciation(currentWordToPronounce),
-            getWordTranslationAndDefinition(currentTargetWord)
-        ]);
-        
-        // 只显示中文翻译，并处理可能的错误信息
-        if (translation && translation !== "无效单词" && !translation.includes("（翻译服务出错") && !translation.includes("（后端翻译功能未启用")) {
-             resultDefinitionSpan.textContent = translation; 
-        } else if (translation.includes("（翻译服务出错") || translation.includes("（后端翻译功能未启用")) {
-             resultDefinitionSpan.textContent = translation; // 显示后端返回的错误信息
-        }
-        else {
-             resultDefinitionSpan.textContent = "未找到中文翻译。"; // 如果翻译为空或无效
-        }
-        
-        resultWordSpan.textContent = currentTargetWord; // 单词仍然显示在这里
-
-        pronounceButton.disabled = false;
-
+        // 同步快照并立即推进状态：等待发音/翻译的窗口内若再触发 input 事件，
+        // 状态未推进会导致二次走完成路径（跳词、清掉已输入的下一个词）
+        const completedWord = currentTargetWord;
+        currentWordToPronounce = completedWord;
         currentWordIndex++;
         typingInput.value = '';
         typedInput = '';
+        renderOriginalText();
+
+        // 发音和翻译并行请求（原来是先等发音完成再请求翻译，延迟是两者之和）
+        const [, { translation }] = await Promise.all([
+            playWordPronunciation(completedWord),
+            getWordTranslationAndDefinition(completedWord)
+        ]);
+
+        resultDefinitionSpan.textContent = translation || "未找到中文翻译。";
+        resultWordSpan.textContent = completedWord;
+
+        pronounceButton.disabled = false;
 
         // 后台预取下一个单词，用户打完下一个词时几乎零等待
         prefetchNextWord();
@@ -356,7 +364,6 @@ typingInput.addEventListener('input', async (e) => {
             pronounceButton.disabled = true;
             await saveProgress();
         }
-        renderOriginalText(); 
     } else if (cleanedTypedInput === cleanedTargetWord.substring(0, cleanedTypedInput.length)) {
         typingInput.classList.remove('incorrect-input-border');
         typingInput.classList.remove('correct-input-border');

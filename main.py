@@ -3,6 +3,7 @@ import re
 import json
 import asyncio
 import sqlite3
+import uuid
 from pathlib import Path
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.responses import HTMLResponse, FileResponse, JSONResponse, StreamingResponse
@@ -40,6 +41,9 @@ TEXTS_DIR.mkdir(exist_ok=True)
 # 音频缓存目录
 AUDIO_CACHE_DIR = Path("audio_cache")
 AUDIO_CACHE_DIR.mkdir(exist_ok=True)
+# 清理上次运行遗留的临时音频片段（超时后被取消的生成任务可能迟到落盘）
+for _stale in AUDIO_CACHE_DIR.glob("*.part"):
+    _stale.unlink(missing_ok=True)
 
 # 进度文件路径
 PROGRESS_FILE = Path("progress.json")
@@ -153,12 +157,17 @@ async def read_root():
 @app.post("/api/upload_text/")
 async def upload_text(file: UploadFile = File(...)):
     """上传文本文件"""
-    file_location = TEXTS_DIR / file.filename
+    # 只保留文件名部分并校验后缀：multipart 文件名由客户端控制，
+    # 不清洗会导致路径穿越（../ 或绝对路径）写任意文件
+    safe_name = Path(file.filename or "").name
+    if not safe_name or Path(safe_name).suffix.lower() not in ('.txt', '.md'):
+        raise HTTPException(status_code=400, detail="仅支持上传 .txt / .md 文本文件")
+    file_location = TEXTS_DIR / safe_name
     try:
         async with aiofiles.open(file_location, "wb") as buffer:
             while content := await file.read(1024):
                 await buffer.write(content)
-        return {"message": f"文件 '{file.filename}' 上传成功", "filename": file.filename}
+        return {"message": f"文件 '{safe_name}' 上传成功", "filename": safe_name}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"文件上传失败: {e}")
 
@@ -232,23 +241,32 @@ async def pronounce_word(word: str):
     audio_file_path = AUDIO_CACHE_DIR / f"{cleaned_word}.mp3"
 
     if not audio_file_path.exists():
-        # 首选 edge-tts：微软服务国内直连、速度快，原生异步不阻塞事件循环
+        # 先写临时文件再原子替换：任一环节失败都不残留空/半截 MP3 被当作有效缓存。
+        # 临时名必须每请求唯一：同词并发请求共用一个 .part 会互相截断写坏缓存
+        tmp_path = AUDIO_CACHE_DIR / f"{cleaned_word}.{os.getpid()}.{uuid.uuid4().hex}.part"
         try:
-            communicate = edge_tts.Communicate(cleaned_word, TTS_VOICE)
-            await asyncio.wait_for(communicate.save(str(audio_file_path)), timeout=EXTERNAL_REQUEST_TIMEOUT)
-        except Exception as e:
-            print(f"edge-tts 生成发音失败: {e}，回退 gTTS...")
-            # 备用 gTTS（同步阻塞库，放线程池 + 超时）
-            def generate_via_gtts():
-                tts = gTTS(text=cleaned_word, lang='en', slow=False)
-                tts.save(audio_file_path)
             try:
+                # 首选 edge-tts：微软服务国内直连、速度快，原生异步不阻塞事件循环
+                communicate = edge_tts.Communicate(cleaned_word, TTS_VOICE)
+                await asyncio.wait_for(communicate.save(str(tmp_path)), timeout=EXTERNAL_REQUEST_TIMEOUT)
+            except Exception as e:
+                print(f"edge-tts 生成发音失败: {e}，回退 gTTS...")
+                # 备用 gTTS：放线程池，并给 gTTS 自身传超时，避免 wait_for 取消后留下无限等待的孤儿线程
+                def generate_via_gtts():
+                    tts = gTTS(text=cleaned_word, lang='en', slow=False, timeout=EXTERNAL_REQUEST_TIMEOUT)
+                    tts.save(tmp_path)
                 await asyncio.wait_for(asyncio.to_thread(generate_via_gtts), timeout=EXTERNAL_REQUEST_TIMEOUT)
-            except asyncio.TimeoutError:
-                raise HTTPException(status_code=504, detail="生成发音超时（TTS 服务不可达），请稍后重试")
-            except Exception as e2:
-                print(f"gTTS 生成发音失败: {e2}")
-                raise HTTPException(status_code=500, detail=f"生成发音失败: {e2}")
+
+            if not tmp_path.exists() or tmp_path.stat().st_size == 0:
+                raise RuntimeError("生成的音频内容为空")
+            os.replace(tmp_path, audio_file_path)
+        except asyncio.TimeoutError:
+            tmp_path.unlink(missing_ok=True)
+            raise HTTPException(status_code=504, detail="生成发音超时（TTS 服务不可达），请稍后重试")
+        except Exception as e:
+            tmp_path.unlink(missing_ok=True)
+            print(f"生成发音失败: {e}")
+            raise HTTPException(status_code=500, detail=f"生成发音失败: {e}")
 
     def iterfile():
         with open(audio_file_path, mode="rb") as file_like:
