@@ -1,15 +1,20 @@
 name: Fetch 6 Minute English episodes
 
 # 每周日北京时间 05:00 抓取最近 30 天 BBC 6 Minute English（每周四更新一期，
-# 在架约 4-5 期），烘焙数据后提交回仓库。
-# GitHub Pages（Deploy from branch: main /docs）随之自动更新站点。
+# 在架约 4-5 期），烘焙数据后：
+#   - 剧集 JSON（小体积、可 review）提交回仓库
+#   - 单词发音 MP3 不进仓库（避免 git 历史每周膨胀 2-5MB）：
+#     存放在 actions/cache 中滚动复用，随 Pages 部署包分发
+# Pages 由本 workflow 部署（Settings → Pages → Source 需选 GitHub Actions）。
 on:
   schedule:
     - cron: "0 21 * * 6" # UTC 周六 21:00 = 北京时间周日 05:00（GitHub cron 可能延迟数分钟到一小时）
   workflow_dispatch: # 支持手动触发
 
 permissions:
-  contents: write # 需要 push 数据提交
+  contents: write # 提交剧集数据
+  pages: write # 部署 Pages
+  id-token: write # Pages 部署的 OIDC 认证
 
 jobs:
   fetch:
@@ -47,6 +52,15 @@ jobs:
             test -s ecdict.sqlite
           fi
 
+      # 单词发音 MP3 缓存：滚动 key（每次运行都会保存新条目，restore 命中最近一次），
+      # fetcher 只为缺失的词增量生成；缓存丢失时自动全量重建（约 10 分钟）
+      - name: Cache TTS audio
+        uses: actions/cache@v4
+        with:
+          path: docs/data/audio
+          key: tts-audio-v1-${{ github.run_id }}
+          restore-keys: tts-audio-v1-
+
       # GLM_API_KEY 未配置时 fetcher 自动跳过语境词表（只用官方词汇表 + ECDICT）。
       # LLM_MODEL / LLM_BASE_URL 为可选仓库 Variables（Actions 的 vars 不会自动成为
       # 环境变量，必须显式透传；未配置时为空串，fetcher 侧用默认值兜底）
@@ -57,14 +71,35 @@ jobs:
           LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
         run: uv run python fetcher.py
 
-      - name: Commit and push if changed
+      # 只提交剧集 JSON；音频（docs/data/audio/）已 gitignore，不进仓库历史
+      - name: Commit episode data if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet docs/data; then
-            echo "无新内容，跳过提交"
+          if git diff --quiet docs/data/episodes; then
+            echo "剧集数据无变化，跳过提交"
           else
-            git add docs/data
+            git add docs/data/episodes
             git commit -m "data: update 6 Minute English episodes ($(date -u +%F))"
             git push
           fi
+
+      # 每次都部署：即使剧集 JSON 无变化，音频缓存也可能是增量新增的
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+  deploy:
+    needs: fetch
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

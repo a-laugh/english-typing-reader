@@ -9,24 +9,29 @@
 
 ```
 GitHub Actions（每周日 05:00 北京时间）                    用户浏览器（GitHub Pages）
-┌──────────────────────────────────────┐                ┌─────────────────────────────┐
-│ fetcher.py                           │   git push     │ docs/（纯静态，无后端）      │
-│  1. 抓 BBC 栏目页 → 最近 30 天剧集     │ ───────────►   │  选剧集 → 打字 → 完词即      │
-│  2. 解析 transcript + 官方词汇表       │  docs/data/    │   播放烘焙 MP3（零延迟）     │
-│  3. GLM 生成全篇语境词表（可选）        │  自动更新      │   + 查烘焙词典显示释义       │
-│  4. ECDICT 补全逐词中文释义            │                │  进度存 localStorage        │
-│  5. edge-tts 生成单词发音 MP3（共享）   │                │  无 MP3 时回退浏览器 TTS     │
-│  6. 清理过期剧集与无引用音频            │                └─────────────────────────────┘
-└──────────────────────────────────────┘
+┌──────────────────────────────────────┐   git push      ┌─────────────────────────────┐
+│ fetcher.py                           │  剧集 JSON      │ docs/（纯静态，无后端）      │
+│  1. 抓 BBC 栏目页 → 最近 30 天剧集     │  （~60KB/周）   │  选剧集 → 打字 → 完词即      │
+│  2. 解析 transcript + 官方词汇表       │ ───────────►   │   播放烘焙 MP3（零延迟）     │
+│  3. GLM 生成全篇语境词表（可选）        │                │   + 查烘焙词典显示释义       │
+│  4. ECDICT 补全逐词中文释义            │  Pages 部署包   │  进度存 localStorage        │
+│  5. edge-tts 生成单词发音 MP3（共享）   │ （站点+数据+    │  无 MP3 时回退浏览器 TTS     │
+│  6. 清理过期剧集与无引用音频            │  音频，随 workflow ──────► Pages       │
+└──────────────────────────────────────┘   直接部署）    └─────────────────────────────┘
 ```
 
-所有重活（抓取、LLM、词典、TTS 发音）都在构建期完成；站点运行时**零后端、零额外网络请求**——
-发音直接播放仓库里的 MP3（`docs/data/audio/`，跨剧集共享、随窗口滚动清理），
-释义查本地 JSON，国内访问 GitHub Pages 即可用。
+所有重活（抓取、LLM、词典、TTS 发音）都在构建期完成；站点运行时**零后端、零额外网络请求**，
+国内访问 GitHub Pages 即可用。
+
+**体积设计**：单词发音 MP3（跨剧集共享、随窗口滚动清理，当前 ~11MB）**不进 git 仓库**——
+存放在 Actions 缓存中滚动复用，随 Pages 部署包分发；仓库只保留剧集 JSON
+（每周净增约 60KB，一年约 3MB）。历史提交中的音频 blob 无法自动移除（git 历史不可变），
+但自本方案起不再增长。
 
 ## 开启站点（一次性）
 
-1. 仓库 **Settings → Pages** → Source 选 *Deploy from a branch* → 分支 `main`、目录 `/docs` → Save。
+1. 仓库 **Settings → Pages** → Build and deployment → Source 选 **GitHub Actions**
+   （站点由 fetch workflow 部署，不再用 branch 部署）。
 2. （可选，语境释义需要）**Settings → Secrets and variables → Actions → 「Secrets」标签页 → New repository secret**：
    - 名称 `GLM_API_KEY`，值为 [智谱开放平台](https://open.bigmodel.cn/) 的 API Key。
    - 注意是**仓库级 Secret**：不要放 Environment secret（workflow 未声明 `environment:`，读不到），
@@ -43,8 +48,8 @@ GitHub Actions（每周日 05:00 北京时间）                    用户浏览
 uv sync --dev
 uv run pytest tests/ -q        # 解析器与滚动窗口测试（fixture 为真实页面快照）
 
-# 本地构建数据（国内网络需走代理；根目录放 ecdict.sqlite 可补全词典释义）
-HTTPS_PROXY=http://127.0.0.1:20172 uv run python fetcher.py --no-llm
+# 本地构建数据（需能访问 BBC；如走代理，用标准环境变量 HTTPS_PROXY/HTTP_PROXY 指向你的代理）
+HTTPS_PROXY=<你的代理地址> uv run python fetcher.py --no-llm
 
 # 起静态服务浏览
 python3 -m http.server -d docs 8000   # 打开 http://127.0.0.1:8000
@@ -76,10 +81,10 @@ python tests/e2e_site.py     # 21 项 GUI 检查 + 滚动窗口兼容专测，�
 
 ```
 fetcher.py                    # 构建脚本（抓取/解析/GLM/ECDICT/清理，默认 30 天窗口）
-docs/                         # GitHub Pages 站点（index.html + script.js）
-docs/data/episodes/           # 构建产物：index.json + 每期剧集 JSON（含烘焙词典）
-docs/data/audio/              # 构建产物：单词发音 MP3（edge-tts，跨剧集共享，~11MB/30天窗口）
-.github/workflows/            # 每周构建 workflow（周日北京 05:00 + 手动触发）
+docs/                         # 站点（index.html + script.js）
+docs/data/episodes/           # 构建产物：index.json + 每期剧集 JSON（含烘焙词典，提交进仓库）
+docs/data/audio/              # 构建产物：单词发音 MP3（gitignore；Actions 缓存 + Pages 部署包分发）
+.github/workflows/            # 每周构建 workflow（周日北京 05:00 + 手动触发，含 Pages 部署）
 tests/                        # pytest（fixtures 为 BBC 真实页面快照）
 ecdict.sqlite                 # 本地离线词典（gitignore；Actions 中按 Release 缓存下载）
 ```
@@ -93,4 +98,6 @@ ecdict.sqlite                 # 本地离线词典（gitignore；Actions 中按 
   修复时对照 `tests/fixtures/` 更新解析器即可。
 - 发音优先播放构建期烘焙的 MP3（本地文件、零延迟，不依赖浏览器语音）；仅当某词音频
   生成失败或缺失时回退浏览器语音合成（Chrome / Edge / Safari 桌面端均有离线英文语音）。
-  音频随剧集滚动清理（按在架剧集的词集引用计数），仓库体积每周净增约 2-5MB。
+  音频随剧集滚动清理（按在架剧集的词集引用计数）。
+- 音频缓存放于 Actions cache（滚动 key），被 GC 回收后下次构建会自动全量重建（约 10 分钟），
+  不影响站点可用性。

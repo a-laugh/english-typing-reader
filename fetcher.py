@@ -3,8 +3,9 @@
 
 BBC 每周四更新一期，默认滚动窗口 30 天（在架约 4-5 期），
 由 GitHub Actions 每周日凌晨跑一次（也支持手动触发）。
-产物：剧集 JSON（含逐词词典）+ 单词发音 MP3（edge-tts，运行时零延迟播放）。
-在 GitHub Actions（海外网络直连）或本地（HTTPS_PROXY=http://127.0.0.1:20172）运行：
+产物：剧集 JSON（含逐词词典，提交进仓库）+ 单词发音 MP3
+（edge-tts，不进仓库——由 workflow 缓存并随 Pages 部署包分发）。
+本地运行需能访问 BBC，如走代理用标准环境变量：HTTPS_PROXY=... 
     uv run python fetcher.py [--days 30] [--no-llm] [--no-audio]
 
 产物写入 docs/data/episodes/：

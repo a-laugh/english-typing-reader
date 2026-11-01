@@ -5,3 +5,4 @@ ecdict.sqlite
 .venv
 .zcode/
 tests/e2e-screenshots/
+docs/data/audio/
