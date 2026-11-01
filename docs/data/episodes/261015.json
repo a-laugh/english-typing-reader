@@ -57,7 +57,7 @@
       "translation": "a strong desire for",
       "source": "official"
     },
-    "safehaven": {
+    "haven": {
       "translation": "something or somewhere protected from harm or loss",
       "source": "official",
       "phrase": "safe haven"
@@ -67,7 +67,7 @@
       "source": "official",
       "phrase": "safe haven"
     },
-    "haven": {
+    "safehaven": {
       "translation": "something or somewhere protected from harm or loss",
       "source": "official",
       "phrase": "safe haven"
@@ -77,7 +77,7 @@
       "source": "official",
       "phrase": "out of thin air"
     },
-    "thin": {
+    "out": {
       "translation": "from nothing or nowhere",
       "source": "official",
       "phrase": "out of thin air"
@@ -87,17 +87,17 @@
       "source": "official",
       "phrase": "out of thin air"
     },
-    "out": {
+    "thin": {
       "translation": "from nothing or nowhere",
       "source": "official",
       "phrase": "out of thin air"
     },
-    "hankering": {
+    "ahankeringfor": {
       "translation": "a strong desire for",
       "source": "official",
       "phrase": "a hankering for"
     },
-    "ahankeringfor": {
+    "hankering": {
       "translation": "a strong desire for",
       "source": "official",
       "phrase": "a hankering for"

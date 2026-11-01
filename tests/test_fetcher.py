@@ -176,6 +176,41 @@ def test_bake_word_dict_alias_order_deterministic():
     ]
 
 
+# ---------------------------------------------------------------- TTS 音频
+
+
+def test_collect_words_represents_original_spelling():
+    """音频键用清洗词（与前端文件名一致），值保留原文写法给 TTS（连写词读不准）。"""
+    episode = {
+        "transcript": "We've had the six-minute quiz. we've",
+        "vocabulary": [{"word": "the grid", "definition": "d"}],
+        "context_glossary": {"inhabit": {"meaning": "x", "sentence": "s"}},
+    }
+    words = fetcher.collect_words(episode)
+    assert words["weve"] == "We've"      # 首次出现的原文，而非第二次的 we've
+    assert words["sixminute"] == "six-minute"
+    assert words["grid"] == "grid"       # 词汇表短语取成分词（TTS 文本为单词本身）
+    assert words["thegrid"] == "the grid"  # 短语连写键，代表原文为短语
+    assert words["inhabit"] == "inhabit"  # 语境词表键
+    assert "the" in words                 # 虚词也在对白里，需要发音
+
+
+def test_prune_audio_removes_unreferenced(tmp_path, monkeypatch):
+    monkeypatch.setattr(fetcher, "AUDIO_DIR", tmp_path)
+    for name in ("hi.mp3", "old.mp3", ".stale.part"):
+        (tmp_path / name).write_bytes(b"x")
+    removed = fetcher.prune_audio({"hi"})
+    assert removed == 2
+    assert (tmp_path / "hi.mp3").exists()
+    assert not (tmp_path / "old.mp3").exists()
+    assert not (tmp_path / ".stale.part").exists()
+
+
+def test_prune_audio_no_dir(tmp_path, monkeypatch):
+    monkeypatch.setattr(fetcher, "AUDIO_DIR", tmp_path / "nonexistent")
+    assert fetcher.prune_audio(set()) == 0
+
+
 # ---------------------------------------------------------------- 滚动窗口
 
 

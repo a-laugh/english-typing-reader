@@ -3,8 +3,9 @@
 
 BBC 每周四更新一期，默认滚动窗口 30 天（在架约 4-5 期），
 由 GitHub Actions 每周日凌晨跑一次（也支持手动触发）。
+产物：剧集 JSON（含逐词词典）+ 单词发音 MP3（edge-tts，运行时零延迟播放）。
 在 GitHub Actions（海外网络直连）或本地（HTTPS_PROXY=http://127.0.0.1:20172）运行：
-    uv run python fetcher.py [--days 30] [--no-llm]
+    uv run python fetcher.py [--days 30] [--no-llm] [--no-audio]
 
 产物写入 docs/data/episodes/：
     {id}.json     单期完整数据（transcript、词汇表、语境词表、逐词词典）
@@ -13,14 +14,17 @@ BBC 每周四更新一期，默认滚动窗口 30 天（在架约 4-5 期），
 """
 
 import argparse
+import asyncio
 import json
 import os
 import re
 import sqlite3
 import sys
+import uuid
 from datetime import date, timedelta
 from pathlib import Path
 
+import edge_tts
 import requests
 from bs4 import BeautifulSoup
 
@@ -29,6 +33,12 @@ EPISODE_PATH_RE = re.compile(
     r"^/learningenglish/english/features/6-minute-english_(\d{4})/ep-(\d{6})$"
 )
 DATA_DIR = Path(__file__).resolve().parent / "docs" / "data" / "episodes"
+
+# 单词发音 MP3 缓存（构建期烘焙，跨剧集共享；前端优先播放，浏览器 TTS 兜底）
+AUDIO_DIR = DATA_DIR.parent / "audio"
+TTS_VOICE = os.environ.get("TTS_VOICE") or "en-US-AriaNeural"
+TTS_CONCURRENCY = 8
+TTS_TIMEOUT = 15.0
 
 REQUEST_TIMEOUT = 30
 HTTP_HEADERS = {
@@ -332,6 +342,121 @@ def lookup_ecdict(words: list[str], db_path: Path) -> dict[str, str]:
 
 
 # ---------------------------------------------------------------------------
+# 构建期 TTS 音频（edge-tts）
+# ---------------------------------------------------------------------------
+
+def collect_words(episode: dict) -> dict[str, str]:
+    """收集一期剧集需要发音的单词，返回 {清洗后词: 代表原文}。
+
+    键与前端 cleanWord/音频文件名一致（仅小写字母数字）；值保留一个原文写法
+    （如 we've / six-minute）交给 TTS，避免合成器读连写词。
+    词汇表/语境词表中的短语（the grid）与词典层别名规则一致：额外收录
+    非虚词成分（grid）——前端按空白分词，永远只会查到成分词。
+    """
+    words: dict[str, str] = {}
+
+    def remember(token: str):
+        cleaned = clean_word(token)
+        if cleaned and cleaned not in words:
+            words[cleaned] = token
+
+    def remember_with_parts(token: str):
+        remember(token)
+        if " " in token:
+            for part in WORD_RE.findall(token.lower()):
+                if part not in STOPWORDS:
+                    remember(part)
+
+    for token in episode["transcript"].split():
+        remember(token)
+    for item in episode.get("vocabulary", []):
+        remember_with_parts(item.get("word", ""))
+    for key in episode.get("context_glossary", {}):
+        remember_with_parts(key)
+    return words
+
+
+async def _tts_one(cleaned: str, tts_text: str) -> None:
+    """生成单个单词 MP3：临时文件 + 原子替换，任一失败不留半截缓存。"""
+    tmp_path = AUDIO_DIR / f".{cleaned}.{os.getpid()}.{uuid.uuid4().hex}.part"
+    try:
+        for attempt in (1, 2):
+            try:
+                communicate = edge_tts.Communicate(tts_text, TTS_VOICE)
+                await asyncio.wait_for(communicate.save(str(tmp_path)), TTS_TIMEOUT)
+                if tmp_path.exists() and tmp_path.stat().st_size > 0:
+                    os.replace(tmp_path, AUDIO_DIR / f"{cleaned}.mp3")
+                    return
+                raise RuntimeError("生成内容为空")
+            except Exception as e:
+                tmp_path.unlink(missing_ok=True)
+                if attempt == 2:
+                    raise
+                log(f"TTS 重试 {cleaned}（{e}）")
+                await asyncio.sleep(1)
+    finally:
+        tmp_path.unlink(missing_ok=True)
+
+
+async def _generate_missing(words: dict[str, str]) -> tuple[int, int]:
+    sem = asyncio.Semaphore(TTS_CONCURRENCY)
+    generated = failed = 0
+
+    async def worker(cleaned: str, tts_text: str):
+        nonlocal generated, failed
+        async with sem:
+            try:
+                await _tts_one(cleaned, tts_text)
+                generated += 1
+            except Exception as e:
+                failed += 1
+                log(f"TTS 失败 {cleaned}: {e}")
+
+    await asyncio.gather(*(worker(c, t) for c, t in words.items()))
+    return generated, failed
+
+
+def generate_missing_audio(episodes: list[dict]) -> tuple[int, int]:
+    """为在架剧集的全部单词补齐缺失音频（跳过已有，跨剧集共享去重）。
+
+    返回 (generated, failed)。TTS 服务不可达只警告不失败——前端会兜底浏览器 TTS。
+    """
+    AUDIO_DIR.mkdir(parents=True, exist_ok=True)
+    # 清理上次运行遗留的临时片段
+    for stale in AUDIO_DIR.glob("*.part"):
+        stale.unlink(missing_ok=True)
+
+    merged: dict[str, str] = {}
+    for episode in episodes:
+        for cleaned, original in collect_words(episode).items():
+            merged.setdefault(cleaned, original)
+    missing = {
+        c: t for c, t in merged.items() if not (AUDIO_DIR / f"{c}.mp3").exists()
+    }
+    if not missing:
+        return 0, 0
+    log(f"TTS 音频：共 {len(merged)} 词，缺 {len(missing)}，开始生成（{TTS_VOICE}）…")
+    generated, failed = asyncio.run(_generate_missing(missing))
+    log(f"TTS 音频：新生成 {generated} 个，失败 {failed} 个"
+        + ("（前端将回退浏览器 TTS）" if failed else ""))
+    return generated, failed
+
+
+def prune_audio(referenced: set[str]) -> int:
+    """删除不再被任何在架剧集引用的音频与遗留临时文件，保持 docs/data 有界。"""
+    if not AUDIO_DIR.exists():
+        return 0
+    removed = 0
+    for f in AUDIO_DIR.iterdir():
+        if f.suffix == ".part" or (f.suffix == ".mp3" and f.stem not in referenced):
+            f.unlink()
+            removed += 1
+    if removed:
+        log(f"已清理 {removed} 个无引用/残留音频")
+    return removed
+
+
+# ---------------------------------------------------------------------------
 # 烘焙逐词词典
 # ---------------------------------------------------------------------------
 
@@ -403,12 +528,13 @@ def bake_word_dict(episode: dict, ecdict_path: Path | None) -> dict:
 # 主流程
 # ---------------------------------------------------------------------------
 
-def build(days: int, no_llm: bool) -> int:
+def build(days: int, no_llm: bool, no_audio: bool = False) -> int:
     today = date.today()
     cutoff = today - timedelta(days=days - 1)  # 含今天在内的 N 天窗口
     api_key = os.environ.get("GLM_API_KEY", "")
     ecdict_path = find_ecdict()
     log(f"窗口：{cutoff} ~ {today}（{days} 天）；LLM：{'关' if no_llm or not api_key else '开'}；"
+        f"音频：{'关' if no_audio else '开'}；"
         f"ECDICT：{ecdict_path or '未找到（未覆盖词将无释义）'}")
 
     DATA_DIR.mkdir(parents=True, exist_ok=True)
@@ -477,6 +603,14 @@ def build(days: int, no_llm: bool) -> int:
     # 滚动窗口：清理过期剧集，再重建 index.json
     kept = prune_and_reindex(DATA_DIR, cutoff)
 
+    # 构建期 TTS：为在架剧集补齐缺失音频，并清掉无引用的过期音频
+    referenced_words: set[str] = set()
+    for ep in kept:
+        referenced_words |= set(collect_words(ep))
+    if not no_audio:
+        generate_missing_audio(kept)
+    prune_audio(referenced_words)
+
     # 全部失败且货架为空 → 视为构建失败，让 Actions 显示红并保留重试机会；
     # 货架上还有旧剧集时降级为警告（站点仍可用，下次构建会重试缺失剧集）
     if failures and not kept:
@@ -526,9 +660,10 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--days", type=int, default=30, help="滚动窗口天数（默认 30）")
     parser.add_argument("--no-llm", action="store_true", help="跳过 GLM 语境词表生成")
+    parser.add_argument("--no-audio", action="store_true", help="跳过 TTS 发音音频生成")
     args = parser.parse_args()
     try:
-        return build(args.days, args.no_llm)
+        return build(args.days, args.no_llm, args.no_audio)
     except requests.RequestException as e:
         log(f"网络请求失败（索引页不可达？）: {e}")
         return 1

@@ -40,6 +40,8 @@ def main() -> int:
         page = browser.new_page(viewport={"width": 1360, "height": 900})
         page.on("console", lambda m: console_errors.append(m.text) if m.type == "error" else None)
         page.on("pageerror", lambda e: console_errors.append(str(e)))
+        seen_requests: list[str] = []
+        page.on("request", lambda r: seen_requests.append(r.url))
 
         print("== T1 首页加载与剧集列表 ==")
         page.goto(BASE)
@@ -67,6 +69,9 @@ def main() -> int:
             "() => document.querySelectorAll('.word-correct').length === 1", timeout=3000
         )
         check("正确完词后前进（1 词标绿）", True)
+        check("完词播放的是构建期烘焙音频", any(u.endswith("data/audio/hi.mp3") for u in seen_requests),
+              str([u for u in seen_requests if "audio" in u][:3]))
+        check("烘焙音频文件在架", (ROOT / "docs" / "data" / "audio" / "hi.mp3").is_file())
         result = page.text_content("#result-display")
         check("侧栏显示该词释义", "hi" in result.lower() and any(k in result for k in ("你好", "喂", "嗨", "问候")), result[:80])
 
