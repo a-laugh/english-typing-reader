@@ -227,9 +227,16 @@ function primeAudio(cleaned) {
     return audio;
 }
 
+// 当前正在播放的 MP3：快速连打时先停掉上一个，避免多词重叠发声
+// （旧版 Web Speech 路径的 speechSynthesis.cancel() 互斥语义，MP3 路径同样需要）
+let activeAudio = null;
+
 async function speakWord(word) {
     const cleaned = cleanWord(word);
     if (!cleaned) return;
+    if (activeAudio && !activeAudio.paused) {
+        activeAudio.pause();
+    }
     const cached = audioCache.get(cleaned);
     if (cached === null) {
         // 已知无烘焙音频（构建期生成失败/缺失）
@@ -242,6 +249,7 @@ async function speakWord(word) {
         // 直接 play()：流式起播，首字节到达即出声——不等 canplaythrough，
         // 否则冷启动时（国内访问 github.io 带宽差）要等整个文件下载完才发声
         await audio.play();
+        activeAudio = audio;
     } catch (e) {
         // 404 / 加载失败 / 自动播放策略限制 → 浏览器 TTS 兜底
         speakViaTts(cleaned);

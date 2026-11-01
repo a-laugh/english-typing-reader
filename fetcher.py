@@ -289,7 +289,12 @@ def generate_context_glossary(transcript: str, api_key: str) -> dict:
         try:
             resp = requests.post(url, headers=headers, json=payload, timeout=120)
             resp.raise_for_status()
-            content = resp.json()["choices"][0]["message"]["content"]
+            try:
+                content = resp.json()["choices"][0]["message"]["content"]
+            except (ValueError, KeyError, IndexError) as e:
+                # HTTP 200 但 body 不是预期结构（网关故障页等）：
+                # 把响应体片段带进异常消息，方便从 Actions 日志定位
+                raise ValueError(f"GLM 响应结构异常（{e}），body 前 200 字符: {resp.text[:200]!r}")
             glossary = _parse_json_block(content)
             if not isinstance(glossary, dict):
                 raise ValueError("LLM 输出不是 JSON 对象")
@@ -297,10 +302,9 @@ def generate_context_glossary(transcript: str, api_key: str) -> dict:
             return glossary
         except Exception as e:
             log(f"GLM 语境词表第 {attempt} 次尝试失败: {e}")
-            if isinstance(e, ValueError) or isinstance(e, json.JSONDecodeError):
+            if isinstance(e, ValueError) and "GLM 响应结构异常" not in str(e):
                 # 解析失败时留一小段原始输出，方便从 Actions 日志定位模型行为
-                raw = content if isinstance(content, str) else str(content)
-                log(f"GLM 原始输出前 200 字符: {raw[:200]!r}")
+                log(f"GLM 原始输出前 200 字符: {str(content)[:200]!r}")
     return {}
 
 

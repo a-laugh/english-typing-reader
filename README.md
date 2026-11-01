@@ -61,7 +61,9 @@ python3 -m http.server -d docs 8000   # 打开 http://127.0.0.1:8000
 pip install playwright
 PLAYWRIGHT_DOWNLOAD_HOST=https://npmmirror.com/mirrors/playwright/ python -m playwright install chromium
 python3 -m http.server -d docs 8901 &
-python tests/e2e_site.py     # 21 项 GUI 检查 + 滚动窗口兼容专测，截图见 tests/e2e-screenshots/
+python tests/e2e_site.py     # 24 项 GUI 检查 + 滚动窗口兼容专测，截图见 tests/e2e-screenshots/
+                             # 前置：本地需先完整构建（含音频，勿用 --no-audio）——
+                             # 其中有断言依赖 docs/data/audio/hi.mp3 在架
 ```
 
 `fetcher.py [--days N] [--no-llm]`：抓取最近 N 天剧集、烘焙 `docs/data/episodes/`

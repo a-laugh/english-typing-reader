@@ -359,6 +359,73 @@ def test_prune_audio_no_dir(tmp_path, monkeypatch):
     assert fetcher.prune_audio(set()) == 0
 
 
+# ---------------------------------------------------------------- rebake / TTS
+
+
+def test_rebake_rebuilds_dict_keeps_glossary(tmp_path, monkeypatch):
+    """rebake：重建词典（ECDICT 层恢复）、保留 context_glossary 与 transcript、
+    不触网（独立模式在 parse_index 之前返回）。"""
+    import os
+    data_dir = tmp_path / "episodes"
+    data_dir.mkdir()
+    episode = {
+        "id": "261001", "title": "T", "pub_date": "2026-10-01",
+        "bbc_url": "https://example.com", "transcript": "summer heat",
+        "vocabulary": [], "context_glossary": {"heat": {"meaning": "高温", "sentence": "s"}},
+        "dict": {"onlyofficial": {"translation": "x", "source": "official"}},
+    }
+    (data_dir / "261001.json").write_text(json.dumps(episode, ensure_ascii=False), encoding="utf-8")
+
+    db = tmp_path / "ecdict.sqlite"
+    _make_dict_db(db, "entries")
+    monkeypatch.setattr(fetcher, "DATA_DIR", data_dir)
+    monkeypatch.setattr(fetcher, "ECDICT_MIN_BYTES", 1)
+    monkeypatch.setattr(fetcher, "ECDICT_CANDIDATES", [db])
+    monkeypatch.setattr(fetcher, "AUDIO_DIR", tmp_path / "audio")  # rebake 不碰音频
+
+    rc = fetcher.build(days=30, no_llm=True, no_audio=True, rebake=True)
+    assert rc == 0
+    rebaked = json.loads((data_dir / "261001.json").read_text(encoding="utf-8"))
+    assert rebaked["context_glossary"] == episode["context_glossary"], "语境词表必须保留"
+    assert rebaked["transcript"] == episode["transcript"]
+    assert rebaked["dict"]["summer"]["source"] == "ecdict", "ECDICT 层必须恢复"
+    assert rebaked["dict"]["heat"]["source"] == "context", "语境层优先于词典层"
+    assert "onlyofficial" not in rebaked["dict"], "旧词典整体重建而非合并"
+
+
+def test_generate_missing_audio_incremental(tmp_path, monkeypatch):
+    """TTS 音频：跳过已有、只补缺失；临时文件不残留。"""
+    audio_dir = tmp_path / "audio"
+    audio_dir.mkdir()
+    (audio_dir / "hi.mp3").write_bytes(b"old")
+    (audio_dir / ".stale.part").write_bytes(b"x")
+    monkeypatch.setattr(fetcher, "AUDIO_DIR", audio_dir)
+
+    saved_paths = []
+
+    class FakeCommunicate:
+        def __init__(self, text, voice):
+            self.text = text
+
+        async def save(self, path):
+            saved_paths.append(path)
+            import pathlib
+            pathlib.Path(path).write_bytes(b"mp3")
+
+    monkeypatch.setattr(fetcher.edge_tts, "Communicate", FakeCommunicate)
+
+    generated, failed = fetcher.generate_missing_audio([{
+        "transcript": "Hi hot summer",   # hi 已有；hot/summer 待生成
+        "vocabulary": [],
+        "context_glossary": {},
+    }])
+    assert (generated, failed) == (2, 0)
+    assert (audio_dir / "hi.mp3").read_bytes() == b"old", "已有音频不重新生成"
+    assert (audio_dir / "hot.mp3").exists() and (audio_dir / "summer.mp3").exists()
+    # TTS 文本用原文写法（cleaned 键 -> 代表原文）
+    assert not list(audio_dir.glob("*.part")), "临时文件必须清理"
+
+
 # ---------------------------------------------------------------- 滚动窗口
 
 
