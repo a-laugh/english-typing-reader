@@ -52,17 +52,20 @@ def main() -> int:
         check("列表标注发布日期", any("10/29" in o["t"] for o in options), str(options))
         page.screenshot(path=str(SHOTS / "t1_home.png"))
 
-        print("== T2 加载节目与打字主流程 ==")
+        print("== T2 加载节目与打字主流程（选择即加载） ==")
         page.select_option("#episode-selector", "261029")
-        page.click("#load-episode-btn")
         page.wait_for_selector(".current-word", timeout=5000)
         page.wait_for_timeout(500)
         audio_reqs = {u for u in seen_requests if "/data/audio/" in u}
         check("加载节目即窗口化预取音频（≥5 词）", len(audio_reqs) >= 5, f"{len(audio_reqs)} 个: {sorted(audio_reqs)[:3]}")
         first_word = page.text_content(".current-word")
         check("transcript 已渲染且首词高亮", first_word == "Hi", f"首词={first_word!r}")
+        badges = page.eval_on_selector_all(".speaker-badge", "els => els.map(e => e.textContent)")
+        check("对话回合带说话人徽章", len(badges) >= 3 and badges[0] == "Georgie", str(badges[:4]))
         meta = page.text_content("#episode-meta")
-        check("meta 栏含日期/剩余天数/进度", "2026-10-29" in meta and "剩" in meta and "进度 0/" in meta, meta)
+        check("meta 栏含日期与剩余天数", "2026-10-29" in meta and "剩" in meta, meta)
+        hint = page.text_content("#hint-progress")
+        check("提示行显示进度", "0/" in hint, hint)
         check("BBC 原文链接存在", page.eval_on_selector("#episode-meta a", "a => a.href").endswith("ep-261029"))
         page.screenshot(path=str(SHOTS / "t2_loaded.png"))
 
@@ -75,8 +78,8 @@ def main() -> int:
         check("完词播放的是构建期烘焙音频", any(u.endswith("data/audio/hi.mp3") for u in seen_requests),
               str([u for u in seen_requests if "audio" in u][:3]))
         check("烘焙音频文件在架", (ROOT / "docs" / "data" / "audio" / "hi.mp3").is_file())
-        result = page.text_content("#result-display")
-        check("侧栏显示该词释义", "hi" in result.lower() and any(k in result for k in ("你好", "喂", "嗨", "问候")), result[:80])
+        gloss = page.text_content("#dialog-display .gloss")
+        check("行内翻译紧跟完成的词", gloss and any(k in gloss for k in ("你好", "喂", "嗨", "问候")), gloss)
 
         # 正确输入第二个词 "Neil."（词尾标点，无需输入标点）
         page.fill("#typing-input", "neil ")
@@ -84,9 +87,8 @@ def main() -> int:
             "() => document.querySelectorAll('.word-correct').length === 2", timeout=3000
         )
         check("第二词完成后累计 2 词标绿", True)
-
-        # 发音按钮在完词后可用（无头环境无语音输出，仅验证交互状态）
-        check("发音按钮已启用", page.is_enabled("#pronounce-button"))
+        gloss_count = page.eval_on_selector_all("#dialog-display .gloss", "els => els.length")
+        check("行内翻译只跟随最新完成的词（唯一）", gloss_count == 1, f"gloss 数={gloss_count}")
 
         # 错误输入 → 红框
         page.fill("#typing-input", "xyz")
@@ -104,7 +106,6 @@ def main() -> int:
 
         print("== T4 换剧集互不干扰 ==")
         page.select_option("#episode-selector", "261022")
-        page.click("#load-episode-btn")
         page.wait_for_function(
             "() => document.querySelectorAll('.word-correct').length === 0", timeout=5000
         )
@@ -136,7 +137,7 @@ def main() -> int:
             _os.utime(DATA / "index.json", (_bumped, _bumped))
 
             page.reload()
-            page.wait_for_selector("#episode-bar", timeout=5000)
+            page.wait_for_selector("#episode-selector option", state="attached", timeout=5000)
             time.sleep(0.5)
             notice = page.text_content("#notice")
             check("过期后提示『上次的节目已下线』", notice and "已下线" in notice, notice)
@@ -168,7 +169,6 @@ def main() -> int:
         check("恢复数据后两期重新在架", "261022" in options3 and "261029" in options3, str(options3))
         # 261022 的进度已被 GC，手动选择 261029 应自动续读其保留进度（2 词标绿）
         page.select_option("#episode-selector", "261029")
-        page.click("#load-episode-btn")
         page.wait_for_function(
             "() => document.querySelectorAll('.word-correct').length === 2", timeout=5000
         )

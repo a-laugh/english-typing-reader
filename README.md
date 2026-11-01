@@ -11,9 +11,9 @@
 GitHub Actions（每周日 05:00 北京时间）                    用户浏览器（GitHub Pages）
 ┌──────────────────────────────────────┐   git push      ┌─────────────────────────────┐
 │ fetcher.py                           │  剧集 JSON      │ docs/（纯静态，无后端）      │
-│  1. 抓 BBC 栏目页 → 最近 30 天剧集     │  （~60KB/周）   │  选剧集 → 打字 → 完词即      │
-│  2. 解析 transcript + 官方词汇表       │ ───────────►   │   播放烘焙 MP3（零延迟）     │
-│  3. GLM 生成全篇语境词表（可选）        │                │   + 查烘焙词典显示释义       │
+│  1. 抓 BBC 栏目页 → 最近 30 天剧集     │  （~60KB/周）   │  选剧集 → 对话式打字流       │
+│  2. 解析对话回合/transcript/词汇表     │ ───────────►   │  （说话人徽章 + 全宽滚动）   │
+│  3. GLM 生成全篇语境词表（可选）        │                │  完词即播 MP3 + 行内小字翻译 │
 │  4. ECDICT 补全逐词中文释义            │  Pages 部署包   │  进度存 localStorage        │
 │  5. edge-tts 生成单词发音 MP3（共享）   │ （站点+数据+    │  无 MP3 时回退浏览器 TTS     │
 │  6. 清理过期剧集与无引用音频            │  音频，随 workflow ──────► Pages       │
@@ -83,7 +83,7 @@ python tests/e2e_site.py     # 24 项 GUI 检查 + 滚动窗口兼容专测，�
 
 ```
 fetcher.py                    # 构建脚本（抓取/解析/GLM/ECDICT/清理，默认 30 天窗口）
-docs/                         # 站点（index.html + script.js）
+docs/                         # 站点（index.html + script.js + assets/pico.min.css 自托管样式）
 docs/data/episodes/           # 构建产物：index.json + 每期剧集 JSON（含烘焙词典，提交进仓库）
 docs/data/audio/              # 构建产物：单词发音 MP3（gitignore；Actions 缓存 + Pages 部署包分发）
 .github/workflows/            # 每周构建 workflow（周日北京 05:00 + 手动触发，含 Pages 部署）

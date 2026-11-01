@@ -100,6 +100,20 @@ def test_episode_transcript_inline_emphasis_kept(episode_261029):
     assert "And shading is blocking" in episode_261029["transcript"]
 
 
+def test_episode_turns_structure(episode_261029):
+    """对话回合：说话人归属正确（含嘉宾），transcript == 回合文本按行拼接。"""
+    turns = episode_261029["turns"]
+    assert len(turns) > 30
+    assert turns[0] == {"speaker": "Georgie", "text": "Hi Neil."}
+    assert turns[1]["speaker"] == "Neil"
+    speakers = {t["speaker"] for t in turns}
+    assert "Dr Radhika Khosla" in speakers, "嘉宾说话人应正确归属"
+    # flat transcript 与回合的一致性
+    assert episode_261029["transcript"] == "\n".join(t["text"] for t in turns)
+    # 说话人名只出现在徽章，不进入文本流
+    assert all(not t["text"].startswith(t["speaker"]) for t in turns)
+
+
 def test_second_episode_parses(index_episodes):
     meta = next(e for e in index_episodes if e["id"] == "261022")
     html = (FIXTURES / "episode-261022.html").read_text(encoding="utf-8")

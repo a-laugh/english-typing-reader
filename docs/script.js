@@ -1,4 +1,4 @@
-// 键学 · 静态站点逻辑
+// 键学 · 静态站点逻辑（对话式打字流）
 // 数据全部来自构建期烘焙的 docs/data/episodes/（无后端、零运行时网络依赖），
 // 多用户各自浏览器 localStorage 保存进度，互不干扰。
 
@@ -10,7 +10,7 @@ const DATA_BASE = "data/episodes";
 const INDEX_URL = `${DATA_BASE}/index.json`;
 const AUDIO_BASE = "data/audio"; // 构建期 TTS 音频，跨剧集共享（与 fetcher.py AUDIO_DIR 对应）
 const WINDOW_DAYS = 30; // 与 fetcher.py 的滚动窗口保持一致
-const DISPLAY_WORDS_AROUND_CURRENT = 30;
+const DISPLAY_WORDS_AROUND_CURRENT = 60;
 
 const LS_PROGRESS_PREFIX = "typelearning:progress:";
 const LS_LAST_EPISODE = "typelearning:last_episode";
@@ -18,22 +18,20 @@ const PROGRESS_VERSION = 1;
 
 let episodeIndex = [];       // index.json：[{id, title, pub_date, bbc_url}]
 let currentEpisode = null;   // 已加载的完整剧集 JSON
-let originalWords = [];
+let episodeTurns = [];       // 当前剧集回合（或由 transcript 兜底的单一伪回合）
+let originalWords = [];      // 全剧集展平的单词流（回合文本按序拼接，与进度下标对应）
+let turnIndexByWord = [];    // 每个词所属的回合下标
 let currentWordIndex = 0;
-let currentWordToPronounce = "";
+let glossWordIndex = -1;     // 行内翻译跟随的最新完成词，-1 = 无
 
 // DOM 引用
 const episodeSelector = document.getElementById("episode-selector");
-const loadEpisodeButton = document.getElementById("load-episode-btn");
 const episodeMeta = document.getElementById("episode-meta");
 const noticeBar = document.getElementById("notice");
-const originalTextDisplay = document.getElementById("original-text-display");
+const dialogDisplay = document.getElementById("dialog-display");
 const typingInput = document.getElementById("typing-input");
-const resultWordSpan = document.querySelector("#result-display .result-word");
-const resultTranslationSpan = document.querySelector("#result-display .result-translation");
-const resultContextSpan = document.querySelector("#result-display .result-context");
-const resultSentenceSpan = document.querySelector("#result-display .result-sentence");
-const pronounceButton = document.getElementById("pronounce-button");
+const hintCurrent = document.getElementById("hint-current");
+const hintProgress = document.getElementById("hint-progress");
 
 // ---------------------------------------------------------------------------
 // 工具
@@ -45,11 +43,11 @@ function cleanWord(word) {
 
 function showNotice(message) {
     noticeBar.textContent = message;
-    noticeBar.style.display = "block";
+    noticeBar.hidden = false;
 }
 
 function clearNotice() {
-    noticeBar.style.display = "none";
+    noticeBar.hidden = true;
 }
 
 function daysBetween(fromIso, toTime = Date.now()) {
@@ -87,7 +85,7 @@ function writeProgress(episodeId, wordIndex, done = false) {
     }
 }
 
-// 垃圾回收：剧集 30 天滚动下线后，清掉指向它们的进度条目，存储不无限膨胀
+// 垃圾回收：剧集滚动下线后，清掉指向它们的进度条目，存储不无限膨胀
 function gcProgress() {
     const alive = new Set(episodeIndex.map((e) => e.id));
     const dead = [];
@@ -119,14 +117,12 @@ function populateEpisodeSelector() {
     if (episodeIndex.length === 0) {
         const option = document.createElement("option");
         option.value = "";
-        option.textContent = "暂无节目（今天还没构建，请稍后再来）";
+        option.textContent = "暂无节目（还没构建，请稍后再来）";
         episodeSelector.appendChild(option);
         episodeSelector.disabled = true;
-        loadEpisodeButton.disabled = true;
         return;
     }
     episodeSelector.disabled = false;
-    loadEpisodeButton.disabled = false;
     const placeholder = document.createElement("option");
     placeholder.value = "";
     placeholder.textContent = `选择节目（最近 ${WINDOW_DAYS} 天）`;
@@ -139,7 +135,7 @@ function populateEpisodeSelector() {
     });
 }
 
-function renderEpisodeMeta(entry, wordIndex, totalWords) {
+function renderEpisodeMeta(entry) {
     episodeMeta.replaceChildren();
     const published = document.createElement("span");
     published.textContent = `${entry.pub_date} 发布`;
@@ -150,25 +146,21 @@ function renderEpisodeMeta(entry, wordIndex, totalWords) {
         remainTag.textContent = remain > 0 ? `剩 ${remain} 天` : "今日下线";
         published.appendChild(remainTag);
     }
-    const progressText = document.createElement("span");
-    progressText.textContent = `　进度 ${wordIndex}/${totalWords} 词`;
     const bbcLink = document.createElement("a");
     // 构建期数据视为外部输入：链接仅放行 BBC 官方域名，防 javascript: 等注入
     if (/^https:\/\/(www\.)?bbc\.(co\.uk|com)\//.test(entry.bbc_url)) {
         bbcLink.href = entry.bbc_url;
         bbcLink.target = "_blank";
         bbcLink.rel = "noopener";
-        bbcLink.className = "bbc-link";
-        bbcLink.textContent = "　看原文";
+        bbcLink.textContent = "看原文 ↗";
     }
-    episodeMeta.append(published, progressText, bbcLink);
+    episodeMeta.append(published, bbcLink);
 
     const progress = readProgress(entry.id);
     if (progress && !progress.done && progress.word_index > 0 && currentEpisode) {
         const restartLink = document.createElement("a");
         restartLink.href = "#";
-        restartLink.className = "bbc-link";
-        restartLink.textContent = "　↺ 重新开始";
+        restartLink.textContent = "↺ 重新开始";
         restartLink.addEventListener("click", (e) => {
             e.preventDefault();
             if (confirm("确定清除本节目的进度，从第 1 个单词重新开始吗？")) {
@@ -228,7 +220,6 @@ function primeAudio(cleaned) {
 }
 
 // 当前正在播放的 MP3：快速连打时先停掉上一个，避免多词重叠发声
-// （旧版 Web Speech 路径的 speechSynthesis.cancel() 互斥语义，MP3 路径同样需要）
 let activeAudio = null;
 
 async function speakWord(word) {
@@ -278,74 +269,105 @@ function lookupWord(token) {
     return dict[token.toLowerCase()] || dict[cleanWord(token)] || null;
 }
 
-function renderWordResult(token) {
+// 行内翻译元素：紧跟最新完成的单词；语境层带 📖，官方层带「官方」小标
+function buildGloss(token) {
     const entry = lookupWord(token);
-    resultWordSpan.replaceChildren();
-    resultTranslationSpan.replaceChildren();
-    resultContextSpan.replaceChildren();
-    resultSentenceSpan.replaceChildren();
-
-    const cleaned = cleanWord(token) || token;
-    resultWordSpan.textContent = cleaned;
-
+    const span = document.createElement("span");
     if (!entry) {
-        resultTranslationSpan.textContent = "（本词未收录释义）";
-        return;
+        span.className = "gloss";
+        span.textContent = "（未收录）";
+        return span;
     }
-
-    const badge = document.createElement("span");
-    const labels = { official: "官方词汇", context: "语境", ecdict: "词典" };
-    badge.className = `source-badge source-${entry.source}`;
-    badge.textContent = labels[entry.source] || entry.source;
-
-    const phrasePrefix = entry.phrase && entry.phrase !== cleaned ? `${entry.phrase} · ` : "";
-    resultTranslationSpan.append(`${phrasePrefix}${entry.translation || "（无释义）"}`);
-    resultTranslationSpan.appendChild(badge);
-
-    if (entry.context) {
-        resultContextSpan.textContent = `📖 语境释义：${entry.context}`;
+    if (entry.source === "context") {
+        span.className = "gloss ctx";
+        span.textContent = `📖 ${entry.context || entry.translation}`;
+        return span;
     }
-    if (entry.sentence) {
-        resultSentenceSpan.textContent = `“${entry.sentence}”`;
+    span.className = "gloss";
+    if (entry.source === "official") {
+        const tag = document.createElement("span");
+        tag.className = "gloss-tag";
+        tag.textContent = "官方";
+        span.appendChild(tag);
     }
-}
-
-function clearWordResult() {
-    resultWordSpan.textContent = "";
-    resultTranslationSpan.textContent = "";
-    resultContextSpan.textContent = "";
-    resultSentenceSpan.textContent = "";
+    span.appendChild(document.createTextNode(entry.translation || entry.phrase || ""));
+    return span;
 }
 
 // ---------------------------------------------------------------------------
-// 打字主流程（沿用原实现的窗口渲染与完词判定）
+// 对话式渲染（窗口化：当前词 ±DISPLAY_WORDS_AROUND_CURRENT 覆盖的整回合）
 // ---------------------------------------------------------------------------
 
-function renderOriginalText() {
-    const startIndex = Math.max(0, currentWordIndex - DISPLAY_WORDS_AROUND_CURRENT);
-    const endIndex = Math.min(originalWords.length, currentWordIndex + DISPLAY_WORDS_AROUND_CURRENT);
+const SPEAKER_CLASSES = ["speaker-c0", "speaker-c1", "speaker-c2", "speaker-c3", "speaker-c4"];
+
+function speakerClass(name) {
+    let h = 0;
+    for (const ch of name) h = (h * 31 + ch.codePointAt(0)) >>> 0;
+    return SPEAKER_CLASSES[h % SPEAKER_CLASSES.length];
+}
+
+function flattenEpisode() {
+    // 兼容无 turns 的旧数据：由 transcript 构造单一伪回合
+    episodeTurns = currentEpisode.turns && currentEpisode.turns.length
+        ? currentEpisode.turns
+        : [{ speaker: "", text: currentEpisode.transcript }];
+    originalWords = [];
+    turnIndexByWord = [];
+    episodeTurns.forEach((turn, ti) => {
+        turn.text.split(/\s+/).filter(Boolean).forEach((w) => {
+            originalWords.push(w);
+            turnIndexByWord.push(ti);
+        });
+    });
+}
+
+function renderDialog() {
+    const from = turnIndexByWord[Math.max(0, currentWordIndex - DISPLAY_WORDS_AROUND_CURRENT)] ?? 0;
+    const to = turnIndexByWord[Math.min(originalWords.length - 1, currentWordIndex + DISPLAY_WORDS_AROUND_CURRENT)]
+        ?? turnIndexByWord[turnIndexByWord.length - 1] ?? 0;
 
     // DOM API + textContent 构建：剧集数据来自外部站点，防存储型 XSS
     const frag = document.createDocumentFragment();
-    for (let i = startIndex; i < endIndex; i++) {
-        const word = originalWords[i];
-        let spanClass = "";
-        if (i < currentWordIndex) {
-            spanClass = "word-correct";
-        } else if (i === currentWordIndex) {
-            spanClass = "current-word";
-        }
-        const span = document.createElement("span");
-        if (spanClass) span.className = spanClass;
-        span.textContent = word;
-        frag.appendChild(span);
-        frag.appendChild(document.createTextNode(" "));
-    }
-    originalTextDisplay.replaceChildren(frag);
+    let wordIdx = 0;
+    episodeTurns.forEach((turn, ti) => {
+        const words = turn.text.split(/\s+/).filter(Boolean);
+        const turnStart = wordIdx;
+        wordIdx += words.length;
+        if (ti < from || ti > to) return;
 
-    const currentWordSpan = originalTextDisplay.querySelector(".current-word");
+        const row = document.createElement("div");
+        row.className = "turn";
+        if (turn.speaker) {
+            const badge = document.createElement("span");
+            badge.className = `speaker-badge ${speakerClass(turn.speaker)}`;
+            badge.textContent = turn.speaker;
+            row.appendChild(badge);
+        }
+        const para = document.createElement("p");
+        para.className = "turn-text";
+        words.forEach((w, k) => {
+            const gi = turnStart + k;
+            const span = document.createElement("span");
+            if (gi < currentWordIndex) {
+                span.className = "word-correct";
+            } else if (gi === currentWordIndex) {
+                span.className = "current-word";
+            }
+            span.textContent = w;
+            para.appendChild(span);
+            para.appendChild(document.createTextNode(" "));
+            if (gi === glossWordIndex) {
+                para.appendChild(buildGloss(w));
+            }
+        });
+        row.appendChild(para);
+        frag.appendChild(row);
+    });
+    dialogDisplay.replaceChildren(frag);
+
+    const currentWordSpan = dialogDisplay.querySelector(".current-word");
     if (currentWordSpan) {
-        const displayRect = originalTextDisplay.getBoundingClientRect();
+        const displayRect = dialogDisplay.getBoundingClientRect();
         const wordRect = currentWordSpan.getBoundingClientRect();
         const visible = wordRect.top >= displayRect.top && wordRect.bottom <= displayRect.bottom;
         if (!visible) {
@@ -353,6 +375,31 @@ function renderOriginalText() {
         }
     }
 }
+
+function renderHint() {
+    if (!currentEpisode || originalWords.length === 0) {
+        hintCurrent.textContent = "";
+        hintProgress.textContent = "";
+        return;
+    }
+    if (currentWordIndex >= originalWords.length) {
+        hintCurrent.textContent = "🎉 本期节目已完成";
+        hintProgress.textContent = `进度 ${originalWords.length}/${originalWords.length} 词`;
+        return;
+    }
+    hintCurrent.replaceChildren();
+    hintCurrent.append("当前词 ");
+    const hw = document.createElement("span");
+    hw.className = "hw";
+    hw.textContent = originalWords[currentWordIndex];
+    hintCurrent.appendChild(hw);
+    hintCurrent.append("（打完按空格）");
+    hintProgress.textContent = `进度 ${currentWordIndex}/${originalWords.length} 词`;
+}
+
+// ---------------------------------------------------------------------------
+// 加载与打字主流程
+// ---------------------------------------------------------------------------
 
 async function loadEpisode(episodeId, startIndex = null) {
     clearNotice();
@@ -366,7 +413,7 @@ async function loadEpisode(episodeId, startIndex = null) {
             throw new Error(`HTTP ${response.status}`);
         }
         currentEpisode = await response.json();
-        originalWords = currentEpisode.transcript.split(/\s+/).filter((w) => w.length > 0);
+        flattenEpisode();
 
         // startIndex 为 null 表示自动续读：有未完成进度则接着上次，否则从头
         let start = startIndex;
@@ -376,14 +423,13 @@ async function loadEpisode(episodeId, startIndex = null) {
                 ? progress.word_index : 0;
         }
         currentWordIndex = Math.min(start, Math.max(0, originalWords.length - 1));
+        glossWordIndex = currentWordIndex > 0 ? currentWordIndex - 1 : -1;
 
         typingInput.disabled = false;
         typingInput.value = "";
-        pronounceButton.disabled = true;
-        currentWordToPronounce = "";
-        clearWordResult();
-        renderOriginalText();
-        renderEpisodeMeta(currentEpisode, currentWordIndex, originalWords.length);
+        renderDialog();
+        renderHint();
+        renderEpisodeMeta(currentEpisode);
         prefetchUpcomingAudio();
         typingInput.focus();
     } catch (error) {
@@ -396,7 +442,7 @@ async function loadEpisode(episodeId, startIndex = null) {
 typingInput.addEventListener("input", (e) => {
     if (!currentEpisode || originalWords.length === 0) {
         typingInput.value = "";
-        resultTranslationSpan.textContent = "请先选择节目！";
+        hintCurrent.textContent = "请先选择节目！";
         return;
     }
     if (currentWordIndex >= originalWords.length) {
@@ -419,56 +465,39 @@ typingInput.addEventListener("input", (e) => {
         typingInput.classList.remove("incorrect-input-border");
 
         const completedWord = currentTargetWord;
-        currentWordToPronounce = completedWord;
         currentWordIndex++;
         typingInput.value = "";
-        renderOriginalText();
+        glossWordIndex = currentWordIndex - 1; // 行内翻译跟随最新完成的词
+        renderDialog();
+        renderHint();
 
         speakWord(completedWord);
-        renderWordResult(completedWord);
-        pronounceButton.disabled = false;
         prefetchUpcomingAudio();
 
         if (currentWordIndex >= originalWords.length) {
-            resultWordSpan.textContent = "恭喜你！";
-            resultTranslationSpan.textContent = "本期节目已完成！";
-            resultContextSpan.textContent = "";
-            resultSentenceSpan.textContent = "";
+            glossWordIndex = -1;
+            renderDialog();
             typingInput.disabled = true;
             writeProgress(currentEpisode.id, currentWordIndex, true);
         } else {
             writeProgress(currentEpisode.id, currentWordIndex);
         }
-        renderEpisodeMeta(currentEpisode, currentWordIndex, originalWords.length);
+        renderEpisodeMeta(currentEpisode);
     } else if (cleanedTypedInput === cleanedTargetWord.substring(0, cleanedTypedInput.length)) {
         typingInput.classList.remove("incorrect-input-border");
         typingInput.classList.remove("correct-input-border");
-        clearWordResult();
-        pronounceButton.disabled = true;
     } else {
         typingInput.classList.add("incorrect-input-border");
         typingInput.classList.remove("correct-input-border");
-        clearWordResult();
-        pronounceButton.disabled = true;
-    }
-});
-
-pronounceButton.addEventListener("click", () => {
-    if (currentWordToPronounce) {
-        speakWord(currentWordToPronounce);
-    }
-});
-
-loadEpisodeButton.addEventListener("click", () => {
-    const selectedId = episodeSelector.value;
-    if (selectedId) {
-        // 未指定起点：有未完成进度则自动续读，从头开始请用 meta 栏的「↺ 重新开始」
-        loadEpisode(selectedId);
     }
 });
 
 episodeSelector.addEventListener("change", () => {
     clearNotice();
+    // 选择即加载（含自动续读），无需额外按钮
+    if (episodeSelector.value) {
+        loadEpisode(episodeSelector.value);
+    }
 });
 
 // ---------------------------------------------------------------------------
@@ -477,7 +506,7 @@ episodeSelector.addEventListener("change", () => {
 
 async function init() {
     if (!window.speechSynthesis) {
-        showNotice("当前浏览器不支持语音合成（Web Speech API），单词将无法发音。建议使用 Chrome / Edge / Safari。");
+        console.warn("当前浏览器不支持语音合成（Web Speech API），音频缺失的词将无法发音。");
     } else {
         pickVoice();
         speechSynthesis.onvoiceschanged = pickVoice;
@@ -529,8 +558,8 @@ async function init() {
             console.warn("恢复上次进度失败:", e);
         }
     }
-    if (!resumed && noticeBar.style.display === "none") {
-        resultTranslationSpan.textContent = "请选择节目开始学习！";
+    if (!resumed && noticeBar.hidden) {
+        hintCurrent.textContent = "请选择节目开始学习！";
     }
 }
 

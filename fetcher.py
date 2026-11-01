@@ -119,39 +119,36 @@ def parse_index(html: str) -> list[dict]:
 # 剧集页解析
 # ---------------------------------------------------------------------------
 
-def _iter_turn_text(p) -> str:
-    """把一个 transcript <p> 还原为纯文本对白。
+def _iter_turns(p, turns: list[dict]) -> None:
+    """把一个 transcript <p> 中的对话回合追加到 turns（跨 <p> 续接）。
 
     结构规则（2026 版页面）：
-      <strong>说话人</strong><br/>台词…   —— strong 后紧跟 <br/> 的是说话人，丢弃名字
+      <strong>说话人</strong><br/>台词…   —— strong 后紧跟 <br/> 的是说话人，开新回合
       <strong>词</strong>台词…            —— 不跟 <br/> 的是句中强调，保留词本身
-      <br/> 与空白/&nbsp; 混合             —— 回合分隔，折叠为换行
+      <br/> 与空白/&nbsp; 混合             —— 回合内换行，折叠为空格（回合边界只由说话人 strong 决定）
     """
-    parts: list[str] = []
-    pending_breaks = 0
+    current = turns[-1] if turns else None
     for child in p.children:
         name = getattr(child, "name", None)
         if name == "strong":
-            # 说话人 strong：紧跟 <br/> 才算（句中强调的 strong 后面是普通文本）
             nxt = child.next_sibling
             if nxt is not None and getattr(nxt, "name", None) == "br":
-                pending_breaks = max(pending_breaks, 1)
+                # 说话人 strong：开新回合（同说话人连续发言也各自成段）
+                current = {"speaker": child.get_text(strip=True), "text": ""}
+                turns.append(current)
                 continue
-            parts.append(child.get_text())
+            if current is not None:
+                current["text"] += child.get_text()
         elif name == "br":
-            pending_breaks += 1
+            # 回合内换行（如测验选项）：补一个空格，避免前后文本粘连
+            if current is not None:
+                current["text"] += " "
         else:
             text = child.get_text() if name else str(child)
             text = text.replace("\xa0", " ")
-            if not text.strip():
-                if text:
-                    pending_breaks += 1
-                continue
-            if pending_breaks >= 1 and parts:
-                parts.append("\n")
-            pending_breaks = 0
-            parts.append(text)
-    return "".join(parts)
+            if current is not None:
+                current["text"] += text
+    # 行尾与重复空白由调用方统一规整
 
 
 def _looks_like_turn_start(p) -> bool:
@@ -181,7 +178,7 @@ def parse_episode(html: str, meta: dict) -> dict:
         # 形如 "BBC Learning English - 6 Minute English / 真实标题"
         title = og["content"].split(" / ")[-1].strip() or title
 
-    transcript_blocks: list[str] = []
+    turns_raw: list[dict] = []
     anchor = next(
         (p for p in soup.find_all("p") if p.get_text(strip=True).upper() == "TRANSCRIPT"),
         None,
@@ -195,21 +192,27 @@ def parse_episode(html: str, meta: dict) -> dict:
             continue
         if not started:
             continue
-        text = _iter_turn_text(p)
-        if not text.strip():
+        text = p.get_text(" ", strip=True)
+        if not text:
             continue
-        if text.strip().lower().startswith("note:"):
+        if text.lower().startswith("note:"):
             # "Note: This is not a word-for-word transcript." 官方说明行
             continue
-        if transcript_blocks and not _looks_like_turn_start(p):
+        if turns_raw and not _looks_like_turn_start(p):
             # 对白之后不以说话人开头的段落是页脚（"What do you think…" 等）
             break
-        if not transcript_blocks and not _looks_like_turn_start(p):
+        if not turns_raw and not _looks_like_turn_start(p):
             # 对白尚未开始时出现的不明段落，防御性跳过
-            log(f"跳过 TRANSCRIPT 锚点后的非对白段落: {text.strip()[:60]!r}")
+            log(f"跳过 TRANSCRIPT 锚点后的非对白段落: {text[:60]!r}")
             continue
-        transcript_blocks.append(text)
-    transcript = "\n".join(transcript_blocks).strip()
+        _iter_turns(p, turns_raw)
+    # 规整：回合内空白折叠、丢弃无名/空文本回合；transcript 保持「回合文本按行拼接」
+    turns = [
+        {"speaker": t["speaker"], "text": " ".join(t["text"].split())}
+        for t in turns_raw
+        if t["speaker"] and t["text"].strip()
+    ]
+    transcript = "\n".join(t["text"] for t in turns)
     if len(transcript.split()) < 50:
         raise ValueError(f"transcript 过短（{len(transcript.split())} 词），疑似解析失败")
 
@@ -246,6 +249,7 @@ def parse_episode(html: str, meta: dict) -> dict:
         "bbc_url": meta["url"],
         "mp3_url": mp3_url,
         "transcript": transcript,
+        "turns": turns,
         "vocabulary": vocabulary,
     }
 
