@@ -31,7 +31,56 @@
       "definition": "a strong desire for"
     }
   ],
-  "context_glossary": {},
+  "context_glossary": {
+    "valuable": {
+      "meaning": "有价值的",
+      "sentence": "gold is still a financial asset, and an asset is something valuable that could be sold for money."
+    },
+    "neutral": {
+      "meaning": "中立的",
+      "sentence": "so the fact that it's neutral means it's an asset that's perceived to be a store of value over a longer term."
+    },
+    "store of value": {
+      "meaning": "价值储存",
+      "sentence": "so the fact that it's neutral means it's an asset that's perceived to be a store of value over a longer term."
+    },
+    "fabricated": {
+      "meaning": "伪造的",
+      "sentence": "It can't be created and fabricated out of thin air through alchemy."
+    },
+    "alchemy": {
+      "meaning": "炼金术",
+      "sentence": "Alchemy is an ancient kind of chemistry that attempted to do impossible things, like turn ordinary metals into gold."
+    },
+    "underlying": {
+      "meaning": "根本的",
+      "sentence": "and so this, sort of, controls the supply and sustains an underlying value behind the demand for gold."
+    },
+    "expression": {
+      "meaning": "表达",
+      "sentence": "an expression meaning making something from nothing."
+    },
+    "all-time high": {
+      "meaning": "历史最高点",
+      "sentence": "So, what's going on? Well, we mentioned that the price of gold increases in times of crisis because government banks want to buy more of it, and there has been a series of world events that have made government banks want to buy more gold, for example the wars in Ukraine and the Middle East, and in politics too, for example the US imposing tariffs on international products. But since that peak in January, the price has dropped a bit."
+    },
+    "tariffs": {
+      "meaning": "关税",
+      "sentence": "for example the US imposing tariffs on international products."
+    },
+    "recap": {
+      "meaning": "总结",
+      "sentence": "Let's recap the vocabulary we learnt in this programme, starting with asset."
+    },
+    "ethereal": {
+      "meaning": "空灵的，非物质的",
+      "sentence": "And in this ethereal world, people have a hankering for something that's solid and real, like gold."
+    },
+    "hankering": {
+      "meaning": "渴望",
+      "sentence": "And the expression a hankering for means a strong desire for something."
+    }
+  },
   "dict": {
     "asset": {
       "translation": "something of financial value that can be sold for money",
@@ -56,6 +105,66 @@
     "a hankering for": {
       "translation": "a strong desire for",
       "source": "official"
+    },
+    "valuable": {
+      "translation": "有价值的",
+      "source": "context",
+      "context": "有价值的",
+      "sentence": "gold is still a financial asset, and an asset is something valuable that could be sold for money."
+    },
+    "neutral": {
+      "translation": "中立的",
+      "source": "context",
+      "context": "中立的",
+      "sentence": "so the fact that it's neutral means it's an asset that's perceived to be a store of value over a longer term."
+    },
+    "store of value": {
+      "translation": "价值储存",
+      "source": "context",
+      "context": "价值储存",
+      "sentence": "so the fact that it's neutral means it's an asset that's perceived to be a store of value over a longer term."
+    },
+    "fabricated": {
+      "translation": "伪造的",
+      "source": "context",
+      "context": "伪造的",
+      "sentence": "It can't be created and fabricated out of thin air through alchemy."
+    },
+    "underlying": {
+      "translation": "根本的",
+      "source": "context",
+      "context": "根本的",
+      "sentence": "and so this, sort of, controls the supply and sustains an underlying value behind the demand for gold."
+    },
+    "expression": {
+      "translation": "表达",
+      "source": "context",
+      "context": "表达",
+      "sentence": "an expression meaning making something from nothing."
+    },
+    "all-time high": {
+      "translation": "历史最高点",
+      "source": "context",
+      "context": "历史最高点",
+      "sentence": "So, what's going on? Well, we mentioned that the price of gold increases in times of crisis because government banks want to buy more of it, and there has been a series of world events that have made government banks want to buy more gold, for example the wars in Ukraine and the Middle East, and in politics too, for example the US imposing tariffs on international products. But since that peak in January, the price has dropped a bit."
+    },
+    "tariffs": {
+      "translation": "关税",
+      "source": "context",
+      "context": "关税",
+      "sentence": "for example the US imposing tariffs on international products."
+    },
+    "recap": {
+      "translation": "总结",
+      "source": "context",
+      "context": "总结",
+      "sentence": "Let's recap the vocabulary we learnt in this programme, starting with asset."
+    },
+    "hankering": {
+      "translation": "渴望",
+      "source": "context",
+      "context": "渴望",
+      "sentence": "And the expression a hankering for means a strong desire for something."
     },
     "haven": {
       "translation": "something or somewhere protected from harm or loss",
@@ -97,1294 +206,54 @@
       "source": "official",
       "phrase": "a hankering for"
     },
-    "hankering": {
-      "translation": "a strong desire for",
-      "source": "official",
-      "phrase": "a hankering for"
-    },
-    "6": {
-      "translation": "num. six",
-      "source": "ecdict"
-    },
-    "6th": {
-      "translation": "第六(sixth)",
-      "source": "ecdict"
-    },
-    "a": {
-      "translation": "第一个字母 A; 一个; 第一的\\r；art. [计] 累加器, 加法器, 地址, 振幅, 模拟, 区域, 面积, 汇编, 组件, 异步",
-      "source": "ecdict"
-    },
-    "about": {
-      "translation": "prep. 在...周围, 大约, 有关, 关于；adv. 大约, 四处, 在附近, 周围",
-      "source": "ecdict"
-    },
-    "absolutely": {
-      "translation": "adv. 完全地, 绝对地, 确确实实地",
-      "source": "ecdict"
-    },
-    "account": {
-      "translation": "n. 报告, 解释, 估价, 理由, 利润, 算账, 帐目；vi. 报帐, 解释, 导致, 报偿, 占, 杀死；vt. 认为；[计] 帐户, 帐号",
-      "source": "ecdict"
-    },
-    "actually": {
-      "translation": "adv. 事实上, 竟然, 如今, 现在",
-      "source": "ecdict"
-    },
-    "again": {
-      "translation": "adv. 再一次, 又, 到原处",
-      "source": "ecdict"
-    },
-    "alltime": {
-      "translation": "adj. 全时工作的",
-      "source": "ecdict"
-    },
-    "always": {
-      "translation": "adv. 总是, 始终",
-      "source": "ecdict"
-    },
-    "amount": {
-      "translation": "n. 总数, 总额；vi. 总计, 等同",
-      "source": "ecdict"
-    },
-    "an": {
-      "translation": "art. 一",
-      "source": "ecdict"
-    },
-    "ancient": {
-      "translation": "a. 古代的, 古老的, 年老的, 旧的",
-      "source": "ecdict"
-    },
-    "and": {
-      "translation": "conj. 和, 与；[计] 与",
-      "source": "ecdict"
-    },
-    "answer": {
-      "translation": "n. 答案, 回答, 回报, 答辩；vt. 回答, 反驳, 适应, 响应, 符合；vi. 回答, 答应, 负责, 符合, 成功；[计] 用户问题及答案新闻组",
-      "source": "ecdict"
-    },
-    "anything": {
-      "translation": "pron. 任何事",
-      "source": "ecdict"
-    },
-    "are": {
-      "translation": "be的现在时复数或第二人称单数",
-      "source": "ecdict"
-    },
-    "as": {
-      "translation": "adv. 同样地, 例如；prep. 做为, 当作；conj. 当...之时, 以...的方式, 像...一样, 因为；[计] 高级系统, 先进系统, 辅助存储器, 自治系统",
-      "source": "ecdict"
-    },
-    "asked": {
-      "translation": "n. 卖方要价",
-      "source": "ecdict"
-    },
-    "asking": {
-      "translation": "n. 请求",
-      "source": "ecdict"
-    },
-    "at": {
-      "translation": "prep. 在, 向, 对；[计] 地址转换器, 异常传输, 自动订票",
-      "source": "ecdict"
-    },
-    "attempted": {
-      "translation": "a. 企图的；未遂的",
-      "source": "ecdict"
-    },
-    "attractive": {
-      "translation": "a. 吸引人的, 有魅力的；[法] 有吸引力的, 有迷惑力的",
-      "source": "ecdict"
-    },
-    "b": {
-      "translation": "[计] 基地址, 数据库, 基极, 二进制, 块, 字组, 布尔, 总线, 占线, 字节；[医] 硼(5号元素)",
-      "source": "ecdict"
-    },
-    "bank": {
-      "translation": "n. 银行, 堤, 岸；[医] 库",
-      "source": "ecdict"
-    },
-    "banks": {
-      "translation": "n. 银行；斜床；岸, 堤（bank的复数形式）",
-      "source": "ecdict"
-    },
-    "bbc": {
-      "translation": "英国广播公司",
-      "source": "ecdict"
-    },
-    "bc": {
-      "translation": "公元前",
-      "source": "ecdict"
-    },
-    "be": {
-      "translation": "v. 是, 表示, 在；[计] 后端, 总线允许",
-      "source": "ecdict"
-    },
-    "became": {
-      "translation": "become的过去式",
-      "source": "ecdict"
-    },
-    "because": {
-      "translation": "conj. 因为",
-      "source": "ecdict"
-    },
-    "been": {
-      "translation": "be的过去分词",
-      "source": "ecdict"
-    },
-    "before": {
-      "translation": "prep. 在...之前；conj. 在...之前；adv. 在前",
-      "source": "ecdict"
-    },
-    "behind": {
-      "translation": "adv. 在后地；prep. 在...背后",
-      "source": "ecdict"
-    },
-    "believe": {
-      "translation": "v. 相信",
-      "source": "ecdict"
-    },
-    "beyond": {
-      "translation": "prep. 超过, 在那一边, 迟于；adv. 在远处；n. 更远处",
-      "source": "ecdict"
-    },
-    "bit": {
-      "translation": "n. 少量, 马嚼子, 辅币；vt. 给马上嚼子, 控制；bite的过去式和过去分词；[计] 比特, 二进制数位, 机内测试",
-      "source": "ecdict"
-    },
-    "bought": {
-      "translation": "a. 买来的；buy的过去式和过去分词",
-      "source": "ecdict"
-    },
-    "but": {
-      "translation": "prep. 除了；conj. 但是；adv. 仅仅",
-      "source": "ecdict"
-    },
-    "buy": {
-      "translation": "vt. 买, 获得；vi. 买；n. 购买, 买得的东西",
-      "source": "ecdict"
-    },
-    "by": {
-      "translation": "prep. 被, 经, 由, 在...之旁；adv. 经过, 在近处",
-      "source": "ecdict"
-    },
-    "c": {
-      "translation": "[计] 调用, 访问, 呼叫, 电容, 进位, 通道, 字符, 清除, 常数, 控制, 周期；[化] 碳的化学符号; 胞苷",
-      "source": "ecdict"
-    },
-    "can": {
-      "translation": "vt. 装罐；n. 罐头, 容器；aux. 能, 可以；[计] 作废字符",
-      "source": "ecdict"
-    },
-    "cant": {
-      "translation": "n. 伪善之言, 黑话, 斜面, 角落；vi. 讲黑话, 倾斜",
-      "source": "ecdict"
-    },
-    "carry": {
-      "translation": "n. 进位, 射程, 运载；vt. 携带, 运送, 支持, 传送, 包含；vi. 被携带, 能达到；[计] 进位; 进位数",
-      "source": "ecdict"
-    },
-    "catherine": {
-      "translation": "n. 轮圈外缘装有倒钩的车轮, 侧翻筋斗, 轮转烟火, 车轮窗",
-      "source": "ecdict"
-    },
-    "cattle": {
-      "translation": "n. 牛, 家畜；[法] 家畜",
-      "source": "ecdict"
-    },
-    "century": {
-      "translation": "n. 世纪, 百年",
-      "source": "ecdict"
-    },
-    "changeable": {
-      "translation": "a. 可改变的",
-      "source": "ecdict"
-    },
-    "chemistry": {
-      "translation": "n. 化学, 化学过程；[化] 化学",
-      "source": "ecdict"
-    },
-    "coins": {
-      "translation": "n. 硬币（coin的复数）",
-      "source": "ecdict"
-    },
-    "connected": {
-      "translation": "a. 连接的, 连贯的, 有联系的, 关联的, 连结的, 有关系的；[计] 连接的",
-      "source": "ecdict"
-    },
-    "controls": {
-      "translation": "n. 控制；控制元件；控制装置（control的复数）",
-      "source": "ecdict"
-    },
-    "cooper": {
-      "translation": "n. 制桶工人；v. 制桶",
-      "source": "ecdict"
-    },
-    "correct": {
-      "translation": "a. 正确的, 合适的；vt. 改正, 订正",
-      "source": "ecdict"
-    },
-    "could": {
-      "translation": "aux. 可以, 能",
-      "source": "ecdict"
-    },
-    "country": {
-      "translation": "n. 国家, 乡村, 地区, 故乡；a. 乡下的, 农村的；[计] DOS外部命令:用于设定国家代码, 包括日期时间及货币格式",
-      "source": "ecdict"
-    },
-    "created": {
-      "translation": "a. 创造的；[电] 创造的, 建立的",
-      "source": "ecdict"
-    },
-    "crisis": {
-      "translation": "n. 危机, 危险期, 紧要关头；[医] 危象; 骤退, 临界, 极期",
-      "source": "ecdict"
-    },
-    "danger": {
-      "translation": "n. 危险, 威胁；[法] 危险, 危险物, 危机",
-      "source": "ecdict"
-    },
-    "date": {
-      "translation": "n. 日期, 约会, 枣椰树；vt. 约会, 定日期；vi. 注明日期, 过时",
-      "source": "ecdict"
-    },
-    "demand": {
-      "translation": "n. 要求, 需求, 需要；v. 要求, 查询",
-      "source": "ecdict"
-    },
-    "dependable": {
-      "translation": "a. 可信任的, 可靠的, 可信赖的",
-      "source": "ecdict"
-    },
-    "describes": {
-      "translation": "v. 描述, 记述；形容, 作图（describe的复数形式）",
-      "source": "ecdict"
-    },
-    "desire": {
-      "translation": "n. 欲望, 要求；vt. 想要, 请求；vi. 渴望",
-      "source": "ecdict"
-    },
-    "did": {
-      "translation": "do的过去式",
-      "source": "ecdict"
-    },
-    "disappears": {
-      "translation": "v. 不见, 消失( disappear的第三人称单数 ); 不复存在",
-      "source": "ecdict"
-    },
-    "discovered": {
-      "translation": "v. 发现, 找到（discover的过去形式）",
-      "source": "ecdict"
-    },
-    "do": {
-      "translation": "v. 做, 进行, 完成",
-      "source": "ecdict"
-    },
-    "does": {
-      "translation": "v. 做；工作；有用（do的第三人称单数形式）",
-      "source": "ecdict"
-    },
-    "dollars": {
-      "translation": "n. 美元（dollar的复数）",
-      "source": "ecdict"
-    },
-    "down": {
-      "translation": "a. 向下的；adv. 下, 下去, 降下；prep. 往下, 沿着；n. 丘陵, 软毛, 开阔的高地；[计] 向下, 退下命令",
-      "source": "ecdict"
-    },
-    "dropped": {
-      "translation": "a. 抛踢球得分的",
-      "source": "ecdict"
-    },
-    "dug": {
-      "translation": "dig的过去式和过去分词",
-      "source": "ecdict"
-    },
-    "during": {
-      "translation": "prep. 在...的时候",
-      "source": "ecdict"
-    },
-    "early": {
-      "translation": "a. 早的, 早熟的；adv. 很早, 初",
-      "source": "ecdict"
-    },
-    "earth": {
-      "translation": "n. 地球, 泥土, 世界, 尘世；vt. 埋入土中, 赶入洞内；vi. 躲入洞内",
-      "source": "ecdict"
-    },
-    "easier": {
-      "translation": "a. 更简单；较早的；容易些（easy的比较级形式）",
-      "source": "ecdict"
-    },
-    "east": {
-      "translation": "n. 东方, 东；a. 东方的, 向东的；adv. 向东方, 朝东方",
-      "source": "ecdict"
-    },
-    "economic": {
-      "translation": "a. 经济上的, 实用的, 节省的；[经] 经济的",
-      "source": "ecdict"
-    },
-    "economy": {
-      "translation": "n. 经济, 理财, 节约；[医] 经济, 整体",
-      "source": "ecdict"
-    },
-    "end": {
-      "translation": "n. 结束, 终点, 目标, 末端, 梢, 死亡, 残余；v. 结束, 终结, 终止；[计] 端; 结束",
-      "source": "ecdict"
-    },
-    "english": {
-      "translation": "n. 英语；a. 英文的, 英国人的",
-      "source": "ecdict"
-    },
-    "episode": {
-      "translation": "n. 插曲, 插话, 有趣的事件, 一段情节；[医] 插话, 插曲, 发作",
-      "source": "ecdict"
-    },
-    "even": {
-      "translation": "a. 平坦的, 相等的, 连贯的, 均等的, 公平的, 偶数的, 平均的, 平衡的, 恰好的；vt. 使平坦, 使相等；vi. 变平, 成为相等；adv. 甚至, 实际上, 完全, 十分；n. 偶数, 偶校验；[计] 偶数, 偶校验",
-      "source": "ecdict"
-    },
-    "events": {
-      "translation": "n. 事件；[体育]项目（event的复数）",
-      "source": "ecdict"
-    },
-    "ever": {
-      "translation": "adv. 曾经, 究竟, 永远",
-      "source": "ecdict"
-    },
-    "exactly": {
-      "translation": "adv. 确切地, 精确地, 恰好, 完全地, 确实, 恰恰正是, 确实如此",
-      "source": "ecdict"
-    },
-    "example": {
-      "translation": "n. 例子, 样本, 实例；[化] 实例",
-      "source": "ecdict"
-    },
-    "expert": {
-      "translation": "n. 专家, 行家；a. 老练的, 内行的, 专门的；[计] 高级",
-      "source": "ecdict"
-    },
-    "experts": {
-      "translation": "n. 专家；人才（expert的复数形式）",
-      "source": "ecdict"
-    },
-    "explaining": {
-      "translation": "v. 讲解, 解释( explain的现在分词 ); 说明…的原因, 辩解; 说明, 解释, 辩解",
-      "source": "ecdict"
-    },
-    "explains": {
-      "translation": "v. 解释；说明（explain的三单形式）",
-      "source": "ecdict"
-    },
-    "expression": {
-      "translation": "n. 表达, 表现, 词语, 措辞；[计] 表达式",
-      "source": "ecdict"
-    },
-    "extracted": {
-      "translation": "a. 引出的；萃取的",
-      "source": "ecdict"
-    },
-    "fabricated": {
-      "translation": "a. 焊接的；组合的, 装配式的",
-      "source": "ecdict"
-    },
-    "fact": {
-      "translation": "n. 事实, 真实性, 真相, 细节, 论据",
-      "source": "ecdict"
-    },
-    "fall": {
-      "translation": "n. 落下, 瀑布, 采伐量, 下降, 落差, 降低, 堕落, 秋天；vi. 倒下, 落下, 来临, 失守, 阵亡, 下跌, 减弱, 倾斜, 垮台, 轮到, 变成, 降低；a. 秋天的",
-      "source": "ecdict"
-    },
-    "fashioned": {
-      "translation": "a. …式的",
-      "source": "ecdict"
-    },
-    "financial": {
-      "translation": "a. 财政的, 金融的；[经] 财政的, 金融的, 财务的",
-      "source": "ecdict"
-    },
-    "fixed": {
-      "translation": "a. 固定的, 不变的；[法] 固定的, 确定的, 不变的",
-      "source": "ecdict"
-    },
-    "for": {
-      "translation": "prep. 为, 因为, 至于；conj. 因为；[计] DOS批处理命令:对一组参数重复执行指定的命令",
-      "source": "ecdict"
-    },
-    "from": {
-      "translation": "prep. 从, 来自, 根据",
-      "source": "ecdict"
-    },
-    "future": {
-      "translation": "n. 未来, 将来；a. 将来的, 未来的",
-      "source": "ecdict"
-    },
-    "georgie": {
-      "translation": "n. George 的昵称",
-      "source": "ecdict"
-    },
-    "get": {
-      "translation": "vt. 得到, 获得, 变成, 使得, 收获, 接通, 抓住, 染上；vi. 到达, 成为, 变得；n. (网球等)救球, 生殖, 幼兽；[计] 取得指令, 获取文件",
-      "source": "ecdict"
-    },
-    "give": {
-      "translation": "n. 弹性, 适应性；vt. 给, 授予, 供给, 产生, 发表, 付出, 献出, 让出；vi. 捐赠, 支持不住, 让步",
-      "source": "ecdict"
-    },
-    "go": {
-      "translation": "vi. 去, 走, 达到, 运转, 查阅, 消失, 结束, 放弃, 花费, 流传, 趋于, 打算, 剩下；vt. 以...打赌, 对付, 忍受, 出产, 为被捕者出(保释金)；n. 去, 尝试, 进行",
-      "source": "ecdict"
-    },
-    "going": {
-      "translation": "n. 去, 离去, 工作情况, 地面状况, 行为；a. 进行中的, 流行的, 成功的, 现存的",
-      "source": "ecdict"
-    },
-    "gold": {
-      "translation": "n. 黄金, 钱财, 金块, 金色, 宝贵；a. 金的, 似金的, 金色的, 金制的",
-      "source": "ecdict"
-    },
-    "gone": {
-      "translation": "a. 离去的, 死去的, 用完的；go的过去分词",
-      "source": "ecdict"
-    },
-    "good": {
-      "translation": "n. 善行, 好处, 利益；a. 好的, 优良的, 上等的, 愉快的, 有益的, 好心的, 慈善的, 虔诚的",
-      "source": "ecdict"
-    },
-    "goodbye": {
-      "translation": "interj. 再见",
-      "source": "ecdict"
-    },
-    "got": {
-      "translation": "get的过去式和过去分词；[化] 谷草转氨酶; 谷氨酸草酰乙酸转氨酶",
-      "source": "ecdict"
-    },
-    "government": {
-      "translation": "n. 政府, 内阁；[经] 政府, 政治, 政体",
-      "source": "ecdict"
-    },
-    "ground": {
-      "translation": "n. 土地, 战场, 场地, 地面, 范围；a. 土地的, 地面上的；vt. 放在地上, 使搁浅, 打基础, 给...以训练；vi. 搁浅, 落地, 根据, 基于；a. 磨过的；grind的过去式和过去分词",
-      "source": "ecdict"
-    },
-    "harm": {
-      "translation": "n. 伤害, 害处；vt. 伤害, 损害",
-      "source": "ecdict"
-    },
-    "has": {
-      "translation": "have的第三人称单数现在式",
-      "source": "ecdict"
-    },
-    "have": {
-      "translation": "vt. 有, 怀有, 拿, 进行；aux. 已经",
-      "source": "ecdict"
-    },
-    "hear": {
-      "translation": "vt. 听到, 倾听, 听说, 审理；vi. 听见, 听",
-      "source": "ecdict"
-    },
-    "hi": {
-      "translation": "interj. 喂",
-      "source": "ecdict"
-    },
-    "high": {
-      "translation": "n. 高度, 高处；a. 高的, 高级的, 主要的, 高尚的, 高原的, 高音的, 昂贵的, 傲慢的；adv. 高度地, 奢侈地",
-      "source": "ecdict"
-    },
-    "highest": {
-      "translation": "[计] 最高",
-      "source": "ecdict"
-    },
-    "history": {
-      "translation": "n. 历史, 过去, 经历, 发展过程, 历史学, 过去的事, 历史记录；[计] 历史记录",
-      "source": "ecdict"
-    },
-    "hit": {
-      "translation": "n. 打击, 打, 冲撞, 讽刺；vt. 打, 打击, 碰撞, 打中, 袭击, 偶然碰上；vi. 打, 打中, 打击, 碰撞, 偶然碰上；[计] 击中; 找到; 瞬时打扰",
-      "source": "ecdict"
-    },
-    "how": {
-      "translation": "adv. 如何, 怎样, 多少, 多么；n. 方式",
-      "source": "ecdict"
-    },
-    "i": {
-      "translation": "pron. 我；[计] 电流, 中断, 指令, 指示符",
-      "source": "ecdict"
-    },
-    "idea": {
-      "translation": "n. 主意, 办法, 理想, 思想, 概念, 意见；[医] 观念, 思想",
-      "source": "ecdict"
-    },
-    "if": {
-      "translation": "conj. 如果, 是否, 无论何时, 假设, 即使；n. 条件；[计] DOS批处理命令:根据所测试的条件决定是否执行另一条命令",
-      "source": "ecdict"
-    },
-    "im": {
-      "translation": "[计] 中断屏蔽, 指令存储器",
-      "source": "ecdict"
-    },
-    "imposing": {
-      "translation": "a. 令人难忘的, 壮丽的, 威风的",
-      "source": "ecdict"
-    },
-    "impossible": {
-      "translation": "a. 不可能的, 难以置信的, 令人无法忍受的",
-      "source": "ecdict"
-    },
-    "in": {
-      "translation": "prep. 在...期间, 在...之内, 处于...之中, 从事于, 按照, 穿着；adv. 进入, 朝里, 在里面, 在屋里；a. 在里面的, 在朝的；n. 执政者, 交情",
-      "source": "ecdict"
-    },
-    "increases": {
-      "translation": "n. 增加量( increase的名词复数 )；v. 增加, 增大, 增多( increase的第三人称单数 ); 增强, 增进; [缝纫]放（针）; 增强",
-      "source": "ecdict"
-    },
-    "international": {
-      "translation": "a. 国际的；n. 国别设定；[计] 国别设定",
-      "source": "ecdict"
-    },
-    "into": {
-      "translation": "prep. 进入...之内, 朝..., 深入...之中, 成为...状况",
-      "source": "ecdict"
-    },
-    "invest": {
-      "translation": "vt. 投资, 花费, 笼罩, 授予；vi. 投资, 利用",
-      "source": "ecdict"
-    },
-    "investment": {
-      "translation": "n. 投资；[医] 包埋料, 围模料, 包埋法, 围模法",
-      "source": "ecdict"
-    },
-    "investors": {
-      "translation": "n. 投资者, 出资者( investor的复数形式 )",
-      "source": "ecdict"
-    },
-    "is": {
-      "translation": "be的现在式第三人称；[计] 加下标次序, 信息系统, 国际标准, 中间系统",
-      "source": "ecdict"
-    },
-    "isnt": {
-      "translation": "abbr. 原位缺口平移（In Situ Nick Translation）",
-      "source": "ecdict"
-    },
-    "it": {
-      "translation": "pron. 它；[计] 信息论, 输入终端, 智能终端, 内捕获",
-      "source": "ecdict"
-    },
-    "items": {
-      "translation": "n. 项目；名目；所有物品（item的复数形式）",
-      "source": "ecdict"
-    },
-    "its": {
-      "translation": "pron. 它的",
-      "source": "ecdict"
-    },
-    "ive": {
-      "translation": "abbr. 香港专业教育学院（Hong Kong Institute of Vocational Education）",
-      "source": "ecdict"
-    },
-    "january": {
-      "translation": "n. 一月",
-      "source": "ecdict"
-    },
-    "jewellery": {
-      "translation": "n. 宝石, 贵重饰物, 珠宝, 宝石饰物, 受珍视的人/物, 宝贝, 有价值的人/物",
-      "source": "ecdict"
-    },
-    "john": {
-      "translation": "n. 盥洗室, 厕所, 嫖客",
-      "source": "ecdict"
-    },
-    "joining": {
-      "translation": "n. 接缝；连接；连接物",
-      "source": "ecdict"
-    },
-    "just": {
-      "translation": "a. 正直的, 合理的, 正确的, 应得的；adv. 刚刚, 正好, 仅仅",
-      "source": "ecdict"
-    },
-    "kind": {
-      "translation": "n. 种类, 性质, 方式；a. 亲切的, 仁慈的, 和蔼的",
-      "source": "ecdict"
-    },
-    "know": {
-      "translation": "v. 知道, 了解, 认识, 确信",
-      "source": "ecdict"
-    },
-    "learned": {
-      "translation": "a. 有学问的, 学术上的；learn的过去式和过去分词",
-      "source": "ecdict"
-    },
-    "learnt": {
-      "translation": "learn的过去式和过去分词",
-      "source": "ecdict"
-    },
-    "less": {
-      "translation": "n. 较少, 较小；a. 少的, 小的；adv. 较少, 较小, 较差；[计] 最低成本估算与调度法",
-      "source": "ecdict"
-    },
-    "lets": {
-      "translation": "abbr. 地方交易系统（Local Exchange Trading System）",
-      "source": "ecdict"
-    },
-    "like": {
-      "translation": "a. 相似的, 同样的；vt. 喜欢, 愿意, 想；vi. 喜欢, 希望；n. 爱好, 同样的人(或物)；prep. 象, 如同；adv. 可能",
-      "source": "ecdict"
-    },
-    "likely": {
-      "translation": "a. 有可能的, 合适的, 前途有望的；adv. 或许, 可能",
-      "source": "ecdict"
-    },
-    "listen": {
-      "translation": "vi. 听, 倾听, 听从；n. 听, 倾听",
-      "source": "ecdict"
-    },
-    "literally": {
-      "translation": "adv. 逐字地, 按照字面上地, 不夸张地",
-      "source": "ecdict"
-    },
-    "little": {
-      "translation": "n. 一点点, 少许, 一会儿, 短时间；a. 小的, 很少的, 幼小的, 琐碎的, 短暂的, 矮小的；adv. 很少, 稍微, 完全不",
-      "source": "ecdict"
-    },
-    "live": {
-      "translation": "a. 活的, 生动的, 精力充沛的, 实况转播的；vi. 活, 生存, 居住；vt. 过着, 度过, 经历；adv. 实况地",
-      "source": "ecdict"
-    },
-    "longer": {
-      "translation": "adv. 比较久",
-      "source": "ecdict"
-    },
-    "loss": {
-      "translation": "n. 损失, 遗失, 失败, 输, 错过, 伤亡；[化] 损失; 损耗",
-      "source": "ecdict"
-    },
-    "lot": {
-      "translation": "n. 运气, 签, 抽签, 份额, 许多, 一堆；vt. 划分；vi. 抽签, 抓阄",
-      "source": "ecdict"
-    },
-    "lots": {
-      "translation": "n. 大量, 许多；一堆；命运（lot的复数）",
-      "source": "ecdict"
-    },
-    "made": {
-      "translation": "a. 人工制成的, 成功的, 创造的；make的过去式和过去分词",
-      "source": "ecdict"
-    },
-    "magically": {
-      "translation": "adv. 用魔法地；如魔法般地",
-      "source": "ecdict"
-    },
-    "make": {
-      "translation": "vt. 制造, 安排, 创造, 构成, 使得, 产生, 造成, 整理, 布置, 引起, 到达, 进行；vi. 开始, 前进, 增大, 被制造, 被处理；n. 制造, 构造, 性情",
-      "source": "ecdict"
-    },
-    "making": {
-      "translation": "n. 制造, (手工)制造业, 制作, 形成, 发展, 要素, 内在因素, 赚头, 制造物",
-      "source": "ecdict"
-    },
-    "market": {
-      "translation": "n. 市场, 交易, 集市, 推销地区, 行情, 市面, 销路；vt. 在市场上交易, 使上市, 销售；vi. 在市场上买卖",
-      "source": "ecdict"
-    },
-    "maybe": {
-      "translation": "adv. 也许, 大概；n. 可能性",
-      "source": "ecdict"
-    },
-    "mean": {
-      "translation": "a. 低劣的, 卑贱的, 简陋的, 吝啬的, 惭愧的, 平均的, 中间的, 普通的；vt. 意谓, 想要, 意欲, 预定；vi. 用意, 有意义；n. 平均数, 中间, 中庸",
-      "source": "ecdict"
-    },
-    "meaning": {
-      "translation": "n. 意义, 含义, 目的, 意图；a. 意味深长的",
-      "source": "ecdict"
-    },
-    "means": {
-      "translation": "n. 方法, 手段, 工具, 财产, 收入；[经] 方法, 手段, 工具; 意谓",
-      "source": "ecdict"
-    },
-    "mentioned": {
-      "translation": "v. 提到( mention的过去式和过去分词 ); 说起; 提名表扬; 传令嘉奖",
-      "source": "ecdict"
-    },
-    "metal": {
-      "translation": "n. 金属, 金属制品, 合金, 本质, 质料；a. 金属制的；vt. 以金属覆盖",
-      "source": "ecdict"
-    },
-    "metals": {
-      "translation": "五金",
-      "source": "ecdict"
-    },
-    "middle": {
-      "translation": "n. 中央, 中间, 腰部；a. 中央的, 中庸的, 中间的",
-      "source": "ecdict"
-    },
-    "mined": {
-      "translation": "n. 开采",
-      "source": "ecdict"
-    },
-    "mines": {
-      "translation": "n. 地雷；矿山（mine的复数）",
-      "source": "ecdict"
-    },
-    "minute": {
-      "translation": "n. 分, 分钟, 片刻, 备忘录, 笔记；vt. 记录, 摘录, 测定时间；a. 微小的, 详细的",
-      "source": "ecdict"
-    },
-    "minutes": {
-      "translation": "n. 会议记录；[法] 备忘录, 会议记录, 审判记录",
-      "source": "ecdict"
-    },
-    "modern": {
-      "translation": "n. 现代人, 有思想的人；a. 现代的, 时髦的",
-      "source": "ecdict"
-    },
-    "moment": {
-      "translation": "n. 片刻, 瞬间, 重要, 阶段, 力矩；[医] 片刻, 瞬间, 时机, 因素, 矩",
-      "source": "ecdict"
-    },
-    "money": {
-      "translation": "n. 金钱, 一笔款, 财富, 货币, 金额；[经] 货币, 金钱, 财产",
-      "source": "ecdict"
-    },
-    "more": {
-      "translation": "n. 更多；a. 多的, 程度较大的, 更大的；adv. 多, 更多, 进一步；[计] DOS外部命令:显示满屏后自动暂停, 并显示:\"--More--\", 按任意键继续",
-      "source": "ecdict"
-    },
-    "much": {
-      "translation": "n. 大量, 许多, 重要的事；a. 很多的, 重要的；adv. 多, 甚, 几乎",
-      "source": "ecdict"
-    },
-    "neutral": {
-      "translation": "n. 中立者, 中立国, 非彩色, 空档；a. 中立的, 中性的, 无色的",
-      "source": "ecdict"
-    },
-    "no": {
-      "translation": "n. 不, 拒绝, 否决票；a. 没有, 不是, 绝非；adv. 不",
-      "source": "ecdict"
-    },
-    "not": {
-      "translation": "adv. 不, 非, 未；[计] 非",
-      "source": "ecdict"
-    },
-    "nothing": {
-      "translation": "n. 无, 不关紧要之事, 零；adv. 毫不, 决不；interj. 什么也没有, 无",
-      "source": "ecdict"
-    },
-    "now": {
-      "translation": "adv. 现在, 刚才, 目前；n. 现在；a. 现在的；conj. 由于",
-      "source": "ecdict"
-    },
-    "numbers": {
-      "translation": "n. 数字（number的复数）；算术",
-      "source": "ecdict"
-    },
-    "of": {
-      "translation": "prep. 的, 属于",
-      "source": "ecdict"
-    },
-    "ok": {
-      "translation": "a. 好, 不错, 可以；adv. 好, 不错, 可以；n. 批准, 认可；[计] 确定",
-      "source": "ecdict"
-    },
-    "old": {
-      "translation": "n. 以前, 往昔；a. 老的, 旧的, 古老的, 年长的, 老练的",
-      "source": "ecdict"
-    },
-    "on": {
-      "translation": "prep. 在...之上；adv. ...上去；a. 正起作用的；[计] 打开",
-      "source": "ecdict"
-    },
-    "once": {
-      "translation": "adv. 一次, 曾经, 一旦；conj. 一旦, 一经；n. 一次；a. 从前的",
-      "source": "ecdict"
-    },
-    "one": {
-      "translation": "n. 一(个)；pron. 一, 任何人；num. 一, 一个；a. 一致的, 完整的",
-      "source": "ecdict"
-    },
-    "online": {
-      "translation": "[计] 联机",
-      "source": "ecdict"
-    },
-    "or": {
-      "translation": "conj. 或, 或者；[计] 或",
-      "source": "ecdict"
-    },
-    "ordinary": {
-      "translation": "a. 平常的, 普通的, 平凡的；n. 平常的人(或事)",
-      "source": "ecdict"
-    },
-    "other": {
-      "translation": "a. 其他的, 另外的, 从前的；pron. 其他的, 他人, 另外一个",
-      "source": "ecdict"
-    },
-    "our": {
-      "translation": "pron. 我们的",
-      "source": "ecdict"
-    },
-    "over": {
-      "translation": "adv. 结束, 越过, 从头到尾；prep. 在...之上, 遍于...之上, 越过；a. 上面的；vt. 越过",
-      "source": "ecdict"
-    },
-    "own": {
-      "translation": "n. 自己的；a. 自己的, 嫡亲的, 同胞的；vt. 拥有, 支配, 自认, 承认, 顺从于；vi. 承认, 供认",
-      "source": "ecdict"
-    },
-    "paper": {
-      "translation": "n. 纸, 文件, 文章, 报纸, 证券, 证件；vt. 用纸糊, 贴壁纸于, 用纸包装；vi. 贴壁纸；a. 纸做的, 纸上的",
-      "source": "ecdict"
-    },
-    "particular": {
-      "translation": "n. 一项(或条、点), 个别项目, 详细说明；a. 特别的, 独有的, 挑剔的, 详尽的",
-      "source": "ecdict"
-    },
-    "peak": {
-      "translation": "n. 山峰, 巅, 山顶, 顶点, 尖峰, 帽舌；a. 最高的, 最大值的；vi. 到达最高点, 消瘦, 变憔悴, 逐渐缩小；vt. 使竖起, 使达到最高点",
-      "source": "ecdict"
-    },
-    "people": {
-      "translation": "n. 人, 人民, 民族, 平民；vt. 使住满人, 居住于",
-      "source": "ecdict"
-    },
-    "perceived": {
-      "translation": "v. 感觉( perceive的过去式和过去分词 ); 视为; 认为; 理解为",
-      "source": "ecdict"
-    },
-    "personal": {
-      "translation": "a. 私人的, 涉及隐私的, 有人性的, 人称的, 亲自的, 身体的；[医] 人的; 个人的, 自身的",
-      "source": "ecdict"
-    },
-    "phil": {
-      "translation": "abbr. 哲学（philosophy）",
-      "source": "ecdict"
-    },
-    "plastic": {
-      "translation": "n. 塑料, 可塑体, 可塑性物质；a. 塑料的, 塑造的, 有可塑性的, 造型的, 易受影响的, 有创造力的",
-      "source": "ecdict"
-    },
-    "politics": {
-      "translation": "n. 政治, 政治学, 政见, 政治活动；[法] 政治, 政治学, 政纲",
-      "source": "ecdict"
-    },
-    "pounds": {
-      "translation": "n. 磅, 英镑；重击（pound复数形式）",
-      "source": "ecdict"
-    },
-    "practice": {
-      "translation": "n. 实践, 练习, 实行, 惯例, 习惯, 开业；v. 实践, 实行, 练习, 实习, 业务",
-      "source": "ecdict"
-    },
-    "price": {
-      "translation": "n. 价格, 代价, 价值；vt. 定...的价格",
-      "source": "ecdict"
-    },
-    "prices": {
-      "translation": "n. 价格（price的复数）",
-      "source": "ecdict"
-    },
-    "print": {
-      "translation": "n. 打印, 版, 印刷物, 痕迹, 印刷业, 印刷字体, 图片, 印花布, 印章；v. 打印, 印刷, 铭记, 留印记于, 用印刷体写；[计] DOS外部命令:在打印机上打印文件, 可一边打印文件一边执行其他工作",
-      "source": "ecdict"
-    },
-    "products": {
-      "translation": "n. 产品；商品（product的复数）",
-      "source": "ecdict"
-    },
-    "professor": {
-      "translation": "n. 教授",
-      "source": "ecdict"
-    },
-    "programme": {
-      "translation": "n. 节目, 节目单, 程序, 纲要, 大纲, 计划；vt. 规划, 拟...计划；vi. 安排节目, 编程序",
-      "source": "ecdict"
-    },
-    "protected": {
-      "translation": "a. 受保护的",
-      "source": "ecdict"
-    },
-    "question": {
-      "translation": "n. 问题, 询问；v. 询问, 审问, 怀疑；[计] 询问",
-      "source": "ecdict"
-    },
-    "quiz": {
-      "translation": "n. 考查, 课堂测验, 恶作剧, 智力测验；vt. 戏弄, 考查, 恶作剧",
-      "source": "ecdict"
-    },
-    "rather": {
-      "translation": "adv. 宁可, 稍微, 相当",
-      "source": "ecdict"
-    },
-    "reached": {
-      "translation": "v. 到达( reach的过去式和过去分词 ); 联络; 伸出手臂, 延伸",
-      "source": "ecdict"
-    },
-    "reade": {
-      "translation": "n. 里德（男子名）",
-      "source": "ecdict"
-    },
-    "real": {
-      "translation": "a. 真的, 真实的, 实际的, 实在的, 不动(产)的, 实数的；n. 实数, 现实；adv. 真正地",
-      "source": "ecdict"
-    },
-    "recap": {
-      "translation": "vt. 翻新胎面；n. 翻新的轮胎",
-      "source": "ecdict"
-    },
-    "said": {
-      "translation": "a. 上述的；say的过去式和过去分词",
-      "source": "ecdict"
-    },
-    "says": {
-      "translation": "v. 说（第三人称单数）",
-      "source": "ecdict"
-    },
-    "seem": {
-      "translation": "vi. 象是, 似乎",
-      "source": "ecdict"
-    },
-    "series": {
-      "translation": "n. 串联, 序列, 连续, 系列, 丛书, 套, 级数, 组；[计] 系列",
-      "source": "ecdict"
-    },
-    "service": {
-      "translation": "n. 服务, 贡献, 雇佣, 公职, 服役, 功劳, 仪式, 送达, 行政部门；vt. 保养, 维修；a. 武装部队的, 服务性的, 仆人的, 耐用的；[计] 服务, 业务",
-      "source": "ecdict"
-    },
-    "since": {
-      "translation": "prep. 自...以后, 自...以来；adv. 自那时以后；conj. 既然, 自...以后, 自...以来",
-      "source": "ecdict"
-    },
-    "six": {
-      "translation": "num. 六, 六个",
-      "source": "ecdict"
-    },
-    "so": {
-      "translation": "adv. 如此, 如是, 如...那样；conj. 所以, 因此；pron. 这样",
-      "source": "ecdict"
-    },
-    "social": {
-      "translation": "a. 社会的, 群居的, 社交的；n. 联欢会",
-      "source": "ecdict"
-    },
-    "sold": {
-      "translation": "sell的过去式和过去分词",
-      "source": "ecdict"
-    },
-    "solid": {
-      "translation": "n. 固体；a. 坚硬的, 稳固的, 固体的, 实心的, 纯质的, 立体的, 立方的；[计] 原色",
-      "source": "ecdict"
-    },
-    "something": {
-      "translation": "pron. 某事, 某物",
-      "source": "ecdict"
-    },
-    "somewhere": {
-      "translation": "adv. 到某处, 在某处",
-      "source": "ecdict"
-    },
-    "sort": {
-      "translation": "n. 种类, 方式, 品质, 态度, 举止；vt. 分类, 排序, 挑选；vi. 交往, 协调；[计] 排序; DOS外部命令:从标准输入设备接收数据, 整个数据输入完后；对它以行为单位进行排序, 然后在标准输出设备上输出",
-      "source": "ecdict"
-    },
-    "start": {
-      "translation": "n. 惊起, 出发, 开端, 起点, 吃惊, 有利条件；vi. 开始, 出发, 启动, 跳起, 吃惊, 出现, 松动, 脱落, 起价, 参赛；vt. 使惊起, 开动, 发动, 启动, 开始, 创办, 提议, 使松动, 使脱落, 起用；[计] 起始",
-      "source": "ecdict"
-    },
-    "starting": {
-      "translation": "n. 开端, 开始, 出发, 起动, 开动；[机] 开动, 起动",
-      "source": "ecdict"
-    },
-    "still": {
-      "translation": "n. 蒸馏室, 寂静, 剧照；v. 蒸馏, (使)平静, (使)静止；a. 静止的, 不动的, 静寂的, 不起泡的, 静物摄影的；adv. 仍然, 更, 静止地；conj. 然而, 但是",
-      "source": "ecdict"
-    },
     "store": {
-      "translation": "n. 商店, 贮藏, 仓库, 备用品, 存储器；vt. 储存, 贮藏, 供给；vi. 贮藏；a. 贮藏的, 现成的；[计] 存储器操作; 存储",
-      "source": "ecdict"
+      "translation": "价值储存",
+      "source": "context",
+      "context": "价值储存",
+      "sentence": "so the fact that it's neutral means it's an asset that's perceived to be a store of value over a longer term.",
+      "phrase": "store of value"
     },
-    "strategist": {
-      "translation": "n. 战略家",
-      "source": "ecdict"
-    },
-    "strong": {
-      "translation": "a. 强壮的, 坚固的, 坚强的, 强烈的, 有力的, 优良的；adv. 强劲地, 有力地, 猛烈地",
-      "source": "ecdict"
-    },
-    "suki": {
-      "translation": "n. 苏琪（女子名）；苏奇（台湾化妆品牌名）",
-      "source": "ecdict"
-    },
-    "super": {
-      "translation": "n. 跑龙套角色, 冗员, 特级品, 特大号, 管理人；a. 上等的, 特大的, 超级的, 极好的, 十分的, 过分的；adv. 非常",
-      "source": "ecdict"
-    },
-    "supply": {
-      "translation": "n. 补给, 供给, 供应品；vt. 补给, 供给, 提供, 补充；vi. 替代",
-      "source": "ecdict"
-    },
-    "sure": {
-      "translation": "a. 确信, 必然的, 必定的；adv. 当然, 确实地, 无疑地",
-      "source": "ecdict"
-    },
-    "sustains": {
-      "translation": "v. 维持( sustain的第三人称单数 ); 支撑; 忍受; 长期保持",
-      "source": "ecdict"
-    },
-    "talking": {
-      "translation": "a. 说话的, 多嘴的, 富有表情的；n. 讲话, 谈论",
-      "source": "ecdict"
-    },
-    "tariffs": {
-      "translation": "n. 关税制度; 关税( tariff的名词复数 ); 关税表; （旅馆或饭店等的）收费表; 量刑标准",
-      "source": "ecdict"
-    },
-    "term": {
-      "translation": "n. 术语, 专有名词, 期限, 学期, 任期, 条件, 价钱, 关系, 地位, 项, 界石；vt. 称, 呼；[计] 检索词; 项",
-      "source": "ecdict"
-    },
-    "terms": {
-      "translation": "n. 条件, 条款, 费用, 价钱, 关系, 地位, 交谊；[经] 条件",
-      "source": "ecdict"
-    },
-    "test": {
-      "translation": "n. 测试, 试验, 化验, 检验, 考验, 甲壳；vt. 测试, 试验, 化验；vi. 接受测验, 进行测试",
-      "source": "ecdict"
-    },
-    "than": {
-      "translation": "conj. 比, 除...外；prep. 比",
-      "source": "ecdict"
-    },
-    "thank": {
-      "translation": "n. 谢意, 感谢；vt. 谢谢, 感谢",
-      "source": "ecdict"
-    },
-    "that": {
-      "translation": "a. 那, 那个；conj. 以致, 因为；pron. 那；adv. 那么, 那样",
-      "source": "ecdict"
-    },
-    "the": {
-      "translation": "art. 那",
-      "source": "ecdict"
-    },
-    "there": {
-      "translation": "adv. 在那里",
-      "source": "ecdict"
-    },
-    "theres": {
-      "translation": "[地名] [德国] 泰勒斯",
-      "source": "ecdict"
-    },
-    "they": {
-      "translation": "pron. 他们, 它们",
-      "source": "ecdict"
-    },
-    "things": {
-      "translation": "n. 所有物, 财产, 用具, 用品, 局面, 形势, 情况；[法] 物",
-      "source": "ecdict"
-    },
-    "think": {
-      "translation": "vt. 想, 考虑, 想起, 想像, 打算, 认为；vi. 思考, 料想；n. 想法；a. 思想的",
-      "source": "ecdict"
-    },
-    "this": {
-      "translation": "pron. 这, 本；a. 这, 本；adv. 这么",
-      "source": "ecdict"
-    },
-    "though": {
-      "translation": "adv. 然而, 可是；conj. 虽然, 纵然",
-      "source": "ecdict"
-    },
-    "thought": {
-      "translation": "n. 想法, 思想, 思维, 关心, 挂念；think的过去式和过去分词",
-      "source": "ecdict"
-    },
-    "thousands": {
-      "translation": "n. 数千（thousand的复数）",
-      "source": "ecdict"
-    },
-    "through": {
-      "translation": "adv. 穿越, 从头至尾, 到底, 因为；prep. 经过, 穿过；a. 对穿的, 直达的, 完结的",
-      "source": "ecdict"
-    },
-    "timber": {
-      "translation": "n. 木材, 木料；vt. 用木材建造",
-      "source": "ecdict"
-    },
-    "time": {
-      "translation": "n. 时间, 时侯, 时机, 时期, 期限, 次数, 节拍, 暂停, 规定时间；vt. 测定...的时间, 记录...的时间, 计时, 定时；a. 时间的, 记时的, 定时的, 定期的, 分期的；[计] DOS内部命令:用于显示或设定系统的时间",
-      "source": "ecdict"
-    },
-    "times": {
-      "translation": "n. 时代, 境遇, 时报",
-      "source": "ecdict"
-    },
-    "to": {
-      "translation": "prep. 到, 向, 趋于；adv. 向前",
-      "source": "ecdict"
-    },
-    "tonnes": {
-      "translation": "n. 吨, 公吨( tonne的复数形式 )",
-      "source": "ecdict"
-    },
-    "too": {
-      "translation": "adv. 也, 非常, 太",
-      "source": "ecdict"
-    },
-    "trade": {
-      "translation": "n. 贸易, 商业, 交易, 生意, 职业, 顾客, 信风；vi. 进行交易, 做买卖, 经商, 对换, 购物；vt. 用...进行交换",
-      "source": "ecdict"
-    },
-    "traditional": {
-      "translation": "a. 传统的, 惯例的；[经] 传统的, 惯例的",
-      "source": "ecdict"
-    },
-    "turn": {
-      "translation": "n. 转弯, 转动, 旋转, 翻转, 一圈, 顺次, 改动, 变化, 性格, 特色, 形状, 转折；vt. 使旋转, 转弯, 转动, 使转向, 驱赶, 阻挡, 兑换, 改写, 使作对, 绕过, 使流通；vi. 转动, 转弯, 转向, 翻转, 回转, 改变, 转身, 变成, 变质, 晕眩, 易脱手",
-      "source": "ecdict"
-    },
-    "ukraine": {
-      "translation": "n. 乌克兰（原苏联一加盟共和国, 现已独立）",
-      "source": "ecdict"
-    },
-    "uncertain": {
-      "translation": "a. 不确定的, 无常的, 不确信的, 不可预测的；[法] 不确定的, 未定的, 不确信的",
-      "source": "ecdict"
-    },
-    "under": {
-      "translation": "prep. 在...之下, 低于；a. 下面的, 从属的；adv. 在下面",
-      "source": "ecdict"
-    },
-    "underlying": {
-      "translation": "a. 在下面的；[经] 优先的, 基础的, 放在下面的",
-      "source": "ecdict"
-    },
-    "understood": {
-      "translation": "understand的过去式和过去分词",
-      "source": "ecdict"
-    },
-    "unlike": {
-      "translation": "a. 不像的, 不同的；prep. 不像, 和...不同",
-      "source": "ecdict"
-    },
-    "up": {
-      "translation": "a. 向上的, 起床的, 涨的；adv. 向上, 上涨；prep. 在...上面, 向...的较高处",
-      "source": "ecdict"
-    },
-    "us": {
-      "translation": "pron. 我们；[经] 美国",
-      "source": "ecdict"
-    },
-    "used": {
-      "translation": "a. 使用过的, 二手的, 习惯的",
-      "source": "ecdict"
-    },
-    "using": {
-      "translation": "[计] 使用",
-      "source": "ecdict"
-    },
-    "valuable": {
-      "translation": "a. 有价值的, 贵重的, 宝贵的, 可估价的；[经] 有价值的, 可估价的, 贵重的",
-      "source": "ecdict"
+    "storeofvalue": {
+      "translation": "价值储存",
+      "source": "context",
+      "context": "价值储存",
+      "sentence": "so the fact that it's neutral means it's an asset that's perceived to be a store of value over a longer term.",
+      "phrase": "store of value"
     },
     "value": {
-      "translation": "n. 价值, 价格, 购买力, 评价, 估价, 计算结果；vt. 评价, 估价, 重视；[计] 计算结果",
-      "source": "ecdict"
+      "translation": "价值储存",
+      "source": "context",
+      "context": "价值储存",
+      "sentence": "so the fact that it's neutral means it's an asset that's perceived to be a store of value over a longer term.",
+      "phrase": "store of value"
     },
-    "values": {
-      "translation": "n. 对价值的看法, 准则, 标准, 价值观念",
-      "source": "ecdict"
+    "all": {
+      "translation": "历史最高点",
+      "source": "context",
+      "context": "历史最高点",
+      "sentence": "So, what's going on? Well, we mentioned that the price of gold increases in times of crisis because government banks want to buy more of it, and there has been a series of world events that have made government banks want to buy more gold, for example the wars in Ukraine and the Middle East, and in politics too, for example the US imposing tariffs on international products. But since that peak in January, the price has dropped a bit.",
+      "phrase": "all-time high"
     },
-    "virtual": {
-      "translation": "a. 实际上起作用的, 虚的, 实质的, 有效的, 事实上生效的；[计] 虚拟",
-      "source": "ecdict"
+    "alltimehigh": {
+      "translation": "历史最高点",
+      "source": "context",
+      "context": "历史最高点",
+      "sentence": "So, what's going on? Well, we mentioned that the price of gold increases in times of crisis because government banks want to buy more of it, and there has been a series of world events that have made government banks want to buy more gold, for example the wars in Ukraine and the Middle East, and in politics too, for example the US imposing tariffs on international products. But since that peak in January, the price has dropped a bit.",
+      "phrase": "all-time high"
     },
-    "vocabulary": {
-      "translation": "n. 词汇(量), 词汇表；[计] 词表",
-      "source": "ecdict"
+    "high": {
+      "translation": "历史最高点",
+      "source": "context",
+      "context": "历史最高点",
+      "sentence": "So, what's going on? Well, we mentioned that the price of gold increases in times of crisis because government banks want to buy more of it, and there has been a series of world events that have made government banks want to buy more gold, for example the wars in Ukraine and the Middle East, and in politics too, for example the US imposing tariffs on international products. But since that peak in January, the price has dropped a bit.",
+      "phrase": "all-time high"
     },
-    "want": {
-      "translation": "n. 需要的东西, 缺乏, 贫困, 需要；vt. 要, 希望, 应该, 缺少；vi. 生活困苦, 需要, 缺少",
-      "source": "ecdict"
-    },
-    "wars": {
-      "translation": "n. 战争（war的复数形式）",
-      "source": "ecdict"
-    },
-    "was": {
-      "translation": "be的过去式",
-      "source": "ecdict"
-    },
-    "we": {
-      "translation": "pron. 我们",
-      "source": "ecdict"
-    },
-    "wearing": {
-      "translation": "a. 穿用的, 使疲惫的, 磨损的",
-      "source": "ecdict"
-    },
-    "website": {
-      "translation": "n. 网站（全球资讯网的主机站）",
-      "source": "ecdict"
-    },
-    "well": {
-      "translation": "n. 井, 泉水, 源泉, 好；v. 涌出；a. 健康的, 良好的, 适宜的, 恰当的；adv. 很好地, 适当地, 好意地, 很, 完全；interj. 好啦",
-      "source": "ecdict"
-    },
-    "were": {
-      "translation": "be的过去式",
-      "source": "ecdict"
-    },
-    "what": {
-      "translation": "pron. 什么；interj. 怎么, 多么；a. 什么的；adv. 到什么程度",
-      "source": "ecdict"
-    },
-    "when": {
-      "translation": "conj. 当...的时候；adv. 何时, 什么时候；pron. 什么时侯；n. 时间",
-      "source": "ecdict"
-    },
-    "whereas": {
-      "translation": "conj. 然而, 鉴于；[法] 考虑到, 鉴于, 就...而论",
-      "source": "ecdict"
-    },
-    "why": {
-      "translation": "adv. 为什么；n. 原因, 理由",
-      "source": "ecdict"
-    },
-    "will": {
-      "translation": "n. 意志, 决心, 意愿, 意向, 干劲, 遗嘱；vt. 用意志的力量驱使, 决意, 愿意, 立遗嘱；vi. 下决心, 愿意；aux. 将, 愿意, 必须",
-      "source": "ecdict"
-    },
-    "with": {
-      "translation": "prep. 和...在一起, 以, 由于",
-      "source": "ecdict"
-    },
-    "wont": {
-      "translation": "n. 习惯；a. 惯常的, 易于...的；vi. 习惯；vt. 使习惯于",
-      "source": "ecdict"
-    },
-    "worksheet": {
-      "translation": "[计] 工作表；[化] 工作单; 加工单",
-      "source": "ecdict"
-    },
-    "world": {
-      "translation": "n. 世界, 地球, 宇宙, 万物, 世人, 人间, 领域, 世事, 世故, 社会生活, 大量；[法] 世界, 地球, 世人",
-      "source": "ecdict"
-    },
-    "years": {
-      "translation": "n. 年代；岁月；年；年龄",
-      "source": "ecdict"
-    },
-    "yes": {
-      "translation": "adv. 是；n. 是, 同意；v. 同意",
-      "source": "ecdict"
-    },
-    "you": {
-      "translation": "pron. 你, 你们",
-      "source": "ecdict"
-    },
-    "your": {
-      "translation": "pron. 你的, 你们的",
-      "source": "ecdict"
+    "time": {
+      "translation": "历史最高点",
+      "source": "context",
+      "context": "历史最高点",
+      "sentence": "So, what's going on? Well, we mentioned that the price of gold increases in times of crisis because government banks want to buy more of it, and there has been a series of world events that have made government banks want to buy more gold, for example the wars in Ukraine and the Middle East, and in politics too, for example the US imposing tariffs on international products. But since that peak in January, the price has dropped a bit.",
+      "phrase": "all-time high"
     }
   }
 }

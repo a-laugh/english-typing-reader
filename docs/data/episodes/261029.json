@@ -31,7 +31,120 @@
       "definition": "blocking the Sun's light and heat"
     }
   ],
-  "context_glossary": {},
+  "context_glossary": {
+    "hot": {
+      "meaning": "炎热的",
+      "sentence": "So, Neil, we've just had a really hot summer in the UK."
+    },
+    "air conditioning": {
+      "meaning": "空调",
+      "sentence": "Did you have air conditioning in your house?"
+    },
+    "serious": {
+      "meaning": "严重的",
+      "sentence": "But there is a really serious side to this."
+    },
+    "records": {
+      "meaning": "记录",
+      "sentence": "Heat records continue to be broken around the world."
+    },
+    "experts": {
+      "meaning": "专家",
+      "sentence": "Experts are predicting that ten new air conditioning units will be installed every second for the next 30 years."
+    },
+    "quiz": {
+      "meaning": "测验",
+      "sentence": "OK. As always, Neil, we'll start with a quiz question."
+    },
+    "originally": {
+      "meaning": "最初地",
+      "sentence": "What was it originally used for?"
+    },
+    "ink": {
+      "meaning": "墨水",
+      "sentence": "to dry ink"
+    },
+    "absolutely": {
+      "meaning": "绝对地",
+      "sentence": "Well, I have absolutely no idea, Georgie."
+    },
+    "programme": {
+      "meaning": "节目",
+      "sentence": "OK, Neil, we'll find out the answer at the end of the programme."
+    },
+    "uncomfortable": {
+      "meaning": "不舒服的",
+      "sentence": "Is air conditioning all about comfort, though?"
+    },
+    "health": {
+      "meaning": "健康",
+      "sentence": "Summer heat can be a real health issue as well."
+    },
+    "result": {
+      "meaning": "结果",
+      "sentence": "It's thought that across Europe, over 30,000 people died as a result of this summer's heat."
+    },
+    "climatologist": {
+      "meaning": "气候学家",
+      "sentence": "Dr Radhika Khosla, an expert in climatology, told BBC World Service's The Climate Question"
+    },
+    "civilisation": {
+      "meaning": "文明",
+      "sentence": "he said it was air conditioning. And there are so many large parts of the world where we would not be able to inhabit if we did not have air conditioning."
+    },
+    "inhabitant": {
+      "meaning": "居民",
+      "sentence": "It literally stops people from dying. Yes, and she makes the point that there are many parts of the world that we would not be able to inhabit – that means live in – without this technology."
+    },
+    "downsides": {
+      "meaning": "缺点",
+      "sentence": "No. There are some serious downsides."
+    },
+    "intensive": {
+      "meaning": "密集的，集中的",
+      "sentence": "Passive cooling is when we take steps to provide thermal comfort that are not energy intensive."
+    },
+    "solar gain": {
+      "meaning": "太阳能获取",
+      "sentence": "Some of the most important ones are first to cut solar gain, which is through things like shading."
+    },
+    "vicious cycle": {
+      "meaning": "恶性循环",
+      "sentence": "And we reach a vicious cycle, because then you're in a world where it's getting warmer. We're using air conditioning to be able to protect ourselves. That's leading to more emissions and more energy use. That is then making the world warmer. And then we need more air conditioning."
+    },
+    "emissions": {
+      "meaning": "排放",
+      "sentence": "We're going to see emissions rise."
+    },
+    "detrimental": {
+      "meaning": "有害的",
+      "sentence": "And we reach a vicious cycle, because then you're in a world where it's getting warmer. We're using air conditioning to be able to protect ourselves. That's leading to more emissions and more energy use. That is then making the world warmer. And then we need more air conditioning."
+    },
+    "power cuts": {
+      "meaning": "停电",
+      "sentence": "If people are trying to use more electricity than it can cope with, then the grid can collapse – you get power cuts, which is when you can't get any electricity."
+    },
+    "solution": {
+      "meaning": "解决方案",
+      "sentence": "What are the solutions?"
+    },
+    "sustainable": {
+      "meaning": "可持续的",
+      "sentence": "Radhika also talks about the importance of using sustainable energy to power the air conditioning that we still will need."
+    },
+    "recap": {
+      "meaning": "总结",
+      "sentence": "Let's recap the vocabulary we learned in this programme, starting with life-saving, which describes something that stops people from dying."
+    },
+    "distribute": {
+      "meaning": "分配，分布",
+      "sentence": "The grid is the system or network that distributes electricity across towns, cities, and countries."
+    },
+    "blocking": {
+      "meaning": "阻挡",
+      "sentence": "Some of the most important ones are first to cut solar gain, which is through things like shading. Passive cooling is where you cool your house down without using a lot of energy. Yes, heat from the sun can be blocked by shading, which could be with trees, curtains or blinds."
+    }
+  },
   "dict": {
     "life-saving": {
       "translation": "used to stop people from dying",
@@ -57,25 +170,182 @@
       "translation": "blocking the Sun's light and heat",
       "source": "official"
     },
+    "hot": {
+      "translation": "炎热的",
+      "source": "context",
+      "context": "炎热的",
+      "sentence": "So, Neil, we've just had a really hot summer in the UK."
+    },
+    "air conditioning": {
+      "translation": "空调",
+      "source": "context",
+      "context": "空调",
+      "sentence": "Did you have air conditioning in your house?"
+    },
+    "serious": {
+      "translation": "严重的",
+      "source": "context",
+      "context": "严重的",
+      "sentence": "But there is a really serious side to this."
+    },
+    "records": {
+      "translation": "记录",
+      "source": "context",
+      "context": "记录",
+      "sentence": "Heat records continue to be broken around the world."
+    },
+    "experts": {
+      "translation": "专家",
+      "source": "context",
+      "context": "专家",
+      "sentence": "Experts are predicting that ten new air conditioning units will be installed every second for the next 30 years."
+    },
+    "quiz": {
+      "translation": "测验",
+      "source": "context",
+      "context": "测验",
+      "sentence": "OK. As always, Neil, we'll start with a quiz question."
+    },
+    "originally": {
+      "translation": "最初地",
+      "source": "context",
+      "context": "最初地",
+      "sentence": "What was it originally used for?"
+    },
+    "ink": {
+      "translation": "墨水",
+      "source": "context",
+      "context": "墨水",
+      "sentence": "to dry ink"
+    },
+    "absolutely": {
+      "translation": "绝对地",
+      "source": "context",
+      "context": "绝对地",
+      "sentence": "Well, I have absolutely no idea, Georgie."
+    },
+    "programme": {
+      "translation": "节目",
+      "source": "context",
+      "context": "节目",
+      "sentence": "OK, Neil, we'll find out the answer at the end of the programme."
+    },
+    "uncomfortable": {
+      "translation": "不舒服的",
+      "source": "context",
+      "context": "不舒服的",
+      "sentence": "Is air conditioning all about comfort, though?"
+    },
+    "health": {
+      "translation": "健康",
+      "source": "context",
+      "context": "健康",
+      "sentence": "Summer heat can be a real health issue as well."
+    },
+    "result": {
+      "translation": "结果",
+      "source": "context",
+      "context": "结果",
+      "sentence": "It's thought that across Europe, over 30,000 people died as a result of this summer's heat."
+    },
+    "climatologist": {
+      "translation": "气候学家",
+      "source": "context",
+      "context": "气候学家",
+      "sentence": "Dr Radhika Khosla, an expert in climatology, told BBC World Service's The Climate Question"
+    },
+    "civilisation": {
+      "translation": "文明",
+      "source": "context",
+      "context": "文明",
+      "sentence": "he said it was air conditioning. And there are so many large parts of the world where we would not be able to inhabit if we did not have air conditioning."
+    },
+    "inhabitant": {
+      "translation": "居民",
+      "source": "context",
+      "context": "居民",
+      "sentence": "It literally stops people from dying. Yes, and she makes the point that there are many parts of the world that we would not be able to inhabit – that means live in – without this technology."
+    },
+    "downsides": {
+      "translation": "缺点",
+      "source": "context",
+      "context": "缺点",
+      "sentence": "No. There are some serious downsides."
+    },
+    "intensive": {
+      "translation": "密集的，集中的",
+      "source": "context",
+      "context": "密集的，集中的",
+      "sentence": "Passive cooling is when we take steps to provide thermal comfort that are not energy intensive."
+    },
+    "solar gain": {
+      "translation": "太阳能获取",
+      "source": "context",
+      "context": "太阳能获取",
+      "sentence": "Some of the most important ones are first to cut solar gain, which is through things like shading."
+    },
+    "emissions": {
+      "translation": "排放",
+      "source": "context",
+      "context": "排放",
+      "sentence": "We're going to see emissions rise."
+    },
+    "detrimental": {
+      "translation": "有害的",
+      "source": "context",
+      "context": "有害的",
+      "sentence": "And we reach a vicious cycle, because then you're in a world where it's getting warmer. We're using air conditioning to be able to protect ourselves. That's leading to more emissions and more energy use. That is then making the world warmer. And then we need more air conditioning."
+    },
+    "power cuts": {
+      "translation": "停电",
+      "source": "context",
+      "context": "停电",
+      "sentence": "If people are trying to use more electricity than it can cope with, then the grid can collapse – you get power cuts, which is when you can't get any electricity."
+    },
+    "solution": {
+      "translation": "解决方案",
+      "source": "context",
+      "context": "解决方案",
+      "sentence": "What are the solutions?"
+    },
+    "sustainable": {
+      "translation": "可持续的",
+      "source": "context",
+      "context": "可持续的",
+      "sentence": "Radhika also talks about the importance of using sustainable energy to power the air conditioning that we still will need."
+    },
+    "recap": {
+      "translation": "总结",
+      "source": "context",
+      "context": "总结",
+      "sentence": "Let's recap the vocabulary we learned in this programme, starting with life-saving, which describes something that stops people from dying."
+    },
+    "distribute": {
+      "translation": "分配，分布",
+      "source": "context",
+      "context": "分配，分布",
+      "sentence": "The grid is the system or network that distributes electricity across towns, cities, and countries."
+    },
+    "blocking": {
+      "translation": "阻挡",
+      "source": "context",
+      "context": "阻挡",
+      "sentence": "Some of the most important ones are first to cut solar gain, which is through things like shading. Passive cooling is where you cool your house down without using a lot of energy. Yes, heat from the sun can be blocked by shading, which could be with trees, curtains or blinds."
+    },
     "lifesaving": {
       "translation": "used to stop people from dying",
       "source": "official",
       "phrase": "life-saving"
-    },
-    "thegrid": {
-      "translation": "the system or network that distributes electricity across different locations",
-      "source": "official",
-      "phrase": "the grid"
     },
     "grid": {
       "translation": "the system or network that distributes electricity across different locations",
       "source": "official",
       "phrase": "the grid"
     },
-    "viciouscycle": {
-      "translation": "situation where one problem leads to another problem, which then makes the first problem worse, leading to a chain of events where each cause and effect makes the original problem even worse",
+    "thegrid": {
+      "translation": "the system or network that distributes electricity across different locations",
       "source": "official",
-      "phrase": "vicious cycle"
+      "phrase": "the grid"
     },
     "cycle": {
       "translation": "situation where one problem leads to another problem, which then makes the first problem worse, leading to a chain of events where each cause and effect makes the original problem even worse",
@@ -87,7 +357,12 @@
       "source": "official",
       "phrase": "vicious cycle"
     },
-    "passivecooling": {
+    "viciouscycle": {
+      "translation": "situation where one problem leads to another problem, which then makes the first problem worse, leading to a chain of events where each cause and effect makes the original problem even worse",
+      "source": "official",
+      "phrase": "vicious cycle"
+    },
+    "cooling": {
       "translation": "making a building cooler without using a lot of power",
       "source": "official",
       "phrase": "passive cooling"
@@ -97,1334 +372,73 @@
       "source": "official",
       "phrase": "passive cooling"
     },
-    "cooling": {
+    "passivecooling": {
       "translation": "making a building cooler without using a lot of power",
       "source": "official",
       "phrase": "passive cooling"
     },
-    "30": {
-      "translation": "thirty",
-      "source": "ecdict"
-    },
-    "6": {
-      "translation": "num. six",
-      "source": "ecdict"
-    },
-    "a": {
-      "translation": "第一个字母 A; 一个; 第一的\\r；art. [计] 累加器, 加法器, 地址, 振幅, 模拟, 区域, 面积, 汇编, 组件, 异步",
-      "source": "ecdict"
-    },
-    "able": {
-      "translation": "a. 能干的, 能够的",
-      "source": "ecdict"
-    },
-    "about": {
-      "translation": "prep. 在...周围, 大约, 有关, 关于；adv. 大约, 四处, 在附近, 周围",
-      "source": "ecdict"
-    },
-    "absolutely": {
-      "translation": "adv. 完全地, 绝对地, 确确实实地",
-      "source": "ecdict"
-    },
-    "across": {
-      "translation": "prep. 越过, 穿过, 与...相交叉, 在...的对面；adv. 交叉, 到另一边, 在对面, 成十字",
-      "source": "ecdict"
-    },
-    "actually": {
-      "translation": "adv. 事实上, 竟然, 如今, 现在",
-      "source": "ecdict"
-    },
-    "again": {
-      "translation": "adv. 再一次, 又, 到原处",
-      "source": "ecdict"
-    },
     "air": {
-      "translation": "n. 空气, 旋律, 态度；vt. 晾, 使通风, 夸耀",
-      "source": "ecdict"
+      "translation": "空调",
+      "source": "context",
+      "context": "空调",
+      "sentence": "Did you have air conditioning in your house?",
+      "phrase": "air conditioning"
     },
-    "all": {
-      "translation": "a. 所有的, 全部的, 一切的；adv. 全部, 全然；pron. 全部；n. 全部",
-      "source": "ecdict"
-    },
-    "alone": {
-      "translation": "a. 孤独的, 单独的, 独自的；adv. 独自地",
-      "source": "ecdict"
-    },
-    "also": {
-      "translation": "adv. 也, 并且, 同样地",
-      "source": "ecdict"
-    },
-    "always": {
-      "translation": "adv. 总是, 始终",
-      "source": "ecdict"
-    },
-    "amount": {
-      "translation": "n. 总数, 总额；vi. 总计, 等同",
-      "source": "ecdict"
-    },
-    "an": {
-      "translation": "art. 一",
-      "source": "ecdict"
-    },
-    "and": {
-      "translation": "conj. 和, 与；[计] 与",
-      "source": "ecdict"
-    },
-    "answer": {
-      "translation": "n. 答案, 回答, 回报, 答辩；vt. 回答, 反驳, 适应, 响应, 符合；vi. 回答, 答应, 负责, 符合, 成功；[计] 用户问题及答案新闻组",
-      "source": "ecdict"
-    },
-    "any": {
-      "translation": "a. 任何的；pron. 任何",
-      "source": "ecdict"
-    },
-    "are": {
-      "translation": "be的现在时复数或第二人称单数",
-      "source": "ecdict"
-    },
-    "around": {
-      "translation": "prep. 包围, 在...周围, 四处；adv. 兜着圈子, 在附近, 到处",
-      "source": "ecdict"
-    },
-    "as": {
-      "translation": "adv. 同样地, 例如；prep. 做为, 当作；conj. 当...之时, 以...的方式, 像...一样, 因为；[计] 高级系统, 先进系统, 辅助存储器, 自治系统",
-      "source": "ecdict"
-    },
-    "asked": {
-      "translation": "n. 卖方要价",
-      "source": "ecdict"
-    },
-    "at": {
-      "translation": "prep. 在, 向, 对；[计] 地址转换器, 异常传输, 自动订票",
-      "source": "ecdict"
-    },
-    "b": {
-      "translation": "[计] 基地址, 数据库, 基极, 二进制, 块, 字组, 布尔, 总线, 占线, 字节；[医] 硼(5号元素)",
-      "source": "ecdict"
-    },
-    "bbc": {
-      "translation": "英国广播公司",
-      "source": "ecdict"
-    },
-    "be": {
-      "translation": "v. 是, 表示, 在；[计] 后端, 总线允许",
-      "source": "ecdict"
-    },
-    "because": {
-      "translation": "conj. 因为",
-      "source": "ecdict"
-    },
-    "becomes": {
-      "translation": "v. 变为, 成为( become的第三人称单数 ); 适合; 使（人）显得漂亮; 使好看",
-      "source": "ecdict"
-    },
-    "been": {
-      "translation": "be的过去分词",
-      "source": "ecdict"
-    },
-    "before": {
-      "translation": "prep. 在...之前；conj. 在...之前；adv. 在前",
-      "source": "ecdict"
-    },
-    "best": {
-      "translation": "a. 最好的；adv. 最好地；n. 最好的人",
-      "source": "ecdict"
-    },
-    "big": {
-      "translation": "a. 大的, 重要的；adv. 大量地",
-      "source": "ecdict"
-    },
-    "bit": {
-      "translation": "n. 少量, 马嚼子, 辅币；vt. 给马上嚼子, 控制；bite的过去式和过去分词；[计] 比特, 二进制数位, 机内测试",
-      "source": "ecdict"
-    },
-    "blinds": {
-      "translation": "n. 百叶窗；盲人（常用复数）",
-      "source": "ecdict"
-    },
-    "blocked": {
-      "translation": "a. 堵塞的；被封锁的",
-      "source": "ecdict"
-    },
-    "blocking": {
-      "translation": "[计] 组成块; 粘连；[化] 封闭",
-      "source": "ecdict"
-    },
-    "broken": {
-      "translation": "a. 坏掉的, 打破的, 断掉的；break的过去分词",
-      "source": "ecdict"
-    },
-    "brooklyn": {
-      "translation": "n. 布鲁克林区(纽约行政区)",
-      "source": "ecdict"
-    },
-    "building": {
-      "translation": "n. 建筑物, 建筑；[法] 营造, 建筑, 建筑物",
-      "source": "ecdict"
-    },
-    "but": {
-      "translation": "prep. 除了；conj. 但是；adv. 仅仅",
-      "source": "ecdict"
-    },
-    "by": {
-      "translation": "prep. 被, 经, 由, 在...之旁；adv. 经过, 在近处",
-      "source": "ecdict"
-    },
-    "c": {
-      "translation": "[计] 调用, 访问, 呼叫, 电容, 进位, 通道, 字符, 清除, 常数, 控制, 周期；[化] 碳的化学符号; 胞苷",
-      "source": "ecdict"
-    },
-    "calls": {
-      "translation": "n. 调用；呼吁；电话（call的复数）",
-      "source": "ecdict"
-    },
-    "can": {
-      "translation": "vt. 装罐；n. 罐头, 容器；aux. 能, 可以；[计] 作废字符",
-      "source": "ecdict"
-    },
-    "cant": {
-      "translation": "n. 伪善之言, 黑话, 斜面, 角落；vi. 讲黑话, 倾斜",
-      "source": "ecdict"
-    },
-    "carrier": {
-      "translation": "n. 运送者, 邮递员, 带菌者；[计] 载波",
-      "source": "ecdict"
-    },
-    "circle": {
-      "translation": "n. 圆周, 社交圈, 循环, 范围；vt. 围着, 环绕；vi. 盘旋, 循环",
-      "source": "ecdict"
-    },
-    "cities": {
-      "translation": "n. 城市（city的复数）",
-      "source": "ecdict"
-    },
-    "civilisation": {
-      "translation": "n. 文明, 文明世界, 文化, 开化, 教化",
-      "source": "ecdict"
-    },
-    "clean": {
-      "translation": "a. 干净的, 清白的, 简洁的；adv. 清洁地, 完全地；vt. 清理, 使干净, 出空；vi. 被搞干净；n. 打扫",
-      "source": "ecdict"
-    },
-    "climate": {
-      "translation": "n. 气候, 社会趋势, 气候区；[医] 气候",
-      "source": "ecdict"
-    },
-    "climatology": {
-      "translation": "n. 气候学；[医] 气候学, 风土学",
-      "source": "ecdict"
-    },
-    "collapse": {
-      "translation": "n. 崩溃, 倒塌, 虚脱；vi. 倒塌, 崩溃, 瓦解；vt. 使倒塌, 折叠；[计] 折叠",
-      "source": "ecdict"
-    },
-    "comfort": {
-      "translation": "n. 舒适, 安慰, 安慰者；vt. 安慰",
-      "source": "ecdict"
-    },
-    "company": {
-      "translation": "n. 公司, 友伴, 交往, 连队, 朋友, 一群；vt. 陪伴；vi. 交往",
-      "source": "ecdict"
+    "airconditioning": {
+      "translation": "空调",
+      "source": "context",
+      "context": "空调",
+      "sentence": "Did you have air conditioning in your house?",
+      "phrase": "air conditioning"
     },
     "conditioning": {
-      "translation": "n. 调节, 条件作用, 整修；[计] 调节; 调整",
-      "source": "ecdict"
-    },
-    "confident": {
-      "translation": "a. 有信心的, 有把握的",
-      "source": "ecdict"
-    },
-    "continue": {
-      "translation": "vi. 继续, 延续, 延长；vt. 使继续, 使延长",
-      "source": "ecdict"
-    },
-    "cool": {
-      "translation": "n. 凉爽, 凉爽的空气；a. 凉爽的, 冷淡的, 冷静的；vi. 冷却, 平息；vt. 使冷却, 使平静",
-      "source": "ecdict"
-    },
-    "cooler": {
-      "translation": "n. 冷却器；[化] 冷却器",
-      "source": "ecdict"
-    },
-    "cope": {
-      "translation": "vi. 竞争, 应付；n. 长袍",
-      "source": "ecdict"
-    },
-    "correct": {
-      "translation": "a. 正确的, 合适的；vt. 改正, 订正",
-      "source": "ecdict"
-    },
-    "could": {
-      "translation": "aux. 可以, 能",
-      "source": "ecdict"
-    },
-    "countries": {
-      "translation": "国家（country的复数）",
-      "source": "ecdict"
-    },
-    "creates": {
-      "translation": "[n. 创建；创立",
-      "source": "ecdict"
-    },
-    "curtains": {
-      "translation": "n. [俚]灾难；窗帘（curtain的复数）",
-      "source": "ecdict"
-    },
-    "cut": {
-      "translation": "n. 切口, 割伤, 降低, 切, 割, 砍, 削, 伤口, 削减, 缩短, 删节, 通路；a. 经切割的, 缩减的；vt. 切, 割, 减少, 刺痛, 开辟, 雕刻, 删节, 缩短, 停止, 排斥, 切断, 关, 显出；vi. 切, 割, 砍, 刺痛, 相交, 抄近路, 剪辑；[计] 剪切",
-      "source": "ecdict"
-    },
-    "cuts": {
-      "translation": "n. （分摊到的）份额；切口；近路（cut的复数）",
-      "source": "ecdict"
-    },
-    "deal": {
-      "translation": "n. 交易, 协定, 数量, 买卖, 松木板；vi. 处理, 应付, 做生意；vt. 分配, 发牌, 给予；[计] 发牌",
-      "source": "ecdict"
-    },
-    "describes": {
-      "translation": "v. 描述, 记述；形容, 作图（describe的复数形式）",
-      "source": "ecdict"
-    },
-    "detrimental": {
-      "translation": "a. 有害的",
-      "source": "ecdict"
-    },
-    "did": {
-      "translation": "do的过去式",
-      "source": "ecdict"
-    },
-    "died": {
-      "translation": "v. 死亡, 消逝（die的过去式和过去分词）",
-      "source": "ecdict"
-    },
-    "distributes": {
-      "translation": "v. 分配( distribute的第三人称单数 ); 散发; 分销; [常用被动语态]将…分类(into)",
-      "source": "ecdict"
-    },
-    "do": {
-      "translation": "v. 做, 进行, 完成",
-      "source": "ecdict"
-    },
-    "down": {
-      "translation": "a. 向下的；adv. 下, 下去, 降下；prep. 往下, 沿着；n. 丘陵, 软毛, 开阔的高地；[计] 向下, 退下命令",
-      "source": "ecdict"
-    },
-    "downsides": {
-      "translation": "(downside 的复数) n. 底侧；下降趋势",
-      "source": "ecdict"
-    },
-    "dr": {
-      "translation": "n. 博士, 医生；[医] 英钱",
-      "source": "ecdict"
-    },
-    "dry": {
-      "translation": "a. 干的, 无酒的, 枯燥无味的, 干燥的；vt. 把...弄干；vi. 变干；n. 干, 干涸",
-      "source": "ecdict"
-    },
-    "dying": {
-      "translation": "a. 垂死的；[法] 快要死的, 垂死的, 临终的",
-      "source": "ecdict"
-    },
-    "easy": {
-      "translation": "a. 容易的, 缓缓的, 舒适的, 从容的, 宽容的, 流畅的, 随便的, 自在的, 疲软的；adv. 容易地, 慢慢地",
-      "source": "ecdict"
-    },
-    "electricity": {
-      "translation": "n. 电, 电流, 电学, 热情, 电力供应；[化] 电学; 电",
-      "source": "ecdict"
-    },
-    "emissions": {
-      "translation": "n. 排放物( emission的复数形式 ); 散发物（尤指气体）",
-      "source": "ecdict"
-    },
-    "end": {
-      "translation": "n. 结束, 终点, 目标, 末端, 梢, 死亡, 残余；v. 结束, 终结, 终止；[计] 端; 结束",
-      "source": "ecdict"
-    },
-    "energy": {
-      "translation": "n. 精力, 精神, 活力, 能量；[化] 能; 能量",
-      "source": "ecdict"
-    },
-    "english": {
-      "translation": "n. 英语；a. 英文的, 英国人的",
-      "source": "ecdict"
-    },
-    "europe": {
-      "translation": "n. 欧洲",
-      "source": "ecdict"
-    },
-    "even": {
-      "translation": "a. 平坦的, 相等的, 连贯的, 均等的, 公平的, 偶数的, 平均的, 平衡的, 恰好的；vt. 使平坦, 使相等；vi. 变平, 成为相等；adv. 甚至, 实际上, 完全, 十分；n. 偶数, 偶校验；[计] 偶数, 偶校验",
-      "source": "ecdict"
-    },
-    "every": {
-      "translation": "a. 每一, 所有的",
-      "source": "ecdict"
-    },
-    "expert": {
-      "translation": "n. 专家, 行家；a. 老练的, 内行的, 专门的；[计] 高级",
-      "source": "ecdict"
-    },
-    "experts": {
-      "translation": "n. 专家；人才（expert的复数形式）",
-      "source": "ecdict"
-    },
-    "extreme": {
-      "translation": "n. 极端, 末端；a. 极端的, 尽头的, 极度的, 偏激的",
-      "source": "ecdict"
-    },
-    "face": {
-      "translation": "n. 脸, 面容, 正面, 外观；vt. 面对, 朝, 正视, 面临；vi. 朝, 向；[计] 现场可改变的控制元件",
-      "source": "ecdict"
-    },
-    "facing": {
-      "translation": "n. 贴边, 饰面；[化] 衬片; 盖面; 铺面; 饰面; 贴面; 密封面",
-      "source": "ecdict"
-    },
-    "fans": {
-      "translation": "n. 风扇；狂热者, 粉丝（fan的复数形式）",
-      "source": "ecdict"
-    },
-    "feel": {
-      "translation": "vt. 感觉, 觉得, 触摸, 以为；vi. 有知觉, 摸索, 同情；n. 感觉, 觉得, 触摸",
-      "source": "ecdict"
-    },
-    "feeling": {
-      "translation": "n. 摸, 触觉, 知觉, 感觉, 情绪, 同情；a. 有同情心的, 有感觉的, 仁慈的, 动人的",
-      "source": "ecdict"
-    },
-    "find": {
-      "translation": "vt. 发现, 感到, 找到, 认为, 得到；vi. 裁决；n. 发现；[计] 查找; DOS外部命令:在指定的文件或从键盘输入的文本行中；寻找指定的字符串, 将符合条件的行或行数输出到标准输出设备上",
-      "source": "ecdict"
-    },
-    "first": {
-      "translation": "adv. 首先, 第一, 优先；a. 第一的；num. 第一；n. 开始, 第一",
-      "source": "ecdict"
-    },
-    "fix": {
-      "translation": "vt. 使固定, 修理, 准备, 安装, 凝视, 牢记, 确定, 整理；vi. 固定, 注视, 确定；n. 困境, 方位, 维修, 贿赂",
-      "source": "ecdict"
-    },
-    "for": {
-      "translation": "prep. 为, 因为, 至于；conj. 因为；[计] DOS批处理命令:对一组参数重复执行指定的命令",
-      "source": "ecdict"
-    },
-    "from": {
-      "translation": "prep. 从, 来自, 根据",
-      "source": "ecdict"
+      "translation": "空调",
+      "source": "context",
+      "context": "空调",
+      "sentence": "Did you have air conditioning in your house?",
+      "phrase": "air conditioning"
     },
     "gain": {
-      "translation": "n. 增益, 获得, 利润, 收获, 增加；vt. 得到, 增进, 赚到；vi. 获利, 增加；[计] 增益",
-      "source": "ecdict"
-    },
-    "georgie": {
-      "translation": "n. George 的昵称",
-      "source": "ecdict"
-    },
-    "get": {
-      "translation": "vt. 得到, 获得, 变成, 使得, 收获, 接通, 抓住, 染上；vi. 到达, 成为, 变得；n. (网球等)救球, 生殖, 幼兽；[计] 取得指令, 获取文件",
-      "source": "ecdict"
-    },
-    "getting": {
-      "translation": "n. 采煤, 采掘；获得",
-      "source": "ecdict"
-    },
-    "give": {
-      "translation": "n. 弹性, 适应性；vt. 给, 授予, 供给, 产生, 发表, 付出, 献出, 让出；vi. 捐赠, 支持不住, 让步",
-      "source": "ecdict"
-    },
-    "going": {
-      "translation": "n. 去, 离去, 工作情况, 地面状况, 行为；a. 进行中的, 流行的, 成功的, 现存的",
-      "source": "ecdict"
-    },
-    "good": {
-      "translation": "n. 善行, 好处, 利益；a. 好的, 优良的, 上等的, 愉快的, 有益的, 好心的, 慈善的, 虔诚的",
-      "source": "ecdict"
-    },
-    "goodbye": {
-      "translation": "interj. 再见",
-      "source": "ecdict"
-    },
-    "goto": {
-      "translation": "v. 转到；[计] 转到; DOS批处理命令:改变批处理文件的流程",
-      "source": "ecdict"
-    },
-    "guess": {
-      "translation": "n. 猜测, 臆测；v. 猜测, 臆测",
-      "source": "ecdict"
-    },
-    "had": {
-      "translation": "have的过去式和过去分词",
-      "source": "ecdict"
-    },
-    "has": {
-      "translation": "have的第三人称单数现在式",
-      "source": "ecdict"
-    },
-    "have": {
-      "translation": "vt. 有, 怀有, 拿, 进行；aux. 已经",
-      "source": "ecdict"
-    },
-    "he": {
-      "translation": "pron. 他；n. 男孩, 男人, 雄性动物",
-      "source": "ecdict"
-    },
-    "health": {
-      "translation": "n. 健康, 卫生, 蓬勃, 健康状态；[医] 健康",
-      "source": "ecdict"
-    },
-    "hear": {
-      "translation": "vt. 听到, 倾听, 听说, 审理；vi. 听见, 听",
-      "source": "ecdict"
-    },
-    "heard": {
-      "translation": "hear的过去式和过去分词",
-      "source": "ecdict"
-    },
-    "heat": {
-      "translation": "n. 热, 热度, 体温, 高潮；vi. 加热, 激昂, 加剧；vt. 把...加热, 使激动",
-      "source": "ecdict"
-    },
-    "here": {
-      "translation": "adv. 在这里, 此时, 这里；n. 这里",
-      "source": "ecdict"
-    },
-    "hi": {
-      "translation": "interj. 喂",
-      "source": "ecdict"
-    },
-    "hospitals": {
-      "translation": "n. 医院( hospital的复数形式 )",
-      "source": "ecdict"
-    },
-    "hot": {
-      "translation": "a. 热的, 热心的, 辣的, 热情的, 激动的, 猛烈的, 紧迫的；adv. 热, 紧迫地",
-      "source": "ecdict"
-    },
-    "house": {
-      "translation": "n. 房子, 住宅, 机构, 议院, 家族, 家庭；vt. 给...房子住, 收藏；vi. 住, 躲藏",
-      "source": "ecdict"
-    },
-    "how": {
-      "translation": "adv. 如何, 怎样, 多少, 多么；n. 方式",
-      "source": "ecdict"
-    },
-    "i": {
-      "translation": "pron. 我；[计] 电流, 中断, 指令, 指示符",
-      "source": "ecdict"
-    },
-    "idea": {
-      "translation": "n. 主意, 办法, 理想, 思想, 概念, 意见；[医] 观念, 思想",
-      "source": "ecdict"
-    },
-    "if": {
-      "translation": "conj. 如果, 是否, 无论何时, 假设, 即使；n. 条件；[计] DOS批处理命令:根据所测试的条件决定是否执行另一条命令",
-      "source": "ecdict"
-    },
-    "im": {
-      "translation": "[计] 中断屏蔽, 指令存储器",
-      "source": "ecdict"
-    },
-    "impacts": {
-      "translation": "n. 影响, 作用( impact的名词复数 ); 碰撞; 冲击; 撞击",
-      "source": "ecdict"
-    },
-    "importance": {
-      "translation": "n. 重要, 重要性, 重要地位, 自大；[机] 重要, 重要性",
-      "source": "ecdict"
-    },
-    "important": {
-      "translation": "a. 重要的, 有地位的, 大量的, 显要的, 自负的；[计] 要点",
-      "source": "ecdict"
-    },
-    "in": {
-      "translation": "prep. 在...期间, 在...之内, 处于...之中, 从事于, 按照, 穿着；adv. 进入, 朝里, 在里面, 在屋里；a. 在里面的, 在朝的；n. 执政者, 交情",
-      "source": "ecdict"
-    },
-    "incorrect": {
-      "translation": "a. 不正确的；[法] 不正确, 错误的, 不适当的",
-      "source": "ecdict"
-    },
-    "increased": {
-      "translation": "a. 增强的（increase的过去分词）",
-      "source": "ecdict"
-    },
-    "ink": {
-      "translation": "n. 墨水, 墨汁；vt. 涂墨水于, 签署, 加墨水",
-      "source": "ecdict"
-    },
-    "installed": {
-      "translation": "a. 安装的；已装入的",
-      "source": "ecdict"
-    },
-    "intensive": {
-      "translation": "a. 加强的, 内涵的, 集中的；n. 加强器",
-      "source": "ecdict"
-    },
-    "invented": {
-      "translation": "n. 虚拟；v. 发明, 创造( invent的过去式和过去分词 ); 编造",
-      "source": "ecdict"
-    },
-    "is": {
-      "translation": "be的现在式第三人称；[计] 加下标次序, 信息系统, 国际标准, 中间系统",
-      "source": "ecdict"
-    },
-    "issue": {
-      "translation": "n. 发行, 问题, 后果, 流出, 出口, 争端；vi. 发行, 流出, 造成...结果, 传下；vt. 使流出, 放出, 发行, 发布, 发给",
-      "source": "ecdict"
-    },
-    "it": {
-      "translation": "pron. 它；[计] 信息论, 输入终端, 智能终端, 内捕获",
-      "source": "ecdict"
-    },
-    "its": {
-      "translation": "pron. 它的",
-      "source": "ecdict"
-    },
-    "job": {
-      "translation": "n. 工作, 零活, 职业, 事情；vi. 做零工, 打杂, 做股票经纪, 假公济私；vt. 代客买卖, 批发, 承包, 欺骗；[计] 作业",
-      "source": "ecdict"
-    },
-    "joining": {
-      "translation": "n. 接缝；连接；连接物",
-      "source": "ecdict"
-    },
-    "just": {
-      "translation": "a. 正直的, 合理的, 正确的, 应得的；adv. 刚刚, 正好, 仅仅",
-      "source": "ecdict"
-    },
-    "keeps": {
-      "translation": "n. 罐笼座；盖子（keep的复数形式）",
-      "source": "ecdict"
-    },
-    "kinds": {
-      "translation": "n. 种类（kind的复数形式）",
-      "source": "ecdict"
-    },
-    "know": {
-      "translation": "v. 知道, 了解, 认识, 确信",
-      "source": "ecdict"
-    },
-    "kuan": {
-      "translation": "n. 官窑瓷器",
-      "source": "ecdict"
-    },
-    "large": {
-      "translation": "a. 大的, 大量的, 宽大的, 广博的；adv. 大大地, 夸大地",
-      "source": "ecdict"
-    },
-    "lead": {
-      "translation": "n. 铅, 铅条, 领导, 超前量, 领引, 榜样, 主角, 导线；vt. 引导, 带领, 领导, 指挥, 致使, 加铅于, 用铅包；vi. 领导, 带头, 导致, 用测深锤测深, 被铅覆盖；a. 带头的, 最重要的",
-      "source": "ecdict"
-    },
-    "leading": {
-      "translation": "n. 领导, 指挥, 神示, 铅板；a. 领导的, 主要的, 在前的",
-      "source": "ecdict"
-    },
-    "learned": {
-      "translation": "a. 有学问的, 学术上的；learn的过去式和过去分词",
-      "source": "ecdict"
-    },
-    "lee": {
-      "translation": "n. 背风处, 避风处, 下风处, 保护, 庇护；a. 避风的, 背风的, 下风的, 保护的",
-      "source": "ecdict"
-    },
-    "lets": {
-      "translation": "abbr. 地方交易系统（Local Exchange Trading System）",
-      "source": "ecdict"
-    },
-    "light": {
-      "translation": "n. 光, 光亮, 灯, 日光, 发光体, 光源, 杰出人物, 火花, 眼光；a. 轻的, 少量的, 轻微的, 轻快的, 轻浮的, 明亮的, 淡色的, 容易的；vt. 点燃, 照亮；vi. 点着, 变亮, 突降, 偶然碰到；adv. 轻地",
-      "source": "ecdict"
-    },
-    "like": {
-      "translation": "a. 相似的, 同样的；vt. 喜欢, 愿意, 想；vi. 喜欢, 希望；n. 爱好, 同样的人(或物)；prep. 象, 如同；adv. 可能",
-      "source": "ecdict"
-    },
-    "literally": {
-      "translation": "adv. 逐字地, 按照字面上地, 不夸张地",
-      "source": "ecdict"
-    },
-    "live": {
-      "translation": "a. 活的, 生动的, 精力充沛的, 实况转播的；vi. 活, 生存, 居住；vt. 过着, 度过, 经历；adv. 实况地",
-      "source": "ecdict"
-    },
-    "lot": {
-      "translation": "n. 运气, 签, 抽签, 份额, 许多, 一堆；vt. 划分；vi. 抽签, 抓阄",
-      "source": "ecdict"
-    },
-    "made": {
-      "translation": "a. 人工制成的, 成功的, 创造的；make的过去式和过去分词",
-      "source": "ecdict"
-    },
-    "make": {
-      "translation": "vt. 制造, 安排, 创造, 构成, 使得, 产生, 造成, 整理, 布置, 引起, 到达, 进行；vi. 开始, 前进, 增大, 被制造, 被处理；n. 制造, 构造, 性情",
-      "source": "ecdict"
-    },
-    "makes": {
-      "translation": "v. 做, 制作（make的第三人称单数）",
-      "source": "ecdict"
-    },
-    "making": {
-      "translation": "n. 制造, (手工)制造业, 制作, 形成, 发展, 要素, 内在因素, 赚头, 制造物",
-      "source": "ecdict"
-    },
-    "many": {
-      "translation": "n. 多数, 多数人；a. 许多的；pron. 许多",
-      "source": "ecdict"
-    },
-    "may": {
-      "translation": "n. 五月；aux. 愿能, 可以, 愿意",
-      "source": "ecdict"
-    },
-    "meaning": {
-      "translation": "n. 意义, 含义, 目的, 意图；a. 意味深长的",
-      "source": "ecdict"
-    },
-    "means": {
-      "translation": "n. 方法, 手段, 工具, 财产, 收入；[经] 方法, 手段, 工具; 意谓",
-      "source": "ecdict"
-    },
-    "met": {
-      "translation": "meet的过去式和过去分词；[化] 甲硫氨酸; 蛋氨酸",
-      "source": "ecdict"
-    },
-    "minute": {
-      "translation": "n. 分, 分钟, 片刻, 备忘录, 笔记；vt. 记录, 摘录, 测定时间；a. 微小的, 详细的",
-      "source": "ecdict"
-    },
-    "minutes": {
-      "translation": "n. 会议记录；[法] 备忘录, 会议记录, 审判记录",
-      "source": "ecdict"
-    },
-    "modern": {
-      "translation": "n. 现代人, 有思想的人；a. 现代的, 时髦的",
-      "source": "ecdict"
-    },
-    "more": {
-      "translation": "n. 更多；a. 多的, 程度较大的, 更大的；adv. 多, 更多, 进一步；[计] DOS外部命令:显示满屏后自动暂停, 并显示:\"--More--\", 按任意键继续",
-      "source": "ecdict"
-    },
-    "most": {
-      "translation": "n. 最多, 最大；a. 大多数的, 几乎全部的, 最多的；adv. 最, 最多, 极其",
-      "source": "ecdict"
-    },
-    "my": {
-      "translation": "pron. 我的；[医] 迈尔(热容单位)",
-      "source": "ecdict"
-    },
-    "need": {
-      "translation": "n. 需要, 必须, 缺乏；vt. 需要, 必需；vi. 贫困, 有必要；aux. 需要",
-      "source": "ecdict"
-    },
-    "neil": {
-      "translation": "n. 尼尔（男子名）",
-      "source": "ecdict"
-    },
-    "network": {
-      "translation": "n. 网络, 广播网, 网状物；[计] 网络",
-      "source": "ecdict"
-    },
-    "new": {
-      "translation": "a. 新的, 陌生的, 最近的, 不熟悉的；[法] 新发现的, 新的, 重新开始的",
-      "source": "ecdict"
-    },
-    "next": {
-      "translation": "n. 下一个；a. 下一个的, 其次的, 贴近的；adv. 然后, 下次, 次于；[计] 近邻干扰",
-      "source": "ecdict"
-    },
-    "no": {
-      "translation": "n. 不, 拒绝, 否决票；a. 没有, 不是, 绝非；adv. 不",
-      "source": "ecdict"
-    },
-    "not": {
-      "translation": "adv. 不, 非, 未；[计] 非",
-      "source": "ecdict"
-    },
-    "now": {
-      "translation": "adv. 现在, 刚才, 目前；n. 现在；a. 现在的；conj. 由于",
-      "source": "ecdict"
-    },
-    "of": {
-      "translation": "prep. 的, 属于",
-      "source": "ecdict"
-    },
-    "ok": {
-      "translation": "a. 好, 不错, 可以；adv. 好, 不错, 可以；n. 批准, 认可；[计] 确定",
-      "source": "ecdict"
-    },
-    "on": {
-      "translation": "prep. 在...之上；adv. ...上去；a. 正起作用的；[计] 打开",
-      "source": "ecdict"
-    },
-    "once": {
-      "translation": "adv. 一次, 曾经, 一旦；conj. 一旦, 一经；n. 一次；a. 从前的",
-      "source": "ecdict"
-    },
-    "one": {
-      "translation": "n. 一(个)；pron. 一, 任何人；num. 一, 一个；a. 一致的, 完整的",
-      "source": "ecdict"
-    },
-    "ones": {
-      "translation": "n. 刻录软件",
-      "source": "ecdict"
-    },
-    "or": {
-      "translation": "conj. 或, 或者；[计] 或",
-      "source": "ecdict"
-    },
-    "originally": {
-      "translation": "adv. 本来, 原来, 最初, 就起源而论, 独创地",
-      "source": "ecdict"
-    },
-    "other": {
-      "translation": "a. 其他的, 另外的, 从前的；pron. 其他的, 他人, 另外一个",
-      "source": "ecdict"
-    },
-    "our": {
-      "translation": "pron. 我们的",
-      "source": "ecdict"
-    },
-    "ourselves": {
-      "translation": "pron. 我们自己",
-      "source": "ecdict"
-    },
-    "out": {
-      "translation": "a. 外面的, 熄灭的, 结束的；adv. 在外, 熄灭, 出现；prep. 出自, 离去, 向",
-      "source": "ecdict"
-    },
-    "over": {
-      "translation": "adv. 结束, 越过, 从头到尾；prep. 在...之上, 遍于...之上, 越过；a. 上面的；vt. 越过",
-      "source": "ecdict"
-    },
-    "parts": {
-      "translation": "n. 零件, 部件",
-      "source": "ecdict"
-    },
-    "people": {
-      "translation": "n. 人, 人民, 民族, 平民；vt. 使住满人, 居住于",
-      "source": "ecdict"
-    },
-    "places": {
-      "translation": "n. 地点；位置；[数]位数（place的复数）",
-      "source": "ecdict"
-    },
-    "point": {
-      "translation": "n. 点, 小数点, 标点, 地点, 要点, 特点, 尖端, 分数, 得分, 穴位；vt. 弄尖, 强调, 指出, 加标点于, 瞄准；vi. 指, 指向, 表明",
-      "source": "ecdict"
-    },
-    "positive": {
-      "translation": "a. 肯定的, 积极的, 有把握的；[医] 正的, 阳性的",
-      "source": "ecdict"
-    },
-    "possible": {
-      "translation": "a. 可能的, 潜在的, 合适的；n. 可能性, 可能的事物",
-      "source": "ecdict"
-    },
-    "power": {
-      "translation": "n. 力, 体力, 力量, 势力, 动力, 权力, 强国, 乘方, 强度, 幂, 功率；vt. 使...有力量, 供以动力, 激励；[计] 乘幂; DOS外部命令:能控制许多电池电源计算机上的电源管理特性",
-      "source": "ecdict"
-    },
-    "predicting": {
-      "translation": "[计] 判定的",
-      "source": "ecdict"
-    },
-    "pretty": {
-      "translation": "a. 漂亮的, 优美的, 机灵的, 狡猾的, 恰当的；adv. 相当, 颇",
-      "source": "ecdict"
-    },
-    "printing": {
-      "translation": "n. 印刷, 印刷术, 印花；[计] 打印; 印刷",
-      "source": "ecdict"
-    },
-    "problem": {
-      "translation": "n. 问题, 难题；a. 成问题的, 难处理的",
-      "source": "ecdict"
-    },
-    "programme": {
-      "translation": "n. 节目, 节目单, 程序, 纲要, 大纲, 计划；vt. 规划, 拟...计划；vi. 安排节目, 编程序",
-      "source": "ecdict"
-    },
-    "prolonged": {
-      "translation": "a. 延续的, 长时间的",
-      "source": "ecdict"
-    },
-    "protect": {
-      "translation": "vt. 防卫, 保护, 警戒；[法] 庇护, 保护, 警戒",
-      "source": "ecdict"
-    },
-    "provide": {
-      "translation": "vt. 提供, 供应, 规定, 预备；vi. 作准备, 抚养, 规定",
-      "source": "ecdict"
-    },
-    "question": {
-      "translation": "n. 问题, 询问；v. 询问, 审问, 怀疑；[计] 询问",
-      "source": "ecdict"
-    },
-    "quite": {
-      "translation": "adv. 相当, 完全, 十分",
-      "source": "ecdict"
-    },
-    "quiz": {
-      "translation": "n. 考查, 课堂测验, 恶作剧, 智力测验；vt. 戏弄, 考查, 恶作剧",
-      "source": "ecdict"
-    },
-    "reach": {
-      "translation": "n. 伸出, 延伸, 区域, 范围, 流域, 岬；vt. 到达, 达到, 伸出, 延伸, 影响；vi. 达到, 延伸, 伸出手, 传到",
-      "source": "ecdict"
-    },
-    "real": {
-      "translation": "a. 真的, 真实的, 实际的, 实在的, 不动(产)的, 实数的；n. 实数, 现实；adv. 真正地",
-      "source": "ecdict"
-    },
-    "really": {
-      "translation": "adv. 实际上, 真实地, 实在",
-      "source": "ecdict"
-    },
-    "recap": {
-      "translation": "vt. 翻新胎面；n. 翻新的轮胎",
-      "source": "ecdict"
-    },
-    "records": {
-      "translation": "n. 记录, 录音；唱片, 档案（record的复数形式）",
-      "source": "ecdict"
-    },
-    "result": {
-      "translation": "n. 结果, 成绩, 答案；vi. 产生, 结果, 致使；[计] 结果",
-      "source": "ecdict"
-    },
-    "rise": {
-      "translation": "n. 上升, 增加, 上涨, 高地, 升高, 出现；vi. 升起, 起身, 起立, 上升, 上涨, 增长, 高耸, 起义, 浮现；vt. 使飞起",
-      "source": "ecdict"
-    },
-    "sadly": {
-      "translation": "adv. 悲痛地, 悲惨地, 悲伤地, 说来遗憾",
-      "source": "ecdict"
-    },
-    "said": {
-      "translation": "a. 上述的；say的过去式和过去分词",
-      "source": "ecdict"
-    },
-    "say": {
-      "translation": "vt. 说, 讲, 念, 说明, 指明；vi. 说, 讲；n. 意见, 发言权",
-      "source": "ecdict"
-    },
-    "saying": {
-      "translation": "n. 叙述, 话, 说, 言论",
-      "source": "ecdict"
-    },
-    "says": {
-      "translation": "v. 说（第三人称单数）",
-      "source": "ecdict"
-    },
-    "second": {
-      "translation": "n. 秒, 瞬间, 第二名, 支持者, 助手；a. 第二的, 其次的, 次要的, 附加的, 辅助的；num. 第二；vt. 当...助手, 支持",
-      "source": "ecdict"
-    },
-    "see": {
-      "translation": "vt. 看见, 查看, 参观, 游览, 理解, 知道, 同意；vi. 看, 观看, 注意, 知道, 考虑；n. 主教的职位",
-      "source": "ecdict"
-    },
-    "serious": {
-      "translation": "a. 严肃的, 认真的, 重要的, 严重的；[电] 严重的",
-      "source": "ecdict"
-    },
-    "services": {
-      "translation": "n. 服务；服务项目（service复数形式）",
-      "source": "ecdict"
-    },
-    "she": {
-      "translation": "pron. 她",
-      "source": "ecdict"
-    },
-    "should": {
-      "translation": "aux. 应该, 将要",
-      "source": "ecdict"
-    },
-    "side": {
-      "translation": "n. 旁边, 侧, 方面, 胁, 侧边, 血统；a. 旁的, 侧的, 次要的；vt. 同意, 支持；vi. 支持, 赞助",
-      "source": "ecdict"
-    },
-    "simple": {
-      "translation": "a. 简单的, 普通的, 朴素的, 单纯的, 绝对的, 初级的, 原始的, 迟钝的；n. 出身低微者, 傻子",
-      "source": "ecdict"
-    },
-    "singapore": {
-      "translation": "n. 新加坡",
-      "source": "ecdict"
-    },
-    "six": {
-      "translation": "num. 六, 六个",
-      "source": "ecdict"
-    },
-    "sleep": {
-      "translation": "n. 睡眠, 静止, 昏迷, 麻木, 长眠, 冬眠；vi. 睡觉, 睡眠, 静止；vt. 睡",
-      "source": "ecdict"
-    },
-    "so": {
-      "translation": "adv. 如此, 如是, 如...那样；conj. 所以, 因此；pron. 这样",
-      "source": "ecdict"
+      "translation": "太阳能获取",
+      "source": "context",
+      "context": "太阳能获取",
+      "sentence": "Some of the most important ones are first to cut solar gain, which is through things like shading.",
+      "phrase": "solar gain"
     },
     "solar": {
-      "translation": "a. 太阳的, 日光的, 源自太阳的；[医] 太阳的; 腹腔丛的",
-      "source": "ecdict"
-    },
-    "solution": {
-      "translation": "n. 解决, 解答, 溶液；[化] 溶液",
-      "source": "ecdict"
-    },
-    "solutions": {
-      "translation": "n. 解决方案；应对措施；溶液剂（solution的复数）",
-      "source": "ecdict"
-    },
-    "some": {
-      "translation": "pron. 一些, 一部分, 若干；adv. 大约；a. 一些的, 少许的, 某一的",
-      "source": "ecdict"
-    },
-    "something": {
-      "translation": "pron. 某事, 某物",
-      "source": "ecdict"
-    },
-    "somewhere": {
-      "translation": "adv. 到某处, 在某处",
-      "source": "ecdict"
-    },
-    "sounds": {
-      "translation": "n. 音效, 声音（sound的复数）",
-      "source": "ecdict"
-    },
-    "start": {
-      "translation": "n. 惊起, 出发, 开端, 起点, 吃惊, 有利条件；vi. 开始, 出发, 启动, 跳起, 吃惊, 出现, 松动, 脱落, 起价, 参赛；vt. 使惊起, 开动, 发动, 启动, 开始, 创办, 提议, 使松动, 使脱落, 起用；[计] 起始",
-      "source": "ecdict"
-    },
-    "starting": {
-      "translation": "n. 开端, 开始, 出发, 起动, 开动；[机] 开动, 起动",
-      "source": "ecdict"
-    },
-    "steps": {
-      "translation": "n. （楼外的）台阶；步伐；步幅；步数",
-      "source": "ecdict"
-    },
-    "still": {
-      "translation": "n. 蒸馏室, 寂静, 剧照；v. 蒸馏, (使)平静, (使)静止；a. 静止的, 不动的, 静寂的, 不起泡的, 静物摄影的；adv. 仍然, 更, 静止地；conj. 然而, 但是",
-      "source": "ecdict"
-    },
-    "stops": {
-      "translation": "n. 站点；停靠站（stop的复数）",
-      "source": "ecdict"
-    },
-    "stresses": {
-      "translation": "n. 强调( stress的名词复数 ); 重音; 压力; 重力；v. 重读( stress的第三人称单数 ); [机械学]使承受压力; 给…加压力（或应力）",
-      "source": "ecdict"
-    },
-    "summer": {
-      "translation": "n. 夏季, 全盛时期；vi. 避暑, 过夏天；[计] 加法器",
-      "source": "ecdict"
-    },
-    "summers": {
-      "translation": "n. 萨莫斯（人名）",
-      "source": "ecdict"
-    },
-    "sun": {
-      "translation": "n. 太阳, 日, 日光, 阳光；vt. 晒；vi. 晒太阳",
-      "source": "ecdict"
-    },
-    "suns": {
-      "translation": "n. 太阳队（美国篮球队名）",
-      "source": "ecdict"
-    },
-    "sustainable": {
-      "translation": "a. 足可支撑的, 养得起的, 可以忍受的",
-      "source": "ecdict"
-    },
-    "system": {
-      "translation": "n. 系统, 体系, 制度, 方式, 秩序, 分类原则；[计] 系统; 体制; 体系",
-      "source": "ecdict"
-    },
-    "take": {
-      "translation": "vt. 拿, 取, 抓, 带领, 获得, 就座, 接受, 吃, 吸引, 采取, 乘, 需要, 花费；vi. 吃掉对方棋子, 抓住, 起作用, 依法获得财产；n. 拿, 取, 收成, 奏效",
-      "source": "ecdict"
-    },
-    "talking": {
-      "translation": "a. 说话的, 多嘴的, 富有表情的；n. 讲话, 谈论",
-      "source": "ecdict"
-    },
-    "talks": {
-      "translation": "n. 会谈",
-      "source": "ecdict"
-    },
-    "technology": {
-      "translation": "n. 技术, 工业技术, 术语；[医] 技术学, 工艺学",
-      "source": "ecdict"
-    },
-    "ten": {
-      "translation": "num. 十, 十个",
-      "source": "ecdict"
-    },
-    "test": {
-      "translation": "n. 测试, 试验, 化验, 检验, 考验, 甲壳；vt. 测试, 试验, 化验；vi. 接受测验, 进行测试",
-      "source": "ecdict"
-    },
-    "than": {
-      "translation": "conj. 比, 除...外；prep. 比",
-      "source": "ecdict"
-    },
-    "thank": {
-      "translation": "n. 谢意, 感谢；vt. 谢谢, 感谢",
-      "source": "ecdict"
-    },
-    "that": {
-      "translation": "a. 那, 那个；conj. 以致, 因为；pron. 那；adv. 那么, 那样",
-      "source": "ecdict"
-    },
-    "the": {
-      "translation": "art. 那",
-      "source": "ecdict"
-    },
-    "then": {
-      "translation": "adv. 然后, 当时；conj. 然后, 当时；n. 那时",
-      "source": "ecdict"
-    },
-    "there": {
-      "translation": "adv. 在那里",
-      "source": "ecdict"
-    },
-    "thermal": {
-      "translation": "a. 热的, 热量的, 温泉的；n. 上升温暖气流",
-      "source": "ecdict"
-    },
-    "things": {
-      "translation": "n. 所有物, 财产, 用具, 用品, 局面, 形势, 情况；[法] 物",
-      "source": "ecdict"
-    },
-    "think": {
-      "translation": "vt. 想, 考虑, 想起, 想像, 打算, 认为；vi. 思考, 料想；n. 想法；a. 思想的",
-      "source": "ecdict"
-    },
-    "this": {
-      "translation": "pron. 这, 本；a. 这, 本；adv. 这么",
-      "source": "ecdict"
-    },
-    "those": {
-      "translation": "pron. 那些",
-      "source": "ecdict"
-    },
-    "though": {
-      "translation": "adv. 然而, 可是；conj. 虽然, 纵然",
-      "source": "ecdict"
-    },
-    "thought": {
-      "translation": "n. 想法, 思想, 思维, 关心, 挂念；think的过去式和过去分词",
-      "source": "ecdict"
-    },
-    "through": {
-      "translation": "adv. 穿越, 从头至尾, 到底, 因为；prep. 经过, 穿过；a. 对穿的, 直达的, 完结的",
-      "source": "ecdict"
-    },
-    "time": {
-      "translation": "n. 时间, 时侯, 时机, 时期, 期限, 次数, 节拍, 暂停, 规定时间；vt. 测定...的时间, 记录...的时间, 计时, 定时；a. 时间的, 记时的, 定时的, 定期的, 分期的；[计] DOS内部命令:用于显示或设定系统的时间",
-      "source": "ecdict"
-    },
-    "to": {
-      "translation": "prep. 到, 向, 趋于；adv. 向前",
-      "source": "ecdict"
-    },
-    "today": {
-      "translation": "n. 今天, 当今, 现在；adv. 今天, 当今",
-      "source": "ecdict"
-    },
-    "told": {
-      "translation": "tell的过去式和过去分词",
-      "source": "ecdict"
-    },
-    "too": {
-      "translation": "adv. 也, 非常, 太",
-      "source": "ecdict"
-    },
-    "towns": {
-      "translation": "n. 汤斯",
-      "source": "ecdict"
-    },
-    "trees": {
-      "translation": "n. 树木；乔木；树状结构（tree的复数）",
-      "source": "ecdict"
-    },
-    "tropics": {
-      "translation": "n. 热带地区",
-      "source": "ecdict"
-    },
-    "try": {
-      "translation": "n. 尝试, 试验, 审理, 审判；vt. 试, 尝试, 试验, 考验, 审问, 提炼；vi. 尝试, 试图",
-      "source": "ecdict"
-    },
-    "trying": {
-      "translation": "a. 难受的, 难堪的；[法] 裁决, 审判, 审理; 使人痛苦的, 难堪的, 难处的",
-      "source": "ecdict"
-    },
-    "uk": {
-      "translation": "n. 联合王国",
-      "source": "ecdict"
-    },
-    "uncomfortable": {
-      "translation": "a. 不舒服的, 不自在的, 不安的",
-      "source": "ecdict"
-    },
-    "units": {
-      "translation": "n. 单位",
-      "source": "ecdict"
-    },
-    "up": {
-      "translation": "a. 向上的, 起床的, 涨的；adv. 向上, 上涨；prep. 在...上面, 向...的较高处",
-      "source": "ecdict"
-    },
-    "us": {
-      "translation": "pron. 我们；[经] 美国",
-      "source": "ecdict"
-    },
-    "use": {
-      "translation": "n. 使用, 习惯, 使用价值, 用法, 使用权；vt. 使用, 利用, 运用, 耗费；vi. 惯常",
-      "source": "ecdict"
-    },
-    "used": {
-      "translation": "a. 使用过的, 二手的, 习惯的",
-      "source": "ecdict"
-    },
-    "uses": {
-      "translation": "abbr. 美国就业局（United States Employment Service）",
-      "source": "ecdict"
-    },
-    "using": {
-      "translation": "[计] 使用",
-      "source": "ecdict"
-    },
-    "vocabulary": {
-      "translation": "n. 词汇(量), 词汇表；[计] 词表",
-      "source": "ecdict"
-    },
-    "warm": {
-      "translation": "a. 暖和的, 暖的, 温暖的, 热烈的, 兴奋的, 激烈的, 多情的, 色情的；vt. 使温暖, 弄热, 使兴奋, 使充满仇恨；vi. 变暖和, 变温暖, 取暖, 激动, 同情, 爱好；n. 暖, 保暖物",
-      "source": "ecdict"
-    },
-    "warmer": {
-      "translation": "n. 进行加热的人, 取暖器；[化] 热炼机",
-      "source": "ecdict"
-    },
-    "warming": {
-      "translation": "n. 暖和, 加温, 暖热, 温暖, (非正式)打, 鞭打",
-      "source": "ecdict"
-    },
-    "was": {
-      "translation": "be的过去式",
-      "source": "ecdict"
-    },
-    "way": {
-      "translation": "n. 路, 路线, 路途, 方法, 道路, 情形, 规模, 习惯, 行业, 方面；adv. 远远地, 非常",
-      "source": "ecdict"
-    },
-    "we": {
-      "translation": "pron. 我们",
-      "source": "ecdict"
-    },
-    "weather": {
-      "translation": "n. 天气, 气象, 处境；a. 迎风的；vt. 使受风吹雨打, 侵蚀, 使风化, 经受住；vi. 风化, 受侵蚀, 经受风雨",
-      "source": "ecdict"
-    },
-    "website": {
-      "translation": "n. 网站（全球资讯网的主机站）",
-      "source": "ecdict"
-    },
-    "well": {
-      "translation": "n. 井, 泉水, 源泉, 好；v. 涌出；a. 健康的, 良好的, 适宜的, 恰当的；adv. 很好地, 适当地, 好意地, 很, 完全；interj. 好啦",
-      "source": "ecdict"
-    },
-    "were": {
-      "translation": "be的过去式",
-      "source": "ecdict"
-    },
-    "what": {
-      "translation": "pron. 什么；interj. 怎么, 多么；a. 什么的；adv. 到什么程度",
-      "source": "ecdict"
-    },
-    "when": {
-      "translation": "conj. 当...的时候；adv. 何时, 什么时候；pron. 什么时侯；n. 时间",
-      "source": "ecdict"
-    },
-    "where": {
-      "translation": "adv. 在哪里；pron. 哪里；n. 地点",
-      "source": "ecdict"
-    },
-    "whether": {
-      "translation": "conj. 是否, 不论；pron. 两个中的哪一个",
-      "source": "ecdict"
-    },
-    "which": {
-      "translation": "pron. 哪一个, 那一个",
-      "source": "ecdict"
-    },
-    "wild": {
-      "translation": "n. 荒野, 荒地；a. 野性的, 野蛮的, 野生的, 失控的, 任性的, 杂乱的, 轻率的, 狂热的, 疯狂的；adv. 狂暴地, 失控地",
-      "source": "ecdict"
-    },
-    "will": {
-      "translation": "n. 意志, 决心, 意愿, 意向, 干劲, 遗嘱；vt. 用意志的力量驱使, 决意, 愿意, 立遗嘱；vi. 下决心, 愿意；aux. 将, 愿意, 必须",
-      "source": "ecdict"
-    },
-    "willis": {
-      "translation": "n. 威利斯（姓氏, 男名）",
-      "source": "ecdict"
-    },
-    "wish": {
-      "translation": "n. 希望, 愿望, 祝愿, 命令, 请求；vt. 愿, 想要, 希望, 祝愿；vi. 希望",
-      "source": "ecdict"
-    },
-    "with": {
-      "translation": "prep. 和...在一起, 以, 由于",
-      "source": "ecdict"
-    },
-    "without": {
-      "translation": "prep. 没有, 不, 在...之外；adv. 在外面, 户外；n. 外面, 外部",
-      "source": "ecdict"
-    },
-    "worksheet": {
-      "translation": "[计] 工作表；[化] 工作单; 加工单",
-      "source": "ecdict"
-    },
-    "world": {
-      "translation": "n. 世界, 地球, 宇宙, 万物, 世人, 人间, 领域, 世事, 世故, 社会生活, 大量；[法] 世界, 地球, 世人",
-      "source": "ecdict"
-    },
-    "worse": {
-      "translation": "n. 更坏的事, 更恶劣的事, 败局；a. 更坏的, 更恶劣的；adv. 更坏地, 更恶劣地",
-      "source": "ecdict"
-    },
-    "would": {
-      "translation": "aux. 将, 愿意",
-      "source": "ecdict"
-    },
-    "years": {
-      "translation": "n. 年代；岁月；年；年龄",
-      "source": "ecdict"
-    },
-    "yes": {
-      "translation": "adv. 是；n. 是, 同意；v. 同意",
-      "source": "ecdict"
-    },
-    "yew": {
-      "translation": "n. 紫杉",
-      "source": "ecdict"
-    },
-    "york": {
-      "translation": "n. 约克郡；约克王朝",
-      "source": "ecdict"
-    },
-    "you": {
-      "translation": "pron. 你, 你们",
-      "source": "ecdict"
-    },
-    "your": {
-      "translation": "pron. 你的, 你们的",
-      "source": "ecdict"
+      "translation": "太阳能获取",
+      "source": "context",
+      "context": "太阳能获取",
+      "sentence": "Some of the most important ones are first to cut solar gain, which is through things like shading.",
+      "phrase": "solar gain"
+    },
+    "solargain": {
+      "translation": "太阳能获取",
+      "source": "context",
+      "context": "太阳能获取",
+      "sentence": "Some of the most important ones are first to cut solar gain, which is through things like shading.",
+      "phrase": "solar gain"
+    },
+    "cuts": {
+      "translation": "停电",
+      "source": "context",
+      "context": "停电",
+      "sentence": "If people are trying to use more electricity than it can cope with, then the grid can collapse – you get power cuts, which is when you can't get any electricity.",
+      "phrase": "power cuts"
+    },
+    "power": {
+      "translation": "停电",
+      "source": "context",
+      "context": "停电",
+      "sentence": "If people are trying to use more electricity than it can cope with, then the grid can collapse – you get power cuts, which is when you can't get any electricity.",
+      "phrase": "power cuts"
+    },
+    "powercuts": {
+      "translation": "停电",
+      "source": "context",
+      "context": "停电",
+      "sentence": "If people are trying to use more electricity than it can cope with, then the grid can collapse – you get power cuts, which is when you can't get any electricity.",
+      "phrase": "power cuts"
     }
   }
 }

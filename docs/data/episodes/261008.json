@@ -31,7 +31,132 @@
       "definition": "strong criticism of a trend; people doing the opposite of a trend"
     }
   ],
-  "context_glossary": {},
+  "context_glossary": {
+    "unusual": {
+      "meaning": "不同寻常的",
+      "sentence": "Do you want to hear something quite unusual for me?"
+    },
+    "impressive": {
+      "meaning": "令人印象深刻的",
+      "sentence": "Wow! That is really impressive."
+    },
+    "alcoholic": {
+      "meaning": "含酒精的",
+      "sentence": "I haven't had an alcoholic drink this year."
+    },
+    "challenge": {
+      "meaning": "挑战",
+      "sentence": "but what is the challenge called?"
+    },
+    "answer": {
+      "meaning": "答案",
+      "sentence": "Well, I know the answer to this, but I'm not going to give it away."
+    },
+    "listeners": {
+      "meaning": "听众",
+      "sentence": "OK. Well, then our listeners can find out the answer at the end of the programme."
+    },
+    "true": {
+      "meaning": "真的",
+      "sentence": "Is that true?"
+    },
+    "likely": {
+      "meaning": "可能的",
+      "sentence": "Well, in the UK, surveys suggest that 16 to 24-year-olds are more likely to be non-drinkers than the older generations."
+    },
+    "sober": {
+      "meaning": "戒酒的",
+      "sentence": "Well, why are more young people choosing to be sober?"
+    },
+    "investigating": {
+      "meaning": "调查",
+      "sentence": "Well, the BBC World Service podcast What in the World have been investigating this."
+    },
+    " Presenter": {
+      "meaning": "主持人",
+      "sentence": "Presenter Hannah Gelbart met three young people who choose to be sober for some alcohol-free drinks to find out more."
+    },
+    "story": {
+      "meaning": "故事",
+      "sentence": "Here's Daniel's story:"
+    },
+    "societal": {
+      "meaning": "社会的",
+      "sentence": "So, Daniel says that when he was younger, he felt societal pressure to drink alcohol."
+    },
+    "pressure": {
+      "meaning": "压力",
+      "sentence": "Societal pressure is feeling like you need to do something because lots of people around you are doing it."
+    },
+    "norm": {
+      "meaning": "常态",
+      "sentence": "Right. So, Daniel says drinking was the norm at university and after work."
+    },
+    "socialise": {
+      "meaning": "社交",
+      "sentence": "But during the Covid-19 pandemic, when people in the UK were unable to socialise and visit pubs and bars, Daniel's attitude to alcohol changed."
+    },
+    "changed": {
+      "meaning": "改变",
+      "sentence": "After that, he decided to be sober and he hasn't had a drink for about six years."
+    },
+    "experience": {
+      "meaning": "经历",
+      "sentence": "But still, Millie thinks there's a pushback against self-optimisation content."
+    },
+    "recently": {
+      "meaning": "最近",
+      "sentence": "But recently there's been a bit of a change, hasn't there?"
+    },
+    "social media": {
+      "meaning": "社交媒体",
+      "sentence": "But still, Millie thinks there's a pushback against self-optimisation content."
+    },
+    "associated": {
+      "meaning": "关联的",
+      "sentence": "I think we had this, like, rise of self-optimisation content. I think unfortunately sobriety, kind of, got swept in with that."
+    },
+    "touted": {
+      "meaning": "宣扬",
+      "sentence": "And, you know, for many of us, that's probably not our reality with not drinking. It's that we do it to feel a bit more sane or, you know, things like that. And so, I think now we are entering this, like, almost pushback era of that content."
+    },
+    "celebrities": {
+      "meaning": "名人",
+      "sentence": "Like, it's not just alcohol – you're seeing more celebrities smoking and, like, posting that on their Instagram and not worrying if it's brand-friendly."
+    },
+    "reality": {
+      "meaning": "现实",
+      "sentence": "And, you know, for many of us, that's probably not our reality with not drinking."
+    },
+    "pushback": {
+      "meaning": "反对",
+      "sentence": "But still, Millie thinks there's a pushback against self-optimisation content."
+    },
+    "fitness": {
+      "meaning": "健身",
+      "sentence": "They argue we're too worried about fitness and wellness, and that drinking some alcohol to have a good time is fine."
+    },
+    "wellness": {
+      "meaning": "健康",
+      "sentence": "They argue we're too worried about fitness and wellness, and that drinking some alcohol to have a good time is fine."
+    },
+    "convince": {
+      "meaning": "说服",
+      "sentence": "If somebody touts an idea or lifestyle, they talk about it a lot and try to convince people to do it."
+    },
+    "era": {
+      "meaning": "时代",
+      "sentence": "And so, I think now we are entering this, like, almost pushback era of that content."
+    },
+    "test": {
+      "meaning": "测试",
+      "sentence": "Once again, our six minutes are up, but don't forget to test what you've learned with the worksheet on our website, bbclearningenglish.com."
+    },
+    "worksheet": {
+      "meaning": "工作表",
+      "sentence": "Once again, our six minutes are up, but don't forget to test what you've learned with the worksheet on our website, bbclearningenglish.com."
+    }
+  },
   "dict": {
     "sober": {
       "translation": "not drinking alcohol or taking recreational drugs",
@@ -57,25 +182,184 @@
       "translation": "strong criticism of a trend; people doing the opposite of a trend",
       "source": "official"
     },
-    "pressure": {
-      "translation": "feeling that you should do something because lots of other people expect you to",
-      "source": "official",
-      "phrase": "societal pressure"
+    "unusual": {
+      "translation": "不同寻常的",
+      "source": "context",
+      "context": "不同寻常的",
+      "sentence": "Do you want to hear something quite unusual for me?"
+    },
+    "impressive": {
+      "translation": "令人印象深刻的",
+      "source": "context",
+      "context": "令人印象深刻的",
+      "sentence": "Wow! That is really impressive."
+    },
+    "alcoholic": {
+      "translation": "含酒精的",
+      "source": "context",
+      "context": "含酒精的",
+      "sentence": "I haven't had an alcoholic drink this year."
+    },
+    "challenge": {
+      "translation": "挑战",
+      "source": "context",
+      "context": "挑战",
+      "sentence": "but what is the challenge called?"
+    },
+    "answer": {
+      "translation": "答案",
+      "source": "context",
+      "context": "答案",
+      "sentence": "Well, I know the answer to this, but I'm not going to give it away."
+    },
+    "listeners": {
+      "translation": "听众",
+      "source": "context",
+      "context": "听众",
+      "sentence": "OK. Well, then our listeners can find out the answer at the end of the programme."
+    },
+    "true": {
+      "translation": "真的",
+      "source": "context",
+      "context": "真的",
+      "sentence": "Is that true?"
+    },
+    "likely": {
+      "translation": "可能的",
+      "source": "context",
+      "context": "可能的",
+      "sentence": "Well, in the UK, surveys suggest that 16 to 24-year-olds are more likely to be non-drinkers than the older generations."
+    },
+    "investigating": {
+      "translation": "调查",
+      "source": "context",
+      "context": "调查",
+      "sentence": "Well, the BBC World Service podcast What in the World have been investigating this."
+    },
+    "presenter": {
+      "translation": "主持人",
+      "source": "context",
+      "context": "主持人",
+      "sentence": "Presenter Hannah Gelbart met three young people who choose to be sober for some alcohol-free drinks to find out more."
+    },
+    "story": {
+      "translation": "故事",
+      "source": "context",
+      "context": "故事",
+      "sentence": "Here's Daniel's story:"
     },
     "societal": {
-      "translation": "feeling that you should do something because lots of other people expect you to",
-      "source": "official",
-      "phrase": "societal pressure"
+      "translation": "社会的",
+      "source": "context",
+      "context": "社会的",
+      "sentence": "So, Daniel says that when he was younger, he felt societal pressure to drink alcohol."
+    },
+    "pressure": {
+      "translation": "压力",
+      "source": "context",
+      "context": "压力",
+      "sentence": "Societal pressure is feeling like you need to do something because lots of people around you are doing it."
+    },
+    "norm": {
+      "translation": "常态",
+      "source": "context",
+      "context": "常态",
+      "sentence": "Right. So, Daniel says drinking was the norm at university and after work."
+    },
+    "socialise": {
+      "translation": "社交",
+      "source": "context",
+      "context": "社交",
+      "sentence": "But during the Covid-19 pandemic, when people in the UK were unable to socialise and visit pubs and bars, Daniel's attitude to alcohol changed."
+    },
+    "changed": {
+      "translation": "改变",
+      "source": "context",
+      "context": "改变",
+      "sentence": "After that, he decided to be sober and he hasn't had a drink for about six years."
+    },
+    "experience": {
+      "translation": "经历",
+      "source": "context",
+      "context": "经历",
+      "sentence": "But still, Millie thinks there's a pushback against self-optimisation content."
+    },
+    "recently": {
+      "translation": "最近",
+      "source": "context",
+      "context": "最近",
+      "sentence": "But recently there's been a bit of a change, hasn't there?"
+    },
+    "social media": {
+      "translation": "社交媒体",
+      "source": "context",
+      "context": "社交媒体",
+      "sentence": "But still, Millie thinks there's a pushback against self-optimisation content."
+    },
+    "associated": {
+      "translation": "关联的",
+      "source": "context",
+      "context": "关联的",
+      "sentence": "I think we had this, like, rise of self-optimisation content. I think unfortunately sobriety, kind of, got swept in with that."
+    },
+    "touted": {
+      "translation": "宣扬",
+      "source": "context",
+      "context": "宣扬",
+      "sentence": "And, you know, for many of us, that's probably not our reality with not drinking. It's that we do it to feel a bit more sane or, you know, things like that. And so, I think now we are entering this, like, almost pushback era of that content."
+    },
+    "celebrities": {
+      "translation": "名人",
+      "source": "context",
+      "context": "名人",
+      "sentence": "Like, it's not just alcohol – you're seeing more celebrities smoking and, like, posting that on their Instagram and not worrying if it's brand-friendly."
+    },
+    "reality": {
+      "translation": "现实",
+      "source": "context",
+      "context": "现实",
+      "sentence": "And, you know, for many of us, that's probably not our reality with not drinking."
+    },
+    "fitness": {
+      "translation": "健身",
+      "source": "context",
+      "context": "健身",
+      "sentence": "They argue we're too worried about fitness and wellness, and that drinking some alcohol to have a good time is fine."
+    },
+    "wellness": {
+      "translation": "健康",
+      "source": "context",
+      "context": "健康",
+      "sentence": "They argue we're too worried about fitness and wellness, and that drinking some alcohol to have a good time is fine."
+    },
+    "convince": {
+      "translation": "说服",
+      "source": "context",
+      "context": "说服",
+      "sentence": "If somebody touts an idea or lifestyle, they talk about it a lot and try to convince people to do it."
+    },
+    "era": {
+      "translation": "时代",
+      "source": "context",
+      "context": "时代",
+      "sentence": "And so, I think now we are entering this, like, almost pushback era of that content."
+    },
+    "test": {
+      "translation": "测试",
+      "source": "context",
+      "context": "测试",
+      "sentence": "Once again, our six minutes are up, but don't forget to test what you've learned with the worksheet on our website, bbclearningenglish.com."
+    },
+    "worksheet": {
+      "translation": "工作表",
+      "source": "context",
+      "context": "工作表",
+      "sentence": "Once again, our six minutes are up, but don't forget to test what you've learned with the worksheet on our website, bbclearningenglish.com."
     },
     "societalpressure": {
       "translation": "feeling that you should do something because lots of other people expect you to",
       "source": "official",
       "phrase": "societal pressure"
-    },
-    "norm": {
-      "translation": "the usual or common thing to do",
-      "source": "official",
-      "phrase": "the norm"
     },
     "thenorm": {
       "translation": "the usual or common thing to do",
@@ -102,1317 +386,26 @@
       "source": "official",
       "phrase": "self-optimisation content"
     },
-    "16": {
-      "translation": "sixteen",
-      "source": "ecdict"
-    },
-    "6": {
-      "translation": "num. six",
-      "source": "ecdict"
-    },
-    "a": {
-      "translation": "第一个字母 A; 一个; 第一的\\r；art. [计] 累加器, 加法器, 地址, 振幅, 模拟, 区域, 面积, 汇编, 组件, 异步",
-      "source": "ecdict"
-    },
-    "about": {
-      "translation": "prep. 在...周围, 大约, 有关, 关于；adv. 大约, 四处, 在附近, 周围",
-      "source": "ecdict"
-    },
-    "achieving": {
-      "translation": "取得；实现",
-      "source": "ecdict"
-    },
-    "after": {
-      "translation": "prep. 在...之后, 由于；conj. 在...之后；adv. 后来",
-      "source": "ecdict"
-    },
-    "again": {
-      "translation": "adv. 再一次, 又, 到原处",
-      "source": "ecdict"
-    },
-    "against": {
-      "translation": "prep. 反对, 对着, 倚靠",
-      "source": "ecdict"
-    },
-    "alcohol": {
-      "translation": "n. 酒精, 酒；[化] 醇; 乙醇; 酒精",
-      "source": "ecdict"
-    },
-    "alcoholic": {
-      "translation": "n. 酒鬼, 酒精中毒者；a. 酒精的",
-      "source": "ecdict"
-    },
-    "all": {
-      "translation": "a. 所有的, 全部的, 一切的；adv. 全部, 全然；pron. 全部；n. 全部",
-      "source": "ecdict"
-    },
-    "almost": {
-      "translation": "adv. 几乎, 差不多",
-      "source": "ecdict"
-    },
-    "always": {
-      "translation": "adv. 总是, 始终",
-      "source": "ecdict"
-    },
-    "an": {
-      "translation": "art. 一",
-      "source": "ecdict"
-    },
-    "and": {
-      "translation": "conj. 和, 与；[计] 与",
-      "source": "ecdict"
-    },
-    "answer": {
-      "translation": "n. 答案, 回答, 回报, 答辩；vt. 回答, 反驳, 适应, 响应, 符合；vi. 回答, 答应, 负责, 符合, 成功；[计] 用户问题及答案新闻组",
-      "source": "ecdict"
-    },
-    "are": {
-      "translation": "be的现在时复数或第二人称单数",
-      "source": "ecdict"
-    },
-    "argue": {
-      "translation": "vi. 提出理由, 争论, 辩论；vt. 主张, 辩论, 证明, 说服",
-      "source": "ecdict"
-    },
-    "around": {
-      "translation": "prep. 包围, 在...周围, 四处；adv. 兜着圈子, 在附近, 到处",
-      "source": "ecdict"
-    },
-    "as": {
-      "translation": "adv. 同样地, 例如；prep. 做为, 当作；conj. 当...之时, 以...的方式, 像...一样, 因为；[计] 高级系统, 先进系统, 辅助存储器, 自治系统",
-      "source": "ecdict"
-    },
-    "asked": {
-      "translation": "n. 卖方要价",
-      "source": "ecdict"
-    },
-    "asking": {
-      "translation": "n. 请求",
-      "source": "ecdict"
-    },
-    "associated": {
-      "translation": "a. 联合的；[计] 关联的; 结合的",
-      "source": "ecdict"
-    },
-    "at": {
-      "translation": "prep. 在, 向, 对；[计] 地址转换器, 异常传输, 自动订票",
-      "source": "ecdict"
-    },
-    "attitude": {
-      "translation": "n. 态度, 看法, 姿势；[医] 体态, 姿势, 态度",
-      "source": "ecdict"
-    },
-    "away": {
-      "translation": "adv. 离去",
-      "source": "ecdict"
-    },
-    "b": {
-      "translation": "[计] 基地址, 数据库, 基极, 二进制, 块, 字组, 布尔, 总线, 占线, 字节；[医] 硼(5号元素)",
-      "source": "ecdict"
-    },
-    "back": {
-      "translation": "a. 后面的；vt. 使后退, 支持；vi. 倒退, 背靠；adv. 向后地；n. 背部, 后面",
-      "source": "ecdict"
-    },
-    "balance": {
-      "translation": "n. 平衡, 差额；vi. 平衡, 相等；vt. 称, 权衡, 比较, 使平衡, 结算, 抵消",
-      "source": "ecdict"
-    },
-    "bars": {
-      "translation": "n. 马齿龈；（木、金属等的）条；栅栏；酒吧（bar的复数形式）",
-      "source": "ecdict"
-    },
-    "bbc": {
-      "translation": "英国广播公司",
-      "source": "ecdict"
-    },
-    "be": {
-      "translation": "v. 是, 表示, 在；[计] 后端, 总线允许",
-      "source": "ecdict"
-    },
-    "because": {
-      "translation": "conj. 因为",
-      "source": "ecdict"
-    },
-    "been": {
-      "translation": "be的过去分词",
-      "source": "ecdict"
-    },
-    "being": {
-      "translation": "n. 存在, 性质, 生命, 人, 生物, be的现在分词",
-      "source": "ecdict"
-    },
-    "big": {
-      "translation": "a. 大的, 重要的；adv. 大量地",
-      "source": "ecdict"
-    },
-    "bit": {
-      "translation": "n. 少量, 马嚼子, 辅币；vt. 给马上嚼子, 控制；bite的过去式和过去分词；[计] 比特, 二进制数位, 机内测试",
-      "source": "ecdict"
-    },
-    "british": {
-      "translation": "a. 英国的；n. 英国人, 英国英语",
-      "source": "ecdict"
-    },
-    "but": {
-      "translation": "prep. 除了；conj. 但是；adv. 仅仅",
-      "source": "ecdict"
-    },
-    "by": {
-      "translation": "prep. 被, 经, 由, 在...之旁；adv. 经过, 在近处",
-      "source": "ecdict"
-    },
-    "c": {
-      "translation": "[计] 调用, 访问, 呼叫, 电容, 进位, 通道, 字符, 清除, 常数, 控制, 周期；[化] 碳的化学符号; 胞苷",
-      "source": "ecdict"
-    },
-    "called": {
-      "translation": "a. 被呼叫的",
-      "source": "ecdict"
-    },
-    "can": {
-      "translation": "vt. 装罐；n. 罐头, 容器；aux. 能, 可以；[计] 作废字符",
-      "source": "ecdict"
-    },
-    "cant": {
-      "translation": "n. 伪善之言, 黑话, 斜面, 角落；vi. 讲黑话, 倾斜",
-      "source": "ecdict"
-    },
-    "celebrities": {
-      "translation": "n. 名誉；名人（celebrity的复数）",
-      "source": "ecdict"
-    },
-    "certain": {
-      "translation": "a. 确定的, 某一个的, 必然的；[法] 确凿的, 无疑的, 可靠的",
-      "source": "ecdict"
-    },
-    "challenge": {
-      "translation": "n. 挑战, 盘问；vt. 向...挑战, 要求, 怀疑；vi. 挑战, 对(证据等)表示异议",
-      "source": "ecdict"
-    },
-    "change": {
-      "translation": "n. 变化, 找回的零钱, 找头, 更换；vt. 改变, 更换, 兑换",
-      "source": "ecdict"
-    },
-    "changed": {
-      "translation": "a. 变化的；改变的",
-      "source": "ecdict"
-    },
-    "choose": {
-      "translation": "vt. 选择, 宁愿, 欲；vi. 作出选择, 愿意；[计] 选取",
-      "source": "ecdict"
-    },
-    "choosing": {
-      "translation": "v. 选择；决定（choose的ing形式）",
-      "source": "ecdict"
-    },
-    "common": {
-      "translation": "a. 通常的, 共同的, 通俗的, 公共的；[计] 公用块",
-      "source": "ecdict"
-    },
-    "confidence": {
-      "translation": "n. 信心；[电] 可靠",
-      "source": "ecdict"
-    },
-    "convince": {
-      "translation": "vt. 说服, 使相信；[法] 使确信, 使信服, 使人认识错误",
-      "source": "ecdict"
-    },
-    "correct": {
-      "translation": "a. 正确的, 合适的；vt. 改正, 订正",
-      "source": "ecdict"
-    },
-    "countries": {
-      "translation": "国家（country的复数）",
-      "source": "ecdict"
-    },
-    "criticism": {
-      "translation": "n. 批评, 评论, 非难；[法] 批判, 批评, 评论",
-      "source": "ecdict"
-    },
-    "culture": {
-      "translation": "n. 文化, 修养, 耕种；vt. 耕种, 培养",
-      "source": "ecdict"
-    },
-    "cut": {
-      "translation": "n. 切口, 割伤, 降低, 切, 割, 砍, 削, 伤口, 削减, 缩短, 删节, 通路；a. 经切割的, 缩减的；vt. 切, 割, 减少, 刺痛, 开辟, 雕刻, 删节, 缩短, 停止, 排斥, 切断, 关, 显出；vi. 切, 割, 砍, 刺痛, 相交, 抄近路, 剪辑；[计] 剪切",
-      "source": "ecdict"
-    },
-    "daniel": {
-      "translation": "n. 丹尼尔（男子名）",
-      "source": "ecdict"
-    },
-    "daniels": {
-      "translation": "n. 丹尼尔斯（姓氏）",
-      "source": "ecdict"
-    },
-    "decided": {
-      "translation": "a. 确定的, 坚决的",
-      "source": "ecdict"
-    },
-    "describes": {
-      "translation": "v. 描述, 记述；形容, 作图（describe的复数形式）",
-      "source": "ecdict"
-    },
-    "did": {
-      "translation": "do的过去式",
-      "source": "ecdict"
-    },
-    "diet": {
-      "translation": "n. 日常饮食, 议会；vt. 照规定饮食；vi. 忌食",
-      "source": "ecdict"
-    },
-    "do": {
-      "translation": "v. 做, 进行, 完成",
-      "source": "ecdict"
-    },
-    "doing": {
-      "translation": "n. 行为, 活动",
-      "source": "ecdict"
-    },
-    "done": {
-      "translation": "a. 完成了的, 好了的；do的过去分词",
-      "source": "ecdict"
-    },
-    "down": {
-      "translation": "a. 向下的；adv. 下, 下去, 降下；prep. 往下, 沿着；n. 丘陵, 软毛, 开阔的高地；[计] 向下, 退下命令",
-      "source": "ecdict"
-    },
-    "drink": {
-      "translation": "n. 饮料, 酒；v. 喝, 喝酒",
-      "source": "ecdict"
-    },
-    "drinking": {
-      "translation": "n. 喝, 喝酒",
-      "source": "ecdict"
-    },
-    "drinks": {
-      "translation": "n. 饮料, 饮品；喝酒（drink复数）",
-      "source": "ecdict"
-    },
-    "dry": {
-      "translation": "a. 干的, 无酒的, 枯燥无味的, 干燥的；vt. 把...弄干；vi. 变干；n. 干, 干涸",
-      "source": "ecdict"
-    },
-    "during": {
-      "translation": "prep. 在...的时候",
-      "source": "ecdict"
-    },
-    "early": {
-      "translation": "a. 早的, 早熟的；adv. 很早, 初",
-      "source": "ecdict"
-    },
-    "encourage": {
-      "translation": "vt. 鼓励, 支持, 激励；[法] 怂恿, 煽动, 助长",
-      "source": "ecdict"
-    },
-    "end": {
-      "translation": "n. 结束, 终点, 目标, 末端, 梢, 死亡, 残余；v. 结束, 终结, 终止；[计] 端; 结束",
-      "source": "ecdict"
-    },
-    "english": {
-      "translation": "n. 英语；a. 英文的, 英国人的",
-      "source": "ecdict"
-    },
-    "enjoy": {
-      "translation": "vt. 享受, 喜欢, 欣赏；[法] 享受, 享有, 获得某种利益",
-      "source": "ecdict"
-    },
-    "entering": {
-      "translation": "[计] 进入, 键入, 输入, 录入",
-      "source": "ecdict"
-    },
-    "era": {
-      "translation": "n. 时代, 纪元, 时期",
-      "source": "ecdict"
-    },
-    "err": {
-      "translation": "vi. 犯错, 做错, 犯罪；[法] 弄错, 犯错误, 陈述",
-      "source": "ecdict"
-    },
-    "everybody": {
-      "translation": "pron. 每个人, 人人",
-      "source": "ecdict"
-    },
-    "example": {
-      "translation": "n. 例子, 样本, 实例；[化] 实例",
-      "source": "ecdict"
-    },
-    "exercise": {
-      "translation": "n. 行使, 执行, 运动, 练习, 作业；vt. 运用, 练习, 运动；vi. 练习, 锻炼",
-      "source": "ecdict"
-    },
-    "expect": {
-      "translation": "vt. 预期, 盼望, 期待",
-      "source": "ecdict"
-    },
-    "experience": {
-      "translation": "n. 经历, 经验, 体验；vt. 经历, 经验, 体验",
-      "source": "ecdict"
-    },
-    "feel": {
-      "translation": "vt. 感觉, 觉得, 触摸, 以为；vi. 有知觉, 摸索, 同情；n. 感觉, 觉得, 触摸",
-      "source": "ecdict"
-    },
-    "feeling": {
-      "translation": "n. 摸, 触觉, 知觉, 感觉, 情绪, 同情；a. 有同情心的, 有感觉的, 仁慈的, 动人的",
-      "source": "ecdict"
-    },
-    "felt": {
-      "translation": "n. 毛毯, 毡；vt. 制毡, 使粘结；vi. 粘结；feel的过去式和过去分词",
-      "source": "ecdict"
-    },
-    "few": {
-      "translation": "a. 很少的, 不多的, 少数的；n. 少数",
-      "source": "ecdict"
-    },
-    "find": {
-      "translation": "vt. 发现, 感到, 找到, 认为, 得到；vi. 裁决；n. 发现；[计] 查找; DOS外部命令:在指定的文件或从键盘输入的文本行中；寻找指定的字符串, 将符合条件的行或行数输出到标准输出设备上",
-      "source": "ecdict"
-    },
-    "fine": {
-      "translation": "n. 罚款, 罚金, 晴天, 精细；a. 好的, 晴朗的, 健康的, 细小的, 精细的；vt. 罚款, 精炼, 澄清；vi. 变清, 变细；adv. 很好；[计] 精细",
-      "source": "ecdict"
-    },
-    "fit": {
-      "translation": "n. 适宜, 合身, 发作, 痉挛；a. 适宜的, 对的, 准备好的；vt. 适合, 安装, 使合身, 使适应, 使合格；vi. 适合, 符合, 合身；[计] 非特",
-      "source": "ecdict"
-    },
-    "fitness": {
-      "translation": "n. 适合, 合宜, 合理, 恰当, 健康；[医] 适合性, 适应性",
-      "source": "ecdict"
-    },
-    "for": {
-      "translation": "prep. 为, 因为, 至于；conj. 因为；[计] DOS批处理命令:对一组参数重复执行指定的命令",
-      "source": "ecdict"
-    },
-    "forget": {
-      "translation": "vt. 忘记, 忽略, 忘；vi. 忘记",
-      "source": "ecdict"
-    },
-    "forward": {
-      "translation": "a. 向前的, 早的, 迅速的, 在前的, 进步的；vt. 促进...的生长, 转寄, 运送；adv. 向前地；[计] 前推, 转信",
-      "source": "ecdict"
-    },
-    "friends": {
-      "translation": "n. 老友记（剧集）",
-      "source": "ecdict"
-    },
-    "from": {
-      "translation": "prep. 从, 来自, 根据",
-      "source": "ecdict"
-    },
-    "fun": {
-      "translation": "n. 乐趣, 玩笑, 娱乐；vi. 开玩笑；a. 供娱乐用的",
-      "source": "ecdict"
-    },
-    "gave": {
-      "translation": "give的过去式",
-      "source": "ecdict"
-    },
-    "gelbart": {
-      "translation": "[人名] 格尔巴特",
-      "source": "ecdict"
-    },
-    "generations": {
-      "translation": "n. 世代（generation的复数）",
-      "source": "ecdict"
-    },
-    "georgie": {
-      "translation": "n. George 的昵称",
-      "source": "ecdict"
-    },
-    "get": {
-      "translation": "vt. 得到, 获得, 变成, 使得, 收获, 接通, 抓住, 染上；vi. 到达, 成为, 变得；n. (网球等)救球, 生殖, 幼兽；[计] 取得指令, 获取文件",
-      "source": "ecdict"
-    },
-    "gets": {
-      "translation": "abbr. 政府电子贸易服务（Government Electronic Tendering Service）；美国政府应急电信服务（Government Emergency Telecommunications Service）",
-      "source": "ecdict"
-    },
-    "give": {
-      "translation": "n. 弹性, 适应性；vt. 给, 授予, 供给, 产生, 发表, 付出, 献出, 让出；vi. 捐赠, 支持不住, 让步",
-      "source": "ecdict"
-    },
-    "given": {
-      "translation": "a. 赠予的, 沉溺的, 约定的；give的过去分词",
-      "source": "ecdict"
-    },
-    "glances": {
-      "translation": "v. 一瞥( glance的第三人称单数 ); 略视; 闪耀; 浏览",
-      "source": "ecdict"
-    },
-    "go": {
-      "translation": "vi. 去, 走, 达到, 运转, 查阅, 消失, 结束, 放弃, 花费, 流传, 趋于, 打算, 剩下；vt. 以...打赌, 对付, 忍受, 出产, 为被捕者出(保释金)；n. 去, 尝试, 进行",
-      "source": "ecdict"
-    },
-    "goals": {
-      "translation": "n. 目标, 目的；进球, 射中次数",
-      "source": "ecdict"
-    },
-    "going": {
-      "translation": "n. 去, 离去, 工作情况, 地面状况, 行为；a. 进行中的, 流行的, 成功的, 现存的",
-      "source": "ecdict"
-    },
-    "good": {
-      "translation": "n. 善行, 好处, 利益；a. 好的, 优良的, 上等的, 愉快的, 有益的, 好心的, 慈善的, 虔诚的",
-      "source": "ecdict"
-    },
-    "goodbye": {
-      "translation": "interj. 再见",
-      "source": "ecdict"
-    },
-    "got": {
-      "translation": "get的过去式和过去分词；[化] 谷草转氨酶; 谷氨酸草酰乙酸转氨酶",
-      "source": "ecdict"
-    },
-    "had": {
-      "translation": "have的过去式和过去分词",
-      "source": "ecdict"
-    },
-    "hannah": {
-      "translation": "n. 汉娜（女子名）",
-      "source": "ecdict"
-    },
-    "have": {
-      "translation": "vt. 有, 怀有, 拿, 进行；aux. 已经",
-      "source": "ecdict"
-    },
-    "having": {
-      "translation": "n. 财产, 所有物",
-      "source": "ecdict"
-    },
-    "he": {
-      "translation": "pron. 他；n. 男孩, 男人, 雄性动物",
-      "source": "ecdict"
-    },
-    "healthy": {
-      "translation": "a. 健康的, 有益健康的, 卫生的；[医] 健康的",
-      "source": "ecdict"
-    },
-    "hear": {
-      "translation": "vt. 听到, 倾听, 听说, 审理；vi. 听见, 听",
-      "source": "ecdict"
-    },
-    "her": {
-      "translation": "pron. 她的, 她",
-      "source": "ecdict"
-    },
-    "heres": {
-      "translation": "n. 继承者",
-      "source": "ecdict"
-    },
-    "hi": {
-      "translation": "interj. 喂",
-      "source": "ecdict"
-    },
-    "how": {
-      "translation": "adv. 如何, 怎样, 多少, 多么；n. 方式",
-      "source": "ecdict"
-    },
-    "i": {
-      "translation": "pron. 我；[计] 电流, 中断, 指令, 指示符",
-      "source": "ecdict"
-    },
-    "idea": {
-      "translation": "n. 主意, 办法, 理想, 思想, 概念, 意见；[医] 观念, 思想",
-      "source": "ecdict"
-    },
-    "if": {
-      "translation": "conj. 如果, 是否, 无论何时, 假设, 即使；n. 条件；[计] DOS批处理命令:根据所测试的条件决定是否执行另一条命令",
-      "source": "ecdict"
-    },
-    "im": {
-      "translation": "[计] 中断屏蔽, 指令存储器",
-      "source": "ecdict"
-    },
-    "impressive": {
-      "translation": "a. 给人深刻印象的, 威严的",
-      "source": "ecdict"
-    },
-    "in": {
-      "translation": "prep. 在...期间, 在...之内, 处于...之中, 从事于, 按照, 穿着；adv. 进入, 朝里, 在里面, 在屋里；a. 在里面的, 在朝的；n. 执政者, 交情",
-      "source": "ecdict"
-    },
-    "individual": {
-      "translation": "n. 人, 个人, 个体；a. 个别的, 个人的, 独特的",
-      "source": "ecdict"
-    },
-    "instagram": {
-      "translation": "一款图片分享应用",
-      "source": "ecdict"
-    },
-    "investigating": {
-      "translation": "[法] 调查, 调查研究, 审查",
-      "source": "ecdict"
-    },
-    "is": {
-      "translation": "be的现在式第三人称；[计] 加下标次序, 信息系统, 国际标准, 中间系统",
-      "source": "ecdict"
-    },
-    "isnt": {
-      "translation": "abbr. 原位缺口平移（In Situ Nick Translation）",
-      "source": "ecdict"
-    },
-    "it": {
-      "translation": "pron. 它；[计] 信息论, 输入终端, 智能终端, 内捕获",
-      "source": "ecdict"
-    },
-    "its": {
-      "translation": "pron. 它的",
-      "source": "ecdict"
-    },
-    "ive": {
-      "translation": "abbr. 香港专业教育学院（Hong Kong Institute of Vocational Education）",
-      "source": "ecdict"
-    },
-    "january": {
-      "translation": "n. 一月",
-      "source": "ecdict"
-    },
-    "join": {
-      "translation": "vi. 参加, 结合, 加入；vt. 连接, 结合, 参加, 加入；n. 连接, 结合, 接合点；[计] 连接; 汇合指令",
-      "source": "ecdict"
-    },
-    "joining": {
-      "translation": "n. 接缝；连接；连接物",
-      "source": "ecdict"
-    },
-    "just": {
-      "translation": "a. 正直的, 合理的, 正确的, 应得的；adv. 刚刚, 正好, 仅仅",
-      "source": "ecdict"
-    },
-    "kind": {
-      "translation": "n. 种类, 性质, 方式；a. 亲切的, 仁慈的, 和蔼的",
-      "source": "ecdict"
-    },
-    "kinds": {
-      "translation": "n. 种类（kind的复数形式）",
-      "source": "ecdict"
-    },
-    "know": {
-      "translation": "v. 知道, 了解, 认识, 确信",
-      "source": "ecdict"
-    },
-    "learned": {
-      "translation": "a. 有学问的, 学术上的；learn的过去式和过去分词",
-      "source": "ecdict"
-    },
-    "less": {
-      "translation": "n. 较少, 较小；a. 少的, 小的；adv. 较少, 较小, 较差；[计] 最低成本估算与调度法",
-      "source": "ecdict"
-    },
-    "let": {
-      "translation": "vt. 让, 假设, 出租, 排放, 妨碍；vi. 出租, 被承包；n. 出租屋, 障碍",
-      "source": "ecdict"
-    },
-    "lets": {
-      "translation": "abbr. 地方交易系统（Local Exchange Trading System）",
-      "source": "ecdict"
-    },
-    "lifestyle": {
-      "translation": "n. 生活方式",
-      "source": "ecdict"
-    },
-    "like": {
-      "translation": "a. 相似的, 同样的；vt. 喜欢, 愿意, 想；vi. 喜欢, 希望；n. 爱好, 同样的人(或物)；prep. 象, 如同；adv. 可能",
-      "source": "ecdict"
-    },
-    "likely": {
-      "translation": "a. 有可能的, 合适的, 前途有望的；adv. 或许, 可能",
-      "source": "ecdict"
-    },
-    "listeners": {
-      "translation": "n. 听众；监听器（listener的复数）",
-      "source": "ecdict"
-    },
-    "lockdown": {
-      "translation": "n. <美>(对囚犯的)一级防范禁闭, 一级防范禁闭期",
-      "source": "ecdict"
-    },
-    "lot": {
-      "translation": "n. 运气, 签, 抽签, 份额, 许多, 一堆；vt. 划分；vi. 抽签, 抓阄",
-      "source": "ecdict"
-    },
-    "lots": {
-      "translation": "n. 大量, 许多；一堆；命运（lot的复数）",
-      "source": "ecdict"
-    },
-    "many": {
-      "translation": "n. 多数, 多数人；a. 许多的；pron. 许多",
-      "source": "ecdict"
-    },
-    "maybe": {
-      "translation": "adv. 也许, 大概；n. 可能性",
-      "source": "ecdict"
-    },
-    "me": {
-      "translation": "pron. 我",
-      "source": "ecdict"
-    },
-    "means": {
-      "translation": "n. 方法, 手段, 工具, 财产, 收入；[经] 方法, 手段, 工具; 意谓",
-      "source": "ecdict"
-    },
     "media": {
-      "translation": "n. 媒体；[计] 媒质",
-      "source": "ecdict"
-    },
-    "met": {
-      "translation": "meet的过去式和过去分词；[化] 甲硫氨酸; 蛋氨酸",
-      "source": "ecdict"
-    },
-    "millie": {
-      "translation": "n. 米莉（女子名）",
-      "source": "ecdict"
-    },
-    "minute": {
-      "translation": "n. 分, 分钟, 片刻, 备忘录, 笔记；vt. 记录, 摘录, 测定时间；a. 微小的, 详细的",
-      "source": "ecdict"
-    },
-    "minutes": {
-      "translation": "n. 会议记录；[法] 备忘录, 会议记录, 审判记录",
-      "source": "ecdict"
-    },
-    "month": {
-      "translation": "n. 月；[经] 月",
-      "source": "ecdict"
-    },
-    "more": {
-      "translation": "n. 更多；a. 多的, 程度较大的, 更大的；adv. 多, 更多, 进一步；[计] DOS外部命令:显示满屏后自动暂停, 并显示:\"--More--\", 按任意键继续",
-      "source": "ecdict"
-    },
-    "moving": {
-      "translation": "a. 动人的, 令人感动的, 鼓动的, 原动的, [无比较级]活动的, 转动的",
-      "source": "ecdict"
-    },
-    "much": {
-      "translation": "n. 大量, 许多, 重要的事；a. 很多的, 重要的；adv. 多, 甚, 几乎",
-      "source": "ecdict"
-    },
-    "my": {
-      "translation": "pron. 我的；[医] 迈尔(热容单位)",
-      "source": "ecdict"
-    },
-    "name": {
-      "translation": "n. 名字, 名称, 姓名, 名义, 名誉, 文件名；vt. 命名, 称呼, 任命, 提名, 列举；a. 姓名的, 据以取名的；[计] 名称, 文件名, 姓名",
-      "source": "ecdict"
-    },
-    "necessarily": {
-      "translation": "adv. 必然地, 必须地, 必要地",
-      "source": "ecdict"
-    },
-    "need": {
-      "translation": "n. 需要, 必须, 缺乏；vt. 需要, 必需；vi. 贫困, 有必要；aux. 需要",
-      "source": "ecdict"
-    },
-    "neil": {
-      "translation": "n. 尼尔（男子名）",
-      "source": "ecdict"
-    },
-    "new": {
-      "translation": "a. 新的, 陌生的, 最近的, 不熟悉的；[法] 新发现的, 新的, 重新开始的",
-      "source": "ecdict"
-    },
-    "no": {
-      "translation": "n. 不, 拒绝, 否决票；a. 没有, 不是, 绝非；adv. 不",
-      "source": "ecdict"
-    },
-    "normal": {
-      "translation": "n. 常态, 标准, 正常, 普通；a. 正常的, 正规的, 标准的, 师范的, 正态的；[计] 标准, 普通",
-      "source": "ecdict"
-    },
-    "not": {
-      "translation": "adv. 不, 非, 未；[计] 非",
-      "source": "ecdict"
-    },
-    "now": {
-      "translation": "adv. 现在, 刚才, 目前；n. 现在；a. 现在的；conj. 由于",
-      "source": "ecdict"
-    },
-    "of": {
-      "translation": "prep. 的, 属于",
-      "source": "ecdict"
-    },
-    "ok": {
-      "translation": "a. 好, 不错, 可以；adv. 好, 不错, 可以；n. 批准, 认可；[计] 确定",
-      "source": "ecdict"
-    },
-    "older": {
-      "translation": "a. 年长的；较旧的",
-      "source": "ecdict"
-    },
-    "on": {
-      "translation": "prep. 在...之上；adv. ...上去；a. 正起作用的；[计] 打开",
-      "source": "ecdict"
-    },
-    "once": {
-      "translation": "adv. 一次, 曾经, 一旦；conj. 一旦, 一经；n. 一次；a. 从前的",
-      "source": "ecdict"
-    },
-    "opposite": {
-      "translation": "a. 相对的, 相反的, 对面的；prep. 对面；n. 对立面",
-      "source": "ecdict"
-    },
-    "or": {
-      "translation": "conj. 或, 或者；[计] 或",
-      "source": "ecdict"
-    },
-    "other": {
-      "translation": "a. 其他的, 另外的, 从前的；pron. 其他的, 他人, 另外一个",
-      "source": "ecdict"
-    },
-    "our": {
-      "translation": "pron. 我们的",
-      "source": "ecdict"
-    },
-    "out": {
-      "translation": "a. 外面的, 熄灭的, 结束的；adv. 在外, 熄灭, 出现；prep. 出自, 离去, 向",
-      "source": "ecdict"
-    },
-    "pandemic": {
-      "translation": "a. 大流行的, 普遍的, 全世界的；[医] 大流行的, 大流行病",
-      "source": "ecdict"
-    },
-    "parts": {
-      "translation": "n. 零件, 部件",
-      "source": "ecdict"
-    },
-    "past": {
-      "translation": "n. 过去, 昔时, 往事, 早年经历, 过去时；a. 过去的, 结束的, 卸任的, 过去时的；prep. 越过, 晚于, 超越, 超出...的可能性(能力、范围等)；pass的过去分词",
-      "source": "ecdict"
-    },
-    "people": {
-      "translation": "n. 人, 人民, 民族, 平民；vt. 使住满人, 居住于",
-      "source": "ecdict"
-    },
-    "person": {
-      "translation": "n. 人, 人身, 人称；[法] 人, 法人, 人身",
-      "source": "ecdict"
-    },
-    "podcast": {
-      "translation": "n. 播客",
-      "source": "ecdict"
-    },
-    "post": {
-      "translation": "n. 柱, 杆, 准星, 邮件, 邮政, 标竿, 职位, 岗位, 哨所, 兵营；vt. 张帖, 邮递, 公布, 登入帐, 使熟悉, 布置；vi. 快速行进；adv. 急速地；[计] 记入; 登记, 上电自检",
-      "source": "ecdict"
-    },
-    "posting": {
-      "translation": "[计] 记入, 记录, 稿件, 邮件；[经] 过帐, 誊入总帐",
-      "source": "ecdict"
-    },
-    "posts": {
-      "translation": "n. 标杆；岗位；帖子；邮件（post的复数）",
-      "source": "ecdict"
-    },
-    "presenter": {
-      "translation": "n. 节目主持人, 奉献者, 提出者；[法] 告发者, 提出者, 推荐者",
-      "source": "ecdict"
-    },
-    "probably": {
-      "translation": "adv. 大概, 或许",
-      "source": "ecdict"
-    },
-    "programme": {
-      "translation": "n. 节目, 节目单, 程序, 纲要, 大纲, 计划；vt. 规划, 拟...计划；vi. 安排节目, 编程序",
-      "source": "ecdict"
-    },
-    "pubs": {
-      "translation": "n. 小酒馆；酒吧（pub的复数）",
-      "source": "ecdict"
-    },
-    "pushing": {
-      "translation": "a. 有精力的, 富有进取心的, 莽撞的",
-      "source": "ecdict"
-    },
-    "question": {
-      "translation": "n. 问题, 询问；v. 询问, 审问, 怀疑；[计] 询问",
-      "source": "ecdict"
-    },
-    "quite": {
-      "translation": "adv. 相当, 完全, 十分",
-      "source": "ecdict"
-    },
-    "quiz": {
-      "translation": "n. 考查, 课堂测验, 恶作剧, 智力测验；vt. 戏弄, 考查, 恶作剧",
-      "source": "ecdict"
-    },
-    "reality": {
-      "translation": "n. 实在, 事实, 实体, 逼真；[法] 现实, 实在存在的事物, 实在性",
-      "source": "ecdict"
-    },
-    "really": {
-      "translation": "adv. 实际上, 真实地, 实在",
-      "source": "ecdict"
-    },
-    "recap": {
-      "translation": "vt. 翻新胎面；n. 翻新的轮胎",
-      "source": "ecdict"
-    },
-    "recently": {
-      "translation": "adv. 最近",
-      "source": "ecdict"
-    },
-    "recreational": {
-      "translation": "a. 消遣的, 娱乐的",
-      "source": "ecdict"
-    },
-    "reveal": {
-      "translation": "vt. 露出, 显示, 透露, 揭露, 泄露, (神)启示；n. 窗侧, 门侧",
-      "source": "ecdict"
-    },
-    "right": {
-      "translation": "n. 权利, 右边, 正义, 右派, 公正；a. 正确的, 对的, 恰当的, 正常的, 正直的, 正面的, 右方的；adv. 正确地, 以有利结果, 一直, 直接, 向右；vt. 扶直, 整理, 纠正, 伸冤, 使昭雪；vi. 恢复平衡；[计] 右, 权利",
-      "source": "ecdict"
-    },
-    "rise": {
-      "translation": "n. 上升, 增加, 上涨, 高地, 升高, 出现；vi. 升起, 起身, 起立, 上升, 上涨, 增长, 高耸, 起义, 浮现；vt. 使飞起",
-      "source": "ecdict"
-    },
-    "same": {
-      "translation": "a. 相同的, 同样的；pron. 相同的人(或事物)；adv. 同样地",
-      "source": "ecdict"
-    },
-    "sane": {
-      "translation": "a. 神智健全的, 稳健的, 没病的, 合理的；[医] 精神健全的",
-      "source": "ecdict"
-    },
-    "say": {
-      "translation": "vt. 说, 讲, 念, 说明, 指明；vi. 说, 讲；n. 意见, 发言权",
-      "source": "ecdict"
-    },
-    "saying": {
-      "translation": "n. 叙述, 话, 说, 言论",
-      "source": "ecdict"
-    },
-    "says": {
-      "translation": "v. 说（第三人称单数）",
-      "source": "ecdict"
-    },
-    "seeing": {
-      "translation": "n. 视觉, 视力, 观看；conj. 鉴于",
-      "source": "ecdict"
-    },
-    "seems": {
-      "translation": "v. 好像, 仿佛（ seem的第三人称单数 ）",
-      "source": "ecdict"
-    },
-    "service": {
-      "translation": "n. 服务, 贡献, 雇佣, 公职, 服役, 功劳, 仪式, 送达, 行政部门；vt. 保养, 维修；a. 武装部队的, 服务性的, 仆人的, 耐用的；[计] 服务, 业务",
-      "source": "ecdict"
-    },
-    "share": {
-      "translation": "n. 部分, 参与, 一份, 参股, 份额；vt. 均分, 分担, 分享, 分配, 共有；vi. 分享；[计] 共享; DOS外部命令:在网络或多工系统中提供文件共享；文件锁定及检测磁盘更动和对超过32MB硬盘分区的支持",
-      "source": "ecdict"
-    },
-    "should": {
-      "translation": "aux. 应该, 将要",
-      "source": "ecdict"
-    },
-    "six": {
-      "translation": "num. 六, 六个",
-      "source": "ecdict"
-    },
-    "smoking": {
-      "translation": "n. 抽烟, 冒烟；[医] 烟熏; 吸烟",
-      "source": "ecdict"
-    },
-    "so": {
-      "translation": "adv. 如此, 如是, 如...那样；conj. 所以, 因此；pron. 这样",
-      "source": "ecdict"
-    },
-    "sobriety": {
-      "translation": "n. 节制饮酒, 戒酒, 节制, 一本正经, 庄重",
-      "source": "ecdict"
+      "translation": "社交媒体",
+      "source": "context",
+      "context": "社交媒体",
+      "sentence": "But still, Millie thinks there's a pushback against self-optimisation content.",
+      "phrase": "social media"
     },
     "social": {
-      "translation": "a. 社会的, 群居的, 社交的；n. 联欢会",
-      "source": "ecdict"
-    },
-    "socialise": {
-      "translation": "vt. 使社会化, 使社会主义化, 使适合社会需要；vi. (美)(非正式)参加社交活动, 发生社交往来",
-      "source": "ecdict"
-    },
-    "some": {
-      "translation": "pron. 一些, 一部分, 若干；adv. 大约；a. 一些的, 少许的, 某一的",
-      "source": "ecdict"
-    },
-    "somebody": {
-      "translation": "n. 了不起的人, 大人物；pron. 有人, 某人",
-      "source": "ecdict"
-    },
-    "someone": {
-      "translation": "pron. 有人, 某人",
-      "source": "ecdict"
-    },
-    "something": {
-      "translation": "pron. 某事, 某物",
-      "source": "ecdict"
-    },
-    "start": {
-      "translation": "n. 惊起, 出发, 开端, 起点, 吃惊, 有利条件；vi. 开始, 出发, 启动, 跳起, 吃惊, 出现, 松动, 脱落, 起价, 参赛；vt. 使惊起, 开动, 发动, 启动, 开始, 创办, 提议, 使松动, 使脱落, 起用；[计] 起始",
-      "source": "ecdict"
-    },
-    "starting": {
-      "translation": "n. 开端, 开始, 出发, 起动, 开动；[机] 开动, 起动",
-      "source": "ecdict"
-    },
-    "step": {
-      "translation": "n. 步骤, 步, 步幅, 脚步声, 踏级, 步伐, 短距离, 步态, 手段, 等级；vt. 踏, 以步测量, 跨步, 使成阶梯状；vi. 跨步, 轻快地走, 跳舞, 踩, 踏上, 行走；[计] 步骤",
-      "source": "ecdict"
-    },
-    "still": {
-      "translation": "n. 蒸馏室, 寂静, 剧照；v. 蒸馏, (使)平静, (使)静止；a. 静止的, 不动的, 静寂的, 不起泡的, 静物摄影的；adv. 仍然, 更, 静止地；conj. 然而, 但是",
-      "source": "ecdict"
-    },
-    "story": {
-      "translation": "n. 故事, 小说, 传奇, 描述, 阅历, 经历, 层",
-      "source": "ecdict"
-    },
-    "strong": {
-      "translation": "a. 强壮的, 坚固的, 坚强的, 强烈的, 有力的, 优良的；adv. 强劲地, 有力地, 猛烈地",
-      "source": "ecdict"
-    },
-    "suggest": {
-      "translation": "vt. 提议, 建议, 促成, 暗示, 启发, 使人想起；[法] 建议, 提出, 提议",
-      "source": "ecdict"
-    },
-    "super": {
-      "translation": "n. 跑龙套角色, 冗员, 特级品, 特大号, 管理人；a. 上等的, 特大的, 超级的, 极好的, 十分的, 过分的；adv. 非常",
-      "source": "ecdict"
-    },
-    "surveys": {
-      "translation": "n. 调查（survey的复数）",
-      "source": "ecdict"
-    },
-    "swept": {
-      "translation": "sweep的过去式和过去分词",
-      "source": "ecdict"
-    },
-    "take": {
-      "translation": "vt. 拿, 取, 抓, 带领, 获得, 就座, 接受, 吃, 吸引, 采取, 乘, 需要, 花费；vi. 吃掉对方棋子, 抓住, 起作用, 依法获得财产；n. 拿, 取, 收成, 奏效",
-      "source": "ecdict"
-    },
-    "talk": {
-      "translation": "n. 谈话, 交谈, 会谈, 讲话, 演讲, 空谈, 谣言, 方言, 语言；vi. 讲话, 演讲, 说话, 谈话, 交流, 闲聊, 说闲话；vt. 讲, 说, 讨论, 谈论；[计] 对话类, 聊天",
-      "source": "ecdict"
-    },
-    "talking": {
-      "translation": "a. 说话的, 多嘴的, 富有表情的；n. 讲话, 谈论",
-      "source": "ecdict"
-    },
-    "test": {
-      "translation": "n. 测试, 试验, 化验, 检验, 考验, 甲壳；vt. 测试, 试验, 化验；vi. 接受测验, 进行测试",
-      "source": "ecdict"
-    },
-    "than": {
-      "translation": "conj. 比, 除...外；prep. 比",
-      "source": "ecdict"
-    },
-    "thank": {
-      "translation": "n. 谢意, 感谢；vt. 谢谢, 感谢",
-      "source": "ecdict"
-    },
-    "that": {
-      "translation": "a. 那, 那个；conj. 以致, 因为；pron. 那；adv. 那么, 那样",
-      "source": "ecdict"
-    },
-    "the": {
-      "translation": "art. 那",
-      "source": "ecdict"
-    },
-    "their": {
-      "translation": "pron. 他们的",
-      "source": "ecdict"
-    },
-    "them": {
-      "translation": "pron. 他们, 她们, 它们",
-      "source": "ecdict"
-    },
-    "themselves": {
-      "translation": "pron. 他们自己, 她们自己, 它们自己",
-      "source": "ecdict"
-    },
-    "then": {
-      "translation": "adv. 然后, 当时；conj. 然后, 当时；n. 那时",
-      "source": "ecdict"
-    },
-    "there": {
-      "translation": "adv. 在那里",
-      "source": "ecdict"
-    },
-    "theres": {
-      "translation": "[地名] [德国] 泰勒斯",
-      "source": "ecdict"
-    },
-    "they": {
-      "translation": "pron. 他们, 它们",
-      "source": "ecdict"
-    },
-    "things": {
-      "translation": "n. 所有物, 财产, 用具, 用品, 局面, 形势, 情况；[法] 物",
-      "source": "ecdict"
-    },
-    "think": {
-      "translation": "vt. 想, 考虑, 想起, 想像, 打算, 认为；vi. 思考, 料想；n. 想法；a. 思想的",
-      "source": "ecdict"
-    },
-    "thinks": {
-      "translation": "v. 想( think的第三人称单数 ); 思索; 以为; 认为",
-      "source": "ecdict"
-    },
-    "this": {
-      "translation": "pron. 这, 本；a. 这, 本；adv. 这么",
-      "source": "ecdict"
-    },
-    "three": {
-      "translation": "num. 三, 三个",
-      "source": "ecdict"
-    },
-    "time": {
-      "translation": "n. 时间, 时侯, 时机, 时期, 期限, 次数, 节拍, 暂停, 规定时间；vt. 测定...的时间, 记录...的时间, 计时, 定时；a. 时间的, 记时的, 定时的, 定期的, 分期的；[计] DOS内部命令:用于显示或设定系统的时间",
-      "source": "ecdict"
-    },
-    "to": {
-      "translation": "prep. 到, 向, 趋于；adv. 向前",
-      "source": "ecdict"
-    },
-    "today": {
-      "translation": "n. 今天, 当今, 现在；adv. 今天, 当今",
-      "source": "ecdict"
-    },
-    "too": {
-      "translation": "adv. 也, 非常, 太",
-      "source": "ecdict"
-    },
-    "touted": {
-      "translation": "v. 兜售( tout的过去式和过去分词 ); 招揽; 侦查; 探听赛马情报",
-      "source": "ecdict"
-    },
-    "touts": {
-      "translation": "n. 招徕( tout的名词复数 ); （音乐会、体育比赛等的）卖高价票的人; 侦查者; 探听赛马的情报；v. 兜售( tout的第三人称单数 ); 招揽; 侦查; 探听赛马情报",
-      "source": "ecdict"
-    },
-    "trend": {
-      "translation": "n. 趋势, 倾向, 走向；vi. 倾向, 转向；[计] 趋势",
-      "source": "ecdict"
-    },
-    "true": {
-      "translation": "a. 真实的, 正确的, 忠诚的, 可靠的, 纯粹的, 正式的；n. 真实, 准确；adv. 真实地, 准确地",
-      "source": "ecdict"
-    },
-    "try": {
-      "translation": "n. 尝试, 试验, 审理, 审判；vt. 试, 尝试, 试验, 考验, 审问, 提炼；vi. 尝试, 试图",
-      "source": "ecdict"
-    },
-    "uk": {
-      "translation": "n. 联合王国",
-      "source": "ecdict"
-    },
-    "unable": {
-      "translation": "a. 不能的, 不会的；[法] 无能力的, 无资格的, 没有办法的",
-      "source": "ecdict"
-    },
-    "unfortunately": {
-      "translation": "adv. 恐怕, 不幸的是",
-      "source": "ecdict"
-    },
-    "uni": {
-      "translation": "abbr. 印度联合新闻社（United News of India）",
-      "source": "ecdict"
-    },
-    "university": {
-      "translation": "n. 大学",
-      "source": "ecdict"
-    },
-    "until": {
-      "translation": "prep. 直到, 在...以前；conj. 直到...时, 在...以前",
-      "source": "ecdict"
-    },
-    "unusual": {
-      "translation": "a. 不寻常的, 罕见的, 与众不同的",
-      "source": "ecdict"
-    },
-    "up": {
-      "translation": "a. 向上的, 起床的, 涨的；adv. 向上, 上涨；prep. 在...上面, 向...的较高处",
-      "source": "ecdict"
-    },
-    "us": {
-      "translation": "pron. 我们；[经] 美国",
-      "source": "ecdict"
-    },
-    "use": {
-      "translation": "n. 使用, 习惯, 使用价值, 用法, 使用权；vt. 使用, 利用, 运用, 耗费；vi. 惯常",
-      "source": "ecdict"
-    },
-    "used": {
-      "translation": "a. 使用过的, 二手的, 习惯的",
-      "source": "ecdict"
-    },
-    "usual": {
-      "translation": "a. 平常的, 通常的",
-      "source": "ecdict"
-    },
-    "very": {
-      "translation": "a. 真正的, 恰好的, 十足的, 特有的；adv. 非常, 完全",
-      "source": "ecdict"
-    },
-    "videos": {
-      "translation": "n. 视频文件；影像资料（video的复数）",
-      "source": "ecdict"
-    },
-    "visit": {
-      "translation": "n. 拜访, 访问, 游览, 视察；vt. 拜访, 访问, 参观, 视察, 降临；vi. 访问, 参观, 闲谈",
-      "source": "ecdict"
-    },
-    "vocabulary": {
-      "translation": "n. 词汇(量), 词汇表；[计] 词表",
-      "source": "ecdict"
-    },
-    "want": {
-      "translation": "n. 需要的东西, 缺乏, 贫困, 需要；vt. 要, 希望, 应该, 缺少；vi. 生活困苦, 需要, 缺少",
-      "source": "ecdict"
-    },
-    "was": {
-      "translation": "be的过去式",
-      "source": "ecdict"
-    },
-    "way": {
-      "translation": "n. 路, 路线, 路途, 方法, 道路, 情形, 规模, 习惯, 行业, 方面；adv. 远远地, 非常",
-      "source": "ecdict"
-    },
-    "we": {
-      "translation": "pron. 我们",
-      "source": "ecdict"
-    },
-    "website": {
-      "translation": "n. 网站（全球资讯网的主机站）",
-      "source": "ecdict"
-    },
-    "weekend": {
-      "translation": "n. 周末, 周末休假",
-      "source": "ecdict"
-    },
-    "weeks": {
-      "translation": "n. 威克斯（姓氏）",
-      "source": "ecdict"
-    },
-    "weird": {
-      "translation": "a. 怪异的, 超自然的, 不可思议的；n. 命运, 预言, 符咒",
-      "source": "ecdict"
-    },
-    "well": {
-      "translation": "n. 井, 泉水, 源泉, 好；v. 涌出；a. 健康的, 良好的, 适宜的, 恰当的；adv. 很好地, 适当地, 好意地, 很, 完全；interj. 好啦",
-      "source": "ecdict"
-    },
-    "wellness": {
-      "translation": "n. 健康",
-      "source": "ecdict"
-    },
-    "were": {
-      "translation": "be的过去式",
-      "source": "ecdict"
-    },
-    "what": {
-      "translation": "pron. 什么；interj. 怎么, 多么；a. 什么的；adv. 到什么程度",
-      "source": "ecdict"
-    },
-    "when": {
-      "translation": "conj. 当...的时候；adv. 何时, 什么时候；pron. 什么时侯；n. 时间",
-      "source": "ecdict"
-    },
-    "where": {
-      "translation": "adv. 在哪里；pron. 哪里；n. 地点",
-      "source": "ecdict"
-    },
-    "which": {
-      "translation": "pron. 哪一个, 那一个",
-      "source": "ecdict"
-    },
-    "whilst": {
-      "translation": "conj. 当...的时候, 和...同时, 虽然, 只要, 然而, 而, 尽管",
-      "source": "ecdict"
-    },
-    "who": {
-      "translation": "pron. 谁",
-      "source": "ecdict"
-    },
-    "whole": {
-      "translation": "n. 全部, 全体, 整体, 完全之体系；a. 所有的, 完整的, 完全的, 纯粹的",
-      "source": "ecdict"
-    },
-    "why": {
-      "translation": "adv. 为什么；n. 原因, 理由",
-      "source": "ecdict"
-    },
-    "with": {
-      "translation": "prep. 和...在一起, 以, 由于",
-      "source": "ecdict"
-    },
-    "words": {
-      "translation": "n. 言语；话语；字（word的复数）",
-      "source": "ecdict"
-    },
-    "work": {
-      "translation": "n. 工作, 劳动, 职业, 行为, 功, 作品, 成果, 产品, 工程；vi. 工作, 劳动, 做, 运转, 起作用, 被加工；vt. 使工作, 使转动, 开动, 使用, 经营, 使逐渐变得, 造成",
-      "source": "ecdict"
-    },
-    "worksheet": {
-      "translation": "[计] 工作表；[化] 工作单; 加工单",
-      "source": "ecdict"
-    },
-    "world": {
-      "translation": "n. 世界, 地球, 宇宙, 万物, 世人, 人间, 领域, 世事, 世故, 社会生活, 大量；[法] 世界, 地球, 世人",
-      "source": "ecdict"
-    },
-    "worried": {
-      "translation": "a. 担心的, 闷闷不乐的",
-      "source": "ecdict"
-    },
-    "worrying": {
-      "translation": "a. 使人烦恼的, 忧虑重重的",
-      "source": "ecdict"
-    },
-    "would": {
-      "translation": "aux. 将, 愿意",
-      "source": "ecdict"
-    },
-    "wow": {
-      "translation": "interj. (非正式)哇；n. 巨大的成功, 轰动一时的成功, 十分有趣的事物；[计] WIn32上的Windows",
-      "source": "ecdict"
-    },
-    "yeah": {
-      "translation": "adv. (非正式)是, 是的",
-      "source": "ecdict"
-    },
-    "year": {
-      "translation": "n. 年, 年度, 年龄；[经] 年度",
-      "source": "ecdict"
-    },
-    "years": {
-      "translation": "n. 年代；岁月；年；年龄",
-      "source": "ecdict"
-    },
-    "yes": {
-      "translation": "adv. 是；n. 是, 同意；v. 同意",
-      "source": "ecdict"
-    },
-    "you": {
-      "translation": "pron. 你, 你们",
-      "source": "ecdict"
-    },
-    "youd": {
-      "translation": "n. (Youd)人名；(葡)约德",
-      "source": "ecdict"
-    },
-    "young": {
-      "translation": "a. 年轻的, 无经验的, 朝气蓬勃的；n. 青年们, 幼小动物, 崽",
-      "source": "ecdict"
-    },
-    "younger": {
-      "translation": "n. 年纪较小者；a. 较年轻的",
-      "source": "ecdict"
+      "translation": "社交媒体",
+      "source": "context",
+      "context": "社交媒体",
+      "sentence": "But still, Millie thinks there's a pushback against self-optimisation content.",
+      "phrase": "social media"
+    },
+    "socialmedia": {
+      "translation": "社交媒体",
+      "source": "context",
+      "context": "社交媒体",
+      "sentence": "But still, Millie thinks there's a pushback against self-optimisation content.",
+      "phrase": "social media"
     }
   }
 }
