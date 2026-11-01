@@ -115,6 +115,7 @@ html, body {
 .word-correct {
     color: #1e8e44;
     font-weight: 600;
+    position: relative; /* 行内翻译浮层的定位宿主 */
 }
 .current-word {
     background-color: #d1ecf1;
@@ -125,22 +126,31 @@ html, body {
     box-shadow: 0 0 5px rgba(209, 236, 241, 0.6);
 }
 
-/* 行内翻译：紧跟最新完成的单词，小字浅灰 */
+/* 行内翻译：宿主词上方的绝对定位浮层——脱离文档流，出现/消失零重排，
+   不推开后续文本（不影响下一个单词的输入视觉） */
 .gloss {
-    display: inline-block;
-    margin-left: 0.3rem;
+    position: absolute;
+    bottom: calc(100% + 2px);
+    left: 50%;
+    transform: translateX(-50%);
     padding: 0 0.45rem;
     border-radius: 4px;
-    background-color: #eef1f4;
+    background-color: #ffffff;
+    border: 1px solid #d5dbe1;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
     color: #5a6570;
-    font-size: 0.72em;
+    font-size: 0.7em;
     font-weight: 500;
     line-height: 1.5;
-    vertical-align: 0.1em;
-    white-space: normal;
+    white-space: nowrap;
+    max-width: 240px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    z-index: 10;
 }
 .gloss.ctx {
     background-color: #e7f4ff;
+    border-color: #b8dbf5;
     color: #14507f;
 }
 .gloss .gloss-tag {

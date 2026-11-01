@@ -170,6 +170,12 @@ def test_glossary_prompt_braces_are_single():
     assert '{"meaning"' in fetcher.GLOSSARY_PROMPT  # 示例本身是合法 JSON 片段
 
 
+def test_glossary_prompt_requires_concise_meaning():
+    """回归测试：meaning 必须有 ≤10 字的硬性约束（用户要求简洁翻译），
+    防止将来改提示词时把约束丢掉。"""
+    assert "10" in fetcher.GLOSSARY_PROMPT and "简洁" in fetcher.GLOSSARY_PROMPT
+
+
 # ---------------------------------------------------------------- ECDICT 表名兼容
 
 

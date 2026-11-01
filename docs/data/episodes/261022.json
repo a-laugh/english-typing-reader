@@ -161,249 +161,61 @@
       "definition": "simple and effective solution, usually one that doesn't exist in reality"
     }
   ],
-  "context_glossary": {
-    "struggle": {
-      "meaning": "努力克服；挣扎",
-      "sentence": "Phil, do you ever struggle to get a good night's sleep?"
-    },
-    "link": {
-      "meaning": "联系；关联",
-      "sentence": "Well, researchers have for a while been interested in the link between what we eat and how we sleep."
-    },
-    "long-term": {
-      "meaning": "长期的",
-      "sentence": "Scientists have done some long-term studies."
-    },
-    "pattern": {
-      "meaning": "模式；样式",
-      "sentence": "But then from our own research, where we evaluate food intakes in the lab, we see different... similar patterns, really."
-    },
-    "evaluate": {
-      "meaning": "评估；评价",
-      "sentence": "But then from our own research, where we evaluate food intakes in the lab, we see different... similar patterns, really."
-    },
-    "fibre": {
-      "meaning": "纤维",
-      "sentence": "Diets that are higher in fibre, which we find in fruits and vegetables and whole grains, and lower in saturated fats, which we find in more plant-based types of foods, are associated with more deep sleep at night."
-    },
-    "saturated fats": {
-      "meaning": "饱和脂肪",
-      "sentence": "Saturated fats are fats mainly found in meat and dairy products that are thought to be bad for our health."
-    },
-    "deep sleep": {
-      "meaning": "深度睡眠",
-      "sentence": "A deep sleep is when you are more fully asleep and your body is able to rest."
-    },
-    "nutrients": {
-      "meaning": "营养素",
-      "sentence": "Well, it's less about particular foods and more about particular nutrients."
-    },
-    "diet": {
-      "meaning": "饮食；饮食结构",
-      "sentence": "So, diets that look more like a Mediterranean pattern – higher in fruits and vegetables, whole grains, lower in animal-based foods, lower in sugar."
-    },
-    "supplements": {
-      "meaning": "补充剂；补充物",
-      "sentence": "And you may also see adverts for supplements that claim to improve sleep."
-    },
-    "continuous": {
-      "meaning": "连续的；持续的",
-      "sentence": "And of course, you know, Marie-Pierre and I know that there is no such magic bullet, unfortunately. And if there was, I'm sure, you know, we would be... we would be doing very well for ourselves."
-    },
-    "magic bullet": {
-      "meaning": "灵丹妙药；简单有效的解决方案",
-      "sentence": "But Allie argues that experts know there's no magic bullet to help you sleep."
-    },
-    "recap": {
-      "meaning": "回顾；总结",
-      "sentence": "OK. Well, now I think it's time to find out the answer to your quiz question, Georgie."
-    },
-    "worksheet": {
-      "meaning": "工作表；练习册",
-      "sentence": "Once again, our six minutes are up, but don't forget you can test what you've learned with the worksheet on our website."
-    },
-    "bbclearningenglish.com": {
-      "meaning": "BBC Learning English 网站",
-      "sentence": "Go to bbclearningenglish.com."
-    }
-  },
+  "context_glossary": {},
   "dict": {
-    "struggle": {
-      "translation": "努力克服；挣扎",
-      "source": "context",
-      "context": "努力克服；挣扎",
-      "sentence": "Phil, do you ever struggle to get a good night's sleep?"
-    },
-    "link": {
-      "translation": "联系；关联",
-      "source": "context",
-      "context": "联系；关联",
-      "sentence": "Well, researchers have for a while been interested in the link between what we eat and how we sleep."
-    },
-    "long-term": {
-      "translation": "长期的",
-      "source": "context",
-      "context": "长期的",
-      "sentence": "Scientists have done some long-term studies."
-    },
-    "pattern": {
-      "translation": "模式；样式",
-      "source": "context",
-      "context": "模式；样式",
-      "sentence": "But then from our own research, where we evaluate food intakes in the lab, we see different... similar patterns, really."
-    },
-    "evaluate": {
-      "translation": "评估；评价",
-      "source": "context",
-      "context": "评估；评价",
-      "sentence": "But then from our own research, where we evaluate food intakes in the lab, we see different... similar patterns, really."
-    },
-    "fibre": {
-      "translation": "纤维",
-      "source": "context",
-      "context": "纤维",
-      "sentence": "Diets that are higher in fibre, which we find in fruits and vegetables and whole grains, and lower in saturated fats, which we find in more plant-based types of foods, are associated with more deep sleep at night."
+    "nutrients": {
+      "translation": "important substances that all lifeforms need to survive and be healthy",
+      "source": "official"
     },
     "saturated fats": {
-      "translation": "饱和脂肪",
-      "source": "context",
-      "context": "饱和脂肪",
-      "sentence": "Saturated fats are fats mainly found in meat and dairy products that are thought to be bad for our health."
+      "translation": "fats that are thought to be worse for our health, often found in meat and dairy",
+      "source": "official"
     },
     "deep sleep": {
-      "translation": "深度睡眠",
-      "source": "context",
-      "context": "深度睡眠",
-      "sentence": "A deep sleep is when you are more fully asleep and your body is able to rest."
-    },
-    "nutrients": {
-      "translation": "营养素",
-      "source": "context",
-      "context": "营养素",
-      "sentence": "Well, it's less about particular foods and more about particular nutrients."
-    },
-    "diet": {
-      "translation": "饮食；饮食结构",
-      "source": "context",
-      "context": "饮食；饮食结构",
-      "sentence": "So, diets that look more like a Mediterranean pattern – higher in fruits and vegetables, whole grains, lower in animal-based foods, lower in sugar."
+      "translation": "stage of the sleep cycle when the brain is at its slowest and the body can rest and repair",
+      "source": "official"
     },
     "supplements": {
-      "translation": "补充剂；补充物",
-      "source": "context",
-      "context": "补充剂；补充物",
-      "sentence": "And you may also see adverts for supplements that claim to improve sleep."
-    },
-    "continuous": {
-      "translation": "连续的；持续的",
-      "source": "context",
-      "context": "连续的；持续的",
-      "sentence": "And of course, you know, Marie-Pierre and I know that there is no such magic bullet, unfortunately. And if there was, I'm sure, you know, we would be... we would be doing very well for ourselves."
-    },
-    "magic bullet": {
-      "translation": "灵丹妙药；简单有效的解决方案",
-      "source": "context",
-      "context": "灵丹妙药；简单有效的解决方案",
-      "sentence": "But Allie argues that experts know there's no magic bullet to help you sleep."
-    },
-    "recap": {
-      "translation": "回顾；总结",
-      "source": "context",
-      "context": "回顾；总结",
-      "sentence": "OK. Well, now I think it's time to find out the answer to your quiz question, Georgie."
-    },
-    "worksheet": {
-      "translation": "工作表；练习册",
-      "source": "context",
-      "context": "工作表；练习册",
-      "sentence": "Once again, our six minutes are up, but don't forget you can test what you've learned with the worksheet on our website."
-    },
-    "bbclearningenglish.com": {
-      "translation": "BBC Learning English 网站",
-      "source": "context",
-      "context": "BBC Learning English 网站",
-      "sentence": "Go to bbclearningenglish.com."
+      "translation": "tablets and other consumables that contain particular nutrients that you might not get in your everyday diet",
+      "source": "official"
     },
     "feed information": {
       "translation": "give lots of information continuously",
       "source": "official"
     },
-    "longterm": {
-      "translation": "长期的",
-      "source": "context",
-      "context": "长期的",
-      "sentence": "Scientists have done some long-term studies.",
-      "phrase": "long-term"
+    "magic bullet": {
+      "translation": "simple and effective solution, usually one that doesn't exist in reality",
+      "source": "official"
     },
     "fats": {
-      "translation": "饱和脂肪",
-      "source": "context",
-      "context": "饱和脂肪",
-      "sentence": "Saturated fats are fats mainly found in meat and dairy products that are thought to be bad for our health.",
+      "translation": "fats that are thought to be worse for our health, often found in meat and dairy",
+      "source": "official",
       "phrase": "saturated fats"
     },
     "saturated": {
-      "translation": "饱和脂肪",
-      "source": "context",
-      "context": "饱和脂肪",
-      "sentence": "Saturated fats are fats mainly found in meat and dairy products that are thought to be bad for our health.",
+      "translation": "fats that are thought to be worse for our health, often found in meat and dairy",
+      "source": "official",
       "phrase": "saturated fats"
     },
     "saturatedfats": {
-      "translation": "饱和脂肪",
-      "source": "context",
-      "context": "饱和脂肪",
-      "sentence": "Saturated fats are fats mainly found in meat and dairy products that are thought to be bad for our health.",
+      "translation": "fats that are thought to be worse for our health, often found in meat and dairy",
+      "source": "official",
       "phrase": "saturated fats"
     },
     "deep": {
-      "translation": "深度睡眠",
-      "source": "context",
-      "context": "深度睡眠",
-      "sentence": "A deep sleep is when you are more fully asleep and your body is able to rest.",
+      "translation": "stage of the sleep cycle when the brain is at its slowest and the body can rest and repair",
+      "source": "official",
       "phrase": "deep sleep"
     },
     "deepsleep": {
-      "translation": "深度睡眠",
-      "source": "context",
-      "context": "深度睡眠",
-      "sentence": "A deep sleep is when you are more fully asleep and your body is able to rest.",
+      "translation": "stage of the sleep cycle when the brain is at its slowest and the body can rest and repair",
+      "source": "official",
       "phrase": "deep sleep"
     },
     "sleep": {
-      "translation": "深度睡眠",
-      "source": "context",
-      "context": "深度睡眠",
-      "sentence": "A deep sleep is when you are more fully asleep and your body is able to rest.",
+      "translation": "stage of the sleep cycle when the brain is at its slowest and the body can rest and repair",
+      "source": "official",
       "phrase": "deep sleep"
-    },
-    "bullet": {
-      "translation": "灵丹妙药；简单有效的解决方案",
-      "source": "context",
-      "context": "灵丹妙药；简单有效的解决方案",
-      "sentence": "But Allie argues that experts know there's no magic bullet to help you sleep.",
-      "phrase": "magic bullet"
-    },
-    "magic": {
-      "translation": "灵丹妙药；简单有效的解决方案",
-      "source": "context",
-      "context": "灵丹妙药；简单有效的解决方案",
-      "sentence": "But Allie argues that experts know there's no magic bullet to help you sleep.",
-      "phrase": "magic bullet"
-    },
-    "magicbullet": {
-      "translation": "灵丹妙药；简单有效的解决方案",
-      "source": "context",
-      "context": "灵丹妙药；简单有效的解决方案",
-      "sentence": "But Allie argues that experts know there's no magic bullet to help you sleep.",
-      "phrase": "magic bullet"
-    },
-    "bbclearningenglishcom": {
-      "translation": "BBC Learning English 网站",
-      "source": "context",
-      "context": "BBC Learning English 网站",
-      "sentence": "Go to bbclearningenglish.com.",
-      "phrase": "bbclearningenglish.com"
     },
     "feed": {
       "translation": "give lots of information continuously",
@@ -419,6 +231,21 @@
       "translation": "give lots of information continuously",
       "source": "official",
       "phrase": "feed information"
+    },
+    "bullet": {
+      "translation": "simple and effective solution, usually one that doesn't exist in reality",
+      "source": "official",
+      "phrase": "magic bullet"
+    },
+    "magic": {
+      "translation": "simple and effective solution, usually one that doesn't exist in reality",
+      "source": "official",
+      "phrase": "magic bullet"
+    },
+    "magicbullet": {
+      "translation": "simple and effective solution, usually one that doesn't exist in reality",
+      "source": "official",
+      "phrase": "magic bullet"
     },
     "15": {
       "translation": "fifteen",
@@ -612,6 +439,10 @@
       "translation": "vt. 包含, 容纳, 控制；vi. 自制",
       "source": "ecdict"
     },
+    "continuous": {
+      "translation": "a. 连续的, 继续的, 连续不断的；[计] 连续的",
+      "source": "ecdict"
+    },
     "correct": {
       "translation": "a. 正确的, 合适的；vt. 改正, 订正",
       "source": "ecdict"
@@ -630,6 +461,10 @@
     },
     "detail": {
       "translation": "n. 细节, 详情；vt. 详述, 选派；vi. 画详图；[计] 详细数据",
+      "source": "ecdict"
+    },
+    "diet": {
+      "translation": "n. 日常饮食, 议会；vt. 照规定饮食；vi. 忌食",
       "source": "ecdict"
     },
     "diets": {
@@ -670,6 +505,10 @@
     },
     "english": {
       "translation": "n. 英语；a. 英文的, 英国人的",
+      "source": "ecdict"
+    },
+    "evaluate": {
+      "translation": "vt. 评估, 评价, 赋值",
       "source": "ecdict"
     },
     "even": {
@@ -718,6 +557,10 @@
     },
     "feeling": {
       "translation": "n. 摸, 触觉, 知觉, 感觉, 情绪, 同情；a. 有同情心的, 有感觉的, 仁慈的, 动人的",
+      "source": "ecdict"
+    },
+    "fibre": {
+      "translation": "n. 纤维, 构造, 纤维制品；[化] 纤维",
       "source": "ecdict"
     },
     "find": {
@@ -988,8 +831,16 @@
       "translation": "a. 有限制的, 有限的, 有限责任的；n. 特别快车",
       "source": "ecdict"
     },
+    "link": {
+      "translation": "n. 环, 连结物, 链接, 火把；vt. 连结, 联合, 挽住；vi. 连接起来；[计] 连接, 链路",
+      "source": "ecdict"
+    },
     "long": {
       "translation": "a. 长的, 长久的, 冗长的, 做多头的；vi. 渴望, 热望, 极想；adv. 长久, 始终；n. 长时间, 长信号, 长整型；[计] 长, 长整型",
+      "source": "ecdict"
+    },
+    "longterm": {
+      "translation": "adj. 长期的；时间持续很长的；(资本,借贷等的)涉及较长期限的；[网络] 长期借款比例；在全式；成都龙台家具有限公司",
       "source": "ecdict"
     },
     "look": {
@@ -1160,6 +1011,10 @@
       "translation": "n. 一项(或条、点), 个别项目, 详细说明；a. 特别的, 独有的, 挑剔的, 详尽的",
       "source": "ecdict"
     },
+    "pattern": {
+      "translation": "n. 模范, 典型, 式样, 样品, 图案, 格调, 模式；vt. 模仿, 仿造, 以图案装饰；vi. 形成图案；[计] 模式, 图案",
+      "source": "ecdict"
+    },
     "patterns": {
       "translation": "n. 模式（pattern的复数形式）",
       "source": "ecdict"
@@ -1222,6 +1077,10 @@
     },
     "really": {
       "translation": "adv. 实际上, 真实地, 实在",
+      "source": "ecdict"
+    },
+    "recap": {
+      "translation": "vt. 翻新胎面；n. 翻新的轮胎",
       "source": "ecdict"
     },
     "refers": {
@@ -1354,6 +1213,10 @@
     },
     "stay": {
       "translation": "n. 停留, 逗留, 制止, 延缓, 停止, 支柱, 支撑物, 支索；vt. 制止, 延缓, 坚持, 支持, 支撑, 用支索固定；vi. 停留, 逗留, 暂停, 坚持, 中止",
+      "source": "ecdict"
+    },
+    "struggle": {
+      "translation": "n. 斗争, 努力, 奋斗；vi. 努力, 奋斗, 挣扎",
       "source": "ecdict"
     },
     "studies": {
@@ -1602,6 +1465,10 @@
     },
     "with": {
       "translation": "prep. 和...在一起, 以, 由于",
+      "source": "ecdict"
+    },
+    "worksheet": {
+      "translation": "[计] 工作表；[化] 工作单; 加工单",
       "source": "ecdict"
     },
     "world": {

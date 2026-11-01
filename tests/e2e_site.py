@@ -83,6 +83,19 @@ def main() -> int:
         check("烘焙音频文件在架", (ROOT / "docs" / "data" / "audio" / "hi.mp3").is_file())
         gloss = page.text_content("#dialog-display .gloss")
         check("行内翻译紧跟完成的词", gloss and any(k in gloss for k in ("你好", "喂", "嗨", "问候")), gloss)
+        # 浮层在宿主词上方 + 绝对定位（零布局位移的前提）
+        overlay = page.evaluate("""() => {
+            const g = document.querySelector('#dialog-display .gloss');
+            if (!g) return null;
+            const host = g.parentElement;
+            return {
+                pos: getComputedStyle(g).position,
+                above: g.getBoundingClientRect().bottom <= host.getBoundingClientRect().top + 1,
+                text: g.textContent,
+            };
+        }""")
+        check("翻译浮层显示在单词上方且绝对定位",
+              overlay and overlay["pos"] == "absolute" and overlay["above"], str(overlay))
 
         # 打错 → 字母标红、原地不动；重打正确 → 变绿前进（词 "Neil." → neil）
         page.keyboard.type("x")
@@ -92,11 +105,23 @@ def main() -> int:
         page.keyboard.type("n")
         page.wait_for_function("() => !document.querySelector('.letter-bad')", timeout=3000)
         check("原地重打正确后红变绿", True)
+        # 零位移专项：完词瞬间（浮层出现+整区重绘）后续文本位置必须纹丝不动。
+        # 用最后一个回合的 bbox 对比（浮层若在文档流中会把它推下去）
+        last_turn_before = page.eval_on_selector("#dialog-display .turn:last-of-type", """el => {
+            const r = el.getBoundingClientRect();
+            return [Math.round(r.x * 10), Math.round(r.y * 10)];
+        }""")
         page.keyboard.type("eil")
         page.wait_for_function(
             "() => document.querySelectorAll('.word-correct').length === 2", timeout=3000
         )
         check("第二词完成后累计 2 词标绿（标点自动通过）", True)
+        last_turn_after = page.eval_on_selector("#dialog-display .turn:last-of-type", """el => {
+            const r = el.getBoundingClientRect();
+            return [Math.round(r.x * 10), Math.round(r.y * 10)];
+        }""")
+        check("完词出现浮层时后续文本零位移", last_turn_before == last_turn_after,
+              f"before={last_turn_before} after={last_turn_after}")
         gloss_count = page.eval_on_selector_all("#dialog-display .gloss", "els => els.length")
         check("行内翻译只跟随最新完成的词（唯一）", gloss_count == 1, f"gloss 数={gloss_count}")
         page.screenshot(path=str(SHOTS / "t3_typing.png"))
@@ -179,6 +204,35 @@ def main() -> int:
             "() => document.querySelectorAll('.word-correct').length === 2", timeout=5000
         )
         check("手动选择 261029 自动续读到之前的进度", True)
+
+        print("== T7 词内符号需键入（撇号词） ==")
+        ep_data = json.loads((ROOT / "docs" / "data" / "episodes" / "261029.json").read_text(encoding="utf-8"))
+        words = []
+        for t in ep_data["turns"]:
+            words.extend(t["text"].split())
+        idx, target = next(
+            (i, w) for i, w in enumerate(words) if "'" in w or "\u2019" in w
+        )
+        # 复刻前端规则：剥离首尾标点，词内符号保留
+        seq = target.strip(".,!?;:\"'’ ")
+        page.evaluate(
+            f"() => {{ localStorage.setItem('typelearning:last_episode', '261029'); "
+            f"localStorage.setItem('typelearning:progress:261029', "
+            f"JSON.stringify({{v: 1, word_index: {idx}}})); }}"
+        )
+        page.reload()
+        page.wait_for_function(
+            "() => document.querySelectorAll('.word-correct').length === " + str(idx), timeout=5000
+        )
+        shown = page.text_content(".current-word")
+        check(f"进度定位到撇号词 {target!r}", target.strip(".,!?;: ") in (shown or ""), f"shown={shown!r}")
+        # 用直引号键入（前端归一化应接受曲引号 ’）
+        page.click("#dialog-display")
+        page.keyboard.type(seq.replace("\u2019", "'"))
+        page.wait_for_function(
+            "() => document.querySelectorAll('.word-correct').length === " + str(idx + 1), timeout=5000
+        )
+        check("含撇号词逐字符键入完成（符号归一化生效）", True)
 
         browser.close()
 

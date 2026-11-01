@@ -43,6 +43,22 @@ function cleanWord(word) {
     return word.toLowerCase().replace(/[^a-z0-9]/g, "");
 }
 
+// 键入序列：剥离首尾非字母数字字符（句子标点自动通过），保留词内符号
+// （we've 的撇号、six-minute 的连字符都需要键入）
+function typingSequence(word) {
+    let s = 0, e = word.length - 1;
+    while (s <= e && !/[a-z0-9]/i.test(word[s])) s++;
+    while (e >= s && !/[a-z0-9]/i.test(word[e])) e--;
+    return word.slice(s, e + 1);
+}
+
+// 字符归一化：字母小写化；曲引号/破折号归一为键盤字符（BBC 文本用 ’ 而键盘是 '）
+function normalizeChar(ch) {
+    if (/[a-zA-Z]/.test(ch)) return ch.toLowerCase();
+    const map = { "\u2019": "'", "\u2018": "'", "\u201C": '"', "\u201D": '"', "\u2013": "-", "\u2014": "-" };
+    return map[ch] || ch;
+}
+
 function showNotice(message) {
     noticeBar.textContent = message;
     noticeBar.hidden = false;
@@ -271,7 +287,17 @@ function lookupWord(token) {
     return dict[token.toLowerCase()] || dict[cleanWord(token)] || null;
 }
 
-// 行内翻译元素：紧跟最新完成的单词；语境层带 📖，官方层带「官方」小标
+// 简洁释义：取首个义项（按 ；/; 切分），中文 ~12 字符、英文 ~20 字符截断
+function conciseTranslation(text) {
+    if (!text) return "";
+    const first = String(text).split(/[；;]/)[0].trim();
+    const isAscii = /^[\x20-\x7F]+$/.test(first);
+    const limit = isAscii ? 20 : 12;
+    return first.length > limit ? first.slice(0, limit) + "…" : first;
+}
+
+// 行内翻译元素：显示在宿主词上方的浮层（绝对定位，零布局位移）；
+// 语境层带 📖，官方层带「官方」小标
 function buildGloss(token) {
     const entry = lookupWord(token);
     const span = document.createElement("span");
@@ -282,7 +308,7 @@ function buildGloss(token) {
     }
     if (entry.source === "context") {
         span.className = "gloss ctx";
-        span.textContent = `📖 ${entry.context || entry.translation}`;
+        span.textContent = `📖 ${conciseTranslation(entry.context || entry.translation)}`;
         return span;
     }
     span.className = "gloss";
@@ -292,7 +318,7 @@ function buildGloss(token) {
         tag.textContent = "官方";
         span.appendChild(tag);
     }
-    span.appendChild(document.createTextNode(entry.translation || entry.phrase || ""));
+    span.appendChild(document.createTextNode(conciseTranslation(entry.translation || entry.phrase || "")));
     return span;
 }
 
@@ -355,18 +381,19 @@ function renderDialog() {
                 span.className = "word-correct";
                 span.textContent = w;
             } else if (gi === currentWordIndex) {
-                // 当前词按字符拆分：字母位映射清洗序列（需键入），标点自动通过（不需敲）
+                // 当前词按字符拆分：键入序列 = 剥离首尾标点后的连续子串（含词内符号），
+                // 首尾标点自动通过（不需敲）
                 span.className = "current-word";
-                let pos = 0;
-                for (const ch of w) {
+                let start = 0, end = w.length - 1;
+                while (start <= end && !/[a-z0-9]/i.test(w[start])) start++;
+                while (end >= start && !/[a-z0-9]/i.test(w[end])) end--;
+                for (let ci = 0; ci < w.length; ci++) {
                     const chSpan = document.createElement("span");
-                    if (/[a-z0-9]/i.test(ch)) {
-                        chSpan.textContent = ch;
-                        chSpan.dataset.pos = String(pos);
+                    chSpan.textContent = w[ci];
+                    if (ci >= start && ci <= end) {
+                        chSpan.dataset.pos = String(ci - start);
                         letterSpans.push(chSpan);
-                        pos++;
                     } else {
-                        chSpan.textContent = ch;
                         chSpan.className = "ltr-punct";
                     }
                     span.appendChild(chSpan);
@@ -377,7 +404,8 @@ function renderDialog() {
             para.appendChild(span);
             para.appendChild(document.createTextNode(" "));
             if (gi === glossWordIndex) {
-                para.appendChild(buildGloss(w));
+                // 浮层插在宿主词 span 内部：绝对定位显示在词上方，不影响后续文本布局
+                span.appendChild(buildGloss(w));
             }
         });
         row.appendChild(para);
@@ -518,9 +546,9 @@ function completeCurrentWord() {
 function handleLetter(ch) {
     if (!currentEpisode || originalWords.length === 0) return;
     if (currentWordIndex >= originalWords.length) return;
-    const target = cleanWord(originalWords[currentWordIndex]);
+    const target = typingSequence(originalWords[currentWordIndex]);
     if (!target) {
-        // 清洗后为空的词元（纯标点等）：直接跳过，不可打
+        // 键入序列为空的词元（纯标点等）：直接跳过，不可打
         currentWordIndex++;
         currentWordPos = 0;
         renderDialog();
@@ -529,7 +557,7 @@ function handleLetter(ch) {
     }
     if (currentWordPos >= target.length) return; // 完词重绘间隙的迟到按键
 
-    if (ch === target[currentWordPos]) {
+    if (normalizeChar(ch) === normalizeChar(target[currentWordPos])) {
         const span = letterSpans[currentWordPos];
         if (span) {
             span.classList.remove("letter-bad");
@@ -554,9 +582,10 @@ document.addEventListener("keydown", (e) => {
         e.preventDefault(); // 防页面滚动
         return;
     }
-    if (e.key.length !== 1 || !/[a-z0-9]/i.test(e.key)) return;
+    // 任意可打印单字符（含词内符号 ' - 等）都参与比对，敲错同样标红+错误音
+    if (e.key.length !== 1 || e.key < " " || e.key === "\x7f") return;
     e.preventDefault();
-    handleLetter(e.key.toLowerCase());
+    handleLetter(e.key);
 });
 
 // 点击页面任意处重新聚焦捕获输入（手机软键盘）；选择器与链接除外
