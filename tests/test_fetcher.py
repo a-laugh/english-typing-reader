@@ -147,6 +147,80 @@ def test_parse_json_block_garbage_raises():
         fetcher._parse_json_block("完全不是结构化输出的文本")
 
 
+def test_glossary_prompt_braces_are_single():
+    """回归测试（根因）：GLOSSARY_PROMPT 是普通字符串，历史上误写成 f-string 的
+    {{ 转义，模型照抄双层花括号输出，导致两轮线上解析失败
+    （Expecting property name / unhashable type: 'dict'）。"""
+    assert "{{" not in fetcher.GLOSSARY_PROMPT
+    assert "}}" not in fetcher.GLOSSARY_PROMPT
+    assert '{"meaning"' in fetcher.GLOSSARY_PROMPT  # 示例本身是合法 JSON 片段
+
+
+# ------------------------------------------------- GLM 调用链（本地模拟服务）
+
+def _mock_glm_server(content: str):
+    """起本地 HTTP 服务模拟 GLM chat/completions，POST 一律返回固定 content。
+
+    走真实 requests.post → 解析 全链路，无需 API key。
+    """
+    import threading
+    from http.server import BaseHTTPRequestHandler, HTTPServer
+
+    class Handler(BaseHTTPRequestHandler):
+        def do_POST(self):
+            body = json.dumps(
+                {"choices": [{"message": {"content": content}}]}
+            ).encode("utf-8")
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.send_header("Content-Length", str(len(body)))
+            self.end_headers()
+            self.wfile.write(body)
+
+        def log_message(self, *args):
+            pass
+
+    server = HTTPServer(("127.0.0.1", 0), Handler)
+    threading.Thread(target=server.serve_forever, daemon=True).start()
+    return server
+
+
+def test_generate_context_glossary_output_variants(monkeypatch):
+    """用模拟 GLM 服务验证：历史实测出现过的四种输出形态都能解析成功。"""
+    expected = {"hi": {"meaning": "打招呼", "sentence": "Hi Neil."}}
+    cases = {
+        "标准 JSON": '{"hi": {"meaning": "打招呼", "sentence": "Hi Neil."}}',
+        "单引号 Python repr（实测 2026-11-01）": "{'hi': {'meaning': '打招呼', 'sentence': 'Hi Neil.'}}",
+        "双层花括号照抄畸形示例（实测 2026-11-01）": '{{"hi": {"meaning": "打招呼", "sentence": "Hi Neil."}}}',
+        "双层花括号+单引号": "{{'hi': {'meaning': '打招呼', 'sentence': 'Hi Neil.'}}}",
+        "围栏+解说文字": '好的，结果：```json\n{"hi": {"meaning": "打招呼", "sentence": "Hi Neil."}}\n```请查收',
+    }
+    for name, content in cases.items():
+        server = _mock_glm_server(content)
+        try:
+            monkeypatch.setattr(
+                fetcher, "LLM_BASE_URL", f"http://127.0.0.1:{server.server_address[1]}/v1"
+            )
+            result = fetcher.generate_context_glossary("Hi Neil. How are you?", "test-key")
+            assert result == expected, f"{name}: {result}"
+        finally:
+            server.shutdown()
+            server.server_close()
+
+
+def test_generate_context_glossary_garbage_degrades(monkeypatch):
+    """完全无法解析时返回 {}（降级不炸构建），重试后仍失败。"""
+    server = _mock_glm_server("我觉得这个对白没什么难词，不需要词表。")
+    try:
+        monkeypatch.setattr(
+            fetcher, "LLM_BASE_URL", f"http://127.0.0.1:{server.server_address[1]}/v1"
+        )
+        assert fetcher.generate_context_glossary("Hi Neil.", "test-key") == {}
+    finally:
+        server.shutdown()
+        server.server_close()
+
+
 def test_bake_word_dict_priority_and_alias():
     episode = {
         "transcript": "The grid supplies power. Life-saving machines inhabit hospitals.",

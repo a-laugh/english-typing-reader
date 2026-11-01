@@ -256,11 +256,12 @@ GLOSSARY_PROMPT = """你是英语学习材料的编辑。下面是一期 BBC 6 M
 请找出其中所有「非常用」英文单词与短语（初学者已会的冠词/介词/基础词如 the、and、go、big 不需要），
 并给出每个词在这篇对白语境中的含义。
 
-仅输出 JSON 对象，不要输出任何其他文字，格式：
-{{
-  "单词": {{"meaning": "在该语境中的中文含义", "sentence": "该词所在的对白句子（英文原文，保留该词）"}},
-  "the grid": {{"meaning": "（国家或地区的）电网", "sentence": "..."}}
-}}
+仅输出一个 JSON 对象（最外层是一对花括号，键为单词、值为对象，全部用双引号），
+不要输出任何其他文字。示例格式：
+{
+  "单词": {"meaning": "在该语境中的中文含义", "sentence": "该词所在的对白句子（英文原文，保留该词）"},
+  "the grid": {"meaning": "（国家或地区的）电网", "sentence": "..."}
+}
 
 对白：
 """
@@ -316,7 +317,8 @@ def _parse_json_block(text: str):
             pass
         try:
             return ast.literal_eval(candidate)
-        except (ValueError, SyntaxError):
+        except (ValueError, SyntaxError, TypeError):
+            # TypeError：如「以 dict 为 key」的字面量（unhashable type: 'dict'，实测出现过）
             pass
         raise ValueError("无法解析为 JSON/Python 字面量")
 
@@ -324,7 +326,12 @@ def _parse_json_block(text: str):
     candidates = [text]
     start, end = text.find("{"), text.rfind("}")
     if start != -1 and end > start:
-        candidates.append(text[start : end + 1])
+        sliced = text[start : end + 1]
+        candidates.append(sliced)
+        # 防御：模型偶尔照抄示例里的双层花括号 {{...}}（历史 bug），
+        # 外层就被解析成「以 dict 为 key」而报 unhashable type: 'dict'
+        if sliced.startswith("{{") and sliced.endswith("}}"):
+            candidates.append(sliced[1:-1])
     last_error = None
     for candidate in candidates:
         try:
