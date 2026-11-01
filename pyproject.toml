@@ -1,5 +1,5 @@
 [project]
-name = "TypLearning"
+name = "TypeLearning"
 version = "0.1.0"
 description = "英语打字阅读练习 Web 应用：逐词打字跟读，带发音与中文翻译"
 readme = "README.md"
