@@ -1,0 +1,70 @@
+name: Fetch 6 Minute English episodes
+
+# 每周日北京时间 05:00 抓取最近 30 天 BBC 6 Minute English（每周四更新一期，
+# 在架约 4-5 期），烘焙数据后提交回仓库。
+# GitHub Pages（Deploy from branch: main /docs）随之自动更新站点。
+on:
+  schedule:
+    - cron: "0 21 * * 6" # UTC 周六 21:00 = 北京时间周日 05:00（GitHub cron 可能延迟数分钟到一小时）
+  workflow_dispatch: # 支持手动触发
+
+permissions:
+  contents: write # 需要 push 数据提交
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Sync dependencies
+        run: uv sync --dev
+
+      # 解析器回归（fixtures 为 BBC 真实页面快照）：BBC 改版时在这里红，防止静默抓空
+      - name: Run parser tests
+        run: uv run pytest tests/test_fetcher.py -q
+
+      # ECDICT 离线词典（约 137MB 解压后）：按 Release tag 缓存，命中则免下载
+      - name: Cache ECDICT sqlite
+        uses: actions/cache@v4
+        with:
+          path: ecdict.sqlite
+          key: ecdict-sqlite-28
+
+      - name: Download ECDICT (on cache miss)
+        run: |
+          if [ ! -f ecdict.sqlite ]; then
+            curl -fsSL --retry 3 -o /tmp/ecdict.zip \
+              https://github.com/skywind3000/ECDICT/releases/download/1.0.28/ecdict-sqlite-28.zip
+            # 该 zip 内是单个 stardict.db（实测），统一更名为 fetcher 探测的 ecdict.sqlite
+            unzip -o /tmp/ecdict.zip -d /tmp/ecdict
+            mv /tmp/ecdict/stardict.db ecdict.sqlite
+            rm -rf /tmp/ecdict /tmp/ecdict.zip
+            test -s ecdict.sqlite
+          fi
+
+      # GLM_API_KEY 未配置时 fetcher 自动跳过语境词表（只用官方词汇表 + ECDICT）。
+      # LLM_MODEL / LLM_BASE_URL 为可选仓库 Variables（Actions 的 vars 不会自动成为
+      # 环境变量，必须显式透传；未配置时为空串，fetcher 侧用默认值兜底）
+      - name: Fetch episodes and bake data
+        env:
+          GLM_API_KEY: ${{ secrets.GLM_API_KEY }}
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
+          LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
+        run: uv run python fetcher.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet docs/data; then
+            echo "无新内容，跳过提交"
+          else
+            git add docs/data
+            git commit -m "data: update 6 Minute English episodes ($(date -u +%F))"
+            git push
+          fi

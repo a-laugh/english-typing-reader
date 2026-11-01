@@ -1,69 +1,92 @@
 # TypeLearning（键学）
 
-一个英语打字阅读练习 Web 应用：上传英文文本后逐词打字跟读，输入正确的单词即自动前进，同时提供单词发音和中文翻译，并自动保存学习进度。
+通过**键盘打字**学英语的静态站点：内容自动来自**最近 30 天的 BBC 6 Minute English**，
+逐词打字跟读，输完一个单词（空格/标点结尾）即播放发音并显示释义——优先给出**官方词汇表
+与 AI 语境释义**，普通词给出词典中文释义。学习进度保存在各自浏览器的 localStorage，
+**多人使用互不干扰**，无需注册。
 
-## 技术栈
+## 架构
 
-- **后端**：Python 3.11+ / FastAPI / uvicorn
-- **前端**：原生 HTML + CSS + JavaScript（无框架）
-- **依赖服务**：
-  - **发音**：[edge-tts](https://pypi.org/project/edge-tts/)（微软 Edge TTS，国内可直连，首选）→ [gTTS](https://pypi.org/project/gTTS/)（Google TTS，备用）；生成的音频按单词缓存为 MP3
-  - **翻译**：ECDICT 本地离线词典（77 万词条，查词零网络、毫秒级，首选）→ 有道词典接口（国内快，免 key）→ [googletrans](https://pypi.org/project/googletrans/)（Google 翻译，兜底）
-
-## 功能
-
-- 上传 `.txt` / `.md` 英文文本，或从已上传列表中选择
-- 逐词打字练习：当前单词高亮显示，已完成的标绿；输入错误时输入框变红提示
-- 单词输入正确后自动播放发音，并在侧边栏显示中文翻译
-- 学习进度自动保存（每完成一个单词及关闭页面时），下次进入可从上次位置继续
-- 长文本窗口化渲染（当前词前后各 30 词），并自动滚动跟随
-- 响应式布局，适配手机屏幕
-
-## 快速开始
-
-使用 [uv](https://docs.astral.sh/uv/) 运行：
-
-```bash
-uv run uvicorn main:app --reload
+```
+GitHub Actions（每周日 05:00 北京时间）                    用户浏览器（GitHub Pages）
+┌──────────────────────────────────────┐                ┌─────────────────────────────┐
+│ fetcher.py                           │   git push     │ docs/（纯静态，无后端）      │
+│  1. 抓 BBC 栏目页 → 最近 30 天剧集     │ ───────────►   │  选剧集 → 打字 → 完词即      │
+│  2. 解析 transcript + 官方词汇表       │  docs/data/    │   发音(Web Speech API)      │
+│  3. GLM 生成全篇语境词表（可选）        │  自动更新      │   + 查烘焙词典显示释义       │
+│  4. ECDICT 补全逐词中文释义            │                │  进度存 localStorage        │
+│  5. 清理过期剧集（滚动 30 天窗口）      │                └─────────────────────────────┘
+└──────────────────────────────────────┘
 ```
 
-或使用 pip：
+所有重活（抓取、LLM、词典）都在构建期完成；站点运行时**零后端、零额外网络请求**，
+发音用浏览器内置 TTS，释义查本地 JSON——国内访问 GitHub Pages 即可用。
+
+## 开启站点（一次性）
+
+1. 仓库 **Settings → Pages** → Source 选 *Deploy from a branch* → 分支 `main`、目录 `/docs` → Save。
+2. （可选，语境释义需要）**Settings → Secrets and variables → Actions → 「Secrets」标签页 → New repository secret**：
+   - 名称 `GLM_API_KEY`，值为 [智谱开放平台](https://open.bigmodel.cn/) 的 API Key。
+   - 注意是**仓库级 Secret**：不要放 Environment secret（workflow 未声明 `environment:`，读不到），
+     更不要放 Variables（明文不加密，日志不打码）。
+   - 默认调用 `glm-4-flash`（免费），如需换模型：在**「Variables」标签页**新建仓库变量 `LLM_MODEL`（明文配置放这里）。
+   - 配置后手动 Run 一次 workflow，日志开头 `LLM：开` 即表示 key 已生效（`LLM：关` = 未配置或未读到）。
+3. 手动触发一次 **Actions → Fetch 6 Minute English episodes → Run workflow** 验证。
+
+不配置 GLM key 也能正常构建：释义退化为「官方词汇表 + ECDICT 词典」。
+
+## 本地开发与验证
 
 ```bash
-pip install fastapi uvicorn gtts googletrans==4.0.0rc1 aiofiles python-multipart requests
-uvicorn main:app --reload
+uv sync --dev
+uv run pytest tests/ -q        # 解析器与滚动窗口测试（fixture 为真实页面快照）
+
+# 本地构建数据（国内网络需走代理；根目录放 ecdict.sqlite 可补全词典释义）
+HTTPS_PROXY=http://127.0.0.1:20172 uv run python fetcher.py --no-llm
+
+# 起静态服务浏览
+python3 -m http.server -d docs 8000   # 打开 http://127.0.0.1:8000
 ```
 
-然后浏览器打开 <http://127.0.0.1:8000>。
+浏览器端到端测试（可选，需要 Playwright + Chromium；国内下载二进制用 npmmirror 镜像）：
 
-## API 概览
+```bash
+pip install playwright
+PLAYWRIGHT_DOWNLOAD_HOST=https://npmmirror.com/mirrors/playwright/ python -m playwright install chromium
+python3 -m http.server -d docs 8901 &
+python tests/e2e_site.py     # 21 项 GUI 检查 + 滚动窗口兼容专测，截图见 tests/e2e-screenshots/
+```
 
-| 方法 | 路径 | 说明 |
-| --- | --- | --- |
-| GET | `/` | 主页面 |
-| POST | `/api/upload_text/` | 上传文本文件 |
-| GET | `/api/list_texts/` | 列出已上传文本 |
-| GET | `/api/get_text/{filename}` | 获取文本内容 |
-| POST | `/api/save_progress/` | 保存学习进度 |
-| GET | `/api/load_progress/` | 加载学习进度 |
-| GET | `/api/pronounce/{word}` | 单词发音（MP3 音频流） |
-| GET | `/api/translate/{word}` | 单词中文翻译 |
+`fetcher.py [--days N] [--no-llm]`：抓取最近 N 天剧集、烘焙 `docs/data/episodes/`
+（`index.json` + 每期一个 JSON），并清理过期文件。产物是确定性的——没有新剧集时
+不产生 git diff，Actions 不会空提交。
+
+## 数据与隐私设计
+
+- **滚动 30 天窗口**：站点只保留最近 30 天的剧集（BBC 每周四更新一期，在架约 4–5 期），
+  过期剧集的数据文件由构建自动删除；Actions 每周日凌晨跑一次（也支持手动触发）。
+- **本地存储兼容**：进度按剧集存于 localStorage（`typelearning:progress:{id}`，带版本号）。
+  启动时会校验「继续上次」的剧集是否仍在架：已下线则提示并自动清理对应进度（GC），
+  存储不会无限膨胀；剧集列表会标注「剩 N 天」与已完成 ✓。
+- **多用户隔离**：没有任何服务器状态，不同浏览器/设备各自独立进度。
 
 ## 目录说明
 
 ```
-main.py           # FastAPI 后端（文本管理、进度、发音、翻译）
-static/           # 前端页面与脚本
-ecdict.sqlite     # 本地离线英汉词典（需单独下载，已忽略）
-texts/            # 上传的文本存放目录（运行时生成，已忽略）
-audio_cache/      # 发音 MP3 缓存（运行时生成，已忽略）
-progress.json     # 学习进度文件（运行时生成，已忽略）
-translation_cache.json  # 在线翻译结果缓存（运行时生成，已忽略）
+fetcher.py                    # 构建脚本（抓取/解析/GLM/ECDICT/清理，默认 30 天窗口）
+docs/                         # GitHub Pages 站点（index.html + script.js）
+docs/data/episodes/           # 构建产物：index.json + 每期剧集 JSON（含烘焙词典）
+.github/workflows/            # 每周构建 workflow（周日北京 05:00 + 手动触发）
+tests/                        # pytest（fixtures 为 BBC 真实页面快照）
+ecdict.sqlite                 # 本地离线词典（gitignore；Actions 中按 Release 缓存下载）
 ```
 
 ## 注意事项
 
-- 词典文件 `ecdict.sqlite`（132MB）不随仓库分发，放在项目根目录即可自动加载；缺失时翻译自动回退到在线方式。可从 [ECDICT](https://github.com/skywind3000/ECDICT) releases 获取。
-- 发音首选微软 edge-tts（走国内可达的 Bing 节点），首次生成后缓存到 `audio_cache/`，重复词毫秒级。
-- 有道词典接口为免 key 的网页接口，googletrans 为非官方库——它们只作为本地词典未命中时的回退，失效不影响主流程。
-- 为避免国内访问 Google 慢导致卡顿，所有在线请求都有超时保护，且发音/翻译在前端并行请求并预取下一词。
+- `docs/data/` 中的 transcript 与词汇表来自 BBC 公开页面，本仓库公开转发仅作个人学习用途；
+  若将来需要扩大使用范围，建议把数据拆到 private 仓库（代码已隔离在 `docs/data/` 单一目录，
+  迁移时只需改 workflow 的 push 目标与 Pages 来源）。
+- BBC 页面改版会导致解析失败（测试有真实页面快照兜底，Actions 日志会显示具体原因），
+  修复时对照 `tests/fixtures/` 更新解析器即可。
+- 站点发音依赖浏览器语音合成：Chrome / Edge / Safari 桌面端均有离线英文语音；
+  若浏览器无英文语音，页面会提示且不影响打字与释义。

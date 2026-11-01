@@ -1,8 +1,7 @@
 .history
-__pycache__
-audio_cache
+__pycache__/
+.pytest_cache/
 ecdict.sqlite
-progress.json
-translation_cache.json
-texts
 .venv
+.zcode/
+tests/e2e-screenshots/
