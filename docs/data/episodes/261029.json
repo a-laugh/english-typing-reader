@@ -185,8 +185,229 @@
       "definition": "blocking the Sun's light and heat"
     }
   ],
-  "context_glossary": {},
+  "context_glossary": {
+    "hot summer": {
+      "meaning": "炎热的夏天",
+      "sentence": "So, Neil, we've just had a really hot summer in the UK."
+    },
+    "air conditioning": {
+      "meaning": "空调",
+      "sentence": "Did you have air conditioning in your house?"
+    },
+    "serious side": {
+      "meaning": "严重的一面",
+      "sentence": "But there is a really serious side to this."
+    },
+    "heat records": {
+      "meaning": "高温记录",
+      "sentence": "Heat records continue to be broken around the world."
+    },
+    "cope": {
+      "meaning": "应对",
+      "sentence": "Have you been using air conditioning more to cope?"
+    },
+    "experts": {
+      "meaning": "专家",
+      "sentence": "Experts are predicting that ten new air conditioning units will be installed every second for the next 30 years."
+    },
+    "quiz question": {
+      "meaning": "问答问题",
+      "sentence": "So, modern air conditioning was invented in 1902, but what was it originally used for?"
+    },
+    "climatologist": {
+      "meaning": "气候学家",
+      "sentence": "Dr Radhika Khosla, an expert in climatology, told BBC World Service's The Climate Question"
+    },
+    "civilisation": {
+      "meaning": "文明",
+      "sentence": "he said it was air conditioning. And there are so many large parts of the world where we would not be able to inhabit if we did not have air conditioning."
+    },
+    "inhabitant": {
+      "meaning": "居民",
+      "sentence": "It literally stops people from dying. Yes, and she makes the point that there are many parts of the world that we would not be able to inhabit – that means live in – without this technology."
+    },
+    "downsides": {
+      "meaning": "缺点",
+      "sentence": "No. There are some serious downsides."
+    },
+    "energy-intensive": {
+      "meaning": "能源密集型",
+      "sentence": "Passive cooling is when we take steps to provide thermal comfort that are not energy intensive."
+    },
+    "solar gain": {
+      "meaning": "太阳能获取",
+      "sentence": "Some of the most important ones are first to cut solar gain, which is through things like shading."
+    },
+    "vicious cycle": {
+      "meaning": "恶性循环",
+      "sentence": "And we reach a vicious cycle, because then you're in a world where it's getting warmer. We're using air conditioning to be able to protect ourselves. That's leading to more emissions and more energy use. That is then making the world warmer. And then we need more air conditioning."
+    },
+    "vicious circle": {
+      "meaning": "恶性循环",
+      "sentence": "And Radhika calls this a vicious cycle. A vicious cycle, or a vicious circle, is where a solution to a problem actually makes it worse, which means you have to do more and that makes the problem even worse still."
+    },
+    "emissions": {
+      "meaning": "排放",
+      "sentence": "We're going to see emissions rise."
+    },
+    "power cuts": {
+      "meaning": "停电",
+      "sentence": "If people are trying to use more electricity than it can cope with, then the grid can collapse – you get power cuts, which is when you can't get any electricity."
+    },
+    "sustainable energy": {
+      "meaning": "可持续能源",
+      "sentence": "Radhika also talks about the importance of using sustainable energy to power the air conditioning that we still will need."
+    },
+    "wild guess": {
+      "meaning": "大胆猜测",
+      "sentence": "I said c) to clean air. But you know what? I'm feeling pretty confident now."
+    },
+    "recap": {
+      "meaning": "回顾",
+      "sentence": "Let's recap the vocabulary we learned in this programme"
+    },
+    "distribute": {
+      "meaning": "分配",
+      "sentence": "The grid is the system or network that distributes electricity across towns, cities, and countries."
+    },
+    "worksheet": {
+      "meaning": "练习册",
+      "sentence": "Test what you've learned with the worksheet on our website, bbclearningenglish.com."
+    }
+  },
   "dict": {
+    "hot summer": {
+      "translation": "炎热的夏天",
+      "source": "context",
+      "context": "炎热的夏天",
+      "sentence": "So, Neil, we've just had a really hot summer in the UK."
+    },
+    "air conditioning": {
+      "translation": "空调",
+      "source": "context",
+      "context": "空调",
+      "sentence": "Did you have air conditioning in your house?"
+    },
+    "serious side": {
+      "translation": "严重的一面",
+      "source": "context",
+      "context": "严重的一面",
+      "sentence": "But there is a really serious side to this."
+    },
+    "heat records": {
+      "translation": "高温记录",
+      "source": "context",
+      "context": "高温记录",
+      "sentence": "Heat records continue to be broken around the world."
+    },
+    "cope": {
+      "translation": "应对",
+      "source": "context",
+      "context": "应对",
+      "sentence": "Have you been using air conditioning more to cope?"
+    },
+    "experts": {
+      "translation": "专家",
+      "source": "context",
+      "context": "专家",
+      "sentence": "Experts are predicting that ten new air conditioning units will be installed every second for the next 30 years."
+    },
+    "quiz question": {
+      "translation": "问答问题",
+      "source": "context",
+      "context": "问答问题",
+      "sentence": "So, modern air conditioning was invented in 1902, but what was it originally used for?"
+    },
+    "climatologist": {
+      "translation": "气候学家",
+      "source": "context",
+      "context": "气候学家",
+      "sentence": "Dr Radhika Khosla, an expert in climatology, told BBC World Service's The Climate Question"
+    },
+    "civilisation": {
+      "translation": "文明",
+      "source": "context",
+      "context": "文明",
+      "sentence": "he said it was air conditioning. And there are so many large parts of the world where we would not be able to inhabit if we did not have air conditioning."
+    },
+    "inhabitant": {
+      "translation": "居民",
+      "source": "context",
+      "context": "居民",
+      "sentence": "It literally stops people from dying. Yes, and she makes the point that there are many parts of the world that we would not be able to inhabit – that means live in – without this technology."
+    },
+    "downsides": {
+      "translation": "缺点",
+      "source": "context",
+      "context": "缺点",
+      "sentence": "No. There are some serious downsides."
+    },
+    "energy-intensive": {
+      "translation": "能源密集型",
+      "source": "context",
+      "context": "能源密集型",
+      "sentence": "Passive cooling is when we take steps to provide thermal comfort that are not energy intensive."
+    },
+    "solar gain": {
+      "translation": "太阳能获取",
+      "source": "context",
+      "context": "太阳能获取",
+      "sentence": "Some of the most important ones are first to cut solar gain, which is through things like shading."
+    },
+    "vicious cycle": {
+      "translation": "恶性循环",
+      "source": "context",
+      "context": "恶性循环",
+      "sentence": "And we reach a vicious cycle, because then you're in a world where it's getting warmer. We're using air conditioning to be able to protect ourselves. That's leading to more emissions and more energy use. That is then making the world warmer. And then we need more air conditioning."
+    },
+    "vicious circle": {
+      "translation": "恶性循环",
+      "source": "context",
+      "context": "恶性循环",
+      "sentence": "And Radhika calls this a vicious cycle. A vicious cycle, or a vicious circle, is where a solution to a problem actually makes it worse, which means you have to do more and that makes the problem even worse still."
+    },
+    "emissions": {
+      "translation": "排放",
+      "source": "context",
+      "context": "排放",
+      "sentence": "We're going to see emissions rise."
+    },
+    "power cuts": {
+      "translation": "停电",
+      "source": "context",
+      "context": "停电",
+      "sentence": "If people are trying to use more electricity than it can cope with, then the grid can collapse – you get power cuts, which is when you can't get any electricity."
+    },
+    "sustainable energy": {
+      "translation": "可持续能源",
+      "source": "context",
+      "context": "可持续能源",
+      "sentence": "Radhika also talks about the importance of using sustainable energy to power the air conditioning that we still will need."
+    },
+    "wild guess": {
+      "translation": "大胆猜测",
+      "source": "context",
+      "context": "大胆猜测",
+      "sentence": "I said c) to clean air. But you know what? I'm feeling pretty confident now."
+    },
+    "recap": {
+      "translation": "回顾",
+      "source": "context",
+      "context": "回顾",
+      "sentence": "Let's recap the vocabulary we learned in this programme"
+    },
+    "distribute": {
+      "translation": "分配",
+      "source": "context",
+      "context": "分配",
+      "sentence": "The grid is the system or network that distributes electricity across towns, cities, and countries."
+    },
+    "worksheet": {
+      "translation": "练习册",
+      "source": "context",
+      "context": "练习册",
+      "sentence": "Test what you've learned with the worksheet on our website, bbclearningenglish.com."
+    },
     "life-saving": {
       "translation": "used to stop people from dying",
       "source": "official"
@@ -199,10 +420,6 @@
       "translation": "the system or network that distributes electricity across different locations",
       "source": "official"
     },
-    "vicious cycle": {
-      "translation": "situation where one problem leads to another problem, which then makes the first problem worse, leading to a chain of events where each cause and effect makes the original problem even worse",
-      "source": "official"
-    },
     "passive cooling": {
       "translation": "making a building cooler without using a lot of power",
       "source": "official"
@@ -210,6 +427,237 @@
     "shading": {
       "translation": "blocking the Sun's light and heat",
       "source": "official"
+    },
+    "hot": {
+      "translation": "炎热的夏天",
+      "source": "context",
+      "context": "炎热的夏天",
+      "sentence": "So, Neil, we've just had a really hot summer in the UK.",
+      "phrase": "hot summer"
+    },
+    "hotsummer": {
+      "translation": "炎热的夏天",
+      "source": "context",
+      "context": "炎热的夏天",
+      "sentence": "So, Neil, we've just had a really hot summer in the UK.",
+      "phrase": "hot summer"
+    },
+    "summer": {
+      "translation": "炎热的夏天",
+      "source": "context",
+      "context": "炎热的夏天",
+      "sentence": "So, Neil, we've just had a really hot summer in the UK.",
+      "phrase": "hot summer"
+    },
+    "air": {
+      "translation": "空调",
+      "source": "context",
+      "context": "空调",
+      "sentence": "Did you have air conditioning in your house?",
+      "phrase": "air conditioning"
+    },
+    "airconditioning": {
+      "translation": "空调",
+      "source": "context",
+      "context": "空调",
+      "sentence": "Did you have air conditioning in your house?",
+      "phrase": "air conditioning"
+    },
+    "conditioning": {
+      "translation": "空调",
+      "source": "context",
+      "context": "空调",
+      "sentence": "Did you have air conditioning in your house?",
+      "phrase": "air conditioning"
+    },
+    "serious": {
+      "translation": "严重的一面",
+      "source": "context",
+      "context": "严重的一面",
+      "sentence": "But there is a really serious side to this.",
+      "phrase": "serious side"
+    },
+    "seriousside": {
+      "translation": "严重的一面",
+      "source": "context",
+      "context": "严重的一面",
+      "sentence": "But there is a really serious side to this.",
+      "phrase": "serious side"
+    },
+    "side": {
+      "translation": "严重的一面",
+      "source": "context",
+      "context": "严重的一面",
+      "sentence": "But there is a really serious side to this.",
+      "phrase": "serious side"
+    },
+    "heat": {
+      "translation": "高温记录",
+      "source": "context",
+      "context": "高温记录",
+      "sentence": "Heat records continue to be broken around the world.",
+      "phrase": "heat records"
+    },
+    "heatrecords": {
+      "translation": "高温记录",
+      "source": "context",
+      "context": "高温记录",
+      "sentence": "Heat records continue to be broken around the world.",
+      "phrase": "heat records"
+    },
+    "records": {
+      "translation": "高温记录",
+      "source": "context",
+      "context": "高温记录",
+      "sentence": "Heat records continue to be broken around the world.",
+      "phrase": "heat records"
+    },
+    "question": {
+      "translation": "问答问题",
+      "source": "context",
+      "context": "问答问题",
+      "sentence": "So, modern air conditioning was invented in 1902, but what was it originally used for?",
+      "phrase": "quiz question"
+    },
+    "quiz": {
+      "translation": "问答问题",
+      "source": "context",
+      "context": "问答问题",
+      "sentence": "So, modern air conditioning was invented in 1902, but what was it originally used for?",
+      "phrase": "quiz question"
+    },
+    "quizquestion": {
+      "translation": "问答问题",
+      "source": "context",
+      "context": "问答问题",
+      "sentence": "So, modern air conditioning was invented in 1902, but what was it originally used for?",
+      "phrase": "quiz question"
+    },
+    "energyintensive": {
+      "translation": "能源密集型",
+      "source": "context",
+      "context": "能源密集型",
+      "sentence": "Passive cooling is when we take steps to provide thermal comfort that are not energy intensive.",
+      "phrase": "energy-intensive"
+    },
+    "gain": {
+      "translation": "太阳能获取",
+      "source": "context",
+      "context": "太阳能获取",
+      "sentence": "Some of the most important ones are first to cut solar gain, which is through things like shading.",
+      "phrase": "solar gain"
+    },
+    "solar": {
+      "translation": "太阳能获取",
+      "source": "context",
+      "context": "太阳能获取",
+      "sentence": "Some of the most important ones are first to cut solar gain, which is through things like shading.",
+      "phrase": "solar gain"
+    },
+    "solargain": {
+      "translation": "太阳能获取",
+      "source": "context",
+      "context": "太阳能获取",
+      "sentence": "Some of the most important ones are first to cut solar gain, which is through things like shading.",
+      "phrase": "solar gain"
+    },
+    "cycle": {
+      "translation": "恶性循环",
+      "source": "context",
+      "context": "恶性循环",
+      "sentence": "And we reach a vicious cycle, because then you're in a world where it's getting warmer. We're using air conditioning to be able to protect ourselves. That's leading to more emissions and more energy use. That is then making the world warmer. And then we need more air conditioning.",
+      "phrase": "vicious cycle"
+    },
+    "vicious": {
+      "translation": "恶性循环",
+      "source": "context",
+      "context": "恶性循环",
+      "sentence": "And we reach a vicious cycle, because then you're in a world where it's getting warmer. We're using air conditioning to be able to protect ourselves. That's leading to more emissions and more energy use. That is then making the world warmer. And then we need more air conditioning.",
+      "phrase": "vicious cycle"
+    },
+    "viciouscycle": {
+      "translation": "恶性循环",
+      "source": "context",
+      "context": "恶性循环",
+      "sentence": "And we reach a vicious cycle, because then you're in a world where it's getting warmer. We're using air conditioning to be able to protect ourselves. That's leading to more emissions and more energy use. That is then making the world warmer. And then we need more air conditioning.",
+      "phrase": "vicious cycle"
+    },
+    "circle": {
+      "translation": "恶性循环",
+      "source": "context",
+      "context": "恶性循环",
+      "sentence": "And Radhika calls this a vicious cycle. A vicious cycle, or a vicious circle, is where a solution to a problem actually makes it worse, which means you have to do more and that makes the problem even worse still.",
+      "phrase": "vicious circle"
+    },
+    "viciouscircle": {
+      "translation": "恶性循环",
+      "source": "context",
+      "context": "恶性循环",
+      "sentence": "And Radhika calls this a vicious cycle. A vicious cycle, or a vicious circle, is where a solution to a problem actually makes it worse, which means you have to do more and that makes the problem even worse still.",
+      "phrase": "vicious circle"
+    },
+    "cuts": {
+      "translation": "停电",
+      "source": "context",
+      "context": "停电",
+      "sentence": "If people are trying to use more electricity than it can cope with, then the grid can collapse – you get power cuts, which is when you can't get any electricity.",
+      "phrase": "power cuts"
+    },
+    "power": {
+      "translation": "停电",
+      "source": "context",
+      "context": "停电",
+      "sentence": "If people are trying to use more electricity than it can cope with, then the grid can collapse – you get power cuts, which is when you can't get any electricity.",
+      "phrase": "power cuts"
+    },
+    "powercuts": {
+      "translation": "停电",
+      "source": "context",
+      "context": "停电",
+      "sentence": "If people are trying to use more electricity than it can cope with, then the grid can collapse – you get power cuts, which is when you can't get any electricity.",
+      "phrase": "power cuts"
+    },
+    "energy": {
+      "translation": "可持续能源",
+      "source": "context",
+      "context": "可持续能源",
+      "sentence": "Radhika also talks about the importance of using sustainable energy to power the air conditioning that we still will need.",
+      "phrase": "sustainable energy"
+    },
+    "sustainable": {
+      "translation": "可持续能源",
+      "source": "context",
+      "context": "可持续能源",
+      "sentence": "Radhika also talks about the importance of using sustainable energy to power the air conditioning that we still will need.",
+      "phrase": "sustainable energy"
+    },
+    "sustainableenergy": {
+      "translation": "可持续能源",
+      "source": "context",
+      "context": "可持续能源",
+      "sentence": "Radhika also talks about the importance of using sustainable energy to power the air conditioning that we still will need.",
+      "phrase": "sustainable energy"
+    },
+    "guess": {
+      "translation": "大胆猜测",
+      "source": "context",
+      "context": "大胆猜测",
+      "sentence": "I said c) to clean air. But you know what? I'm feeling pretty confident now.",
+      "phrase": "wild guess"
+    },
+    "wild": {
+      "translation": "大胆猜测",
+      "source": "context",
+      "context": "大胆猜测",
+      "sentence": "I said c) to clean air. But you know what? I'm feeling pretty confident now.",
+      "phrase": "wild guess"
+    },
+    "wildguess": {
+      "translation": "大胆猜测",
+      "source": "context",
+      "context": "大胆猜测",
+      "sentence": "I said c) to clean air. But you know what? I'm feeling pretty confident now.",
+      "phrase": "wild guess"
     },
     "lifesaving": {
       "translation": "used to stop people from dying",
@@ -225,21 +673,6 @@
       "translation": "the system or network that distributes electricity across different locations",
       "source": "official",
       "phrase": "the grid"
-    },
-    "cycle": {
-      "translation": "situation where one problem leads to another problem, which then makes the first problem worse, leading to a chain of events where each cause and effect makes the original problem even worse",
-      "source": "official",
-      "phrase": "vicious cycle"
-    },
-    "vicious": {
-      "translation": "situation where one problem leads to another problem, which then makes the first problem worse, leading to a chain of events where each cause and effect makes the original problem even worse",
-      "source": "official",
-      "phrase": "vicious cycle"
-    },
-    "viciouscycle": {
-      "translation": "situation where one problem leads to another problem, which then makes the first problem worse, leading to a chain of events where each cause and effect makes the original problem even worse",
-      "source": "official",
-      "phrase": "vicious cycle"
     },
     "cooling": {
       "translation": "making a building cooler without using a lot of power",
@@ -257,7 +690,7 @@
       "phrase": "passive cooling"
     },
     "30": {
-      "translation": "thirty",
+      "translation": "[电话] 希腊共和国电话区位码",
       "source": "ecdict"
     },
     "6": {
@@ -265,7 +698,7 @@
       "source": "ecdict"
     },
     "a": {
-      "translation": "第一个字母 A; 一个; 第一的\\r；art. [计] 累加器, 加法器, 地址, 振幅, 模拟, 区域, 面积, 汇编, 组件, 异步",
+      "translation": "第一个字母 A; 一个; 第一的；art. [计] 累加器, 加法器, 地址, 振幅, 模拟, 区域, 面积, 汇编, 组件, 异步",
       "source": "ecdict"
     },
     "able": {
@@ -290,10 +723,6 @@
     },
     "again": {
       "translation": "adv. 再一次, 又, 到原处",
-      "source": "ecdict"
-    },
-    "air": {
-      "translation": "n. 空气, 旋律, 态度；vt. 晾, 使通风, 夸耀",
       "source": "ecdict"
     },
     "all": {
@@ -425,7 +854,7 @@
       "source": "ecdict"
     },
     "c": {
-      "translation": "[计] 调用, 访问, 呼叫, 电容, 进位, 通道, 字符, 清除, 常数, 控制, 周期；[化] 碳的化学符号; 胞苷",
+      "translation": "[计] 调用, 访问, 呼叫；电容, 进位, 通道, 字符, 清除, 常数, 控制, 周期；C 程序设计语言；[化] 碳的化学符号; 胞苷",
       "source": "ecdict"
     },
     "calls": {
@@ -444,16 +873,8 @@
       "translation": "n. 运送者, 邮递员, 带菌者；[计] 载波",
       "source": "ecdict"
     },
-    "circle": {
-      "translation": "n. 圆周, 社交圈, 循环, 范围；vt. 围着, 环绕；vi. 盘旋, 循环",
-      "source": "ecdict"
-    },
     "cities": {
       "translation": "n. 城市（city的复数）",
-      "source": "ecdict"
-    },
-    "civilisation": {
-      "translation": "n. 文明, 文明世界, 文化, 开化, 教化",
       "source": "ecdict"
     },
     "clean": {
@@ -480,10 +901,6 @@
       "translation": "n. 公司, 友伴, 交往, 连队, 朋友, 一群；vt. 陪伴；vi. 交往",
       "source": "ecdict"
     },
-    "conditioning": {
-      "translation": "n. 调节, 条件作用, 整修；[计] 调节; 调整",
-      "source": "ecdict"
-    },
     "confident": {
       "translation": "a. 有信心的, 有把握的",
       "source": "ecdict"
@@ -500,16 +917,16 @@
       "translation": "n. 冷却器；[化] 冷却器",
       "source": "ecdict"
     },
-    "cope": {
-      "translation": "vi. 竞争, 应付；n. 长袍",
-      "source": "ecdict"
-    },
     "correct": {
       "translation": "a. 正确的, 合适的；vt. 改正, 订正",
       "source": "ecdict"
     },
     "could": {
       "translation": "aux. 可以, 能",
+      "source": "ecdict"
+    },
+    "couldnt": {
+      "translation": "modalv. 会；（表示知道如何做）懂得",
       "source": "ecdict"
     },
     "countries": {
@@ -528,10 +945,6 @@
       "translation": "n. 切口, 割伤, 降低, 切, 割, 砍, 削, 伤口, 削减, 缩短, 删节, 通路；a. 经切割的, 缩减的；vt. 切, 割, 减少, 刺痛, 开辟, 雕刻, 删节, 缩短, 停止, 排斥, 切断, 关, 显出；vi. 切, 割, 砍, 刺痛, 相交, 抄近路, 剪辑；[计] 剪切",
       "source": "ecdict"
     },
-    "cuts": {
-      "translation": "n. （分摊到的）份额；切口；近路（cut的复数）",
-      "source": "ecdict"
-    },
     "deal": {
       "translation": "n. 交易, 协定, 数量, 买卖, 松木板；vi. 处理, 应付, 做生意；vt. 分配, 发牌, 给予；[计] 发牌",
       "source": "ecdict"
@@ -548,6 +961,10 @@
       "translation": "do的过去式",
       "source": "ecdict"
     },
+    "didnt": {
+      "translation": "short. did not",
+      "source": "ecdict"
+    },
     "died": {
       "translation": "v. 死亡, 消逝（die的过去式和过去分词）",
       "source": "ecdict"
@@ -562,10 +979,6 @@
     },
     "down": {
       "translation": "a. 向下的；adv. 下, 下去, 降下；prep. 往下, 沿着；n. 丘陵, 软毛, 开阔的高地；[计] 向下, 退下命令",
-      "source": "ecdict"
-    },
-    "downsides": {
-      "translation": "(downside 的复数) n. 底侧；下降趋势",
       "source": "ecdict"
     },
     "dr": {
@@ -588,16 +1001,8 @@
       "translation": "n. 电, 电流, 电学, 热情, 电力供应；[化] 电学; 电",
       "source": "ecdict"
     },
-    "emissions": {
-      "translation": "n. 排放物( emission的复数形式 ); 散发物（尤指气体）",
-      "source": "ecdict"
-    },
     "end": {
       "translation": "n. 结束, 终点, 目标, 末端, 梢, 死亡, 残余；v. 结束, 终结, 终止；[计] 端; 结束",
-      "source": "ecdict"
-    },
-    "energy": {
-      "translation": "n. 精力, 精神, 活力, 能量；[化] 能; 能量",
       "source": "ecdict"
     },
     "english": {
@@ -618,10 +1023,6 @@
     },
     "expert": {
       "translation": "n. 专家, 行家；a. 老练的, 内行的, 专门的；[计] 高级",
-      "source": "ecdict"
-    },
-    "experts": {
-      "translation": "n. 专家；人才（expert的复数形式）",
       "source": "ecdict"
     },
     "extreme": {
@@ -668,10 +1069,6 @@
       "translation": "prep. 从, 来自, 根据",
       "source": "ecdict"
     },
-    "gain": {
-      "translation": "n. 增益, 获得, 利润, 收获, 增加；vt. 得到, 增进, 赚到；vi. 获利, 增加；[计] 增益",
-      "source": "ecdict"
-    },
     "georgie": {
       "translation": "n. George 的昵称",
       "source": "ecdict"
@@ -704,10 +1101,6 @@
       "translation": "v. 转到；[计] 转到; DOS批处理命令:改变批处理文件的流程",
       "source": "ecdict"
     },
-    "guess": {
-      "translation": "n. 猜测, 臆测；v. 猜测, 臆测",
-      "source": "ecdict"
-    },
     "had": {
       "translation": "have的过去式和过去分词",
       "source": "ecdict"
@@ -736,10 +1129,6 @@
       "translation": "hear的过去式和过去分词",
       "source": "ecdict"
     },
-    "heat": {
-      "translation": "n. 热, 热度, 体温, 高潮；vi. 加热, 激昂, 加剧；vt. 把...加热, 使激动",
-      "source": "ecdict"
-    },
     "here": {
       "translation": "adv. 在这里, 此时, 这里；n. 这里",
       "source": "ecdict"
@@ -750,10 +1139,6 @@
     },
     "hospitals": {
       "translation": "n. 医院( hospital的复数形式 )",
-      "source": "ecdict"
-    },
-    "hot": {
-      "translation": "a. 热的, 热心的, 辣的, 热情的, 激动的, 猛烈的, 紧迫的；adv. 热, 紧迫地",
       "source": "ecdict"
     },
     "house": {
@@ -850,6 +1235,10 @@
     },
     "keeps": {
       "translation": "n. 罐笼座；盖子（keep的复数形式）",
+      "source": "ecdict"
+    },
+    "khosla": {
+      "translation": "[网络] 科斯拉；柯斯拉创投",
       "source": "ecdict"
     },
     "kinds": {
@@ -1076,10 +1465,6 @@
       "translation": "a. 可能的, 潜在的, 合适的；n. 可能性, 可能的事物",
       "source": "ecdict"
     },
-    "power": {
-      "translation": "n. 力, 体力, 力量, 势力, 动力, 权力, 强国, 乘方, 强度, 幂, 功率；vt. 使...有力量, 供以动力, 激励；[计] 乘幂; DOS外部命令:能控制许多电池电源计算机上的电源管理特性",
-      "source": "ecdict"
-    },
     "predicting": {
       "translation": "[计] 判定的",
       "source": "ecdict"
@@ -1112,16 +1497,12 @@
       "translation": "vt. 提供, 供应, 规定, 预备；vi. 作准备, 抚养, 规定",
       "source": "ecdict"
     },
-    "question": {
-      "translation": "n. 问题, 询问；v. 询问, 审问, 怀疑；[计] 询问",
-      "source": "ecdict"
-    },
     "quite": {
       "translation": "adv. 相当, 完全, 十分",
       "source": "ecdict"
     },
-    "quiz": {
-      "translation": "n. 考查, 课堂测验, 恶作剧, 智力测验；vt. 戏弄, 考查, 恶作剧",
+    "radhika": {
+      "translation": "[网络] 莫蒂尼的妹妹拉迪迦；拉迪卡；拉狄卡",
       "source": "ecdict"
     },
     "reach": {
@@ -1134,14 +1515,6 @@
     },
     "really": {
       "translation": "adv. 实际上, 真实地, 实在",
-      "source": "ecdict"
-    },
-    "recap": {
-      "translation": "vt. 翻新胎面；n. 翻新的轮胎",
-      "source": "ecdict"
-    },
-    "records": {
-      "translation": "n. 记录, 录音；唱片, 档案（record的复数形式）",
       "source": "ecdict"
     },
     "result": {
@@ -1180,10 +1553,6 @@
       "translation": "vt. 看见, 查看, 参观, 游览, 理解, 知道, 同意；vi. 看, 观看, 注意, 知道, 考虑；n. 主教的职位",
       "source": "ecdict"
     },
-    "serious": {
-      "translation": "a. 严肃的, 认真的, 重要的, 严重的；[电] 严重的",
-      "source": "ecdict"
-    },
     "services": {
       "translation": "n. 服务；服务项目（service复数形式）",
       "source": "ecdict"
@@ -1194,10 +1563,6 @@
     },
     "should": {
       "translation": "aux. 应该, 将要",
-      "source": "ecdict"
-    },
-    "side": {
-      "translation": "n. 旁边, 侧, 方面, 胁, 侧边, 血统；a. 旁的, 侧的, 次要的；vt. 同意, 支持；vi. 支持, 赞助",
       "source": "ecdict"
     },
     "simple": {
@@ -1218,10 +1583,6 @@
     },
     "so": {
       "translation": "adv. 如此, 如是, 如...那样；conj. 所以, 因此；pron. 这样",
-      "source": "ecdict"
-    },
-    "solar": {
-      "translation": "a. 太阳的, 日光的, 源自太阳的；[医] 太阳的; 腹腔丛的",
       "source": "ecdict"
     },
     "solution": {
@@ -1272,10 +1633,6 @@
       "translation": "n. 强调( stress的名词复数 ); 重音; 压力; 重力；v. 重读( stress的第三人称单数 ); [机械学]使承受压力; 给…加压力（或应力）",
       "source": "ecdict"
     },
-    "summer": {
-      "translation": "n. 夏季, 全盛时期；vi. 避暑, 过夏天；[计] 加法器",
-      "source": "ecdict"
-    },
     "summers": {
       "translation": "n. 萨莫斯（人名）",
       "source": "ecdict"
@@ -1286,10 +1643,6 @@
     },
     "suns": {
       "translation": "n. 太阳队（美国篮球队名）",
-      "source": "ecdict"
-    },
-    "sustainable": {
-      "translation": "a. 足可支撑的, 养得起的, 可以忍受的",
       "source": "ecdict"
     },
     "system": {
@@ -1330,6 +1683,10 @@
     },
     "that": {
       "translation": "a. 那, 那个；conj. 以致, 因为；pron. 那；adv. 那么, 那样",
+      "source": "ecdict"
+    },
+    "thats": {
+      "translation": "[网络] 太诱；颜嘉良；那个……挺……的",
       "source": "ecdict"
     },
     "the": {
@@ -1496,6 +1853,10 @@
       "translation": "be的过去式",
       "source": "ecdict"
     },
+    "weve": {
+      "translation": "short. we have",
+      "source": "ecdict"
+    },
     "what": {
       "translation": "pron. 什么；interj. 怎么, 多么；a. 什么的；adv. 到什么程度",
       "source": "ecdict"
@@ -1516,10 +1877,6 @@
       "translation": "pron. 哪一个, 那一个",
       "source": "ecdict"
     },
-    "wild": {
-      "translation": "n. 荒野, 荒地；a. 野性的, 野蛮的, 野生的, 失控的, 任性的, 杂乱的, 轻率的, 狂热的, 疯狂的；adv. 狂暴地, 失控地",
-      "source": "ecdict"
-    },
     "will": {
       "translation": "n. 意志, 决心, 意愿, 意向, 干劲, 遗嘱；vt. 用意志的力量驱使, 决意, 愿意, 立遗嘱；vi. 下决心, 愿意；aux. 将, 愿意, 必须",
       "source": "ecdict"
@@ -1538,10 +1895,6 @@
     },
     "without": {
       "translation": "prep. 没有, 不, 在...之外；adv. 在外面, 户外；n. 外面, 外部",
-      "source": "ecdict"
-    },
-    "worksheet": {
-      "translation": "[计] 工作表；[化] 工作单; 加工单",
       "source": "ecdict"
     },
     "world": {
@@ -1578,6 +1931,14 @@
     },
     "your": {
       "translation": "pron. 你的, 你们的",
+      "source": "ecdict"
+    },
+    "youre": {
+      "translation": "short. you are；[网络] 你不在了",
+      "source": "ecdict"
+    },
+    "youve": {
+      "translation": "short. you have",
       "source": "ecdict"
     }
   }

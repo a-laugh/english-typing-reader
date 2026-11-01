@@ -181,8 +181,329 @@
       "definition": "a strong desire for"
     }
   ],
-  "context_glossary": {},
+  "context_glossary": {
+    "gold-coloured": {
+      "meaning": "金色的",
+      "sentence": "Well, at the moment I'm wearing a lot of gold-coloured jewellery, but I'm not sure exactly how much of it is made of gold."
+    },
+    "personal items": {
+      "meaning": "个人物品",
+      "sentence": "Beyond jewellery and other personal items, gold is bought and sold by investors and banks."
+    },
+    "investors": {
+      "meaning": "投资者",
+      "sentence": "Beyond jewellery and other personal items, gold is bought and sold by investors and banks."
+    },
+    "banks": {
+      "meaning": "银行",
+      "sentence": "Beyond jewellery and other personal items, gold is bought and sold by investors and banks."
+    },
+    "up and down": {
+      "meaning": "起伏",
+      "sentence": "The price of gold has always gone up and down, but in 2026 it reached its highest ever price."
+    },
+    "episode": {
+      "meaning": "节目",
+      "sentence": "In this episode of 6 Minute English, we'll be talking about how gold became a valuable investment and asking the question, why do people buy gold?"
+    },
+    "valuable investment": {
+      "meaning": "有价值的投资",
+      "sentence": "we'll be talking about how gold became a valuable investment and asking the question, why do people buy gold?"
+    },
+    "quiz question": {
+      "meaning": "测验问题",
+      "sentence": "Let's start with our quiz question, Georgie. Gold is a metal that's extracted or dug up from under the ground in mines. But how much gold has been extracted from the earth?"
+    },
+    "extracted": {
+      "meaning": "提取",
+      "sentence": "Gold is a metal that's extracted or dug up from under the ground in mines."
+    },
+    "mines": {
+      "meaning": "矿山",
+      "sentence": "Gold is a metal that's extracted or dug up from under the ground in mines."
+    },
+    "tonnes": {
+      "meaning": "吨",
+      "sentence": "Is it: a) over 50,000 tonnes, b) over 100,000 tonnes, or c) over 200,000 tonnes?"
+    },
+    "absolutely no idea": {
+      "meaning": "完全不知道",
+      "sentence": "Phil, I have absolutely no idea, but I'm going to go with c) 200,000 tonnes."
+    },
+    "programme": {
+      "meaning": "节目",
+      "sentence": "OK. Well, we'll give you the answer at the end of the programme."
+    },
+    "thousands of years": {
+      "meaning": "数千年",
+      "sentence": "OK Phil. So, we've been using gold for thousands of years, but why and how did it start?"
+    },
+    "experts": {
+      "meaning": "专家",
+      "sentence": "And experts have discovered gold in coins that are thought to have been made in the 6th Century BC."
+    },
+    "coins": {
+      "meaning": "硬币",
+      "sentence": "And experts have discovered gold in coins that are thought to have been made in the 6th Century BC."
+    },
+    "carried and traded": {
+      "meaning": "携带和交易",
+      "sentence": "So, gold coins were made and they were used because the metal was much easier to carry and trade than things like cattle or timber."
+    },
+    "financial asset": {
+      "meaning": "金融资产",
+      "sentence": "It's a good question, but even though it isn't money, gold is still a financial asset, and an asset is something valuable that could be sold for money."
+    },
+    "crisis": {
+      "meaning": "危机",
+      "sentence": "And people buy gold in times of crisis because it's thought of as a safe investment."
+    },
+    "neutral": {
+      "meaning": "中立的",
+      "sentence": "Gold is a safe haven because it's not connected to one particular government or one particular economy or one particular market, so the fact that it's neutral means it's an asset that's perceived to be a store of value over a longer term."
+    },
+    "store of value": {
+      "meaning": "价值储存",
+      "sentence": "Gold is a safe haven because it's not connected to one particular government or one particular economy or one particular market, so the fact that it's neutral means it's an asset that's perceived to be a store of value over a longer term."
+    },
+    "fall in value": {
+      "meaning": "价值下降",
+      "sentence": "Suki describes gold as a safe haven, and a safe haven means something or somewhere that's protected from harm or danger, or in financial terms, from a fall in value."
+    },
+    "fabricated": {
+      "meaning": "制造",
+      "sentence": "It can't be created and fabricated out of thin air through alchemy, and so this, sort of, controls the supply and sustains an underlying value behind the demand for gold."
+    },
+    "alchemy": {
+      "meaning": "炼金术",
+      "sentence": "Alchemy is an ancient kind of chemistry that attempted to do impossible things, like turn ordinary metals into gold."
+    },
+    "underlying value": {
+      "meaning": "基本价值",
+      "sentence": "And because we can't just magically make more gold, when lots of people want to buy gold, the price increases."
+    },
+    "all-time high": {
+      "meaning": "历史最高点",
+      "sentence": "Well, we mentioned that the price of gold increases in times of crisis because government banks want to buy more of it. And there has been a series of world events that have made government banks want to buy more gold, for example the wars in Ukraine and the Middle East, and in politics too, for example the US imposing tariffs on international products. But since that peak in January, the price has dropped a bit."
+    },
+    "tariffs": {
+      "meaning": "关税",
+      "sentence": "for example the US imposing tariffs on international products."
+    },
+    "series of": {
+      "meaning": "一系列",
+      "sentence": "for example the US imposing tariffs on international products."
+    },
+    "market strategist": {
+      "meaning": "市场策略师",
+      "sentence": "Let's hear from market strategist John Reade."
+    },
+    "ethereal": {
+      "meaning": "虚幻的",
+      "sentence": "So much of the world we live in now is ethereal. It's... it's virtual, it's online, it disappears, whereas gold is something solid, something dependable and, you know, maybe something a little bit old-fashioned."
+    },
+    "hankering for": {
+      "meaning": "渴望",
+      "sentence": "And maybe it's a hankering for traditional values rather than what is super modern and super changeable."
+    },
+    "worksheet": {
+      "meaning": "练习册",
+      "sentence": "Once again, our six minutes are up, and if you have a hankering for more practice, test what you've learned with the worksheet on our website. That's bbclearningenglish.com."
+    }
+  },
   "dict": {
+    "gold-coloured": {
+      "translation": "金色的",
+      "source": "context",
+      "context": "金色的",
+      "sentence": "Well, at the moment I'm wearing a lot of gold-coloured jewellery, but I'm not sure exactly how much of it is made of gold."
+    },
+    "personal items": {
+      "translation": "个人物品",
+      "source": "context",
+      "context": "个人物品",
+      "sentence": "Beyond jewellery and other personal items, gold is bought and sold by investors and banks."
+    },
+    "investors": {
+      "translation": "投资者",
+      "source": "context",
+      "context": "投资者",
+      "sentence": "Beyond jewellery and other personal items, gold is bought and sold by investors and banks."
+    },
+    "banks": {
+      "translation": "银行",
+      "source": "context",
+      "context": "银行",
+      "sentence": "Beyond jewellery and other personal items, gold is bought and sold by investors and banks."
+    },
+    "up and down": {
+      "translation": "起伏",
+      "source": "context",
+      "context": "起伏",
+      "sentence": "The price of gold has always gone up and down, but in 2026 it reached its highest ever price."
+    },
+    "episode": {
+      "translation": "节目",
+      "source": "context",
+      "context": "节目",
+      "sentence": "In this episode of 6 Minute English, we'll be talking about how gold became a valuable investment and asking the question, why do people buy gold?"
+    },
+    "valuable investment": {
+      "translation": "有价值的投资",
+      "source": "context",
+      "context": "有价值的投资",
+      "sentence": "we'll be talking about how gold became a valuable investment and asking the question, why do people buy gold?"
+    },
+    "quiz question": {
+      "translation": "测验问题",
+      "source": "context",
+      "context": "测验问题",
+      "sentence": "Let's start with our quiz question, Georgie. Gold is a metal that's extracted or dug up from under the ground in mines. But how much gold has been extracted from the earth?"
+    },
+    "extracted": {
+      "translation": "提取",
+      "source": "context",
+      "context": "提取",
+      "sentence": "Gold is a metal that's extracted or dug up from under the ground in mines."
+    },
+    "mines": {
+      "translation": "矿山",
+      "source": "context",
+      "context": "矿山",
+      "sentence": "Gold is a metal that's extracted or dug up from under the ground in mines."
+    },
+    "tonnes": {
+      "translation": "吨",
+      "source": "context",
+      "context": "吨",
+      "sentence": "Is it: a) over 50,000 tonnes, b) over 100,000 tonnes, or c) over 200,000 tonnes?"
+    },
+    "absolutely no idea": {
+      "translation": "完全不知道",
+      "source": "context",
+      "context": "完全不知道",
+      "sentence": "Phil, I have absolutely no idea, but I'm going to go with c) 200,000 tonnes."
+    },
+    "programme": {
+      "translation": "节目",
+      "source": "context",
+      "context": "节目",
+      "sentence": "OK. Well, we'll give you the answer at the end of the programme."
+    },
+    "thousands of years": {
+      "translation": "数千年",
+      "source": "context",
+      "context": "数千年",
+      "sentence": "OK Phil. So, we've been using gold for thousands of years, but why and how did it start?"
+    },
+    "experts": {
+      "translation": "专家",
+      "source": "context",
+      "context": "专家",
+      "sentence": "And experts have discovered gold in coins that are thought to have been made in the 6th Century BC."
+    },
+    "coins": {
+      "translation": "硬币",
+      "source": "context",
+      "context": "硬币",
+      "sentence": "And experts have discovered gold in coins that are thought to have been made in the 6th Century BC."
+    },
+    "carried and traded": {
+      "translation": "携带和交易",
+      "source": "context",
+      "context": "携带和交易",
+      "sentence": "So, gold coins were made and they were used because the metal was much easier to carry and trade than things like cattle or timber."
+    },
+    "financial asset": {
+      "translation": "金融资产",
+      "source": "context",
+      "context": "金融资产",
+      "sentence": "It's a good question, but even though it isn't money, gold is still a financial asset, and an asset is something valuable that could be sold for money."
+    },
+    "crisis": {
+      "translation": "危机",
+      "source": "context",
+      "context": "危机",
+      "sentence": "And people buy gold in times of crisis because it's thought of as a safe investment."
+    },
+    "neutral": {
+      "translation": "中立的",
+      "source": "context",
+      "context": "中立的",
+      "sentence": "Gold is a safe haven because it's not connected to one particular government or one particular economy or one particular market, so the fact that it's neutral means it's an asset that's perceived to be a store of value over a longer term."
+    },
+    "store of value": {
+      "translation": "价值储存",
+      "source": "context",
+      "context": "价值储存",
+      "sentence": "Gold is a safe haven because it's not connected to one particular government or one particular economy or one particular market, so the fact that it's neutral means it's an asset that's perceived to be a store of value over a longer term."
+    },
+    "fall in value": {
+      "translation": "价值下降",
+      "source": "context",
+      "context": "价值下降",
+      "sentence": "Suki describes gold as a safe haven, and a safe haven means something or somewhere that's protected from harm or danger, or in financial terms, from a fall in value."
+    },
+    "fabricated": {
+      "translation": "制造",
+      "source": "context",
+      "context": "制造",
+      "sentence": "It can't be created and fabricated out of thin air through alchemy, and so this, sort of, controls the supply and sustains an underlying value behind the demand for gold."
+    },
+    "alchemy": {
+      "translation": "炼金术",
+      "source": "context",
+      "context": "炼金术",
+      "sentence": "Alchemy is an ancient kind of chemistry that attempted to do impossible things, like turn ordinary metals into gold."
+    },
+    "underlying value": {
+      "translation": "基本价值",
+      "source": "context",
+      "context": "基本价值",
+      "sentence": "And because we can't just magically make more gold, when lots of people want to buy gold, the price increases."
+    },
+    "all-time high": {
+      "translation": "历史最高点",
+      "source": "context",
+      "context": "历史最高点",
+      "sentence": "Well, we mentioned that the price of gold increases in times of crisis because government banks want to buy more of it. And there has been a series of world events that have made government banks want to buy more gold, for example the wars in Ukraine and the Middle East, and in politics too, for example the US imposing tariffs on international products. But since that peak in January, the price has dropped a bit."
+    },
+    "tariffs": {
+      "translation": "关税",
+      "source": "context",
+      "context": "关税",
+      "sentence": "for example the US imposing tariffs on international products."
+    },
+    "series of": {
+      "translation": "一系列",
+      "source": "context",
+      "context": "一系列",
+      "sentence": "for example the US imposing tariffs on international products."
+    },
+    "market strategist": {
+      "translation": "市场策略师",
+      "source": "context",
+      "context": "市场策略师",
+      "sentence": "Let's hear from market strategist John Reade."
+    },
+    "ethereal": {
+      "translation": "虚幻的",
+      "source": "context",
+      "context": "虚幻的",
+      "sentence": "So much of the world we live in now is ethereal. It's... it's virtual, it's online, it disappears, whereas gold is something solid, something dependable and, you know, maybe something a little bit old-fashioned."
+    },
+    "hankering for": {
+      "translation": "渴望",
+      "source": "context",
+      "context": "渴望",
+      "sentence": "And maybe it's a hankering for traditional values rather than what is super modern and super changeable."
+    },
+    "worksheet": {
+      "translation": "练习册",
+      "source": "context",
+      "context": "练习册",
+      "sentence": "Once again, our six minutes are up, and if you have a hankering for more practice, test what you've learned with the worksheet on our website. That's bbclearningenglish.com."
+    },
     "asset": {
       "translation": "something of financial value that can be sold for money",
       "source": "official"
@@ -195,17 +516,310 @@
       "translation": "from nothing or nowhere",
       "source": "official"
     },
-    "alchemy": {
-      "translation": "ancient study combining elements of chemistry and mysticism, which attempted to do impossible things like transforming ordinary metals into gold",
-      "source": "official"
-    },
-    "ethereal": {
-      "translation": "seemingly unreal",
-      "source": "official"
-    },
     "a hankering for": {
       "translation": "a strong desire for",
       "source": "official"
+    },
+    "goldcoloured": {
+      "translation": "金色的",
+      "source": "context",
+      "context": "金色的",
+      "sentence": "Well, at the moment I'm wearing a lot of gold-coloured jewellery, but I'm not sure exactly how much of it is made of gold.",
+      "phrase": "gold-coloured"
+    },
+    "items": {
+      "translation": "个人物品",
+      "source": "context",
+      "context": "个人物品",
+      "sentence": "Beyond jewellery and other personal items, gold is bought and sold by investors and banks.",
+      "phrase": "personal items"
+    },
+    "personal": {
+      "translation": "个人物品",
+      "source": "context",
+      "context": "个人物品",
+      "sentence": "Beyond jewellery and other personal items, gold is bought and sold by investors and banks.",
+      "phrase": "personal items"
+    },
+    "personalitems": {
+      "translation": "个人物品",
+      "source": "context",
+      "context": "个人物品",
+      "sentence": "Beyond jewellery and other personal items, gold is bought and sold by investors and banks.",
+      "phrase": "personal items"
+    },
+    "down": {
+      "translation": "起伏",
+      "source": "context",
+      "context": "起伏",
+      "sentence": "The price of gold has always gone up and down, but in 2026 it reached its highest ever price.",
+      "phrase": "up and down"
+    },
+    "up": {
+      "translation": "起伏",
+      "source": "context",
+      "context": "起伏",
+      "sentence": "The price of gold has always gone up and down, but in 2026 it reached its highest ever price.",
+      "phrase": "up and down"
+    },
+    "upanddown": {
+      "translation": "起伏",
+      "source": "context",
+      "context": "起伏",
+      "sentence": "The price of gold has always gone up and down, but in 2026 it reached its highest ever price.",
+      "phrase": "up and down"
+    },
+    "investment": {
+      "translation": "有价值的投资",
+      "source": "context",
+      "context": "有价值的投资",
+      "sentence": "we'll be talking about how gold became a valuable investment and asking the question, why do people buy gold?",
+      "phrase": "valuable investment"
+    },
+    "valuable": {
+      "translation": "有价值的投资",
+      "source": "context",
+      "context": "有价值的投资",
+      "sentence": "we'll be talking about how gold became a valuable investment and asking the question, why do people buy gold?",
+      "phrase": "valuable investment"
+    },
+    "valuableinvestment": {
+      "translation": "有价值的投资",
+      "source": "context",
+      "context": "有价值的投资",
+      "sentence": "we'll be talking about how gold became a valuable investment and asking the question, why do people buy gold?",
+      "phrase": "valuable investment"
+    },
+    "question": {
+      "translation": "测验问题",
+      "source": "context",
+      "context": "测验问题",
+      "sentence": "Let's start with our quiz question, Georgie. Gold is a metal that's extracted or dug up from under the ground in mines. But how much gold has been extracted from the earth?",
+      "phrase": "quiz question"
+    },
+    "quiz": {
+      "translation": "测验问题",
+      "source": "context",
+      "context": "测验问题",
+      "sentence": "Let's start with our quiz question, Georgie. Gold is a metal that's extracted or dug up from under the ground in mines. But how much gold has been extracted from the earth?",
+      "phrase": "quiz question"
+    },
+    "quizquestion": {
+      "translation": "测验问题",
+      "source": "context",
+      "context": "测验问题",
+      "sentence": "Let's start with our quiz question, Georgie. Gold is a metal that's extracted or dug up from under the ground in mines. But how much gold has been extracted from the earth?",
+      "phrase": "quiz question"
+    },
+    "absolutely": {
+      "translation": "完全不知道",
+      "source": "context",
+      "context": "完全不知道",
+      "sentence": "Phil, I have absolutely no idea, but I'm going to go with c) 200,000 tonnes.",
+      "phrase": "absolutely no idea"
+    },
+    "absolutelynoidea": {
+      "translation": "完全不知道",
+      "source": "context",
+      "context": "完全不知道",
+      "sentence": "Phil, I have absolutely no idea, but I'm going to go with c) 200,000 tonnes.",
+      "phrase": "absolutely no idea"
+    },
+    "idea": {
+      "translation": "完全不知道",
+      "source": "context",
+      "context": "完全不知道",
+      "sentence": "Phil, I have absolutely no idea, but I'm going to go with c) 200,000 tonnes.",
+      "phrase": "absolutely no idea"
+    },
+    "no": {
+      "translation": "完全不知道",
+      "source": "context",
+      "context": "完全不知道",
+      "sentence": "Phil, I have absolutely no idea, but I'm going to go with c) 200,000 tonnes.",
+      "phrase": "absolutely no idea"
+    },
+    "thousands": {
+      "translation": "数千年",
+      "source": "context",
+      "context": "数千年",
+      "sentence": "OK Phil. So, we've been using gold for thousands of years, but why and how did it start?",
+      "phrase": "thousands of years"
+    },
+    "thousandsofyears": {
+      "translation": "数千年",
+      "source": "context",
+      "context": "数千年",
+      "sentence": "OK Phil. So, we've been using gold for thousands of years, but why and how did it start?",
+      "phrase": "thousands of years"
+    },
+    "years": {
+      "translation": "数千年",
+      "source": "context",
+      "context": "数千年",
+      "sentence": "OK Phil. So, we've been using gold for thousands of years, but why and how did it start?",
+      "phrase": "thousands of years"
+    },
+    "carried": {
+      "translation": "携带和交易",
+      "source": "context",
+      "context": "携带和交易",
+      "sentence": "So, gold coins were made and they were used because the metal was much easier to carry and trade than things like cattle or timber.",
+      "phrase": "carried and traded"
+    },
+    "carriedandtraded": {
+      "translation": "携带和交易",
+      "source": "context",
+      "context": "携带和交易",
+      "sentence": "So, gold coins were made and they were used because the metal was much easier to carry and trade than things like cattle or timber.",
+      "phrase": "carried and traded"
+    },
+    "traded": {
+      "translation": "携带和交易",
+      "source": "context",
+      "context": "携带和交易",
+      "sentence": "So, gold coins were made and they were used because the metal was much easier to carry and trade than things like cattle or timber.",
+      "phrase": "carried and traded"
+    },
+    "financial": {
+      "translation": "金融资产",
+      "source": "context",
+      "context": "金融资产",
+      "sentence": "It's a good question, but even though it isn't money, gold is still a financial asset, and an asset is something valuable that could be sold for money.",
+      "phrase": "financial asset"
+    },
+    "financialasset": {
+      "translation": "金融资产",
+      "source": "context",
+      "context": "金融资产",
+      "sentence": "It's a good question, but even though it isn't money, gold is still a financial asset, and an asset is something valuable that could be sold for money.",
+      "phrase": "financial asset"
+    },
+    "store": {
+      "translation": "价值储存",
+      "source": "context",
+      "context": "价值储存",
+      "sentence": "Gold is a safe haven because it's not connected to one particular government or one particular economy or one particular market, so the fact that it's neutral means it's an asset that's perceived to be a store of value over a longer term.",
+      "phrase": "store of value"
+    },
+    "storeofvalue": {
+      "translation": "价值储存",
+      "source": "context",
+      "context": "价值储存",
+      "sentence": "Gold is a safe haven because it's not connected to one particular government or one particular economy or one particular market, so the fact that it's neutral means it's an asset that's perceived to be a store of value over a longer term.",
+      "phrase": "store of value"
+    },
+    "value": {
+      "translation": "价值储存",
+      "source": "context",
+      "context": "价值储存",
+      "sentence": "Gold is a safe haven because it's not connected to one particular government or one particular economy or one particular market, so the fact that it's neutral means it's an asset that's perceived to be a store of value over a longer term.",
+      "phrase": "store of value"
+    },
+    "fall": {
+      "translation": "价值下降",
+      "source": "context",
+      "context": "价值下降",
+      "sentence": "Suki describes gold as a safe haven, and a safe haven means something or somewhere that's protected from harm or danger, or in financial terms, from a fall in value.",
+      "phrase": "fall in value"
+    },
+    "fallinvalue": {
+      "translation": "价值下降",
+      "source": "context",
+      "context": "价值下降",
+      "sentence": "Suki describes gold as a safe haven, and a safe haven means something or somewhere that's protected from harm or danger, or in financial terms, from a fall in value.",
+      "phrase": "fall in value"
+    },
+    "underlying": {
+      "translation": "基本价值",
+      "source": "context",
+      "context": "基本价值",
+      "sentence": "And because we can't just magically make more gold, when lots of people want to buy gold, the price increases.",
+      "phrase": "underlying value"
+    },
+    "underlyingvalue": {
+      "translation": "基本价值",
+      "source": "context",
+      "context": "基本价值",
+      "sentence": "And because we can't just magically make more gold, when lots of people want to buy gold, the price increases.",
+      "phrase": "underlying value"
+    },
+    "all": {
+      "translation": "历史最高点",
+      "source": "context",
+      "context": "历史最高点",
+      "sentence": "Well, we mentioned that the price of gold increases in times of crisis because government banks want to buy more of it. And there has been a series of world events that have made government banks want to buy more gold, for example the wars in Ukraine and the Middle East, and in politics too, for example the US imposing tariffs on international products. But since that peak in January, the price has dropped a bit.",
+      "phrase": "all-time high"
+    },
+    "alltimehigh": {
+      "translation": "历史最高点",
+      "source": "context",
+      "context": "历史最高点",
+      "sentence": "Well, we mentioned that the price of gold increases in times of crisis because government banks want to buy more of it. And there has been a series of world events that have made government banks want to buy more gold, for example the wars in Ukraine and the Middle East, and in politics too, for example the US imposing tariffs on international products. But since that peak in January, the price has dropped a bit.",
+      "phrase": "all-time high"
+    },
+    "high": {
+      "translation": "历史最高点",
+      "source": "context",
+      "context": "历史最高点",
+      "sentence": "Well, we mentioned that the price of gold increases in times of crisis because government banks want to buy more of it. And there has been a series of world events that have made government banks want to buy more gold, for example the wars in Ukraine and the Middle East, and in politics too, for example the US imposing tariffs on international products. But since that peak in January, the price has dropped a bit.",
+      "phrase": "all-time high"
+    },
+    "time": {
+      "translation": "历史最高点",
+      "source": "context",
+      "context": "历史最高点",
+      "sentence": "Well, we mentioned that the price of gold increases in times of crisis because government banks want to buy more of it. And there has been a series of world events that have made government banks want to buy more gold, for example the wars in Ukraine and the Middle East, and in politics too, for example the US imposing tariffs on international products. But since that peak in January, the price has dropped a bit.",
+      "phrase": "all-time high"
+    },
+    "series": {
+      "translation": "一系列",
+      "source": "context",
+      "context": "一系列",
+      "sentence": "for example the US imposing tariffs on international products.",
+      "phrase": "series of"
+    },
+    "seriesof": {
+      "translation": "一系列",
+      "source": "context",
+      "context": "一系列",
+      "sentence": "for example the US imposing tariffs on international products.",
+      "phrase": "series of"
+    },
+    "market": {
+      "translation": "市场策略师",
+      "source": "context",
+      "context": "市场策略师",
+      "sentence": "Let's hear from market strategist John Reade.",
+      "phrase": "market strategist"
+    },
+    "marketstrategist": {
+      "translation": "市场策略师",
+      "source": "context",
+      "context": "市场策略师",
+      "sentence": "Let's hear from market strategist John Reade.",
+      "phrase": "market strategist"
+    },
+    "strategist": {
+      "translation": "市场策略师",
+      "source": "context",
+      "context": "市场策略师",
+      "sentence": "Let's hear from market strategist John Reade.",
+      "phrase": "market strategist"
+    },
+    "hankering": {
+      "translation": "渴望",
+      "source": "context",
+      "context": "渴望",
+      "sentence": "And maybe it's a hankering for traditional values rather than what is super modern and super changeable.",
+      "phrase": "hankering for"
+    },
+    "hankeringfor": {
+      "translation": "渴望",
+      "source": "context",
+      "context": "渴望",
+      "sentence": "And maybe it's a hankering for traditional values rather than what is super modern and super changeable.",
+      "phrase": "hankering for"
     },
     "haven": {
       "translation": "something or somewhere protected from harm or loss",
@@ -247,11 +861,6 @@
       "source": "official",
       "phrase": "a hankering for"
     },
-    "hankering": {
-      "translation": "a strong desire for",
-      "source": "official",
-      "phrase": "a hankering for"
-    },
     "6": {
       "translation": "num. six",
       "source": "ecdict"
@@ -261,15 +870,11 @@
       "source": "ecdict"
     },
     "a": {
-      "translation": "第一个字母 A; 一个; 第一的\\r；art. [计] 累加器, 加法器, 地址, 振幅, 模拟, 区域, 面积, 汇编, 组件, 异步",
+      "translation": "第一个字母 A; 一个; 第一的；art. [计] 累加器, 加法器, 地址, 振幅, 模拟, 区域, 面积, 汇编, 组件, 异步",
       "source": "ecdict"
     },
     "about": {
       "translation": "prep. 在...周围, 大约, 有关, 关于；adv. 大约, 四处, 在附近, 周围",
-      "source": "ecdict"
-    },
-    "absolutely": {
-      "translation": "adv. 完全地, 绝对地, 确确实实地",
       "source": "ecdict"
     },
     "account": {
@@ -352,10 +957,6 @@
       "translation": "n. 银行, 堤, 岸；[医] 库",
       "source": "ecdict"
     },
-    "banks": {
-      "translation": "n. 银行；斜床；岸, 堤（bank的复数形式）",
-      "source": "ecdict"
-    },
     "bbc": {
       "translation": "英国广播公司",
       "source": "ecdict"
@@ -417,7 +1018,7 @@
       "source": "ecdict"
     },
     "c": {
-      "translation": "[计] 调用, 访问, 呼叫, 电容, 进位, 通道, 字符, 清除, 常数, 控制, 周期；[化] 碳的化学符号; 胞苷",
+      "translation": "[计] 调用, 访问, 呼叫；电容, 进位, 通道, 字符, 清除, 常数, 控制, 周期；C 程序设计语言；[化] 碳的化学符号; 胞苷",
       "source": "ecdict"
     },
     "can": {
@@ -452,10 +1053,6 @@
       "translation": "n. 化学, 化学过程；[化] 化学",
       "source": "ecdict"
     },
-    "coins": {
-      "translation": "n. 硬币（coin的复数）",
-      "source": "ecdict"
-    },
     "connected": {
       "translation": "a. 连接的, 连贯的, 有联系的, 关联的, 连结的, 有关系的；[计] 连接的",
       "source": "ecdict"
@@ -482,10 +1079,6 @@
     },
     "created": {
       "translation": "a. 创造的；[电] 创造的, 建立的",
-      "source": "ecdict"
-    },
-    "crisis": {
-      "translation": "n. 危机, 危险期, 紧要关头；[医] 危象; 骤退, 临界, 极期",
       "source": "ecdict"
     },
     "danger": {
@@ -532,12 +1125,16 @@
       "translation": "v. 做；工作；有用（do的第三人称单数形式）",
       "source": "ecdict"
     },
+    "doesnt": {
+      "translation": "short. does not；[网络] 苹果熊",
+      "source": "ecdict"
+    },
     "dollars": {
       "translation": "n. 美元（dollar的复数）",
       "source": "ecdict"
     },
-    "down": {
-      "translation": "a. 向下的；adv. 下, 下去, 降下；prep. 往下, 沿着；n. 丘陵, 软毛, 开阔的高地；[计] 向下, 退下命令",
+    "dont": {
+      "translation": "short. do not；[网络] 不要；别；追上我",
       "source": "ecdict"
     },
     "dropped": {
@@ -584,10 +1181,6 @@
       "translation": "n. 英语；a. 英文的, 英国人的",
       "source": "ecdict"
     },
-    "episode": {
-      "translation": "n. 插曲, 插话, 有趣的事件, 一段情节；[医] 插话, 插曲, 发作",
-      "source": "ecdict"
-    },
     "even": {
       "translation": "a. 平坦的, 相等的, 连贯的, 均等的, 公平的, 偶数的, 平均的, 平衡的, 恰好的；vt. 使平坦, 使相等；vi. 变平, 成为相等；adv. 甚至, 实际上, 完全, 十分；n. 偶数, 偶校验；[计] 偶数, 偶校验",
       "source": "ecdict"
@@ -612,10 +1205,6 @@
       "translation": "n. 专家, 行家；a. 老练的, 内行的, 专门的；[计] 高级",
       "source": "ecdict"
     },
-    "experts": {
-      "translation": "n. 专家；人才（expert的复数形式）",
-      "source": "ecdict"
-    },
     "explaining": {
       "translation": "v. 讲解, 解释( explain的现在分词 ); 说明…的原因, 辩解; 说明, 解释, 辩解",
       "source": "ecdict"
@@ -628,28 +1217,12 @@
       "translation": "n. 表达, 表现, 词语, 措辞；[计] 表达式",
       "source": "ecdict"
     },
-    "extracted": {
-      "translation": "a. 引出的；萃取的",
-      "source": "ecdict"
-    },
-    "fabricated": {
-      "translation": "a. 焊接的；组合的, 装配式的",
-      "source": "ecdict"
-    },
     "fact": {
       "translation": "n. 事实, 真实性, 真相, 细节, 论据",
       "source": "ecdict"
     },
-    "fall": {
-      "translation": "n. 落下, 瀑布, 采伐量, 下降, 落差, 降低, 堕落, 秋天；vi. 倒下, 落下, 来临, 失守, 阵亡, 下跌, 减弱, 倾斜, 垮台, 轮到, 变成, 降低；a. 秋天的",
-      "source": "ecdict"
-    },
     "fashioned": {
       "translation": "a. …式的",
-      "source": "ecdict"
-    },
-    "financial": {
-      "translation": "a. 财政的, 金融的；[经] 财政的, 金融的, 财务的",
       "source": "ecdict"
     },
     "fixed": {
@@ -736,10 +1309,6 @@
       "translation": "interj. 喂",
       "source": "ecdict"
     },
-    "high": {
-      "translation": "n. 高度, 高处；a. 高的, 高级的, 主要的, 高尚的, 高原的, 高音的, 昂贵的, 傲慢的；adv. 高度地, 奢侈地",
-      "source": "ecdict"
-    },
     "highest": {
       "translation": "[计] 最高",
       "source": "ecdict"
@@ -758,10 +1327,6 @@
     },
     "i": {
       "translation": "pron. 我；[计] 电流, 中断, 指令, 指示符",
-      "source": "ecdict"
-    },
-    "idea": {
-      "translation": "n. 主意, 办法, 理想, 思想, 概念, 意见；[医] 观念, 思想",
       "source": "ecdict"
     },
     "if": {
@@ -800,14 +1365,6 @@
       "translation": "vt. 投资, 花费, 笼罩, 授予；vi. 投资, 利用",
       "source": "ecdict"
     },
-    "investment": {
-      "translation": "n. 投资；[医] 包埋料, 围模料, 包埋法, 围模法",
-      "source": "ecdict"
-    },
-    "investors": {
-      "translation": "n. 投资者, 出资者( investor的复数形式 )",
-      "source": "ecdict"
-    },
     "is": {
       "translation": "be的现在式第三人称；[计] 加下标次序, 信息系统, 国际标准, 中间系统",
       "source": "ecdict"
@@ -818,10 +1375,6 @@
     },
     "it": {
       "translation": "pron. 它；[计] 信息论, 输入终端, 智能终端, 内捕获",
-      "source": "ecdict"
-    },
-    "items": {
-      "translation": "n. 项目；名目；所有物品（item的复数形式）",
       "source": "ecdict"
     },
     "its": {
@@ -932,10 +1485,6 @@
       "translation": "n. 制造, (手工)制造业, 制作, 形成, 发展, 要素, 内在因素, 赚头, 制造物",
       "source": "ecdict"
     },
-    "market": {
-      "translation": "n. 市场, 交易, 集市, 推销地区, 行情, 市面, 销路；vt. 在市场上交易, 使上市, 销售；vi. 在市场上买卖",
-      "source": "ecdict"
-    },
     "maybe": {
       "translation": "adv. 也许, 大概；n. 可能性",
       "source": "ecdict"
@@ -972,10 +1521,6 @@
       "translation": "n. 开采",
       "source": "ecdict"
     },
-    "mines": {
-      "translation": "n. 地雷；矿山（mine的复数）",
-      "source": "ecdict"
-    },
     "minute": {
       "translation": "n. 分, 分钟, 片刻, 备忘录, 笔记；vt. 记录, 摘录, 测定时间；a. 微小的, 详细的",
       "source": "ecdict"
@@ -1002,14 +1547,6 @@
     },
     "much": {
       "translation": "n. 大量, 许多, 重要的事；a. 很多的, 重要的；adv. 多, 甚, 几乎",
-      "source": "ecdict"
-    },
-    "neutral": {
-      "translation": "n. 中立者, 中立国, 非彩色, 空档；a. 中立的, 中性的, 无色的",
-      "source": "ecdict"
-    },
-    "no": {
-      "translation": "n. 不, 拒绝, 否决票；a. 没有, 不是, 绝非；adv. 不",
       "source": "ecdict"
     },
     "not": {
@@ -1100,10 +1637,6 @@
       "translation": "v. 感觉( perceive的过去式和过去分词 ); 视为; 认为; 理解为",
       "source": "ecdict"
     },
-    "personal": {
-      "translation": "a. 私人的, 涉及隐私的, 有人性的, 人称的, 亲自的, 身体的；[医] 人的; 个人的, 自身的",
-      "source": "ecdict"
-    },
     "phil": {
       "translation": "abbr. 哲学（philosophy）",
       "source": "ecdict"
@@ -1144,20 +1677,8 @@
       "translation": "n. 教授",
       "source": "ecdict"
     },
-    "programme": {
-      "translation": "n. 节目, 节目单, 程序, 纲要, 大纲, 计划；vt. 规划, 拟...计划；vi. 安排节目, 编程序",
-      "source": "ecdict"
-    },
     "protected": {
       "translation": "a. 受保护的",
-      "source": "ecdict"
-    },
-    "question": {
-      "translation": "n. 问题, 询问；v. 询问, 审问, 怀疑；[计] 询问",
-      "source": "ecdict"
-    },
-    "quiz": {
-      "translation": "n. 考查, 课堂测验, 恶作剧, 智力测验；vt. 戏弄, 考查, 恶作剧",
       "source": "ecdict"
     },
     "rather": {
@@ -1188,12 +1709,12 @@
       "translation": "v. 说（第三人称单数）",
       "source": "ecdict"
     },
-    "seem": {
-      "translation": "vi. 象是, 似乎",
+    "schenk": {
+      "translation": "[网络] 学者申克；圣客；裳格",
       "source": "ecdict"
     },
-    "series": {
-      "translation": "n. 串联, 序列, 连续, 系列, 丛书, 套, 级数, 组；[计] 系列",
+    "seem": {
+      "translation": "vi. 象是, 似乎",
       "source": "ecdict"
     },
     "service": {
@@ -1248,14 +1769,6 @@
       "translation": "n. 蒸馏室, 寂静, 剧照；v. 蒸馏, (使)平静, (使)静止；a. 静止的, 不动的, 静寂的, 不起泡的, 静物摄影的；adv. 仍然, 更, 静止地；conj. 然而, 但是",
       "source": "ecdict"
     },
-    "store": {
-      "translation": "n. 商店, 贮藏, 仓库, 备用品, 存储器；vt. 储存, 贮藏, 供给；vi. 贮藏；a. 贮藏的, 现成的；[计] 存储器操作; 存储",
-      "source": "ecdict"
-    },
-    "strategist": {
-      "translation": "n. 战略家",
-      "source": "ecdict"
-    },
     "strong": {
       "translation": "a. 强壮的, 坚固的, 坚强的, 强烈的, 有力的, 优良的；adv. 强劲地, 有力地, 猛烈地",
       "source": "ecdict"
@@ -1284,10 +1797,6 @@
       "translation": "a. 说话的, 多嘴的, 富有表情的；n. 讲话, 谈论",
       "source": "ecdict"
     },
-    "tariffs": {
-      "translation": "n. 关税制度; 关税( tariff的名词复数 ); 关税表; （旅馆或饭店等的）收费表; 量刑标准",
-      "source": "ecdict"
-    },
     "term": {
       "translation": "n. 术语, 专有名词, 期限, 学期, 任期, 条件, 价钱, 关系, 地位, 项, 界石；vt. 称, 呼；[计] 检索词; 项",
       "source": "ecdict"
@@ -1310,6 +1819,10 @@
     },
     "that": {
       "translation": "a. 那, 那个；conj. 以致, 因为；pron. 那；adv. 那么, 那样",
+      "source": "ecdict"
+    },
+    "thats": {
+      "translation": "[网络] 太诱；颜嘉良；那个……挺……的",
       "source": "ecdict"
     },
     "the": {
@@ -1348,10 +1861,6 @@
       "translation": "n. 想法, 思想, 思维, 关心, 挂念；think的过去式和过去分词",
       "source": "ecdict"
     },
-    "thousands": {
-      "translation": "n. 数千（thousand的复数）",
-      "source": "ecdict"
-    },
     "through": {
       "translation": "adv. 穿越, 从头至尾, 到底, 因为；prep. 经过, 穿过；a. 对穿的, 直达的, 完结的",
       "source": "ecdict"
@@ -1360,20 +1869,12 @@
       "translation": "n. 木材, 木料；vt. 用木材建造",
       "source": "ecdict"
     },
-    "time": {
-      "translation": "n. 时间, 时侯, 时机, 时期, 期限, 次数, 节拍, 暂停, 规定时间；vt. 测定...的时间, 记录...的时间, 计时, 定时；a. 时间的, 记时的, 定时的, 定期的, 分期的；[计] DOS内部命令:用于显示或设定系统的时间",
-      "source": "ecdict"
-    },
     "times": {
       "translation": "n. 时代, 境遇, 时报",
       "source": "ecdict"
     },
     "to": {
       "translation": "prep. 到, 向, 趋于；adv. 向前",
-      "source": "ecdict"
-    },
-    "tonnes": {
-      "translation": "n. 吨, 公吨( tonne的复数形式 )",
       "source": "ecdict"
     },
     "too": {
@@ -1404,20 +1905,12 @@
       "translation": "prep. 在...之下, 低于；a. 下面的, 从属的；adv. 在下面",
       "source": "ecdict"
     },
-    "underlying": {
-      "translation": "a. 在下面的；[经] 优先的, 基础的, 放在下面的",
-      "source": "ecdict"
-    },
     "understood": {
       "translation": "understand的过去式和过去分词",
       "source": "ecdict"
     },
     "unlike": {
       "translation": "a. 不像的, 不同的；prep. 不像, 和...不同",
-      "source": "ecdict"
-    },
-    "up": {
-      "translation": "a. 向上的, 起床的, 涨的；adv. 向上, 上涨；prep. 在...上面, 向...的较高处",
       "source": "ecdict"
     },
     "us": {
@@ -1430,14 +1923,6 @@
     },
     "using": {
       "translation": "[计] 使用",
-      "source": "ecdict"
-    },
-    "valuable": {
-      "translation": "a. 有价值的, 贵重的, 宝贵的, 可估价的；[经] 有价值的, 可估价的, 贵重的",
-      "source": "ecdict"
-    },
-    "value": {
-      "translation": "n. 价值, 价格, 购买力, 评价, 估价, 计算结果；vt. 评价, 估价, 重视；[计] 计算结果",
       "source": "ecdict"
     },
     "values": {
@@ -1484,8 +1969,16 @@
       "translation": "be的过去式",
       "source": "ecdict"
     },
+    "weve": {
+      "translation": "short. we have",
+      "source": "ecdict"
+    },
     "what": {
       "translation": "pron. 什么；interj. 怎么, 多么；a. 什么的；adv. 到什么程度",
+      "source": "ecdict"
+    },
+    "whats": {
+      "translation": "[网络] 什么；嘿；什麽",
       "source": "ecdict"
     },
     "when": {
@@ -1512,16 +2005,8 @@
       "translation": "n. 习惯；a. 惯常的, 易于...的；vi. 习惯；vt. 使习惯于",
       "source": "ecdict"
     },
-    "worksheet": {
-      "translation": "[计] 工作表；[化] 工作单; 加工单",
-      "source": "ecdict"
-    },
     "world": {
       "translation": "n. 世界, 地球, 宇宙, 万物, 世人, 人间, 领域, 世事, 世故, 社会生活, 大量；[法] 世界, 地球, 世人",
-      "source": "ecdict"
-    },
-    "years": {
-      "translation": "n. 年代；岁月；年；年龄",
       "source": "ecdict"
     },
     "yes": {
@@ -1534,6 +2019,10 @@
     },
     "your": {
       "translation": "pron. 你的, 你们的",
+      "source": "ecdict"
+    },
+    "youve": {
+      "translation": "short. you have",
       "source": "ecdict"
     }
   }

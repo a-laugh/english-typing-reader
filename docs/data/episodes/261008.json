@@ -193,15 +193,238 @@
       "definition": "strong criticism of a trend; people doing the opposite of a trend"
     }
   ],
-  "context_glossary": {},
-  "dict": {
+  "context_glossary": {
+    "unusual": {
+      "meaning": "不同寻常的",
+      "sentence": "Do you want to hear something quite unusual for me?"
+    },
+    "impressive": {
+      "meaning": "令人印象深刻的",
+      "sentence": "Wow! That is really impressive."
+    },
+    "alcoholic": {
+      "meaning": "含酒精的",
+      "sentence": "I haven't had an alcoholic drink this year."
+    },
+    "cut down": {
+      "meaning": "减少",
+      "sentence": "and we'll be asking, 'Is this the end of British drinking culture?'"
+    },
+    "challenge": {
+      "meaning": "挑战",
+      "sentence": "but what is the challenge called?"
+    },
+    "answer": {
+      "meaning": "答案",
+      "sentence": "Well, I know the answer to this, but I'm not going to give it away."
+    },
+    "quiz": {
+      "meaning": "问答",
+      "sentence": "OK. Neil, let's start with a quiz question."
+    },
+    "non-drinkers": {
+      "meaning": "不喝酒的人",
+      "sentence": "Well, in the UK, surveys suggest that 16 to 24-year-olds are more likely to be non-drinkers than the older generations."
+    },
     "sober": {
-      "translation": "not drinking alcohol or taking recreational drugs",
-      "source": "official"
+      "meaning": "戒酒的",
+      "sentence": "After that, he decided to be sober and he hasn't had a drink for about six years."
+    },
+    "BBC World Service": {
+      "meaning": "BBC世界服务",
+      "sentence": "Presenter Hannah Gelbart met three young people who choose to be sober for some alcohol-free drinks to find out more."
+    },
+    "investigating": {
+      "meaning": "调查",
+      "sentence": "Well, the BBC World Service podcast What in the World have been investigating this."
     },
     "societal pressure": {
-      "translation": "feeling that you should do something because lots of other people expect you to",
-      "source": "official"
+      "meaning": "社会压力",
+      "sentence": "So, Daniel says that when he was younger, he felt societal pressure to drink alcohol."
+    },
+    "norm": {
+      "meaning": "常态",
+      "sentence": "Right. So, Daniel says drinking was the norm at university and after work."
+    },
+    "socialise": {
+      "meaning": "社交",
+      "sentence": "But during the Covid-19 pandemic, when people in the UK were unable to socialise and visit pubs and bars, Daniel's attitude to alcohol changed."
+    },
+    "social media": {
+      "meaning": "社交媒体",
+      "sentence": "But still, Millie thinks there's a pushback against self-optimisation content. Pushback means a criticism of the content, and people are pushing back by doing the opposite. For example, lots of celebrities post about themselves drinking and smoking."
+    },
+    "self-optimisation": {
+      "meaning": "自我优化",
+      "sentence": "I think we had this, like, rise of self-optimisation content."
+    },
+    "touted": {
+      "meaning": "宣扬",
+      "sentence": "And, you know, for many of us, that's probably not our reality with not drinking. It's that we do it to feel a bit more sane or, you know, things like that. And so, I think now we are entering this, like, almost pushback era of that content and you're seeing celebrities... Like, it's not just alcohol – you're seeing more celebrities smoking and, like, posting that on their Instagram and not worrying if it's brand-friendly."
+    },
+    "fitness": {
+      "meaning": "健身",
+      "sentence": "They argue we're too worried about fitness and wellness, and that drinking some alcohol to have a good time is fine."
+    },
+    "wellness": {
+      "meaning": "健康",
+      "sentence": "They argue we're too worried about fitness and wellness, and that drinking some alcohol to have a good time is fine."
+    },
+    "pushback": {
+      "meaning": "反对",
+      "sentence": "But still, Millie thinks there's a pushback against self-optimisation content."
+    },
+    "celebrities": {
+      "meaning": "名人",
+      "sentence": "For example, lots of celebrities post about themselves drinking and smoking."
+    },
+    "worksheet": {
+      "meaning": "练习册",
+      "sentence": "Once again, our six minutes are up, but don't forget to test what you've learned with the worksheet on our website, bbclearningenglish.com."
+    },
+    "website": {
+      "meaning": "网站",
+      "sentence": "Once again, our six minutes are up, but don't forget to test what you've learned with the worksheet on our website, bbclearningenglish.com."
+    }
+  },
+  "dict": {
+    "unusual": {
+      "translation": "不同寻常的",
+      "source": "context",
+      "context": "不同寻常的",
+      "sentence": "Do you want to hear something quite unusual for me?"
+    },
+    "impressive": {
+      "translation": "令人印象深刻的",
+      "source": "context",
+      "context": "令人印象深刻的",
+      "sentence": "Wow! That is really impressive."
+    },
+    "alcoholic": {
+      "translation": "含酒精的",
+      "source": "context",
+      "context": "含酒精的",
+      "sentence": "I haven't had an alcoholic drink this year."
+    },
+    "cut down": {
+      "translation": "减少",
+      "source": "context",
+      "context": "减少",
+      "sentence": "and we'll be asking, 'Is this the end of British drinking culture?'"
+    },
+    "challenge": {
+      "translation": "挑战",
+      "source": "context",
+      "context": "挑战",
+      "sentence": "but what is the challenge called?"
+    },
+    "answer": {
+      "translation": "答案",
+      "source": "context",
+      "context": "答案",
+      "sentence": "Well, I know the answer to this, but I'm not going to give it away."
+    },
+    "quiz": {
+      "translation": "问答",
+      "source": "context",
+      "context": "问答",
+      "sentence": "OK. Neil, let's start with a quiz question."
+    },
+    "non-drinkers": {
+      "translation": "不喝酒的人",
+      "source": "context",
+      "context": "不喝酒的人",
+      "sentence": "Well, in the UK, surveys suggest that 16 to 24-year-olds are more likely to be non-drinkers than the older generations."
+    },
+    "sober": {
+      "translation": "戒酒的",
+      "source": "context",
+      "context": "戒酒的",
+      "sentence": "After that, he decided to be sober and he hasn't had a drink for about six years."
+    },
+    "bbc world service": {
+      "translation": "BBC世界服务",
+      "source": "context",
+      "context": "BBC世界服务",
+      "sentence": "Presenter Hannah Gelbart met three young people who choose to be sober for some alcohol-free drinks to find out more."
+    },
+    "investigating": {
+      "translation": "调查",
+      "source": "context",
+      "context": "调查",
+      "sentence": "Well, the BBC World Service podcast What in the World have been investigating this."
+    },
+    "societal pressure": {
+      "translation": "社会压力",
+      "source": "context",
+      "context": "社会压力",
+      "sentence": "So, Daniel says that when he was younger, he felt societal pressure to drink alcohol."
+    },
+    "norm": {
+      "translation": "常态",
+      "source": "context",
+      "context": "常态",
+      "sentence": "Right. So, Daniel says drinking was the norm at university and after work."
+    },
+    "socialise": {
+      "translation": "社交",
+      "source": "context",
+      "context": "社交",
+      "sentence": "But during the Covid-19 pandemic, when people in the UK were unable to socialise and visit pubs and bars, Daniel's attitude to alcohol changed."
+    },
+    "social media": {
+      "translation": "社交媒体",
+      "source": "context",
+      "context": "社交媒体",
+      "sentence": "But still, Millie thinks there's a pushback against self-optimisation content. Pushback means a criticism of the content, and people are pushing back by doing the opposite. For example, lots of celebrities post about themselves drinking and smoking."
+    },
+    "self-optimisation": {
+      "translation": "自我优化",
+      "source": "context",
+      "context": "自我优化",
+      "sentence": "I think we had this, like, rise of self-optimisation content."
+    },
+    "touted": {
+      "translation": "宣扬",
+      "source": "context",
+      "context": "宣扬",
+      "sentence": "And, you know, for many of us, that's probably not our reality with not drinking. It's that we do it to feel a bit more sane or, you know, things like that. And so, I think now we are entering this, like, almost pushback era of that content and you're seeing celebrities... Like, it's not just alcohol – you're seeing more celebrities smoking and, like, posting that on their Instagram and not worrying if it's brand-friendly."
+    },
+    "fitness": {
+      "translation": "健身",
+      "source": "context",
+      "context": "健身",
+      "sentence": "They argue we're too worried about fitness and wellness, and that drinking some alcohol to have a good time is fine."
+    },
+    "wellness": {
+      "translation": "健康",
+      "source": "context",
+      "context": "健康",
+      "sentence": "They argue we're too worried about fitness and wellness, and that drinking some alcohol to have a good time is fine."
+    },
+    "pushback": {
+      "translation": "反对",
+      "source": "context",
+      "context": "反对",
+      "sentence": "But still, Millie thinks there's a pushback against self-optimisation content."
+    },
+    "celebrities": {
+      "translation": "名人",
+      "source": "context",
+      "context": "名人",
+      "sentence": "For example, lots of celebrities post about themselves drinking and smoking."
+    },
+    "worksheet": {
+      "translation": "练习册",
+      "source": "context",
+      "context": "练习册",
+      "sentence": "Once again, our six minutes are up, but don't forget to test what you've learned with the worksheet on our website, bbclearningenglish.com."
+    },
+    "website": {
+      "translation": "网站",
+      "source": "context",
+      "context": "网站",
+      "sentence": "Once again, our six minutes are up, but don't forget to test what you've learned with the worksheet on our website, bbclearningenglish.com."
     },
     "the norm": {
       "translation": "the usual or common thing to do",
@@ -215,29 +438,110 @@
       "translation": "praise something or talk about it a lot to get others to try it",
       "source": "official"
     },
-    "pushback": {
-      "translation": "strong criticism of a trend; people doing the opposite of a trend",
-      "source": "official"
+    "cut": {
+      "translation": "减少",
+      "source": "context",
+      "context": "减少",
+      "sentence": "and we'll be asking, 'Is this the end of British drinking culture?'",
+      "phrase": "cut down"
+    },
+    "cutdown": {
+      "translation": "减少",
+      "source": "context",
+      "context": "减少",
+      "sentence": "and we'll be asking, 'Is this the end of British drinking culture?'",
+      "phrase": "cut down"
+    },
+    "down": {
+      "translation": "减少",
+      "source": "context",
+      "context": "减少",
+      "sentence": "and we'll be asking, 'Is this the end of British drinking culture?'",
+      "phrase": "cut down"
+    },
+    "nondrinkers": {
+      "translation": "不喝酒的人",
+      "source": "context",
+      "context": "不喝酒的人",
+      "sentence": "Well, in the UK, surveys suggest that 16 to 24-year-olds are more likely to be non-drinkers than the older generations.",
+      "phrase": "non-drinkers"
+    },
+    "bbc": {
+      "translation": "BBC世界服务",
+      "source": "context",
+      "context": "BBC世界服务",
+      "sentence": "Presenter Hannah Gelbart met three young people who choose to be sober for some alcohol-free drinks to find out more.",
+      "phrase": "bbc world service"
+    },
+    "bbcworldservice": {
+      "translation": "BBC世界服务",
+      "source": "context",
+      "context": "BBC世界服务",
+      "sentence": "Presenter Hannah Gelbart met three young people who choose to be sober for some alcohol-free drinks to find out more.",
+      "phrase": "bbc world service"
+    },
+    "service": {
+      "translation": "BBC世界服务",
+      "source": "context",
+      "context": "BBC世界服务",
+      "sentence": "Presenter Hannah Gelbart met three young people who choose to be sober for some alcohol-free drinks to find out more.",
+      "phrase": "bbc world service"
+    },
+    "world": {
+      "translation": "BBC世界服务",
+      "source": "context",
+      "context": "BBC世界服务",
+      "sentence": "Presenter Hannah Gelbart met three young people who choose to be sober for some alcohol-free drinks to find out more.",
+      "phrase": "bbc world service"
     },
     "pressure": {
-      "translation": "feeling that you should do something because lots of other people expect you to",
-      "source": "official",
+      "translation": "社会压力",
+      "source": "context",
+      "context": "社会压力",
+      "sentence": "So, Daniel says that when he was younger, he felt societal pressure to drink alcohol.",
       "phrase": "societal pressure"
     },
     "societal": {
-      "translation": "feeling that you should do something because lots of other people expect you to",
-      "source": "official",
+      "translation": "社会压力",
+      "source": "context",
+      "context": "社会压力",
+      "sentence": "So, Daniel says that when he was younger, he felt societal pressure to drink alcohol.",
       "phrase": "societal pressure"
     },
     "societalpressure": {
-      "translation": "feeling that you should do something because lots of other people expect you to",
-      "source": "official",
+      "translation": "社会压力",
+      "source": "context",
+      "context": "社会压力",
+      "sentence": "So, Daniel says that when he was younger, he felt societal pressure to drink alcohol.",
       "phrase": "societal pressure"
     },
-    "norm": {
-      "translation": "the usual or common thing to do",
-      "source": "official",
-      "phrase": "the norm"
+    "media": {
+      "translation": "社交媒体",
+      "source": "context",
+      "context": "社交媒体",
+      "sentence": "But still, Millie thinks there's a pushback against self-optimisation content. Pushback means a criticism of the content, and people are pushing back by doing the opposite. For example, lots of celebrities post about themselves drinking and smoking.",
+      "phrase": "social media"
+    },
+    "social": {
+      "translation": "社交媒体",
+      "source": "context",
+      "context": "社交媒体",
+      "sentence": "But still, Millie thinks there's a pushback against self-optimisation content. Pushback means a criticism of the content, and people are pushing back by doing the opposite. For example, lots of celebrities post about themselves drinking and smoking.",
+      "phrase": "social media"
+    },
+    "socialmedia": {
+      "translation": "社交媒体",
+      "source": "context",
+      "context": "社交媒体",
+      "sentence": "But still, Millie thinks there's a pushback against self-optimisation content. Pushback means a criticism of the content, and people are pushing back by doing the opposite. For example, lots of celebrities post about themselves drinking and smoking.",
+      "phrase": "social media"
+    },
+    "selfoptimisation": {
+      "translation": "自我优化",
+      "source": "context",
+      "context": "自我优化",
+      "sentence": "I think we had this, like, rise of self-optimisation content.",
+      "phrase": "self-optimisation"
     },
     "thenorm": {
       "translation": "the usual or common thing to do",
@@ -264,8 +568,8 @@
       "source": "official",
       "phrase": "self-optimisation content"
     },
-    "16": {
-      "translation": "sixteen",
+    "20s": {
+      "translation": "[电话] 阿拉伯埃及共和国电话区位码；(20 的复数)",
       "source": "ecdict"
     },
     "6": {
@@ -273,7 +577,7 @@
       "source": "ecdict"
     },
     "a": {
-      "translation": "第一个字母 A; 一个; 第一的\\r；art. [计] 累加器, 加法器, 地址, 振幅, 模拟, 区域, 面积, 汇编, 组件, 异步",
+      "translation": "第一个字母 A; 一个; 第一的；art. [计] 累加器, 加法器, 地址, 振幅, 模拟, 区域, 面积, 汇编, 组件, 异步",
       "source": "ecdict"
     },
     "about": {
@@ -300,10 +604,6 @@
       "translation": "n. 酒精, 酒；[化] 醇; 乙醇; 酒精",
       "source": "ecdict"
     },
-    "alcoholic": {
-      "translation": "n. 酒鬼, 酒精中毒者；a. 酒精的",
-      "source": "ecdict"
-    },
     "all": {
       "translation": "a. 所有的, 全部的, 一切的；adv. 全部, 全然；pron. 全部；n. 全部",
       "source": "ecdict"
@@ -322,10 +622,6 @@
     },
     "and": {
       "translation": "conj. 和, 与；[计] 与",
-      "source": "ecdict"
-    },
-    "answer": {
-      "translation": "n. 答案, 回答, 回报, 答辩；vt. 回答, 反驳, 适应, 响应, 符合；vi. 回答, 答应, 负责, 符合, 成功；[计] 用户问题及答案新闻组",
       "source": "ecdict"
     },
     "are": {
@@ -384,10 +680,6 @@
       "translation": "n. 马齿龈；（木、金属等的）条；栅栏；酒吧（bar的复数形式）",
       "source": "ecdict"
     },
-    "bbc": {
-      "translation": "英国广播公司",
-      "source": "ecdict"
-    },
     "be": {
       "translation": "v. 是, 表示, 在；[计] 后端, 总线允许",
       "source": "ecdict"
@@ -425,7 +717,7 @@
       "source": "ecdict"
     },
     "c": {
-      "translation": "[计] 调用, 访问, 呼叫, 电容, 进位, 通道, 字符, 清除, 常数, 控制, 周期；[化] 碳的化学符号; 胞苷",
+      "translation": "[计] 调用, 访问, 呼叫；电容, 进位, 通道, 字符, 清除, 常数, 控制, 周期；C 程序设计语言；[化] 碳的化学符号; 胞苷",
       "source": "ecdict"
     },
     "called": {
@@ -440,16 +732,8 @@
       "translation": "n. 伪善之言, 黑话, 斜面, 角落；vi. 讲黑话, 倾斜",
       "source": "ecdict"
     },
-    "celebrities": {
-      "translation": "n. 名誉；名人（celebrity的复数）",
-      "source": "ecdict"
-    },
     "certain": {
       "translation": "a. 确定的, 某一个的, 必然的；[法] 确凿的, 无疑的, 可靠的",
-      "source": "ecdict"
-    },
-    "challenge": {
-      "translation": "n. 挑战, 盘问；vt. 向...挑战, 要求, 怀疑；vi. 挑战, 对(证据等)表示异议",
       "source": "ecdict"
     },
     "change": {
@@ -496,10 +780,6 @@
       "translation": "n. 文化, 修养, 耕种；vt. 耕种, 培养",
       "source": "ecdict"
     },
-    "cut": {
-      "translation": "n. 切口, 割伤, 降低, 切, 割, 砍, 削, 伤口, 削减, 缩短, 删节, 通路；a. 经切割的, 缩减的；vt. 切, 割, 减少, 刺痛, 开辟, 雕刻, 删节, 缩短, 停止, 排斥, 切断, 关, 显出；vi. 切, 割, 砍, 刺痛, 相交, 抄近路, 剪辑；[计] 剪切",
-      "source": "ecdict"
-    },
     "daniel": {
       "translation": "n. 丹尼尔（男子名）",
       "source": "ecdict"
@@ -528,6 +808,10 @@
       "translation": "v. 做, 进行, 完成",
       "source": "ecdict"
     },
+    "doesnt": {
+      "translation": "short. does not；[网络] 苹果熊",
+      "source": "ecdict"
+    },
     "doing": {
       "translation": "n. 行为, 活动",
       "source": "ecdict"
@@ -536,8 +820,8 @@
       "translation": "a. 完成了的, 好了的；do的过去分词",
       "source": "ecdict"
     },
-    "down": {
-      "translation": "a. 向下的；adv. 下, 下去, 降下；prep. 往下, 沿着；n. 丘陵, 软毛, 开阔的高地；[计] 向下, 退下命令",
+    "dont": {
+      "translation": "short. do not；[网络] 不要；别；追上我",
       "source": "ecdict"
     },
     "drink": {
@@ -644,10 +928,6 @@
       "translation": "n. 适宜, 合身, 发作, 痉挛；a. 适宜的, 对的, 准备好的；vt. 适合, 安装, 使合身, 使适应, 使合格；vi. 适合, 符合, 合身；[计] 非特",
       "source": "ecdict"
     },
-    "fitness": {
-      "translation": "n. 适合, 合宜, 合理, 恰当, 健康；[医] 适合性, 适应性",
-      "source": "ecdict"
-    },
     "for": {
       "translation": "prep. 为, 因为, 至于；conj. 因为；[计] DOS批处理命令:对一组参数重复执行指定的命令",
       "source": "ecdict"
@@ -740,8 +1020,16 @@
       "translation": "n. 汉娜（女子名）",
       "source": "ecdict"
     },
+    "hasnt": {
+      "translation": "short. has not",
+      "source": "ecdict"
+    },
     "have": {
       "translation": "vt. 有, 怀有, 拿, 进行；aux. 已经",
+      "source": "ecdict"
+    },
+    "havent": {
+      "translation": "short. have not；[网络] 不必；不需",
       "source": "ecdict"
     },
     "having": {
@@ -792,10 +1080,6 @@
       "translation": "[计] 中断屏蔽, 指令存储器",
       "source": "ecdict"
     },
-    "impressive": {
-      "translation": "a. 给人深刻印象的, 威严的",
-      "source": "ecdict"
-    },
     "in": {
       "translation": "prep. 在...期间, 在...之内, 处于...之中, 从事于, 按照, 穿着；adv. 进入, 朝里, 在里面, 在屋里；a. 在里面的, 在朝的；n. 执政者, 交情",
       "source": "ecdict"
@@ -806,10 +1090,6 @@
     },
     "instagram": {
       "translation": "一款图片分享应用",
-      "source": "ecdict"
-    },
-    "investigating": {
-      "translation": "[法] 调查, 调查研究, 审查",
       "source": "ecdict"
     },
     "is": {
@@ -918,10 +1198,6 @@
     },
     "means": {
       "translation": "n. 方法, 手段, 工具, 财产, 收入；[经] 方法, 手段, 工具; 意谓",
-      "source": "ecdict"
-    },
-    "media": {
-      "translation": "n. 媒体；[计] 媒质",
       "source": "ecdict"
     },
     "met": {
@@ -1100,10 +1376,6 @@
       "translation": "adv. 相当, 完全, 十分",
       "source": "ecdict"
     },
-    "quiz": {
-      "translation": "n. 考查, 课堂测验, 恶作剧, 智力测验；vt. 戏弄, 考查, 恶作剧",
-      "source": "ecdict"
-    },
     "reality": {
       "translation": "n. 实在, 事实, 实体, 逼真；[法] 现实, 实在存在的事物, 实在性",
       "source": "ecdict"
@@ -1164,10 +1436,6 @@
       "translation": "v. 好像, 仿佛（ seem的第三人称单数 ）",
       "source": "ecdict"
     },
-    "service": {
-      "translation": "n. 服务, 贡献, 雇佣, 公职, 服役, 功劳, 仪式, 送达, 行政部门；vt. 保养, 维修；a. 武装部队的, 服务性的, 仆人的, 耐用的；[计] 服务, 业务",
-      "source": "ecdict"
-    },
     "share": {
       "translation": "n. 部分, 参与, 一份, 参股, 份额；vt. 均分, 分担, 分享, 分配, 共有；vi. 分享；[计] 共享; DOS外部命令:在网络或多工系统中提供文件共享；文件锁定及检测磁盘更动和对超过32MB硬盘分区的支持",
       "source": "ecdict"
@@ -1190,14 +1458,6 @@
     },
     "sobriety": {
       "translation": "n. 节制饮酒, 戒酒, 节制, 一本正经, 庄重",
-      "source": "ecdict"
-    },
-    "social": {
-      "translation": "a. 社会的, 群居的, 社交的；n. 联欢会",
-      "source": "ecdict"
-    },
-    "socialise": {
-      "translation": "vt. 使社会化, 使社会主义化, 使适合社会需要；vi. (美)(非正式)参加社交活动, 发生社交往来",
       "source": "ecdict"
     },
     "some": {
@@ -1284,6 +1544,10 @@
       "translation": "a. 那, 那个；conj. 以致, 因为；pron. 那；adv. 那么, 那样",
       "source": "ecdict"
     },
+    "thats": {
+      "translation": "[网络] 太诱；颜嘉良；那个……挺……的",
+      "source": "ecdict"
+    },
     "the": {
       "translation": "art. 那",
       "source": "ecdict"
@@ -1352,10 +1616,6 @@
       "translation": "adv. 也, 非常, 太",
       "source": "ecdict"
     },
-    "touted": {
-      "translation": "v. 兜售( tout的过去式和过去分词 ); 招揽; 侦查; 探听赛马情报",
-      "source": "ecdict"
-    },
     "touts": {
       "translation": "n. 招徕( tout的名词复数 ); （音乐会、体育比赛等的）卖高价票的人; 侦查者; 探听赛马的情报；v. 兜售( tout的第三人称单数 ); 招揽; 侦查; 探听赛马情报",
       "source": "ecdict"
@@ -1394,10 +1654,6 @@
     },
     "until": {
       "translation": "prep. 直到, 在...以前；conj. 直到...时, 在...以前",
-      "source": "ecdict"
-    },
-    "unusual": {
-      "translation": "a. 不寻常的, 罕见的, 与众不同的",
       "source": "ecdict"
     },
     "up": {
@@ -1452,10 +1708,6 @@
       "translation": "pron. 我们",
       "source": "ecdict"
     },
-    "website": {
-      "translation": "n. 网站（全球资讯网的主机站）",
-      "source": "ecdict"
-    },
     "weekend": {
       "translation": "n. 周末, 周末休假",
       "source": "ecdict"
@@ -1470,10 +1722,6 @@
     },
     "well": {
       "translation": "n. 井, 泉水, 源泉, 好；v. 涌出；a. 健康的, 良好的, 适宜的, 恰当的；adv. 很好地, 适当地, 好意地, 很, 完全；interj. 好啦",
-      "source": "ecdict"
-    },
-    "wellness": {
-      "translation": "n. 健康",
       "source": "ecdict"
     },
     "were": {
@@ -1524,14 +1772,6 @@
       "translation": "n. 工作, 劳动, 职业, 行为, 功, 作品, 成果, 产品, 工程；vi. 工作, 劳动, 做, 运转, 起作用, 被加工；vt. 使工作, 使转动, 开动, 使用, 经营, 使逐渐变得, 造成",
       "source": "ecdict"
     },
-    "worksheet": {
-      "translation": "[计] 工作表；[化] 工作单; 加工单",
-      "source": "ecdict"
-    },
-    "world": {
-      "translation": "n. 世界, 地球, 宇宙, 万物, 世人, 人间, 领域, 世事, 世故, 社会生活, 大量；[法] 世界, 地球, 世人",
-      "source": "ecdict"
-    },
     "worried": {
       "translation": "a. 担心的, 闷闷不乐的",
       "source": "ecdict"
@@ -1578,6 +1818,14 @@
     },
     "younger": {
       "translation": "n. 年纪较小者；a. 较年轻的",
+      "source": "ecdict"
+    },
+    "youre": {
+      "translation": "short. you are；[网络] 你不在了",
+      "source": "ecdict"
+    },
+    "youve": {
+      "translation": "short. you have",
       "source": "ecdict"
     }
   }
