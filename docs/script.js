@@ -215,45 +215,49 @@ function speakViaTts(cleaned) {
     speechSynthesis.speak(utterance);
 }
 
-function getWordAudio(cleaned) {
-    // 返回 Promise<HTMLAudioElement | null>；404 会缓存 null，之后直接走 TTS 兜底
-    if (audioCache.has(cleaned)) {
-        return Promise.resolve(audioCache.get(cleaned));
-    }
-    return new Promise((resolve) => {
-        const audio = new Audio();
-        audio.preload = "auto";
-        audio.addEventListener("canplaythrough", () => {
-            audioCache.set(cleaned, audio);
-            resolve(audio);
-        }, { once: true });
-        audio.addEventListener("error", () => {
-            audioCache.set(cleaned, null);
-            resolve(null);
-        }, { once: true });
-        audio.src = `${AUDIO_BASE}/${encodeURIComponent(cleaned)}.mp3`;
-        audio.load();
-    });
+function primeAudio(cleaned) {
+    // 为该词建一个加载中的 Audio 元素（preload=auto 即开始后台下载）；
+    // 404 时 error 事件把缓存改写为 null，之后直接走 TTS 兜底
+    const audio = new Audio();
+    audio.preload = "auto";
+    audio.addEventListener("error", () => audioCache.set(cleaned, null), { once: true });
+    audio.src = `${AUDIO_BASE}/${encodeURIComponent(cleaned)}.mp3`;
+    audioCache.set(cleaned, audio);
+    audio.load();
+    return audio;
 }
 
 async function speakWord(word) {
     const cleaned = cleanWord(word);
     if (!cleaned) return;
-    const audio = await getWordAudio(cleaned);
-    if (audio) {
-        audio.currentTime = 0;
-        audio.play().catch(() => speakViaTts(cleaned)); // 自动播放策略等异常时兜底
+    const cached = audioCache.get(cleaned);
+    if (cached === null) {
+        // 已知无烘焙音频（构建期生成失败/缺失）
+        speakViaTts(cleaned);
         return;
     }
-    speakViaTts(cleaned);
+    const audio = cached instanceof HTMLAudioElement ? cached : primeAudio(cleaned);
+    try {
+        audio.currentTime = 0;
+        // 直接 play()：流式起播，首字节到达即出声——不等 canplaythrough，
+        // 否则冷启动时（国内访问 github.io 带宽差）要等整个文件下载完才发声
+        await audio.play();
+    } catch (e) {
+        // 404 / 加载失败 / 自动播放策略限制 → 浏览器 TTS 兜底
+        speakViaTts(cleaned);
+    }
 }
 
-function prefetchNextWordAudio() {
-    // 预加载下一个单词的音频，完词时接近零等待
-    if (currentWordIndex >= originalWords.length) return;
-    const next = cleanWord(originalWords[currentWordIndex]);
-    if (next && !audioCache.has(next)) {
-        getWordAudio(next);
+function prefetchUpcomingAudio(count = 8) {
+    // 预取接下来 count 个未缓存的词：单个词的冷下载最坏可达数秒，
+    // 只预取下一个词会被打字速度追上；窗口化预取让慢速下载有时间提前完成
+    let need = count;
+    for (let i = currentWordIndex; i < originalWords.length && need > 0; i++) {
+        const w = cleanWord(originalWords[i]);
+        if (w && !audioCache.has(w)) {
+            primeAudio(w);
+            need--;
+        }
     }
 }
 
@@ -372,7 +376,7 @@ async function loadEpisode(episodeId, startIndex = null) {
         clearWordResult();
         renderOriginalText();
         renderEpisodeMeta(currentEpisode, currentWordIndex, originalWords.length);
-        prefetchNextWordAudio();
+        prefetchUpcomingAudio();
         typingInput.focus();
     } catch (error) {
         console.error("加载节目失败:", error);
@@ -415,7 +419,7 @@ typingInput.addEventListener("input", (e) => {
         speakWord(completedWord);
         renderWordResult(completedWord);
         pronounceButton.disabled = false;
-        prefetchNextWordAudio();
+        prefetchUpcomingAudio();
 
         if (currentWordIndex >= originalWords.length) {
             resultWordSpan.textContent = "恭喜你！";

@@ -56,6 +56,9 @@ def main() -> int:
         page.select_option("#episode-selector", "261029")
         page.click("#load-episode-btn")
         page.wait_for_selector(".current-word", timeout=5000)
+        page.wait_for_timeout(500)
+        audio_reqs = {u for u in seen_requests if "/data/audio/" in u}
+        check("加载节目即窗口化预取音频（≥5 词）", len(audio_reqs) >= 5, f"{len(audio_reqs)} 个: {sorted(audio_reqs)[:3]}")
         first_word = page.text_content(".current-word")
         check("transcript 已渲染且首词高亮", first_word == "Hi", f"首词={first_word!r}")
         meta = page.text_content("#episode-meta")

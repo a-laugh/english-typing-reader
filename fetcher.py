@@ -14,6 +14,7 @@ BBC 每周四更新一期，默认滚动窗口 30 天（在架约 4-5 期），
 """
 
 import argparse
+import ast
 import asyncio
 import json
 import os
@@ -293,20 +294,44 @@ def generate_context_glossary(transcript: str, api_key: str) -> dict:
             return glossary
         except Exception as e:
             log(f"GLM 语境词表第 {attempt} 次尝试失败: {e}")
+            if isinstance(e, ValueError) or isinstance(e, json.JSONDecodeError):
+                # 解析失败时留一小段原始输出，方便从 Actions 日志定位模型行为
+                raw = content if isinstance(content, str) else str(content)
+                log(f"GLM 原始输出前 200 字符: {raw[:200]!r}")
     return {}
 
 
 def _parse_json_block(text: str):
-    """容错提取 LLM 输出中的 JSON（可能被 ```json 包裹或夹带说明文字）。"""
+    """容错提取 LLM 输出中的 JSON。
+
+    依次尝试：剥掉 ```json 围栏后的整段 → 截取首尾大括号之间；
+    每个候选先 json.loads，失败再 ast.literal_eval——
+    模型偶尔无视提示输出单引号的 Python 风格字典（实测 glm-4-flash 出现过），
+    literal_eval 恰好能解析该格式（纯字面量、无代码执行，安全），也容忍尾逗号。
+    """
+    def parse(candidate: str):
+        try:
+            return json.loads(candidate)
+        except json.JSONDecodeError:
+            pass
+        try:
+            return ast.literal_eval(candidate)
+        except (ValueError, SyntaxError):
+            pass
+        raise ValueError("无法解析为 JSON/Python 字面量")
+
     text = re.sub(r"^```(?:json)?\s*|\s*```$", "", text.strip(), flags=re.MULTILINE)
-    try:
-        return json.loads(text)
-    except json.JSONDecodeError:
-        pass
+    candidates = [text]
     start, end = text.find("{"), text.rfind("}")
-    if start == -1 or end <= start:
-        raise ValueError("输出中找不到 JSON 对象")
-    return json.loads(text[start : end + 1])
+    if start != -1 and end > start:
+        candidates.append(text[start : end + 1])
+    last_error = None
+    for candidate in candidates:
+        try:
+            return parse(candidate)
+        except ValueError as e:
+            last_error = e
+    raise ValueError(f"输出中找不到可解析的 JSON 对象（{last_error}）")
 
 
 # ---------------------------------------------------------------------------

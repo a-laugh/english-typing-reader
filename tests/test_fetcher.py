@@ -124,6 +124,29 @@ def test_parse_json_block_variants():
     assert fetcher._parse_json_block('结果如下：{"a": 1} 请查收') == {"a": 1}
 
 
+def test_parse_json_block_single_quoted_python_repr():
+    """实测（2026-11 Actions 运行）：glm-4-flash 偶尔无视提示输出
+    单引号 Python 风格字典，json.loads 报
+    "Expecting property name enclosed in double quotes: line 1 column 2"。
+    降级链必须能用 ast.literal_eval 解回。"""
+    raw = "{'inhabit': {'meaning': '（大量人）居住在', 'sentence': 'inhabit hospitals'}, 'the grid': {\"meaning\": '电网', 'sentence': 'the grid'}}"
+    assert fetcher._parse_json_block(raw) == {
+        "inhabit": {"meaning": "（大量人）居住在", "sentence": "inhabit hospitals"},
+        "the grid": {"meaning": "电网", "sentence": "the grid"},
+    }
+
+
+def test_parse_json_block_trailing_comma():
+    # Python 字面量容忍尾逗号（json 不容忍）
+    assert fetcher._parse_json_block('{"a": {"m": "x",},}') == {"a": {"m": "x"}}
+
+
+def test_parse_json_block_garbage_raises():
+    import pytest as _pytest
+    with _pytest.raises(ValueError):
+        fetcher._parse_json_block("完全不是结构化输出的文本")
+
+
 def test_bake_word_dict_priority_and_alias():
     episode = {
         "transcript": "The grid supplies power. Life-saving machines inhabit hospitals.",
