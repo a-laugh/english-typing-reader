@@ -22,6 +22,8 @@ let episodeTurns = [];       // 当前剧集回合（或由 transcript 兜底的
 let originalWords = [];      // 全剧集展平的单词流（回合文本按序拼接，与进度下标对应）
 let turnIndexByWord = [];    // 每个词所属的回合下标
 let currentWordIndex = 0;
+let currentWordPos = 0;      // 当前词内已敲到的字母位（清洗序列下标）
+let letterSpans = [];        // 当前词各字母位的 span（与清洗序列一一对应）
 let glossWordIndex = -1;     // 行内翻译跟随的最新完成词，-1 = 无
 
 // DOM 引用
@@ -29,7 +31,7 @@ const episodeSelector = document.getElementById("episode-selector");
 const episodeMeta = document.getElementById("episode-meta");
 const noticeBar = document.getElementById("notice");
 const dialogDisplay = document.getElementById("dialog-display");
-const typingInput = document.getElementById("typing-input");
+const kbdCapture = document.getElementById("kbd-capture");
 const hintCurrent = document.getElementById("hint-current");
 const hintProgress = document.getElementById("hint-progress");
 
@@ -328,6 +330,7 @@ function renderDialog() {
 
     // DOM API + textContent 构建：剧集数据来自外部站点，防存储型 XSS
     const frag = document.createDocumentFragment();
+    letterSpans = []; // 当前词的字母 span 重建（仅当前词有字母级结构）
     let wordIdx = 0;
     episodeTurns.forEach((turn, ti) => {
         const words = turn.text.split(/\s+/).filter(Boolean);
@@ -350,10 +353,27 @@ function renderDialog() {
             const span = document.createElement("span");
             if (gi < currentWordIndex) {
                 span.className = "word-correct";
+                span.textContent = w;
             } else if (gi === currentWordIndex) {
+                // 当前词按字符拆分：字母位映射清洗序列（需键入），标点自动通过（不需敲）
                 span.className = "current-word";
+                let pos = 0;
+                for (const ch of w) {
+                    const chSpan = document.createElement("span");
+                    if (/[a-z0-9]/i.test(ch)) {
+                        chSpan.textContent = ch;
+                        chSpan.dataset.pos = String(pos);
+                        letterSpans.push(chSpan);
+                        pos++;
+                    } else {
+                        chSpan.textContent = ch;
+                        chSpan.className = "ltr-punct";
+                    }
+                    span.appendChild(chSpan);
+                }
+            } else {
+                span.textContent = w;
             }
-            span.textContent = w;
             para.appendChild(span);
             para.appendChild(document.createTextNode(" "));
             if (gi === glossWordIndex) {
@@ -393,7 +413,7 @@ function renderHint() {
     hw.className = "hw";
     hw.textContent = originalWords[currentWordIndex];
     hintCurrent.appendChild(hw);
-    hintCurrent.append("（打完按空格）");
+    hintCurrent.append("（逐字母输入，打错原地重打）");
     hintProgress.textContent = `进度 ${currentWordIndex}/${originalWords.length} 词`;
 }
 
@@ -423,15 +443,14 @@ async function loadEpisode(episodeId, startIndex = null) {
                 ? progress.word_index : 0;
         }
         currentWordIndex = Math.min(start, Math.max(0, originalWords.length - 1));
+        currentWordPos = 0;
         glossWordIndex = currentWordIndex > 0 ? currentWordIndex - 1 : -1;
 
-        typingInput.disabled = false;
-        typingInput.value = "";
         renderDialog();
         renderHint();
         renderEpisodeMeta(currentEpisode);
         prefetchUpcomingAudio();
-        typingInput.focus();
+        focusCapture();
     } catch (error) {
         console.error("加载节目失败:", error);
         showNotice(`节目加载失败（${error.message}）。可能刚过 30 天下线了，请选择其他节目。`);
@@ -439,57 +458,111 @@ async function loadEpisode(episodeId, startIndex = null) {
     }
 }
 
-typingInput.addEventListener("input", (e) => {
-    if (!currentEpisode || originalWords.length === 0) {
-        typingInput.value = "";
-        hintCurrent.textContent = "请先选择节目！";
-        return;
-    }
+// ---------------------------------------------------------------------------
+// 逐字母键盘打字（无输入框）：正确字母变绿前进，打错标红原地重打（重打覆盖，无退格）
+// ---------------------------------------------------------------------------
+
+let errorAudioCtx = null;
+let beepMuted = localStorage.getItem("typelearning:muted") === "1";
+
+function playErrorBeep() {
+    // Web Audio 合成短促低音：零资源文件、离线可用；音频不可用/被静音时静默跳过
+    if (beepMuted) return;
+    try {
+        if (!errorAudioCtx) {
+            const Ctx = window.AudioContext || window.webkitAudioContext;
+            if (!Ctx) return;
+            errorAudioCtx = new Ctx();
+        }
+        if (errorAudioCtx.state === "suspended") {
+            errorAudioCtx.resume().catch(() => {});
+        }
+        const t = errorAudioCtx.currentTime;
+        const osc = errorAudioCtx.createOscillator();
+        const gain = errorAudioCtx.createGain();
+        osc.type = "square";
+        osc.frequency.value = 180;
+        gain.gain.setValueAtTime(0.06, t);
+        gain.gain.exponentialRampToValueAtTime(0.0001, t + 0.09);
+        osc.connect(gain).connect(errorAudioCtx.destination);
+        osc.start(t);
+        osc.stop(t + 0.1);
+    } catch (e) { /* 提示音失败不影响打字 */ }
+}
+
+function focusCapture() {
+    if (kbdCapture) kbdCapture.focus({ preventScroll: true });
+}
+
+function completeCurrentWord() {
+    const completedWord = originalWords[currentWordIndex];
+    currentWordIndex++;
+    currentWordPos = 0;
+    glossWordIndex = currentWordIndex - 1; // 行内翻译跟随最新完成的词
+    renderDialog();
+    renderHint();
+
+    speakWord(completedWord);
+    prefetchUpcomingAudio();
+
     if (currentWordIndex >= originalWords.length) {
-        typingInput.disabled = true;
-        return;
+        glossWordIndex = -1;
+        renderDialog();
+        writeProgress(currentEpisode.id, currentWordIndex, true);
+    } else {
+        writeProgress(currentEpisode.id, currentWordIndex);
     }
+    renderEpisodeMeta(currentEpisode);
+}
 
-    const typedInput = e.target.value;
-    const currentTargetWord = originalWords[currentWordIndex];
-    const cleanedTargetWord = cleanWord(currentTargetWord);
-    const cleanedTypedInput = cleanWord(typedInput);
-
-    const isWordEnded = typedInput.endsWith(" ") || typedInput.endsWith("\n") ||
-                        typedInput.endsWith(".") || typedInput.endsWith(",") ||
-                        typedInput.endsWith("?") || typedInput.endsWith("!") ||
-                        typedInput.endsWith(";") || typedInput.endsWith(":");
-
-    if (isWordEnded && cleanedTypedInput === cleanedTargetWord) {
-        typingInput.classList.add("correct-input-border");
-        typingInput.classList.remove("incorrect-input-border");
-
-        const completedWord = currentTargetWord;
+function handleLetter(ch) {
+    if (!currentEpisode || originalWords.length === 0) return;
+    if (currentWordIndex >= originalWords.length) return;
+    const target = cleanWord(originalWords[currentWordIndex]);
+    if (!target) {
+        // 清洗后为空的词元（纯标点等）：直接跳过，不可打
         currentWordIndex++;
-        typingInput.value = "";
-        glossWordIndex = currentWordIndex - 1; // 行内翻译跟随最新完成的词
+        currentWordPos = 0;
         renderDialog();
         renderHint();
-
-        speakWord(completedWord);
-        prefetchUpcomingAudio();
-
-        if (currentWordIndex >= originalWords.length) {
-            glossWordIndex = -1;
-            renderDialog();
-            typingInput.disabled = true;
-            writeProgress(currentEpisode.id, currentWordIndex, true);
-        } else {
-            writeProgress(currentEpisode.id, currentWordIndex);
-        }
-        renderEpisodeMeta(currentEpisode);
-    } else if (cleanedTypedInput === cleanedTargetWord.substring(0, cleanedTypedInput.length)) {
-        typingInput.classList.remove("incorrect-input-border");
-        typingInput.classList.remove("correct-input-border");
-    } else {
-        typingInput.classList.add("incorrect-input-border");
-        typingInput.classList.remove("correct-input-border");
+        return;
     }
+    if (currentWordPos >= target.length) return; // 完词重绘间隙的迟到按键
+
+    if (ch === target[currentWordPos]) {
+        const span = letterSpans[currentWordPos];
+        if (span) {
+            span.classList.remove("letter-bad");
+            span.classList.add("letter-ok");
+        }
+        currentWordPos++;
+        if (currentWordPos >= target.length) {
+            completeCurrentWord();
+        }
+    } else {
+        const span = letterSpans[currentWordPos];
+        if (span) span.classList.add("letter-bad");
+        playErrorBeep();
+    }
+}
+
+document.addEventListener("keydown", (e) => {
+    // 剧集选择器聚焦时保留原生按键行为（字母跳选项等）
+    if (e.target && e.target.id === "episode-selector") return;
+    if (e.ctrlKey || e.metaKey || e.altKey) return;
+    if (e.key === " ") {
+        e.preventDefault(); // 防页面滚动
+        return;
+    }
+    if (e.key.length !== 1 || !/[a-z0-9]/i.test(e.key)) return;
+    e.preventDefault();
+    handleLetter(e.key.toLowerCase());
+});
+
+// 点击页面任意处重新聚焦捕获输入（手机软键盘）；选择器与链接除外
+document.addEventListener("click", (e) => {
+    if (e.target.closest("#episode-selector") || e.target.closest("a")) return;
+    focusCapture();
 });
 
 episodeSelector.addEventListener("change", () => {
@@ -505,6 +578,21 @@ episodeSelector.addEventListener("change", () => {
 // ---------------------------------------------------------------------------
 
 async function init() {
+    // 错误提示音开关（存 localStorage）
+    const muteToggle = document.createElement("span");
+    muteToggle.id = "mute-toggle";
+    muteToggle.title = "打错提醒音开关";
+    const renderMuteState = () => {
+        muteToggle.textContent = beepMuted ? "🔇 提示音关" : "🔊 提示音";
+    };
+    renderMuteState();
+    muteToggle.addEventListener("click", () => {
+        beepMuted = !beepMuted;
+        localStorage.setItem("typelearning:muted", beepMuted ? "1" : "0");
+        renderMuteState();
+    });
+    document.querySelector(".app-footer").appendChild(muteToggle);
+
     if (!window.speechSynthesis) {
         console.warn("当前浏览器不支持语音合成（Web Speech API），音频缺失的词将无法发音。");
     } else {

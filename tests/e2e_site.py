@@ -67,33 +67,38 @@ def main() -> int:
         hint = page.text_content("#hint-progress")
         check("提示行显示进度", "0/" in hint, hint)
         check("BBC 原文链接存在", page.eval_on_selector("#episode-meta a", "a => a.href").endswith("ep-261029"))
+        check("无可见输入框（隐藏键盘捕获存在）", page.locator("#kbd-capture").count() == 1
+              and page.eval_on_selector("#kbd-capture", "el => getComputedStyle(el).opacity === '0'"))
         page.screenshot(path=str(SHOTS / "t2_loaded.png"))
 
-        # 正确输入第一个词 "Hi"（以空格结束）
-        page.fill("#typing-input", "Hi ")
+        # 逐字母敲第一个词 "Hi"（清洗序列 hi，无需空格/标点）
+        page.click("#dialog-display")
+        page.keyboard.type("hi")
         page.wait_for_function(
             "() => document.querySelectorAll('.word-correct').length === 1", timeout=3000
         )
-        check("正确完词后前进（1 词标绿）", True)
+        check("逐字母正确完词后前进（1 词标绿）", True)
         check("完词播放的是构建期烘焙音频", any(u.endswith("data/audio/hi.mp3") for u in seen_requests),
               str([u for u in seen_requests if "audio" in u][:3]))
         check("烘焙音频文件在架", (ROOT / "docs" / "data" / "audio" / "hi.mp3").is_file())
         gloss = page.text_content("#dialog-display .gloss")
         check("行内翻译紧跟完成的词", gloss and any(k in gloss for k in ("你好", "喂", "嗨", "问候")), gloss)
 
-        # 正确输入第二个词 "Neil."（词尾标点，无需输入标点）
-        page.fill("#typing-input", "neil ")
+        # 打错 → 字母标红、原地不动；重打正确 → 变绿前进（词 "Neil." → neil）
+        page.keyboard.type("x")
+        page.wait_for_selector(".letter-bad", timeout=3000)
+        bad_stays = page.eval_on_selector_all(".word-correct", "els => els.length") == 1
+        check("打错字母标红且不前进", bad_stays)
+        page.keyboard.type("n")
+        page.wait_for_function("() => !document.querySelector('.letter-bad')", timeout=3000)
+        check("原地重打正确后红变绿", True)
+        page.keyboard.type("eil")
         page.wait_for_function(
             "() => document.querySelectorAll('.word-correct').length === 2", timeout=3000
         )
-        check("第二词完成后累计 2 词标绿", True)
+        check("第二词完成后累计 2 词标绿（标点自动通过）", True)
         gloss_count = page.eval_on_selector_all("#dialog-display .gloss", "els => els.length")
         check("行内翻译只跟随最新完成的词（唯一）", gloss_count == 1, f"gloss 数={gloss_count}")
-
-        # 错误输入 → 红框
-        page.fill("#typing-input", "xyz")
-        page.wait_for_selector("#typing-input.incorrect-input-border", timeout=3000)
-        check("输错前缀时输入框变红", True)
         page.screenshot(path=str(SHOTS / "t3_typing.png"))
 
         print("== T3 刷新后自动续读（localStorage 进度） ==")
@@ -113,7 +118,8 @@ def main() -> int:
         meta2 = page.text_content("#episode-meta")
         check("meta 栏切换为新剧集日期", "2026-10-22" in meta2, meta2)
         # 完成一个词，制造 261022 的进度，供 T5 模拟过期
-        page.fill("#typing-input", "hi ")
+        page.click("#dialog-display")
+        page.keyboard.type("hi")
         page.wait_for_selector(".word-correct", timeout=3000)
         check("第二剧集可正常完词", True)
 

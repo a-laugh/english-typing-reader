@@ -549,7 +549,8 @@ def clean_word(token: str) -> str:
 def bake_word_dict(episode: dict, ecdict: tuple[Path, str] | None) -> dict:
     """合并三层来源，产出全篇逐词词典 {word: {translation, context?, sentence?, source}}。
 
-    优先级：官方词汇表 > GLM 语境词表 > ECDICT。
+    优先级：GLM 语境词表 > 官方词汇表 > ECDICT（用户指定：语境解释最优先，
+    官方英文释义次之，最后才查词典）。
     官方词汇表/语境词表中的短语（如 the grid）会额外为非虚词成分建索引。
     """
     baked: dict = {}
@@ -565,9 +566,6 @@ def bake_word_dict(episode: dict, ecdict: tuple[Path, str] | None) -> dict:
             entry["sentence"] = sentence
         baked[key] = entry
 
-    for item in episode.get("vocabulary", []):
-        put(item["word"], "official", translation=item.get("definition", ""))
-
     for word, info in episode.get("context_glossary", {}).items():
         if not isinstance(info, dict):
             continue
@@ -578,6 +576,9 @@ def bake_word_dict(episode: dict, ecdict: tuple[Path, str] | None) -> dict:
             context=str(info.get("meaning", "")),
             sentence=str(info.get("sentence", "")),
         )
+
+    for item in episode.get("vocabulary", []):
+        put(item["word"], "official", translation=item.get("definition", ""))
 
     # 短语成分索引（the grid -> grid）与连字符索引（life-saving -> lifesaving），
     # 只补尚未覆盖的词；前端按空白分词，永远拿不到含空格的短语键，必须靠别名。

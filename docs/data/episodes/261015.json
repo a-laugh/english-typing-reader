@@ -232,30 +232,6 @@
     }
   },
   "dict": {
-    "asset": {
-      "translation": "something of financial value that can be sold for money",
-      "source": "official"
-    },
-    "safe haven": {
-      "translation": "something or somewhere protected from harm or loss",
-      "source": "official"
-    },
-    "out of thin air": {
-      "translation": "from nothing or nowhere",
-      "source": "official"
-    },
-    "alchemy": {
-      "translation": "ancient study combining elements of chemistry and mysticism, which attempted to do impossible things like transforming ordinary metals into gold",
-      "source": "official"
-    },
-    "ethereal": {
-      "translation": "seemingly unreal",
-      "source": "official"
-    },
-    "a hankering for": {
-      "translation": "a strong desire for",
-      "source": "official"
-    },
     "valuable": {
       "translation": "有价值的",
       "source": "context",
@@ -279,6 +255,12 @@
       "source": "context",
       "context": "伪造的",
       "sentence": "It can't be created and fabricated out of thin air through alchemy."
+    },
+    "alchemy": {
+      "translation": "炼金术",
+      "source": "context",
+      "context": "炼金术",
+      "sentence": "Alchemy is an ancient kind of chemistry that attempted to do impossible things, like turn ordinary metals into gold."
     },
     "underlying": {
       "translation": "根本的",
@@ -310,51 +292,33 @@
       "context": "总结",
       "sentence": "Let's recap the vocabulary we learnt in this programme, starting with asset."
     },
+    "ethereal": {
+      "translation": "空灵的，非物质的",
+      "source": "context",
+      "context": "空灵的，非物质的",
+      "sentence": "And in this ethereal world, people have a hankering for something that's solid and real, like gold."
+    },
     "hankering": {
       "translation": "渴望",
       "source": "context",
       "context": "渴望",
       "sentence": "And the expression a hankering for means a strong desire for something."
     },
-    "haven": {
+    "asset": {
+      "translation": "something of financial value that can be sold for money",
+      "source": "official"
+    },
+    "safe haven": {
       "translation": "something or somewhere protected from harm or loss",
-      "source": "official",
-      "phrase": "safe haven"
+      "source": "official"
     },
-    "safe": {
-      "translation": "something or somewhere protected from harm or loss",
-      "source": "official",
-      "phrase": "safe haven"
-    },
-    "safehaven": {
-      "translation": "something or somewhere protected from harm or loss",
-      "source": "official",
-      "phrase": "safe haven"
-    },
-    "air": {
+    "out of thin air": {
       "translation": "from nothing or nowhere",
-      "source": "official",
-      "phrase": "out of thin air"
+      "source": "official"
     },
-    "out": {
-      "translation": "from nothing or nowhere",
-      "source": "official",
-      "phrase": "out of thin air"
-    },
-    "outofthinair": {
-      "translation": "from nothing or nowhere",
-      "source": "official",
-      "phrase": "out of thin air"
-    },
-    "thin": {
-      "translation": "from nothing or nowhere",
-      "source": "official",
-      "phrase": "out of thin air"
-    },
-    "ahankeringfor": {
+    "a hankering for": {
       "translation": "a strong desire for",
-      "source": "official",
-      "phrase": "a hankering for"
+      "source": "official"
     },
     "store": {
       "translation": "价值储存",
@@ -404,6 +368,46 @@
       "context": "历史最高点",
       "sentence": "So, what's going on? Well, we mentioned that the price of gold increases in times of crisis because government banks want to buy more of it, and there has been a series of world events that have made government banks want to buy more gold, for example the wars in Ukraine and the Middle East, and in politics too, for example the US imposing tariffs on international products. But since that peak in January, the price has dropped a bit.",
       "phrase": "all-time high"
+    },
+    "haven": {
+      "translation": "something or somewhere protected from harm or loss",
+      "source": "official",
+      "phrase": "safe haven"
+    },
+    "safe": {
+      "translation": "something or somewhere protected from harm or loss",
+      "source": "official",
+      "phrase": "safe haven"
+    },
+    "safehaven": {
+      "translation": "something or somewhere protected from harm or loss",
+      "source": "official",
+      "phrase": "safe haven"
+    },
+    "air": {
+      "translation": "from nothing or nowhere",
+      "source": "official",
+      "phrase": "out of thin air"
+    },
+    "out": {
+      "translation": "from nothing or nowhere",
+      "source": "official",
+      "phrase": "out of thin air"
+    },
+    "outofthinair": {
+      "translation": "from nothing or nowhere",
+      "source": "official",
+      "phrase": "out of thin air"
+    },
+    "thin": {
+      "translation": "from nothing or nowhere",
+      "source": "official",
+      "phrase": "out of thin air"
+    },
+    "ahankeringfor": {
+      "translation": "a strong desire for",
+      "source": "official",
+      "phrase": "a hankering for"
     },
     "6": {
       "translation": "num. six",

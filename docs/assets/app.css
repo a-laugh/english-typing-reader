@@ -148,21 +148,37 @@ html, body {
     font-size: 0.9em;
 }
 
-/* ---- 输入框与提示行 ---- */
-#typing-input {
-    margin: 0.75rem 0 0 0;
-    padding: 0.65rem 0.9rem;
-    font-size: 1.15rem;
+/* ---- 当前词的字母级状态 ---- */
+.letter-ok {
+    color: #1e8e44;
 }
-#typing-input.incorrect-input-border {
-    border-color: #dc3545 !important;
+.letter-bad {
+    color: #ffffff;
+    background-color: #dc3545;
+    border-radius: 3px;
 }
-#typing-input.correct-input-border {
-    border-color: #1e8e44 !important;
+.ltr-punct {
+    opacity: 0.55;
 }
+
+/* 键盘捕获输入：视觉隐藏但保持可聚焦（唤起手机软键盘） */
+#kbd-capture {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    border: none;
+    padding: 0;
+    z-index: -1;
+}
+
+/* ---- 提示行 ---- */
 .app-footer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 1rem;
     margin: 0.4rem 0 0 0;
     font-size: 0.82rem;
@@ -171,6 +187,16 @@ html, body {
 #hint-current .hw {
     color: var(--pico-color);
     font-weight: 600;
+}
+#mute-toggle {
+    cursor: pointer;
+    user-select: none;
+    color: var(--pico-muted-color);
+    text-decoration: none;
+    margin-left: 0.6em;
+}
+#mute-toggle:hover {
+    color: var(--pico-color);
 }
 
 /* 手机：顶栏纵向、对白区占满剩余 */

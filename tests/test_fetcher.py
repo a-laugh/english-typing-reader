@@ -291,14 +291,17 @@ def test_bake_word_dict_priority_and_alias():
         "transcript": "The grid supplies power. Life-saving machines inhabit hospitals.",
         "vocabulary": [{"word": "the grid", "definition": "the electricity network"}],
         "context_glossary": {
-            "inhabit": {"meaning": "（大量人）居住在", "sentence": "inhabit hospitals"}
+            "inhabit": {"meaning": "（大量人）居住在", "sentence": "inhabit hospitals"},
+            "the grid": {"meaning": "（国家的）电网", "sentence": "s"},
         },
     }
     baked = fetcher.bake_word_dict(episode, None)
 
-    # 短语本体与成分别名（前端按空白分词，只能查到 grid）
-    assert baked["the grid"]["source"] == "official"
-    assert baked["grid"]["source"] == "official"
+    # 优先级：LLM 语境 > 官方 > 词典（同一词两层都有时语境胜出）
+    assert baked["the grid"]["source"] == "context"
+    assert baked["the grid"]["context"] == "（国家的）电网"
+    # 短语成分别名继承胜出层（前端按空白分词，只能查到 grid）
+    assert baked["grid"]["source"] == "context"
     assert baked["grid"]["phrase"] == "the grid"
     # 连字符别名：前端 cleanWord("life-saving") == "lifesaving"
     assert "lifesaving" not in baked, "无来源覆盖的词不应凭空出现"
@@ -309,15 +312,16 @@ def test_bake_word_dict_priority_and_alias():
     assert baked["inhabit"]["translation"] == "（大量人）居住在"
 
 
-def test_bake_word_dict_official_overrides_context():
+def test_bake_word_dict_context_overrides_official():
+    """用户指定的优先级：同一词 LLM 语境释义覆盖 BBC 官方英文释义。"""
     episode = {
         "transcript": "shading blocks the sun",
         "vocabulary": [{"word": "shading", "definition": "official def"}],
-        "context_glossary": {"shading": {"meaning": "ctx meaning", "sentence": "s"}},
+        "context_glossary": {"shading": {"meaning": "遮阳", "sentence": "s"}},
     }
     baked = fetcher.bake_word_dict(episode, None)
-    assert baked["shading"]["source"] == "official"
-    assert baked["shading"]["translation"] == "official def"
+    assert baked["shading"]["source"] == "context"
+    assert baked["shading"]["translation"] == "遮阳"
 
 
 def test_bake_word_dict_alias_order_deterministic():

@@ -320,30 +320,6 @@
     }
   },
   "dict": {
-    "sober": {
-      "translation": "not drinking alcohol or taking recreational drugs",
-      "source": "official"
-    },
-    "societal pressure": {
-      "translation": "feeling that you should do something because lots of other people expect you to",
-      "source": "official"
-    },
-    "the norm": {
-      "translation": "the usual or common thing to do",
-      "source": "official"
-    },
-    "self-optimisation content": {
-      "translation": "videos, posts and other media about being fit, healthy and achieving big goals",
-      "source": "official"
-    },
-    "tout": {
-      "translation": "praise something or talk about it a lot to get others to try it",
-      "source": "official"
-    },
-    "pushback": {
-      "translation": "strong criticism of a trend; people doing the opposite of a trend",
-      "source": "official"
-    },
     "unusual": {
       "translation": "不同寻常的",
       "source": "context",
@@ -391,6 +367,12 @@
       "source": "context",
       "context": "可能的",
       "sentence": "Well, in the UK, surveys suggest that 16 to 24-year-olds are more likely to be non-drinkers than the older generations."
+    },
+    "sober": {
+      "translation": "戒酒的",
+      "source": "context",
+      "context": "戒酒的",
+      "sentence": "Well, why are more young people choosing to be sober?"
     },
     "investigating": {
       "translation": "调查",
@@ -482,6 +464,12 @@
       "context": "现实",
       "sentence": "And, you know, for many of us, that's probably not our reality with not drinking."
     },
+    "pushback": {
+      "translation": "反对",
+      "source": "context",
+      "context": "反对",
+      "sentence": "But still, Millie thinks there's a pushback against self-optimisation content."
+    },
     "fitness": {
       "translation": "健身",
       "source": "context",
@@ -518,6 +506,43 @@
       "context": "工作表",
       "sentence": "Once again, our six minutes are up, but don't forget to test what you've learned with the worksheet on our website, bbclearningenglish.com."
     },
+    "societal pressure": {
+      "translation": "feeling that you should do something because lots of other people expect you to",
+      "source": "official"
+    },
+    "the norm": {
+      "translation": "the usual or common thing to do",
+      "source": "official"
+    },
+    "self-optimisation content": {
+      "translation": "videos, posts and other media about being fit, healthy and achieving big goals",
+      "source": "official"
+    },
+    "tout": {
+      "translation": "praise something or talk about it a lot to get others to try it",
+      "source": "official"
+    },
+    "media": {
+      "translation": "社交媒体",
+      "source": "context",
+      "context": "社交媒体",
+      "sentence": "But still, Millie thinks there's a pushback against self-optimisation content.",
+      "phrase": "social media"
+    },
+    "social": {
+      "translation": "社交媒体",
+      "source": "context",
+      "context": "社交媒体",
+      "sentence": "But still, Millie thinks there's a pushback against self-optimisation content.",
+      "phrase": "social media"
+    },
+    "socialmedia": {
+      "translation": "社交媒体",
+      "source": "context",
+      "context": "社交媒体",
+      "sentence": "But still, Millie thinks there's a pushback against self-optimisation content.",
+      "phrase": "social media"
+    },
     "societalpressure": {
       "translation": "feeling that you should do something because lots of other people expect you to",
       "source": "official",
@@ -547,27 +572,6 @@
       "translation": "videos, posts and other media about being fit, healthy and achieving big goals",
       "source": "official",
       "phrase": "self-optimisation content"
-    },
-    "media": {
-      "translation": "社交媒体",
-      "source": "context",
-      "context": "社交媒体",
-      "sentence": "But still, Millie thinks there's a pushback against self-optimisation content.",
-      "phrase": "social media"
-    },
-    "social": {
-      "translation": "社交媒体",
-      "source": "context",
-      "context": "社交媒体",
-      "sentence": "But still, Millie thinks there's a pushback against self-optimisation content.",
-      "phrase": "social media"
-    },
-    "socialmedia": {
-      "translation": "社交媒体",
-      "source": "context",
-      "context": "社交媒体",
-      "sentence": "But still, Millie thinks there's a pushback against self-optimisation content.",
-      "phrase": "social media"
     },
     "16": {
       "translation": "sixteen",

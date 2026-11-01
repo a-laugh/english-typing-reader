@@ -300,30 +300,6 @@
     }
   },
   "dict": {
-    "life-saving": {
-      "translation": "used to stop people from dying",
-      "source": "official"
-    },
-    "inhabit": {
-      "translation": "live in",
-      "source": "official"
-    },
-    "the grid": {
-      "translation": "the system or network that distributes electricity across different locations",
-      "source": "official"
-    },
-    "vicious cycle": {
-      "translation": "situation where one problem leads to another problem, which then makes the first problem worse, leading to a chain of events where each cause and effect makes the original problem even worse",
-      "source": "official"
-    },
-    "passive cooling": {
-      "translation": "making a building cooler without using a lot of power",
-      "source": "official"
-    },
-    "shading": {
-      "translation": "blocking the Sun's light and heat",
-      "source": "official"
-    },
     "hot": {
       "translation": "炎热的",
       "source": "context",
@@ -438,6 +414,12 @@
       "context": "太阳能获取",
       "sentence": "Some of the most important ones are first to cut solar gain, which is through things like shading."
     },
+    "vicious cycle": {
+      "translation": "恶性循环",
+      "source": "context",
+      "context": "恶性循环",
+      "sentence": "And we reach a vicious cycle, because then you're in a world where it's getting warmer. We're using air conditioning to be able to protect ourselves. That's leading to more emissions and more energy use. That is then making the world warmer. And then we need more air conditioning."
+    },
     "emissions": {
       "translation": "排放",
       "source": "context",
@@ -486,50 +468,25 @@
       "context": "阻挡",
       "sentence": "Some of the most important ones are first to cut solar gain, which is through things like shading. Passive cooling is where you cool your house down without using a lot of energy. Yes, heat from the sun can be blocked by shading, which could be with trees, curtains or blinds."
     },
-    "lifesaving": {
+    "life-saving": {
       "translation": "used to stop people from dying",
-      "source": "official",
-      "phrase": "life-saving"
+      "source": "official"
     },
-    "grid": {
+    "inhabit": {
+      "translation": "live in",
+      "source": "official"
+    },
+    "the grid": {
       "translation": "the system or network that distributes electricity across different locations",
-      "source": "official",
-      "phrase": "the grid"
+      "source": "official"
     },
-    "thegrid": {
-      "translation": "the system or network that distributes electricity across different locations",
-      "source": "official",
-      "phrase": "the grid"
-    },
-    "cycle": {
-      "translation": "situation where one problem leads to another problem, which then makes the first problem worse, leading to a chain of events where each cause and effect makes the original problem even worse",
-      "source": "official",
-      "phrase": "vicious cycle"
-    },
-    "vicious": {
-      "translation": "situation where one problem leads to another problem, which then makes the first problem worse, leading to a chain of events where each cause and effect makes the original problem even worse",
-      "source": "official",
-      "phrase": "vicious cycle"
-    },
-    "viciouscycle": {
-      "translation": "situation where one problem leads to another problem, which then makes the first problem worse, leading to a chain of events where each cause and effect makes the original problem even worse",
-      "source": "official",
-      "phrase": "vicious cycle"
-    },
-    "cooling": {
+    "passive cooling": {
       "translation": "making a building cooler without using a lot of power",
-      "source": "official",
-      "phrase": "passive cooling"
+      "source": "official"
     },
-    "passive": {
-      "translation": "making a building cooler without using a lot of power",
-      "source": "official",
-      "phrase": "passive cooling"
-    },
-    "passivecooling": {
-      "translation": "making a building cooler without using a lot of power",
-      "source": "official",
-      "phrase": "passive cooling"
+    "shading": {
+      "translation": "blocking the Sun's light and heat",
+      "source": "official"
     },
     "air": {
       "translation": "空调",
@@ -573,6 +530,27 @@
       "sentence": "Some of the most important ones are first to cut solar gain, which is through things like shading.",
       "phrase": "solar gain"
     },
+    "cycle": {
+      "translation": "恶性循环",
+      "source": "context",
+      "context": "恶性循环",
+      "sentence": "And we reach a vicious cycle, because then you're in a world where it's getting warmer. We're using air conditioning to be able to protect ourselves. That's leading to more emissions and more energy use. That is then making the world warmer. And then we need more air conditioning.",
+      "phrase": "vicious cycle"
+    },
+    "vicious": {
+      "translation": "恶性循环",
+      "source": "context",
+      "context": "恶性循环",
+      "sentence": "And we reach a vicious cycle, because then you're in a world where it's getting warmer. We're using air conditioning to be able to protect ourselves. That's leading to more emissions and more energy use. That is then making the world warmer. And then we need more air conditioning.",
+      "phrase": "vicious cycle"
+    },
+    "viciouscycle": {
+      "translation": "恶性循环",
+      "source": "context",
+      "context": "恶性循环",
+      "sentence": "And we reach a vicious cycle, because then you're in a world where it's getting warmer. We're using air conditioning to be able to protect ourselves. That's leading to more emissions and more energy use. That is then making the world warmer. And then we need more air conditioning.",
+      "phrase": "vicious cycle"
+    },
     "cuts": {
       "translation": "停电",
       "source": "context",
@@ -593,6 +571,36 @@
       "context": "停电",
       "sentence": "If people are trying to use more electricity than it can cope with, then the grid can collapse – you get power cuts, which is when you can't get any electricity.",
       "phrase": "power cuts"
+    },
+    "lifesaving": {
+      "translation": "used to stop people from dying",
+      "source": "official",
+      "phrase": "life-saving"
+    },
+    "grid": {
+      "translation": "the system or network that distributes electricity across different locations",
+      "source": "official",
+      "phrase": "the grid"
+    },
+    "thegrid": {
+      "translation": "the system or network that distributes electricity across different locations",
+      "source": "official",
+      "phrase": "the grid"
+    },
+    "cooling": {
+      "translation": "making a building cooler without using a lot of power",
+      "source": "official",
+      "phrase": "passive cooling"
+    },
+    "passive": {
+      "translation": "making a building cooler without using a lot of power",
+      "source": "official",
+      "phrase": "passive cooling"
+    },
+    "passivecooling": {
+      "translation": "making a building cooler without using a lot of power",
+      "source": "official",
+      "phrase": "passive cooling"
     },
     "30": {
       "translation": "thirty",
