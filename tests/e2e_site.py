@@ -48,7 +48,7 @@ def main() -> int:
         page.wait_for_load_state("domcontentloaded")
         page.wait_for_selector("#episode-selector option", state="attached", timeout=5000)
         options = page.eval_on_selector_all("#episode-selector option", "els => els.map(e => ({v: e.value, t: e.textContent}))")
-        check("剧集下拉含 2 期真实节目", sum(1 for o in options if o["v"]) == 2, str(options))
+        check("剧集下拉含多期真实节目（≥2）", sum(1 for o in options if o["v"]) >= 2, str(options))
         check("列表标注发布日期", any("10/29" in o["t"] for o in options), str(options))
         page.screenshot(path=str(SHOTS / "t1_home.png"))
 

@@ -59,6 +59,7 @@ ECDICT_CANDIDATES = [
     Path(os.environ.get("ECDICT_PATH", "")) if os.environ.get("ECDICT_PATH") else None,
     Path(__file__).resolve().parent / "ecdict.sqlite",
 ]
+ECDICT_MIN_BYTES = 1_000_000  # 误碰同名小文件时的最低门槛
 
 # 词汇表短语做逐词索引时跳过的虚词（避免 "the grid" 把 the 也建词条）
 STOPWORDS = {
@@ -345,25 +346,63 @@ def _parse_json_block(text: str):
 # ECDICT 补全
 # ---------------------------------------------------------------------------
 
-def find_ecdict() -> Path | None:
-    for cand in ECDICT_CANDIDATES:
-        if cand and cand.is_file() and cand.stat().st_size > 1_000_000:
-            return cand
+def detect_ecdict_table(path: Path) -> str | None:
+    """探测 sqlite 词典的可用表名并校验 word/translation 列可查。
+
+    本地 ecdict.sqlite 用 entries 表，ECDICT Release 的 stardict.db 用 stardict 表
+    （列名相同）——曾因只查 entries 导致 Actions 里词典层整体静默丢失。
+    """
+    try:
+        conn = sqlite3.connect(str(path))
+        try:
+            tables = {
+                row[0]
+                for row in conn.execute("SELECT name FROM sqlite_master WHERE type='table'")
+            }
+            for table in ("entries", "stardict"):
+                if table in tables:
+                    conn.execute(
+                        f"SELECT word, translation FROM {table} WHERE word = 'test' LIMIT 1"
+                    ).fetchone()
+                    return table
+        finally:
+            conn.close()
+    except sqlite3.Error:
+        pass
     return None
 
 
-def lookup_ecdict(words: list[str], db_path: Path) -> dict[str, str]:
-    """批量查 ECDICT，返回 {word: 中文释义}；未命中的词不在结果中。"""
+def find_ecdict() -> tuple[Path, str] | None:
+    """返回 (词典文件, 表名)；找不到可用词典返回 None。"""
+    for cand in ECDICT_CANDIDATES:
+        if cand and cand.is_file() and cand.stat().st_size > ECDICT_MIN_BYTES:
+            table = detect_ecdict_table(cand)
+            if table:
+                return cand, table
+            log(f"警告：{cand} 不是可用的 ECDICT 词典（无 entries/stardict 表或列缺失），忽略")
+    return None
+
+
+def lookup_ecdict(words: list[str], db_path: Path, table: str) -> dict[str, str]:
+    """批量查 ECDICT，返回 {word: 中文释义}；未命中的词不在结果中。
+
+    查询出错只告警一次（避免逐词刷屏）——历史上逐词静默跳过，
+    表名不匹配时整层词典无声丢失，直到线上词典从 346 条掉到 51 条才被发现。
+    """
     result: dict[str, str] = {}
+    warned = False
     conn = sqlite3.connect(str(db_path))
     try:
         for word in words:
             try:
                 row = conn.execute(
-                    "SELECT translation FROM entries WHERE word = ? AND translation != ''",
+                    f"SELECT translation FROM {table} WHERE word = ? AND translation != ''",
                     (word,),
                 ).fetchone()
-            except sqlite3.Error:
+            except sqlite3.Error as e:
+                if not warned:
+                    warned = True
+                    log(f"警告：ECDICT 查询失败（{e}），剩余词的词典释义将缺失")
                 continue
             if row and row[0]:
                 merged = row[0].replace("\\n", "；").replace("\r", "").replace("\n", "；")
@@ -498,7 +537,7 @@ def clean_word(token: str) -> str:
     return "".join(subs)
 
 
-def bake_word_dict(episode: dict, ecdict_path: Path | None) -> dict:
+def bake_word_dict(episode: dict, ecdict: tuple[Path, str] | None) -> dict:
     """合并三层来源，产出全篇逐词词典 {word: {translation, context?, sentence?, source}}。
 
     优先级：官方词汇表 > GLM 语境词表 > ECDICT。
@@ -545,12 +584,12 @@ def bake_word_dict(episode: dict, ecdict_path: Path | None) -> dict:
             if alias and alias not in baked:
                 baked[alias] = dict(entry, phrase=phrase)
 
-    if ecdict_path is not None:
+    if ecdict is not None:
         missing = sorted({
             w for w in (clean_word(t) for t in episode["transcript"].split())
             if w and w not in baked
         })
-        for word, trans in lookup_ecdict(missing, ecdict_path).items():
+        for word, trans in lookup_ecdict(missing, ecdict[0], ecdict[1]).items():
             put(word, "ecdict", translation=trans)
 
     return baked
@@ -560,16 +599,36 @@ def bake_word_dict(episode: dict, ecdict_path: Path | None) -> dict:
 # 主流程
 # ---------------------------------------------------------------------------
 
-def build(days: int, no_llm: bool, no_audio: bool = False) -> int:
+def build(days: int, no_llm: bool, no_audio: bool = False, rebake: bool = False) -> int:
     today = date.today()
     cutoff = today - timedelta(days=days - 1)  # 含今天在内的 N 天窗口
     api_key = os.environ.get("GLM_API_KEY", "")
-    ecdict_path = find_ecdict()
+    ecdict = find_ecdict()
     log(f"窗口：{cutoff} ~ {today}（{days} 天）；LLM：{'关' if no_llm or not api_key else '开'}；"
         f"音频：{'关' if no_audio else '开'}；"
-        f"ECDICT：{ecdict_path or '未找到（未覆盖词将无释义）'}")
+        f"ECDICT：{ecdict[0].name + ':' + ecdict[1] if ecdict else '未找到（未覆盖词将无释义）'}")
 
     DATA_DIR.mkdir(parents=True, exist_ok=True)
+
+    if rebake:
+        # 词典源修复/变更后的数据修复：为在架剧集重建逐词词典
+        # （保留 transcript 与已生成的 context_glossary，不重新调 GLM）。
+        # 独立模式：不抓 BBC、不清理、不生成音频，完成即退出
+        rebake_count = 0
+        for f in DATA_DIR.glob("*.json"):
+            if f.name == "index.json":
+                continue
+            try:
+                data = json.loads(f.read_text(encoding="utf-8"))
+                data["dict"] = bake_word_dict(data, ecdict)
+                f.write_text(
+                    json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+                )
+                rebake_count += 1
+            except (json.JSONDecodeError, OSError, KeyError) as e:
+                log(f"警告：rebake 跳过 {f.name}（{e}）")
+        log(f"rebake 完成：重建 {rebake_count} 期词典")
+        return 0
 
     episodes = parse_index(http_get(INDEX_URL))
     if not episodes:
@@ -602,7 +661,7 @@ def build(days: int, no_llm: bool, no_audio: bool = False) -> int:
                     glossary = generate_context_glossary(data["transcript"], api_key)
                     if glossary:
                         data["context_glossary"] = glossary
-                        data["dict"] = bake_word_dict(data, ecdict_path)
+                        data["dict"] = bake_word_dict(data, ecdict)
                         out_file.write_text(
                             json.dumps(data, ensure_ascii=False, indent=2) + "\n",
                             encoding="utf-8",
@@ -620,7 +679,7 @@ def build(days: int, no_llm: bool, no_audio: bool = False) -> int:
                 )
             else:
                 episode["context_glossary"] = {}
-            episode["dict"] = bake_word_dict(episode, ecdict_path)
+            episode["dict"] = bake_word_dict(episode, ecdict)
             out_file.write_text(
                 json.dumps(episode, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
             )
@@ -693,9 +752,11 @@ def main() -> int:
     parser.add_argument("--days", type=int, default=30, help="滚动窗口天数（默认 30）")
     parser.add_argument("--no-llm", action="store_true", help="跳过 GLM 语境词表生成")
     parser.add_argument("--no-audio", action="store_true", help="跳过 TTS 发音音频生成")
+    parser.add_argument("--rebake", action="store_true",
+                        help="只为在架剧集重建逐词词典（保留语境词表，不调 GLM）")
     args = parser.parse_args()
     try:
-        return build(args.days, args.no_llm, args.no_audio)
+        return build(args.days, args.no_llm, args.no_audio, args.rebake)
     except requests.RequestException as e:
         log(f"网络请求失败（索引页不可达？）: {e}")
         return 1

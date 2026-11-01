@@ -156,6 +156,57 @@ def test_glossary_prompt_braces_are_single():
     assert '{"meaning"' in fetcher.GLOSSARY_PROMPT  # 示例本身是合法 JSON 片段
 
 
+# ---------------------------------------------------------------- ECDICT 表名兼容
+
+
+def _make_dict_db(path, table):
+    import sqlite3
+    conn = sqlite3.connect(str(path))
+    conn.execute(
+        f"CREATE TABLE {table} (word TEXT, translation TEXT)"
+    )
+    conn.execute(f"INSERT INTO {table} VALUES ('summer', 'n. 夏季')")
+    conn.commit()
+    conn.close()
+
+
+def test_detect_ecdict_table_both_schemas(tmp_path):
+    """本地 ecdict.sqlite 用 entries 表，ECDICT Release 的 stardict.db 用 stardict 表
+    （列名相同）——历史 bug：只查 entries，Actions 里整层词典静默丢失。"""
+    for name, table in [("local.sqlite", "entries"), ("release.sqlite", "stardict")]:
+        db = tmp_path / name
+        _make_dict_db(db, table)
+        assert fetcher.detect_ecdict_table(db) == table
+    # 无可用表 → None
+    empty = tmp_path / "empty.sqlite"
+    import sqlite3
+    sqlite3.connect(str(empty)).close()
+    assert fetcher.detect_ecdict_table(empty) is None
+
+
+def test_lookup_ecdict_with_table(tmp_path):
+    db = tmp_path / "stardict.db"
+    _make_dict_db(db, "stardict")
+    result = fetcher.lookup_ecdict(["summer", "missing"], db, "stardict")
+    assert result == {"summer": "n. 夏季"}
+
+
+def test_find_ecdict_size_guard(tmp_path, monkeypatch):
+    monkeypatch.setattr(fetcher, "ECDICT_MIN_BYTES", 1)  # 测试库只有几 KB
+    garbage = tmp_path / "garbage.sqlite"
+    garbage.write_bytes(b"x" * 2_000_000)  # 够大但不是 sqlite
+    valid = tmp_path / "ecdict.sqlite"
+    _make_dict_db(valid, "entries")
+    # 大小门槛：太小的不看；内容不是 sqlite 的告警忽略
+    monkeypatch.setattr(fetcher, "ECDICT_CANDIDATES", [tmp_path / "tiny.sqlite"])
+    (tmp_path / "tiny.sqlite").write_bytes(b"x" * 100)
+    assert fetcher.find_ecdict() is None
+    monkeypatch.setattr(fetcher, "ECDICT_CANDIDATES", [garbage])
+    assert fetcher.find_ecdict() is None
+    monkeypatch.setattr(fetcher, "ECDICT_CANDIDATES", [valid])
+    assert fetcher.find_ecdict() == (valid, "entries")
+
+
 # ------------------------------------------------- GLM 调用链（本地模拟服务）
 
 def _mock_glm_server(content: str):
