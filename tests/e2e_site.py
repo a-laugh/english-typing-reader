@@ -233,6 +233,34 @@ def main() -> int:
         )
         check("含撇号词逐字符键入完成（符号归一化生效）", True)
 
+        print("== T8 释义内容（官方词汇表词必有释义） ==")
+        vocab_word = next(
+            item["word"] for item in ep_data["vocabulary"] if " " not in item["word"]
+        )
+        clean = lambda s: "".join(c for c in s.lower() if c.isalnum())
+        vidx, raw_word = next(
+            (i, w) for i, w in enumerate(words) if clean(w) == clean(vocab_word)
+        )
+        page.evaluate(
+            f"() => {{ localStorage.setItem('typelearning:last_episode', '261029'); "
+            f"localStorage.setItem('typelearning:progress:261029', "
+            f"JSON.stringify({{v: 1, word_index: {vidx}}})); }}"
+        )
+        page.reload()
+        page.wait_for_selector(".current-word", timeout=5000)
+        shown8 = page.text_content(".current-word")
+        check(f"进度定位到词汇表词 {vocab_word!r}", vocab_word.strip(".,!?;: ") in (shown8 or ""), f"shown={shown8!r}")
+        baseline8 = page.eval_on_selector_all(".word-correct", "els => els.length")
+        vseq = raw_word.strip(".,!?;: ")
+        page.click("#dialog-display")
+        page.keyboard.type(vseq)
+        page.wait_for_function(
+            f"() => document.querySelectorAll('.word-correct').length > {baseline8}", timeout=5000
+        )
+        gloss8 = page.text_content("#dialog-display .gloss")
+        check(f"官方词汇表词 {vocab_word!r} 有真实释义", gloss8 and "未收录" not in gloss8 and len(gloss8.strip()) > 2,
+              gloss8)
+
         browser.close()
 
     print(f"\n结果：{len(PASS)} 通过，{len(FAIL)} 失败")

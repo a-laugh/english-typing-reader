@@ -172,11 +172,53 @@ def test_glossary_prompt_braces_are_single():
 
 def test_glossary_prompt_requires_concise_meaning():
     """回归测试：meaning 必须有 ≤10 字的硬性约束（用户要求简洁翻译），
-    防止将来改提示词时把约束丢掉。"""
-    assert "10" in fetcher.GLOSSARY_PROMPT and "简洁" in fetcher.GLOSSARY_PROMPT
+    防止将来改提示词时把约束丢掉。两个提示词都要受保护——历史上
+    「双层花括号照抄」正是提示词事故导致的线上解析失败。"""
+    for prompt in (fetcher.GLOSSARY_PROMPT, fetcher.GLOSSARY_PROMPT_NO_VOCAB):
+        assert "10" in prompt and "简洁" in prompt
+        assert "{{" not in prompt and "}}" not in prompt
+        assert '{"meaning"' in prompt
 
 
-# ---------------------------------------------------------------- ECDICT 表名兼容
+def test_generate_context_glossary_prompt_contains_vocab(monkeypatch):
+    """有官方词汇表时，Prompt 必须拼入词汇表内容（供 LLM 参照转成中文）。"""
+    import threading
+    from http.server import BaseHTTPRequestHandler, HTTPServer
+    captured = {}
+
+    class Handler(BaseHTTPRequestHandler):
+        def do_POST(self):
+            length = int(self.headers.get("Content-Length", 0))
+            captured["body"] = self.rfile.read(length).decode("utf-8")
+            body = json.dumps(
+                {"choices": [{"message": {"content": '{"hi": {"meaning": "你好", "sentence": "s"}}'}}]}
+            ).encode("utf-8")
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.send_header("Content-Length", str(len(body)))
+            self.end_headers()
+            self.wfile.write(body)
+
+        def log_message(self, *args):
+            pass
+
+    server = HTTPServer(("127.0.0.1", 0), Handler)
+    threading.Thread(target=server.serve_forever, daemon=True).start()
+    try:
+        monkeypatch.setattr(fetcher, "LLM_BASE_URL", f"http://127.0.0.1:{server.server_address[1]}/v1")
+        vocab = [
+            {"word": "the grid", "definition": "the electricity network"},
+            {"word": "", "definition": "空词应被过滤"},
+        ]
+        result = fetcher.generate_context_glossary("Hi Neil.", vocab, "test-key")
+        assert result == {"hi": {"meaning": "你好", "sentence": "s"}}
+        prompt = json.loads(captured["body"])["messages"][0]["content"]
+        assert "the grid: the electricity network" in prompt, "词汇表内容必须进入 Prompt"
+        assert "官方词汇表" in prompt and "Hi Neil." in prompt
+        assert "空词应被过滤" not in prompt, "空 word 条目应被跳过"
+    finally:
+        server.shutdown()
+        server.server_close()
 
 
 # ------------------------------------------------- GLM 调用链（本地模拟服务）
