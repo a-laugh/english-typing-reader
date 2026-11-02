@@ -193,76 +193,224 @@
       "definition": "strong criticism of a trend; people doing the opposite of a trend"
     }
   ],
-  "context_glossary": {},
-  "dict": {
+  "context_glossary": {
+    "unusual": {
+      "meaning": "不同寻常的",
+      "sentence": "Do you want to hear something quite unusual for me?"
+    },
+    "alcoholic": {
+      "meaning": "含酒精的",
+      "sentence": "I haven't had an alcoholic drink this year."
+    },
+    "impressive": {
+      "meaning": "令人印象深刻的",
+      "sentence": "Wow! That is really impressive."
+    },
+    "non-drinkers": {
+      "meaning": "不喝酒的人",
+      "sentence": "16 to 24-year-olds are more likely to be non-drinkers"
+    },
+    "investigating": {
+      "meaning": "调查",
+      "sentence": "What in the World have been investigating this."
+    },
     "sober": {
-      "translation": "not drinking alcohol or taking recreational drugs",
-      "source": "official"
+      "meaning": "戒酒",
+      "sentence": "he decided to be sober and he hasn't had a drink for about six years."
     },
     "societal pressure": {
-      "translation": "feeling that you should do something because lots of other people expect you to",
-      "source": "official"
+      "meaning": "社会压力",
+      "sentence": "you know, work drinks or being at uni, where it was the norm to just join in."
+    },
+    "norm": {
+      "meaning": "常态",
+      "sentence": "The norm is a way of saying that something is normal or common."
+    },
+    "socialise": {
+      "meaning": "社交",
+      "sentence": "when people in the UK were unable to socialise and visit pubs and bars"
+    },
+    "social media": {
+      "meaning": "社交媒体",
+      "sentence": "But recently there's been a bit of a change, hasn't there?"
+    },
+    "self-optimisation content": {
+      "meaning": "自我优化内容",
+      "sentence": "I think we had this, like, rise of self-optimisation content."
+    },
+    "tout": {
+      "meaning": "大力宣传",
+      "sentence": "And, you know, for many of us, that's probably not our reality with not drinking."
+    },
+    "pushback": {
+      "meaning": "反对",
+      "sentence": "And so, I think now we are entering this, like, almost pushback era of that content."
+    }
+  },
+  "dict": {
+    "unusual": {
+      "translation": "不同寻常的",
+      "source": "context",
+      "context": "不同寻常的",
+      "sentence": "Do you want to hear something quite unusual for me?"
+    },
+    "alcoholic": {
+      "translation": "含酒精的",
+      "source": "context",
+      "context": "含酒精的",
+      "sentence": "I haven't had an alcoholic drink this year."
+    },
+    "impressive": {
+      "translation": "令人印象深刻的",
+      "source": "context",
+      "context": "令人印象深刻的",
+      "sentence": "Wow! That is really impressive."
+    },
+    "non-drinkers": {
+      "translation": "不喝酒的人",
+      "source": "context",
+      "context": "不喝酒的人",
+      "sentence": "16 to 24-year-olds are more likely to be non-drinkers"
+    },
+    "investigating": {
+      "translation": "调查",
+      "source": "context",
+      "context": "调查",
+      "sentence": "What in the World have been investigating this."
+    },
+    "sober": {
+      "translation": "戒酒",
+      "source": "context",
+      "context": "戒酒",
+      "sentence": "he decided to be sober and he hasn't had a drink for about six years."
+    },
+    "societal pressure": {
+      "translation": "社会压力",
+      "source": "context",
+      "context": "社会压力",
+      "sentence": "you know, work drinks or being at uni, where it was the norm to just join in."
+    },
+    "norm": {
+      "translation": "常态",
+      "source": "context",
+      "context": "常态",
+      "sentence": "The norm is a way of saying that something is normal or common."
+    },
+    "socialise": {
+      "translation": "社交",
+      "source": "context",
+      "context": "社交",
+      "sentence": "when people in the UK were unable to socialise and visit pubs and bars"
+    },
+    "social media": {
+      "translation": "社交媒体",
+      "source": "context",
+      "context": "社交媒体",
+      "sentence": "But recently there's been a bit of a change, hasn't there?"
+    },
+    "self-optimisation content": {
+      "translation": "自我优化内容",
+      "source": "context",
+      "context": "自我优化内容",
+      "sentence": "I think we had this, like, rise of self-optimisation content."
+    },
+    "tout": {
+      "translation": "大力宣传",
+      "source": "context",
+      "context": "大力宣传",
+      "sentence": "And, you know, for many of us, that's probably not our reality with not drinking."
+    },
+    "pushback": {
+      "translation": "反对",
+      "source": "context",
+      "context": "反对",
+      "sentence": "And so, I think now we are entering this, like, almost pushback era of that content."
     },
     "the norm": {
       "translation": "the usual or common thing to do",
       "source": "official"
     },
-    "self-optimisation content": {
-      "translation": "videos, posts and other media about being fit, healthy and achieving big goals",
-      "source": "official"
-    },
-    "tout": {
-      "translation": "praise something or talk about it a lot to get others to try it",
-      "source": "official"
-    },
-    "pushback": {
-      "translation": "strong criticism of a trend; people doing the opposite of a trend",
-      "source": "official"
+    "nondrinkers": {
+      "translation": "不喝酒的人",
+      "source": "context",
+      "context": "不喝酒的人",
+      "sentence": "16 to 24-year-olds are more likely to be non-drinkers",
+      "phrase": "non-drinkers"
     },
     "pressure": {
-      "translation": "feeling that you should do something because lots of other people expect you to",
-      "source": "official",
+      "translation": "社会压力",
+      "source": "context",
+      "context": "社会压力",
+      "sentence": "you know, work drinks or being at uni, where it was the norm to just join in.",
       "phrase": "societal pressure"
     },
     "societal": {
-      "translation": "feeling that you should do something because lots of other people expect you to",
-      "source": "official",
+      "translation": "社会压力",
+      "source": "context",
+      "context": "社会压力",
+      "sentence": "you know, work drinks or being at uni, where it was the norm to just join in.",
       "phrase": "societal pressure"
     },
     "societalpressure": {
-      "translation": "feeling that you should do something because lots of other people expect you to",
-      "source": "official",
+      "translation": "社会压力",
+      "source": "context",
+      "context": "社会压力",
+      "sentence": "you know, work drinks or being at uni, where it was the norm to just join in.",
       "phrase": "societal pressure"
     },
-    "norm": {
-      "translation": "the usual or common thing to do",
-      "source": "official",
-      "phrase": "the norm"
+    "media": {
+      "translation": "社交媒体",
+      "source": "context",
+      "context": "社交媒体",
+      "sentence": "But recently there's been a bit of a change, hasn't there?",
+      "phrase": "social media"
+    },
+    "social": {
+      "translation": "社交媒体",
+      "source": "context",
+      "context": "社交媒体",
+      "sentence": "But recently there's been a bit of a change, hasn't there?",
+      "phrase": "social media"
+    },
+    "socialmedia": {
+      "translation": "社交媒体",
+      "source": "context",
+      "context": "社交媒体",
+      "sentence": "But recently there's been a bit of a change, hasn't there?",
+      "phrase": "social media"
+    },
+    "content": {
+      "translation": "自我优化内容",
+      "source": "context",
+      "context": "自我优化内容",
+      "sentence": "I think we had this, like, rise of self-optimisation content.",
+      "phrase": "self-optimisation content"
+    },
+    "optimisation": {
+      "translation": "自我优化内容",
+      "source": "context",
+      "context": "自我优化内容",
+      "sentence": "I think we had this, like, rise of self-optimisation content.",
+      "phrase": "self-optimisation content"
+    },
+    "self": {
+      "translation": "自我优化内容",
+      "source": "context",
+      "context": "自我优化内容",
+      "sentence": "I think we had this, like, rise of self-optimisation content.",
+      "phrase": "self-optimisation content"
+    },
+    "selfoptimisationcontent": {
+      "translation": "自我优化内容",
+      "source": "context",
+      "context": "自我优化内容",
+      "sentence": "I think we had this, like, rise of self-optimisation content.",
+      "phrase": "self-optimisation content"
     },
     "thenorm": {
       "translation": "the usual or common thing to do",
       "source": "official",
       "phrase": "the norm"
-    },
-    "content": {
-      "translation": "videos, posts and other media about being fit, healthy and achieving big goals",
-      "source": "official",
-      "phrase": "self-optimisation content"
-    },
-    "optimisation": {
-      "translation": "videos, posts and other media about being fit, healthy and achieving big goals",
-      "source": "official",
-      "phrase": "self-optimisation content"
-    },
-    "self": {
-      "translation": "videos, posts and other media about being fit, healthy and achieving big goals",
-      "source": "official",
-      "phrase": "self-optimisation content"
-    },
-    "selfoptimisationcontent": {
-      "translation": "videos, posts and other media about being fit, healthy and achieving big goals",
-      "source": "official",
-      "phrase": "self-optimisation content"
     }
   }
 }

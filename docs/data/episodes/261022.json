@@ -161,22 +161,215 @@
       "definition": "simple and effective solution, usually one that doesn't exist in reality"
     }
   ],
-  "context_glossary": {},
+  "context_glossary": {
+    "struggle": {
+      "meaning": "挣扎",
+      "sentence": "but what causes us to struggle to sleep"
+    },
+    "long-term": {
+      "meaning": "长期的",
+      "sentence": "Scientists have done some long-term studies"
+    },
+    "quality": {
+      "meaning": "质量",
+      "sentence": "and they found that a healthier diet is associated with better quality sleep"
+    },
+    "laboratory": {
+      "meaning": "实验室",
+      "sentence": "and then studying how they sleep in a laboratory"
+    },
+    "fibre": {
+      "meaning": "纤维",
+      "sentence": "diets that are higher in fibre, which we find in fruits and vegetables and whole grains"
+    },
+    "Mediterranean": {
+      "meaning": "地中海式的",
+      "sentence": "Marie-Pierre says that Mediterranean-style diets are associated with good sleep"
+    },
+    "animal-based": {
+      "meaning": "基于动物的",
+      "sentence": "lower in animal-based foods"
+    },
+    "evaluate": {
+      "meaning": "评估",
+      "sentence": "where we evaluate food intakes in the lab"
+    },
+    "patterns": {
+      "meaning": "模式",
+      "sentence": "But when we talk about nutrients, diets that are higher in fibre... are associated with more deep sleep"
+    },
+    "deep sleep": {
+      "meaning": "深度睡眠",
+      "sentence": "are associated with more deep sleep at night"
+    },
+    "comprehensive": {
+      "meaning": "全面的",
+      "sentence": "focusing on our whole diet, rather than one particular fruit or supplement"
+    },
+    "limited": {
+      "meaning": "有限的",
+      "sentence": "So, for example, scientists have been studying kiwi fruits and also tart cherry juice"
+    },
+    "supplements": {
+      "meaning": "补充剂",
+      "sentence": "you may also see adverts for supplements that claim to improve sleep"
+    },
+    "effective": {
+      "meaning": "有效的",
+      "sentence": "is going to be the most effective"
+    },
+    "social media": {
+      "meaning": "社交媒体",
+      "sentence": "we're fed a lot of these things, aren't we, on social media"
+    },
+    "magical": {
+      "meaning": "神奇的",
+      "sentence": "this magical powder or this magical tablet"
+    },
+    "unfortunately": {
+      "meaning": "不幸地",
+      "sentence": "and of course, you know, Marie-Pierre and I know that there is no such magic bullet, unfortunately"
+    },
+    "experts": {
+      "meaning": "专家",
+      "sentence": "experts know there's no magic bullet to help you sleep"
+    },
+    "recap": {
+      "meaning": "总结",
+      "sentence": "Let's recap the vocabulary we learned in this programme"
+    },
+    "worksheet": {
+      "meaning": "工作表",
+      "sentence": "Once again, our six minutes are up, but don't forget you can test what you've learned with the worksheet on our website"
+    }
+  },
   "dict": {
+    "struggle": {
+      "translation": "挣扎",
+      "source": "context",
+      "context": "挣扎",
+      "sentence": "but what causes us to struggle to sleep"
+    },
+    "long-term": {
+      "translation": "长期的",
+      "source": "context",
+      "context": "长期的",
+      "sentence": "Scientists have done some long-term studies"
+    },
+    "quality": {
+      "translation": "质量",
+      "source": "context",
+      "context": "质量",
+      "sentence": "and they found that a healthier diet is associated with better quality sleep"
+    },
+    "laboratory": {
+      "translation": "实验室",
+      "source": "context",
+      "context": "实验室",
+      "sentence": "and then studying how they sleep in a laboratory"
+    },
+    "fibre": {
+      "translation": "纤维",
+      "source": "context",
+      "context": "纤维",
+      "sentence": "diets that are higher in fibre, which we find in fruits and vegetables and whole grains"
+    },
+    "mediterranean": {
+      "translation": "地中海式的",
+      "source": "context",
+      "context": "地中海式的",
+      "sentence": "Marie-Pierre says that Mediterranean-style diets are associated with good sleep"
+    },
+    "animal-based": {
+      "translation": "基于动物的",
+      "source": "context",
+      "context": "基于动物的",
+      "sentence": "lower in animal-based foods"
+    },
+    "evaluate": {
+      "translation": "评估",
+      "source": "context",
+      "context": "评估",
+      "sentence": "where we evaluate food intakes in the lab"
+    },
+    "patterns": {
+      "translation": "模式",
+      "source": "context",
+      "context": "模式",
+      "sentence": "But when we talk about nutrients, diets that are higher in fibre... are associated with more deep sleep"
+    },
+    "deep sleep": {
+      "translation": "深度睡眠",
+      "source": "context",
+      "context": "深度睡眠",
+      "sentence": "are associated with more deep sleep at night"
+    },
+    "comprehensive": {
+      "translation": "全面的",
+      "source": "context",
+      "context": "全面的",
+      "sentence": "focusing on our whole diet, rather than one particular fruit or supplement"
+    },
+    "limited": {
+      "translation": "有限的",
+      "source": "context",
+      "context": "有限的",
+      "sentence": "So, for example, scientists have been studying kiwi fruits and also tart cherry juice"
+    },
+    "supplements": {
+      "translation": "补充剂",
+      "source": "context",
+      "context": "补充剂",
+      "sentence": "you may also see adverts for supplements that claim to improve sleep"
+    },
+    "effective": {
+      "translation": "有效的",
+      "source": "context",
+      "context": "有效的",
+      "sentence": "is going to be the most effective"
+    },
+    "social media": {
+      "translation": "社交媒体",
+      "source": "context",
+      "context": "社交媒体",
+      "sentence": "we're fed a lot of these things, aren't we, on social media"
+    },
+    "magical": {
+      "translation": "神奇的",
+      "source": "context",
+      "context": "神奇的",
+      "sentence": "this magical powder or this magical tablet"
+    },
+    "unfortunately": {
+      "translation": "不幸地",
+      "source": "context",
+      "context": "不幸地",
+      "sentence": "and of course, you know, Marie-Pierre and I know that there is no such magic bullet, unfortunately"
+    },
+    "experts": {
+      "translation": "专家",
+      "source": "context",
+      "context": "专家",
+      "sentence": "experts know there's no magic bullet to help you sleep"
+    },
+    "recap": {
+      "translation": "总结",
+      "source": "context",
+      "context": "总结",
+      "sentence": "Let's recap the vocabulary we learned in this programme"
+    },
+    "worksheet": {
+      "translation": "工作表",
+      "source": "context",
+      "context": "工作表",
+      "sentence": "Once again, our six minutes are up, but don't forget you can test what you've learned with the worksheet on our website"
+    },
     "nutrients": {
       "translation": "important substances that all lifeforms need to survive and be healthy",
       "source": "official"
     },
     "saturated fats": {
       "translation": "fats that are thought to be worse for our health, often found in meat and dairy",
-      "source": "official"
-    },
-    "deep sleep": {
-      "translation": "stage of the sleep cycle when the brain is at its slowest and the body can rest and repair",
-      "source": "official"
-    },
-    "supplements": {
-      "translation": "tablets and other consumables that contain particular nutrients that you might not get in your everyday diet",
       "source": "official"
     },
     "feed information": {
@@ -186,6 +379,62 @@
     "magic bullet": {
       "translation": "simple and effective solution, usually one that doesn't exist in reality",
       "source": "official"
+    },
+    "longterm": {
+      "translation": "长期的",
+      "source": "context",
+      "context": "长期的",
+      "sentence": "Scientists have done some long-term studies",
+      "phrase": "long-term"
+    },
+    "animalbased": {
+      "translation": "基于动物的",
+      "source": "context",
+      "context": "基于动物的",
+      "sentence": "lower in animal-based foods",
+      "phrase": "animal-based"
+    },
+    "deep": {
+      "translation": "深度睡眠",
+      "source": "context",
+      "context": "深度睡眠",
+      "sentence": "are associated with more deep sleep at night",
+      "phrase": "deep sleep"
+    },
+    "deepsleep": {
+      "translation": "深度睡眠",
+      "source": "context",
+      "context": "深度睡眠",
+      "sentence": "are associated with more deep sleep at night",
+      "phrase": "deep sleep"
+    },
+    "sleep": {
+      "translation": "深度睡眠",
+      "source": "context",
+      "context": "深度睡眠",
+      "sentence": "are associated with more deep sleep at night",
+      "phrase": "deep sleep"
+    },
+    "media": {
+      "translation": "社交媒体",
+      "source": "context",
+      "context": "社交媒体",
+      "sentence": "we're fed a lot of these things, aren't we, on social media",
+      "phrase": "social media"
+    },
+    "social": {
+      "translation": "社交媒体",
+      "source": "context",
+      "context": "社交媒体",
+      "sentence": "we're fed a lot of these things, aren't we, on social media",
+      "phrase": "social media"
+    },
+    "socialmedia": {
+      "translation": "社交媒体",
+      "source": "context",
+      "context": "社交媒体",
+      "sentence": "we're fed a lot of these things, aren't we, on social media",
+      "phrase": "social media"
     },
     "fats": {
       "translation": "fats that are thought to be worse for our health, often found in meat and dairy",
@@ -201,21 +450,6 @@
       "translation": "fats that are thought to be worse for our health, often found in meat and dairy",
       "source": "official",
       "phrase": "saturated fats"
-    },
-    "deep": {
-      "translation": "stage of the sleep cycle when the brain is at its slowest and the body can rest and repair",
-      "source": "official",
-      "phrase": "deep sleep"
-    },
-    "deepsleep": {
-      "translation": "stage of the sleep cycle when the brain is at its slowest and the body can rest and repair",
-      "source": "official",
-      "phrase": "deep sleep"
-    },
-    "sleep": {
-      "translation": "stage of the sleep cycle when the brain is at its slowest and the body can rest and repair",
-      "source": "official",
-      "phrase": "deep sleep"
     },
     "feed": {
       "translation": "give lots of information continuously",

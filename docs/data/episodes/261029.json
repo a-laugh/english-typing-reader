@@ -185,8 +185,69 @@
       "definition": "blocking the Sun's light and heat"
     }
   ],
-  "context_glossary": {},
+  "context_glossary": {
+    "vicious cycle": {
+      "meaning": "恶性循环",
+      "sentence": "And we reach a vicious cycle, because then you're in a world where it's getting warmer..."
+    },
+    "passive cooling": {
+      "meaning": "被动冷却",
+      "sentence": "Passive cooling is when we take steps to provide thermal comfort that are not energy intensive..."
+    },
+    "shading": {
+      "meaning": "遮蔽",
+      "sentence": "Some of the most important ones are first to cut solar gain, which is through things like shading..."
+    },
+    "emissions": {
+      "meaning": "排放",
+      "sentence": "We heard that air conditioning creates emissions, which can lead the world to warm up..."
+    },
+    "detrimental": {
+      "meaning": "有害的",
+      "sentence": "And we reach a vicious cycle, because then you're in a world where it's getting warmer..."
+    },
+    "sustainable energy": {
+      "meaning": "可持续能源",
+      "sentence": "Radhika also talks about the importance of using sustainable energy to power the air conditioning..."
+    }
+  },
   "dict": {
+    "vicious cycle": {
+      "translation": "恶性循环",
+      "source": "context",
+      "context": "恶性循环",
+      "sentence": "And we reach a vicious cycle, because then you're in a world where it's getting warmer..."
+    },
+    "passive cooling": {
+      "translation": "被动冷却",
+      "source": "context",
+      "context": "被动冷却",
+      "sentence": "Passive cooling is when we take steps to provide thermal comfort that are not energy intensive..."
+    },
+    "shading": {
+      "translation": "遮蔽",
+      "source": "context",
+      "context": "遮蔽",
+      "sentence": "Some of the most important ones are first to cut solar gain, which is through things like shading..."
+    },
+    "emissions": {
+      "translation": "排放",
+      "source": "context",
+      "context": "排放",
+      "sentence": "We heard that air conditioning creates emissions, which can lead the world to warm up..."
+    },
+    "detrimental": {
+      "translation": "有害的",
+      "source": "context",
+      "context": "有害的",
+      "sentence": "And we reach a vicious cycle, because then you're in a world where it's getting warmer..."
+    },
+    "sustainable energy": {
+      "translation": "可持续能源",
+      "source": "context",
+      "context": "可持续能源",
+      "sentence": "Radhika also talks about the importance of using sustainable energy to power the air conditioning..."
+    },
     "life-saving": {
       "translation": "used to stop people from dying",
       "source": "official"
@@ -199,17 +260,68 @@
       "translation": "the system or network that distributes electricity across different locations",
       "source": "official"
     },
-    "vicious cycle": {
-      "translation": "situation where one problem leads to another problem, which then makes the first problem worse, leading to a chain of events where each cause and effect makes the original problem even worse",
-      "source": "official"
+    "cycle": {
+      "translation": "恶性循环",
+      "source": "context",
+      "context": "恶性循环",
+      "sentence": "And we reach a vicious cycle, because then you're in a world where it's getting warmer...",
+      "phrase": "vicious cycle"
     },
-    "passive cooling": {
-      "translation": "making a building cooler without using a lot of power",
-      "source": "official"
+    "vicious": {
+      "translation": "恶性循环",
+      "source": "context",
+      "context": "恶性循环",
+      "sentence": "And we reach a vicious cycle, because then you're in a world where it's getting warmer...",
+      "phrase": "vicious cycle"
     },
-    "shading": {
-      "translation": "blocking the Sun's light and heat",
-      "source": "official"
+    "viciouscycle": {
+      "translation": "恶性循环",
+      "source": "context",
+      "context": "恶性循环",
+      "sentence": "And we reach a vicious cycle, because then you're in a world where it's getting warmer...",
+      "phrase": "vicious cycle"
+    },
+    "cooling": {
+      "translation": "被动冷却",
+      "source": "context",
+      "context": "被动冷却",
+      "sentence": "Passive cooling is when we take steps to provide thermal comfort that are not energy intensive...",
+      "phrase": "passive cooling"
+    },
+    "passive": {
+      "translation": "被动冷却",
+      "source": "context",
+      "context": "被动冷却",
+      "sentence": "Passive cooling is when we take steps to provide thermal comfort that are not energy intensive...",
+      "phrase": "passive cooling"
+    },
+    "passivecooling": {
+      "translation": "被动冷却",
+      "source": "context",
+      "context": "被动冷却",
+      "sentence": "Passive cooling is when we take steps to provide thermal comfort that are not energy intensive...",
+      "phrase": "passive cooling"
+    },
+    "energy": {
+      "translation": "可持续能源",
+      "source": "context",
+      "context": "可持续能源",
+      "sentence": "Radhika also talks about the importance of using sustainable energy to power the air conditioning...",
+      "phrase": "sustainable energy"
+    },
+    "sustainable": {
+      "translation": "可持续能源",
+      "source": "context",
+      "context": "可持续能源",
+      "sentence": "Radhika also talks about the importance of using sustainable energy to power the air conditioning...",
+      "phrase": "sustainable energy"
+    },
+    "sustainableenergy": {
+      "translation": "可持续能源",
+      "source": "context",
+      "context": "可持续能源",
+      "sentence": "Radhika also talks about the importance of using sustainable energy to power the air conditioning...",
+      "phrase": "sustainable energy"
     },
     "lifesaving": {
       "translation": "used to stop people from dying",
@@ -225,36 +337,6 @@
       "translation": "the system or network that distributes electricity across different locations",
       "source": "official",
       "phrase": "the grid"
-    },
-    "cycle": {
-      "translation": "situation where one problem leads to another problem, which then makes the first problem worse, leading to a chain of events where each cause and effect makes the original problem even worse",
-      "source": "official",
-      "phrase": "vicious cycle"
-    },
-    "vicious": {
-      "translation": "situation where one problem leads to another problem, which then makes the first problem worse, leading to a chain of events where each cause and effect makes the original problem even worse",
-      "source": "official",
-      "phrase": "vicious cycle"
-    },
-    "viciouscycle": {
-      "translation": "situation where one problem leads to another problem, which then makes the first problem worse, leading to a chain of events where each cause and effect makes the original problem even worse",
-      "source": "official",
-      "phrase": "vicious cycle"
-    },
-    "cooling": {
-      "translation": "making a building cooler without using a lot of power",
-      "source": "official",
-      "phrase": "passive cooling"
-    },
-    "passive": {
-      "translation": "making a building cooler without using a lot of power",
-      "source": "official",
-      "phrase": "passive cooling"
-    },
-    "passivecooling": {
-      "translation": "making a building cooler without using a lot of power",
-      "source": "official",
-      "phrase": "passive cooling"
     }
   }
 }
