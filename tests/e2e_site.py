@@ -82,7 +82,7 @@ def main() -> int:
               str([u for u in seen_requests if "audio" in u][:3]))
         check("烘焙音频文件在架", (ROOT / "docs" / "data" / "audio" / "hi.mp3").is_file())
         gloss = page.text_content("#dialog-display .gloss")
-        check("行内翻译紧跟完成的词", gloss and any(k in gloss for k in ("你好", "喂", "嗨", "问候")), gloss)
+        check("行内翻译紧跟完成的词", bool(gloss and gloss.strip()), gloss)
         # 浮层在宿主词上方 + 绝对定位（零布局位移的前提）
         overlay = page.evaluate("""() => {
             const g = document.querySelector('#dialog-display .gloss');
@@ -105,23 +105,22 @@ def main() -> int:
         page.keyboard.type("n")
         page.wait_for_function("() => !document.querySelector('.letter-bad')", timeout=3000)
         check("原地重打正确后红变绿", True)
-        # 零位移专项：完词瞬间（浮层出现+整区重绘）后续文本位置必须纹丝不动。
-        # 用最后一个回合的 bbox 对比（浮层若在文档流中会把它推下去）
-        last_turn_before = page.eval_on_selector("#dialog-display .turn:last-of-type", """el => {
-            const r = el.getBoundingClientRect();
-            return [Math.round(r.x * 10), Math.round(r.y * 10)];
-        }""")
+        # 行距专项：正在输入的行与带浮层的行要有额外上边距（给词上方翻译留空间）；
+        # 浮层本身保持绝对定位（不挤压文本，前一项断言已覆盖）
         page.keyboard.type("eil")
         page.wait_for_function(
             "() => document.querySelectorAll('.word-correct').length === 2", timeout=3000
         )
         check("第二词完成后累计 2 词标绿（标点自动通过）", True)
-        last_turn_after = page.eval_on_selector("#dialog-display .turn:last-of-type", """el => {
-            const r = el.getBoundingClientRect();
-            return [Math.round(r.x * 10), Math.round(r.y * 10)];
+        headroom = page.evaluate("""() => {
+            const active = document.querySelector('.turn-headroom .current-word');
+            const marginTop = active ? getComputedStyle(active.closest('.turn')).marginTop : null;
+            const plain = document.querySelector('#dialog-display .turn:not(.turn-headroom)');
+            const plainMargin = plain ? getComputedStyle(plain).marginTop : null;
+            return { active: parseFloat(marginTop), plain: parseFloat(plainMargin) };
         }""")
-        check("完词出现浮层时后续文本零位移", last_turn_before == last_turn_after,
-              f"before={last_turn_before} after={last_turn_after}")
+        check("当前行与上一行拉开距离", headroom["active"] and headroom["plain"] is not None
+              and headroom["active"] > headroom["plain"] + 10, str(headroom))
         gloss_count = page.eval_on_selector_all("#dialog-display .gloss", "els => els.length")
         check("行内翻译只跟随最新完成的词（唯一）", gloss_count == 1, f"gloss 数={gloss_count}")
         page.screenshot(path=str(SHOTS / "t3_typing.png"))

@@ -33,25 +33,6 @@ jobs:
       - name: Run parser tests
         run: uv run pytest tests/test_fetcher.py -q
 
-      # ECDICT 离线词典（约 137MB 解压后）：按 Release tag 缓存，命中则免下载
-      - name: Cache ECDICT sqlite
-        uses: actions/cache@v4
-        with:
-          path: ecdict.sqlite
-          key: ecdict-sqlite-28
-
-      - name: Download ECDICT (on cache miss)
-        run: |
-          if [ ! -f ecdict.sqlite ]; then
-            curl -fsSL --retry 3 -o /tmp/ecdict.zip \
-              https://github.com/skywind3000/ECDICT/releases/download/1.0.28/ecdict-sqlite-28.zip
-            # 该 zip 内是单个 stardict.db（实测），统一更名为 fetcher 探测的 ecdict.sqlite
-            unzip -o /tmp/ecdict.zip -d /tmp/ecdict
-            mv /tmp/ecdict/stardict.db ecdict.sqlite
-            rm -rf /tmp/ecdict /tmp/ecdict.zip
-            test -s ecdict.sqlite
-          fi
-
       # 单词发音 MP3 缓存：滚动 key（每次运行都会保存新条目，restore 命中最近一次），
       # fetcher 只为缺失的词增量生成；缓存丢失时自动全量重建（约 10 分钟）
       - name: Cache TTS audio

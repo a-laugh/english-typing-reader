@@ -20,7 +20,6 @@ import asyncio
 import json
 import os
 import re
-import sqlite3
 import sys
 import uuid
 from datetime import date, timedelta
@@ -53,14 +52,6 @@ HTTP_HEADERS = {
 # 用 or 兜底：CI 里 ${{ vars.X }} 未配置时会注入空串，空串不应覆盖默认值
 LLM_BASE_URL = os.environ.get("LLM_BASE_URL") or "https://open.bigmodel.cn/api/paas/v4"
 LLM_MODEL = os.environ.get("LLM_MODEL") or "glm-4-flash"
-
-# 本地 ECDICT 词典探测：环境变量优先（语义为覆盖），其后探测仓库根目录
-# （Actions 里由 workflow 把下载的 stardict.db 更名放置到该处）
-ECDICT_CANDIDATES = [
-    Path(os.environ.get("ECDICT_PATH", "")) if os.environ.get("ECDICT_PATH") else None,
-    Path(__file__).resolve().parent / "ecdict.sqlite",
-]
-ECDICT_MIN_BYTES = 1_000_000  # 误碰同名小文件时的最低门槛
 
 # 词汇表短语做逐词索引时跳过的虚词（避免 "the grid" 把 the 也建词条）
 STOPWORDS = {
@@ -258,12 +249,16 @@ def parse_episode(html: str, meta: dict) -> dict:
 # GLM 语境词表
 # ---------------------------------------------------------------------------
 
-GLOSSARY_PROMPT = """你是英语学习材料的编辑。下面是一期 BBC 6 Minute English 的英文对白。
-请找出其中所有「非常用」英文单词与短语（初学者已会的冠词/介词/基础词如 the、and、go、big 不需要），
-并给出每个词在这篇对白语境中的含义。
+GLOSSARY_PROMPT = """你是英语学习材料的编辑。下面是一期 BBC 6 Minute English 的英文对白，\
+以及该节目官方给出的重点词汇表。
 
-meaning 的硬性要求：不超过 10 个字的简洁中文释义（例如"电网"、"高温"、"居住"），
+请找出对白中所有「非常用」英文单词与短语（初学者已会的冠词/介词/基础词如 the、and、go、big 不需要），
+给每个词在本对白语境中的中文释义。
+
+释义要求：不超过 10 个字，简洁、易懂（例如"电网"、"高温"、"居住"）；
 不要解释性长句、不要堆砌词性、不要加括号补充说明。
+- 官方词汇表中的词：以官方英文释义为依据，转成简洁中文
+- 其余词：结合对白语境给出中文含义
 
 仅输出一个 JSON 对象（最外层是一对花括号，键为单词、值为对象，全部用双引号），
 不要输出任何其他文字。示例格式：
@@ -271,19 +266,37 @@ meaning 的硬性要求：不超过 10 个字的简洁中文释义（例如"电�
   "单词": {"meaning": "不超过10字的中文释义", "sentence": "该词所在的对白句子（英文原文，保留该词）"},
   "the grid": {"meaning": "电网", "sentence": "..."}
 }
+"""
 
-对白：
+GLOSSARY_PROMPT_NO_VOCAB = """你是英语学习材料的编辑。下面是一期 BBC 6 Minute English 的英文对白。
+请找出其中所有「非常用」英文单词与短语（初学者已会的冠词/介词/基础词如 the、and、go、big 不需要），
+给每个词在本对白语境中的中文释义：不超过 10 个字，简洁、易懂（例如"电网"、"高温"、"居住"）；
+不要解释性长句、不要堆砌词性、不要加括号补充说明。
+
+仅输出一个 JSON 对象（最外层是一对花括号，键为单词、值为对象，全部用双引号），
+不要输出任何其他文字。示例格式：
+{
+  "单词": {"meaning": "不超过10字的中文释义", "sentence": "该词所在的对白句子（英文原文，保留该词）"}
+}
 """
 
 
-def generate_context_glossary(transcript: str, api_key: str) -> dict:
-    """调用 GLM 生成全篇语境词表；失败（含重试一次后仍失败）返回 {}。"""
+def generate_context_glossary(transcript: str, vocabulary: list, api_key: str) -> dict:
+    """调用 GLM 生成全篇语境词表（官方词汇表优先作为释义依据）；失败（含重试一次后仍失败）返回 {}。"""
+    if vocabulary:
+        vocab_lines = "\n".join(
+            f"{item.get('word', '')}: {item.get('definition', '')}".strip()
+            for item in vocabulary if item.get("word")
+        )
+        prompt = GLOSSARY_PROMPT + f"官方词汇表：\n{vocab_lines}\n\n对白：\n{transcript}"
+    else:
+        prompt = GLOSSARY_PROMPT_NO_VOCAB + f"\n对白：\n{transcript}"
     url = f"{LLM_BASE_URL}/chat/completions"
     headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
     payload = {
         "model": LLM_MODEL,
         "messages": [
-            {"role": "user", "content": GLOSSARY_PROMPT + transcript},
+            {"role": "user", "content": prompt},
             {
                 "role": "system",
                 "content": "You are a precise assistant that only outputs valid JSON.",
@@ -352,76 +365,6 @@ def _parse_json_block(text: str):
         except ValueError as e:
             last_error = e
     raise ValueError(f"输出中找不到可解析的 JSON 对象（{last_error}）")
-
-
-# ---------------------------------------------------------------------------
-# ECDICT 补全
-# ---------------------------------------------------------------------------
-
-def detect_ecdict_table(path: Path) -> str | None:
-    """探测 sqlite 词典的可用表名并校验 word/translation 列可查。
-
-    本地 ecdict.sqlite 用 entries 表，ECDICT Release 的 stardict.db 用 stardict 表
-    （列名相同）——曾因只查 entries 导致 Actions 里词典层整体静默丢失。
-    """
-    try:
-        conn = sqlite3.connect(str(path))
-        try:
-            tables = {
-                row[0]
-                for row in conn.execute("SELECT name FROM sqlite_master WHERE type='table'")
-            }
-            for table in ("entries", "stardict"):
-                if table in tables:
-                    conn.execute(
-                        f"SELECT word, translation FROM {table} WHERE word = 'test' LIMIT 1"
-                    ).fetchone()
-                    return table
-        finally:
-            conn.close()
-    except sqlite3.Error:
-        pass
-    return None
-
-
-def find_ecdict() -> tuple[Path, str] | None:
-    """返回 (词典文件, 表名)；找不到可用词典返回 None。"""
-    for cand in ECDICT_CANDIDATES:
-        if cand and cand.is_file() and cand.stat().st_size > ECDICT_MIN_BYTES:
-            table = detect_ecdict_table(cand)
-            if table:
-                return cand, table
-            log(f"警告：{cand} 不是可用的 ECDICT 词典（无 entries/stardict 表或列缺失），忽略")
-    return None
-
-
-def lookup_ecdict(words: list[str], db_path: Path, table: str) -> dict[str, str]:
-    """批量查 ECDICT，返回 {word: 中文释义}；未命中的词不在结果中。
-
-    查询出错只告警一次（避免逐词刷屏）——历史上逐词静默跳过，
-    表名不匹配时整层词典无声丢失，直到线上词典从 346 条掉到 51 条才被发现。
-    """
-    result: dict[str, str] = {}
-    warned = False
-    conn = sqlite3.connect(str(db_path))
-    try:
-        for word in words:
-            try:
-                row = conn.execute(
-                    f"SELECT translation FROM {table} WHERE word = ? AND translation != ''",
-                    (word,),
-                ).fetchone()
-            except sqlite3.Error as e:
-                if not warned:
-                    warned = True
-                    log(f"警告：ECDICT 查询失败（{e}），剩余词的词典释义将缺失")
-                continue
-            if row and row[0]:
-                merged = row[0].replace("\\n", "；").replace("\r", "").replace("\n", "；")
-                result[word] = re.sub(r"；+", "；", merged).strip("； ")
-    finally:
-        conn.close()
-    return result
 
 
 # ---------------------------------------------------------------------------
@@ -549,12 +492,12 @@ def clean_word(token: str) -> str:
     return "".join(subs)
 
 
-def bake_word_dict(episode: dict, ecdict: tuple[Path, str] | None) -> dict:
-    """合并三层来源，产出全篇逐词词典 {word: {translation, context?, sentence?, source}}。
+def bake_word_dict(episode: dict) -> dict:
+    """合并释义来源，产出全篇逐词词典 {word: {translation, context?, sentence?, source}}。
 
-    优先级：GLM 语境词表 > 官方词汇表 > ECDICT（用户指定：语境解释最优先，
-    官方英文释义次之，最后才查词典）。
-    官方词汇表/语境词表中的短语（如 the grid）会额外为非虚词成分建索引。
+    优先级：GLM 语境词表（官方词汇表的词也由 LLM 依据官方释义转成了简洁中文）>
+    官方词汇表原始释义（LLM 缺失时的回退）。没有词典层——未覆盖的词前端显示「未收录」。
+    短语（如 the grid）会额外为非虚词成分建索引。
     """
     baked: dict = {}
 
@@ -597,14 +540,6 @@ def bake_word_dict(episode: dict, ecdict: tuple[Path, str] | None) -> dict:
             if alias and alias not in baked:
                 baked[alias] = dict(entry, phrase=phrase)
 
-    if ecdict is not None:
-        missing = sorted({
-            w for w in (clean_word(t) for t in episode["transcript"].split())
-            if w and w not in baked
-        })
-        for word, trans in lookup_ecdict(missing, ecdict[0], ecdict[1]).items():
-            put(word, "ecdict", translation=trans)
-
     return baked
 
 
@@ -616,10 +551,8 @@ def build(days: int, no_llm: bool, no_audio: bool = False, rebake: bool = False)
     today = date.today()
     cutoff = today - timedelta(days=days - 1)  # 含今天在内的 N 天窗口
     api_key = os.environ.get("GLM_API_KEY", "")
-    ecdict = find_ecdict()
     log(f"窗口：{cutoff} ~ {today}（{days} 天）；LLM：{'关' if no_llm or not api_key else '开'}；"
-        f"音频：{'关' if no_audio else '开'}；"
-        f"ECDICT：{ecdict[0].name + ':' + ecdict[1] if ecdict else '未找到（未覆盖词将无释义）'}")
+        f"音频：{'关' if no_audio else '开'}")
 
     DATA_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -633,7 +566,7 @@ def build(days: int, no_llm: bool, no_audio: bool = False, rebake: bool = False)
                 continue
             try:
                 data = json.loads(f.read_text(encoding="utf-8"))
-                data["dict"] = bake_word_dict(data, ecdict)
+                data["dict"] = bake_word_dict(data)
                 f.write_text(
                     json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
                 )
@@ -671,10 +604,12 @@ def build(days: int, no_llm: bool, no_audio: bool = False, rebake: bool = False)
                 # 与主路径同等的防御：半损坏文件只跳过补烘，不让异常炸掉整个构建
                 if data and "transcript" in data and not data.get("context_glossary"):
                     log(f"补烘语境词表：{meta['id']}（此前构建无 GLM 结果）")
-                    glossary = generate_context_glossary(data["transcript"], api_key)
+                    glossary = generate_context_glossary(
+                        data["transcript"], data.get("vocabulary", []), api_key
+                    )
                     if glossary:
                         data["context_glossary"] = glossary
-                        data["dict"] = bake_word_dict(data, ecdict)
+                        data["dict"] = bake_word_dict(data)
                         out_file.write_text(
                             json.dumps(data, ensure_ascii=False, indent=2) + "\n",
                             encoding="utf-8",
@@ -688,11 +623,11 @@ def build(days: int, no_llm: bool, no_audio: bool = False, rebake: bool = False)
             episode = parse_episode(http_get(meta["url"]), meta)
             if not no_llm and api_key:
                 episode["context_glossary"] = generate_context_glossary(
-                    episode["transcript"], api_key
+                    episode["transcript"], episode.get("vocabulary", []), api_key
                 )
             else:
                 episode["context_glossary"] = {}
-            episode["dict"] = bake_word_dict(episode, ecdict)
+            episode["dict"] = bake_word_dict(episode)
             out_file.write_text(
                 json.dumps(episode, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
             )

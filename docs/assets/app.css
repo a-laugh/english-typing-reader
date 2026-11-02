@@ -1,48 +1,52 @@
-/* 键学 · 应用层样式（在 Pico.css 之上） */
+/* 键学 · 应用层样式（自托管 Bootstrap 5.3 之上）
+   风格：简洁明快——浅灰蓝底、白色卡片、蓝色主色、圆角轻阴影 */
 
 html, body {
     height: 100%;
     margin: 0;
 }
+.app-body {
+    background-color: #f2f5f9;
+    color: var(--bs-body-color);
+}
 
-/* 单列应用布局：顶栏 / 对白滚动区 / 输入框 / 提示行 */
+/* 单列应用布局：顶栏 / 对白滚动区 / 提示行 */
 .app {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 2rem);
-    max-width: 900px;
-    padding-bottom: 1rem;
+    height: calc(100vh - 1.5rem);
+    max-width: 880px;
+    padding-bottom: 0.75rem;
     box-sizing: border-box;
 }
 
-/* ---- 顶栏：标题 + 剧集选择 + 元信息，一行放下（窄屏自动换行） ---- */
+/* ---- 顶栏：标题 + 剧集选择 + 元信息 ---- */
 .app-header {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 0.75rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
 }
 .app-title {
-    margin: 0;
-    font-size: 1.25rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #0d6efd;
+    letter-spacing: 0.02em;
 }
 #episode-selector {
     margin: 0;
-    width: auto;
-    min-width: 16rem;
-    flex: 1 1 16rem;
-    max-width: 28rem;
-    padding: 0.35rem 0.6rem;
+    flex: 1 1 14rem;
+    max-width: 26rem;
+    min-width: 0; /* flex 项默认 min-width:auto 会被最长选项文本撑爆窄屏 */
 }
 #episode-meta {
     flex-basis: 100%;
-    font-size: 0.85rem;
-    color: var(--pico-muted-color);
-    margin: -0.25rem 0 0 0;
+    color: var(--bs-secondary-color);
+    margin-top: -0.15rem;
 }
 #episode-meta a {
-    color: var(--pico-primary);
+    color: var(--bs-link-color);
     text-decoration: none;
 }
 #episode-meta a:hover {
@@ -51,29 +55,24 @@ html, body {
 .remaining-days {
     color: #b06a00;
     background-color: #fff3cd;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     padding: 0 0.4em;
     margin-left: 0.4em;
 }
 
 #notice {
     margin: 0 0 0.75rem 0;
-    padding: 0.6rem 0.9rem;
-    border-radius: var(--pico-border-radius);
-    background-color: #fff3cd;
-    border: 1px solid #ffe69c;
-    color: #664d03;
-    font-size: 0.9rem;
 }
 
-/* ---- 对白区：全宽滚动，占据主要空间 ---- */
+/* ---- 对白区：白色卡片、全宽滚动、占据主要空间 ---- */
 #dialog-display {
     flex: 1;
     overflow-y: auto;
-    padding: 0.9rem 1rem;
-    border: 1px solid var(--pico-muted-border-color);
-    border-radius: var(--pico-border-radius);
-    background-color: var(--pico-card-background-color, #fff);
+    padding: 1rem 1.1rem;
+    background-color: #ffffff;
+    border: 1px solid var(--bs-border-color-translucent);
+    border-radius: var(--bs-border-radius-lg);
+    box-shadow: 0 0.125rem 0.35rem rgba(16, 24, 40, 0.06);
     font-size: 1.12rem;
     line-height: 2;
     text-align: left;
@@ -89,22 +88,26 @@ html, body {
 .turn:last-child {
     margin-bottom: 0;
 }
+/* 正在输入的行 / 带翻译浮层的行：与上一行拉开距离，给上方浮层留出空间 */
+.turn-headroom {
+    margin-top: 1.9rem;
+}
 .speaker-badge {
     flex: 0 0 auto;
-    margin-top: 0.3rem;
-    padding: 0.05rem 0.55rem;
-    border-radius: 999px;
+    margin-top: 0.32rem;
+    padding: 0.08rem 0.6rem;
+    border-radius: 50rem;
     font-size: 0.72rem;
     font-weight: 600;
     letter-spacing: 0.02em;
     white-space: nowrap;
 }
-/* 说话人配色：按名字哈希到 5 个柔和色 */
-.speaker-c0 { background-color: #e3f0ff; color: #1c4e80; }
-.speaker-c1 { background-color: #ffe9ec; color: #a12547; }
-.speaker-c2 { background-color: #e6f6ea; color: #23683a; }
-.speaker-c3 { background-color: #f3ecfb; color: #5d3a8e; }
-.speaker-c4 { background-color: #fdf3df; color: #8a5a12; }
+/* 说话人配色：按名字哈希到 5 个柔和色（Bootstrap 色板衍生） */
+.speaker-c0 { background-color: #cfe2ff; color: #084298; }
+.speaker-c1 { background-color: #f8d7da; color: #842029; }
+.speaker-c2 { background-color: #d1e7dd; color: #0a3622; }
+.speaker-c3 { background-color: #e2d9f3; color: #46326e; }
+.speaker-c4 { background-color: #ffe8cc; color: #7a4d0f; }
 .turn-text {
     margin: 0;
     flex: 1;
@@ -113,17 +116,30 @@ html, body {
 
 /* 词态 */
 .word-correct {
-    color: #1e8e44;
+    color: #198754;
     font-weight: 600;
     position: relative; /* 行内翻译浮层的定位宿主 */
 }
 .current-word {
-    background-color: #d1ecf1;
-    color: #0c5460;
+    background-color: #cdeffd;
+    color: #055160;
     padding: 1px 6px;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     font-weight: 600;
-    box-shadow: 0 0 5px rgba(209, 236, 241, 0.6);
+    box-shadow: 0 0 4px rgba(13, 202, 240, 0.25);
+}
+
+/* 当前词的字母级状态 */
+.letter-ok {
+    color: #198754;
+}
+.letter-bad {
+    color: #ffffff;
+    background-color: #dc3545;
+    border-radius: 3px;
+}
+.ltr-punct {
+    opacity: 0.55;
 }
 
 /* 行内翻译：宿主词上方的绝对定位浮层——脱离文档流，出现/消失零重排，
@@ -134,10 +150,10 @@ html, body {
     left: 50%;
     transform: translateX(-50%);
     padding: 0 0.45rem;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     background-color: #ffffff;
-    border: 1px solid #d5dbe1;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+    border: 1px solid var(--bs-border-color);
+    box-shadow: 0 0.15rem 0.4rem rgba(16, 24, 40, 0.14);
     color: #5a6570;
     font-size: 0.7em;
     font-weight: 500;
@@ -150,25 +166,12 @@ html, body {
 }
 .gloss.ctx {
     background-color: #e7f4ff;
-    border-color: #b8dbf5;
-    color: #14507f;
+    border-color: #b6dcf7;
+    color: #0b5aa2;
 }
 .gloss .gloss-tag {
     margin-right: 0.25em;
     font-size: 0.9em;
-}
-
-/* ---- 当前词的字母级状态 ---- */
-.letter-ok {
-    color: #1e8e44;
-}
-.letter-bad {
-    color: #ffffff;
-    background-color: #dc3545;
-    border-radius: 3px;
-}
-.ltr-punct {
-    opacity: 0.55;
 }
 
 /* 键盘捕获输入：视觉隐藏但保持可聚焦（唤起手机软键盘） */
@@ -190,23 +193,21 @@ html, body {
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
-    margin: 0.4rem 0 0 0;
-    font-size: 0.82rem;
-    color: var(--pico-muted-color);
+    margin: 0.5rem 0 0 0;
+    color: var(--bs-secondary-color);
 }
 #hint-current .hw {
-    color: var(--pico-color);
+    color: var(--bs-body-color);
     font-weight: 600;
 }
 #mute-toggle {
     cursor: pointer;
     user-select: none;
-    color: var(--pico-muted-color);
-    text-decoration: none;
+    color: var(--bs-secondary-color);
     margin-left: 0.6em;
 }
 #mute-toggle:hover {
-    color: var(--pico-color);
+    color: var(--bs-body-color);
 }
 
 /* 手机：顶栏纵向、对白区占满剩余 */
@@ -220,16 +221,16 @@ html, body {
     }
     #episode-selector {
         flex-basis: 100%;
-        min-width: 0;
         max-width: none;
     }
     #dialog-display {
         font-size: 1rem;
         line-height: 1.9;
-        padding: 0.6rem 0.7rem;
+        padding: 0.65rem 0.75rem;
     }
     .app-footer {
         flex-direction: column;
         gap: 0.1rem;
+        align-items: flex-start;
     }
 }

@@ -179,54 +179,6 @@ def test_glossary_prompt_requires_concise_meaning():
 # ---------------------------------------------------------------- ECDICT 表名兼容
 
 
-def _make_dict_db(path, table):
-    import sqlite3
-    conn = sqlite3.connect(str(path))
-    conn.execute(
-        f"CREATE TABLE {table} (word TEXT, translation TEXT)"
-    )
-    conn.execute(f"INSERT INTO {table} VALUES ('summer', 'n. 夏季')")
-    conn.commit()
-    conn.close()
-
-
-def test_detect_ecdict_table_both_schemas(tmp_path):
-    """本地 ecdict.sqlite 用 entries 表，ECDICT Release 的 stardict.db 用 stardict 表
-    （列名相同）——历史 bug：只查 entries，Actions 里整层词典静默丢失。"""
-    for name, table in [("local.sqlite", "entries"), ("release.sqlite", "stardict")]:
-        db = tmp_path / name
-        _make_dict_db(db, table)
-        assert fetcher.detect_ecdict_table(db) == table
-    # 无可用表 → None
-    empty = tmp_path / "empty.sqlite"
-    import sqlite3
-    sqlite3.connect(str(empty)).close()
-    assert fetcher.detect_ecdict_table(empty) is None
-
-
-def test_lookup_ecdict_with_table(tmp_path):
-    db = tmp_path / "stardict.db"
-    _make_dict_db(db, "stardict")
-    result = fetcher.lookup_ecdict(["summer", "missing"], db, "stardict")
-    assert result == {"summer": "n. 夏季"}
-
-
-def test_find_ecdict_size_guard(tmp_path, monkeypatch):
-    monkeypatch.setattr(fetcher, "ECDICT_MIN_BYTES", 1)  # 测试库只有几 KB
-    garbage = tmp_path / "garbage.sqlite"
-    garbage.write_bytes(b"x" * 2_000_000)  # 够大但不是 sqlite
-    valid = tmp_path / "ecdict.sqlite"
-    _make_dict_db(valid, "entries")
-    # 大小门槛：太小的不看；内容不是 sqlite 的告警忽略
-    monkeypatch.setattr(fetcher, "ECDICT_CANDIDATES", [tmp_path / "tiny.sqlite"])
-    (tmp_path / "tiny.sqlite").write_bytes(b"x" * 100)
-    assert fetcher.find_ecdict() is None
-    monkeypatch.setattr(fetcher, "ECDICT_CANDIDATES", [garbage])
-    assert fetcher.find_ecdict() is None
-    monkeypatch.setattr(fetcher, "ECDICT_CANDIDATES", [valid])
-    assert fetcher.find_ecdict() == (valid, "entries")
-
-
 # ------------------------------------------------- GLM 调用链（本地模拟服务）
 
 def _mock_glm_server(content: str):
@@ -272,7 +224,7 @@ def test_generate_context_glossary_output_variants(monkeypatch):
             monkeypatch.setattr(
                 fetcher, "LLM_BASE_URL", f"http://127.0.0.1:{server.server_address[1]}/v1"
             )
-            result = fetcher.generate_context_glossary("Hi Neil. How are you?", "test-key")
+            result = fetcher.generate_context_glossary("Hi Neil. How are you?", [], "test-key")
             assert result == expected, f"{name}: {result}"
         finally:
             server.shutdown()
@@ -286,7 +238,7 @@ def test_generate_context_glossary_garbage_degrades(monkeypatch):
         monkeypatch.setattr(
             fetcher, "LLM_BASE_URL", f"http://127.0.0.1:{server.server_address[1]}/v1"
         )
-        assert fetcher.generate_context_glossary("Hi Neil.", "test-key") == {}
+        assert fetcher.generate_context_glossary("Hi Neil.", [], "test-key") == {}
     finally:
         server.shutdown()
         server.server_close()
@@ -301,7 +253,7 @@ def test_bake_word_dict_priority_and_alias():
             "the grid": {"meaning": "（国家的）电网", "sentence": "s"},
         },
     }
-    baked = fetcher.bake_word_dict(episode, None)
+    baked = fetcher.bake_word_dict(episode)
 
     # 优先级：LLM 语境 > 官方 > 词典（同一词两层都有时语境胜出）
     assert baked["the grid"]["source"] == "context"
@@ -325,7 +277,7 @@ def test_bake_word_dict_context_overrides_official():
         "vocabulary": [{"word": "shading", "definition": "official def"}],
         "context_glossary": {"shading": {"meaning": "遮阳", "sentence": "s"}},
     }
-    baked = fetcher.bake_word_dict(episode, None)
+    baked = fetcher.bake_word_dict(episode)
     assert baked["shading"]["source"] == "context"
     assert baked["shading"]["translation"] == "遮阳"
 
@@ -339,7 +291,7 @@ def test_bake_word_dict_alias_order_deterministic():
         "vocabulary": [{"word": "societal pressure", "definition": "d"}],
         "context_glossary": {},
     }
-    baked = fetcher.bake_word_dict(episode, None)
+    baked = fetcher.bake_word_dict(episode)
     assert list(baked) == [
         "societal pressure",  # 官方词汇表短语本体
         "pressure",           # 成分别名（排序后依次插入）
@@ -387,24 +339,20 @@ def test_prune_audio_no_dir(tmp_path, monkeypatch):
 
 
 def test_rebake_rebuilds_dict_keeps_glossary(tmp_path, monkeypatch):
-    """rebake：重建词典（ECDICT 层恢复）、保留 context_glossary 与 transcript、
+    """rebake：重建词典（context+official 两层）、保留 context_glossary 与 transcript、
     不触网（独立模式在 parse_index 之前返回）。"""
-    import os
     data_dir = tmp_path / "episodes"
     data_dir.mkdir()
     episode = {
         "id": "261001", "title": "T", "pub_date": "2026-10-01",
-        "bbc_url": "https://example.com", "transcript": "summer heat",
-        "vocabulary": [], "context_glossary": {"heat": {"meaning": "高温", "sentence": "s"}},
+        "bbc_url": "https://example.com", "transcript": "summer heat wave",
+        "vocabulary": [{"word": "heat wave", "definition": "a period of very hot weather"}],
+        "context_glossary": {"heat wave": {"meaning": "热浪", "sentence": "s"}},
         "dict": {"onlyofficial": {"translation": "x", "source": "official"}},
     }
     (data_dir / "261001.json").write_text(json.dumps(episode, ensure_ascii=False), encoding="utf-8")
 
-    db = tmp_path / "ecdict.sqlite"
-    _make_dict_db(db, "entries")
     monkeypatch.setattr(fetcher, "DATA_DIR", data_dir)
-    monkeypatch.setattr(fetcher, "ECDICT_MIN_BYTES", 1)
-    monkeypatch.setattr(fetcher, "ECDICT_CANDIDATES", [db])
     monkeypatch.setattr(fetcher, "AUDIO_DIR", tmp_path / "audio")  # rebake 不碰音频
 
     rc = fetcher.build(days=30, no_llm=True, no_audio=True, rebake=True)
@@ -412,8 +360,10 @@ def test_rebake_rebuilds_dict_keeps_glossary(tmp_path, monkeypatch):
     rebaked = json.loads((data_dir / "261001.json").read_text(encoding="utf-8"))
     assert rebaked["context_glossary"] == episode["context_glossary"], "语境词表必须保留"
     assert rebaked["transcript"] == episode["transcript"]
-    assert rebaked["dict"]["summer"]["source"] == "ecdict", "ECDICT 层必须恢复"
-    assert rebaked["dict"]["heat"]["source"] == "context", "语境层优先于词典层"
+    # 语境层优先；未覆盖的词（summer/wave）不再有词典层兜底 → 不出现
+    assert rebaked["dict"]["heat wave"]["source"] == "context"
+    assert rebaked["dict"]["wave"]["source"] == "context", "短语成分别名继承语境层"
+    assert "summer" not in rebaked["dict"], "无词典层：未覆盖词不出现"
     assert "onlyofficial" not in rebaked["dict"], "旧词典整体重建而非合并"
 
 

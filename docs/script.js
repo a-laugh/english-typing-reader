@@ -357,6 +357,11 @@ function renderDialog() {
     // DOM API + textContent 构建：剧集数据来自外部站点，防存储型 XSS
     const frag = document.createDocumentFragment();
     letterSpans = []; // 当前词的字母 span 重建（仅当前词有字母级结构）
+    // 正在输入的行与带翻译浮层的行需要与上一行拉开距离（给上方浮层留空间）
+    const headroomTurns = new Set([turnIndexByWord[currentWordIndex]]);
+    if (glossWordIndex >= 0) {
+        headroomTurns.add(turnIndexByWord[glossWordIndex]);
+    }
     let wordIdx = 0;
     episodeTurns.forEach((turn, ti) => {
         const words = turn.text.split(/\s+/).filter(Boolean);
@@ -365,7 +370,7 @@ function renderDialog() {
         if (ti < from || ti > to) return;
 
         const row = document.createElement("div");
-        row.className = "turn";
+        row.className = headroomTurns.has(ti) ? "turn turn-headroom" : "turn";
         if (turn.speaker) {
             const badge = document.createElement("span");
             badge.className = `speaker-badge ${speakerClass(turn.speaker)}`;
