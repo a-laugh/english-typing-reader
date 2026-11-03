@@ -36,6 +36,10 @@ EPISODE_PATH_RE = re.compile(
 )
 DATA_DIR = Path(__file__).resolve().parent / "docs" / "data" / "episodes"
 
+# 全局内建词表（历史剧集挖掘 + 周构建自生长）：{清洗词: 中文释义}。
+# 前端释义查询链：剧集词典（LLM 语境）→ 本表 → basics.json
+GLOSSARY_FILE = DATA_DIR.parent / "glossary.json"
+
 # 单词发音 MP3 缓存（构建期烘焙，跨剧集共享；前端优先播放，浏览器 TTS 兜底）
 AUDIO_DIR = DATA_DIR.parent / "audio"
 TTS_VOICE = os.environ.get("TTS_VOICE") or "en-US-AriaNeural"
@@ -440,6 +444,130 @@ def generate_context_glossary(transcript: str, vocabulary: list, api_key: str) -
     return glossary
 
 
+# ---------------------------------------------------------------------------
+# 全局内建词表（历史剧集挖掘，周构建自生长）
+# ---------------------------------------------------------------------------
+
+GLOSSARY_TARGETED_PROMPT = """你是英语学习材料的编辑。下面是一段 BBC 6 Minute English 对白。
+请只给出**指定词表**中每个词在这段对白语境中的中文释义（不超过 10 个字，简洁、易懂）。
+
+仅输出一个 JSON 对象（键为单词、值为只含 meaning 的对象，全部用双引号），
+不要输出任何其他文字，不要输出指定词表以外的词。示例格式：
+{
+  "单词": {"meaning": "不超过10字的中文释义"}
+}
+"""
+
+
+def load_global_glossary() -> dict:
+    if GLOSSARY_FILE.is_file():
+        try:
+            data = json.loads(GLOSSARY_FILE.read_text(encoding="utf-8"))
+            if isinstance(data, dict):
+                return data
+        except (json.JSONDecodeError, OSError) as e:
+            log(f"警告：全局词表 {GLOSSARY_FILE.name} 读取失败（{e}），按空表处理")
+    return {}
+
+
+def save_global_glossary(glossary: dict) -> None:
+    """保存全局词表：键为清洗词（小写字母数字），含短语成分/连字符别名，
+    排序保证确定性（沿用剧集词典的别名规则）。"""
+    expanded: dict = {}
+    for word, meaning in glossary.items():
+        key = word.strip().lower()
+        if key and meaning and key not in expanded:
+            expanded[key] = meaning
+    for phrase in list(expanded):
+        # 短语成分别名（the grid → grid）与清洗别名（we've/life-saving → 前端 cleanWord 键）
+        if " " in phrase:
+            for part in WORD_RE.findall(phrase):
+                if part not in STOPWORDS and part not in expanded:
+                    expanded[part] = expanded[phrase]
+        cleaned = clean_word(phrase)
+        if cleaned and cleaned not in expanded:
+            expanded[cleaned] = expanded[phrase]
+    GLOSSARY_FILE.write_text(
+        json.dumps(expanded, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
+
+
+def merge_glossary_entries(glossary: dict, entries: dict) -> int:
+    """把 {词: 释义或 {meaning:...}} 并入全局词表（先到先得），返回新增数。"""
+    added = 0
+    for word, info in entries.items():
+        meaning = info.get("meaning", "") if isinstance(info, dict) else str(info)
+        key = word.strip().lower()
+        if key and meaning and key not in glossary:
+            glossary[key] = meaning
+            added += 1
+    return added
+
+
+def build_glossary_from_history(n_episodes: int, api_key: str) -> int:
+    """一次性挖掘：抓最近 n 期历史剧集（只取 transcript，不上货架），
+    逐块向 LLM 索要「该块中尚未入库的词」的释义，并入全局词表。
+
+    预过滤让后期块基本零新词、直接跳过——100 期实际 LLM 调用集中在前期。
+    """
+    episodes = parse_index(http_get(INDEX_URL))
+    if not episodes:
+        log("错误：索引页解析出 0 期剧集，放弃挖掘")
+        return 1
+    targets = episodes[:n_episodes]
+    log(f"全局词表挖掘：目标 {len(targets)} 期历史剧集（现有词表 {len(load_global_glossary())} 词）")
+
+    glossary = load_global_glossary()
+    calls = skipped_chunks = 0
+    for ei, meta in enumerate(targets, 1):
+        try:
+            episode = parse_episode(http_get(meta["url"]), meta)
+        except Exception as e:
+            log(f"[{ei}/{len(targets)}] {meta['id']} 解析失败，跳过: {e}")
+            continue
+        vocab_lines = "\n".join(
+            f"{item.get('word', '')}: {item.get('definition', '')}".strip()
+            for item in episode.get("vocabulary", []) if item.get("word")
+        )
+        for chunk in _chunk_transcript(episode["transcript"], GLOSSARY_CHUNK_WORDS):
+            # 定向词表：该块中尚未入库的清洗词（含官方词汇表词优先保留原文键）
+            wanted = []
+            for token in chunk_text_tokens(chunk):
+                if token not in glossary and token not in wanted:
+                    wanted.append(token)
+            if not wanted:
+                skipped_chunks += 1
+                continue
+            parts = [GLOSSARY_TARGETED_PROMPT]
+            if vocab_lines:
+                parts.append(f"官方词汇表（全期通用）：\n{vocab_lines}")
+            parts.append("指定词表（只输出这些词）：\n" + "、".join(wanted))
+            parts.append("对白：\n" + "\n".join(chunk))
+            part = _glm_glossary_call("\n\n".join(parts), api_key, f"挖掘 {meta['id']} 块")
+            calls += 1
+            if part:
+                merge_glossary_entries(glossary, part)
+        if ei % 10 == 0 or ei == len(targets):
+            log(f"[{ei}/{len(targets)}] 累计词表 {len(glossary)} 词（LLM 调用 {calls} 次，"
+                f"跳过 {skipped_chunks} 个无新词块）")
+
+    save_global_glossary(glossary)
+    log(f"全局词表完成：共 {len(glossary)} 词，LLM 调用 {calls} 次，已写入 {GLOSSARY_FILE.name}")
+    return 0
+
+
+def chunk_text_tokens(chunk: list[str]) -> list[str]:
+    """块内出现的清洗词序列（保持出现顺序、去重）。"""
+    tokens: list[str] = []
+    for line in chunk:
+        for token in line.split():
+            cleaned = clean_word(token)
+            if cleaned and cleaned not in tokens:
+                tokens.append(cleaned)
+    return tokens
+
+
 def _parse_json_block(text: str):
     """容错提取 LLM 输出中的 JSON。
 
@@ -762,6 +890,22 @@ def build(days: int, no_llm: bool, no_audio: bool = False, rebake: bool = False)
     log(f"本次构建：新增 {len(recent) - skipped - rebaked - failures} 期，"
         f"补烘 {rebaked} 期，跳过（已在架）{skipped} 期")
 
+    # 全局词表自生长：本期新生成的语境词表并入 glossary.json（先到先得）
+    global_glossary = load_global_glossary()
+    grew = 0
+    for meta in recent:
+        f = DATA_DIR / f"{meta['id']}.json"
+        if not f.is_file():
+            continue
+        try:
+            data = json.loads(f.read_text(encoding="utf-8"))
+            grew += merge_glossary_entries(global_glossary, data.get("context_glossary") or {})
+        except (json.JSONDecodeError, OSError):
+            continue
+    if grew:
+        save_global_glossary(global_glossary)
+        log(f"全局词表自生长：新增 {grew} 词，共 {len(global_glossary)} 词")
+
     # 滚动窗口：清理过期剧集，再重建 index.json
     kept = prune_and_reindex(DATA_DIR, cutoff)
 
@@ -825,8 +969,16 @@ def main() -> int:
     parser.add_argument("--no-audio", action="store_true", help="跳过 TTS 发音音频生成")
     parser.add_argument("--rebake", action="store_true",
                         help="只为在架剧集重建逐词词典（保留语境词表，不调 GLM）")
+    parser.add_argument("--build-glossary", type=int, metavar="N", default=0,
+                        help="一次性挖掘最近 N 期历史剧集构建全局词表（只取 transcript，不上货架）")
     args = parser.parse_args()
     try:
+        if args.build_glossary > 0:
+            api_key = os.environ.get("GLM_API_KEY", "")
+            if not api_key:
+                log("错误：--build-glossary 需要 GLM_API_KEY")
+                return 1
+            return build_glossary_from_history(args.build_glossary, api_key)
         return build(args.days, args.no_llm, args.no_audio, args.rebake)
     except requests.RequestException as e:
         log(f"网络请求失败（索引页不可达？）: {e}")

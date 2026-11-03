@@ -610,6 +610,52 @@ def test_prune_audio_no_dir(tmp_path, monkeypatch):
     assert fetcher.prune_audio(set()) == 0
 
 
+# ---------------------------------------------------------------- 全局词表挖掘
+
+
+def test_global_glossary_save_load_aliases(tmp_path, monkeypatch):
+    monkeypatch.setattr(fetcher, "GLOSSARY_FILE", tmp_path / "glossary.json")
+    fetcher.save_global_glossary({"the grid": "电网", "we've": "我们已经"})
+    saved = json.loads((tmp_path / "glossary.json").read_text(encoding="utf-8"))
+    assert saved["the grid"] == "电网"
+    assert saved["grid"] == "电网", "短语成分别名"
+    assert saved["weve"] == "我们已经", "清洗别名（前端 cleanWord 键）"
+    assert fetcher.load_global_glossary() == saved
+
+
+def test_build_glossary_from_history(tmp_path, monkeypatch):
+    """挖掘：只向 LLM 索要未入库的词（定向词表），无新词的块跳过，结果并入落盘。"""
+    monkeypatch.setattr(fetcher, "GLOSSARY_FILE", tmp_path / "glossary.json")
+    idx_html = (FIXTURES / "index.html").read_text(encoding="utf-8")
+    ep_html = (FIXTURES / "episode-261029.html").read_text(encoding="utf-8")
+
+    def fake_http_get(url):
+        return idx_html if url == fetcher.INDEX_URL else ep_html
+
+    prompts = []
+
+    def fake_call(prompt, api_key, label):
+        prompts.append(prompt)
+        # 模拟模型：把该块点名的指定词全部返回
+        import re as _re
+        m = _re.search(r"指定词表（只输出这些词）：\n(.+)", prompt)
+        wanted = m.group(1).split("、") if m else []
+        return {w: {"meaning": f"译-{w}"} for w in wanted}
+
+    monkeypatch.setattr(fetcher, "http_get", fake_http_get)
+    monkeypatch.setattr(fetcher, "_glm_glossary_call", fake_call)
+
+    rc = fetcher.build_glossary_from_history(1, "key")
+    assert rc == 0
+    data = json.loads((tmp_path / "glossary.json").read_text(encoding="utf-8"))
+    assert "指定词表（只输出这些词）" in prompts[0]
+    assert "hi" in data and data["hi"].startswith("译-"), "定向词条已入库"
+    # 幂等：再挖一次，所有词已入库 → 全部块跳过、无 LLM 调用
+    prompts.clear()
+    rc = fetcher.build_glossary_from_history(1, "key")
+    assert rc == 0 and not prompts, "无新词时不再调用 LLM"
+
+
 # ---------------------------------------------------------------- rebake / TTS
 
 

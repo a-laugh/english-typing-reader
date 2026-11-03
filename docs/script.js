@@ -282,15 +282,22 @@ function prefetchUpcomingAudio(count = 8) {
 // 释义查询（构建期烘焙词典，本地同步查询）
 // ---------------------------------------------------------------------------
 
-// 内置基础词兜底词典（docs/assets/basics.json，~300 个最高频词）：
-// LLM 词表未覆盖某词时兜底——尤其 LLM 失败/漏词时基础词仍永远有释义
+// 内置基础词兜底词典（docs/assets/basics.json，~300 个最高频词）与
+// 全局内建词表（docs/data/glossary.json，历史剧集挖掘 + 周构建自生长）：
+// 释义查询链 = 剧集词典（LLM 语境）→ 全局词表 → 基础词表
 let basicsDict = {};
+let globalGlossary = {};
 
 function lookupWord(token) {
     const dict = currentEpisode ? currentEpisode.dict : {};
     const entry = dict[token.toLowerCase()] || dict[cleanWord(token)];
     if (entry) {
         return entry;
+    }
+    const lower = token.toLowerCase();
+    const global = globalGlossary[lower] || globalGlossary[cleanWord(token)];
+    if (global) {
+        return { translation: global, source: "global" };
     }
     const basic = basicsDict[cleanWord(token)];
     return basic ? { translation: basic, source: "basic" } : null;
@@ -624,7 +631,7 @@ episodeSelector.addEventListener("change", () => {
 // ---------------------------------------------------------------------------
 
 async function init() {
-    // 基础词兜底词典（静态资源，一次加载；失败不阻塞主流程）
+    // 基础词兜底词典与全局词表（静态资源，一次加载；失败不阻塞主流程）
     try {
         const resp = await fetch("assets/basics.json");
         if (resp.ok) {
@@ -632,6 +639,14 @@ async function init() {
         }
     } catch (e) {
         console.warn("基础词兜底词典加载失败:", e);
+    }
+    try {
+        const resp = await fetch("data/glossary.json", { cache: "no-cache" });
+        if (resp.ok) {
+            globalGlossary = await resp.json();
+        }
+    } catch (e) {
+        console.warn("全局词表加载失败:", e);
     }
 
     // 错误提示音开关（存 localStorage）
