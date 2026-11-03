@@ -344,14 +344,23 @@ def _glm_glossary_call(prompt: str, api_key: str, label: str) -> dict:
     rate_limit_hits = 0
     attempt = 0
     content = None
+    thinking_removed = False
     while attempt < 3:
         attempt += 1
         try:
             resp = requests.post(url, headers=headers, json=payload, timeout=120)
-            if resp.status_code == 429:
-                # 带上响应体：bigmodel 的 429 body 含具体错误码
-                # （如 1302 并发/频控、免费额度耗尽等），Actions 日志可直接定位
-                log(f"{label} 429 响应体: {resp.text[:200]!r}")
+            if resp.status_code == 400 and "thinking" in payload and not thinking_removed:
+                # 端点可能不接受 thinking 参数（各模型/版本支持不一）：
+                # 打印响应体后自动摘掉该参数重试一次，不再靠猜
+                log(f"{label} 400 响应体: {resp.text[:200]!r}；移除 thinking 参数后重试")
+                payload.pop("thinking")
+                thinking_removed = True
+                attempt -= 1
+                continue
+            if resp.status_code != 200:
+                # 任何 HTTP 错误都带响应体：bigmodel 的 body 含具体错误码
+                # （1211 模型不存在 / 参数非法 / 1302 频控等），Actions 日志可直接定位
+                log(f"{label} HTTP {resp.status_code} 响应体: {resp.text[:200]!r}")
             if resp.status_code == 429 and rate_limit_hits < 5:
                 rate_limit_hits += 1
                 wait = min(2 ** rate_limit_hits * 2, 30)  # 4s, 8s, 16s, 30s, 30s

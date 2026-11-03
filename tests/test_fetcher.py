@@ -347,6 +347,46 @@ def test_glm_call_reasoning_content_fallback(monkeypatch):
         server.server_close()
 
 
+def test_glm_call_400_drops_thinking_param(monkeypatch):
+    """400 时自适应：携带 thinking 被拒 → 打印响应体并移除该参数重试成功。"""
+    import threading
+    from http.server import BaseHTTPRequestHandler, HTTPServer
+    bodies = []
+
+    class Handler(BaseHTTPRequestHandler):
+        def do_POST(self):
+            length = int(self.headers.get("Content-Length", 0))
+            bodies.append(json.loads(self.rfile.read(length).decode("utf-8")))
+            if "thinking" in bodies[-1]:
+                resp = json.dumps({"error": {"code": "1210", "message": "invalid parameter: thinking"}}).encode()
+                self.send_response(400)
+            else:
+                resp = json.dumps(
+                    {"choices": [{"message": {"content": '{"a": {"meaning": "x", "sentence": "s"}}'}}]}
+                ).encode()
+                self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.send_header("Content-Length", str(len(resp)))
+            self.end_headers()
+            self.wfile.write(resp)
+
+        def log_message(self, *args):
+            pass
+
+    server = HTTPServer(("127.0.0.1", 0), Handler)
+    threading.Thread(target=server.serve_forever, daemon=True).start()
+    try:
+        monkeypatch.setattr(fetcher, "LLM_BASE_URL", f"http://127.0.0.1:{server.server_address[1]}/v1")
+        monkeypatch.setattr(fetcher, "LLM_MODEL", "glm-5.3-flash")
+        result = fetcher._glm_glossary_call("p", "k", "t")
+        assert result == {"a": {"meaning": "x", "sentence": "s"}}
+        assert len(bodies) == 2
+        assert "thinking" in bodies[0] and "thinking" not in bodies[1]
+    finally:
+        server.shutdown()
+        server.server_close()
+
+
 # ------------------------------------------------- GLM 调用链（本地模拟服务）
 
 def _mock_glm_server(content: str):
