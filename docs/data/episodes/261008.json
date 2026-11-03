@@ -193,171 +193,1967 @@
       "definition": "strong criticism of a trend; people doing the opposite of a trend"
     }
   ],
-  "context_glossary": {},
-  "dict": {
+  "context_glossary": {
     "unusual": {
-      "translation": "不同寻常的",
-      "source": "context",
-      "context": "不同寻常的",
+      "meaning": "不寻常",
       "sentence": "Do you want to hear something quite unusual for me?"
     },
-    "alcoholic": {
-      "translation": "含酒精的",
-      "source": "context",
-      "context": "含酒精的",
+    "alcoholic drink": {
+      "meaning": "酒精饮料",
       "sentence": "I haven't had an alcoholic drink this year."
     },
     "impressive": {
-      "translation": "令人印象深刻的",
-      "source": "context",
-      "context": "令人印象深刻的",
+      "meaning": "令人印象深刻",
       "sentence": "Wow! That is really impressive."
     },
+    "new person": {
+      "meaning": "全新的人",
+      "sentence": "How do you feel? Like a new person?"
+    },
+    "feel very good": {
+      "meaning": "感觉很好",
+      "sentence": "I do feel very good, I have to say."
+    },
+    "a few": {
+      "meaning": "一些",
+      "sentence": "I did have a few alcoholic drinks at the weekend with my friends."
+    },
+    "give up": {
+      "meaning": "放弃",
+      "sentence": "why many people are choosing to give up or cut down on alcohol"
+    },
+    "cut down": {
+      "meaning": "减少",
+      "sentence": "why many people are choosing to give up or cut down on alcohol"
+    },
+    "British drinking culture": {
+      "meaning": "英国饮酒文化",
+      "sentence": "Is this the end of British drinking culture?"
+    },
+    "quiz question": {
+      "meaning": "测验问题",
+      "sentence": "let's start with a quiz question"
+    },
+    "give away": {
+      "meaning": "透露",
+      "sentence": "I'm not going to give it away"
+    },
+    "programme": {
+      "meaning": "节目",
+      "sentence": "our listeners can find out the answer at the end of the programme"
+    },
+    "younger people": {
+      "meaning": "年轻人",
+      "sentence": "younger people don't drink as much alcohol today as they used to"
+    },
+    "used to": {
+      "meaning": "过去常常",
+      "sentence": "don't drink as much alcohol today as they used to in the past"
+    },
     "non-drinkers": {
-      "translation": "不喝酒的人",
+      "meaning": "不饮酒者",
+      "sentence": "16 to 24-year-olds are more likely to be non-drinkers than the older generations"
+    },
+    "older generations": {
+      "meaning": "老一辈",
+      "sentence": "more likely to be non-drinkers than the older generations"
+    },
+    "sober": {
+      "meaning": "清醒的",
+      "sentence": "why are more young people choosing to be sober?"
+    },
+    "investigating": {
+      "meaning": "调查",
+      "sentence": "the BBC World Service podcast What in the World have been investigating this"
+    },
+    "Presenter": {
+      "meaning": "主持人",
+      "sentence": "Presenter Hannah Gelbart met three young people"
+    },
+    "alcohol-free drinks": {
+      "meaning": "无酒精饮料",
+      "sentence": "who choose to be sober for some alcohol-free drinks"
+    },
+    "don't drink": {
+      "meaning": "不喝酒",
+      "sentence": "Yeah. So, today I don't drink at all, but when I was in my early 20s, I think I felt maybe a bit of, like, societal pressure"
+    },
+    "early 20s": {
+      "meaning": "二十多岁",
+      "sentence": "Yeah. So, today I don't drink at all, but when I was in my early 20s, I think I felt maybe a bit of, like, societal pressure"
+    },
+    "societal pressure": {
+      "meaning": "社会压力",
+      "sentence": "Yeah. So, today I don't drink at all, but when I was in my early 20s, I think I felt maybe a bit of, like, societal pressure"
+    },
+    "work drinks": {
+      "meaning": "工作聚会",
+      "sentence": "Yeah. So, today I don't drink at all, but when I was in my early 20s, I think I felt maybe a bit of, like, societal pressure – you know, work drinks or being at uni, where it was the norm to just join in."
+    },
+    "uni": {
+      "meaning": "大学",
+      "sentence": "Yeah. So, today I don't drink at all, but when I was in my early 20s, I think I felt maybe a bit of, like, societal pressure – you know, work drinks or being at uni, where it was the norm to just join in."
+    },
+    "the norm": {
+      "meaning": "常态",
+      "sentence": "Yeah. So, today I don't drink at all, but when I was in my early 20s, I think I felt maybe a bit of, like, societal pressure – you know, work drinks or being at uni, where it was the norm to just join in."
+    },
+    "join in": {
+      "meaning": "参与",
+      "sentence": "Yeah. So, today I don't drink at all, but when I was in my early 20s, I think I felt maybe a bit of, like, societal pressure – you know, work drinks or being at uni, where it was the norm to just join in."
+    },
+    "weird glances": {
+      "meaning": "奇怪目光",
+      "sentence": "I think you'd probably get a few weird glances if you're like, \"Yeah, I'm not going to join in at all.\""
+    },
+    "Covid lockdown": {
+      "meaning": "疫情封锁",
+      "sentence": "I think Covid lockdown just gave me a bit of confidence to say, \"OK, let me step away from this. It's not necessarily something I want to do moving forward.\""
+    },
+    "confidence": {
+      "meaning": "信心",
+      "sentence": "I think Covid lockdown just gave me a bit of confidence to say, \"OK, let me step away from this. It's not necessarily something I want to do moving forward.\""
+    },
+    "step away": {
+      "meaning": "远离",
+      "sentence": "I think Covid lockdown just gave me a bit of confidence to say, \"OK, let me step away from this. It's not necessarily something I want to do moving forward.\""
+    },
+    "necessarily": {
+      "meaning": "必然",
+      "sentence": "I think Covid lockdown just gave me a bit of confidence to say, \"OK, let me step away from this. It's not necessarily something I want to do moving forward.\""
+    },
+    "moving forward": {
+      "meaning": "向前",
+      "sentence": "I think Covid lockdown just gave me a bit of confidence to say, \"OK, let me step away from this. It's not necessarily something I want to do moving forward.\""
+    },
+    "six years": {
+      "meaning": "六年",
+      "sentence": "I would say it's been six years now."
+    },
+    "felt": {
+      "meaning": "感到",
+      "sentence": "Daniel says that when he was younger, he felt societal pressure to drink alcohol."
+    },
+    "younger": {
+      "meaning": "年轻时",
+      "sentence": "Daniel says that when he was younger, he felt societal pressure to drink alcohol."
+    },
+    "need": {
+      "meaning": "需要",
+      "sentence": "Societal pressure is feeling like you need to do something because lots of people around you are doing it."
+    },
+    "around": {
+      "meaning": "周围",
+      "sentence": "Societal pressure is feeling like you need to do something because lots of people around you are doing it."
+    },
+    "after work": {
+      "meaning": "下班后",
+      "sentence": "Right. So, Daniel says drinking was the norm at university and after work."
+    },
+    "normal": {
+      "meaning": "正常",
+      "sentence": "The norm is a way of saying that something is normal or common."
+    },
+    "common": {
+      "meaning": "常见",
+      "sentence": "The norm is a way of saying that something is normal or common."
+    },
+    "Covid-19 pandemic": {
+      "meaning": "新冠疫情",
+      "sentence": "But during the Covid-19 pandemic, when people in the UK were unable to socialise and visit pubs and bars, Daniel's attitude to alcohol changed."
+    },
+    "unable": {
+      "meaning": "不能",
+      "sentence": "But during the Covid-19 pandemic, when people in the UK were unable to socialise and visit pubs and bars, Daniel's attitude to alcohol changed."
+    },
+    "socialise": {
+      "meaning": "社交",
+      "sentence": "But during the Covid-19 pandemic, when people in the UK were unable to socialise and visit pubs and bars, Daniel's attitude to alcohol changed."
+    },
+    "visit": {
+      "meaning": "拜访",
+      "sentence": "But during the Covid-19 pandemic, when people in the UK were unable to socialise and visit pubs and bars, Daniel's attitude to alcohol changed."
+    },
+    "pubs": {
+      "meaning": "酒吧",
+      "sentence": "But during the Covid-19 pandemic, when people in the UK were unable to socialise and visit pubs and bars, Daniel's attitude to alcohol changed."
+    },
+    "bars": {
+      "meaning": "酒吧",
+      "sentence": "But during the Covid-19 pandemic, when people in the UK were unable to socialise and visit pubs and bars, Daniel's attitude to alcohol changed."
+    },
+    "attitude": {
+      "meaning": "态度",
+      "sentence": "But during the Covid-19 pandemic, when people in the UK were unable to socialise and visit pubs and bars, Daniel's attitude to alcohol changed."
+    },
+    "changed": {
+      "meaning": "改变",
+      "sentence": "But during the Covid-19 pandemic, when people in the UK were unable to socialise and visit pubs and bars, Daniel's attitude to alcohol changed."
+    },
+    "decided": {
+      "meaning": "决定",
+      "sentence": "After that, he decided to be sober and he hasn't had a drink for about six years."
+    },
+    "hasn't": {
+      "meaning": "没有",
+      "sentence": "After that, he decided to be sober and he hasn't had a drink for about six years."
+    },
+    "drink": {
+      "meaning": "喝酒",
+      "sentence": "After that, he decided to be sober and he hasn't had a drink for about six years."
+    },
+    "about": {
+      "meaning": "大约",
+      "sentence": "After that, he decided to be sober and he hasn't had a drink for about six years."
+    },
+    "young people": {
+      "meaning": "年轻人",
+      "sentence": "So, Georgie, it seems like many young people don't drink at all and lots of them share their experience of being sober on social media."
+    },
+    "share": {
+      "meaning": "分享",
+      "sentence": "So, Georgie, it seems like many young people don't drink at all and lots of them share their experience of being sober on social media."
+    },
+    "experience": {
+      "meaning": "经历",
+      "sentence": "So, Georgie, it seems like many young people don't drink at all and lots of them share their experience of being sober on social media."
+    },
+    "social media": {
+      "meaning": "社交媒体",
+      "sentence": "So, Georgie, it seems like many young people don't drink at all and lots of them share their experience of being sober on social media."
+    },
+    "recently": {
+      "meaning": "最近",
+      "sentence": "Yes. Whilst many people use social media to share their experience of drinking less alcohol or no alcohol at all, some people have been saying that they want to go out more and drink and have fun with friends."
+    },
+    "whilst": {
+      "meaning": "虽然",
+      "sentence": "Yes. Whilst many people use social media to share their experience of drinking less alcohol or no alcohol at all, some people have been saying that they want to go out more and drink and have fun with friends."
+    },
+    "use": {
+      "meaning": "使用",
+      "sentence": "Yes. Whilst many people use social media to share their experience of drinking less alcohol or no alcohol at all, some people have been saying that they want to go out more and drink and have fun with friends."
+    },
+    "less alcohol": {
+      "meaning": "少喝酒",
+      "sentence": "Yes. Whilst many people use social media to share their experience of drinking less alcohol or no alcohol at all, some people have been saying that they want to go out more and drink and have fun with friends."
+    },
+    "no alcohol": {
+      "meaning": "不喝酒",
+      "sentence": "Yes. Whilst many people use social media to share their experience of drinking less alcohol or no alcohol at all, some people have been saying that they want to go out more and drink and have fun with friends."
+    },
+    "go out": {
+      "meaning": "外出",
+      "sentence": "Yes. Whilst many people use social media to share their experience of drinking less alcohol or no alcohol at all, some people have been saying that they want to go out more and drink and have fun with friends."
+    },
+    "fun": {
+      "meaning": "乐趣",
+      "sentence": "Yes. Whilst many people use social media to share their experience of drinking less alcohol or no alcohol at all, some people have been saying that they want to go out more and drink and have fun with friends."
+    },
+    "friends": {
+      "meaning": "朋友",
+      "sentence": "Yes. Whilst many people use social media to share their experience of drinking less alcohol or no alcohol at all, some people have been saying that they want to go out more and drink and have fun with friends."
+    },
+    "argue": {
+      "meaning": "争论",
+      "sentence": "They argue we're too worried about fitness and wellness, and that drinking some alcohol to have a good time is fine."
+    },
+    "worried": {
+      "meaning": "担心",
+      "sentence": "They argue we're too worried about fitness and wellness, and that drinking some alcohol to have a good time is fine."
+    },
+    "fitness": {
+      "meaning": "健身",
+      "sentence": "They argue we're too worried about fitness and wellness, and that drinking some alcohol to have a good time is fine."
+    },
+    "wellness": {
+      "meaning": "健康",
+      "sentence": "They argue we're too worried about fitness and wellness, and that drinking some alcohol to have a good time is fine."
+    },
+    "good time": {
+      "meaning": "愉快时光",
+      "sentence": "They argue we're too worried about fitness and wellness, and that drinking some alcohol to have a good time is fine."
+    },
+    "fine": {
+      "meaning": "可以",
+      "sentence": "They argue we're too worried about fitness and wellness, and that drinking some alcohol to have a good time is fine."
+    },
+    "Millie": {
+      "meaning": "米莉",
+      "sentence": "Here's Millie talking more about this to BBC World Service podcast What in the World:"
+    },
+    "talking": {
+      "meaning": "谈论",
+      "sentence": "Here's Millie talking more about this to BBC World Service podcast What in the World:"
+    },
+    "BBC World Service": {
+      "meaning": "BBC国际台",
+      "sentence": "Here's Millie talking more about this to BBC World Service podcast What in the World:"
+    },
+    "podcast": {
+      "meaning": "播客",
+      "sentence": "Here's Millie talking more about this to BBC World Service podcast What in the World:"
+    },
+    "rise": {
+      "meaning": "兴起",
+      "sentence": "I think we had this, like, rise of self-optimisation content."
+    },
+    "sweep": {
+      "meaning": "席卷",
+      "sentence": "I think unfortunately sobriety, kind of, got swept in with that"
+    },
+    "touted": {
+      "meaning": "吹捧",
+      "sentence": "it got touted as this way to, you know, get up at 5am"
+    },
+    "HYROX": {
+      "meaning": "健身赛事",
+      "sentence": "do a HYROX"
+    },
+    "reality": {
+      "meaning": "现实",
+      "sentence": "for many of us, that's probably not our reality"
+    },
+    "sane": {
+      "meaning": "理智",
+      "sentence": "we do it to feel a bit more sane"
+    },
+    "era": {
+      "meaning": "时代",
+      "sentence": "I think now we are entering this, like, almost pushback era"
+    },
+    "celebrities": {
+      "meaning": "名人",
+      "sentence": "you're seeing celebrities"
+    },
+    "Instagram": {
+      "meaning": "社交平台",
+      "sentence": "posting that on their Instagram"
+    },
+    "brand-friendly": {
+      "meaning": "品牌友好",
+      "sentence": "not worrying if it's brand-friendly"
+    },
+    "associated": {
+      "meaning": "关联",
+      "sentence": "being sober is associated with certain kinds of self-optimisation content"
+    },
+    "diet": {
+      "meaning": "饮食",
+      "sentence": "where people talk about fitness, diet and having big goals"
+    },
+    "encourage": {
+      "meaning": "鼓励",
+      "sentence": "people talk about it a lot and try to encourage people to do it"
+    },
+    "super": {
+      "meaning": "超级",
+      "sentence": "being sober isn't always about being super fit"
+    },
+    "criticism": {
+      "meaning": "批评",
+      "sentence": "Pushback means a criticism of the content"
+    },
+    "opposite": {
+      "meaning": "相反",
+      "sentence": "people are pushing back by doing the opposite"
+    },
+    "enjoy": {
+      "meaning": "享受",
+      "sentence": "Yeah, I still enjoy having a few drinks with my friends"
+    },
+    "balance": {
+      "meaning": "平衡",
+      "sentence": "I think it's just all about balance, really"
+    },
+    "reveal": {
+      "meaning": "揭示",
+      "sentence": "Neil, it's time to reveal the answer"
+    },
+    "recap": {
+      "meaning": "回顾",
+      "sentence": "Let's recap the vocabulary we learned"
+    },
+    "usual": {
+      "meaning": "通常",
+      "sentence": "Saying something is the norm is a way to say it's usual"
+    },
+    "individual": {
+      "meaning": "个人",
+      "sentence": "It's really up to the individual"
+    },
+    "whole": {
+      "meaning": "整个",
+      "sentence": "give up alcohol for a whole year"
+    },
+    "January": {
+      "meaning": "一月",
+      "sentence": "What was the name given for when people give up alcohol in January"
+    },
+    "Dry January": {
+      "meaning": "一月戒酒",
+      "sentence": "The answer is Dry January"
+    },
+    "correct": {
+      "meaning": "正确",
+      "sentence": "That is correct. Well done!"
+    },
+    "starting": {
+      "meaning": "始于",
+      "sentence": "starting with sober"
+    },
+    "describes": {
+      "meaning": "描述",
+      "sentence": "which describes someone who doesn't drink alcohol"
+    },
+    "take": {
+      "meaning": "服用",
+      "sentence": "doesn't drink alcohol or take recreational drugs"
+    },
+    "recreational": {
+      "meaning": "娱乐",
+      "sentence": "doesn't drink alcohol or take recreational drugs"
+    },
+    "expect": {
+      "meaning": "期望",
+      "sentence": "because lots of other people expect you to"
+    },
+    "videos": {
+      "meaning": "视频",
+      "sentence": "Self-optimisation content means videos and posts"
+    },
+    "posts": {
+      "meaning": "帖子",
+      "sentence": "Self-optimisation content means videos and posts"
+    },
+    "achieving": {
+      "meaning": "实现",
+      "sentence": "about being fit, healthy and achieving big goals"
+    },
+    "big goals": {
+      "meaning": "大目标",
+      "sentence": "about being fit, healthy and achieving big goals"
+    },
+    "somebody": {
+      "meaning": "某人",
+      "sentence": "If somebody touts an idea or lifestyle, they talk about it a lot and try to convince people to do it."
+    },
+    "idea": {
+      "meaning": "想法",
+      "sentence": "If somebody touts an idea or lifestyle, they talk about it a lot and try to convince people to do it."
+    },
+    "lifestyle": {
+      "meaning": "生活方式",
+      "sentence": "If somebody touts an idea or lifestyle, they talk about it a lot and try to convince people to do it."
+    },
+    "talk about": {
+      "meaning": "谈论",
+      "sentence": "If somebody touts an idea or lifestyle, they talk about it a lot and try to convince people to do it."
+    },
+    "convince": {
+      "meaning": "说服",
+      "sentence": "If somebody touts an idea or lifestyle, they talk about it a lot and try to convince people to do it."
+    },
+    "strong criticism": {
+      "meaning": "强烈批评",
+      "sentence": "And pushback is strong criticism of a trend, and people doing the opposite."
+    },
+    "trend": {
+      "meaning": "趋势",
+      "sentence": "And pushback is strong criticism of a trend, and people doing the opposite."
+    },
+    "minutes": {
+      "meaning": "分钟",
+      "sentence": "Once again, our six minutes are up, but don't forget to test what you've learned with the worksheet on our website, bbclearningenglish.com."
+    },
+    "worksheet": {
+      "meaning": "工作表",
+      "sentence": "Once again, our six minutes are up, but don't forget to test what you've learned with the worksheet on our website, bbclearningenglish.com."
+    },
+    "website": {
+      "meaning": "网站",
+      "sentence": "Once again, our six minutes are up, but don't forget to test what you've learned with the worksheet on our website, bbclearningenglish.com."
+    },
+    "joining": {
+      "meaning": "加入",
+      "sentence": "Thank you for joining us and goodbye."
+    },
+    "goodbye": {
+      "meaning": "再见",
+      "sentence": "Thank you for joining us and goodbye."
+    }
+  },
+  "dict": {
+    "unusual": {
+      "translation": "不寻常",
       "source": "context",
-      "context": "不喝酒的人",
-      "sentence": "16 to 24-year-olds are more likely to be non-drinkers"
+      "context": "不寻常",
+      "sentence": "Do you want to hear something quite unusual for me?"
+    },
+    "alcoholic drink": {
+      "translation": "酒精饮料",
+      "source": "context",
+      "context": "酒精饮料",
+      "sentence": "I haven't had an alcoholic drink this year."
+    },
+    "impressive": {
+      "translation": "令人印象深刻",
+      "source": "context",
+      "context": "令人印象深刻",
+      "sentence": "Wow! That is really impressive."
+    },
+    "new person": {
+      "translation": "全新的人",
+      "source": "context",
+      "context": "全新的人",
+      "sentence": "How do you feel? Like a new person?"
+    },
+    "feel very good": {
+      "translation": "感觉很好",
+      "source": "context",
+      "context": "感觉很好",
+      "sentence": "I do feel very good, I have to say."
+    },
+    "a few": {
+      "translation": "一些",
+      "source": "context",
+      "context": "一些",
+      "sentence": "I did have a few alcoholic drinks at the weekend with my friends."
+    },
+    "give up": {
+      "translation": "放弃",
+      "source": "context",
+      "context": "放弃",
+      "sentence": "why many people are choosing to give up or cut down on alcohol"
+    },
+    "cut down": {
+      "translation": "减少",
+      "source": "context",
+      "context": "减少",
+      "sentence": "why many people are choosing to give up or cut down on alcohol"
+    },
+    "british drinking culture": {
+      "translation": "英国饮酒文化",
+      "source": "context",
+      "context": "英国饮酒文化",
+      "sentence": "Is this the end of British drinking culture?"
+    },
+    "quiz question": {
+      "translation": "测验问题",
+      "source": "context",
+      "context": "测验问题",
+      "sentence": "let's start with a quiz question"
+    },
+    "give away": {
+      "translation": "透露",
+      "source": "context",
+      "context": "透露",
+      "sentence": "I'm not going to give it away"
+    },
+    "programme": {
+      "translation": "节目",
+      "source": "context",
+      "context": "节目",
+      "sentence": "our listeners can find out the answer at the end of the programme"
+    },
+    "younger people": {
+      "translation": "年轻人",
+      "source": "context",
+      "context": "年轻人",
+      "sentence": "younger people don't drink as much alcohol today as they used to"
+    },
+    "used to": {
+      "translation": "过去常常",
+      "source": "context",
+      "context": "过去常常",
+      "sentence": "don't drink as much alcohol today as they used to in the past"
+    },
+    "non-drinkers": {
+      "translation": "不饮酒者",
+      "source": "context",
+      "context": "不饮酒者",
+      "sentence": "16 to 24-year-olds are more likely to be non-drinkers than the older generations"
+    },
+    "older generations": {
+      "translation": "老一辈",
+      "source": "context",
+      "context": "老一辈",
+      "sentence": "more likely to be non-drinkers than the older generations"
+    },
+    "sober": {
+      "translation": "清醒的",
+      "source": "context",
+      "context": "清醒的",
+      "sentence": "why are more young people choosing to be sober?"
     },
     "investigating": {
       "translation": "调查",
       "source": "context",
       "context": "调查",
-      "sentence": "What in the World have been investigating this."
+      "sentence": "the BBC World Service podcast What in the World have been investigating this"
     },
-    "sober": {
-      "translation": "戒酒",
+    "presenter": {
+      "translation": "主持人",
       "source": "context",
-      "context": "戒酒",
-      "sentence": "he decided to be sober and he hasn't had a drink for about six years."
+      "context": "主持人",
+      "sentence": "Presenter Hannah Gelbart met three young people"
+    },
+    "alcohol-free drinks": {
+      "translation": "无酒精饮料",
+      "source": "context",
+      "context": "无酒精饮料",
+      "sentence": "who choose to be sober for some alcohol-free drinks"
+    },
+    "don't drink": {
+      "translation": "不喝酒",
+      "source": "context",
+      "context": "不喝酒",
+      "sentence": "Yeah. So, today I don't drink at all, but when I was in my early 20s, I think I felt maybe a bit of, like, societal pressure"
+    },
+    "early 20s": {
+      "translation": "二十多岁",
+      "source": "context",
+      "context": "二十多岁",
+      "sentence": "Yeah. So, today I don't drink at all, but when I was in my early 20s, I think I felt maybe a bit of, like, societal pressure"
     },
     "societal pressure": {
       "translation": "社会压力",
       "source": "context",
       "context": "社会压力",
-      "sentence": "you know, work drinks or being at uni, where it was the norm to just join in."
+      "sentence": "Yeah. So, today I don't drink at all, but when I was in my early 20s, I think I felt maybe a bit of, like, societal pressure"
     },
-    "norm": {
+    "work drinks": {
+      "translation": "工作聚会",
+      "source": "context",
+      "context": "工作聚会",
+      "sentence": "Yeah. So, today I don't drink at all, but when I was in my early 20s, I think I felt maybe a bit of, like, societal pressure – you know, work drinks or being at uni, where it was the norm to just join in."
+    },
+    "uni": {
+      "translation": "大学",
+      "source": "context",
+      "context": "大学",
+      "sentence": "Yeah. So, today I don't drink at all, but when I was in my early 20s, I think I felt maybe a bit of, like, societal pressure – you know, work drinks or being at uni, where it was the norm to just join in."
+    },
+    "the norm": {
       "translation": "常态",
       "source": "context",
       "context": "常态",
+      "sentence": "Yeah. So, today I don't drink at all, but when I was in my early 20s, I think I felt maybe a bit of, like, societal pressure – you know, work drinks or being at uni, where it was the norm to just join in."
+    },
+    "join in": {
+      "translation": "参与",
+      "source": "context",
+      "context": "参与",
+      "sentence": "Yeah. So, today I don't drink at all, but when I was in my early 20s, I think I felt maybe a bit of, like, societal pressure – you know, work drinks or being at uni, where it was the norm to just join in."
+    },
+    "weird glances": {
+      "translation": "奇怪目光",
+      "source": "context",
+      "context": "奇怪目光",
+      "sentence": "I think you'd probably get a few weird glances if you're like, \"Yeah, I'm not going to join in at all.\""
+    },
+    "covid lockdown": {
+      "translation": "疫情封锁",
+      "source": "context",
+      "context": "疫情封锁",
+      "sentence": "I think Covid lockdown just gave me a bit of confidence to say, \"OK, let me step away from this. It's not necessarily something I want to do moving forward.\""
+    },
+    "confidence": {
+      "translation": "信心",
+      "source": "context",
+      "context": "信心",
+      "sentence": "I think Covid lockdown just gave me a bit of confidence to say, \"OK, let me step away from this. It's not necessarily something I want to do moving forward.\""
+    },
+    "step away": {
+      "translation": "远离",
+      "source": "context",
+      "context": "远离",
+      "sentence": "I think Covid lockdown just gave me a bit of confidence to say, \"OK, let me step away from this. It's not necessarily something I want to do moving forward.\""
+    },
+    "necessarily": {
+      "translation": "必然",
+      "source": "context",
+      "context": "必然",
+      "sentence": "I think Covid lockdown just gave me a bit of confidence to say, \"OK, let me step away from this. It's not necessarily something I want to do moving forward.\""
+    },
+    "moving forward": {
+      "translation": "向前",
+      "source": "context",
+      "context": "向前",
+      "sentence": "I think Covid lockdown just gave me a bit of confidence to say, \"OK, let me step away from this. It's not necessarily something I want to do moving forward.\""
+    },
+    "six years": {
+      "translation": "六年",
+      "source": "context",
+      "context": "六年",
+      "sentence": "I would say it's been six years now."
+    },
+    "felt": {
+      "translation": "感到",
+      "source": "context",
+      "context": "感到",
+      "sentence": "Daniel says that when he was younger, he felt societal pressure to drink alcohol."
+    },
+    "younger": {
+      "translation": "年轻时",
+      "source": "context",
+      "context": "年轻时",
+      "sentence": "Daniel says that when he was younger, he felt societal pressure to drink alcohol."
+    },
+    "need": {
+      "translation": "需要",
+      "source": "context",
+      "context": "需要",
+      "sentence": "Societal pressure is feeling like you need to do something because lots of people around you are doing it."
+    },
+    "around": {
+      "translation": "周围",
+      "source": "context",
+      "context": "周围",
+      "sentence": "Societal pressure is feeling like you need to do something because lots of people around you are doing it."
+    },
+    "after work": {
+      "translation": "下班后",
+      "source": "context",
+      "context": "下班后",
+      "sentence": "Right. So, Daniel says drinking was the norm at university and after work."
+    },
+    "normal": {
+      "translation": "正常",
+      "source": "context",
+      "context": "正常",
       "sentence": "The norm is a way of saying that something is normal or common."
+    },
+    "common": {
+      "translation": "常见",
+      "source": "context",
+      "context": "常见",
+      "sentence": "The norm is a way of saying that something is normal or common."
+    },
+    "covid-19 pandemic": {
+      "translation": "新冠疫情",
+      "source": "context",
+      "context": "新冠疫情",
+      "sentence": "But during the Covid-19 pandemic, when people in the UK were unable to socialise and visit pubs and bars, Daniel's attitude to alcohol changed."
+    },
+    "unable": {
+      "translation": "不能",
+      "source": "context",
+      "context": "不能",
+      "sentence": "But during the Covid-19 pandemic, when people in the UK were unable to socialise and visit pubs and bars, Daniel's attitude to alcohol changed."
     },
     "socialise": {
       "translation": "社交",
       "source": "context",
       "context": "社交",
-      "sentence": "when people in the UK were unable to socialise and visit pubs and bars"
+      "sentence": "But during the Covid-19 pandemic, when people in the UK were unable to socialise and visit pubs and bars, Daniel's attitude to alcohol changed."
+    },
+    "visit": {
+      "translation": "拜访",
+      "source": "context",
+      "context": "拜访",
+      "sentence": "But during the Covid-19 pandemic, when people in the UK were unable to socialise and visit pubs and bars, Daniel's attitude to alcohol changed."
+    },
+    "pubs": {
+      "translation": "酒吧",
+      "source": "context",
+      "context": "酒吧",
+      "sentence": "But during the Covid-19 pandemic, when people in the UK were unable to socialise and visit pubs and bars, Daniel's attitude to alcohol changed."
+    },
+    "bars": {
+      "translation": "酒吧",
+      "source": "context",
+      "context": "酒吧",
+      "sentence": "But during the Covid-19 pandemic, when people in the UK were unable to socialise and visit pubs and bars, Daniel's attitude to alcohol changed."
+    },
+    "attitude": {
+      "translation": "态度",
+      "source": "context",
+      "context": "态度",
+      "sentence": "But during the Covid-19 pandemic, when people in the UK were unable to socialise and visit pubs and bars, Daniel's attitude to alcohol changed."
+    },
+    "changed": {
+      "translation": "改变",
+      "source": "context",
+      "context": "改变",
+      "sentence": "But during the Covid-19 pandemic, when people in the UK were unable to socialise and visit pubs and bars, Daniel's attitude to alcohol changed."
+    },
+    "decided": {
+      "translation": "决定",
+      "source": "context",
+      "context": "决定",
+      "sentence": "After that, he decided to be sober and he hasn't had a drink for about six years."
+    },
+    "hasn't": {
+      "translation": "没有",
+      "source": "context",
+      "context": "没有",
+      "sentence": "After that, he decided to be sober and he hasn't had a drink for about six years."
+    },
+    "drink": {
+      "translation": "喝酒",
+      "source": "context",
+      "context": "喝酒",
+      "sentence": "After that, he decided to be sober and he hasn't had a drink for about six years."
+    },
+    "about": {
+      "translation": "大约",
+      "source": "context",
+      "context": "大约",
+      "sentence": "After that, he decided to be sober and he hasn't had a drink for about six years."
+    },
+    "young people": {
+      "translation": "年轻人",
+      "source": "context",
+      "context": "年轻人",
+      "sentence": "So, Georgie, it seems like many young people don't drink at all and lots of them share their experience of being sober on social media."
+    },
+    "share": {
+      "translation": "分享",
+      "source": "context",
+      "context": "分享",
+      "sentence": "So, Georgie, it seems like many young people don't drink at all and lots of them share their experience of being sober on social media."
+    },
+    "experience": {
+      "translation": "经历",
+      "source": "context",
+      "context": "经历",
+      "sentence": "So, Georgie, it seems like many young people don't drink at all and lots of them share their experience of being sober on social media."
     },
     "social media": {
       "translation": "社交媒体",
       "source": "context",
       "context": "社交媒体",
-      "sentence": "But recently there's been a bit of a change, hasn't there?"
+      "sentence": "So, Georgie, it seems like many young people don't drink at all and lots of them share their experience of being sober on social media."
     },
-    "self-optimisation content": {
-      "translation": "自我优化内容",
+    "recently": {
+      "translation": "最近",
       "source": "context",
-      "context": "自我优化内容",
+      "context": "最近",
+      "sentence": "Yes. Whilst many people use social media to share their experience of drinking less alcohol or no alcohol at all, some people have been saying that they want to go out more and drink and have fun with friends."
+    },
+    "whilst": {
+      "translation": "虽然",
+      "source": "context",
+      "context": "虽然",
+      "sentence": "Yes. Whilst many people use social media to share their experience of drinking less alcohol or no alcohol at all, some people have been saying that they want to go out more and drink and have fun with friends."
+    },
+    "use": {
+      "translation": "使用",
+      "source": "context",
+      "context": "使用",
+      "sentence": "Yes. Whilst many people use social media to share their experience of drinking less alcohol or no alcohol at all, some people have been saying that they want to go out more and drink and have fun with friends."
+    },
+    "less alcohol": {
+      "translation": "少喝酒",
+      "source": "context",
+      "context": "少喝酒",
+      "sentence": "Yes. Whilst many people use social media to share their experience of drinking less alcohol or no alcohol at all, some people have been saying that they want to go out more and drink and have fun with friends."
+    },
+    "no alcohol": {
+      "translation": "不喝酒",
+      "source": "context",
+      "context": "不喝酒",
+      "sentence": "Yes. Whilst many people use social media to share their experience of drinking less alcohol or no alcohol at all, some people have been saying that they want to go out more and drink and have fun with friends."
+    },
+    "go out": {
+      "translation": "外出",
+      "source": "context",
+      "context": "外出",
+      "sentence": "Yes. Whilst many people use social media to share their experience of drinking less alcohol or no alcohol at all, some people have been saying that they want to go out more and drink and have fun with friends."
+    },
+    "fun": {
+      "translation": "乐趣",
+      "source": "context",
+      "context": "乐趣",
+      "sentence": "Yes. Whilst many people use social media to share their experience of drinking less alcohol or no alcohol at all, some people have been saying that they want to go out more and drink and have fun with friends."
+    },
+    "friends": {
+      "translation": "朋友",
+      "source": "context",
+      "context": "朋友",
+      "sentence": "Yes. Whilst many people use social media to share their experience of drinking less alcohol or no alcohol at all, some people have been saying that they want to go out more and drink and have fun with friends."
+    },
+    "argue": {
+      "translation": "争论",
+      "source": "context",
+      "context": "争论",
+      "sentence": "They argue we're too worried about fitness and wellness, and that drinking some alcohol to have a good time is fine."
+    },
+    "worried": {
+      "translation": "担心",
+      "source": "context",
+      "context": "担心",
+      "sentence": "They argue we're too worried about fitness and wellness, and that drinking some alcohol to have a good time is fine."
+    },
+    "fitness": {
+      "translation": "健身",
+      "source": "context",
+      "context": "健身",
+      "sentence": "They argue we're too worried about fitness and wellness, and that drinking some alcohol to have a good time is fine."
+    },
+    "wellness": {
+      "translation": "健康",
+      "source": "context",
+      "context": "健康",
+      "sentence": "They argue we're too worried about fitness and wellness, and that drinking some alcohol to have a good time is fine."
+    },
+    "good time": {
+      "translation": "愉快时光",
+      "source": "context",
+      "context": "愉快时光",
+      "sentence": "They argue we're too worried about fitness and wellness, and that drinking some alcohol to have a good time is fine."
+    },
+    "fine": {
+      "translation": "可以",
+      "source": "context",
+      "context": "可以",
+      "sentence": "They argue we're too worried about fitness and wellness, and that drinking some alcohol to have a good time is fine."
+    },
+    "millie": {
+      "translation": "米莉",
+      "source": "context",
+      "context": "米莉",
+      "sentence": "Here's Millie talking more about this to BBC World Service podcast What in the World:"
+    },
+    "talking": {
+      "translation": "谈论",
+      "source": "context",
+      "context": "谈论",
+      "sentence": "Here's Millie talking more about this to BBC World Service podcast What in the World:"
+    },
+    "bbc world service": {
+      "translation": "BBC国际台",
+      "source": "context",
+      "context": "BBC国际台",
+      "sentence": "Here's Millie talking more about this to BBC World Service podcast What in the World:"
+    },
+    "podcast": {
+      "translation": "播客",
+      "source": "context",
+      "context": "播客",
+      "sentence": "Here's Millie talking more about this to BBC World Service podcast What in the World:"
+    },
+    "rise": {
+      "translation": "兴起",
+      "source": "context",
+      "context": "兴起",
       "sentence": "I think we had this, like, rise of self-optimisation content."
     },
-    "tout": {
-      "translation": "大力宣传",
+    "sweep": {
+      "translation": "席卷",
       "source": "context",
-      "context": "大力宣传",
-      "sentence": "And, you know, for many of us, that's probably not our reality with not drinking."
+      "context": "席卷",
+      "sentence": "I think unfortunately sobriety, kind of, got swept in with that"
     },
-    "pushback": {
-      "translation": "反对",
+    "touted": {
+      "translation": "吹捧",
       "source": "context",
-      "context": "反对",
-      "sentence": "And so, I think now we are entering this, like, almost pushback era of that content."
+      "context": "吹捧",
+      "sentence": "it got touted as this way to, you know, get up at 5am"
     },
-    "the norm": {
-      "translation": "the usual or common thing to do",
+    "hyrox": {
+      "translation": "健身赛事",
+      "source": "context",
+      "context": "健身赛事",
+      "sentence": "do a HYROX"
+    },
+    "reality": {
+      "translation": "现实",
+      "source": "context",
+      "context": "现实",
+      "sentence": "for many of us, that's probably not our reality"
+    },
+    "sane": {
+      "translation": "理智",
+      "source": "context",
+      "context": "理智",
+      "sentence": "we do it to feel a bit more sane"
+    },
+    "era": {
+      "translation": "时代",
+      "source": "context",
+      "context": "时代",
+      "sentence": "I think now we are entering this, like, almost pushback era"
+    },
+    "celebrities": {
+      "translation": "名人",
+      "source": "context",
+      "context": "名人",
+      "sentence": "you're seeing celebrities"
+    },
+    "instagram": {
+      "translation": "社交平台",
+      "source": "context",
+      "context": "社交平台",
+      "sentence": "posting that on their Instagram"
+    },
+    "brand-friendly": {
+      "translation": "品牌友好",
+      "source": "context",
+      "context": "品牌友好",
+      "sentence": "not worrying if it's brand-friendly"
+    },
+    "associated": {
+      "translation": "关联",
+      "source": "context",
+      "context": "关联",
+      "sentence": "being sober is associated with certain kinds of self-optimisation content"
+    },
+    "diet": {
+      "translation": "饮食",
+      "source": "context",
+      "context": "饮食",
+      "sentence": "where people talk about fitness, diet and having big goals"
+    },
+    "encourage": {
+      "translation": "鼓励",
+      "source": "context",
+      "context": "鼓励",
+      "sentence": "people talk about it a lot and try to encourage people to do it"
+    },
+    "super": {
+      "translation": "超级",
+      "source": "context",
+      "context": "超级",
+      "sentence": "being sober isn't always about being super fit"
+    },
+    "criticism": {
+      "translation": "批评",
+      "source": "context",
+      "context": "批评",
+      "sentence": "Pushback means a criticism of the content"
+    },
+    "opposite": {
+      "translation": "相反",
+      "source": "context",
+      "context": "相反",
+      "sentence": "people are pushing back by doing the opposite"
+    },
+    "enjoy": {
+      "translation": "享受",
+      "source": "context",
+      "context": "享受",
+      "sentence": "Yeah, I still enjoy having a few drinks with my friends"
+    },
+    "balance": {
+      "translation": "平衡",
+      "source": "context",
+      "context": "平衡",
+      "sentence": "I think it's just all about balance, really"
+    },
+    "reveal": {
+      "translation": "揭示",
+      "source": "context",
+      "context": "揭示",
+      "sentence": "Neil, it's time to reveal the answer"
+    },
+    "recap": {
+      "translation": "回顾",
+      "source": "context",
+      "context": "回顾",
+      "sentence": "Let's recap the vocabulary we learned"
+    },
+    "usual": {
+      "translation": "通常",
+      "source": "context",
+      "context": "通常",
+      "sentence": "Saying something is the norm is a way to say it's usual"
+    },
+    "individual": {
+      "translation": "个人",
+      "source": "context",
+      "context": "个人",
+      "sentence": "It's really up to the individual"
+    },
+    "whole": {
+      "translation": "整个",
+      "source": "context",
+      "context": "整个",
+      "sentence": "give up alcohol for a whole year"
+    },
+    "january": {
+      "translation": "一月",
+      "source": "context",
+      "context": "一月",
+      "sentence": "What was the name given for when people give up alcohol in January"
+    },
+    "dry january": {
+      "translation": "一月戒酒",
+      "source": "context",
+      "context": "一月戒酒",
+      "sentence": "The answer is Dry January"
+    },
+    "correct": {
+      "translation": "正确",
+      "source": "context",
+      "context": "正确",
+      "sentence": "That is correct. Well done!"
+    },
+    "starting": {
+      "translation": "始于",
+      "source": "context",
+      "context": "始于",
+      "sentence": "starting with sober"
+    },
+    "describes": {
+      "translation": "描述",
+      "source": "context",
+      "context": "描述",
+      "sentence": "which describes someone who doesn't drink alcohol"
+    },
+    "take": {
+      "translation": "服用",
+      "source": "context",
+      "context": "服用",
+      "sentence": "doesn't drink alcohol or take recreational drugs"
+    },
+    "recreational": {
+      "translation": "娱乐",
+      "source": "context",
+      "context": "娱乐",
+      "sentence": "doesn't drink alcohol or take recreational drugs"
+    },
+    "expect": {
+      "translation": "期望",
+      "source": "context",
+      "context": "期望",
+      "sentence": "because lots of other people expect you to"
+    },
+    "videos": {
+      "translation": "视频",
+      "source": "context",
+      "context": "视频",
+      "sentence": "Self-optimisation content means videos and posts"
+    },
+    "posts": {
+      "translation": "帖子",
+      "source": "context",
+      "context": "帖子",
+      "sentence": "Self-optimisation content means videos and posts"
+    },
+    "achieving": {
+      "translation": "实现",
+      "source": "context",
+      "context": "实现",
+      "sentence": "about being fit, healthy and achieving big goals"
+    },
+    "big goals": {
+      "translation": "大目标",
+      "source": "context",
+      "context": "大目标",
+      "sentence": "about being fit, healthy and achieving big goals"
+    },
+    "somebody": {
+      "translation": "某人",
+      "source": "context",
+      "context": "某人",
+      "sentence": "If somebody touts an idea or lifestyle, they talk about it a lot and try to convince people to do it."
+    },
+    "idea": {
+      "translation": "想法",
+      "source": "context",
+      "context": "想法",
+      "sentence": "If somebody touts an idea or lifestyle, they talk about it a lot and try to convince people to do it."
+    },
+    "lifestyle": {
+      "translation": "生活方式",
+      "source": "context",
+      "context": "生活方式",
+      "sentence": "If somebody touts an idea or lifestyle, they talk about it a lot and try to convince people to do it."
+    },
+    "talk about": {
+      "translation": "谈论",
+      "source": "context",
+      "context": "谈论",
+      "sentence": "If somebody touts an idea or lifestyle, they talk about it a lot and try to convince people to do it."
+    },
+    "convince": {
+      "translation": "说服",
+      "source": "context",
+      "context": "说服",
+      "sentence": "If somebody touts an idea or lifestyle, they talk about it a lot and try to convince people to do it."
+    },
+    "strong criticism": {
+      "translation": "强烈批评",
+      "source": "context",
+      "context": "强烈批评",
+      "sentence": "And pushback is strong criticism of a trend, and people doing the opposite."
+    },
+    "trend": {
+      "translation": "趋势",
+      "source": "context",
+      "context": "趋势",
+      "sentence": "And pushback is strong criticism of a trend, and people doing the opposite."
+    },
+    "minutes": {
+      "translation": "分钟",
+      "source": "context",
+      "context": "分钟",
+      "sentence": "Once again, our six minutes are up, but don't forget to test what you've learned with the worksheet on our website, bbclearningenglish.com."
+    },
+    "worksheet": {
+      "translation": "工作表",
+      "source": "context",
+      "context": "工作表",
+      "sentence": "Once again, our six minutes are up, but don't forget to test what you've learned with the worksheet on our website, bbclearningenglish.com."
+    },
+    "website": {
+      "translation": "网站",
+      "source": "context",
+      "context": "网站",
+      "sentence": "Once again, our six minutes are up, but don't forget to test what you've learned with the worksheet on our website, bbclearningenglish.com."
+    },
+    "joining": {
+      "translation": "加入",
+      "source": "context",
+      "context": "加入",
+      "sentence": "Thank you for joining us and goodbye."
+    },
+    "goodbye": {
+      "translation": "再见",
+      "source": "context",
+      "context": "再见",
+      "sentence": "Thank you for joining us and goodbye."
+    },
+    "self-optimisation content": {
+      "translation": "videos, posts and other media about being fit, healthy and achieving big goals",
       "source": "official"
     },
-    "nondrinkers": {
-      "translation": "不喝酒的人",
+    "tout": {
+      "translation": "praise something or talk about it a lot to get others to try it",
+      "source": "official"
+    },
+    "pushback": {
+      "translation": "strong criticism of a trend; people doing the opposite of a trend",
+      "source": "official"
+    },
+    "alcoholic": {
+      "translation": "酒精饮料",
       "source": "context",
-      "context": "不喝酒的人",
-      "sentence": "16 to 24-year-olds are more likely to be non-drinkers",
+      "context": "酒精饮料",
+      "sentence": "I haven't had an alcoholic drink this year.",
+      "phrase": "alcoholic drink"
+    },
+    "alcoholicdrink": {
+      "translation": "酒精饮料",
+      "source": "context",
+      "context": "酒精饮料",
+      "sentence": "I haven't had an alcoholic drink this year.",
+      "phrase": "alcoholic drink"
+    },
+    "new": {
+      "translation": "全新的人",
+      "source": "context",
+      "context": "全新的人",
+      "sentence": "How do you feel? Like a new person?",
+      "phrase": "new person"
+    },
+    "newperson": {
+      "translation": "全新的人",
+      "source": "context",
+      "context": "全新的人",
+      "sentence": "How do you feel? Like a new person?",
+      "phrase": "new person"
+    },
+    "person": {
+      "translation": "全新的人",
+      "source": "context",
+      "context": "全新的人",
+      "sentence": "How do you feel? Like a new person?",
+      "phrase": "new person"
+    },
+    "feel": {
+      "translation": "感觉很好",
+      "source": "context",
+      "context": "感觉很好",
+      "sentence": "I do feel very good, I have to say.",
+      "phrase": "feel very good"
+    },
+    "feelverygood": {
+      "translation": "感觉很好",
+      "source": "context",
+      "context": "感觉很好",
+      "sentence": "I do feel very good, I have to say.",
+      "phrase": "feel very good"
+    },
+    "good": {
+      "translation": "感觉很好",
+      "source": "context",
+      "context": "感觉很好",
+      "sentence": "I do feel very good, I have to say.",
+      "phrase": "feel very good"
+    },
+    "very": {
+      "translation": "感觉很好",
+      "source": "context",
+      "context": "感觉很好",
+      "sentence": "I do feel very good, I have to say.",
+      "phrase": "feel very good"
+    },
+    "afew": {
+      "translation": "一些",
+      "source": "context",
+      "context": "一些",
+      "sentence": "I did have a few alcoholic drinks at the weekend with my friends.",
+      "phrase": "a few"
+    },
+    "few": {
+      "translation": "一些",
+      "source": "context",
+      "context": "一些",
+      "sentence": "I did have a few alcoholic drinks at the weekend with my friends.",
+      "phrase": "a few"
+    },
+    "give": {
+      "translation": "放弃",
+      "source": "context",
+      "context": "放弃",
+      "sentence": "why many people are choosing to give up or cut down on alcohol",
+      "phrase": "give up"
+    },
+    "giveup": {
+      "translation": "放弃",
+      "source": "context",
+      "context": "放弃",
+      "sentence": "why many people are choosing to give up or cut down on alcohol",
+      "phrase": "give up"
+    },
+    "up": {
+      "translation": "放弃",
+      "source": "context",
+      "context": "放弃",
+      "sentence": "why many people are choosing to give up or cut down on alcohol",
+      "phrase": "give up"
+    },
+    "cut": {
+      "translation": "减少",
+      "source": "context",
+      "context": "减少",
+      "sentence": "why many people are choosing to give up or cut down on alcohol",
+      "phrase": "cut down"
+    },
+    "cutdown": {
+      "translation": "减少",
+      "source": "context",
+      "context": "减少",
+      "sentence": "why many people are choosing to give up or cut down on alcohol",
+      "phrase": "cut down"
+    },
+    "down": {
+      "translation": "减少",
+      "source": "context",
+      "context": "减少",
+      "sentence": "why many people are choosing to give up or cut down on alcohol",
+      "phrase": "cut down"
+    },
+    "british": {
+      "translation": "英国饮酒文化",
+      "source": "context",
+      "context": "英国饮酒文化",
+      "sentence": "Is this the end of British drinking culture?",
+      "phrase": "british drinking culture"
+    },
+    "britishdrinkingculture": {
+      "translation": "英国饮酒文化",
+      "source": "context",
+      "context": "英国饮酒文化",
+      "sentence": "Is this the end of British drinking culture?",
+      "phrase": "british drinking culture"
+    },
+    "culture": {
+      "translation": "英国饮酒文化",
+      "source": "context",
+      "context": "英国饮酒文化",
+      "sentence": "Is this the end of British drinking culture?",
+      "phrase": "british drinking culture"
+    },
+    "drinking": {
+      "translation": "英国饮酒文化",
+      "source": "context",
+      "context": "英国饮酒文化",
+      "sentence": "Is this the end of British drinking culture?",
+      "phrase": "british drinking culture"
+    },
+    "question": {
+      "translation": "测验问题",
+      "source": "context",
+      "context": "测验问题",
+      "sentence": "let's start with a quiz question",
+      "phrase": "quiz question"
+    },
+    "quiz": {
+      "translation": "测验问题",
+      "source": "context",
+      "context": "测验问题",
+      "sentence": "let's start with a quiz question",
+      "phrase": "quiz question"
+    },
+    "quizquestion": {
+      "translation": "测验问题",
+      "source": "context",
+      "context": "测验问题",
+      "sentence": "let's start with a quiz question",
+      "phrase": "quiz question"
+    },
+    "away": {
+      "translation": "透露",
+      "source": "context",
+      "context": "透露",
+      "sentence": "I'm not going to give it away",
+      "phrase": "give away"
+    },
+    "giveaway": {
+      "translation": "透露",
+      "source": "context",
+      "context": "透露",
+      "sentence": "I'm not going to give it away",
+      "phrase": "give away"
+    },
+    "people": {
+      "translation": "年轻人",
+      "source": "context",
+      "context": "年轻人",
+      "sentence": "younger people don't drink as much alcohol today as they used to",
+      "phrase": "younger people"
+    },
+    "youngerpeople": {
+      "translation": "年轻人",
+      "source": "context",
+      "context": "年轻人",
+      "sentence": "younger people don't drink as much alcohol today as they used to",
+      "phrase": "younger people"
+    },
+    "used": {
+      "translation": "过去常常",
+      "source": "context",
+      "context": "过去常常",
+      "sentence": "don't drink as much alcohol today as they used to in the past",
+      "phrase": "used to"
+    },
+    "usedto": {
+      "translation": "过去常常",
+      "source": "context",
+      "context": "过去常常",
+      "sentence": "don't drink as much alcohol today as they used to in the past",
+      "phrase": "used to"
+    },
+    "nondrinkers": {
+      "translation": "不饮酒者",
+      "source": "context",
+      "context": "不饮酒者",
+      "sentence": "16 to 24-year-olds are more likely to be non-drinkers than the older generations",
       "phrase": "non-drinkers"
+    },
+    "generations": {
+      "translation": "老一辈",
+      "source": "context",
+      "context": "老一辈",
+      "sentence": "more likely to be non-drinkers than the older generations",
+      "phrase": "older generations"
+    },
+    "older": {
+      "translation": "老一辈",
+      "source": "context",
+      "context": "老一辈",
+      "sentence": "more likely to be non-drinkers than the older generations",
+      "phrase": "older generations"
+    },
+    "oldergenerations": {
+      "translation": "老一辈",
+      "source": "context",
+      "context": "老一辈",
+      "sentence": "more likely to be non-drinkers than the older generations",
+      "phrase": "older generations"
+    },
+    "alcohol": {
+      "translation": "无酒精饮料",
+      "source": "context",
+      "context": "无酒精饮料",
+      "sentence": "who choose to be sober for some alcohol-free drinks",
+      "phrase": "alcohol-free drinks"
+    },
+    "alcoholfreedrinks": {
+      "translation": "无酒精饮料",
+      "source": "context",
+      "context": "无酒精饮料",
+      "sentence": "who choose to be sober for some alcohol-free drinks",
+      "phrase": "alcohol-free drinks"
+    },
+    "drinks": {
+      "translation": "无酒精饮料",
+      "source": "context",
+      "context": "无酒精饮料",
+      "sentence": "who choose to be sober for some alcohol-free drinks",
+      "phrase": "alcohol-free drinks"
+    },
+    "free": {
+      "translation": "无酒精饮料",
+      "source": "context",
+      "context": "无酒精饮料",
+      "sentence": "who choose to be sober for some alcohol-free drinks",
+      "phrase": "alcohol-free drinks"
+    },
+    "don": {
+      "translation": "不喝酒",
+      "source": "context",
+      "context": "不喝酒",
+      "sentence": "Yeah. So, today I don't drink at all, but when I was in my early 20s, I think I felt maybe a bit of, like, societal pressure",
+      "phrase": "don't drink"
+    },
+    "dontdrink": {
+      "translation": "不喝酒",
+      "source": "context",
+      "context": "不喝酒",
+      "sentence": "Yeah. So, today I don't drink at all, but when I was in my early 20s, I think I felt maybe a bit of, like, societal pressure",
+      "phrase": "don't drink"
+    },
+    "t": {
+      "translation": "不喝酒",
+      "source": "context",
+      "context": "不喝酒",
+      "sentence": "Yeah. So, today I don't drink at all, but when I was in my early 20s, I think I felt maybe a bit of, like, societal pressure",
+      "phrase": "don't drink"
+    },
+    "20s": {
+      "translation": "二十多岁",
+      "source": "context",
+      "context": "二十多岁",
+      "sentence": "Yeah. So, today I don't drink at all, but when I was in my early 20s, I think I felt maybe a bit of, like, societal pressure",
+      "phrase": "early 20s"
+    },
+    "early": {
+      "translation": "二十多岁",
+      "source": "context",
+      "context": "二十多岁",
+      "sentence": "Yeah. So, today I don't drink at all, but when I was in my early 20s, I think I felt maybe a bit of, like, societal pressure",
+      "phrase": "early 20s"
+    },
+    "early20s": {
+      "translation": "二十多岁",
+      "source": "context",
+      "context": "二十多岁",
+      "sentence": "Yeah. So, today I don't drink at all, but when I was in my early 20s, I think I felt maybe a bit of, like, societal pressure",
+      "phrase": "early 20s"
     },
     "pressure": {
       "translation": "社会压力",
       "source": "context",
       "context": "社会压力",
-      "sentence": "you know, work drinks or being at uni, where it was the norm to just join in.",
+      "sentence": "Yeah. So, today I don't drink at all, but when I was in my early 20s, I think I felt maybe a bit of, like, societal pressure",
       "phrase": "societal pressure"
     },
     "societal": {
       "translation": "社会压力",
       "source": "context",
       "context": "社会压力",
-      "sentence": "you know, work drinks or being at uni, where it was the norm to just join in.",
+      "sentence": "Yeah. So, today I don't drink at all, but when I was in my early 20s, I think I felt maybe a bit of, like, societal pressure",
       "phrase": "societal pressure"
     },
     "societalpressure": {
       "translation": "社会压力",
       "source": "context",
       "context": "社会压力",
-      "sentence": "you know, work drinks or being at uni, where it was the norm to just join in.",
+      "sentence": "Yeah. So, today I don't drink at all, but when I was in my early 20s, I think I felt maybe a bit of, like, societal pressure",
       "phrase": "societal pressure"
+    },
+    "work": {
+      "translation": "工作聚会",
+      "source": "context",
+      "context": "工作聚会",
+      "sentence": "Yeah. So, today I don't drink at all, but when I was in my early 20s, I think I felt maybe a bit of, like, societal pressure – you know, work drinks or being at uni, where it was the norm to just join in.",
+      "phrase": "work drinks"
+    },
+    "workdrinks": {
+      "translation": "工作聚会",
+      "source": "context",
+      "context": "工作聚会",
+      "sentence": "Yeah. So, today I don't drink at all, but when I was in my early 20s, I think I felt maybe a bit of, like, societal pressure – you know, work drinks or being at uni, where it was the norm to just join in.",
+      "phrase": "work drinks"
+    },
+    "norm": {
+      "translation": "常态",
+      "source": "context",
+      "context": "常态",
+      "sentence": "Yeah. So, today I don't drink at all, but when I was in my early 20s, I think I felt maybe a bit of, like, societal pressure – you know, work drinks or being at uni, where it was the norm to just join in.",
+      "phrase": "the norm"
+    },
+    "thenorm": {
+      "translation": "常态",
+      "source": "context",
+      "context": "常态",
+      "sentence": "Yeah. So, today I don't drink at all, but when I was in my early 20s, I think I felt maybe a bit of, like, societal pressure – you know, work drinks or being at uni, where it was the norm to just join in.",
+      "phrase": "the norm"
+    },
+    "join": {
+      "translation": "参与",
+      "source": "context",
+      "context": "参与",
+      "sentence": "Yeah. So, today I don't drink at all, but when I was in my early 20s, I think I felt maybe a bit of, like, societal pressure – you know, work drinks or being at uni, where it was the norm to just join in.",
+      "phrase": "join in"
+    },
+    "joinin": {
+      "translation": "参与",
+      "source": "context",
+      "context": "参与",
+      "sentence": "Yeah. So, today I don't drink at all, but when I was in my early 20s, I think I felt maybe a bit of, like, societal pressure – you know, work drinks or being at uni, where it was the norm to just join in.",
+      "phrase": "join in"
+    },
+    "glances": {
+      "translation": "奇怪目光",
+      "source": "context",
+      "context": "奇怪目光",
+      "sentence": "I think you'd probably get a few weird glances if you're like, \"Yeah, I'm not going to join in at all.\"",
+      "phrase": "weird glances"
+    },
+    "weird": {
+      "translation": "奇怪目光",
+      "source": "context",
+      "context": "奇怪目光",
+      "sentence": "I think you'd probably get a few weird glances if you're like, \"Yeah, I'm not going to join in at all.\"",
+      "phrase": "weird glances"
+    },
+    "weirdglances": {
+      "translation": "奇怪目光",
+      "source": "context",
+      "context": "奇怪目光",
+      "sentence": "I think you'd probably get a few weird glances if you're like, \"Yeah, I'm not going to join in at all.\"",
+      "phrase": "weird glances"
+    },
+    "covid": {
+      "translation": "疫情封锁",
+      "source": "context",
+      "context": "疫情封锁",
+      "sentence": "I think Covid lockdown just gave me a bit of confidence to say, \"OK, let me step away from this. It's not necessarily something I want to do moving forward.\"",
+      "phrase": "covid lockdown"
+    },
+    "covidlockdown": {
+      "translation": "疫情封锁",
+      "source": "context",
+      "context": "疫情封锁",
+      "sentence": "I think Covid lockdown just gave me a bit of confidence to say, \"OK, let me step away from this. It's not necessarily something I want to do moving forward.\"",
+      "phrase": "covid lockdown"
+    },
+    "lockdown": {
+      "translation": "疫情封锁",
+      "source": "context",
+      "context": "疫情封锁",
+      "sentence": "I think Covid lockdown just gave me a bit of confidence to say, \"OK, let me step away from this. It's not necessarily something I want to do moving forward.\"",
+      "phrase": "covid lockdown"
+    },
+    "step": {
+      "translation": "远离",
+      "source": "context",
+      "context": "远离",
+      "sentence": "I think Covid lockdown just gave me a bit of confidence to say, \"OK, let me step away from this. It's not necessarily something I want to do moving forward.\"",
+      "phrase": "step away"
+    },
+    "stepaway": {
+      "translation": "远离",
+      "source": "context",
+      "context": "远离",
+      "sentence": "I think Covid lockdown just gave me a bit of confidence to say, \"OK, let me step away from this. It's not necessarily something I want to do moving forward.\"",
+      "phrase": "step away"
+    },
+    "forward": {
+      "translation": "向前",
+      "source": "context",
+      "context": "向前",
+      "sentence": "I think Covid lockdown just gave me a bit of confidence to say, \"OK, let me step away from this. It's not necessarily something I want to do moving forward.\"",
+      "phrase": "moving forward"
+    },
+    "moving": {
+      "translation": "向前",
+      "source": "context",
+      "context": "向前",
+      "sentence": "I think Covid lockdown just gave me a bit of confidence to say, \"OK, let me step away from this. It's not necessarily something I want to do moving forward.\"",
+      "phrase": "moving forward"
+    },
+    "movingforward": {
+      "translation": "向前",
+      "source": "context",
+      "context": "向前",
+      "sentence": "I think Covid lockdown just gave me a bit of confidence to say, \"OK, let me step away from this. It's not necessarily something I want to do moving forward.\"",
+      "phrase": "moving forward"
+    },
+    "six": {
+      "translation": "六年",
+      "source": "context",
+      "context": "六年",
+      "sentence": "I would say it's been six years now.",
+      "phrase": "six years"
+    },
+    "sixyears": {
+      "translation": "六年",
+      "source": "context",
+      "context": "六年",
+      "sentence": "I would say it's been six years now.",
+      "phrase": "six years"
+    },
+    "years": {
+      "translation": "六年",
+      "source": "context",
+      "context": "六年",
+      "sentence": "I would say it's been six years now.",
+      "phrase": "six years"
+    },
+    "after": {
+      "translation": "下班后",
+      "source": "context",
+      "context": "下班后",
+      "sentence": "Right. So, Daniel says drinking was the norm at university and after work.",
+      "phrase": "after work"
+    },
+    "afterwork": {
+      "translation": "下班后",
+      "source": "context",
+      "context": "下班后",
+      "sentence": "Right. So, Daniel says drinking was the norm at university and after work.",
+      "phrase": "after work"
+    },
+    "19": {
+      "translation": "新冠疫情",
+      "source": "context",
+      "context": "新冠疫情",
+      "sentence": "But during the Covid-19 pandemic, when people in the UK were unable to socialise and visit pubs and bars, Daniel's attitude to alcohol changed.",
+      "phrase": "covid-19 pandemic"
+    },
+    "covid19pandemic": {
+      "translation": "新冠疫情",
+      "source": "context",
+      "context": "新冠疫情",
+      "sentence": "But during the Covid-19 pandemic, when people in the UK were unable to socialise and visit pubs and bars, Daniel's attitude to alcohol changed.",
+      "phrase": "covid-19 pandemic"
+    },
+    "pandemic": {
+      "translation": "新冠疫情",
+      "source": "context",
+      "context": "新冠疫情",
+      "sentence": "But during the Covid-19 pandemic, when people in the UK were unable to socialise and visit pubs and bars, Daniel's attitude to alcohol changed.",
+      "phrase": "covid-19 pandemic"
+    },
+    "hasnt": {
+      "translation": "没有",
+      "source": "context",
+      "context": "没有",
+      "sentence": "After that, he decided to be sober and he hasn't had a drink for about six years.",
+      "phrase": "hasn't"
+    },
+    "young": {
+      "translation": "年轻人",
+      "source": "context",
+      "context": "年轻人",
+      "sentence": "So, Georgie, it seems like many young people don't drink at all and lots of them share their experience of being sober on social media.",
+      "phrase": "young people"
+    },
+    "youngpeople": {
+      "translation": "年轻人",
+      "source": "context",
+      "context": "年轻人",
+      "sentence": "So, Georgie, it seems like many young people don't drink at all and lots of them share their experience of being sober on social media.",
+      "phrase": "young people"
     },
     "media": {
       "translation": "社交媒体",
       "source": "context",
       "context": "社交媒体",
-      "sentence": "But recently there's been a bit of a change, hasn't there?",
+      "sentence": "So, Georgie, it seems like many young people don't drink at all and lots of them share their experience of being sober on social media.",
       "phrase": "social media"
     },
     "social": {
       "translation": "社交媒体",
       "source": "context",
       "context": "社交媒体",
-      "sentence": "But recently there's been a bit of a change, hasn't there?",
+      "sentence": "So, Georgie, it seems like many young people don't drink at all and lots of them share their experience of being sober on social media.",
       "phrase": "social media"
     },
     "socialmedia": {
       "translation": "社交媒体",
       "source": "context",
       "context": "社交媒体",
-      "sentence": "But recently there's been a bit of a change, hasn't there?",
+      "sentence": "So, Georgie, it seems like many young people don't drink at all and lots of them share their experience of being sober on social media.",
       "phrase": "social media"
     },
-    "content": {
-      "translation": "自我优化内容",
+    "less": {
+      "translation": "少喝酒",
       "source": "context",
-      "context": "自我优化内容",
-      "sentence": "I think we had this, like, rise of self-optimisation content.",
+      "context": "少喝酒",
+      "sentence": "Yes. Whilst many people use social media to share their experience of drinking less alcohol or no alcohol at all, some people have been saying that they want to go out more and drink and have fun with friends.",
+      "phrase": "less alcohol"
+    },
+    "lessalcohol": {
+      "translation": "少喝酒",
+      "source": "context",
+      "context": "少喝酒",
+      "sentence": "Yes. Whilst many people use social media to share their experience of drinking less alcohol or no alcohol at all, some people have been saying that they want to go out more and drink and have fun with friends.",
+      "phrase": "less alcohol"
+    },
+    "no": {
+      "translation": "不喝酒",
+      "source": "context",
+      "context": "不喝酒",
+      "sentence": "Yes. Whilst many people use social media to share their experience of drinking less alcohol or no alcohol at all, some people have been saying that they want to go out more and drink and have fun with friends.",
+      "phrase": "no alcohol"
+    },
+    "noalcohol": {
+      "translation": "不喝酒",
+      "source": "context",
+      "context": "不喝酒",
+      "sentence": "Yes. Whilst many people use social media to share their experience of drinking less alcohol or no alcohol at all, some people have been saying that they want to go out more and drink and have fun with friends.",
+      "phrase": "no alcohol"
+    },
+    "go": {
+      "translation": "外出",
+      "source": "context",
+      "context": "外出",
+      "sentence": "Yes. Whilst many people use social media to share their experience of drinking less alcohol or no alcohol at all, some people have been saying that they want to go out more and drink and have fun with friends.",
+      "phrase": "go out"
+    },
+    "goout": {
+      "translation": "外出",
+      "source": "context",
+      "context": "外出",
+      "sentence": "Yes. Whilst many people use social media to share their experience of drinking less alcohol or no alcohol at all, some people have been saying that they want to go out more and drink and have fun with friends.",
+      "phrase": "go out"
+    },
+    "out": {
+      "translation": "外出",
+      "source": "context",
+      "context": "外出",
+      "sentence": "Yes. Whilst many people use social media to share their experience of drinking less alcohol or no alcohol at all, some people have been saying that they want to go out more and drink and have fun with friends.",
+      "phrase": "go out"
+    },
+    "goodtime": {
+      "translation": "愉快时光",
+      "source": "context",
+      "context": "愉快时光",
+      "sentence": "They argue we're too worried about fitness and wellness, and that drinking some alcohol to have a good time is fine.",
+      "phrase": "good time"
+    },
+    "time": {
+      "translation": "愉快时光",
+      "source": "context",
+      "context": "愉快时光",
+      "sentence": "They argue we're too worried about fitness and wellness, and that drinking some alcohol to have a good time is fine.",
+      "phrase": "good time"
+    },
+    "bbc": {
+      "translation": "BBC国际台",
+      "source": "context",
+      "context": "BBC国际台",
+      "sentence": "Here's Millie talking more about this to BBC World Service podcast What in the World:",
+      "phrase": "bbc world service"
+    },
+    "bbcworldservice": {
+      "translation": "BBC国际台",
+      "source": "context",
+      "context": "BBC国际台",
+      "sentence": "Here's Millie talking more about this to BBC World Service podcast What in the World:",
+      "phrase": "bbc world service"
+    },
+    "service": {
+      "translation": "BBC国际台",
+      "source": "context",
+      "context": "BBC国际台",
+      "sentence": "Here's Millie talking more about this to BBC World Service podcast What in the World:",
+      "phrase": "bbc world service"
+    },
+    "world": {
+      "translation": "BBC国际台",
+      "source": "context",
+      "context": "BBC国际台",
+      "sentence": "Here's Millie talking more about this to BBC World Service podcast What in the World:",
+      "phrase": "bbc world service"
+    },
+    "brandfriendly": {
+      "translation": "品牌友好",
+      "source": "context",
+      "context": "品牌友好",
+      "sentence": "not worrying if it's brand-friendly",
+      "phrase": "brand-friendly"
+    },
+    "dry": {
+      "translation": "一月戒酒",
+      "source": "context",
+      "context": "一月戒酒",
+      "sentence": "The answer is Dry January",
+      "phrase": "dry january"
+    },
+    "dryjanuary": {
+      "translation": "一月戒酒",
+      "source": "context",
+      "context": "一月戒酒",
+      "sentence": "The answer is Dry January",
+      "phrase": "dry january"
+    },
+    "big": {
+      "translation": "大目标",
+      "source": "context",
+      "context": "大目标",
+      "sentence": "about being fit, healthy and achieving big goals",
+      "phrase": "big goals"
+    },
+    "biggoals": {
+      "translation": "大目标",
+      "source": "context",
+      "context": "大目标",
+      "sentence": "about being fit, healthy and achieving big goals",
+      "phrase": "big goals"
+    },
+    "goals": {
+      "translation": "大目标",
+      "source": "context",
+      "context": "大目标",
+      "sentence": "about being fit, healthy and achieving big goals",
+      "phrase": "big goals"
+    },
+    "talk": {
+      "translation": "谈论",
+      "source": "context",
+      "context": "谈论",
+      "sentence": "If somebody touts an idea or lifestyle, they talk about it a lot and try to convince people to do it.",
+      "phrase": "talk about"
+    },
+    "talkabout": {
+      "translation": "谈论",
+      "source": "context",
+      "context": "谈论",
+      "sentence": "If somebody touts an idea or lifestyle, they talk about it a lot and try to convince people to do it.",
+      "phrase": "talk about"
+    },
+    "strong": {
+      "translation": "强烈批评",
+      "source": "context",
+      "context": "强烈批评",
+      "sentence": "And pushback is strong criticism of a trend, and people doing the opposite.",
+      "phrase": "strong criticism"
+    },
+    "strongcriticism": {
+      "translation": "强烈批评",
+      "source": "context",
+      "context": "强烈批评",
+      "sentence": "And pushback is strong criticism of a trend, and people doing the opposite.",
+      "phrase": "strong criticism"
+    },
+    "content": {
+      "translation": "videos, posts and other media about being fit, healthy and achieving big goals",
+      "source": "official",
       "phrase": "self-optimisation content"
     },
     "optimisation": {
-      "translation": "自我优化内容",
-      "source": "context",
-      "context": "自我优化内容",
-      "sentence": "I think we had this, like, rise of self-optimisation content.",
+      "translation": "videos, posts and other media about being fit, healthy and achieving big goals",
+      "source": "official",
       "phrase": "self-optimisation content"
     },
     "self": {
-      "translation": "自我优化内容",
-      "source": "context",
-      "context": "自我优化内容",
-      "sentence": "I think we had this, like, rise of self-optimisation content.",
+      "translation": "videos, posts and other media about being fit, healthy and achieving big goals",
+      "source": "official",
       "phrase": "self-optimisation content"
     },
     "selfoptimisationcontent": {
-      "translation": "自我优化内容",
-      "source": "context",
-      "context": "自我优化内容",
-      "sentence": "I think we had this, like, rise of self-optimisation content.",
-      "phrase": "self-optimisation content"
-    },
-    "thenorm": {
-      "translation": "the usual or common thing to do",
+      "translation": "videos, posts and other media about being fit, healthy and achieving big goals",
       "source": "official",
-      "phrase": "the norm"
+      "phrase": "self-optimisation content"
     }
   }
 }
