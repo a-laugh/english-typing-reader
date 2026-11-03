@@ -276,9 +276,11 @@ def test_glm_call_429_backoff(monkeypatch):
         server.server_close()
 
 
-def test_glm_call_thinking_disabled_for_new_models(monkeypatch):
-    """GLM-4.5+/5.x 需显式关闭深度思考（实测 glm-5.3-flash 的 content 为空/
-    夹带思考文本导致 JSON 解析失败）；旧模型不带该参数。"""
+def test_glm_call_thinking_params_by_model(monkeypatch):
+    """思考参数按官方文档分档：
+    - glm-5.3/5.3-flash 恒定思考：thinking=enabled + reasoning_effort=low（独立字符串参数）
+    - 其余 glm-4.5+/5.x：thinking=disabled
+    - 旧模型（glm-4-flash 等）：不带思考参数"""
     import threading
     from http.server import BaseHTTPRequestHandler, HTTPServer
     bodies = []
@@ -286,7 +288,7 @@ def test_glm_call_thinking_disabled_for_new_models(monkeypatch):
     class Handler(BaseHTTPRequestHandler):
         def do_POST(self):
             length = int(self.headers.get("Content-Length", 0))
-            bodies.append(self.rfile.read(length).decode("utf-8"))
+            bodies.append(json.loads(self.rfile.read(length).decode("utf-8")))
             resp = json.dumps(
                 {"choices": [{"message": {"content": '{"a": {"meaning": "x", "sentence": "s"}}'}}]}
             ).encode("utf-8")
@@ -304,12 +306,16 @@ def test_glm_call_thinking_disabled_for_new_models(monkeypatch):
     try:
         base = f"http://127.0.0.1:{server.server_address[1]}/v1"
         monkeypatch.setattr(fetcher, "LLM_BASE_URL", base)
-        monkeypatch.setattr(fetcher, "LLM_MODEL", "glm-5.3-flash")
-        assert fetcher._glm_glossary_call("p", "k", "t") == {"a": {"meaning": "x", "sentence": "s"}}
-        assert json.loads(bodies[0])["thinking"] == {"type": "low"}
-        monkeypatch.setattr(fetcher, "LLM_MODEL", "glm-4-flash")
-        fetcher._glm_glossary_call("p", "k", "t")
-        assert "thinking" not in json.loads(bodies[1]), "旧模型不应携带 thinking 参数"
+        expected = {"a": {"meaning": "x", "sentence": "s"}}
+        for model, want in [
+            ("glm-5.3-flash", {"thinking": {"type": "enabled"}, "reasoning_effort": "low"}),
+            ("glm-4.6-flash", {"thinking": {"type": "disabled"}}),
+            ("glm-4-flash", {}),
+        ]:
+            monkeypatch.setattr(fetcher, "LLM_MODEL", model)
+            assert fetcher._glm_glossary_call("p", "k", "t") == expected
+            sent = {k: v for k, v in bodies[-1].items() if k in ("thinking", "reasoning_effort")}
+            assert sent == want, f"{model}: {sent}"
     finally:
         server.shutdown()
         server.server_close()
@@ -348,7 +354,7 @@ def test_glm_call_reasoning_content_fallback(monkeypatch):
 
 
 def test_glm_call_400_drops_thinking_param(monkeypatch):
-    """400 时自适应：携带 thinking 被拒 → 打印响应体并移除该参数重试成功。"""
+    """400 时自适应：思考参数被拒 → 打印响应体并全部移除后重试成功。"""
     import threading
     from http.server import BaseHTTPRequestHandler, HTTPServer
     bodies = []
@@ -357,8 +363,8 @@ def test_glm_call_400_drops_thinking_param(monkeypatch):
         def do_POST(self):
             length = int(self.headers.get("Content-Length", 0))
             bodies.append(json.loads(self.rfile.read(length).decode("utf-8")))
-            if "thinking" in bodies[-1]:
-                resp = json.dumps({"error": {"code": "1210", "message": "invalid parameter: thinking"}}).encode()
+            if "thinking" in bodies[-1] or "reasoning_effort" in bodies[-1]:
+                resp = json.dumps({"error": {"code": "1210", "message": "invalid parameter"}}).encode()
                 self.send_response(400)
             else:
                 resp = json.dumps(
@@ -381,7 +387,8 @@ def test_glm_call_400_drops_thinking_param(monkeypatch):
         result = fetcher._glm_glossary_call("p", "k", "t")
         assert result == {"a": {"meaning": "x", "sentence": "s"}}
         assert len(bodies) == 2
-        assert "thinking" in bodies[0] and "thinking" not in bodies[1]
+        assert "thinking" in bodies[0] and "reasoning_effort" in bodies[0]
+        assert "thinking" not in bodies[1] and "reasoning_effort" not in bodies[1]
     finally:
         server.shutdown()
         server.server_close()

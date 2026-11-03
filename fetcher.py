@@ -336,12 +336,16 @@ def _glm_glossary_call(prompt: str, api_key: str, label: str) -> dict:
         "temperature": 0.2,
         "max_tokens": 4500,
     }
-    # GLM-4.5+/5.x 默认开启深度思考：content 可能为空、最终结果落在
-    # reasoning_content 里，导致 JSON 解析失败（实测 glm-5.3-flash）。
-    # glm-5.3 系列恒定思考不可关闭（400: "请使用 low、high 或 max"），
-    # 统一设最低档 low；若端点仍拒绝（400），自适应摘除该参数
-    if re.match(r"glm-(4\.[5-9]|[5-9])", LLM_MODEL):
-        payload["thinking"] = {"type": "low"}
+    # 思考参数按官方文档分档（docs.bigmodel.cn 对话补全 API）：
+    # - glm-5.3 / glm-5.3-flash 系列：恒定思考，thinking 只能 enabled，
+    #   强度由独立字符串参数 reasoning_effort 控制（仅 low/high/max）
+    # - 其余 glm-4.5+/5.x：支持 thinking.type=disabled，词表生成无需思考
+    # 若端点拒绝（400），自适应摘除这些参数重试（见下方 400 分支）
+    if re.match(r"glm-(5\.3|4\.7)", LLM_MODEL):
+        payload["thinking"] = {"type": "enabled"}
+        payload["reasoning_effort"] = "low"
+    elif re.match(r"glm-(4\.[5-9]|[5-9])", LLM_MODEL):
+        payload["thinking"] = {"type": "disabled"}
     rate_limit_hits = 0
     attempt = 0
     content = None
@@ -350,11 +354,14 @@ def _glm_glossary_call(prompt: str, api_key: str, label: str) -> dict:
         attempt += 1
         try:
             resp = requests.post(url, headers=headers, json=payload, timeout=120)
-            if resp.status_code == 400 and "thinking" in payload and not thinking_removed:
-                # 端点可能不接受 thinking 参数（各模型/版本支持不一）：
-                # 打印响应体后自动摘掉该参数重试一次，不再靠猜
-                log(f"{label} 400 响应体: {resp.text[:200]!r}；移除 thinking 参数后重试")
-                payload.pop("thinking")
+            if resp.status_code == 400 and not thinking_removed and (
+                "thinking" in payload or "reasoning_effort" in payload
+            ):
+                # 端点不接受思考相关参数（各模型/版本支持不一）：
+                # 打印响应体后自动摘掉这些参数重试一次，不再靠猜
+                log(f"{label} 400 响应体: {resp.text[:200]!r}；移除思考参数后重试")
+                payload.pop("thinking", None)
+                payload.pop("reasoning_effort", None)
                 thinking_removed = True
                 attempt -= 1
                 continue
