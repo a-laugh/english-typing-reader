@@ -234,6 +234,48 @@ def test_chunk_transcript_by_turn_boundaries():
     assert short == [["Hi there."]]
 
 
+def test_glm_call_429_backoff(monkeypatch):
+    """429 限流：指数退避后重试成功（不消耗解析重试次数），等待时间符合退避序列。"""
+    import threading
+    from http.server import BaseHTTPRequestHandler, HTTPServer
+    state = {"calls": 0}
+    waits = []
+    monkeypatch.setattr(fetcher.time, "sleep", lambda s: waits.append(s))
+
+    class Handler(BaseHTTPRequestHandler):
+        def do_POST(self):
+            state["calls"] += 1
+            if state["calls"] <= 2:
+                self.send_response(429)
+                self.send_header("Retry-After", "3")
+                body = b"{}"
+            else:
+                body = json.dumps(
+                    {"choices": [{"message": {"content": '{"hi": {"meaning": "喂", "sentence": "s"}}'}}]}
+                ).encode("utf-8")
+                self.send_response(200)
+                self.send_header("Content-Type", "application/json")
+            self.send_header("Content-Length", str(len(body)))
+            self.end_headers()
+            self.wfile.write(body)
+
+        def log_message(self, *args):
+            pass
+
+    server = HTTPServer(("127.0.0.1", 0), Handler)
+    threading.Thread(target=server.serve_forever, daemon=True).start()
+    try:
+        monkeypatch.setattr(fetcher, "LLM_BASE_URL", f"http://127.0.0.1:{server.server_address[1]}/v1")
+        result = fetcher._glm_glossary_call("prompt", "key", "测试块")
+        assert result == {"hi": {"meaning": "喂", "sentence": "s"}}
+        assert state["calls"] == 3, "两次 429 后第三次成功"
+        # Retry-After: 3 优先于指数序列
+        assert waits == [3, 3], f"退避等待应为两次 Retry-After=3：{waits}"
+    finally:
+        server.shutdown()
+        server.server_close()
+
+
 # ------------------------------------------------- GLM 调用链（本地模拟服务）
 
 def _mock_glm_server(content: str):

@@ -21,6 +21,7 @@ import json
 import os
 import re
 import sys
+import time
 import uuid
 from datetime import date, timedelta
 from pathlib import Path
@@ -289,8 +290,10 @@ not、no、so、very、just、really、well、oh、yeah、OK、yes、nope、um�
 """
 
 # 单块对白目标词数：整期约 1000+ 词，一次喂给 LLM 会导致输出截断/覆盖锐减
-# （实测整篇提示只产出 6-20 条），按回合边界分块、逐块生成后合并
-GLOSSARY_CHUNK_WORDS = 300
+# （实测整篇提示只产出 6-20 条），按回合边界分块、逐块生成后合并。
+# 400 词/块兼顾输出上限（~60 词条 < max_tokens 4500）与调用次数（免费档限流敏感）
+GLOSSARY_CHUNK_WORDS = 400
+GLOSSARY_CHUNK_PAUSE = 2.0  # 块间停顿（秒），降低免费档 429 限流概率
 
 
 def _chunk_transcript(transcript: str, chunk_words: int) -> list[list[str]]:
@@ -312,7 +315,11 @@ def _chunk_transcript(transcript: str, chunk_words: int) -> list[list[str]]:
 
 
 def _glm_glossary_call(prompt: str, api_key: str, label: str) -> dict:
-    """单次 GLM 调用并解析为词表 dict；失败（含重试一次后仍失败）返回 {}。"""
+    """单次 GLM 调用并解析为词表 dict；失败返回 {}。
+
+    429 限流（免费档 rpm 低，分块连续调用实测会触发）单独处理：
+    指数退避最多等 5 轮并尊重 Retry-After；解析失败重试 1 次。
+    """
     url = f"{LLM_BASE_URL}/chat/completions"
     headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
     payload = {
@@ -327,10 +334,23 @@ def _glm_glossary_call(prompt: str, api_key: str, label: str) -> dict:
         "temperature": 0.2,
         "max_tokens": 4500,
     }
+    rate_limit_hits = 0
+    attempt = 0
     content = None
-    for attempt in (1, 2):
+    while attempt < 3:
+        attempt += 1
         try:
             resp = requests.post(url, headers=headers, json=payload, timeout=120)
+            if resp.status_code == 429 and rate_limit_hits < 5:
+                rate_limit_hits += 1
+                wait = min(2 ** rate_limit_hits * 2, 30)  # 4s, 8s, 16s, 30s, 30s
+                retry_after = resp.headers.get("Retry-After")
+                if retry_after and retry_after.strip().isdigit():
+                    wait = min(int(retry_after), 60)
+                log(f"{label} 429 限流，等待 {wait}s 后重试（第 {rate_limit_hits} 次）")
+                time.sleep(wait)
+                attempt -= 1  # 限流等待不计入解析重试次数
+                continue
             resp.raise_for_status()
             try:
                 content = resp.json()["choices"][0]["message"]["content"]
@@ -343,10 +363,14 @@ def _glm_glossary_call(prompt: str, api_key: str, label: str) -> dict:
                 raise ValueError("LLM 输出不是 JSON 对象")
             return glossary
         except Exception as e:
-            log(f"{label} 第 {attempt} 次尝试失败: {e}")
+            if attempt >= 3:
+                log(f"{label} 第 {attempt} 次尝试失败（放弃）: {e}")
+                break
+            log(f"{label} 第 {attempt} 次尝试失败，1s 后重试: {e}")
             if isinstance(e, ValueError) and "GLM 响应结构异常" not in str(e) and content:
                 # 解析失败时留一小段原始输出，方便从 Actions 日志定位模型行为
                 log(f"GLM 原始输出前 200 字符: {str(content)[:200]!r}")
+            time.sleep(1)
     return {}
 
 
@@ -362,6 +386,8 @@ def generate_context_glossary(transcript: str, vocabulary: list, api_key: str) -
     )
     glossary: dict = {}
     for ci, chunk in enumerate(chunks, 1):
+        if ci > 1:
+            time.sleep(GLOSSARY_CHUNK_PAUSE)  # 块间节奏，降低免费档限流概率
         known = "、".join(sorted(glossary.keys()))
         parts = [GLOSSARY_PROMPT if vocab_lines else GLOSSARY_PROMPT_NO_VOCAB]
         if vocab_lines:
