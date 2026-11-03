@@ -341,6 +341,10 @@ def _glm_glossary_call(prompt: str, api_key: str, label: str) -> dict:
         attempt += 1
         try:
             resp = requests.post(url, headers=headers, json=payload, timeout=120)
+            if resp.status_code == 429:
+                # 带上响应体：bigmodel 的 429 body 含具体错误码
+                # （如 1302 并发/频控、免费额度耗尽等），Actions 日志可直接定位
+                log(f"{label} 429 响应体: {resp.text[:200]!r}")
             if resp.status_code == 429 and rate_limit_hits < 5:
                 rate_limit_hits += 1
                 wait = min(2 ** rate_limit_hits * 2, 30)  # 4s, 8s, 16s, 30s, 30s
@@ -385,6 +389,7 @@ def generate_context_glossary(transcript: str, vocabulary: list, api_key: str) -
         for item in vocabulary if item.get("word")
     )
     glossary: dict = {}
+    empty_streak = 0  # 连续空块计数：疑似配额耗尽时提前止损，把机会留给下次构建
     for ci, chunk in enumerate(chunks, 1):
         if ci > 1:
             time.sleep(GLOSSARY_CHUNK_PAUSE)  # 块间节奏，降低免费档限流概率
@@ -399,6 +404,11 @@ def generate_context_glossary(transcript: str, vocabulary: list, api_key: str) -
         for word, info in part.items():
             glossary.setdefault(word, info)
         log(f"语境词表块 {ci}/{len(chunks)}：本块 {len(part)} 词条，累计 {len(glossary)} 词条")
+        empty_streak = empty_streak + 1 if not part else 0
+        if empty_streak >= 2:
+            log(f"警告：连续 {empty_streak} 块生成失败（大概率配额/限流未恢复），"
+                f"本期剩余块跳过，等待下次构建补齐")
+            break
     return glossary
 
 
