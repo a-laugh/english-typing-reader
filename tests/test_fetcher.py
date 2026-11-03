@@ -171,13 +171,15 @@ def test_glossary_prompt_braces_are_single():
 
 
 def test_glossary_prompt_requires_concise_meaning():
-    """回归测试：meaning 必须有 ≤10 字的硬性约束（用户要求简洁翻译），
-    防止将来改提示词时把约束丢掉。两个提示词都要受保护——历史上
-    「双层花括号照抄」正是提示词事故导致的线上解析失败。"""
+    """回归测试：① meaning ≤10 字硬性约束；② 全词覆盖（含 the/and 等基础词，
+    学习者要求所有词都有解释——曾长期排除基础词导致删词典层后满屏无释义）。
+    两个提示词都要受保护。"""
     for prompt in (fetcher.GLOSSARY_PROMPT, fetcher.GLOSSARY_PROMPT_NO_VOCAB):
         assert "10" in prompt and "简洁" in prompt
         assert "{{" not in prompt and "}}" not in prompt
         assert '{"meaning"' in prompt
+        assert "每一个单词" in prompt and "基础" in prompt, "必须要求全词覆盖"
+        assert "宁多勿漏" not in prompt and "不需要收录" not in prompt, "不得再排除基础词"
 
 
 def test_generate_context_glossary_prompt_contains_vocab(monkeypatch):

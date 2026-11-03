@@ -255,12 +255,9 @@ def parse_episode(html: str, meta: dict) -> dict:
 GLOSSARY_PROMPT = """你是英语学习材料的编辑。下面是一期 BBC 6 Minute English 的英文对白，\
 以及该节目官方给出的重点词汇表。
 
-请找出本段对白中**每一个值得学习的英文单词与短语**并给出中文释义——宁多勿漏。
-不需要收录的仅限最基础的虚词与口语填充词（如 the、a、and、but、of、to、in、on、
-is、are、was、were、be、have、has、do、does、it、this、that、there、here、
-I、you、he、she、we、they、my、your、his、her、our、their、me、him、them、
-not、no、so、very、just、really、well、oh、yeah、OK、yes、nope、um、er）。
-除此之外的动词、名词、形容词、副词、习语短语**全部**都要给出释义。
+请给出本段对白中**每一个单词与短语**的中文释义——包括 the、and、I 这类最基础的词
+（学习者要求所有词都有解释）。基础词给最简释义即可（如 the→定冠词、and→和、
+I→我），其 sentence 字段填空字符串 ""。
 
 释义要求：不超过 10 个字，简洁、易懂（例如"电网"、"高温"、"居住"）；
 不要解释性长句、不要堆砌词性、不要加括号补充说明。
@@ -276,13 +273,9 @@ not、no、so、very、just、really、well、oh、yeah、OK、yes、nope、um�
 """
 
 GLOSSARY_PROMPT_NO_VOCAB = """你是英语学习材料的编辑。下面是一期 BBC 6 Minute English 的英文对白片段。
-请找出本段对白中**每一个值得学习的英文单词与短语**并给出中文释义——宁多勿漏。
-不需要收录的仅限最基础的虚词与口语填充词（如 the、a、and、but、of、to、in、on、
-is、are、was、were、be、have、has、do、does、it、this、that、there、here、
-I、you、he、she、we、they、my、your、his、her、our、their、me、him、them、
-not、no、so、very、just、really、well、oh、yeah、OK、yes、nope、um、er）。
-除此之外的动词、名词、形容词、副词、习语短语**全部**都要给出释义。
-释义不超过 10 个字，简洁、易懂（例如"电网"、"高温"、"居住"）。
+请给出本段对白中**每一个单词与短语**的中文释义——包括 the、and、I 这类最基础的词
+（学习者要求所有词都有解释）。基础词给最简释义即可（如 the→定冠词、and→和、
+I→我），其 sentence 字段填空字符串 ""。释义不超过 10 个字，简洁、易懂。
 
 仅输出一个 JSON 对象（最外层是一对花括号，键为单词、值为对象，全部用双引号），
 不要输出任何其他文字。示例格式：
@@ -293,8 +286,8 @@ not、no、so、very、just、really、well、oh、yeah、OK、yes、nope、um�
 
 # 单块对白目标词数：整期约 1000+ 词，一次喂给 LLM 会导致输出截断/覆盖锐减
 # （实测整篇提示只产出 6-20 条），按回合边界分块、逐块生成后合并。
-# 400 词/块兼顾输出上限（~60 词条 < max_tokens 4500）与调用次数（免费档限流敏感）
-GLOSSARY_CHUNK_WORDS = 400
+# 全词覆盖后词条数约翻三倍，块缩回 300 词（~120 词条 < max_tokens 4500）
+GLOSSARY_CHUNK_WORDS = 300
 GLOSSARY_CHUNK_PAUSE = 2.0  # 块间停顿（秒），降低免费档 429 限流概率
 
 
