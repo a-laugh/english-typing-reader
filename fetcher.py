@@ -252,8 +252,12 @@ def parse_episode(html: str, meta: dict) -> dict:
 GLOSSARY_PROMPT = """你是英语学习材料的编辑。下面是一期 BBC 6 Minute English 的英文对白，\
 以及该节目官方给出的重点词汇表。
 
-请找出对白中所有「非常用」英文单词与短语（初学者已会的冠词/介词/基础词如 the、and、go、big 不需要），
-给每个词在本对白语境中的中文释义。
+请找出本段对白中**每一个值得学习的英文单词与短语**并给出中文释义——宁多勿漏。
+不需要收录的仅限最基础的虚词与口语填充词（如 the、a、and、but、of、to、in、on、
+is、are、was、were、be、have、has、do、does、it、this、that、there、here、
+I、you、he、she、we、they、my、your、his、her、our、their、me、him、them、
+not、no、so、very、just、really、well、oh、yeah、OK、yes、nope、um、er）。
+除此之外的动词、名词、形容词、副词、习语短语**全部**都要给出释义。
 
 释义要求：不超过 10 个字，简洁、易懂（例如"电网"、"高温"、"居住"）；
 不要解释性长句、不要堆砌词性、不要加括号补充说明。
@@ -268,10 +272,14 @@ GLOSSARY_PROMPT = """你是英语学习材料的编辑。下面是一期 BBC 6 M
 }
 """
 
-GLOSSARY_PROMPT_NO_VOCAB = """你是英语学习材料的编辑。下面是一期 BBC 6 Minute English 的英文对白。
-请找出其中所有「非常用」英文单词与短语（初学者已会的冠词/介词/基础词如 the、and、go、big 不需要），
-给每个词在本对白语境中的中文释义：不超过 10 个字，简洁、易懂（例如"电网"、"高温"、"居住"）；
-不要解释性长句、不要堆砌词性、不要加括号补充说明。
+GLOSSARY_PROMPT_NO_VOCAB = """你是英语学习材料的编辑。下面是一期 BBC 6 Minute English 的英文对白片段。
+请找出本段对白中**每一个值得学习的英文单词与短语**并给出中文释义——宁多勿漏。
+不需要收录的仅限最基础的虚词与口语填充词（如 the、a、and、but、of、to、in、on、
+is、are、was、were、be、have、has、do、does、it、this、that、there、here、
+I、you、he、she、we、they、my、your、his、her、our、their、me、him、them、
+not、no、so、very、just、really、well、oh、yeah、OK、yes、nope、um、er）。
+除此之外的动词、名词、形容词、副词、习语短语**全部**都要给出释义。
+释义不超过 10 个字，简洁、易懂（例如"电网"、"高温"、"居住"）。
 
 仅输出一个 JSON 对象（最外层是一对花括号，键为单词、值为对象，全部用双引号），
 不要输出任何其他文字。示例格式：
@@ -280,17 +288,31 @@ GLOSSARY_PROMPT_NO_VOCAB = """你是英语学习材料的编辑。下面是一�
 }
 """
 
+# 单块对白目标词数：整期约 1000+ 词，一次喂给 LLM 会导致输出截断/覆盖锐减
+# （实测整篇提示只产出 6-20 条），按回合边界分块、逐块生成后合并
+GLOSSARY_CHUNK_WORDS = 300
 
-def generate_context_glossary(transcript: str, vocabulary: list, api_key: str) -> dict:
-    """调用 GLM 生成全篇语境词表（官方词汇表优先作为释义依据）；失败（含重试一次后仍失败）返回 {}。"""
-    if vocabulary:
-        vocab_lines = "\n".join(
-            f"{item.get('word', '')}: {item.get('definition', '')}".strip()
-            for item in vocabulary if item.get("word")
-        )
-        prompt = GLOSSARY_PROMPT + f"官方词汇表：\n{vocab_lines}\n\n对白：\n{transcript}"
-    else:
-        prompt = GLOSSARY_PROMPT_NO_VOCAB + f"\n对白：\n{transcript}"
+
+def _chunk_transcript(transcript: str, chunk_words: int) -> list[list[str]]:
+    """按行（回合）把对白切分成 ~chunk_words 的块，不切断回合。"""
+    lines = [ln for ln in transcript.split("\n") if ln.strip()]
+    chunks: list[list[str]] = []
+    current: list[str] = []
+    count = 0
+    for line in lines:
+        words = len(line.split())
+        if current and count + words > chunk_words:
+            chunks.append(current)
+            current, count = [], 0
+        current.append(line)
+        count += words
+    if current:
+        chunks.append(current)
+    return chunks
+
+
+def _glm_glossary_call(prompt: str, api_key: str, label: str) -> dict:
+    """单次 GLM 调用并解析为词表 dict；失败（含重试一次后仍失败）返回 {}。"""
     url = f"{LLM_BASE_URL}/chat/completions"
     headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
     payload = {
@@ -303,8 +325,9 @@ def generate_context_glossary(transcript: str, vocabulary: list, api_key: str) -
             },
         ],
         "temperature": 0.2,
-        "max_tokens": 8000,
+        "max_tokens": 4500,
     }
+    content = None
     for attempt in (1, 2):
         try:
             resp = requests.post(url, headers=headers, json=payload, timeout=120)
@@ -318,14 +341,39 @@ def generate_context_glossary(transcript: str, vocabulary: list, api_key: str) -
             glossary = _parse_json_block(content)
             if not isinstance(glossary, dict):
                 raise ValueError("LLM 输出不是 JSON 对象")
-            log(f"语境词表生成成功，共 {len(glossary)} 词条（第 {attempt} 次尝试）")
             return glossary
         except Exception as e:
-            log(f"GLM 语境词表第 {attempt} 次尝试失败: {e}")
-            if isinstance(e, ValueError) and "GLM 响应结构异常" not in str(e):
+            log(f"{label} 第 {attempt} 次尝试失败: {e}")
+            if isinstance(e, ValueError) and "GLM 响应结构异常" not in str(e) and content:
                 # 解析失败时留一小段原始输出，方便从 Actions 日志定位模型行为
                 log(f"GLM 原始输出前 200 字符: {str(content)[:200]!r}")
     return {}
+
+
+def generate_context_glossary(transcript: str, vocabulary: list, api_key: str) -> dict:
+    """分块调用 GLM 生成全篇语境词表（官方词汇表优先作为释义依据）。
+
+    单块失败跳过（下一块继续），全部失败返回 {}。
+    """
+    chunks = _chunk_transcript(transcript, GLOSSARY_CHUNK_WORDS)
+    vocab_lines = "\n".join(
+        f"{item.get('word', '')}: {item.get('definition', '')}".strip()
+        for item in vocabulary if item.get("word")
+    )
+    glossary: dict = {}
+    for ci, chunk in enumerate(chunks, 1):
+        known = "、".join(sorted(glossary.keys()))
+        parts = [GLOSSARY_PROMPT if vocab_lines else GLOSSARY_PROMPT_NO_VOCAB]
+        if vocab_lines:
+            parts.append(f"官方词汇表（全期通用）：\n{vocab_lines}")
+        if known:
+            parts.append(f"以下词已给出过释义，不要再输出：{known}")
+        parts.append("本段对白：\n" + "\n".join(chunk))
+        part = _glm_glossary_call("\n\n".join(parts), api_key, f"语境词表块 {ci}/{len(chunks)}")
+        for word, info in part.items():
+            glossary.setdefault(word, info)
+        log(f"语境词表块 {ci}/{len(chunks)}：本块 {len(part)} 词条，累计 {len(glossary)} 词条")
+    return glossary
 
 
 def _parse_json_block(text: str):
@@ -617,6 +665,12 @@ def build(days: int, no_llm: bool, no_audio: bool = False, rebake: bool = False)
                         rebaked += 1
                         log(f"已更新 {out_file.name}，词典 {len(data['dict'])} 条")
                     continue
+                if data:
+                    log(f"跳过已存在剧集：{meta['id']}"
+                        f"（语境词表 {len(data.get('context_glossary') or {})} 条，非空不再重新生成）")
+                    skipped += 1
+                    continue
+            log(f"跳过已存在剧集：{meta['id']}")
             skipped += 1
             continue
         try:

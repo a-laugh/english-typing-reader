@@ -181,72 +181,7 @@
       "definition": "a strong desire for"
     }
   ],
-  "context_glossary": {
-    "extracted": {
-      "meaning": "开采",
-      "sentence": "Gold is a metal that's extracted or dug up from under the ground in mines."
-    },
-    "in this episode": {
-      "meaning": "在本期节目中",
-      "sentence": "In this episode of 6 Minute English, we'll be talking about how gold became a valuable investment..."
-    },
-    "quiz question": {
-      "meaning": "测验问题",
-      "sentence": "Let's start with our quiz question, Georgie..."
-    },
-    "mines": {
-      "meaning": "矿山",
-      "sentence": "Gold is a metal that's extracted or dug up from under the ground in mines."
-    },
-    "coins": {
-      "meaning": "硬币",
-      "sentence": "And experts have discovered gold in coins that are thought to have been made in the 6th Century BC."
-    },
-    "trade": {
-      "meaning": "贸易",
-      "sentence": "gold was much easier to carry and trade than things like cattle or timber."
-    },
-    "financial asset": {
-      "meaning": "金融资产",
-      "sentence": "gold is still a financial asset, and an asset is something valuable that could be sold for money."
-    },
-    "crisis": {
-      "meaning": "危机",
-      "sentence": "And people buy gold in times of crisis because it's thought of as a safe investment."
-    },
-    "neutral": {
-      "meaning": "中立的",
-      "sentence": "Gold is a safe haven because it's not connected to one particular government or one particular economy or one particular market, so the fact that it's neutral means it's an asset that's perceived to be a store of value over a longer term."
-    },
-    "fabricated": {
-      "meaning": "制造",
-      "sentence": "It can't be created and fabricated out of thin air through alchemy."
-    },
-    "alchemy": {
-      "meaning": "炼金术",
-      "sentence": "Alchemy is an ancient kind of chemistry that attempted to do impossible things, like turn ordinary metals into gold."
-    },
-    "underlying": {
-      "meaning": "根本的",
-      "sentence": "so this, sort of, controls the supply and sustains an underlying value behind the demand for gold."
-    },
-    "expression": {
-      "meaning": "表达",
-      "sentence": "an expression meaning making something from nothing."
-    },
-    "market strategist": {
-      "meaning": "市场策略师",
-      "sentence": "Let's hear from market strategist John Reade."
-    },
-    "ethereal": {
-      "meaning": "虚幻的",
-      "sentence": "So much of the world we live in now is ethereal."
-    },
-    "hankering for": {
-      "meaning": "渴望",
-      "sentence": "And maybe it's a hankering for traditional values rather than what is super modern and super changeable."
-    }
-  },
+  "context_glossary": {},
   "dict": {
     "extracted": {
       "translation": "开采",

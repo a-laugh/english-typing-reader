@@ -221,6 +221,19 @@ def test_generate_context_glossary_prompt_contains_vocab(monkeypatch):
         server.server_close()
 
 
+def test_chunk_transcript_by_turn_boundaries():
+    """分块：按行（回合）切分、不切断回合、块大小受限。"""
+    turns = ["a " * 100] * 7  # 7 回合各 100 词
+    transcript = "\n".join(t.strip() for t in turns)
+    chunks = fetcher._chunk_transcript(transcript, chunk_words=250)
+    assert [len(c) for c in chunks] == [2, 2, 2, 1]  # 100+100 / 100+100 / 100+100 / 100
+    assert all(len(" ".join(c).split()) <= 250 for c in chunks)
+    # 每行保持完整
+    assert sum(len(c) for c in chunks) == 7
+    short = fetcher._chunk_transcript("Hi there.", chunk_words=250)
+    assert short == [["Hi there."]]
+
+
 # ------------------------------------------------- GLM 调用链（本地模拟服务）
 
 def _mock_glm_server(content: str):
@@ -281,6 +294,51 @@ def test_generate_context_glossary_garbage_degrades(monkeypatch):
             fetcher, "LLM_BASE_URL", f"http://127.0.0.1:{server.server_address[1]}/v1"
         )
         assert fetcher.generate_context_glossary("Hi Neil.", [], "test-key") == {}
+    finally:
+        server.shutdown()
+        server.server_close()
+
+
+def test_generate_context_glossary_chunked_and_merged(monkeypatch):
+    """整期分块生成：多块各返回不同词条，合并去重且后块携带「已译词」名单。"""
+    import threading
+    from http.server import BaseHTTPRequestHandler, HTTPServer
+    prompts = []
+    replies = [
+        '{"hot": {"meaning": "热", "sentence": "s1"}, "summer": {"meaning": "夏天", "sentence": "s2"}}',
+        '{"hot": {"meaning": "重复应被忽略", "sentence": "x"}, "grid": {"meaning": "电网", "sentence": "s3"}}',
+    ]
+    state = {"i": 0}
+
+    class Handler(BaseHTTPRequestHandler):
+        def do_POST(self):
+            length = int(self.headers.get("Content-Length", 0))
+            body = self.rfile.read(length).decode("utf-8")
+            prompts.append(json.loads(body)["messages"][0]["content"])
+            content = replies[min(state["i"], len(replies) - 1)]
+            state["i"] += 1
+            resp = json.dumps({"choices": [{"message": {"content": content}}]}).encode("utf-8")
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.send_header("Content-Length", str(len(resp)))
+            self.end_headers()
+            self.wfile.write(resp)
+
+        def log_message(self, *args):
+            pass
+
+    server = HTTPServer(("127.0.0.1", 0), Handler)
+    threading.Thread(target=server.serve_forever, daemon=True).start()
+    try:
+        monkeypatch.setattr(fetcher, "LLM_BASE_URL", f"http://127.0.0.1:{server.server_address[1]}/v1")
+        monkeypatch.setattr(fetcher, "GLOSSARY_CHUNK_WORDS", 3)  # 强制两块
+        transcript = "Hot summer day.\nPower grid fails."  # 每行 3 词
+        result = fetcher.generate_context_glossary(transcript, [], "test-key")
+        assert result["hot"]["meaning"] == "热", "先到先得，重复词条不覆盖"
+        assert result["grid"]["meaning"] == "电网"
+        assert len(result) == 3
+        assert "已给出过释义" in prompts[1] and "hot" in prompts[1], "第二块应携带已译词名单"
+        assert "Power grid fails." in prompts[1] and "Hot summer day." not in prompts[1]
     finally:
         server.shutdown()
         server.server_close()

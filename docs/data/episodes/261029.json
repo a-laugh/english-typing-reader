@@ -185,32 +185,7 @@
       "definition": "blocking the Sun's light and heat"
     }
   ],
-  "context_glossary": {
-    "vicious cycle": {
-      "meaning": "恶性循环",
-      "sentence": "And we reach a vicious cycle, because then you're in a world where it's getting warmer..."
-    },
-    "passive cooling": {
-      "meaning": "被动冷却",
-      "sentence": "Passive cooling is when we take steps to provide thermal comfort that are not energy intensive..."
-    },
-    "shading": {
-      "meaning": "遮蔽",
-      "sentence": "Some of the most important ones are first to cut solar gain, which is through things like shading..."
-    },
-    "emissions": {
-      "meaning": "排放",
-      "sentence": "We heard that air conditioning creates emissions, which can lead the world to warm up..."
-    },
-    "detrimental": {
-      "meaning": "有害的",
-      "sentence": "And we reach a vicious cycle, because then you're in a world where it's getting warmer..."
-    },
-    "sustainable energy": {
-      "meaning": "可持续能源",
-      "sentence": "Radhika also talks about the importance of using sustainable energy to power the air conditioning..."
-    }
-  },
+  "context_glossary": {},
   "dict": {
     "vicious cycle": {
       "translation": "恶性循环",

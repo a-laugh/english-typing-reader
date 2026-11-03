@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>键学 · BBC 6 Minute English 打字练习</title>
     <!-- ?v= 版本号：界面改动时同步递增，避免部署后浏览器用缓存的旧 JS 配新 HTML -->
-    <link rel="stylesheet" href="assets/bootstrap.min.css?v=20261104">
-    <link rel="stylesheet" href="assets/app.css?v=20261104">
+    <link rel="stylesheet" href="assets/bootstrap.min.css?v=20261105">
+    <link rel="stylesheet" href="assets/app.css?v=20261105">
 </head>
 <body class="app-body">
     <main class="container app">
         <header class="app-header">
-            <span class="app-title">键学</span>
-            <select id="episode-selector" class="form-select form-select-sm w-auto" aria-label="选择节目">
+            <div class="app-brand">
+                <span class="app-title">键学</span>
+                <span class="app-subtitle">BBC 6 Minute English</span>
+            </div>
+            <select id="episode-selector" class="form-select form-select-sm" aria-label="选择节目">
                 <option value="">加载节目中…</option>
             </select>
             <div id="episode-meta" class="small"></div>
@@ -31,6 +34,6 @@
     <!-- 键盘捕获：视觉隐藏但可聚焦，用于唤起手机软键盘；事件冒泡到 document 统一处理 -->
     <input id="kbd-capture" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-hidden="true" tabindex="-1">
 
-    <script src="script.js?v=20261104"></script>
+    <script src="script.js?v=20261105"></script>
 </body>
 </html>

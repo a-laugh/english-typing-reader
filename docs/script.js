@@ -446,7 +446,7 @@ function renderHint() {
     hw.className = "hw";
     hw.textContent = originalWords[currentWordIndex];
     hintCurrent.appendChild(hw);
-    hintCurrent.append("（逐字母输入，打错原地重打）");
+    hintCurrent.append(" · 打错原地重打");
     hintProgress.textContent = `进度 ${currentWordIndex}/${originalWords.length} 词`;
 }
 
