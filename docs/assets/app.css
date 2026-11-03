@@ -1,56 +1,22 @@
 /* 键学 · 应用层样式（自托管 Bootstrap 5.3 之上）
-   风格借鉴 pluskid（freemind.pluskid.org）：Lora 衬线正文、白底墨字、
-   平面无卡片、经典蓝链接、细分隔线、大量留白——安静的书卷气 */
-
-@font-face {
-    font-family: "Lora";
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: local("Lora"), local("Lora-Regular"),
-        url("./fonts/lora-v9-latin-regular.woff2") format("woff2");
-}
-@font-face {
-    font-family: "Lora";
-    font-style: italic;
-    font-weight: 400;
-    font-display: swap;
-    src: local("Lora Italic"), local("Lora-Italic"),
-        url("./fonts/lora-v9-latin-italic.woff2") format("woff2");
-}
-@font-face {
-    font-family: "Lora";
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: local("Lora Bold"), local("Lora-Bold"),
-        url("./fonts/lora-v9-latin-700.woff2") format("woff2");
-}
-@font-face {
-    font-family: "Lora";
-    font-style: italic;
-    font-weight: 700;
-    font-display: swap;
-    src: local("Lora Bold Italic"), local("Lora-BoldItalic"),
-        url("./fonts/lora-v9-latin-700italic.woff2") format("woff2");
-}
+   风格取向：安静书卷气（借鉴经典学术站点的气质，用 Bootstrap 体系实现）——
+   系统衬线正文、白底墨字、平面细线分区、克制配色；不引入任何外部字体资源 */
 
 html, body {
     height: 100%;
     margin: 0;
 }
 .app-body {
-    background-color: #fdfdfc;
-    color: #222;
-    font-family: "Lora", Georgia, "Times New Roman", "Songti SC", SimSun, serif;
+    background-color: #fcfcfb;
+    color: #212529;
 }
 
 /* 单列应用布局：页头 / 对白区 / 提示行 —— 平面，用细线与留白分区 */
 .app {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 3rem);
-    max-width: 780px;
+    height: calc(100vh - 2.5rem);
+    max-width: 800px;
     padding-bottom: 1rem;
     box-sizing: border-box;
 }
@@ -61,8 +27,8 @@ html, body {
     align-items: baseline;
     flex-wrap: wrap;
     gap: 0.4rem 1rem;
-    padding: 0.2rem 0.15rem 0.7rem 0.15rem;
-    border-bottom: 1px solid #e8e8e6;
+    padding: 0.2rem 0.2rem 0.75rem 0.2rem;
+    border-bottom: 1px solid var(--bs-border-color-translucent);
 }
 .app-brand {
     display: flex;
@@ -71,35 +37,32 @@ html, body {
     flex: 0 0 auto;
 }
 .app-title {
-    font-size: 1.5rem;
+    font-family: Georgia, "Times New Roman", "Songti SC", SimSun, serif;
+    font-size: 1.55rem;
     font-weight: 700;
-    letter-spacing: 0.06em;
-    color: #222;
+    letter-spacing: 0.08em;
+    color: var(--bs-body-color);
 }
 .app-subtitle {
-    font-family: "Lora", Georgia, serif;
+    font-family: Georgia, "Times New Roman", "Songti SC", SimSun, serif;
     font-style: italic;
     font-size: 0.8rem;
-    color: #8a8a86;
-    letter-spacing: 0.02em;
+    color: var(--bs-secondary-color);
 }
 #episode-selector {
     margin: 0 0 0 auto;
     flex: 0 1 15rem;
     min-width: 0; /* flex 项默认 min-width:auto 会被最长选项文本撑爆窄屏 */
-    font-family: -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
     font-size: 0.85rem;
-    border-radius: 3px;
-    border-color: #d8d8d4;
-    color: #333;
+    border-radius: var(--bs-border-radius-sm);
 }
 #episode-meta {
     flex-basis: 100%;
     font-size: 0.78rem;
-    color: #8a8a86;
+    color: var(--bs-secondary-color);
 }
 #episode-meta a {
-    color: #3366cc;
+    color: var(--bs-link-color);
     text-decoration: none;
 }
 #episode-meta a:hover {
@@ -115,26 +78,24 @@ html, body {
 
 #notice {
     margin: 0.75rem 0 0 0;
-    border-radius: 2px;
-    background-color: #fdf6e3;
-    border: 1px solid #e8dfc0;
-    color: #6b5a2a;
+    border-radius: var(--bs-border-radius-sm);
 }
 
-/* ---- 对白区：占据主要空间，平面文本流，仅顶部一根细线 ---- */
+/* ---- 对白区：占据主要空间，衬线文本流，顶部一根细线 ---- */
 #dialog-display {
     flex: 1;
     overflow-y: auto;
     margin-top: 0.85rem;
-    padding: 0.9rem 0.15rem 0.9rem 0.15rem;
-    border-top: 1px solid #e8e8e6;
-    font-size: 1.08rem;
+    padding: 0.9rem 0.2rem;
+    border-top: 1px solid var(--bs-border-color-translucent);
+    font-family: Georgia, "Times New Roman", "Songti SC", SimSun, serif;
+    font-size: 1.1rem;
     line-height: 1.95;
     text-align: left;
     overscroll-behavior: contain;
 }
 
-/* 对话回合：说话人为小型大写灰字（无色块，融入文面） */
+/* 对话回合：说话人为斜体小型灰字，融入文面 */
 .turn {
     display: flex;
     gap: 0.75rem;
@@ -153,12 +114,12 @@ html, body {
     font-size: 0.72rem;
     font-style: italic;
     letter-spacing: 0.08em;
-    color: #9a9a95;
+    color: var(--bs-secondary-color);
     white-space: nowrap;
 }
 .speaker-badge::before {
     content: "— ";
-    color: #c9c9c4;
+    color: var(--bs-tertiary-color);
 }
 .turn-text {
     margin: 0;
@@ -166,14 +127,14 @@ html, body {
     word-wrap: break-word;
 }
 
-/* 词态：完成词浅绿、当前词作荧光笔式标记（贴合书卷气） */
+/* 词态：完成词柔和绿、当前词作荧光笔式标记 */
 .word-correct {
-    color: #4a7d59;
+    color: #3f7a52;
     position: relative; /* 行内翻译浮层的定位宿主 */
 }
 .current-word {
-    background-color: #f9f0c8;
-    color: #4a3f14;
+    background-color: #fdf3cf;
+    color: #55461a;
     padding: 1px 4px;
     border-radius: 2px;
     box-shadow: inset 0 -1px 0 #d9c874;
@@ -186,7 +147,7 @@ html, body {
 }
 .letter-bad {
     color: #ffffff;
-    background-color: #b8443c;
+    background-color: #dc3545;
     border-radius: 2px;
 }
 .ltr-punct {
@@ -200,10 +161,10 @@ html, body {
     left: 50%;
     transform: translateX(-50%);
     padding: 0.05rem 0.5rem;
-    border-radius: 2px;
-    background-color: #fffdf8;
-    border: 1px solid #c9c9c4;
-    box-shadow: 0 1px 3px rgba(34, 34, 34, 0.12);
+    border-radius: var(--bs-border-radius-sm);
+    background-color: #fffdf6;
+    border: 1px solid var(--bs-border-color);
+    box-shadow: 0 1px 3px rgba(33, 37, 41, 0.12);
     color: #4c4a45;
     font-size: 0.68em;
     font-weight: 400;
@@ -215,7 +176,7 @@ html, body {
     z-index: 10;
 }
 .gloss.ctx {
-    background-color: #f2f7fd;
+    background-color: #eef5fc;
     border-color: #b5cfe8;
     color: #27547d;
 }
@@ -245,25 +206,24 @@ html, body {
     align-items: center;
     gap: 1rem;
     margin: 0.55rem 0 0 0;
-    padding: 0.45rem 0.15rem 0 0.15rem;
-    border-top: 1px solid #e8e8e6;
-    font-family: -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+    padding: 0.5rem 0.2rem 0 0.2rem;
+    border-top: 1px solid var(--bs-border-color-translucent);
     font-size: 0.78rem;
-    color: #8a8a86;
+    color: var(--bs-secondary-color);
 }
 #hint-current .hw {
-    color: #222;
+    color: var(--bs-body-color);
     font-weight: 600;
-    font-family: "Lora", Georgia, serif;
+    font-family: Georgia, "Times New Roman", "Songti SC", SimSun, serif;
 }
 #mute-toggle {
     cursor: pointer;
     user-select: none;
-    color: #8a8a86;
+    color: var(--bs-secondary-color);
     margin-left: 0.6em;
 }
 #mute-toggle:hover {
-    color: #222;
+    color: var(--bs-body-color);
 }
 
 /* 手机：页头纵向、对白区占满剩余 */
