@@ -10,11 +10,6 @@ on:
   schedule:
     - cron: "0 21 * * 6" # UTC 周六 21:00 = 北京时间周日 05:00（GitHub cron 可能延迟数分钟到一小时）
   workflow_dispatch: # 支持手动触发
-    inputs:
-      glossary_episodes:
-        description: "全局词表挖掘期数（0=跳过；如 100 = 挖最近 100 期历史剧集）"
-        required: false
-        default: "0"
 
 permissions:
   contents: write # 提交剧集数据
@@ -50,16 +45,6 @@ jobs:
       # GLM_API_KEY 未配置时 fetcher 自动跳过语境词表（释义只剩官方词汇表层）。
       # LLM_MODEL / LLM_BASE_URL 为可选仓库 Variables（Actions 的 vars 不会自动成为
       # 环境变量，必须显式透传；未配置时为空串，fetcher 侧用默认值兜底）
-      # 一次性全局词表挖掘（手动触发时输入期数，如 100）：只取历史 transcript，
-      # 产出 docs/data/glossary.json（详见 fetcher.py --build-glossary）
-      - name: Mine historical glossary (optional)
-        if: ${{ github.event.inputs.glossary_episodes != '0' && github.event.inputs.glossary_episodes != '' }}
-        env:
-          GLM_API_KEY: ${{ secrets.GLM_API_KEY }}
-          LLM_MODEL: ${{ vars.LLM_MODEL }}
-          LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
-        run: uv run python fetcher.py --build-glossary ${{ github.event.inputs.glossary_episodes }}
-
       - name: Fetch episodes and bake data
         env:
           GLM_API_KEY: ${{ secrets.GLM_API_KEY }}
