@@ -155,6 +155,19 @@ def test_parse_json_block_trailing_comma():
     assert fetcher._parse_json_block('{"a": {"m": "x",},}') == {"a": {"m": "x"}}
 
 
+def test_parse_json_block_truncated_salvage():
+    """截断抢救（实测 2026-11-03：全词覆盖后输出超 max_tokens 被切断，
+    完美 JSON 前缀整体解析失败）：丢弃残缺尾条目、补闭合括号，保住完整条目。"""
+    truncated = (
+        '{\n  "hi": {"meaning": "你好"},\n  "so": {"meaning": "那么"},\n'
+        '  "just": {"meaning": "刚'
+    )
+    assert fetcher._parse_json_block(truncated) == {
+        "hi": {"meaning": "你好"},
+        "so": {"meaning": "那么"},
+    }
+
+
 def test_parse_json_block_garbage_raises():
     import pytest as _pytest
     with _pytest.raises(ValueError):

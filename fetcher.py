@@ -257,30 +257,30 @@ GLOSSARY_PROMPT = """你是英语学习材料的编辑。下面是一期 BBC 6 M
 
 请给出本段对白中**每一个单词与短语**的中文释义——包括 the、and、I 这类最基础的词
 （学习者要求所有词都有解释）。基础词给最简释义即可（如 the→定冠词、and→和、
-I→我），其 sentence 字段填空字符串 ""。
+I→我）。
 
 释义要求：不超过 10 个字，简洁、易懂（例如"电网"、"高温"、"居住"）；
 不要解释性长句、不要堆砌词性、不要加括号补充说明。
 - 官方词汇表中的词：以官方英文释义为依据，转成简洁中文
 - 其余词：结合对白语境给出中文含义
 
-仅输出一个 JSON 对象（最外层是一对花括号，键为单词、值为对象，全部用双引号），
-不要输出任何其他文字。示例格式：
+仅输出一个 JSON 对象（最外层是一对花括号，键为单词、值为只含 meaning 的对象，
+全部用双引号）。不要输出任何其他文字。示例格式：
 {
-  "单词": {"meaning": "不超过10字的中文释义", "sentence": "该词所在的对白句子（英文原文，保留该词）"},
-  "the grid": {"meaning": "电网", "sentence": "..."}
+  "单词": {"meaning": "不超过10字的中文释义"},
+  "the grid": {"meaning": "电网"}
 }
 """
 
 GLOSSARY_PROMPT_NO_VOCAB = """你是英语学习材料的编辑。下面是一期 BBC 6 Minute English 的英文对白片段。
 请给出本段对白中**每一个单词与短语**的中文释义——包括 the、and、I 这类最基础的词
 （学习者要求所有词都有解释）。基础词给最简释义即可（如 the→定冠词、and→和、
-I→我），其 sentence 字段填空字符串 ""。释义不超过 10 个字，简洁、易懂。
+I→我）。释义不超过 10 个字，简洁、易懂。
 
-仅输出一个 JSON 对象（最外层是一对花括号，键为单词、值为对象，全部用双引号），
-不要输出任何其他文字。示例格式：
+仅输出一个 JSON 对象（最外层是一对花括号，键为单词、值为只含 meaning 的对象，
+全部用双引号）。不要输出任何其他文字。示例格式：
 {
-  "单词": {"meaning": "不超过10字的中文释义", "sentence": "该词所在的对白句子（英文原文，保留该词）"}
+  "单词": {"meaning": "不超过10字的中文释义"}
 }
 """
 
@@ -470,6 +470,11 @@ def _parse_json_block(text: str):
         # 外层就被解析成「以 dict 为 key」而报 unhashable type: 'dict'
         if sliced.startswith("{{") and sliced.endswith("}}"):
             candidates.append(sliced[1:-1])
+    # 截断抢救：输出超长被 max_tokens 截断时（全词覆盖 + sentence 字段时期实测），
+    # 丢弃残缺的尾条目、截到最后一个完整条目并补闭合括号——宁可少几个词也不整块作废
+    cut = text.rfind("},")
+    if start != -1 and cut > start and cut + 1 != end:
+        candidates.append(text[start : cut + 1] + "}")
     last_error = None
     for candidate in candidates:
         try:
