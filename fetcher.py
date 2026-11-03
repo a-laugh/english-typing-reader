@@ -51,10 +51,10 @@ HTTP_HEADERS = {
 
 # GLM（智谱）OpenAI 兼容接口，key 通过环境变量注入，模型可用环境变量覆盖。
 # 用 or 兜底：CI 里 ${{ vars.X }} 未配置时会注入空串，空串不应覆盖默认值。
-# 默认 glm-4-air（按量计费，频控宽松）：glm-4-flash 是免费模型，无论账户余额
-# 都受免费档严格频控，分块连续调用实测持续 429
+# 默认 glm-5.3-flash（用户购买的资源包模型）；glm-4-flash 免费档频控过严，
+# 分块连续调用实测持续 429
 LLM_BASE_URL = os.environ.get("LLM_BASE_URL") or "https://open.bigmodel.cn/api/paas/v4"
-LLM_MODEL = os.environ.get("LLM_MODEL") or "glm-4-air"
+LLM_MODEL = os.environ.get("LLM_MODEL") or "glm-5.3-flash"
 
 # 词汇表短语做逐词索引时跳过的虚词（避免 "the grid" 把 the 也建词条）
 STOPWORDS = {
