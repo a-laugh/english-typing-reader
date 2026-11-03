@@ -81,21 +81,11 @@ def main() -> int:
         check("完词播放的是构建期烘焙音频", any(u.endswith("data/audio/hi.mp3") for u in seen_requests),
               str([u for u in seen_requests if "audio" in u][:3]))
         check("烘焙音频文件在架", (ROOT / "docs" / "data" / "audio" / "hi.mp3").is_file())
-        gloss = page.text_content("#dialog-display .gloss")
-        check("行内翻译紧跟完成的词", bool(gloss and gloss.strip()), gloss)
-        # 浮层在宿主词上方 + 绝对定位（零布局位移的前提）
-        overlay = page.evaluate("""() => {
-            const g = document.querySelector('#dialog-display .gloss');
-            if (!g) return null;
-            const host = g.parentElement;
-            return {
-                pos: getComputedStyle(g).position,
-                above: g.getBoundingClientRect().bottom <= host.getBoundingClientRect().top + 1,
-                text: g.textContent,
-            };
-        }""")
-        check("翻译浮层显示在单词上方且绝对定位",
-              overlay and overlay["pos"] == "absolute" and overlay["above"], str(overlay))
+        # 基础词（hi 等）可能无词条：不显示浮层、绝不出现「未收录」占位
+        dialog_text = page.text_content("#dialog-display") or ""
+        check("无「未收录」占位噪音", "未收录" not in dialog_text, dialog_text[:80])
+        gloss = page.evaluate("() => { const g = document.querySelector('#dialog-display .gloss'); return g ? g.textContent : null; }")
+        check("无词条不显示浮层（有则非空）", gloss is None or bool(gloss.strip()), gloss)
 
         # 打错 → 字母标红、原地不动；重打正确 → 变绿前进（词 "Neil." → neil）
         page.keyboard.type("x")
@@ -122,7 +112,7 @@ def main() -> int:
         check("当前行与上一行拉开距离", headroom["active"] and headroom["plain"] is not None
               and headroom["active"] > headroom["plain"] + 10, str(headroom))
         gloss_count = page.eval_on_selector_all("#dialog-display .gloss", "els => els.length")
-        check("行内翻译只跟随最新完成的词（唯一）", gloss_count == 1, f"gloss 数={gloss_count}")
+        check("浮层唯一性（无词条则为 0）", gloss_count <= 1, f"gloss 数={gloss_count}")
         page.screenshot(path=str(SHOTS / "t3_typing.png"))
 
         print("== T3 刷新后自动续读（localStorage 进度） ==")
@@ -250,16 +240,32 @@ def main() -> int:
         page.wait_for_selector(".current-word", timeout=5000)
         shown8 = page.text_content(".current-word")
         check(f"进度定位到词汇表词 {vocab_word!r}", vocab_word.strip(".,!?;: ") in (shown8 or ""), f"shown={shown8!r}")
-        baseline8 = page.eval_on_selector_all(".word-correct", "els => els.length")
         vseq = raw_word.strip(".,!?;: ")
         page.click("#dialog-display")
         page.keyboard.type(vseq)
+        # 深处的词处于窗口渲染饱和区（绿词数≈窗口上限），不能用计数增量判定完成；
+        # 改为等待当前词切换到下一个词
+        next_word8 = words[vidx + 1].strip(".,!?;: ")
         page.wait_for_function(
-            f"() => document.querySelectorAll('.word-correct').length > {baseline8}", timeout=5000
+            "() => { const c = document.querySelector('.current-word');"
+            f" return c && c.textContent.includes({json.dumps(next_word8)}); }}", timeout=5000
         )
-        gloss8 = page.text_content("#dialog-display .gloss")
-        check(f"官方词汇表词 {vocab_word!r} 有真实释义", gloss8 and "未收录" not in gloss8 and len(gloss8.strip()) > 2,
-              gloss8)
+        gloss8 = page.evaluate("() => { const g = document.querySelector('#dialog-display .gloss'); return g ? g.textContent : null; }")
+        check(f"官方词汇表词 {vocab_word!r} 有真实释义", gloss8 and len(gloss8.strip()) > 2, gloss8)
+        gloss8_count = page.eval_on_selector_all("#dialog-display .gloss", "els => els.length")
+        check("有词条时浮层恰好唯一", gloss8_count == 1, f"gloss 数={gloss8_count}")
+        # 浮层在宿主词上方 + 绝对定位（零布局位移的前提；在必有词条的词上验证）
+        overlay8 = page.evaluate("""() => {
+            const g = document.querySelector('#dialog-display .gloss');
+            if (!g) return null;
+            const host = g.parentElement;
+            return {
+                pos: getComputedStyle(g).position,
+                above: g.getBoundingClientRect().bottom <= host.getBoundingClientRect().top + 1,
+            };
+        }""")
+        check("翻译浮层显示在单词上方且绝对定位",
+              overlay8 and overlay8["pos"] == "absolute" and overlay8["above"], str(overlay8))
 
         browser.close()
 

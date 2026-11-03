@@ -297,15 +297,15 @@ function conciseTranslation(text) {
 }
 
 // 行内翻译元素：显示在宿主词上方的浮层（绝对定位，零布局位移）；
-// 语境层带 📖，官方层带「官方」小标
+// 语境层带 📖，官方层带「官方」小标。
+// 无词条返回 null 不显示——基础词（the/and 等）与数字本来就不需要释义，
+// 曾经显示「未收录」占位，删词典层后基础词均无词条导致满屏噪音
 function buildGloss(token) {
     const entry = lookupWord(token);
-    const span = document.createElement("span");
     if (!entry) {
-        span.className = "gloss";
-        span.textContent = "（未收录）";
-        return span;
+        return null;
     }
+    const span = document.createElement("span");
     if (entry.source === "context") {
         span.className = "gloss ctx";
         span.textContent = `📖 ${conciseTranslation(entry.context || entry.translation)}`;
@@ -410,7 +410,10 @@ function renderDialog() {
             para.appendChild(document.createTextNode(" "));
             if (gi === glossWordIndex) {
                 // 浮层插在宿主词 span 内部：绝对定位显示在词上方，不影响后续文本布局
-                span.appendChild(buildGloss(w));
+                const glossEl = buildGloss(w);
+                if (glossEl) {
+                    span.appendChild(glossEl);
+                }
             }
         });
         row.appendChild(para);
