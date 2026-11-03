@@ -336,6 +336,11 @@ def _glm_glossary_call(prompt: str, api_key: str, label: str) -> dict:
         "temperature": 0.2,
         "max_tokens": 4500,
     }
+    # GLM-4.5+/5.x 默认开启深度思考：content 可能为空、最终结果落在
+    # reasoning_content 里，导致 JSON 解析失败（实测 glm-5.3-flash）。
+    # 词表生成不需要思考，对支持的模型显式关闭
+    if re.match(r"glm-(4\.[5-9]|[5-9])", LLM_MODEL):
+        payload["thinking"] = {"type": "disabled"}
     rate_limit_hits = 0
     attempt = 0
     content = None
@@ -359,12 +364,22 @@ def _glm_glossary_call(prompt: str, api_key: str, label: str) -> dict:
                 continue
             resp.raise_for_status()
             try:
-                content = resp.json()["choices"][0]["message"]["content"]
+                message = resp.json()["choices"][0]["message"]
+                content = message.get("content") or ""
+                reasoning = message.get("reasoning_content") or ""
             except (ValueError, KeyError, IndexError) as e:
                 # HTTP 200 但 body 不是预期结构（网关故障页等）：
                 # 把响应体片段带进异常消息，方便从 Actions 日志定位
                 raise ValueError(f"GLM 响应结构异常（{e}），body 前 200 字符: {resp.text[:200]!r}")
-            glossary = _parse_json_block(content)
+            try:
+                glossary = _parse_json_block(content)
+            except ValueError:
+                # 思考型模型兜底：content 为空/夹带思考文本时，尝试从
+                # reasoning_content 里提取 JSON 对象
+                if reasoning:
+                    glossary = _parse_json_block(reasoning)
+                else:
+                    raise
             if not isinstance(glossary, dict):
                 raise ValueError("LLM 输出不是 JSON 对象")
             return glossary
@@ -373,9 +388,10 @@ def _glm_glossary_call(prompt: str, api_key: str, label: str) -> dict:
                 log(f"{label} 第 {attempt} 次尝试失败（放弃）: {e}")
                 break
             log(f"{label} 第 {attempt} 次尝试失败，1s 后重试: {e}")
-            if isinstance(e, ValueError) and "GLM 响应结构异常" not in str(e) and content:
-                # 解析失败时留一小段原始输出，方便从 Actions 日志定位模型行为
-                log(f"GLM 原始输出前 200 字符: {str(content)[:200]!r}")
+            if isinstance(e, ValueError) and "GLM 响应结构异常" not in str(e):
+                # 解析失败时留一段原始输出，方便从 Actions 日志定位模型行为
+                raw = content if content else "(content 为空)"
+                log(f"GLM 原始输出前 400 字符: {str(raw)[:400]!r}")
             time.sleep(1)
     return {}
 

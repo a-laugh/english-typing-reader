@@ -276,6 +276,77 @@ def test_glm_call_429_backoff(monkeypatch):
         server.server_close()
 
 
+def test_glm_call_thinking_disabled_for_new_models(monkeypatch):
+    """GLM-4.5+/5.x 需显式关闭深度思考（实测 glm-5.3-flash 的 content 为空/
+    夹带思考文本导致 JSON 解析失败）；旧模型不带该参数。"""
+    import threading
+    from http.server import BaseHTTPRequestHandler, HTTPServer
+    bodies = []
+
+    class Handler(BaseHTTPRequestHandler):
+        def do_POST(self):
+            length = int(self.headers.get("Content-Length", 0))
+            bodies.append(self.rfile.read(length).decode("utf-8"))
+            resp = json.dumps(
+                {"choices": [{"message": {"content": '{"a": {"meaning": "x", "sentence": "s"}}'}}]}
+            ).encode("utf-8")
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.send_header("Content-Length", str(len(resp)))
+            self.end_headers()
+            self.wfile.write(resp)
+
+        def log_message(self, *args):
+            pass
+
+    server = HTTPServer(("127.0.0.1", 0), Handler)
+    threading.Thread(target=server.serve_forever, daemon=True).start()
+    try:
+        base = f"http://127.0.0.1:{server.server_address[1]}/v1"
+        monkeypatch.setattr(fetcher, "LLM_BASE_URL", base)
+        monkeypatch.setattr(fetcher, "LLM_MODEL", "glm-5.3-flash")
+        assert fetcher._glm_glossary_call("p", "k", "t") == {"a": {"meaning": "x", "sentence": "s"}}
+        assert json.loads(bodies[0])["thinking"] == {"type": "disabled"}
+        monkeypatch.setattr(fetcher, "LLM_MODEL", "glm-4-flash")
+        fetcher._glm_glossary_call("p", "k", "t")
+        assert "thinking" not in json.loads(bodies[1]), "旧模型不应携带 thinking 参数"
+    finally:
+        server.shutdown()
+        server.server_close()
+
+
+def test_glm_call_reasoning_content_fallback(monkeypatch):
+    """思考型模型兜底：content 为空时从 reasoning_content 提取 JSON。"""
+    import threading
+    from http.server import BaseHTTPRequestHandler, HTTPServer
+
+    class Handler(BaseHTTPRequestHandler):
+        def do_POST(self):
+            resp = json.dumps({"choices": [{"message": {
+                "content": "",
+                "reasoning_content": '思考过程……最终结果：{"hi": {"meaning": "喂", "sentence": "s"}}',
+            }}]}).encode("utf-8")
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.send_header("Content-Length", str(len(resp)))
+            self.end_headers()
+            self.wfile.write(resp)
+
+        def log_message(self, *args):
+            pass
+
+    server = HTTPServer(("127.0.0.1", 0), Handler)
+    threading.Thread(target=server.serve_forever, daemon=True).start()
+    try:
+        monkeypatch.setattr(fetcher, "LLM_BASE_URL", f"http://127.0.0.1:{server.server_address[1]}/v1")
+        monkeypatch.setattr(fetcher, "LLM_MODEL", "glm-5.3-flash")
+        result = fetcher._glm_glossary_call("p", "k", "t")
+        assert result == {"hi": {"meaning": "喂", "sentence": "s"}}
+    finally:
+        server.shutdown()
+        server.server_close()
+
+
 # ------------------------------------------------- GLM 调用链（本地模拟服务）
 
 def _mock_glm_server(content: str):
