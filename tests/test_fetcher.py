@@ -306,7 +306,7 @@ def test_glm_call_thinking_disabled_for_new_models(monkeypatch):
         monkeypatch.setattr(fetcher, "LLM_BASE_URL", base)
         monkeypatch.setattr(fetcher, "LLM_MODEL", "glm-5.3-flash")
         assert fetcher._glm_glossary_call("p", "k", "t") == {"a": {"meaning": "x", "sentence": "s"}}
-        assert json.loads(bodies[0])["thinking"] == {"type": "disabled"}
+        assert json.loads(bodies[0])["thinking"] == {"type": "low"}
         monkeypatch.setattr(fetcher, "LLM_MODEL", "glm-4-flash")
         fetcher._glm_glossary_call("p", "k", "t")
         assert "thinking" not in json.loads(bodies[1]), "旧模型不应携带 thinking 参数"

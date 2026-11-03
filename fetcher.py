@@ -338,9 +338,10 @@ def _glm_glossary_call(prompt: str, api_key: str, label: str) -> dict:
     }
     # GLM-4.5+/5.x 默认开启深度思考：content 可能为空、最终结果落在
     # reasoning_content 里，导致 JSON 解析失败（实测 glm-5.3-flash）。
-    # 词表生成不需要思考，对支持的模型显式关闭
+    # glm-5.3 系列恒定思考不可关闭（400: "请使用 low、high 或 max"），
+    # 统一设最低档 low；若端点仍拒绝（400），自适应摘除该参数
     if re.match(r"glm-(4\.[5-9]|[5-9])", LLM_MODEL):
-        payload["thinking"] = {"type": "disabled"}
+        payload["thinking"] = {"type": "low"}
     rate_limit_hits = 0
     attempt = 0
     content = None
