@@ -30,6 +30,7 @@ let glossWordIndex = -1;     // 行内翻译跟随的最新完成词，-1 = 无
 let titleSeq = "";
 let titlePos = 0;
 let titleLetterSpans = [];
+let titleWordSpans = [];     // 标题词 span 与字母区间（完词变绿/挂翻译用）
 let titleWordStart = 0;      // 当前标题词在序列中的起点（完词发音用）
 let titleActive = false;     // 是否正处于标题阶段（控制 hint 与光标归属）
 
@@ -167,20 +168,35 @@ function renderEpisodeMeta(entry) {
     const title = document.createElement("h2");
     title.className = "episode-title";
     if (titlePos < titleSeq.length) {
+        // 与对白一致的处理：按词包裹 span（完词变绿 + 挂翻译浮层），词内字母级渲染
         titleLetterSpans = [];
-        for (let i = 0; i < titleSeq.length; i++) {
-            const s = document.createElement("span");
-            s.textContent = titleSeq[i];
-            s.className = i < titlePos ? "t-letter-ok" : (i === titlePos ? "t-letter-rest" : "t-letter-rest");
-            title.appendChild(s);
-            titleLetterSpans.push(s);
-        }
+        titleWordSpans = [];
+        titleSeq.split(" ").reduce((idx, wordText) => {
+            const wordSpan = document.createElement("span");
+            wordSpan.className = "t-word";
+            const wordEnd = idx + wordText.length; // 该词字母区间 [idx, wordEnd)
+            const wordDone = wordEnd <= titlePos;  // 续读兼容：已打完的词直接完成态
+            if (wordDone) {
+                wordSpan.classList.add("word-correct");
+                wordSpan.textContent = wordText;
+            } else {
+                for (let i = idx; i < wordEnd; i++) {
+                    const s = document.createElement("span");
+                    s.textContent = titleSeq[i];
+                    s.className = i < titlePos ? "t-letter-ok" : "t-letter-rest";
+                    wordSpan.appendChild(s);
+                    titleLetterSpans[i] = s;
+                }
+            }
+            titleWordSpans.push({ span: wordSpan, start: idx, end: wordEnd, text: wordText, done: wordDone });
+            title.appendChild(wordSpan);
+            title.appendChild(document.createTextNode(" "));
+            return wordEnd + 1; // 跳过空格
+        }, 0);
         const c = document.createElement("span");
         c.className = "caret";
-        const anchor = titleLetterSpans[Math.min(titlePos, titleLetterSpans.length - 1)];
-        if (titlePos >= titleLetterSpans.length && anchor) {
-            anchor.after(c);
-        } else if (anchor) {
+        const anchor = titleLetterSpans[titlePos];
+        if (anchor) {
             anchor.before(c);
         } else {
             title.appendChild(c);
@@ -650,9 +666,21 @@ function handleLetter(ch) {
                 span.classList.add("t-letter-ok", "letter-strike");
             }
             titlePos++;
-            // 每打完一个标题词即发音（与对白完词行为一致）
-            const wordDone = titlePos >= titleSeq.length || titleSeq[titlePos] === " ";
+            // 每打完一个标题词：变绿 + 挂翻译浮层 + 发音（与对白完词完全一致）
+            const wordDone = titleWordStart < titlePos
+                && (titlePos >= titleSeq.length || titleSeq[titlePos] === " ");
             if (wordDone) {
+                const completed = titleWordSpans.find(w => !w.done && w.end === titlePos);
+                if (completed) {
+                    completed.done = true;
+                    completed.span.classList.add("word-correct");
+                    const prevGloss = document.querySelector(".episode-title .gloss");
+                    if (prevGloss) prevGloss.remove();   // 翻译只跟随最新完成的词
+                    const glossEl = buildGloss(completed.text);
+                    if (glossEl) {
+                        completed.span.appendChild(glossEl);
+                    }
+                }
                 const titleWord = titleSeq.slice(titleWordStart, titlePos);
                 if (titleWord.trim()) {
                     speakWord(titleWord);
@@ -664,6 +692,17 @@ function handleLetter(ch) {
                     }
                 }
                 titleWordStart = titlePos + 1;
+            }
+            // 完词后立即跳过空格（光标落到下一词首字母，不等下一次按键）
+            while (titlePos < titleSeq.length && titleSeq[titlePos] === " ") {
+                titlePos++;
+                titleWordStart = titlePos;
+            }
+            // 光标随键位前进（与对白一致）
+            const titleCaret = document.querySelector(".episode-title .caret");
+            const nextLetter = titleLetterSpans[titlePos];
+            if (titleCaret && nextLetter) {
+                nextLetter.before(titleCaret);
             }
             if (titlePos >= titleSeq.length) {
                 titleActive = false;
