@@ -30,6 +30,7 @@ let glossWordIndex = -1;     // 行内翻译跟随的最新完成词，-1 = 无
 let titleSeq = "";
 let titlePos = 0;
 let titleLetterSpans = [];
+let titleWordStart = 0;      // 当前标题词在序列中的起点（完词发音用）
 let titleActive = false;     // 是否正处于标题阶段（控制 hint 与光标归属）
 
 // DOM 引用
@@ -557,6 +558,7 @@ async function loadEpisode(episodeId, startIndex = null) {
         titleSeq = typingSequence(currentEpisode.title || "");
         titlePos = titleSeq.length;
         titleActive = false;
+        titleWordStart = 0;
         if (start === 0 && titleSeq.length > 0) {
             titlePos = 0;
             titleActive = true;
@@ -638,6 +640,7 @@ function handleLetter(ch) {
     // 标题序列中的空格自动通过（无需敲空格），对白同理按词进行
     while (titleActive && titlePos < titleSeq.length && titleSeq[titlePos] === " ") {
         titlePos++;
+        titleWordStart = titlePos; // 空格后重置词起点
     }
     if (titleActive && titlePos < titleSeq.length) {
         if (normalizeChar(ch) === normalizeChar(titleSeq[titlePos])) {
@@ -647,6 +650,21 @@ function handleLetter(ch) {
                 span.classList.add("t-letter-ok", "letter-strike");
             }
             titlePos++;
+            // 每打完一个标题词即发音（与对白完词行为一致）
+            const wordDone = titlePos >= titleSeq.length || titleSeq[titlePos] === " ";
+            if (wordDone) {
+                const titleWord = titleSeq.slice(titleWordStart, titlePos);
+                if (titleWord.trim()) {
+                    speakWord(titleWord);
+                    // 预取下一个标题词的音频，敲完近零等待
+                    const rest = titleSeq.slice(titlePos).trimStart();
+                    const nextWord = rest.split(" ")[0];
+                    if (nextWord && !audioCache.has(cleanWord(nextWord))) {
+                        primeAudio(cleanWord(nextWord));
+                    }
+                }
+                titleWordStart = titlePos + 1;
+            }
             if (titlePos >= titleSeq.length) {
                 titleActive = false;
                 renderEpisodeMeta(currentEpisode); // 标题定格为完成态
