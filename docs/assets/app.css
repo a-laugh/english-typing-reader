@@ -1,34 +1,35 @@
 /* 键学 · 应用层样式（自托管 Bootstrap 5.3 之上）
-   风格取向：安静书卷气（借鉴经典学术站点的气质，用 Bootstrap 体系实现）——
-   系统衬线正文、白底墨字、平面细线分区、克制配色；不引入任何外部字体资源 */
+   风格：GNU/pluskid 式平面布局 + Gruvbox 配色（柔和复古暖色）。
+   零卡片阴影、细分隔线、等宽装饰点缀；宽屏自适应（内容上限 1400px）。 */
 
 html, body {
     height: 100%;
     margin: 0;
 }
 .app-body {
-    background-color: #fcfcfb;
-    color: #212529;
+    /* Gruvbox light 系底色 */
+    background-color: #fbf1c7;
+    color: #3c3836;
 }
 
-/* 单列应用布局：页头 / 对白区 / 提示行 —— 平面，用细线与留白分区 */
+/* 布局：宽屏单列，上限 1400px */
 .app {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 2.5rem);
-    max-width: 800px;
-    padding-bottom: 1rem;
+    height: calc(100vh - 2rem);
+    max-width: 1400px;
+    padding: 0.6rem 1.5rem 1rem 1.5rem;
     box-sizing: border-box;
 }
 
-/* ---- 页头：站名 + 选择器一行，元信息第二行（纯文字，无卡片） ---- */
+/* ---- 页头：站名 + 选择器（平面，底部细线） ---- */
 .app-header {
     display: flex;
     align-items: baseline;
     flex-wrap: wrap;
     gap: 0.4rem 1rem;
-    padding: 0.2rem 0.2rem 0.75rem 0.2rem;
-    border-bottom: 1px solid var(--bs-border-color-translucent);
+    padding: 0.2rem 0.2rem 0.6rem 0.2rem;
+    border-bottom: 2px solid #d5c4a1;
 }
 .app-brand {
     display: flex;
@@ -38,56 +39,79 @@ html, body {
 }
 .app-title {
     font-family: Georgia, "Times New Roman", "Songti SC", SimSun, serif;
-    font-size: 1.55rem;
+    font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 0.08em;
-    color: var(--bs-body-color);
+    color: #9d0006; /* gruvbox dark red */
 }
 .app-subtitle {
-    font-family: Georgia, "Times New Roman", "Songti SC", SimSun, serif;
-    font-style: italic;
-    font-size: 0.8rem;
-    color: var(--bs-secondary-color);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.72rem;
+    color: #928374;
+    letter-spacing: 0.05em;
 }
 #episode-selector {
     margin: 0 0 0 auto;
-    flex: 0 1 15rem;
-    min-width: 0; /* flex 项默认 min-width:auto 会被最长选项文本撑爆窄屏 */
+    flex: 0 1 18rem;
+    min-width: 0;
     font-size: 0.85rem;
-    border-radius: var(--bs-border-radius-sm);
+    border-radius: 2px;
+    border-color: #d5c4a1;
+    background-color: #fbf1c7;
+    color: #3c3836;
 }
+
+/* 当前文章标题区 */
 #episode-meta {
     flex-basis: 100%;
-    font-size: 0.78rem;
-    color: var(--bs-secondary-color);
+    margin-top: 0.55rem;
 }
-#episode-meta a {
-    color: var(--bs-link-color);
+.episode-title {
+    font-family: Georgia, "Times New Roman", "Songti SC", SimSun, serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #076678; /* gruvbox dark blue */
+    margin: 0 0 0.15rem 0;
+}
+.episode-meta-row {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.75rem;
+    color: #928374;
+    display: flex;
+    align-items: baseline;
+    gap: 0.9rem;
+    flex-wrap: wrap;
+}
+.episode-meta-row a {
+    color: #076678;
     text-decoration: none;
 }
-#episode-meta a:hover {
+.episode-meta-row a:hover {
     text-decoration: underline;
 }
 .remaining-days {
-    color: #8a6d3b;
-    background-color: #f7f2e2;
+    color: #af3a03;
+    background-color: #fbeeee3;
+    border: 1px solid #e6d3b3;
     border-radius: 2px;
     padding: 0 0.35em;
     margin-left: 0.4em;
 }
 
 #notice {
-    margin: 0.75rem 0 0 0;
-    border-radius: var(--bs-border-radius-sm);
+    margin: 0.7rem 0 0 0;
+    border-radius: 2px;
+    background-color: #fbeeee3;
+    border: 1px solid #e6d3b3;
+    color: #af3a03;
 }
 
-/* ---- 对白区：占据主要空间，衬线文本流，顶部一根细线 ---- */
+/* ---- 对白区：占据主要空间，纸面平面 ---- */
 #dialog-display {
     flex: 1;
     overflow-y: auto;
-    margin-top: 0.85rem;
-    padding: 0.9rem 0.2rem;
-    border-top: 1px solid var(--bs-border-color-translucent);
+    margin-top: 0.8rem;
+    padding: 1rem 0.3rem;
     font-family: Georgia, "Times New Roman", "Songti SC", SimSun, serif;
     font-size: 1.1rem;
     line-height: 1.95;
@@ -95,10 +119,10 @@ html, body {
     overscroll-behavior: contain;
 }
 
-/* 对话回合：说话人为斜体小型灰字，融入文面 */
+/* 对话回合：说话人等宽小字标签（GNU 式） */
 .turn {
     display: flex;
-    gap: 0.75rem;
+    gap: 0.8rem;
     margin: 0 0 0.8rem 0;
 }
 .turn:last-child {
@@ -111,61 +135,67 @@ html, body {
 .speaker-badge {
     flex: 0 0 auto;
     margin-top: 0.55rem;
-    font-size: 0.72rem;
-    font-style: italic;
-    letter-spacing: 0.08em;
-    color: var(--bs-secondary-color);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #79740e;
     white-space: nowrap;
 }
 .speaker-badge::before {
-    content: "— ";
-    color: var(--bs-tertiary-color);
+    content: "> ";
+    color: #b57614;
 }
+.speaker-c0 { color: #79740e; }
+.speaker-c1 { color: #9d0006; }
+.speaker-c2 { color: #427b58; }
+.speaker-c3 { color: #8f3f71; }
+.speaker-c4 { color: #af3a03; }
 .turn-text {
     margin: 0;
     flex: 1;
     word-wrap: break-word;
 }
 
-/* 词态：完成词柔和绿、当前词作荧光笔式标记 */
+/* 词态：完成词绿、当前词黄底荧光笔（Gruvbox 语义色） */
 .word-correct {
-    color: #3f7a52;
-    position: relative; /* 行内翻译浮层的定位宿主 */
+    color: #427b58;
+    position: relative;
 }
 .current-word {
-    background-color: #fdf3cf;
-    color: #55461a;
+    background-color: #fabd2f; /* gruvbox bright yellow */
+    color: #3c3836;
     padding: 1px 4px;
     border-radius: 2px;
-    box-shadow: inset 0 -1px 0 #d9c874;
     font-weight: 600;
 }
 
 /* 当前词的字母级状态 */
 .letter-ok {
-    color: #2f6b3c;
+    color: #427b58;
 }
 .letter-bad {
-    color: #ffffff;
-    background-color: #dc3545;
+    color: #fbf1c7;
+    background-color: #9d0006;
     border-radius: 2px;
 }
 .ltr-punct {
     opacity: 0.55;
 }
 
-/* 行内翻译：宿主词上方的纸面浮层——脱离文档流，出现/消失零重排 */
+/* 行内翻译：宿主词上方的浮层——脱离文档流，出现/消失零重排 */
 .gloss {
     position: absolute;
     bottom: calc(100% + 3px);
     left: 50%;
     transform: translateX(-50%);
     padding: 0.05rem 0.5rem;
-    border-radius: var(--bs-border-radius-sm);
-    background-color: #fffdf6;
-    border: 1px solid var(--bs-border-color);
-    box-shadow: 0 1px 3px rgba(33, 37, 41, 0.12);
-    color: #4c4a45;
+    border-radius: 2px;
+    background-color: #282828;
+    border: 1px solid #504945;
+    box-shadow: 0 1px 3px rgba(60, 56, 54, 0.3);
+    color: #ebdbb2;
+    font-family: -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
     font-size: 0.68em;
     font-weight: 400;
     line-height: 1.6;
@@ -176,17 +206,17 @@ html, body {
     z-index: 10;
 }
 .gloss.ctx {
-    background-color: #eef5fc;
-    border-color: #b5cfe8;
-    color: #27547d;
+    background-color: #076678;
+    border-color: #458588;
+    color: #ebdbb2;
 }
 .gloss .gloss-tag {
     margin-right: 0.25em;
     font-size: 0.9em;
-    opacity: 0.75;
+    opacity: 0.7;
 }
 
-/* 键盘捕获输入：视觉隐藏但保持可聚焦（唤起手机软键盘） */
+/* 键盘捕获输入：视觉隐藏但保持可聚焦 */
 #kbd-capture {
     position: fixed;
     top: 0;
@@ -199,37 +229,39 @@ html, body {
     z-index: -1;
 }
 
-/* ---- 提示行：小字无衬线，页脚式 ---- */
+/* ---- 提示行：等宽页脚 ---- */
 .app-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
     margin: 0.55rem 0 0 0;
-    padding: 0.5rem 0.2rem 0 0.2rem;
-    border-top: 1px solid var(--bs-border-color-translucent);
-    font-size: 0.78rem;
-    color: var(--bs-secondary-color);
+    padding: 0.45rem 0.2rem 0 0.2rem;
+    border-top: 2px solid #d5c4a1;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.75rem;
+    color: #928374;
 }
 #hint-current .hw {
-    color: var(--bs-body-color);
-    font-weight: 600;
-    font-family: Georgia, "Times New Roman", "Songti SC", SimSun, serif;
+    color: #3c3836;
+    font-weight: 700;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 #mute-toggle {
     cursor: pointer;
     user-select: none;
-    color: var(--bs-secondary-color);
+    color: #928374;
     margin-left: 0.6em;
 }
 #mute-toggle:hover {
-    color: var(--bs-body-color);
+    color: #3c3836;
 }
 
-/* 手机：页头纵向、对白区占满剩余 */
+/* 手机 */
 @media (max-width: 576px) {
     .app {
-        height: calc(100vh - 1.5rem);
+        height: calc(100vh - 1rem);
+        padding: 0.3rem 0.8rem 0.8rem 0.8rem;
     }
     #episode-selector {
         flex-basis: 100%;
@@ -243,5 +275,17 @@ html, body {
         flex-direction: column;
         gap: 0.1rem;
         align-items: flex-start;
+    }
+}
+
+/* 宽屏（≥1600px）：行距与字号微增，对白更舒展 */
+@media (min-width: 1600px) {
+    .app {
+        max-width: 1560px;
+        padding: 0.8rem 2.5rem 1.2rem 2.5rem;
+    }
+    #dialog-display {
+        font-size: 1.18rem;
+        line-height: 2.05;
     }
 }

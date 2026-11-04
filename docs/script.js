@@ -155,6 +155,13 @@ function populateEpisodeSelector() {
 
 function renderEpisodeMeta(entry) {
     episodeMeta.replaceChildren();
+    // 当前文章标题（大字），下挂元信息行
+    const title = document.createElement("h2");
+    title.className = "episode-title";
+    title.textContent = entry.title;
+    const metaRow = document.createElement("div");
+    metaRow.className = "episode-meta-row";
+
     const published = document.createElement("span");
     published.textContent = `${entry.pub_date} 发布`;
     const remain = WINDOW_DAYS - 1 - daysBetween(entry.pub_date);
@@ -172,7 +179,7 @@ function renderEpisodeMeta(entry) {
         bbcLink.rel = "noopener";
         bbcLink.textContent = "看原文 ↗";
     }
-    episodeMeta.append(published, bbcLink);
+    metaRow.append(published, bbcLink);
 
     const progress = readProgress(entry.id);
     if (progress && !progress.done && progress.word_index > 0 && currentEpisode) {
@@ -185,8 +192,9 @@ function renderEpisodeMeta(entry) {
                 loadEpisode(entry.id, 0);
             }
         });
-        episodeMeta.appendChild(restartLink);
+        metaRow.appendChild(restartLink);
     }
+    episodeMeta.append(title, metaRow);
 }
 
 // ---------------------------------------------------------------------------
