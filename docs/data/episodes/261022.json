@@ -161,91 +161,3158 @@
       "definition": "simple and effective solution, usually one that doesn't exist in reality"
     }
   ],
-  "context_glossary": {},
-  "dict": {
+  "context_glossary": {
+    "Hi": {
+      "meaning": "你好"
+    },
+    "Georgie": {
+      "meaning": "乔吉人名"
+    },
+    "Phil": {
+      "meaning": "菲尔人名"
+    },
+    "Now": {
+      "meaning": "那么"
+    },
+    "do": {
+      "meaning": "助动词"
+    },
+    "you": {
+      "meaning": "你"
+    },
+    "ever": {
+      "meaning": "曾经"
+    },
+    "struggle": {
+      "meaning": "费力"
+    },
+    "to": {
+      "meaning": "不定式标记"
+    },
+    "get": {
+      "meaning": "获得"
+    },
+    "a": {
+      "meaning": "一"
+    },
+    "good": {
+      "meaning": "好的"
+    },
+    "night's": {
+      "meaning": "夜晚的"
+    },
+    "sleep": {
+      "meaning": "睡眠"
+    },
+    "know": {
+      "meaning": "知道"
+    },
+    "I": {
+      "meaning": "我"
+    },
+    "sometimes": {
+      "meaning": "有时"
+    },
+    "If": {
+      "meaning": "如果"
+    },
+    "I've": {
+      "meaning": "我已经"
+    },
+    "been": {
+      "meaning": "已经"
+    },
+    "thinking": {
+      "meaning": "思考"
+    },
+    "about": {
+      "meaning": "关于"
+    },
+    "something": {
+      "meaning": "某事"
+    },
+    "lot": {
+      "meaning": "很多"
+    },
+    "or": {
+      "meaning": "或者"
+    },
+    "even": {
+      "meaning": "甚至"
+    },
+    "worse": {
+      "meaning": "更糟"
+    },
+    "had": {
+      "meaning": "喝了"
+    },
+    "cup": {
+      "meaning": "杯"
+    },
+    "of": {
+      "meaning": "的"
+    },
+    "coffee": {
+      "meaning": "咖啡"
+    },
+    "later": {
+      "meaning": "更晚"
+    },
+    "than": {
+      "meaning": "比"
+    },
+    "should": {
+      "meaning": "应该"
+    },
+    "can": {
+      "meaning": "能够"
+    },
+    "lie": {
+      "meaning": "躺着"
+    },
+    "there": {
+      "meaning": "那里"
+    },
+    "for": {
+      "meaning": "长达"
+    },
+    "hours": {
+      "meaning": "数小时"
+    },
+    "Yes": {
+      "meaning": "是的"
+    },
+    "Well": {
+      "meaning": "嗯"
+    },
+    "many": {
+      "meaning": "许多"
+    },
+    "us": {
+      "meaning": "我们"
+    },
+    "will": {
+      "meaning": "将会"
+    },
+    "be": {
+      "meaning": "是"
+    },
+    "familiar": {
+      "meaning": "熟悉的"
+    },
+    "with": {
+      "meaning": "与"
+    },
+    "that": {
+      "meaning": "那种"
+    },
+    "feeling": {
+      "meaning": "感觉"
+    },
+    "lying": {
+      "meaning": "躺着"
+    },
+    "in": {
+      "meaning": "在"
+    },
+    "bed": {
+      "meaning": "床"
+    },
+    "really": {
+      "meaning": "非常"
+    },
+    "tired": {
+      "meaning": "疲倦的"
+    },
+    "but": {
+      "meaning": "但是"
+    },
+    "just": {
+      "meaning": "只是"
+    },
+    "not": {
+      "meaning": "不"
+    },
+    "being": {
+      "meaning": "处于"
+    },
+    "able": {
+      "meaning": "能够的"
+    },
+    "go": {
+      "meaning": "去"
+    },
+    "what": {
+      "meaning": "什么"
+    },
+    "causes": {
+      "meaning": "导致"
+    },
+    "and": {
+      "meaning": "和"
+    },
+    "is": {
+      "meaning": "是"
+    },
+    "anything": {
+      "meaning": "任何事"
+    },
+    "we": {
+      "meaning": "我们"
+    },
+    "do about it": {
+      "meaning": "应对它"
+    },
+    "researchers": {
+      "meaning": "研究人员"
+    },
+    "have": {
+      "meaning": "已经"
+    },
+    "while": {
+      "meaning": "一段时间"
+    },
+    "interested": {
+      "meaning": "感兴趣的"
+    },
+    "the": {
+      "meaning": "定冠词"
+    },
+    "link": {
+      "meaning": "联系"
+    },
+    "between": {
+      "meaning": "在...之间"
+    },
+    "eat": {
+      "meaning": "吃"
+    },
+    "how": {
+      "meaning": "如何"
+    },
+    "Today": {
+      "meaning": "今天"
+    },
+    "on": {
+      "meaning": "在"
+    },
+    "6": {
+      "meaning": "六"
+    },
+    "Minute": {
+      "meaning": "分钟"
+    },
+    "English": {
+      "meaning": "英语"
+    },
+    "we'll": {
+      "meaning": "我们将"
+    },
+    "talking": {
+      "meaning": "谈论"
+    },
+    "this": {
+      "meaning": "这个"
+    },
+    "asking": {
+      "meaning": "提问"
+    },
+    "should you eat for a better night's sleep": {
+      "meaning": "吃什么睡得更好"
+    },
+    "OK": {
+      "meaning": "好的"
+    },
+    "let's": {
+      "meaning": "让我们"
+    },
+    "start": {
+      "meaning": "开始"
+    },
+    "quiz": {
+      "meaning": "问答测验"
+    },
+    "question": {
+      "meaning": "问题"
+    },
+    "So": {
+      "meaning": "那么"
+    },
+    "adults": {
+      "meaning": "成年人"
+    },
+    "need": {
+      "meaning": "需要"
+    },
+    "7–9": {
+      "meaning": "七至九"
+    },
+    "stay": {
+      "meaning": "保持"
+    },
+    "healthy": {
+      "meaning": "健康的"
+    },
+    "according to": {
+      "meaning": "根据"
+    },
+    "experts": {
+      "meaning": "专家"
+    },
+    "percentage": {
+      "meaning": "百分比"
+    },
+    "people": {
+      "meaning": "人们"
+    },
+    "UK": {
+      "meaning": "英国"
+    },
+    "say": {
+      "meaning": "说"
+    },
+    "they": {
+      "meaning": "他们"
+    },
+    "less": {
+      "meaning": "更少"
+    },
+    "it": {
+      "meaning": "它"
+    },
+    "b": {
+      "meaning": "选项B"
+    },
+    "c": {
+      "meaning": "选项C"
+    },
+    "think": {
+      "meaning": "认为"
+    },
+    "find": {
+      "meaning": "觉得"
+    },
+    "sleeping": {
+      "meaning": "睡觉"
+    },
+    "hard": {
+      "meaning": "困难"
+    },
+    "going to": {
+      "meaning": "将会"
+    },
+    "find out": {
+      "meaning": "查明"
+    },
+    "answer": {
+      "meaning": "答案"
+    },
+    "programme": {
+      "meaning": "节目"
+    },
+    "you've": {
+      "meaning": "你已经"
+    },
+    "looking": {
+      "meaning": "查看"
+    },
+    "at": {
+      "meaning": "在"
+    },
+    "research": {
+      "meaning": "研究"
+    },
+    "scientists": {
+      "meaning": "科学家"
+    },
+    "affects": {
+      "meaning": "影响"
+    },
+    "do some long-term studies": {
+      "meaning": "做长期研究"
+    },
+    "large": {
+      "meaning": "大的"
+    },
+    "groups": {
+      "meaning": "群体"
+    },
+    "over": {
+      "meaning": "经过"
+    },
+    "long": {
+      "meaning": "长的"
+    },
+    "period": {
+      "meaning": "时期"
+    },
+    "time": {
+      "meaning": "时间"
+    },
+    "found": {
+      "meaning": "发现"
+    },
+    "healthier": {
+      "meaning": "更健康的"
+    },
+    "diet": {
+      "meaning": "饮食"
+    },
+    "associated": {
+      "meaning": "相关的"
+    },
+    "better": {
+      "meaning": "更好的"
+    },
+    "quality": {
+      "meaning": "质量"
+    },
+    "also": {
+      "meaning": "也"
+    },
+    "done": {
+      "meaning": "做了"
+    },
+    "smaller": {
+      "meaning": "更小的"
+    },
+    "studies": {
+      "meaning": "研究"
+    },
+    "more": {
+      "meaning": "更多"
+    },
+    "detail": {
+      "meaning": "细节"
+    },
+    "exactly": {
+      "meaning": "确切地"
+    },
+    "are": {
+      "meaning": "是"
+    },
+    "eating": {
+      "meaning": "吃"
+    },
+    "then": {
+      "meaning": "然后"
+    },
+    "studying": {
+      "meaning": "研究"
+    },
+    "laboratory": {
+      "meaning": "实验室"
+    },
+    "these": {
+      "meaning": "这些"
+    },
+    "particular": {
+      "meaning": "特定的"
+    },
+    "foods": {
+      "meaning": "食物"
+    },
+    "our": {
+      "meaning": "我们的"
+    },
+    "others": {
+      "meaning": "其他的"
+    },
     "nutrients": {
-      "translation": "important substances that all lifeforms need to survive and be healthy",
-      "source": "official"
+      "meaning": "营养物质"
+    },
+    "means": {
+      "meaning": "意味着"
+    },
+    "important": {
+      "meaning": "重要的"
+    },
+    "things": {
+      "meaning": "事物"
+    },
+    "your": {
+      "meaning": "你的"
+    },
+    "body": {
+      "meaning": "身体"
+    },
+    "needs": {
+      "meaning": "需要"
+    },
+    "survive": {
+      "meaning": "生存"
+    },
+    "example": {
+      "meaning": "例子"
+    },
+    "protein": {
+      "meaning": "蛋白质"
+    },
+    "nutrient": {
+      "meaning": "营养素"
+    },
+    "BBC": {
+      "meaning": "英国广播公司"
+    },
+    "World": {
+      "meaning": "世界"
+    },
+    "Service": {
+      "meaning": "服务"
+    },
+    "Food": {
+      "meaning": "食物"
+    },
+    "Chain": {
+      "meaning": "链条"
+    },
+    "speaking": {
+      "meaning": "说话"
+    },
+    "researcher": {
+      "meaning": "研究员"
+    },
+    "Professor": {
+      "meaning": "教授"
+    },
+    "Marie-Pierre": {
+      "meaning": "人名玛丽-皮埃尔"
+    },
+    "St-Onge": {
+      "meaning": "人名圣翁热"
+    },
+    "which": {
+      "meaning": "哪些"
+    },
+    "diets": {
+      "meaning": "饮食"
+    },
+    "look": {
+      "meaning": "看起来"
+    },
+    "like": {
+      "meaning": "像"
+    },
+    "Mediterranean": {
+      "meaning": "地中海的"
+    },
+    "pattern": {
+      "meaning": "模式"
+    },
+    "higher": {
+      "meaning": "更高的"
+    },
+    "fruits": {
+      "meaning": "水果"
+    },
+    "vegetables": {
+      "meaning": "蔬菜"
+    },
+    "whole": {
+      "meaning": "全"
+    },
+    "grains": {
+      "meaning": "谷物"
+    },
+    "lower": {
+      "meaning": "更低的"
+    },
+    "animal-based": {
+      "meaning": "动物性的"
+    },
+    "sugar": {
+      "meaning": "糖"
+    },
+    "from": {
+      "meaning": "从"
+    },
+    "own": {
+      "meaning": "自己的"
+    },
+    "where": {
+      "meaning": "在那里"
+    },
+    "evaluate": {
+      "meaning": "评估"
+    },
+    "intakes": {
+      "meaning": "摄入量"
+    },
+    "lab": {
+      "meaning": "实验室"
+    },
+    "see": {
+      "meaning": "看到"
+    },
+    "different": {
+      "meaning": "不同的"
+    },
+    "similar": {
+      "meaning": "相似的"
+    },
+    "patterns": {
+      "meaning": "模式"
+    },
+    "when": {
+      "meaning": "当……时"
+    },
+    "talk": {
+      "meaning": "谈论"
+    },
+    "fibre": {
+      "meaning": "纤维"
+    },
+    "saturated": {
+      "meaning": "饱和的"
+    },
+    "fats": {
+      "meaning": "脂肪"
+    },
+    "plant-based": {
+      "meaning": "植物性的"
+    },
+    "types": {
+      "meaning": "种类"
+    },
+    "at night": {
+      "meaning": "在夜里"
+    },
+    "night": {
+      "meaning": "夜晚"
+    },
+    "says": {
+      "meaning": "说"
+    },
+    "Mediterranean-style": {
+      "meaning": "地中海式的"
+    },
+    "includes": {
+      "meaning": "包含"
+    },
+    "lots of": {
+      "meaning": "许多"
+    },
+    "such as": {
+      "meaning": "例如"
+    },
+    "as": {
+      "meaning": "作为"
+    },
+    "meat": {
+      "meaning": "肉"
+    },
+    "dairy": {
+      "meaning": "乳制品"
+    },
+    "some": {
+      "meaning": "一些"
+    },
+    "Saturated fat": {
+      "meaning": "饱和脂肪"
+    },
+    "fat": {
+      "meaning": "脂肪"
+    },
+    "type": {
+      "meaning": "类型"
+    },
+    "mainly": {
+      "meaning": "主要地"
+    },
+    "thought": {
+      "meaning": "被认为"
+    },
+    "bad": {
+      "meaning": "坏的"
+    },
+    "health": {
+      "meaning": "健康"
+    },
+    "Right": {
+      "meaning": "对"
+    },
+    "deep sleep": {
+      "meaning": "深度睡眠"
+    },
+    "fully": {
+      "meaning": "完全地"
+    },
+    "asleep": {
+      "meaning": "睡着的"
+    },
+    "rest": {
+      "meaning": "休息"
+    },
+    "sounds": {
+      "meaning": "听起来"
+    },
+    "want": {
+      "meaning": "想要"
+    },
+    "improve": {
+      "meaning": "改善"
+    },
+    "heard": {
+      "meaning": "听说"
+    },
+    "certain": {
+      "meaning": "某些"
+    },
+    "have a lot of": {
+      "meaning": "有很多"
+    },
+    "helpful": {
+      "meaning": "有帮助的"
+    },
+    "true": {
+      "meaning": "真实的"
+    },
+    "there is": {
+      "meaning": "有"
+    },
+    "limited": {
+      "meaning": "有限的"
+    },
+    "specific": {
+      "meaning": "特定的"
+    },
+    "their": {
+      "meaning": "它们的"
+    },
+    "impact": {
+      "meaning": "影响"
+    },
+    "for example": {
+      "meaning": "例如"
+    },
+    "have been studying": {
+      "meaning": "一直在研究"
+    },
+    "kiwi fruits": {
+      "meaning": "猕猴桃"
+    },
+    "tart cherry juice": {
+      "meaning": "酸樱桃汁"
+    },
+    "may": {
+      "meaning": "可能"
+    },
+    "adverts": {
+      "meaning": "广告"
+    },
+    "claim to": {
+      "meaning": "声称"
+    },
+    "supplements": {
+      "meaning": "营养补充剂"
+    },
+    "tablets": {
+      "meaning": "药片"
+    },
+    "take": {
+      "meaning": "服用"
+    },
+    "contain": {
+      "meaning": "含有"
+    },
+    "might": {
+      "meaning": "可能"
+    },
+    "everyday": {
+      "meaning": "日常的"
+    },
+    "focusing on": {
+      "meaning": "专注于"
+    },
+    "rather than": {
+      "meaning": "而不是"
+    },
+    "one": {
+      "meaning": "一个"
+    },
+    "most": {
+      "meaning": "最"
+    },
+    "effective": {
+      "meaning": "有效的"
+    },
+    "Here's": {
+      "meaning": "这是"
+    },
+    "doctor": {
+      "meaning": "医生"
+    },
+    "Allie Hare": {
+      "meaning": "人名"
+    },
+    "explaining": {
+      "meaning": "解释"
+    },
+    "looking for": {
+      "meaning": "寻找"
+    },
+    "often": {
+      "meaning": "经常"
+    },
+    "you know": {
+      "meaning": "你知道"
+    },
+    "we're fed": {
+      "meaning": "被灌输"
+    },
+    "a lot of": {
+      "meaning": "很多"
+    },
+    "aren't we": {
+      "meaning": "是吧"
+    },
+    "social media": {
+      "meaning": "社交媒体"
+    },
+    "magical": {
+      "meaning": "神奇的"
+    },
+    "powder": {
+      "meaning": "粉末"
+    },
+    "help": {
+      "meaning": "帮助"
+    },
+    "immediately": {
+      "meaning": "立即"
+    },
+    "tonight": {
+      "meaning": "今晚"
+    },
+    "of course": {
+      "meaning": "当然"
+    },
+    "such": {
+      "meaning": "这样的"
+    },
+    "magic bullet": {
+      "meaning": "灵丹妙药"
+    },
+    "unfortunately": {
+      "meaning": "遗憾的是"
+    },
+    "was": {
+      "meaning": "是"
+    },
+    "sure": {
+      "meaning": "确信"
+    },
+    "would": {
+      "meaning": "将会"
+    },
+    "doing": {
+      "meaning": "做"
+    },
+    "very": {
+      "meaning": "非常"
+    },
+    "ourselves": {
+      "meaning": "我们自己"
+    },
+    "them": {
+      "meaning": "他们"
+    },
+    "she": {
+      "meaning": "她"
+    },
+    "fed information": {
+      "meaning": "持续灌输信息"
+    },
+    "given": {
+      "meaning": "给予"
+    },
+    "continuous": {
+      "meaning": "连续的"
+    },
+    "way": {
+      "meaning": "方式"
+    },
+    "argues": {
+      "meaning": "主张；认为"
+    },
+    "there's": {
+      "meaning": "有"
+    },
+    "no": {
+      "meaning": "没有"
+    },
+    "refers to": {
+      "meaning": "指；指的是"
+    },
+    "simple": {
+      "meaning": "简单的"
+    },
+    "solution": {
+      "meaning": "解决办法"
+    },
+    "problem": {
+      "meaning": "问题"
+    },
+    "that's": {
+      "meaning": "那是"
+    },
+    "doesn't": {
+      "meaning": "不"
+    },
+    "exist": {
+      "meaning": "存在"
+    },
+    "it's": {
+      "meaning": "它是"
+    },
+    "quiz question": {
+      "meaning": "测验问题"
+    },
+    "asked": {
+      "meaning": "问"
+    },
+    "seven": {
+      "meaning": "七"
+    },
+    "said": {
+      "meaning": "说"
+    },
+    "35%": {
+      "meaning": "百分之三十五"
+    },
+    "correct": {
+      "meaning": "正确的"
+    },
+    "six": {
+      "meaning": "六"
+    },
+    "by": {
+      "meaning": "由；根据"
+    },
+    "YouGov": {
+      "meaning": "英国民调机构"
+    },
+    "study": {
+      "meaning": "研究"
+    },
+    "recap": {
+      "meaning": "回顾；总结"
+    },
+    "vocabulary": {
+      "meaning": "词汇"
+    },
+    "learned": {
+      "meaning": "学到的"
+    },
+    "starting": {
+      "meaning": "以…开始"
+    },
+    "products": {
+      "meaning": "产品"
+    },
+    "other": {
+      "meaning": "其他的"
+    },
+    "feed": {
+      "meaning": "持续提供"
+    },
+    "information": {
+      "meaning": "信息"
+    },
+    "give": {
+      "meaning": "给"
+    },
+    "bullet": {
+      "meaning": "子弹（magic bullet灵丹妙药）"
+    },
+    "Once again": {
+      "meaning": "再一次"
+    },
+    "minutes": {
+      "meaning": "分钟"
+    },
+    "up": {
+      "meaning": "结束了"
+    },
+    "don't": {
+      "meaning": "不要"
+    },
+    "forget": {
+      "meaning": "忘记"
+    },
+    "test": {
+      "meaning": "测试；检验"
+    },
+    "worksheet": {
+      "meaning": "练习表"
+    },
+    "website": {
+      "meaning": "网站"
+    },
+    "bbclearningenglish.com": {
+      "meaning": "BBC英语学习网站"
+    },
+    "Thanks": {
+      "meaning": "谢谢"
+    },
+    "joining": {
+      "meaning": "加入；收看"
+    },
+    "goodbye": {
+      "meaning": "再见"
+    }
+  },
+  "dict": {
+    "hi": {
+      "translation": "你好",
+      "source": "context",
+      "context": "你好"
+    },
+    "georgie": {
+      "translation": "乔吉人名",
+      "source": "context",
+      "context": "乔吉人名"
+    },
+    "phil": {
+      "translation": "菲尔人名",
+      "source": "context",
+      "context": "菲尔人名"
+    },
+    "now": {
+      "translation": "那么",
+      "source": "context",
+      "context": "那么"
+    },
+    "do": {
+      "translation": "助动词",
+      "source": "context",
+      "context": "助动词"
+    },
+    "you": {
+      "translation": "你",
+      "source": "context",
+      "context": "你"
+    },
+    "ever": {
+      "translation": "曾经",
+      "source": "context",
+      "context": "曾经"
+    },
+    "struggle": {
+      "translation": "费力",
+      "source": "context",
+      "context": "费力"
+    },
+    "to": {
+      "translation": "不定式标记",
+      "source": "context",
+      "context": "不定式标记"
+    },
+    "get": {
+      "translation": "获得",
+      "source": "context",
+      "context": "获得"
+    },
+    "a": {
+      "translation": "一",
+      "source": "context",
+      "context": "一"
+    },
+    "good": {
+      "translation": "好的",
+      "source": "context",
+      "context": "好的"
+    },
+    "night's": {
+      "translation": "夜晚的",
+      "source": "context",
+      "context": "夜晚的"
+    },
+    "sleep": {
+      "translation": "睡眠",
+      "source": "context",
+      "context": "睡眠"
+    },
+    "know": {
+      "translation": "知道",
+      "source": "context",
+      "context": "知道"
+    },
+    "i": {
+      "translation": "我",
+      "source": "context",
+      "context": "我"
+    },
+    "sometimes": {
+      "translation": "有时",
+      "source": "context",
+      "context": "有时"
+    },
+    "if": {
+      "translation": "如果",
+      "source": "context",
+      "context": "如果"
+    },
+    "i've": {
+      "translation": "我已经",
+      "source": "context",
+      "context": "我已经"
+    },
+    "been": {
+      "translation": "已经",
+      "source": "context",
+      "context": "已经"
+    },
+    "thinking": {
+      "translation": "思考",
+      "source": "context",
+      "context": "思考"
+    },
+    "about": {
+      "translation": "关于",
+      "source": "context",
+      "context": "关于"
+    },
+    "something": {
+      "translation": "某事",
+      "source": "context",
+      "context": "某事"
+    },
+    "lot": {
+      "translation": "很多",
+      "source": "context",
+      "context": "很多"
+    },
+    "or": {
+      "translation": "或者",
+      "source": "context",
+      "context": "或者"
+    },
+    "even": {
+      "translation": "甚至",
+      "source": "context",
+      "context": "甚至"
+    },
+    "worse": {
+      "translation": "更糟",
+      "source": "context",
+      "context": "更糟"
+    },
+    "had": {
+      "translation": "喝了",
+      "source": "context",
+      "context": "喝了"
+    },
+    "cup": {
+      "translation": "杯",
+      "source": "context",
+      "context": "杯"
+    },
+    "of": {
+      "translation": "的",
+      "source": "context",
+      "context": "的"
+    },
+    "coffee": {
+      "translation": "咖啡",
+      "source": "context",
+      "context": "咖啡"
+    },
+    "later": {
+      "translation": "更晚",
+      "source": "context",
+      "context": "更晚"
+    },
+    "than": {
+      "translation": "比",
+      "source": "context",
+      "context": "比"
+    },
+    "should": {
+      "translation": "应该",
+      "source": "context",
+      "context": "应该"
+    },
+    "can": {
+      "translation": "能够",
+      "source": "context",
+      "context": "能够"
+    },
+    "lie": {
+      "translation": "躺着",
+      "source": "context",
+      "context": "躺着"
+    },
+    "there": {
+      "translation": "那里",
+      "source": "context",
+      "context": "那里"
+    },
+    "for": {
+      "translation": "长达",
+      "source": "context",
+      "context": "长达"
+    },
+    "hours": {
+      "translation": "数小时",
+      "source": "context",
+      "context": "数小时"
+    },
+    "yes": {
+      "translation": "是的",
+      "source": "context",
+      "context": "是的"
+    },
+    "well": {
+      "translation": "嗯",
+      "source": "context",
+      "context": "嗯"
+    },
+    "many": {
+      "translation": "许多",
+      "source": "context",
+      "context": "许多"
+    },
+    "us": {
+      "translation": "我们",
+      "source": "context",
+      "context": "我们"
+    },
+    "will": {
+      "translation": "将会",
+      "source": "context",
+      "context": "将会"
+    },
+    "be": {
+      "translation": "是",
+      "source": "context",
+      "context": "是"
+    },
+    "familiar": {
+      "translation": "熟悉的",
+      "source": "context",
+      "context": "熟悉的"
+    },
+    "with": {
+      "translation": "与",
+      "source": "context",
+      "context": "与"
+    },
+    "that": {
+      "translation": "那种",
+      "source": "context",
+      "context": "那种"
+    },
+    "feeling": {
+      "translation": "感觉",
+      "source": "context",
+      "context": "感觉"
+    },
+    "lying": {
+      "translation": "躺着",
+      "source": "context",
+      "context": "躺着"
+    },
+    "in": {
+      "translation": "在",
+      "source": "context",
+      "context": "在"
+    },
+    "bed": {
+      "translation": "床",
+      "source": "context",
+      "context": "床"
+    },
+    "really": {
+      "translation": "非常",
+      "source": "context",
+      "context": "非常"
+    },
+    "tired": {
+      "translation": "疲倦的",
+      "source": "context",
+      "context": "疲倦的"
+    },
+    "but": {
+      "translation": "但是",
+      "source": "context",
+      "context": "但是"
+    },
+    "just": {
+      "translation": "只是",
+      "source": "context",
+      "context": "只是"
+    },
+    "not": {
+      "translation": "不",
+      "source": "context",
+      "context": "不"
+    },
+    "being": {
+      "translation": "处于",
+      "source": "context",
+      "context": "处于"
+    },
+    "able": {
+      "translation": "能够的",
+      "source": "context",
+      "context": "能够的"
+    },
+    "go": {
+      "translation": "去",
+      "source": "context",
+      "context": "去"
+    },
+    "what": {
+      "translation": "什么",
+      "source": "context",
+      "context": "什么"
+    },
+    "causes": {
+      "translation": "导致",
+      "source": "context",
+      "context": "导致"
+    },
+    "and": {
+      "translation": "和",
+      "source": "context",
+      "context": "和"
+    },
+    "is": {
+      "translation": "是",
+      "source": "context",
+      "context": "是"
+    },
+    "anything": {
+      "translation": "任何事",
+      "source": "context",
+      "context": "任何事"
+    },
+    "we": {
+      "translation": "我们",
+      "source": "context",
+      "context": "我们"
+    },
+    "do about it": {
+      "translation": "应对它",
+      "source": "context",
+      "context": "应对它"
+    },
+    "researchers": {
+      "translation": "研究人员",
+      "source": "context",
+      "context": "研究人员"
+    },
+    "have": {
+      "translation": "已经",
+      "source": "context",
+      "context": "已经"
+    },
+    "while": {
+      "translation": "一段时间",
+      "source": "context",
+      "context": "一段时间"
+    },
+    "interested": {
+      "translation": "感兴趣的",
+      "source": "context",
+      "context": "感兴趣的"
+    },
+    "the": {
+      "translation": "定冠词",
+      "source": "context",
+      "context": "定冠词"
+    },
+    "link": {
+      "translation": "联系",
+      "source": "context",
+      "context": "联系"
+    },
+    "between": {
+      "translation": "在...之间",
+      "source": "context",
+      "context": "在...之间"
+    },
+    "eat": {
+      "translation": "吃",
+      "source": "context",
+      "context": "吃"
+    },
+    "how": {
+      "translation": "如何",
+      "source": "context",
+      "context": "如何"
+    },
+    "today": {
+      "translation": "今天",
+      "source": "context",
+      "context": "今天"
+    },
+    "on": {
+      "translation": "在",
+      "source": "context",
+      "context": "在"
+    },
+    "6": {
+      "translation": "六",
+      "source": "context",
+      "context": "六"
+    },
+    "minute": {
+      "translation": "分钟",
+      "source": "context",
+      "context": "分钟"
+    },
+    "english": {
+      "translation": "英语",
+      "source": "context",
+      "context": "英语"
+    },
+    "we'll": {
+      "translation": "我们将",
+      "source": "context",
+      "context": "我们将"
+    },
+    "talking": {
+      "translation": "谈论",
+      "source": "context",
+      "context": "谈论"
+    },
+    "this": {
+      "translation": "这个",
+      "source": "context",
+      "context": "这个"
+    },
+    "asking": {
+      "translation": "提问",
+      "source": "context",
+      "context": "提问"
+    },
+    "should you eat for a better night's sleep": {
+      "translation": "吃什么睡得更好",
+      "source": "context",
+      "context": "吃什么睡得更好"
+    },
+    "ok": {
+      "translation": "好的",
+      "source": "context",
+      "context": "好的"
+    },
+    "let's": {
+      "translation": "让我们",
+      "source": "context",
+      "context": "让我们"
+    },
+    "start": {
+      "translation": "开始",
+      "source": "context",
+      "context": "开始"
+    },
+    "quiz": {
+      "translation": "问答测验",
+      "source": "context",
+      "context": "问答测验"
+    },
+    "question": {
+      "translation": "问题",
+      "source": "context",
+      "context": "问题"
+    },
+    "so": {
+      "translation": "那么",
+      "source": "context",
+      "context": "那么"
+    },
+    "adults": {
+      "translation": "成年人",
+      "source": "context",
+      "context": "成年人"
+    },
+    "need": {
+      "translation": "需要",
+      "source": "context",
+      "context": "需要"
+    },
+    "7–9": {
+      "translation": "七至九",
+      "source": "context",
+      "context": "七至九"
+    },
+    "stay": {
+      "translation": "保持",
+      "source": "context",
+      "context": "保持"
+    },
+    "healthy": {
+      "translation": "健康的",
+      "source": "context",
+      "context": "健康的"
+    },
+    "according to": {
+      "translation": "根据",
+      "source": "context",
+      "context": "根据"
+    },
+    "experts": {
+      "translation": "专家",
+      "source": "context",
+      "context": "专家"
+    },
+    "percentage": {
+      "translation": "百分比",
+      "source": "context",
+      "context": "百分比"
+    },
+    "people": {
+      "translation": "人们",
+      "source": "context",
+      "context": "人们"
+    },
+    "uk": {
+      "translation": "英国",
+      "source": "context",
+      "context": "英国"
+    },
+    "say": {
+      "translation": "说",
+      "source": "context",
+      "context": "说"
+    },
+    "they": {
+      "translation": "他们",
+      "source": "context",
+      "context": "他们"
+    },
+    "less": {
+      "translation": "更少",
+      "source": "context",
+      "context": "更少"
+    },
+    "it": {
+      "translation": "它",
+      "source": "context",
+      "context": "它"
+    },
+    "b": {
+      "translation": "选项B",
+      "source": "context",
+      "context": "选项B"
+    },
+    "c": {
+      "translation": "选项C",
+      "source": "context",
+      "context": "选项C"
+    },
+    "think": {
+      "translation": "认为",
+      "source": "context",
+      "context": "认为"
+    },
+    "find": {
+      "translation": "觉得",
+      "source": "context",
+      "context": "觉得"
+    },
+    "sleeping": {
+      "translation": "睡觉",
+      "source": "context",
+      "context": "睡觉"
+    },
+    "hard": {
+      "translation": "困难",
+      "source": "context",
+      "context": "困难"
+    },
+    "going to": {
+      "translation": "将会",
+      "source": "context",
+      "context": "将会"
+    },
+    "find out": {
+      "translation": "查明",
+      "source": "context",
+      "context": "查明"
+    },
+    "answer": {
+      "translation": "答案",
+      "source": "context",
+      "context": "答案"
+    },
+    "programme": {
+      "translation": "节目",
+      "source": "context",
+      "context": "节目"
+    },
+    "you've": {
+      "translation": "你已经",
+      "source": "context",
+      "context": "你已经"
+    },
+    "looking": {
+      "translation": "查看",
+      "source": "context",
+      "context": "查看"
+    },
+    "at": {
+      "translation": "在",
+      "source": "context",
+      "context": "在"
+    },
+    "research": {
+      "translation": "研究",
+      "source": "context",
+      "context": "研究"
+    },
+    "scientists": {
+      "translation": "科学家",
+      "source": "context",
+      "context": "科学家"
+    },
+    "affects": {
+      "translation": "影响",
+      "source": "context",
+      "context": "影响"
+    },
+    "do some long-term studies": {
+      "translation": "做长期研究",
+      "source": "context",
+      "context": "做长期研究"
+    },
+    "large": {
+      "translation": "大的",
+      "source": "context",
+      "context": "大的"
+    },
+    "groups": {
+      "translation": "群体",
+      "source": "context",
+      "context": "群体"
+    },
+    "over": {
+      "translation": "经过",
+      "source": "context",
+      "context": "经过"
+    },
+    "long": {
+      "translation": "长的",
+      "source": "context",
+      "context": "长的"
+    },
+    "period": {
+      "translation": "时期",
+      "source": "context",
+      "context": "时期"
+    },
+    "time": {
+      "translation": "时间",
+      "source": "context",
+      "context": "时间"
+    },
+    "found": {
+      "translation": "发现",
+      "source": "context",
+      "context": "发现"
+    },
+    "healthier": {
+      "translation": "更健康的",
+      "source": "context",
+      "context": "更健康的"
+    },
+    "diet": {
+      "translation": "饮食",
+      "source": "context",
+      "context": "饮食"
+    },
+    "associated": {
+      "translation": "相关的",
+      "source": "context",
+      "context": "相关的"
+    },
+    "better": {
+      "translation": "更好的",
+      "source": "context",
+      "context": "更好的"
+    },
+    "quality": {
+      "translation": "质量",
+      "source": "context",
+      "context": "质量"
+    },
+    "also": {
+      "translation": "也",
+      "source": "context",
+      "context": "也"
+    },
+    "done": {
+      "translation": "做了",
+      "source": "context",
+      "context": "做了"
+    },
+    "smaller": {
+      "translation": "更小的",
+      "source": "context",
+      "context": "更小的"
+    },
+    "studies": {
+      "translation": "研究",
+      "source": "context",
+      "context": "研究"
+    },
+    "more": {
+      "translation": "更多",
+      "source": "context",
+      "context": "更多"
+    },
+    "detail": {
+      "translation": "细节",
+      "source": "context",
+      "context": "细节"
+    },
+    "exactly": {
+      "translation": "确切地",
+      "source": "context",
+      "context": "确切地"
+    },
+    "are": {
+      "translation": "是",
+      "source": "context",
+      "context": "是"
+    },
+    "eating": {
+      "translation": "吃",
+      "source": "context",
+      "context": "吃"
+    },
+    "then": {
+      "translation": "然后",
+      "source": "context",
+      "context": "然后"
+    },
+    "studying": {
+      "translation": "研究",
+      "source": "context",
+      "context": "研究"
+    },
+    "laboratory": {
+      "translation": "实验室",
+      "source": "context",
+      "context": "实验室"
+    },
+    "these": {
+      "translation": "这些",
+      "source": "context",
+      "context": "这些"
+    },
+    "particular": {
+      "translation": "特定的",
+      "source": "context",
+      "context": "特定的"
+    },
+    "foods": {
+      "translation": "食物",
+      "source": "context",
+      "context": "食物"
+    },
+    "our": {
+      "translation": "我们的",
+      "source": "context",
+      "context": "我们的"
+    },
+    "others": {
+      "translation": "其他的",
+      "source": "context",
+      "context": "其他的"
+    },
+    "nutrients": {
+      "translation": "营养物质",
+      "source": "context",
+      "context": "营养物质"
+    },
+    "means": {
+      "translation": "意味着",
+      "source": "context",
+      "context": "意味着"
+    },
+    "important": {
+      "translation": "重要的",
+      "source": "context",
+      "context": "重要的"
+    },
+    "things": {
+      "translation": "事物",
+      "source": "context",
+      "context": "事物"
+    },
+    "your": {
+      "translation": "你的",
+      "source": "context",
+      "context": "你的"
+    },
+    "body": {
+      "translation": "身体",
+      "source": "context",
+      "context": "身体"
+    },
+    "needs": {
+      "translation": "需要",
+      "source": "context",
+      "context": "需要"
+    },
+    "survive": {
+      "translation": "生存",
+      "source": "context",
+      "context": "生存"
+    },
+    "example": {
+      "translation": "例子",
+      "source": "context",
+      "context": "例子"
+    },
+    "protein": {
+      "translation": "蛋白质",
+      "source": "context",
+      "context": "蛋白质"
+    },
+    "nutrient": {
+      "translation": "营养素",
+      "source": "context",
+      "context": "营养素"
+    },
+    "bbc": {
+      "translation": "英国广播公司",
+      "source": "context",
+      "context": "英国广播公司"
+    },
+    "world": {
+      "translation": "世界",
+      "source": "context",
+      "context": "世界"
+    },
+    "service": {
+      "translation": "服务",
+      "source": "context",
+      "context": "服务"
+    },
+    "food": {
+      "translation": "食物",
+      "source": "context",
+      "context": "食物"
+    },
+    "chain": {
+      "translation": "链条",
+      "source": "context",
+      "context": "链条"
+    },
+    "speaking": {
+      "translation": "说话",
+      "source": "context",
+      "context": "说话"
+    },
+    "researcher": {
+      "translation": "研究员",
+      "source": "context",
+      "context": "研究员"
+    },
+    "professor": {
+      "translation": "教授",
+      "source": "context",
+      "context": "教授"
+    },
+    "marie-pierre": {
+      "translation": "人名玛丽-皮埃尔",
+      "source": "context",
+      "context": "人名玛丽-皮埃尔"
+    },
+    "st-onge": {
+      "translation": "人名圣翁热",
+      "source": "context",
+      "context": "人名圣翁热"
+    },
+    "which": {
+      "translation": "哪些",
+      "source": "context",
+      "context": "哪些"
+    },
+    "diets": {
+      "translation": "饮食",
+      "source": "context",
+      "context": "饮食"
+    },
+    "look": {
+      "translation": "看起来",
+      "source": "context",
+      "context": "看起来"
+    },
+    "like": {
+      "translation": "像",
+      "source": "context",
+      "context": "像"
+    },
+    "mediterranean": {
+      "translation": "地中海的",
+      "source": "context",
+      "context": "地中海的"
+    },
+    "pattern": {
+      "translation": "模式",
+      "source": "context",
+      "context": "模式"
+    },
+    "higher": {
+      "translation": "更高的",
+      "source": "context",
+      "context": "更高的"
+    },
+    "fruits": {
+      "translation": "水果",
+      "source": "context",
+      "context": "水果"
+    },
+    "vegetables": {
+      "translation": "蔬菜",
+      "source": "context",
+      "context": "蔬菜"
+    },
+    "whole": {
+      "translation": "全",
+      "source": "context",
+      "context": "全"
+    },
+    "grains": {
+      "translation": "谷物",
+      "source": "context",
+      "context": "谷物"
+    },
+    "lower": {
+      "translation": "更低的",
+      "source": "context",
+      "context": "更低的"
+    },
+    "animal-based": {
+      "translation": "动物性的",
+      "source": "context",
+      "context": "动物性的"
+    },
+    "sugar": {
+      "translation": "糖",
+      "source": "context",
+      "context": "糖"
+    },
+    "from": {
+      "translation": "从",
+      "source": "context",
+      "context": "从"
+    },
+    "own": {
+      "translation": "自己的",
+      "source": "context",
+      "context": "自己的"
+    },
+    "where": {
+      "translation": "在那里",
+      "source": "context",
+      "context": "在那里"
+    },
+    "evaluate": {
+      "translation": "评估",
+      "source": "context",
+      "context": "评估"
+    },
+    "intakes": {
+      "translation": "摄入量",
+      "source": "context",
+      "context": "摄入量"
+    },
+    "lab": {
+      "translation": "实验室",
+      "source": "context",
+      "context": "实验室"
+    },
+    "see": {
+      "translation": "看到",
+      "source": "context",
+      "context": "看到"
+    },
+    "different": {
+      "translation": "不同的",
+      "source": "context",
+      "context": "不同的"
+    },
+    "similar": {
+      "translation": "相似的",
+      "source": "context",
+      "context": "相似的"
+    },
+    "patterns": {
+      "translation": "模式",
+      "source": "context",
+      "context": "模式"
+    },
+    "when": {
+      "translation": "当……时",
+      "source": "context",
+      "context": "当……时"
+    },
+    "talk": {
+      "translation": "谈论",
+      "source": "context",
+      "context": "谈论"
+    },
+    "fibre": {
+      "translation": "纤维",
+      "source": "context",
+      "context": "纤维"
+    },
+    "saturated": {
+      "translation": "饱和的",
+      "source": "context",
+      "context": "饱和的"
+    },
+    "fats": {
+      "translation": "脂肪",
+      "source": "context",
+      "context": "脂肪"
+    },
+    "plant-based": {
+      "translation": "植物性的",
+      "source": "context",
+      "context": "植物性的"
+    },
+    "types": {
+      "translation": "种类",
+      "source": "context",
+      "context": "种类"
+    },
+    "at night": {
+      "translation": "在夜里",
+      "source": "context",
+      "context": "在夜里"
+    },
+    "night": {
+      "translation": "夜晚",
+      "source": "context",
+      "context": "夜晚"
+    },
+    "says": {
+      "translation": "说",
+      "source": "context",
+      "context": "说"
+    },
+    "mediterranean-style": {
+      "translation": "地中海式的",
+      "source": "context",
+      "context": "地中海式的"
+    },
+    "includes": {
+      "translation": "包含",
+      "source": "context",
+      "context": "包含"
+    },
+    "lots of": {
+      "translation": "许多",
+      "source": "context",
+      "context": "许多"
+    },
+    "such as": {
+      "translation": "例如",
+      "source": "context",
+      "context": "例如"
+    },
+    "as": {
+      "translation": "作为",
+      "source": "context",
+      "context": "作为"
+    },
+    "meat": {
+      "translation": "肉",
+      "source": "context",
+      "context": "肉"
+    },
+    "dairy": {
+      "translation": "乳制品",
+      "source": "context",
+      "context": "乳制品"
+    },
+    "some": {
+      "translation": "一些",
+      "source": "context",
+      "context": "一些"
+    },
+    "saturated fat": {
+      "translation": "饱和脂肪",
+      "source": "context",
+      "context": "饱和脂肪"
+    },
+    "fat": {
+      "translation": "脂肪",
+      "source": "context",
+      "context": "脂肪"
+    },
+    "type": {
+      "translation": "类型",
+      "source": "context",
+      "context": "类型"
+    },
+    "mainly": {
+      "translation": "主要地",
+      "source": "context",
+      "context": "主要地"
+    },
+    "thought": {
+      "translation": "被认为",
+      "source": "context",
+      "context": "被认为"
+    },
+    "bad": {
+      "translation": "坏的",
+      "source": "context",
+      "context": "坏的"
+    },
+    "health": {
+      "translation": "健康",
+      "source": "context",
+      "context": "健康"
+    },
+    "right": {
+      "translation": "对",
+      "source": "context",
+      "context": "对"
+    },
+    "deep sleep": {
+      "translation": "深度睡眠",
+      "source": "context",
+      "context": "深度睡眠"
+    },
+    "fully": {
+      "translation": "完全地",
+      "source": "context",
+      "context": "完全地"
+    },
+    "asleep": {
+      "translation": "睡着的",
+      "source": "context",
+      "context": "睡着的"
+    },
+    "rest": {
+      "translation": "休息",
+      "source": "context",
+      "context": "休息"
+    },
+    "sounds": {
+      "translation": "听起来",
+      "source": "context",
+      "context": "听起来"
+    },
+    "want": {
+      "translation": "想要",
+      "source": "context",
+      "context": "想要"
+    },
+    "improve": {
+      "translation": "改善",
+      "source": "context",
+      "context": "改善"
+    },
+    "heard": {
+      "translation": "听说",
+      "source": "context",
+      "context": "听说"
+    },
+    "certain": {
+      "translation": "某些",
+      "source": "context",
+      "context": "某些"
+    },
+    "have a lot of": {
+      "translation": "有很多",
+      "source": "context",
+      "context": "有很多"
+    },
+    "helpful": {
+      "translation": "有帮助的",
+      "source": "context",
+      "context": "有帮助的"
+    },
+    "true": {
+      "translation": "真实的",
+      "source": "context",
+      "context": "真实的"
+    },
+    "there is": {
+      "translation": "有",
+      "source": "context",
+      "context": "有"
+    },
+    "limited": {
+      "translation": "有限的",
+      "source": "context",
+      "context": "有限的"
+    },
+    "specific": {
+      "translation": "特定的",
+      "source": "context",
+      "context": "特定的"
+    },
+    "their": {
+      "translation": "它们的",
+      "source": "context",
+      "context": "它们的"
+    },
+    "impact": {
+      "translation": "影响",
+      "source": "context",
+      "context": "影响"
+    },
+    "for example": {
+      "translation": "例如",
+      "source": "context",
+      "context": "例如"
+    },
+    "have been studying": {
+      "translation": "一直在研究",
+      "source": "context",
+      "context": "一直在研究"
+    },
+    "kiwi fruits": {
+      "translation": "猕猴桃",
+      "source": "context",
+      "context": "猕猴桃"
+    },
+    "tart cherry juice": {
+      "translation": "酸樱桃汁",
+      "source": "context",
+      "context": "酸樱桃汁"
+    },
+    "may": {
+      "translation": "可能",
+      "source": "context",
+      "context": "可能"
+    },
+    "adverts": {
+      "translation": "广告",
+      "source": "context",
+      "context": "广告"
+    },
+    "claim to": {
+      "translation": "声称",
+      "source": "context",
+      "context": "声称"
+    },
+    "supplements": {
+      "translation": "营养补充剂",
+      "source": "context",
+      "context": "营养补充剂"
+    },
+    "tablets": {
+      "translation": "药片",
+      "source": "context",
+      "context": "药片"
+    },
+    "take": {
+      "translation": "服用",
+      "source": "context",
+      "context": "服用"
+    },
+    "contain": {
+      "translation": "含有",
+      "source": "context",
+      "context": "含有"
+    },
+    "might": {
+      "translation": "可能",
+      "source": "context",
+      "context": "可能"
+    },
+    "everyday": {
+      "translation": "日常的",
+      "source": "context",
+      "context": "日常的"
+    },
+    "focusing on": {
+      "translation": "专注于",
+      "source": "context",
+      "context": "专注于"
+    },
+    "rather than": {
+      "translation": "而不是",
+      "source": "context",
+      "context": "而不是"
+    },
+    "one": {
+      "translation": "一个",
+      "source": "context",
+      "context": "一个"
+    },
+    "most": {
+      "translation": "最",
+      "source": "context",
+      "context": "最"
+    },
+    "effective": {
+      "translation": "有效的",
+      "source": "context",
+      "context": "有效的"
+    },
+    "here's": {
+      "translation": "这是",
+      "source": "context",
+      "context": "这是"
+    },
+    "doctor": {
+      "translation": "医生",
+      "source": "context",
+      "context": "医生"
+    },
+    "allie hare": {
+      "translation": "人名",
+      "source": "context",
+      "context": "人名"
+    },
+    "explaining": {
+      "translation": "解释",
+      "source": "context",
+      "context": "解释"
+    },
+    "looking for": {
+      "translation": "寻找",
+      "source": "context",
+      "context": "寻找"
+    },
+    "often": {
+      "translation": "经常",
+      "source": "context",
+      "context": "经常"
+    },
+    "you know": {
+      "translation": "你知道",
+      "source": "context",
+      "context": "你知道"
+    },
+    "we're fed": {
+      "translation": "被灌输",
+      "source": "context",
+      "context": "被灌输"
+    },
+    "a lot of": {
+      "translation": "很多",
+      "source": "context",
+      "context": "很多"
+    },
+    "aren't we": {
+      "translation": "是吧",
+      "source": "context",
+      "context": "是吧"
+    },
+    "social media": {
+      "translation": "社交媒体",
+      "source": "context",
+      "context": "社交媒体"
+    },
+    "magical": {
+      "translation": "神奇的",
+      "source": "context",
+      "context": "神奇的"
+    },
+    "powder": {
+      "translation": "粉末",
+      "source": "context",
+      "context": "粉末"
+    },
+    "help": {
+      "translation": "帮助",
+      "source": "context",
+      "context": "帮助"
+    },
+    "immediately": {
+      "translation": "立即",
+      "source": "context",
+      "context": "立即"
+    },
+    "tonight": {
+      "translation": "今晚",
+      "source": "context",
+      "context": "今晚"
+    },
+    "of course": {
+      "translation": "当然",
+      "source": "context",
+      "context": "当然"
+    },
+    "such": {
+      "translation": "这样的",
+      "source": "context",
+      "context": "这样的"
+    },
+    "magic bullet": {
+      "translation": "灵丹妙药",
+      "source": "context",
+      "context": "灵丹妙药"
+    },
+    "unfortunately": {
+      "translation": "遗憾的是",
+      "source": "context",
+      "context": "遗憾的是"
+    },
+    "was": {
+      "translation": "是",
+      "source": "context",
+      "context": "是"
+    },
+    "sure": {
+      "translation": "确信",
+      "source": "context",
+      "context": "确信"
+    },
+    "would": {
+      "translation": "将会",
+      "source": "context",
+      "context": "将会"
+    },
+    "doing": {
+      "translation": "做",
+      "source": "context",
+      "context": "做"
+    },
+    "very": {
+      "translation": "非常",
+      "source": "context",
+      "context": "非常"
+    },
+    "ourselves": {
+      "translation": "我们自己",
+      "source": "context",
+      "context": "我们自己"
+    },
+    "them": {
+      "translation": "他们",
+      "source": "context",
+      "context": "他们"
+    },
+    "she": {
+      "translation": "她",
+      "source": "context",
+      "context": "她"
+    },
+    "fed information": {
+      "translation": "持续灌输信息",
+      "source": "context",
+      "context": "持续灌输信息"
+    },
+    "given": {
+      "translation": "给予",
+      "source": "context",
+      "context": "给予"
+    },
+    "continuous": {
+      "translation": "连续的",
+      "source": "context",
+      "context": "连续的"
+    },
+    "way": {
+      "translation": "方式",
+      "source": "context",
+      "context": "方式"
+    },
+    "argues": {
+      "translation": "主张；认为",
+      "source": "context",
+      "context": "主张；认为"
+    },
+    "there's": {
+      "translation": "有",
+      "source": "context",
+      "context": "有"
+    },
+    "no": {
+      "translation": "没有",
+      "source": "context",
+      "context": "没有"
+    },
+    "refers to": {
+      "translation": "指；指的是",
+      "source": "context",
+      "context": "指；指的是"
+    },
+    "simple": {
+      "translation": "简单的",
+      "source": "context",
+      "context": "简单的"
+    },
+    "solution": {
+      "translation": "解决办法",
+      "source": "context",
+      "context": "解决办法"
+    },
+    "problem": {
+      "translation": "问题",
+      "source": "context",
+      "context": "问题"
+    },
+    "that's": {
+      "translation": "那是",
+      "source": "context",
+      "context": "那是"
+    },
+    "doesn't": {
+      "translation": "不",
+      "source": "context",
+      "context": "不"
+    },
+    "exist": {
+      "translation": "存在",
+      "source": "context",
+      "context": "存在"
+    },
+    "it's": {
+      "translation": "它是",
+      "source": "context",
+      "context": "它是"
+    },
+    "quiz question": {
+      "translation": "测验问题",
+      "source": "context",
+      "context": "测验问题"
+    },
+    "asked": {
+      "translation": "问",
+      "source": "context",
+      "context": "问"
+    },
+    "seven": {
+      "translation": "七",
+      "source": "context",
+      "context": "七"
+    },
+    "said": {
+      "translation": "说",
+      "source": "context",
+      "context": "说"
+    },
+    "35%": {
+      "translation": "百分之三十五",
+      "source": "context",
+      "context": "百分之三十五"
+    },
+    "correct": {
+      "translation": "正确的",
+      "source": "context",
+      "context": "正确的"
+    },
+    "six": {
+      "translation": "六",
+      "source": "context",
+      "context": "六"
+    },
+    "by": {
+      "translation": "由；根据",
+      "source": "context",
+      "context": "由；根据"
+    },
+    "yougov": {
+      "translation": "英国民调机构",
+      "source": "context",
+      "context": "英国民调机构"
+    },
+    "study": {
+      "translation": "研究",
+      "source": "context",
+      "context": "研究"
+    },
+    "recap": {
+      "translation": "回顾；总结",
+      "source": "context",
+      "context": "回顾；总结"
+    },
+    "vocabulary": {
+      "translation": "词汇",
+      "source": "context",
+      "context": "词汇"
+    },
+    "learned": {
+      "translation": "学到的",
+      "source": "context",
+      "context": "学到的"
+    },
+    "starting": {
+      "translation": "以…开始",
+      "source": "context",
+      "context": "以…开始"
+    },
+    "products": {
+      "translation": "产品",
+      "source": "context",
+      "context": "产品"
+    },
+    "other": {
+      "translation": "其他的",
+      "source": "context",
+      "context": "其他的"
+    },
+    "feed": {
+      "translation": "持续提供",
+      "source": "context",
+      "context": "持续提供"
+    },
+    "information": {
+      "translation": "信息",
+      "source": "context",
+      "context": "信息"
+    },
+    "give": {
+      "translation": "给",
+      "source": "context",
+      "context": "给"
+    },
+    "bullet": {
+      "translation": "子弹（magic bullet灵丹妙药）",
+      "source": "context",
+      "context": "子弹（magic bullet灵丹妙药）"
+    },
+    "once again": {
+      "translation": "再一次",
+      "source": "context",
+      "context": "再一次"
+    },
+    "minutes": {
+      "translation": "分钟",
+      "source": "context",
+      "context": "分钟"
+    },
+    "up": {
+      "translation": "结束了",
+      "source": "context",
+      "context": "结束了"
+    },
+    "don't": {
+      "translation": "不要",
+      "source": "context",
+      "context": "不要"
+    },
+    "forget": {
+      "translation": "忘记",
+      "source": "context",
+      "context": "忘记"
+    },
+    "test": {
+      "translation": "测试；检验",
+      "source": "context",
+      "context": "测试；检验"
+    },
+    "worksheet": {
+      "translation": "练习表",
+      "source": "context",
+      "context": "练习表"
+    },
+    "website": {
+      "translation": "网站",
+      "source": "context",
+      "context": "网站"
+    },
+    "bbclearningenglish.com": {
+      "translation": "BBC英语学习网站",
+      "source": "context",
+      "context": "BBC英语学习网站"
+    },
+    "thanks": {
+      "translation": "谢谢",
+      "source": "context",
+      "context": "谢谢"
+    },
+    "joining": {
+      "translation": "加入；收看",
+      "source": "context",
+      "context": "加入；收看"
+    },
+    "goodbye": {
+      "translation": "再见",
+      "source": "context",
+      "context": "再见"
     },
     "saturated fats": {
       "translation": "fats that are thought to be worse for our health, often found in meat and dairy",
-      "source": "official"
-    },
-    "deep sleep": {
-      "translation": "stage of the sleep cycle when the brain is at its slowest and the body can rest and repair",
-      "source": "official"
-    },
-    "supplements": {
-      "translation": "tablets and other consumables that contain particular nutrients that you might not get in your everyday diet",
       "source": "official"
     },
     "feed information": {
       "translation": "give lots of information continuously",
       "source": "official"
     },
-    "magic bullet": {
-      "translation": "simple and effective solution, usually one that doesn't exist in reality",
-      "source": "official"
+    "nights": {
+      "translation": "夜晚的",
+      "source": "context",
+      "context": "夜晚的",
+      "phrase": "night's"
     },
-    "fats": {
-      "translation": "fats that are thought to be worse for our health, often found in meat and dairy",
-      "source": "official",
-      "phrase": "saturated fats"
+    "ive": {
+      "translation": "我已经",
+      "source": "context",
+      "context": "我已经",
+      "phrase": "i've"
     },
-    "saturated": {
-      "translation": "fats that are thought to be worse for our health, often found in meat and dairy",
-      "source": "official",
-      "phrase": "saturated fats"
+    "doaboutit": {
+      "translation": "应对它",
+      "source": "context",
+      "context": "应对它",
+      "phrase": "do about it"
+    },
+    "s": {
+      "translation": "吃什么睡得更好",
+      "source": "context",
+      "context": "吃什么睡得更好",
+      "phrase": "should you eat for a better night's sleep"
+    },
+    "shouldyoueatforabetternightssleep": {
+      "translation": "吃什么睡得更好",
+      "source": "context",
+      "context": "吃什么睡得更好",
+      "phrase": "should you eat for a better night's sleep"
+    },
+    "lets": {
+      "translation": "让我们",
+      "source": "context",
+      "context": "让我们",
+      "phrase": "let's"
+    },
+    "79": {
+      "translation": "七至九",
+      "source": "context",
+      "context": "七至九",
+      "phrase": "7–9"
+    },
+    "according": {
+      "translation": "根据",
+      "source": "context",
+      "context": "根据",
+      "phrase": "according to"
+    },
+    "accordingto": {
+      "translation": "根据",
+      "source": "context",
+      "context": "根据",
+      "phrase": "according to"
+    },
+    "going": {
+      "translation": "将会",
+      "source": "context",
+      "context": "将会",
+      "phrase": "going to"
+    },
+    "goingto": {
+      "translation": "将会",
+      "source": "context",
+      "context": "将会",
+      "phrase": "going to"
+    },
+    "findout": {
+      "translation": "查明",
+      "source": "context",
+      "context": "查明",
+      "phrase": "find out"
+    },
+    "out": {
+      "translation": "查明",
+      "source": "context",
+      "context": "查明",
+      "phrase": "find out"
+    },
+    "youve": {
+      "translation": "你已经",
+      "source": "context",
+      "context": "你已经",
+      "phrase": "you've"
+    },
+    "dosomelongtermstudies": {
+      "translation": "做长期研究",
+      "source": "context",
+      "context": "做长期研究",
+      "phrase": "do some long-term studies"
+    },
+    "term": {
+      "translation": "做长期研究",
+      "source": "context",
+      "context": "做长期研究",
+      "phrase": "do some long-term studies"
+    },
+    "mariepierre": {
+      "translation": "人名玛丽-皮埃尔",
+      "source": "context",
+      "context": "人名玛丽-皮埃尔",
+      "phrase": "marie-pierre"
+    },
+    "stonge": {
+      "translation": "人名圣翁热",
+      "source": "context",
+      "context": "人名圣翁热",
+      "phrase": "st-onge"
+    },
+    "animalbased": {
+      "translation": "动物性的",
+      "source": "context",
+      "context": "动物性的",
+      "phrase": "animal-based"
+    },
+    "plantbased": {
+      "translation": "植物性的",
+      "source": "context",
+      "context": "植物性的",
+      "phrase": "plant-based"
+    },
+    "atnight": {
+      "translation": "在夜里",
+      "source": "context",
+      "context": "在夜里",
+      "phrase": "at night"
+    },
+    "mediterraneanstyle": {
+      "translation": "地中海式的",
+      "source": "context",
+      "context": "地中海式的",
+      "phrase": "mediterranean-style"
+    },
+    "lots": {
+      "translation": "许多",
+      "source": "context",
+      "context": "许多",
+      "phrase": "lots of"
+    },
+    "lotsof": {
+      "translation": "许多",
+      "source": "context",
+      "context": "许多",
+      "phrase": "lots of"
+    },
+    "suchas": {
+      "translation": "例如",
+      "source": "context",
+      "context": "例如",
+      "phrase": "such as"
+    },
+    "saturatedfat": {
+      "translation": "饱和脂肪",
+      "source": "context",
+      "context": "饱和脂肪",
+      "phrase": "saturated fat"
+    },
+    "deep": {
+      "translation": "深度睡眠",
+      "source": "context",
+      "context": "深度睡眠",
+      "phrase": "deep sleep"
+    },
+    "deepsleep": {
+      "translation": "深度睡眠",
+      "source": "context",
+      "context": "深度睡眠",
+      "phrase": "deep sleep"
+    },
+    "havealotof": {
+      "translation": "有很多",
+      "source": "context",
+      "context": "有很多",
+      "phrase": "have a lot of"
+    },
+    "thereis": {
+      "translation": "有",
+      "source": "context",
+      "context": "有",
+      "phrase": "there is"
+    },
+    "forexample": {
+      "translation": "例如",
+      "source": "context",
+      "context": "例如",
+      "phrase": "for example"
+    },
+    "havebeenstudying": {
+      "translation": "一直在研究",
+      "source": "context",
+      "context": "一直在研究",
+      "phrase": "have been studying"
+    },
+    "kiwi": {
+      "translation": "猕猴桃",
+      "source": "context",
+      "context": "猕猴桃",
+      "phrase": "kiwi fruits"
+    },
+    "kiwifruits": {
+      "translation": "猕猴桃",
+      "source": "context",
+      "context": "猕猴桃",
+      "phrase": "kiwi fruits"
+    },
+    "cherry": {
+      "translation": "酸樱桃汁",
+      "source": "context",
+      "context": "酸樱桃汁",
+      "phrase": "tart cherry juice"
+    },
+    "juice": {
+      "translation": "酸樱桃汁",
+      "source": "context",
+      "context": "酸樱桃汁",
+      "phrase": "tart cherry juice"
+    },
+    "tart": {
+      "translation": "酸樱桃汁",
+      "source": "context",
+      "context": "酸樱桃汁",
+      "phrase": "tart cherry juice"
+    },
+    "tartcherryjuice": {
+      "translation": "酸樱桃汁",
+      "source": "context",
+      "context": "酸樱桃汁",
+      "phrase": "tart cherry juice"
+    },
+    "claim": {
+      "translation": "声称",
+      "source": "context",
+      "context": "声称",
+      "phrase": "claim to"
+    },
+    "claimto": {
+      "translation": "声称",
+      "source": "context",
+      "context": "声称",
+      "phrase": "claim to"
+    },
+    "focusing": {
+      "translation": "专注于",
+      "source": "context",
+      "context": "专注于",
+      "phrase": "focusing on"
+    },
+    "focusingon": {
+      "translation": "专注于",
+      "source": "context",
+      "context": "专注于",
+      "phrase": "focusing on"
+    },
+    "rather": {
+      "translation": "而不是",
+      "source": "context",
+      "context": "而不是",
+      "phrase": "rather than"
+    },
+    "ratherthan": {
+      "translation": "而不是",
+      "source": "context",
+      "context": "而不是",
+      "phrase": "rather than"
+    },
+    "heres": {
+      "translation": "这是",
+      "source": "context",
+      "context": "这是",
+      "phrase": "here's"
+    },
+    "allie": {
+      "translation": "人名",
+      "source": "context",
+      "context": "人名",
+      "phrase": "allie hare"
+    },
+    "alliehare": {
+      "translation": "人名",
+      "source": "context",
+      "context": "人名",
+      "phrase": "allie hare"
+    },
+    "hare": {
+      "translation": "人名",
+      "source": "context",
+      "context": "人名",
+      "phrase": "allie hare"
+    },
+    "lookingfor": {
+      "translation": "寻找",
+      "source": "context",
+      "context": "寻找",
+      "phrase": "looking for"
+    },
+    "youknow": {
+      "translation": "你知道",
+      "source": "context",
+      "context": "你知道",
+      "phrase": "you know"
+    },
+    "fed": {
+      "translation": "被灌输",
+      "source": "context",
+      "context": "被灌输",
+      "phrase": "we're fed"
+    },
+    "re": {
+      "translation": "被灌输",
+      "source": "context",
+      "context": "被灌输",
+      "phrase": "we're fed"
+    },
+    "werefed": {
+      "translation": "被灌输",
+      "source": "context",
+      "context": "被灌输",
+      "phrase": "we're fed"
+    },
+    "alotof": {
+      "translation": "很多",
+      "source": "context",
+      "context": "很多",
+      "phrase": "a lot of"
+    },
+    "aren": {
+      "translation": "是吧",
+      "source": "context",
+      "context": "是吧",
+      "phrase": "aren't we"
+    },
+    "arentwe": {
+      "translation": "是吧",
+      "source": "context",
+      "context": "是吧",
+      "phrase": "aren't we"
+    },
+    "t": {
+      "translation": "是吧",
+      "source": "context",
+      "context": "是吧",
+      "phrase": "aren't we"
+    },
+    "media": {
+      "translation": "社交媒体",
+      "source": "context",
+      "context": "社交媒体",
+      "phrase": "social media"
+    },
+    "social": {
+      "translation": "社交媒体",
+      "source": "context",
+      "context": "社交媒体",
+      "phrase": "social media"
+    },
+    "socialmedia": {
+      "translation": "社交媒体",
+      "source": "context",
+      "context": "社交媒体",
+      "phrase": "social media"
+    },
+    "course": {
+      "translation": "当然",
+      "source": "context",
+      "context": "当然",
+      "phrase": "of course"
+    },
+    "ofcourse": {
+      "translation": "当然",
+      "source": "context",
+      "context": "当然",
+      "phrase": "of course"
+    },
+    "magic": {
+      "translation": "灵丹妙药",
+      "source": "context",
+      "context": "灵丹妙药",
+      "phrase": "magic bullet"
+    },
+    "magicbullet": {
+      "translation": "灵丹妙药",
+      "source": "context",
+      "context": "灵丹妙药",
+      "phrase": "magic bullet"
+    },
+    "fedinformation": {
+      "translation": "持续灌输信息",
+      "source": "context",
+      "context": "持续灌输信息",
+      "phrase": "fed information"
+    },
+    "theres": {
+      "translation": "有",
+      "source": "context",
+      "context": "有",
+      "phrase": "there's"
+    },
+    "refers": {
+      "translation": "指；指的是",
+      "source": "context",
+      "context": "指；指的是",
+      "phrase": "refers to"
+    },
+    "refersto": {
+      "translation": "指；指的是",
+      "source": "context",
+      "context": "指；指的是",
+      "phrase": "refers to"
+    },
+    "thats": {
+      "translation": "那是",
+      "source": "context",
+      "context": "那是",
+      "phrase": "that's"
+    },
+    "doesnt": {
+      "translation": "不",
+      "source": "context",
+      "context": "不",
+      "phrase": "doesn't"
+    },
+    "its": {
+      "translation": "它是",
+      "source": "context",
+      "context": "它是",
+      "phrase": "it's"
+    },
+    "quizquestion": {
+      "translation": "测验问题",
+      "source": "context",
+      "context": "测验问题",
+      "phrase": "quiz question"
+    },
+    "35": {
+      "translation": "百分之三十五",
+      "source": "context",
+      "context": "百分之三十五",
+      "phrase": "35%"
+    },
+    "again": {
+      "translation": "再一次",
+      "source": "context",
+      "context": "再一次",
+      "phrase": "once again"
+    },
+    "once": {
+      "translation": "再一次",
+      "source": "context",
+      "context": "再一次",
+      "phrase": "once again"
+    },
+    "onceagain": {
+      "translation": "再一次",
+      "source": "context",
+      "context": "再一次",
+      "phrase": "once again"
+    },
+    "dont": {
+      "translation": "不要",
+      "source": "context",
+      "context": "不要",
+      "phrase": "don't"
+    },
+    "bbclearningenglishcom": {
+      "translation": "BBC英语学习网站",
+      "source": "context",
+      "context": "BBC英语学习网站",
+      "phrase": "bbclearningenglish.com"
     },
     "saturatedfats": {
       "translation": "fats that are thought to be worse for our health, often found in meat and dairy",
       "source": "official",
       "phrase": "saturated fats"
     },
-    "deep": {
-      "translation": "stage of the sleep cycle when the brain is at its slowest and the body can rest and repair",
-      "source": "official",
-      "phrase": "deep sleep"
-    },
-    "deepsleep": {
-      "translation": "stage of the sleep cycle when the brain is at its slowest and the body can rest and repair",
-      "source": "official",
-      "phrase": "deep sleep"
-    },
-    "sleep": {
-      "translation": "stage of the sleep cycle when the brain is at its slowest and the body can rest and repair",
-      "source": "official",
-      "phrase": "deep sleep"
-    },
-    "feed": {
-      "translation": "give lots of information continuously",
-      "source": "official",
-      "phrase": "feed information"
-    },
     "feedinformation": {
       "translation": "give lots of information continuously",
       "source": "official",
       "phrase": "feed information"
-    },
-    "information": {
-      "translation": "give lots of information continuously",
-      "source": "official",
-      "phrase": "feed information"
-    },
-    "bullet": {
-      "translation": "simple and effective solution, usually one that doesn't exist in reality",
-      "source": "official",
-      "phrase": "magic bullet"
-    },
-    "magic": {
-      "translation": "simple and effective solution, usually one that doesn't exist in reality",
-      "source": "official",
-      "phrase": "magic bullet"
-    },
-    "magicbullet": {
-      "translation": "simple and effective solution, usually one that doesn't exist in reality",
-      "source": "official",
-      "phrase": "magic bullet"
     }
   }
 }

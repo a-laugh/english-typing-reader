@@ -181,76 +181,3055 @@
       "definition": "a strong desire for"
     }
   ],
-  "context_glossary": {},
-  "dict": {
+  "context_glossary": {
+    "Hi": {
+      "meaning": "嗨"
+    },
+    "Phil": {
+      "meaning": "菲尔，人名"
+    },
+    "Georgie": {
+      "meaning": "乔吉，人名"
+    },
+    "I've": {
+      "meaning": "I have 的缩写"
+    },
+    "got": {
+      "meaning": "有"
+    },
+    "a": {
+      "meaning": "一个"
+    },
+    "question": {
+      "meaning": "问题"
+    },
+    "for": {
+      "meaning": "给"
+    },
+    "you": {
+      "meaning": "你"
+    },
+    "Do": {
+      "meaning": "助动词"
+    },
+    "own": {
+      "meaning": "拥有"
+    },
+    "anything": {
+      "meaning": "任何东西"
+    },
+    "made": {
+      "meaning": "制造的"
+    },
+    "of": {
+      "meaning": "由…组成"
+    },
+    "gold": {
+      "meaning": "黄金"
+    },
+    "Well": {
+      "meaning": "嗯"
+    },
+    "at": {
+      "meaning": "在"
+    },
+    "the": {
+      "meaning": "定冠词"
+    },
+    "moment": {
+      "meaning": "此刻"
+    },
+    "I'm": {
+      "meaning": "I am 的缩写"
+    },
+    "wearing": {
+      "meaning": "戴着"
+    },
+    "lot": {
+      "meaning": "许多"
+    },
+    "gold-coloured": {
+      "meaning": "金色的"
+    },
+    "jewellery": {
+      "meaning": "首饰"
+    },
+    "but": {
+      "meaning": "但是"
+    },
+    "not": {
+      "meaning": "不"
+    },
+    "sure": {
+      "meaning": "确定"
+    },
+    "exactly": {
+      "meaning": "确切地"
+    },
+    "how": {
+      "meaning": "多少/如何"
+    },
+    "much": {
+      "meaning": "多"
+    },
+    "it": {
+      "meaning": "它"
+    },
+    "is": {
+      "meaning": "是"
+    },
+    "OK": {
+      "meaning": "好的"
+    },
+    "don't": {
+      "meaning": "do not 的缩写"
+    },
+    "think": {
+      "meaning": "认为"
+    },
+    "Beyond": {
+      "meaning": "除…之外"
+    },
+    "and": {
+      "meaning": "和"
+    },
+    "other": {
+      "meaning": "其他的"
+    },
+    "personal": {
+      "meaning": "个人的"
+    },
+    "items": {
+      "meaning": "物品"
+    },
+    "bought": {
+      "meaning": "买（过去分词）"
+    },
+    "sold": {
+      "meaning": "卖（过去分词）"
+    },
+    "by": {
+      "meaning": "被"
+    },
+    "investors": {
+      "meaning": "投资者"
+    },
+    "banks": {
+      "meaning": "银行"
+    },
+    "price": {
+      "meaning": "价格"
+    },
+    "has": {
+      "meaning": "助动词"
+    },
+    "always": {
+      "meaning": "一直"
+    },
+    "gone": {
+      "meaning": "去（过去分词）"
+    },
+    "up": {
+      "meaning": "上涨"
+    },
+    "down": {
+      "meaning": "下跌"
+    },
+    "in": {
+      "meaning": "在…里"
+    },
+    "2026": {
+      "meaning": "2026年"
+    },
+    "reached": {
+      "meaning": "达到"
+    },
+    "its": {
+      "meaning": "它的"
+    },
+    "highest": {
+      "meaning": "最高的"
+    },
+    "ever": {
+      "meaning": "曾经"
+    },
+    "In this episode of 6 Minute English": {
+      "meaning": "在本期6分钟英语"
+    },
+    "we'll": {
+      "meaning": "we will 的缩写"
+    },
+    "be": {
+      "meaning": "将"
+    },
+    "talking": {
+      "meaning": "谈论"
+    },
+    "about": {
+      "meaning": "关于"
+    },
+    "became": {
+      "meaning": "成为"
+    },
+    "valuable": {
+      "meaning": "有价值的"
+    },
+    "investment": {
+      "meaning": "投资"
+    },
+    "asking": {
+      "meaning": "问"
+    },
+    "why": {
+      "meaning": "为什么"
+    },
+    "people": {
+      "meaning": "人们"
+    },
+    "buy": {
+      "meaning": "购买"
+    },
+    "Let's": {
+      "meaning": "let us 的缩写"
+    },
+    "start": {
+      "meaning": "开始"
+    },
+    "with": {
+      "meaning": "和…一起"
+    },
+    "our": {
+      "meaning": "我们的"
+    },
+    "quiz": {
+      "meaning": "测验"
+    },
+    "Gold is a metal that's extracted or dug up from under the ground in mines": {
+      "meaning": "金是从地下矿中开采的金属"
+    },
+    "extracted": {
+      "meaning": "开采"
+    },
+    "or": {
+      "meaning": "或者"
+    },
+    "dug up": {
+      "meaning": "挖出"
+    },
+    "from": {
+      "meaning": "从"
+    },
+    "under": {
+      "meaning": "在…下面"
+    },
+    "ground": {
+      "meaning": "地面"
+    },
+    "mines": {
+      "meaning": "矿"
+    },
+    "over": {
+      "meaning": "超过"
+    },
+    "50,000": {
+      "meaning": "5万"
+    },
+    "tonnes": {
+      "meaning": "吨"
+    },
+    "100,000": {
+      "meaning": "10万"
+    },
+    "200,000": {
+      "meaning": "20万"
+    },
+    "have": {
+      "meaning": "有"
+    },
+    "absolutely": {
+      "meaning": "绝对"
+    },
+    "no": {
+      "meaning": "没有"
+    },
+    "idea": {
+      "meaning": "想法"
+    },
+    "going": {
+      "meaning": "将要"
+    },
+    "to": {
+      "meaning": "到"
+    },
+    "go": {
+      "meaning": "选"
+    },
+    "c": {
+      "meaning": "选项c"
+    },
+    "we'll give you the answer at the end of the programme": {
+      "meaning": "节目最后揭晓答案"
+    },
+    "answer": {
+      "meaning": "答案"
+    },
+    "end": {
+      "meaning": "结尾"
+    },
+    "programme": {
+      "meaning": "节目"
+    },
+    "So": {
+      "meaning": "那么"
+    },
+    "we've": {
+      "meaning": "we have 的缩写"
+    },
+    "been": {
+      "meaning": "一直"
+    },
+    "using": {
+      "meaning": "使用"
+    },
+    "thousands": {
+      "meaning": "数千"
+    },
+    "years": {
+      "meaning": "年"
+    },
+    "did": {
+      "meaning": "助动词"
+    },
+    "it start": {
+      "meaning": "开始"
+    },
+    "before": {
+      "meaning": "在…之前"
+    },
+    "money": {
+      "meaning": "钱"
+    },
+    "was": {
+      "meaning": "是（过去式）"
+    },
+    "paper": {
+      "meaning": "纸"
+    },
+    "plastic": {
+      "meaning": "塑料"
+    },
+    "just": {
+      "meaning": "只是"
+    },
+    "numbers": {
+      "meaning": "数字"
+    },
+    "your": {
+      "meaning": "你的"
+    },
+    "bank": {
+      "meaning": "银行"
+    },
+    "account": {
+      "meaning": "账户"
+    },
+    "actually": {
+      "meaning": "实际上"
+    },
+    "experts": {
+      "meaning": "专家"
+    },
+    "discovered": {
+      "meaning": "发现"
+    },
+    "coins": {
+      "meaning": "硬币"
+    },
+    "that": {
+      "meaning": "那个"
+    },
+    "are": {
+      "meaning": "是"
+    },
+    "thought": {
+      "meaning": "被认为"
+    },
+    "were": {
+      "meaning": "是（过去式）"
+    },
+    "used": {
+      "meaning": "被使用"
+    },
+    "because": {
+      "meaning": "因为"
+    },
+    "metal": {
+      "meaning": "金属"
+    },
+    "easier": {
+      "meaning": "更容易"
+    },
+    "carry": {
+      "meaning": "携带"
+    },
+    "trade": {
+      "meaning": "交易"
+    },
+    "than": {
+      "meaning": "比"
+    },
+    "things": {
+      "meaning": "东西"
+    },
+    "like": {
+      "meaning": "比如"
+    },
+    "cattle": {
+      "meaning": "牲口"
+    },
+    "timber": {
+      "meaning": "木材"
+    },
+    "now": {
+      "meaning": "现在"
+    },
+    "isn't": {
+      "meaning": "is not 的缩写"
+    },
+    "literally": {
+      "meaning": "字面上"
+    },
+    "so": {
+      "meaning": "所以"
+    },
+    "It's": {
+      "meaning": "它是"
+    },
+    "good": {
+      "meaning": "好的"
+    },
+    "even though": {
+      "meaning": "即使"
+    },
+    "still": {
+      "meaning": "仍然"
+    },
+    "financial": {
+      "meaning": "金融的"
+    },
     "asset": {
-      "translation": "something of financial value that can be sold for money",
-      "source": "official"
+      "meaning": "有价值的资产"
     },
-    "safe haven": {
-      "translation": "something or somewhere protected from harm or loss",
-      "source": "official"
+    "something": {
+      "meaning": "某物"
     },
-    "out of thin air": {
-      "translation": "from nothing or nowhere",
-      "source": "official"
+    "could": {
+      "meaning": "可以"
     },
-    "alchemy": {
-      "translation": "ancient study combining elements of chemistry and mysticism, which attempted to do impossible things like transforming ordinary metals into gold",
-      "source": "official"
+    "times": {
+      "meaning": "时期"
     },
-    "ethereal": {
-      "translation": "seemingly unreal",
-      "source": "official"
+    "crisis": {
+      "meaning": "危机"
     },
-    "a hankering for": {
-      "translation": "a strong desire for",
-      "source": "official"
-    },
-    "haven": {
-      "translation": "something or somewhere protected from harm or loss",
-      "source": "official",
-      "phrase": "safe haven"
+    "thought of as": {
+      "meaning": "被视为"
     },
     "safe": {
-      "translation": "something or somewhere protected from harm or loss",
-      "source": "official",
+      "meaning": "安全的"
+    },
+    "listen": {
+      "meaning": "听"
+    },
+    "expert": {
+      "meaning": "专家"
+    },
+    "explaining": {
+      "meaning": "解释"
+    },
+    "more": {
+      "meaning": "更多"
+    },
+    "BBC World Service": {
+      "meaning": "BBC国际频道"
+    },
+    "safe haven": {
+      "meaning": "避险资产"
+    },
+    "connected": {
+      "meaning": "有联系的"
+    },
+    "one": {
+      "meaning": "一个"
+    },
+    "particular": {
+      "meaning": "特定的"
+    },
+    "government": {
+      "meaning": "政府"
+    },
+    "economy": {
+      "meaning": "经济"
+    },
+    "market": {
+      "meaning": "市场"
+    },
+    "fact": {
+      "meaning": "事实"
+    },
+    "neutral": {
+      "meaning": "中立的"
+    },
+    "means": {
+      "meaning": "意味着"
+    },
+    "perceived": {
+      "meaning": "被认为"
+    },
+    "store of value": {
+      "meaning": "价值储藏"
+    },
+    "longer term": {
+      "meaning": "更长期"
+    },
+    "describes": {
+      "meaning": "描述"
+    },
+    "protected": {
+      "meaning": "受保护的"
+    },
+    "harm": {
+      "meaning": "伤害"
+    },
+    "danger": {
+      "meaning": "危险"
+    },
+    "financial terms": {
+      "meaning": "金融术语上"
+    },
+    "fall in value": {
+      "meaning": "价值下跌"
+    },
+    "unlike": {
+      "meaning": "不像"
+    },
+    "dollars": {
+      "meaning": "美元"
+    },
+    "pounds": {
+      "meaning": "英镑"
+    },
+    "example": {
+      "meaning": "例子"
+    },
+    "country": {
+      "meaning": "国家"
+    },
+    "get": {
+      "meaning": "得到"
+    },
+    "more or less": {
+      "meaning": "或多或少"
+    },
+    "fixed": {
+      "meaning": "固定的"
+    },
+    "amount": {
+      "meaning": "数量"
+    },
+    "print": {
+      "meaning": "印刷"
+    },
+    "professor": {
+      "meaning": "教授"
+    },
+    "economic": {
+      "meaning": "经济的"
+    },
+    "social": {
+      "meaning": "社会的"
+    },
+    "history": {
+      "meaning": "历史"
+    },
+    "explains": {
+      "meaning": "解释"
+    },
+    "created": {
+      "meaning": "创造"
+    },
+    "fabricated": {
+      "meaning": "凭空造出"
+    },
+    "out of thin air": {
+      "meaning": "凭空"
+    },
+    "through": {
+      "meaning": "通过"
+    },
+    "alchemy": {
+      "meaning": "炼金术"
+    },
+    "sort of": {
+      "meaning": "有点"
+    },
+    "controls": {
+      "meaning": "控制"
+    },
+    "supply": {
+      "meaning": "供应"
+    },
+    "sustains": {
+      "meaning": "维持"
+    },
+    "underlying": {
+      "meaning": "根本的"
+    },
+    "behind": {
+      "meaning": "在…背后"
+    },
+    "demand": {
+      "meaning": "需求"
+    },
+    "expression": {
+      "meaning": "表达方式"
+    },
+    "meaning": {
+      "meaning": "意思是"
+    },
+    "make": {
+      "meaning": "制造"
+    },
+    "says": {
+      "meaning": "说"
+    },
+    "ancient": {
+      "meaning": "古代的"
+    },
+    "kind of": {
+      "meaning": "一种"
+    },
+    "chemistry": {
+      "meaning": "化学"
+    },
+    "attempted": {
+      "meaning": "试图"
+    },
+    "impossible": {
+      "meaning": "不可能的"
+    },
+    "turn": {
+      "meaning": "变成"
+    },
+    "ordinary": {
+      "meaning": "普通的"
+    },
+    "metals": {
+      "meaning": "金属"
+    },
+    "into": {
+      "meaning": "变成"
+    },
+    "magically": {
+      "meaning": "神奇地"
+    },
+    "lots of": {
+      "meaning": "许多"
+    },
+    "want": {
+      "meaning": "想要"
+    },
+    "increases": {
+      "meaning": "上涨"
+    },
+    "Understood": {
+      "meaning": "明白了"
+    },
+    "Now": {
+      "meaning": "那么"
+    },
+    "prices": {
+      "meaning": "价格"
+    },
+    "hit": {
+      "meaning": "达到"
+    },
+    "all-time": {
+      "meaning": "史上的"
+    },
+    "high": {
+      "meaning": "高点"
+    },
+    "early": {
+      "meaning": "早期"
+    },
+    "what's going on": {
+      "meaning": "发生了什么"
+    },
+    "mentioned": {
+      "meaning": "提到"
+    },
+    "series": {
+      "meaning": "一系列"
+    },
+    "world": {
+      "meaning": "世界"
+    },
+    "events": {
+      "meaning": "事件"
+    },
+    "wars": {
+      "meaning": "战争"
+    },
+    "Ukraine": {
+      "meaning": "乌克兰"
+    },
+    "Middle East": {
+      "meaning": "中东"
+    },
+    "politics": {
+      "meaning": "政治"
+    },
+    "US": {
+      "meaning": "美国"
+    },
+    "imposing": {
+      "meaning": "实施"
+    },
+    "tariffs": {
+      "meaning": "关税"
+    },
+    "international": {
+      "meaning": "国际的"
+    },
+    "products": {
+      "meaning": "产品"
+    },
+    "since": {
+      "meaning": "自…以来"
+    },
+    "peak": {
+      "meaning": "峰值"
+    },
+    "January": {
+      "meaning": "一月"
+    },
+    "dropped": {
+      "meaning": "下跌"
+    },
+    "bit": {
+      "meaning": "一点"
+    },
+    "fall": {
+      "meaning": "下跌"
+    },
+    "mean": {
+      "meaning": "意味着"
+    },
+    "won't": {
+      "meaning": "不会"
+    },
+    "invest": {
+      "meaning": "投资"
+    },
+    "future": {
+      "meaning": "未来"
+    },
+    "likely": {
+      "meaning": "很可能"
+    },
+    "go up": {
+      "meaning": "上涨"
+    },
+    "again": {
+      "meaning": "再次"
+    },
+    "attractive": {
+      "meaning": "有吸引力的"
+    },
+    "during": {
+      "meaning": "在…期间"
+    },
+    "uncertain": {
+      "meaning": "不确定的"
+    },
+    "hear": {
+      "meaning": "听听"
+    },
+    "strategist": {
+      "meaning": "策略师"
+    },
+    "John Reade": {
+      "meaning": "人名"
+    },
+    "much of": {
+      "meaning": "大部分"
+    },
+    "live in": {
+      "meaning": "居住在"
+    },
+    "virtual": {
+      "meaning": "虚拟的"
+    },
+    "online": {
+      "meaning": "在线的"
+    },
+    "disappears": {
+      "meaning": "消失"
+    },
+    "whereas": {
+      "meaning": "然而"
+    },
+    "solid": {
+      "meaning": "实在的"
+    },
+    "dependable": {
+      "meaning": "可靠的"
+    },
+    "know": {
+      "meaning": "你知道"
+    },
+    "maybe": {
+      "meaning": "也许"
+    },
+    "a little bit": {
+      "meaning": "有点"
+    },
+    "old fashioned": {
+      "meaning": "老式的"
+    },
+    "traditional": {
+      "meaning": "传统的"
+    },
+    "values": {
+      "meaning": "价值观"
+    },
+    "rather than": {
+      "meaning": "而不是"
+    },
+    "super": {
+      "meaning": "极其"
+    },
+    "modern": {
+      "meaning": "现代的"
+    },
+    "changeable": {
+      "meaning": "多变的"
+    },
+    "doesn't": {
+      "meaning": "不"
+    },
+    "seem": {
+      "meaning": "似乎"
+    },
+    "real": {
+      "meaning": "真实的"
+    },
+    "ethereal": {
+      "meaning": "虚幻的、不真实"
+    },
+    "a hankering for": {
+      "meaning": "对…的强烈渴望"
+    },
+    "strong desire": {
+      "meaning": "强烈渴望"
+    },
+    "time for": {
+      "meaning": "到…的时候"
+    },
+    "quiz question": {
+      "meaning": "测验问题"
+    },
+    "asked": {
+      "meaning": "问"
+    },
+    "how much": {
+      "meaning": "多少"
+    },
+    "mined": {
+      "meaning": "开采"
+    },
+    "to date": {
+      "meaning": "到目前为止"
+    },
+    "said": {
+      "meaning": "说"
+    },
+    "correct": {
+      "meaning": "正确的"
+    },
+    "recap": {
+      "meaning": "回顾总结"
+    },
+    "vocabulary": {
+      "meaning": "词汇"
+    },
+    "we": {
+      "meaning": "我们"
+    },
+    "learnt": {
+      "meaning": "学会"
+    },
+    "this": {
+      "meaning": "这"
+    },
+    "starting": {
+      "meaning": "从…开始"
+    },
+    "can": {
+      "meaning": "能够"
+    },
+    "somewhere": {
+      "meaning": "某处"
+    },
+    "loss": {
+      "meaning": "损失"
+    },
+    "nothing": {
+      "meaning": "无、没有东西"
+    },
+    "making": {
+      "meaning": "制作"
+    },
+    "if": {
+      "meaning": "如果"
+    },
+    "strong": {
+      "meaning": "强烈的"
+    },
+    "desire": {
+      "meaning": "渴望"
+    },
+    "once": {
+      "meaning": "一次"
+    },
+    "six": {
+      "meaning": "六"
+    },
+    "minutes": {
+      "meaning": "分钟"
+    },
+    "practice": {
+      "meaning": "练习"
+    },
+    "test": {
+      "meaning": "测试"
+    },
+    "learned": {
+      "meaning": "学到的"
+    },
+    "worksheet": {
+      "meaning": "练习题"
+    },
+    "on": {
+      "meaning": "在…上"
+    },
+    "website": {
+      "meaning": "网站"
+    },
+    "thank": {
+      "meaning": "感谢"
+    },
+    "joining": {
+      "meaning": "加入"
+    },
+    "us": {
+      "meaning": "我们"
+    },
+    "goodbye": {
+      "meaning": "再见"
+    }
+  },
+  "dict": {
+    "hi": {
+      "translation": "嗨",
+      "source": "context",
+      "context": "嗨"
+    },
+    "phil": {
+      "translation": "菲尔，人名",
+      "source": "context",
+      "context": "菲尔，人名"
+    },
+    "georgie": {
+      "translation": "乔吉，人名",
+      "source": "context",
+      "context": "乔吉，人名"
+    },
+    "i've": {
+      "translation": "I have 的缩写",
+      "source": "context",
+      "context": "I have 的缩写"
+    },
+    "got": {
+      "translation": "有",
+      "source": "context",
+      "context": "有"
+    },
+    "a": {
+      "translation": "一个",
+      "source": "context",
+      "context": "一个"
+    },
+    "question": {
+      "translation": "问题",
+      "source": "context",
+      "context": "问题"
+    },
+    "for": {
+      "translation": "给",
+      "source": "context",
+      "context": "给"
+    },
+    "you": {
+      "translation": "你",
+      "source": "context",
+      "context": "你"
+    },
+    "do": {
+      "translation": "助动词",
+      "source": "context",
+      "context": "助动词"
+    },
+    "own": {
+      "translation": "拥有",
+      "source": "context",
+      "context": "拥有"
+    },
+    "anything": {
+      "translation": "任何东西",
+      "source": "context",
+      "context": "任何东西"
+    },
+    "made": {
+      "translation": "制造的",
+      "source": "context",
+      "context": "制造的"
+    },
+    "of": {
+      "translation": "由…组成",
+      "source": "context",
+      "context": "由…组成"
+    },
+    "gold": {
+      "translation": "黄金",
+      "source": "context",
+      "context": "黄金"
+    },
+    "well": {
+      "translation": "嗯",
+      "source": "context",
+      "context": "嗯"
+    },
+    "at": {
+      "translation": "在",
+      "source": "context",
+      "context": "在"
+    },
+    "the": {
+      "translation": "定冠词",
+      "source": "context",
+      "context": "定冠词"
+    },
+    "moment": {
+      "translation": "此刻",
+      "source": "context",
+      "context": "此刻"
+    },
+    "i'm": {
+      "translation": "I am 的缩写",
+      "source": "context",
+      "context": "I am 的缩写"
+    },
+    "wearing": {
+      "translation": "戴着",
+      "source": "context",
+      "context": "戴着"
+    },
+    "lot": {
+      "translation": "许多",
+      "source": "context",
+      "context": "许多"
+    },
+    "gold-coloured": {
+      "translation": "金色的",
+      "source": "context",
+      "context": "金色的"
+    },
+    "jewellery": {
+      "translation": "首饰",
+      "source": "context",
+      "context": "首饰"
+    },
+    "but": {
+      "translation": "但是",
+      "source": "context",
+      "context": "但是"
+    },
+    "not": {
+      "translation": "不",
+      "source": "context",
+      "context": "不"
+    },
+    "sure": {
+      "translation": "确定",
+      "source": "context",
+      "context": "确定"
+    },
+    "exactly": {
+      "translation": "确切地",
+      "source": "context",
+      "context": "确切地"
+    },
+    "how": {
+      "translation": "多少/如何",
+      "source": "context",
+      "context": "多少/如何"
+    },
+    "much": {
+      "translation": "多",
+      "source": "context",
+      "context": "多"
+    },
+    "it": {
+      "translation": "它",
+      "source": "context",
+      "context": "它"
+    },
+    "is": {
+      "translation": "是",
+      "source": "context",
+      "context": "是"
+    },
+    "ok": {
+      "translation": "好的",
+      "source": "context",
+      "context": "好的"
+    },
+    "don't": {
+      "translation": "do not 的缩写",
+      "source": "context",
+      "context": "do not 的缩写"
+    },
+    "think": {
+      "translation": "认为",
+      "source": "context",
+      "context": "认为"
+    },
+    "beyond": {
+      "translation": "除…之外",
+      "source": "context",
+      "context": "除…之外"
+    },
+    "and": {
+      "translation": "和",
+      "source": "context",
+      "context": "和"
+    },
+    "other": {
+      "translation": "其他的",
+      "source": "context",
+      "context": "其他的"
+    },
+    "personal": {
+      "translation": "个人的",
+      "source": "context",
+      "context": "个人的"
+    },
+    "items": {
+      "translation": "物品",
+      "source": "context",
+      "context": "物品"
+    },
+    "bought": {
+      "translation": "买（过去分词）",
+      "source": "context",
+      "context": "买（过去分词）"
+    },
+    "sold": {
+      "translation": "卖（过去分词）",
+      "source": "context",
+      "context": "卖（过去分词）"
+    },
+    "by": {
+      "translation": "被",
+      "source": "context",
+      "context": "被"
+    },
+    "investors": {
+      "translation": "投资者",
+      "source": "context",
+      "context": "投资者"
+    },
+    "banks": {
+      "translation": "银行",
+      "source": "context",
+      "context": "银行"
+    },
+    "price": {
+      "translation": "价格",
+      "source": "context",
+      "context": "价格"
+    },
+    "has": {
+      "translation": "助动词",
+      "source": "context",
+      "context": "助动词"
+    },
+    "always": {
+      "translation": "一直",
+      "source": "context",
+      "context": "一直"
+    },
+    "gone": {
+      "translation": "去（过去分词）",
+      "source": "context",
+      "context": "去（过去分词）"
+    },
+    "up": {
+      "translation": "上涨",
+      "source": "context",
+      "context": "上涨"
+    },
+    "down": {
+      "translation": "下跌",
+      "source": "context",
+      "context": "下跌"
+    },
+    "in": {
+      "translation": "在…里",
+      "source": "context",
+      "context": "在…里"
+    },
+    "2026": {
+      "translation": "2026年",
+      "source": "context",
+      "context": "2026年"
+    },
+    "reached": {
+      "translation": "达到",
+      "source": "context",
+      "context": "达到"
+    },
+    "its": {
+      "translation": "它的",
+      "source": "context",
+      "context": "它的"
+    },
+    "highest": {
+      "translation": "最高的",
+      "source": "context",
+      "context": "最高的"
+    },
+    "ever": {
+      "translation": "曾经",
+      "source": "context",
+      "context": "曾经"
+    },
+    "in this episode of 6 minute english": {
+      "translation": "在本期6分钟英语",
+      "source": "context",
+      "context": "在本期6分钟英语"
+    },
+    "we'll": {
+      "translation": "we will 的缩写",
+      "source": "context",
+      "context": "we will 的缩写"
+    },
+    "be": {
+      "translation": "将",
+      "source": "context",
+      "context": "将"
+    },
+    "talking": {
+      "translation": "谈论",
+      "source": "context",
+      "context": "谈论"
+    },
+    "about": {
+      "translation": "关于",
+      "source": "context",
+      "context": "关于"
+    },
+    "became": {
+      "translation": "成为",
+      "source": "context",
+      "context": "成为"
+    },
+    "valuable": {
+      "translation": "有价值的",
+      "source": "context",
+      "context": "有价值的"
+    },
+    "investment": {
+      "translation": "投资",
+      "source": "context",
+      "context": "投资"
+    },
+    "asking": {
+      "translation": "问",
+      "source": "context",
+      "context": "问"
+    },
+    "why": {
+      "translation": "为什么",
+      "source": "context",
+      "context": "为什么"
+    },
+    "people": {
+      "translation": "人们",
+      "source": "context",
+      "context": "人们"
+    },
+    "buy": {
+      "translation": "购买",
+      "source": "context",
+      "context": "购买"
+    },
+    "let's": {
+      "translation": "let us 的缩写",
+      "source": "context",
+      "context": "let us 的缩写"
+    },
+    "start": {
+      "translation": "开始",
+      "source": "context",
+      "context": "开始"
+    },
+    "with": {
+      "translation": "和…一起",
+      "source": "context",
+      "context": "和…一起"
+    },
+    "our": {
+      "translation": "我们的",
+      "source": "context",
+      "context": "我们的"
+    },
+    "quiz": {
+      "translation": "测验",
+      "source": "context",
+      "context": "测验"
+    },
+    "gold is a metal that's extracted or dug up from under the ground in mines": {
+      "translation": "金是从地下矿中开采的金属",
+      "source": "context",
+      "context": "金是从地下矿中开采的金属"
+    },
+    "extracted": {
+      "translation": "开采",
+      "source": "context",
+      "context": "开采"
+    },
+    "or": {
+      "translation": "或者",
+      "source": "context",
+      "context": "或者"
+    },
+    "dug up": {
+      "translation": "挖出",
+      "source": "context",
+      "context": "挖出"
+    },
+    "from": {
+      "translation": "从",
+      "source": "context",
+      "context": "从"
+    },
+    "under": {
+      "translation": "在…下面",
+      "source": "context",
+      "context": "在…下面"
+    },
+    "ground": {
+      "translation": "地面",
+      "source": "context",
+      "context": "地面"
+    },
+    "mines": {
+      "translation": "矿",
+      "source": "context",
+      "context": "矿"
+    },
+    "over": {
+      "translation": "超过",
+      "source": "context",
+      "context": "超过"
+    },
+    "50,000": {
+      "translation": "5万",
+      "source": "context",
+      "context": "5万"
+    },
+    "tonnes": {
+      "translation": "吨",
+      "source": "context",
+      "context": "吨"
+    },
+    "100,000": {
+      "translation": "10万",
+      "source": "context",
+      "context": "10万"
+    },
+    "200,000": {
+      "translation": "20万",
+      "source": "context",
+      "context": "20万"
+    },
+    "have": {
+      "translation": "有",
+      "source": "context",
+      "context": "有"
+    },
+    "absolutely": {
+      "translation": "绝对",
+      "source": "context",
+      "context": "绝对"
+    },
+    "no": {
+      "translation": "没有",
+      "source": "context",
+      "context": "没有"
+    },
+    "idea": {
+      "translation": "想法",
+      "source": "context",
+      "context": "想法"
+    },
+    "going": {
+      "translation": "将要",
+      "source": "context",
+      "context": "将要"
+    },
+    "to": {
+      "translation": "到",
+      "source": "context",
+      "context": "到"
+    },
+    "go": {
+      "translation": "选",
+      "source": "context",
+      "context": "选"
+    },
+    "c": {
+      "translation": "选项c",
+      "source": "context",
+      "context": "选项c"
+    },
+    "we'll give you the answer at the end of the programme": {
+      "translation": "节目最后揭晓答案",
+      "source": "context",
+      "context": "节目最后揭晓答案"
+    },
+    "answer": {
+      "translation": "答案",
+      "source": "context",
+      "context": "答案"
+    },
+    "end": {
+      "translation": "结尾",
+      "source": "context",
+      "context": "结尾"
+    },
+    "programme": {
+      "translation": "节目",
+      "source": "context",
+      "context": "节目"
+    },
+    "so": {
+      "translation": "那么",
+      "source": "context",
+      "context": "那么"
+    },
+    "we've": {
+      "translation": "we have 的缩写",
+      "source": "context",
+      "context": "we have 的缩写"
+    },
+    "been": {
+      "translation": "一直",
+      "source": "context",
+      "context": "一直"
+    },
+    "using": {
+      "translation": "使用",
+      "source": "context",
+      "context": "使用"
+    },
+    "thousands": {
+      "translation": "数千",
+      "source": "context",
+      "context": "数千"
+    },
+    "years": {
+      "translation": "年",
+      "source": "context",
+      "context": "年"
+    },
+    "did": {
+      "translation": "助动词",
+      "source": "context",
+      "context": "助动词"
+    },
+    "it start": {
+      "translation": "开始",
+      "source": "context",
+      "context": "开始"
+    },
+    "before": {
+      "translation": "在…之前",
+      "source": "context",
+      "context": "在…之前"
+    },
+    "money": {
+      "translation": "钱",
+      "source": "context",
+      "context": "钱"
+    },
+    "was": {
+      "translation": "是（过去式）",
+      "source": "context",
+      "context": "是（过去式）"
+    },
+    "paper": {
+      "translation": "纸",
+      "source": "context",
+      "context": "纸"
+    },
+    "plastic": {
+      "translation": "塑料",
+      "source": "context",
+      "context": "塑料"
+    },
+    "just": {
+      "translation": "只是",
+      "source": "context",
+      "context": "只是"
+    },
+    "numbers": {
+      "translation": "数字",
+      "source": "context",
+      "context": "数字"
+    },
+    "your": {
+      "translation": "你的",
+      "source": "context",
+      "context": "你的"
+    },
+    "bank": {
+      "translation": "银行",
+      "source": "context",
+      "context": "银行"
+    },
+    "account": {
+      "translation": "账户",
+      "source": "context",
+      "context": "账户"
+    },
+    "actually": {
+      "translation": "实际上",
+      "source": "context",
+      "context": "实际上"
+    },
+    "experts": {
+      "translation": "专家",
+      "source": "context",
+      "context": "专家"
+    },
+    "discovered": {
+      "translation": "发现",
+      "source": "context",
+      "context": "发现"
+    },
+    "coins": {
+      "translation": "硬币",
+      "source": "context",
+      "context": "硬币"
+    },
+    "that": {
+      "translation": "那个",
+      "source": "context",
+      "context": "那个"
+    },
+    "are": {
+      "translation": "是",
+      "source": "context",
+      "context": "是"
+    },
+    "thought": {
+      "translation": "被认为",
+      "source": "context",
+      "context": "被认为"
+    },
+    "were": {
+      "translation": "是（过去式）",
+      "source": "context",
+      "context": "是（过去式）"
+    },
+    "used": {
+      "translation": "被使用",
+      "source": "context",
+      "context": "被使用"
+    },
+    "because": {
+      "translation": "因为",
+      "source": "context",
+      "context": "因为"
+    },
+    "metal": {
+      "translation": "金属",
+      "source": "context",
+      "context": "金属"
+    },
+    "easier": {
+      "translation": "更容易",
+      "source": "context",
+      "context": "更容易"
+    },
+    "carry": {
+      "translation": "携带",
+      "source": "context",
+      "context": "携带"
+    },
+    "trade": {
+      "translation": "交易",
+      "source": "context",
+      "context": "交易"
+    },
+    "than": {
+      "translation": "比",
+      "source": "context",
+      "context": "比"
+    },
+    "things": {
+      "translation": "东西",
+      "source": "context",
+      "context": "东西"
+    },
+    "like": {
+      "translation": "比如",
+      "source": "context",
+      "context": "比如"
+    },
+    "cattle": {
+      "translation": "牲口",
+      "source": "context",
+      "context": "牲口"
+    },
+    "timber": {
+      "translation": "木材",
+      "source": "context",
+      "context": "木材"
+    },
+    "now": {
+      "translation": "现在",
+      "source": "context",
+      "context": "现在"
+    },
+    "isn't": {
+      "translation": "is not 的缩写",
+      "source": "context",
+      "context": "is not 的缩写"
+    },
+    "literally": {
+      "translation": "字面上",
+      "source": "context",
+      "context": "字面上"
+    },
+    "it's": {
+      "translation": "它是",
+      "source": "context",
+      "context": "它是"
+    },
+    "good": {
+      "translation": "好的",
+      "source": "context",
+      "context": "好的"
+    },
+    "even though": {
+      "translation": "即使",
+      "source": "context",
+      "context": "即使"
+    },
+    "still": {
+      "translation": "仍然",
+      "source": "context",
+      "context": "仍然"
+    },
+    "financial": {
+      "translation": "金融的",
+      "source": "context",
+      "context": "金融的"
+    },
+    "asset": {
+      "translation": "有价值的资产",
+      "source": "context",
+      "context": "有价值的资产"
+    },
+    "something": {
+      "translation": "某物",
+      "source": "context",
+      "context": "某物"
+    },
+    "could": {
+      "translation": "可以",
+      "source": "context",
+      "context": "可以"
+    },
+    "times": {
+      "translation": "时期",
+      "source": "context",
+      "context": "时期"
+    },
+    "crisis": {
+      "translation": "危机",
+      "source": "context",
+      "context": "危机"
+    },
+    "thought of as": {
+      "translation": "被视为",
+      "source": "context",
+      "context": "被视为"
+    },
+    "safe": {
+      "translation": "安全的",
+      "source": "context",
+      "context": "安全的"
+    },
+    "listen": {
+      "translation": "听",
+      "source": "context",
+      "context": "听"
+    },
+    "expert": {
+      "translation": "专家",
+      "source": "context",
+      "context": "专家"
+    },
+    "explaining": {
+      "translation": "解释",
+      "source": "context",
+      "context": "解释"
+    },
+    "more": {
+      "translation": "更多",
+      "source": "context",
+      "context": "更多"
+    },
+    "bbc world service": {
+      "translation": "BBC国际频道",
+      "source": "context",
+      "context": "BBC国际频道"
+    },
+    "safe haven": {
+      "translation": "避险资产",
+      "source": "context",
+      "context": "避险资产"
+    },
+    "connected": {
+      "translation": "有联系的",
+      "source": "context",
+      "context": "有联系的"
+    },
+    "one": {
+      "translation": "一个",
+      "source": "context",
+      "context": "一个"
+    },
+    "particular": {
+      "translation": "特定的",
+      "source": "context",
+      "context": "特定的"
+    },
+    "government": {
+      "translation": "政府",
+      "source": "context",
+      "context": "政府"
+    },
+    "economy": {
+      "translation": "经济",
+      "source": "context",
+      "context": "经济"
+    },
+    "market": {
+      "translation": "市场",
+      "source": "context",
+      "context": "市场"
+    },
+    "fact": {
+      "translation": "事实",
+      "source": "context",
+      "context": "事实"
+    },
+    "neutral": {
+      "translation": "中立的",
+      "source": "context",
+      "context": "中立的"
+    },
+    "means": {
+      "translation": "意味着",
+      "source": "context",
+      "context": "意味着"
+    },
+    "perceived": {
+      "translation": "被认为",
+      "source": "context",
+      "context": "被认为"
+    },
+    "store of value": {
+      "translation": "价值储藏",
+      "source": "context",
+      "context": "价值储藏"
+    },
+    "longer term": {
+      "translation": "更长期",
+      "source": "context",
+      "context": "更长期"
+    },
+    "describes": {
+      "translation": "描述",
+      "source": "context",
+      "context": "描述"
+    },
+    "protected": {
+      "translation": "受保护的",
+      "source": "context",
+      "context": "受保护的"
+    },
+    "harm": {
+      "translation": "伤害",
+      "source": "context",
+      "context": "伤害"
+    },
+    "danger": {
+      "translation": "危险",
+      "source": "context",
+      "context": "危险"
+    },
+    "financial terms": {
+      "translation": "金融术语上",
+      "source": "context",
+      "context": "金融术语上"
+    },
+    "fall in value": {
+      "translation": "价值下跌",
+      "source": "context",
+      "context": "价值下跌"
+    },
+    "unlike": {
+      "translation": "不像",
+      "source": "context",
+      "context": "不像"
+    },
+    "dollars": {
+      "translation": "美元",
+      "source": "context",
+      "context": "美元"
+    },
+    "pounds": {
+      "translation": "英镑",
+      "source": "context",
+      "context": "英镑"
+    },
+    "example": {
+      "translation": "例子",
+      "source": "context",
+      "context": "例子"
+    },
+    "country": {
+      "translation": "国家",
+      "source": "context",
+      "context": "国家"
+    },
+    "get": {
+      "translation": "得到",
+      "source": "context",
+      "context": "得到"
+    },
+    "more or less": {
+      "translation": "或多或少",
+      "source": "context",
+      "context": "或多或少"
+    },
+    "fixed": {
+      "translation": "固定的",
+      "source": "context",
+      "context": "固定的"
+    },
+    "amount": {
+      "translation": "数量",
+      "source": "context",
+      "context": "数量"
+    },
+    "print": {
+      "translation": "印刷",
+      "source": "context",
+      "context": "印刷"
+    },
+    "professor": {
+      "translation": "教授",
+      "source": "context",
+      "context": "教授"
+    },
+    "economic": {
+      "translation": "经济的",
+      "source": "context",
+      "context": "经济的"
+    },
+    "social": {
+      "translation": "社会的",
+      "source": "context",
+      "context": "社会的"
+    },
+    "history": {
+      "translation": "历史",
+      "source": "context",
+      "context": "历史"
+    },
+    "explains": {
+      "translation": "解释",
+      "source": "context",
+      "context": "解释"
+    },
+    "created": {
+      "translation": "创造",
+      "source": "context",
+      "context": "创造"
+    },
+    "fabricated": {
+      "translation": "凭空造出",
+      "source": "context",
+      "context": "凭空造出"
+    },
+    "out of thin air": {
+      "translation": "凭空",
+      "source": "context",
+      "context": "凭空"
+    },
+    "through": {
+      "translation": "通过",
+      "source": "context",
+      "context": "通过"
+    },
+    "alchemy": {
+      "translation": "炼金术",
+      "source": "context",
+      "context": "炼金术"
+    },
+    "sort of": {
+      "translation": "有点",
+      "source": "context",
+      "context": "有点"
+    },
+    "controls": {
+      "translation": "控制",
+      "source": "context",
+      "context": "控制"
+    },
+    "supply": {
+      "translation": "供应",
+      "source": "context",
+      "context": "供应"
+    },
+    "sustains": {
+      "translation": "维持",
+      "source": "context",
+      "context": "维持"
+    },
+    "underlying": {
+      "translation": "根本的",
+      "source": "context",
+      "context": "根本的"
+    },
+    "behind": {
+      "translation": "在…背后",
+      "source": "context",
+      "context": "在…背后"
+    },
+    "demand": {
+      "translation": "需求",
+      "source": "context",
+      "context": "需求"
+    },
+    "expression": {
+      "translation": "表达方式",
+      "source": "context",
+      "context": "表达方式"
+    },
+    "meaning": {
+      "translation": "意思是",
+      "source": "context",
+      "context": "意思是"
+    },
+    "make": {
+      "translation": "制造",
+      "source": "context",
+      "context": "制造"
+    },
+    "says": {
+      "translation": "说",
+      "source": "context",
+      "context": "说"
+    },
+    "ancient": {
+      "translation": "古代的",
+      "source": "context",
+      "context": "古代的"
+    },
+    "kind of": {
+      "translation": "一种",
+      "source": "context",
+      "context": "一种"
+    },
+    "chemistry": {
+      "translation": "化学",
+      "source": "context",
+      "context": "化学"
+    },
+    "attempted": {
+      "translation": "试图",
+      "source": "context",
+      "context": "试图"
+    },
+    "impossible": {
+      "translation": "不可能的",
+      "source": "context",
+      "context": "不可能的"
+    },
+    "turn": {
+      "translation": "变成",
+      "source": "context",
+      "context": "变成"
+    },
+    "ordinary": {
+      "translation": "普通的",
+      "source": "context",
+      "context": "普通的"
+    },
+    "metals": {
+      "translation": "金属",
+      "source": "context",
+      "context": "金属"
+    },
+    "into": {
+      "translation": "变成",
+      "source": "context",
+      "context": "变成"
+    },
+    "magically": {
+      "translation": "神奇地",
+      "source": "context",
+      "context": "神奇地"
+    },
+    "lots of": {
+      "translation": "许多",
+      "source": "context",
+      "context": "许多"
+    },
+    "want": {
+      "translation": "想要",
+      "source": "context",
+      "context": "想要"
+    },
+    "increases": {
+      "translation": "上涨",
+      "source": "context",
+      "context": "上涨"
+    },
+    "understood": {
+      "translation": "明白了",
+      "source": "context",
+      "context": "明白了"
+    },
+    "prices": {
+      "translation": "价格",
+      "source": "context",
+      "context": "价格"
+    },
+    "hit": {
+      "translation": "达到",
+      "source": "context",
+      "context": "达到"
+    },
+    "all-time": {
+      "translation": "史上的",
+      "source": "context",
+      "context": "史上的"
+    },
+    "high": {
+      "translation": "高点",
+      "source": "context",
+      "context": "高点"
+    },
+    "early": {
+      "translation": "早期",
+      "source": "context",
+      "context": "早期"
+    },
+    "what's going on": {
+      "translation": "发生了什么",
+      "source": "context",
+      "context": "发生了什么"
+    },
+    "mentioned": {
+      "translation": "提到",
+      "source": "context",
+      "context": "提到"
+    },
+    "series": {
+      "translation": "一系列",
+      "source": "context",
+      "context": "一系列"
+    },
+    "world": {
+      "translation": "世界",
+      "source": "context",
+      "context": "世界"
+    },
+    "events": {
+      "translation": "事件",
+      "source": "context",
+      "context": "事件"
+    },
+    "wars": {
+      "translation": "战争",
+      "source": "context",
+      "context": "战争"
+    },
+    "ukraine": {
+      "translation": "乌克兰",
+      "source": "context",
+      "context": "乌克兰"
+    },
+    "middle east": {
+      "translation": "中东",
+      "source": "context",
+      "context": "中东"
+    },
+    "politics": {
+      "translation": "政治",
+      "source": "context",
+      "context": "政治"
+    },
+    "us": {
+      "translation": "美国",
+      "source": "context",
+      "context": "美国"
+    },
+    "imposing": {
+      "translation": "实施",
+      "source": "context",
+      "context": "实施"
+    },
+    "tariffs": {
+      "translation": "关税",
+      "source": "context",
+      "context": "关税"
+    },
+    "international": {
+      "translation": "国际的",
+      "source": "context",
+      "context": "国际的"
+    },
+    "products": {
+      "translation": "产品",
+      "source": "context",
+      "context": "产品"
+    },
+    "since": {
+      "translation": "自…以来",
+      "source": "context",
+      "context": "自…以来"
+    },
+    "peak": {
+      "translation": "峰值",
+      "source": "context",
+      "context": "峰值"
+    },
+    "january": {
+      "translation": "一月",
+      "source": "context",
+      "context": "一月"
+    },
+    "dropped": {
+      "translation": "下跌",
+      "source": "context",
+      "context": "下跌"
+    },
+    "bit": {
+      "translation": "一点",
+      "source": "context",
+      "context": "一点"
+    },
+    "fall": {
+      "translation": "下跌",
+      "source": "context",
+      "context": "下跌"
+    },
+    "mean": {
+      "translation": "意味着",
+      "source": "context",
+      "context": "意味着"
+    },
+    "won't": {
+      "translation": "不会",
+      "source": "context",
+      "context": "不会"
+    },
+    "invest": {
+      "translation": "投资",
+      "source": "context",
+      "context": "投资"
+    },
+    "future": {
+      "translation": "未来",
+      "source": "context",
+      "context": "未来"
+    },
+    "likely": {
+      "translation": "很可能",
+      "source": "context",
+      "context": "很可能"
+    },
+    "go up": {
+      "translation": "上涨",
+      "source": "context",
+      "context": "上涨"
+    },
+    "again": {
+      "translation": "再次",
+      "source": "context",
+      "context": "再次"
+    },
+    "attractive": {
+      "translation": "有吸引力的",
+      "source": "context",
+      "context": "有吸引力的"
+    },
+    "during": {
+      "translation": "在…期间",
+      "source": "context",
+      "context": "在…期间"
+    },
+    "uncertain": {
+      "translation": "不确定的",
+      "source": "context",
+      "context": "不确定的"
+    },
+    "hear": {
+      "translation": "听听",
+      "source": "context",
+      "context": "听听"
+    },
+    "strategist": {
+      "translation": "策略师",
+      "source": "context",
+      "context": "策略师"
+    },
+    "john reade": {
+      "translation": "人名",
+      "source": "context",
+      "context": "人名"
+    },
+    "much of": {
+      "translation": "大部分",
+      "source": "context",
+      "context": "大部分"
+    },
+    "live in": {
+      "translation": "居住在",
+      "source": "context",
+      "context": "居住在"
+    },
+    "virtual": {
+      "translation": "虚拟的",
+      "source": "context",
+      "context": "虚拟的"
+    },
+    "online": {
+      "translation": "在线的",
+      "source": "context",
+      "context": "在线的"
+    },
+    "disappears": {
+      "translation": "消失",
+      "source": "context",
+      "context": "消失"
+    },
+    "whereas": {
+      "translation": "然而",
+      "source": "context",
+      "context": "然而"
+    },
+    "solid": {
+      "translation": "实在的",
+      "source": "context",
+      "context": "实在的"
+    },
+    "dependable": {
+      "translation": "可靠的",
+      "source": "context",
+      "context": "可靠的"
+    },
+    "know": {
+      "translation": "你知道",
+      "source": "context",
+      "context": "你知道"
+    },
+    "maybe": {
+      "translation": "也许",
+      "source": "context",
+      "context": "也许"
+    },
+    "a little bit": {
+      "translation": "有点",
+      "source": "context",
+      "context": "有点"
+    },
+    "old fashioned": {
+      "translation": "老式的",
+      "source": "context",
+      "context": "老式的"
+    },
+    "traditional": {
+      "translation": "传统的",
+      "source": "context",
+      "context": "传统的"
+    },
+    "values": {
+      "translation": "价值观",
+      "source": "context",
+      "context": "价值观"
+    },
+    "rather than": {
+      "translation": "而不是",
+      "source": "context",
+      "context": "而不是"
+    },
+    "super": {
+      "translation": "极其",
+      "source": "context",
+      "context": "极其"
+    },
+    "modern": {
+      "translation": "现代的",
+      "source": "context",
+      "context": "现代的"
+    },
+    "changeable": {
+      "translation": "多变的",
+      "source": "context",
+      "context": "多变的"
+    },
+    "doesn't": {
+      "translation": "不",
+      "source": "context",
+      "context": "不"
+    },
+    "seem": {
+      "translation": "似乎",
+      "source": "context",
+      "context": "似乎"
+    },
+    "real": {
+      "translation": "真实的",
+      "source": "context",
+      "context": "真实的"
+    },
+    "ethereal": {
+      "translation": "虚幻的、不真实",
+      "source": "context",
+      "context": "虚幻的、不真实"
+    },
+    "a hankering for": {
+      "translation": "对…的强烈渴望",
+      "source": "context",
+      "context": "对…的强烈渴望"
+    },
+    "strong desire": {
+      "translation": "强烈渴望",
+      "source": "context",
+      "context": "强烈渴望"
+    },
+    "time for": {
+      "translation": "到…的时候",
+      "source": "context",
+      "context": "到…的时候"
+    },
+    "quiz question": {
+      "translation": "测验问题",
+      "source": "context",
+      "context": "测验问题"
+    },
+    "asked": {
+      "translation": "问",
+      "source": "context",
+      "context": "问"
+    },
+    "how much": {
+      "translation": "多少",
+      "source": "context",
+      "context": "多少"
+    },
+    "mined": {
+      "translation": "开采",
+      "source": "context",
+      "context": "开采"
+    },
+    "to date": {
+      "translation": "到目前为止",
+      "source": "context",
+      "context": "到目前为止"
+    },
+    "said": {
+      "translation": "说",
+      "source": "context",
+      "context": "说"
+    },
+    "correct": {
+      "translation": "正确的",
+      "source": "context",
+      "context": "正确的"
+    },
+    "recap": {
+      "translation": "回顾总结",
+      "source": "context",
+      "context": "回顾总结"
+    },
+    "vocabulary": {
+      "translation": "词汇",
+      "source": "context",
+      "context": "词汇"
+    },
+    "we": {
+      "translation": "我们",
+      "source": "context",
+      "context": "我们"
+    },
+    "learnt": {
+      "translation": "学会",
+      "source": "context",
+      "context": "学会"
+    },
+    "this": {
+      "translation": "这",
+      "source": "context",
+      "context": "这"
+    },
+    "starting": {
+      "translation": "从…开始",
+      "source": "context",
+      "context": "从…开始"
+    },
+    "can": {
+      "translation": "能够",
+      "source": "context",
+      "context": "能够"
+    },
+    "somewhere": {
+      "translation": "某处",
+      "source": "context",
+      "context": "某处"
+    },
+    "loss": {
+      "translation": "损失",
+      "source": "context",
+      "context": "损失"
+    },
+    "nothing": {
+      "translation": "无、没有东西",
+      "source": "context",
+      "context": "无、没有东西"
+    },
+    "making": {
+      "translation": "制作",
+      "source": "context",
+      "context": "制作"
+    },
+    "if": {
+      "translation": "如果",
+      "source": "context",
+      "context": "如果"
+    },
+    "strong": {
+      "translation": "强烈的",
+      "source": "context",
+      "context": "强烈的"
+    },
+    "desire": {
+      "translation": "渴望",
+      "source": "context",
+      "context": "渴望"
+    },
+    "once": {
+      "translation": "一次",
+      "source": "context",
+      "context": "一次"
+    },
+    "six": {
+      "translation": "六",
+      "source": "context",
+      "context": "六"
+    },
+    "minutes": {
+      "translation": "分钟",
+      "source": "context",
+      "context": "分钟"
+    },
+    "practice": {
+      "translation": "练习",
+      "source": "context",
+      "context": "练习"
+    },
+    "test": {
+      "translation": "测试",
+      "source": "context",
+      "context": "测试"
+    },
+    "learned": {
+      "translation": "学到的",
+      "source": "context",
+      "context": "学到的"
+    },
+    "worksheet": {
+      "translation": "练习题",
+      "source": "context",
+      "context": "练习题"
+    },
+    "on": {
+      "translation": "在…上",
+      "source": "context",
+      "context": "在…上"
+    },
+    "website": {
+      "translation": "网站",
+      "source": "context",
+      "context": "网站"
+    },
+    "thank": {
+      "translation": "感谢",
+      "source": "context",
+      "context": "感谢"
+    },
+    "joining": {
+      "translation": "加入",
+      "source": "context",
+      "context": "加入"
+    },
+    "goodbye": {
+      "translation": "再见",
+      "source": "context",
+      "context": "再见"
+    },
+    "ive": {
+      "translation": "I have 的缩写",
+      "source": "context",
+      "context": "I have 的缩写",
+      "phrase": "i've"
+    },
+    "im": {
+      "translation": "I am 的缩写",
+      "source": "context",
+      "context": "I am 的缩写",
+      "phrase": "i'm"
+    },
+    "goldcoloured": {
+      "translation": "金色的",
+      "source": "context",
+      "context": "金色的",
+      "phrase": "gold-coloured"
+    },
+    "dont": {
+      "translation": "do not 的缩写",
+      "source": "context",
+      "context": "do not 的缩写",
+      "phrase": "don't"
+    },
+    "6": {
+      "translation": "在本期6分钟英语",
+      "source": "context",
+      "context": "在本期6分钟英语",
+      "phrase": "in this episode of 6 minute english"
+    },
+    "english": {
+      "translation": "在本期6分钟英语",
+      "source": "context",
+      "context": "在本期6分钟英语",
+      "phrase": "in this episode of 6 minute english"
+    },
+    "episode": {
+      "translation": "在本期6分钟英语",
+      "source": "context",
+      "context": "在本期6分钟英语",
+      "phrase": "in this episode of 6 minute english"
+    },
+    "inthisepisodeof6minuteenglish": {
+      "translation": "在本期6分钟英语",
+      "source": "context",
+      "context": "在本期6分钟英语",
+      "phrase": "in this episode of 6 minute english"
+    },
+    "minute": {
+      "translation": "在本期6分钟英语",
+      "source": "context",
+      "context": "在本期6分钟英语",
+      "phrase": "in this episode of 6 minute english"
+    },
+    "lets": {
+      "translation": "let us 的缩写",
+      "source": "context",
+      "context": "let us 的缩写",
+      "phrase": "let's"
+    },
+    "dug": {
+      "translation": "金是从地下矿中开采的金属",
+      "source": "context",
+      "context": "金是从地下矿中开采的金属",
+      "phrase": "gold is a metal that's extracted or dug up from under the ground in mines"
+    },
+    "goldisametalthatsextractedordugupfromunderthegroundinmines": {
+      "translation": "金是从地下矿中开采的金属",
+      "source": "context",
+      "context": "金是从地下矿中开采的金属",
+      "phrase": "gold is a metal that's extracted or dug up from under the ground in mines"
+    },
+    "s": {
+      "translation": "金是从地下矿中开采的金属",
+      "source": "context",
+      "context": "金是从地下矿中开采的金属",
+      "phrase": "gold is a metal that's extracted or dug up from under the ground in mines"
+    },
+    "dugup": {
+      "translation": "挖出",
+      "source": "context",
+      "context": "挖出",
+      "phrase": "dug up"
+    },
+    "50000": {
+      "translation": "5万",
+      "source": "context",
+      "context": "5万",
+      "phrase": "50,000"
+    },
+    "100000": {
+      "translation": "10万",
+      "source": "context",
+      "context": "10万",
+      "phrase": "100,000"
+    },
+    "200000": {
+      "translation": "20万",
+      "source": "context",
+      "context": "20万",
+      "phrase": "200,000"
+    },
+    "give": {
+      "translation": "节目最后揭晓答案",
+      "source": "context",
+      "context": "节目最后揭晓答案",
+      "phrase": "we'll give you the answer at the end of the programme"
+    },
+    "ll": {
+      "translation": "节目最后揭晓答案",
+      "source": "context",
+      "context": "节目最后揭晓答案",
+      "phrase": "we'll give you the answer at the end of the programme"
+    },
+    "wellgiveyoutheanswerattheendoftheprogramme": {
+      "translation": "节目最后揭晓答案",
+      "source": "context",
+      "context": "节目最后揭晓答案",
+      "phrase": "we'll give you the answer at the end of the programme"
+    },
+    "weve": {
+      "translation": "we have 的缩写",
+      "source": "context",
+      "context": "we have 的缩写",
+      "phrase": "we've"
+    },
+    "itstart": {
+      "translation": "开始",
+      "source": "context",
+      "context": "开始",
+      "phrase": "it start"
+    },
+    "isnt": {
+      "translation": "is not 的缩写",
+      "source": "context",
+      "context": "is not 的缩写",
+      "phrase": "isn't"
+    },
+    "even": {
+      "translation": "即使",
+      "source": "context",
+      "context": "即使",
+      "phrase": "even though"
+    },
+    "eventhough": {
+      "translation": "即使",
+      "source": "context",
+      "context": "即使",
+      "phrase": "even though"
+    },
+    "though": {
+      "translation": "即使",
+      "source": "context",
+      "context": "即使",
+      "phrase": "even though"
+    },
+    "as": {
+      "translation": "被视为",
+      "source": "context",
+      "context": "被视为",
+      "phrase": "thought of as"
+    },
+    "thoughtofas": {
+      "translation": "被视为",
+      "source": "context",
+      "context": "被视为",
+      "phrase": "thought of as"
+    },
+    "bbc": {
+      "translation": "BBC国际频道",
+      "source": "context",
+      "context": "BBC国际频道",
+      "phrase": "bbc world service"
+    },
+    "bbcworldservice": {
+      "translation": "BBC国际频道",
+      "source": "context",
+      "context": "BBC国际频道",
+      "phrase": "bbc world service"
+    },
+    "service": {
+      "translation": "BBC国际频道",
+      "source": "context",
+      "context": "BBC国际频道",
+      "phrase": "bbc world service"
+    },
+    "haven": {
+      "translation": "避险资产",
+      "source": "context",
+      "context": "避险资产",
       "phrase": "safe haven"
     },
     "safehaven": {
-      "translation": "something or somewhere protected from harm or loss",
-      "source": "official",
+      "translation": "避险资产",
+      "source": "context",
+      "context": "避险资产",
       "phrase": "safe haven"
     },
+    "store": {
+      "translation": "价值储藏",
+      "source": "context",
+      "context": "价值储藏",
+      "phrase": "store of value"
+    },
+    "storeofvalue": {
+      "translation": "价值储藏",
+      "source": "context",
+      "context": "价值储藏",
+      "phrase": "store of value"
+    },
+    "value": {
+      "translation": "价值储藏",
+      "source": "context",
+      "context": "价值储藏",
+      "phrase": "store of value"
+    },
+    "longer": {
+      "translation": "更长期",
+      "source": "context",
+      "context": "更长期",
+      "phrase": "longer term"
+    },
+    "longerterm": {
+      "translation": "更长期",
+      "source": "context",
+      "context": "更长期",
+      "phrase": "longer term"
+    },
+    "term": {
+      "translation": "更长期",
+      "source": "context",
+      "context": "更长期",
+      "phrase": "longer term"
+    },
+    "financialterms": {
+      "translation": "金融术语上",
+      "source": "context",
+      "context": "金融术语上",
+      "phrase": "financial terms"
+    },
+    "terms": {
+      "translation": "金融术语上",
+      "source": "context",
+      "context": "金融术语上",
+      "phrase": "financial terms"
+    },
+    "fallinvalue": {
+      "translation": "价值下跌",
+      "source": "context",
+      "context": "价值下跌",
+      "phrase": "fall in value"
+    },
+    "less": {
+      "translation": "或多或少",
+      "source": "context",
+      "context": "或多或少",
+      "phrase": "more or less"
+    },
+    "moreorless": {
+      "translation": "或多或少",
+      "source": "context",
+      "context": "或多或少",
+      "phrase": "more or less"
+    },
     "air": {
-      "translation": "from nothing or nowhere",
-      "source": "official",
+      "translation": "凭空",
+      "source": "context",
+      "context": "凭空",
       "phrase": "out of thin air"
     },
     "out": {
-      "translation": "from nothing or nowhere",
-      "source": "official",
+      "translation": "凭空",
+      "source": "context",
+      "context": "凭空",
       "phrase": "out of thin air"
     },
     "outofthinair": {
-      "translation": "from nothing or nowhere",
-      "source": "official",
+      "translation": "凭空",
+      "source": "context",
+      "context": "凭空",
       "phrase": "out of thin air"
     },
     "thin": {
-      "translation": "from nothing or nowhere",
-      "source": "official",
+      "translation": "凭空",
+      "source": "context",
+      "context": "凭空",
       "phrase": "out of thin air"
     },
+    "sort": {
+      "translation": "有点",
+      "source": "context",
+      "context": "有点",
+      "phrase": "sort of"
+    },
+    "sortof": {
+      "translation": "有点",
+      "source": "context",
+      "context": "有点",
+      "phrase": "sort of"
+    },
+    "kind": {
+      "translation": "一种",
+      "source": "context",
+      "context": "一种",
+      "phrase": "kind of"
+    },
+    "kindof": {
+      "translation": "一种",
+      "source": "context",
+      "context": "一种",
+      "phrase": "kind of"
+    },
+    "lots": {
+      "translation": "许多",
+      "source": "context",
+      "context": "许多",
+      "phrase": "lots of"
+    },
+    "lotsof": {
+      "translation": "许多",
+      "source": "context",
+      "context": "许多",
+      "phrase": "lots of"
+    },
+    "alltime": {
+      "translation": "史上的",
+      "source": "context",
+      "context": "史上的",
+      "phrase": "all-time"
+    },
+    "what": {
+      "translation": "发生了什么",
+      "source": "context",
+      "context": "发生了什么",
+      "phrase": "what's going on"
+    },
+    "whatsgoingon": {
+      "translation": "发生了什么",
+      "source": "context",
+      "context": "发生了什么",
+      "phrase": "what's going on"
+    },
+    "east": {
+      "translation": "中东",
+      "source": "context",
+      "context": "中东",
+      "phrase": "middle east"
+    },
+    "middle": {
+      "translation": "中东",
+      "source": "context",
+      "context": "中东",
+      "phrase": "middle east"
+    },
+    "middleeast": {
+      "translation": "中东",
+      "source": "context",
+      "context": "中东",
+      "phrase": "middle east"
+    },
+    "wont": {
+      "translation": "不会",
+      "source": "context",
+      "context": "不会",
+      "phrase": "won't"
+    },
+    "goup": {
+      "translation": "上涨",
+      "source": "context",
+      "context": "上涨",
+      "phrase": "go up"
+    },
+    "john": {
+      "translation": "人名",
+      "source": "context",
+      "context": "人名",
+      "phrase": "john reade"
+    },
+    "johnreade": {
+      "translation": "人名",
+      "source": "context",
+      "context": "人名",
+      "phrase": "john reade"
+    },
+    "reade": {
+      "translation": "人名",
+      "source": "context",
+      "context": "人名",
+      "phrase": "john reade"
+    },
+    "muchof": {
+      "translation": "大部分",
+      "source": "context",
+      "context": "大部分",
+      "phrase": "much of"
+    },
+    "live": {
+      "translation": "居住在",
+      "source": "context",
+      "context": "居住在",
+      "phrase": "live in"
+    },
+    "livein": {
+      "translation": "居住在",
+      "source": "context",
+      "context": "居住在",
+      "phrase": "live in"
+    },
+    "alittlebit": {
+      "translation": "有点",
+      "source": "context",
+      "context": "有点",
+      "phrase": "a little bit"
+    },
+    "little": {
+      "translation": "有点",
+      "source": "context",
+      "context": "有点",
+      "phrase": "a little bit"
+    },
+    "fashioned": {
+      "translation": "老式的",
+      "source": "context",
+      "context": "老式的",
+      "phrase": "old fashioned"
+    },
+    "old": {
+      "translation": "老式的",
+      "source": "context",
+      "context": "老式的",
+      "phrase": "old fashioned"
+    },
+    "oldfashioned": {
+      "translation": "老式的",
+      "source": "context",
+      "context": "老式的",
+      "phrase": "old fashioned"
+    },
+    "rather": {
+      "translation": "而不是",
+      "source": "context",
+      "context": "而不是",
+      "phrase": "rather than"
+    },
+    "ratherthan": {
+      "translation": "而不是",
+      "source": "context",
+      "context": "而不是",
+      "phrase": "rather than"
+    },
+    "doesnt": {
+      "translation": "不",
+      "source": "context",
+      "context": "不",
+      "phrase": "doesn't"
+    },
     "ahankeringfor": {
-      "translation": "a strong desire for",
-      "source": "official",
+      "translation": "对…的强烈渴望",
+      "source": "context",
+      "context": "对…的强烈渴望",
       "phrase": "a hankering for"
     },
     "hankering": {
-      "translation": "a strong desire for",
-      "source": "official",
+      "translation": "对…的强烈渴望",
+      "source": "context",
+      "context": "对…的强烈渴望",
       "phrase": "a hankering for"
+    },
+    "strongdesire": {
+      "translation": "强烈渴望",
+      "source": "context",
+      "context": "强烈渴望",
+      "phrase": "strong desire"
+    },
+    "time": {
+      "translation": "到…的时候",
+      "source": "context",
+      "context": "到…的时候",
+      "phrase": "time for"
+    },
+    "timefor": {
+      "translation": "到…的时候",
+      "source": "context",
+      "context": "到…的时候",
+      "phrase": "time for"
+    },
+    "quizquestion": {
+      "translation": "测验问题",
+      "source": "context",
+      "context": "测验问题",
+      "phrase": "quiz question"
+    },
+    "howmuch": {
+      "translation": "多少",
+      "source": "context",
+      "context": "多少",
+      "phrase": "how much"
+    },
+    "date": {
+      "translation": "到目前为止",
+      "source": "context",
+      "context": "到目前为止",
+      "phrase": "to date"
+    },
+    "todate": {
+      "translation": "到目前为止",
+      "source": "context",
+      "context": "到目前为止",
+      "phrase": "to date"
     }
   }
 }
