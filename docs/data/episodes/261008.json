@@ -193,76 +193,4029 @@
       "definition": "strong criticism of a trend; people doing the opposite of a trend"
     }
   ],
-  "context_glossary": {},
-  "dict": {
+  "context_glossary": {
+    "hi": {
+      "meaning": "你好"
+    },
+    "Neil": {
+      "meaning": "尼尔（人名）"
+    },
+    "Georgie": {
+      "meaning": "乔吉（人名）"
+    },
+    "do": {
+      "meaning": "助动词/做"
+    },
+    "you": {
+      "meaning": "你"
+    },
+    "want": {
+      "meaning": "想要"
+    },
+    "to": {
+      "meaning": "到；不定式标记"
+    },
+    "hear": {
+      "meaning": "听"
+    },
+    "something": {
+      "meaning": "某事"
+    },
+    "quite": {
+      "meaning": "相当"
+    },
+    "unusual": {
+      "meaning": "不寻常的"
+    },
+    "for": {
+      "meaning": "对；为"
+    },
+    "me": {
+      "meaning": "我"
+    },
+    "err": {
+      "meaning": "呃（语气词）"
+    },
+    "yes": {
+      "meaning": "是的"
+    },
+    "I": {
+      "meaning": "我"
+    },
+    "haven't had": {
+      "meaning": "还没喝过/没做过"
+    },
+    "an": {
+      "meaning": "一个（元音前）"
+    },
+    "alcoholic": {
+      "meaning": "含酒精的"
+    },
+    "drink": {
+      "meaning": "喝；饮料"
+    },
+    "this": {
+      "meaning": "这个"
+    },
+    "year": {
+      "meaning": "年"
+    },
+    "wow": {
+      "meaning": "哇（惊叹）"
+    },
+    "that": {
+      "meaning": "那"
+    },
+    "is": {
+      "meaning": "是"
+    },
+    "really": {
+      "meaning": "非常"
+    },
+    "impressive": {
+      "meaning": "令人佩服的"
+    },
+    "how": {
+      "meaning": "如何"
+    },
+    "feel": {
+      "meaning": "感觉"
+    },
+    "like": {
+      "meaning": "像"
+    },
+    "a": {
+      "meaning": "一个"
+    },
+    "new": {
+      "meaning": "新的"
+    },
+    "person": {
+      "meaning": "人"
+    },
+    "very": {
+      "meaning": "很"
+    },
+    "good": {
+      "meaning": "好的"
+    },
+    "have to say": {
+      "meaning": "不得不说"
+    },
+    "can't say the same": {
+      "meaning": "我可不这样"
+    },
+    "did": {
+      "meaning": "确实（强调）"
+    },
+    "a few": {
+      "meaning": "几个"
+    },
+    "drinks": {
+      "meaning": "酒；饮品"
+    },
+    "at the weekend": {
+      "meaning": "在周末"
+    },
+    "with": {
+      "meaning": "和"
+    },
+    "my": {
+      "meaning": "我的"
+    },
+    "friends": {
+      "meaning": "朋友"
+    },
+    "but": {
+      "meaning": "但是"
+    },
+    "in many parts of the world": {
+      "meaning": "在世界许多地方"
+    },
+    "people": {
+      "meaning": "人们"
+    },
+    "don't": {
+      "meaning": "不"
+    },
+    "at all": {
+      "meaning": "完全不"
+    },
+    "it's very common": {
+      "meaning": "很常见"
+    },
+    "until recently": {
+      "meaning": "直到最近"
+    },
+    "today": {
+      "meaning": "今天"
+    },
+    "on 6 Minute English": {
+      "meaning": "在6分钟英语节目"
+    },
+    "we're going to": {
+      "meaning": "我们将要"
+    },
+    "find out": {
+      "meaning": "查明"
+    },
+    "why": {
+      "meaning": "为什么"
+    },
+    "choosing": {
+      "meaning": "选择"
+    },
+    "give up": {
+      "meaning": "戒除；放弃"
+    },
+    "or": {
+      "meaning": "或者"
+    },
+    "cut down on": {
+      "meaning": "减少"
+    },
+    "alcohol": {
+      "meaning": "酒精"
+    },
+    "and": {
+      "meaning": "和"
+    },
+    "we'll be asking": {
+      "meaning": "我们将提问"
+    },
+    "the end of": {
+      "meaning": "……的终结"
+    },
+    "British": {
+      "meaning": "英国的"
+    },
+    "drinking culture": {
+      "meaning": "饮酒文化"
+    },
+    "OK": {
+      "meaning": "好的"
+    },
+    "let's start with": {
+      "meaning": "从……开始"
+    },
+    "quiz question": {
+      "meaning": "测验问题"
+    },
+    "other": {
+      "meaning": "其他的"
+    },
+    "countries": {
+      "meaning": "国家"
+    },
+    "choose": {
+      "meaning": "选择"
+    },
+    "in the new year": {
+      "meaning": "在新年"
+    },
+    "whole": {
+      "meaning": "整个的"
+    },
+    "month": {
+      "meaning": "月"
+    },
+    "January": {
+      "meaning": "一月"
+    },
+    "what": {
+      "meaning": "什么"
+    },
+    "the challenge called": {
+      "meaning": "挑战叫什么"
+    },
+    "No-drink New Year": {
+      "meaning": "无酒新年"
+    },
+    "Alcohol-free January": {
+      "meaning": "无酒精一月"
+    },
+    "Dry January": {
+      "meaning": "干爽一月（戒酒月）"
+    },
+    "well": {
+      "meaning": "嗯"
+    },
+    "know": {
+      "meaning": "知道"
+    },
+    "the answer": {
+      "meaning": "答案"
+    },
+    "I'm not going to give it away": {
+      "meaning": "我不透露答案"
+    },
+    "then": {
+      "meaning": "那么"
+    },
+    "our": {
+      "meaning": "我们的"
+    },
+    "listeners": {
+      "meaning": "听众"
+    },
+    "at the end of the programme": {
+      "meaning": "节目最后"
+    },
+    "they": {
+      "meaning": "他们"
+    },
+    "can": {
+      "meaning": "能"
+    },
+    "so": {
+      "meaning": "所以"
+    },
+    "I hear all the time": {
+      "meaning": "我总听说"
+    },
+    "younger": {
+      "meaning": "更年轻的"
+    },
+    "as much as": {
+      "meaning": "和……一样多"
+    },
+    "used to": {
+      "meaning": "过去常常"
+    },
+    "past": {
+      "meaning": "过去"
+    },
+    "Is that true?": {
+      "meaning": "那是真的吗"
+    },
+    "surveys": {
+      "meaning": "调查"
+    },
+    "suggest": {
+      "meaning": "表明"
+    },
+    "16 to 24-year-olds": {
+      "meaning": "16至24岁的人"
+    },
+    "more likely": {
+      "meaning": "更有可能"
+    },
+    "non-drinkers": {
+      "meaning": "不喝酒的人"
+    },
+    "than": {
+      "meaning": "比"
+    },
+    "older generations": {
+      "meaning": "年长一代"
+    },
+    "young": {
+      "meaning": "年轻的"
+    },
     "sober": {
-      "translation": "not drinking alcohol or taking recreational drugs",
-      "source": "official"
+      "meaning": "不喝酒、不用毒品"
+    },
+    "means": {
+      "meaning": "意味着"
+    },
+    "not": {
+      "meaning": "不"
+    },
+    "Well": {
+      "meaning": "嗯"
+    },
+    "the": {
+      "meaning": "定冠词"
+    },
+    "BBC": {
+      "meaning": "英国广播公司"
+    },
+    "World": {
+      "meaning": "世界"
+    },
+    "Service": {
+      "meaning": "广播服务"
+    },
+    "podcast": {
+      "meaning": "播客"
+    },
+    "What in the World": {
+      "meaning": "节目名称"
+    },
+    "have": {
+      "meaning": "已经"
+    },
+    "been": {
+      "meaning": "一直"
+    },
+    "investigating": {
+      "meaning": "调查"
+    },
+    "Presenter": {
+      "meaning": "主持人"
+    },
+    "Hannah": {
+      "meaning": "汉娜人名"
+    },
+    "Gelbart": {
+      "meaning": "盖尔巴特人名"
+    },
+    "met": {
+      "meaning": "见了"
+    },
+    "three": {
+      "meaning": "三"
+    },
+    "who": {
+      "meaning": "谁"
+    },
+    "be": {
+      "meaning": "是"
+    },
+    "some": {
+      "meaning": "一些"
+    },
+    "alcohol-free": {
+      "meaning": "无酒精的"
+    },
+    "find": {
+      "meaning": "找出"
+    },
+    "out": {
+      "meaning": "出来"
+    },
+    "more": {
+      "meaning": "更多"
+    },
+    "Here's": {
+      "meaning": "这是"
+    },
+    "Daniel's": {
+      "meaning": "丹尼尔的"
+    },
+    "story": {
+      "meaning": "故事"
+    },
+    "Yeah": {
+      "meaning": "是的"
+    },
+    "when": {
+      "meaning": "当…时"
+    },
+    "was": {
+      "meaning": "是"
+    },
+    "in": {
+      "meaning": "在"
+    },
+    "early": {
+      "meaning": "早期的"
+    },
+    "20s": {
+      "meaning": "二十多岁时"
+    },
+    "think": {
+      "meaning": "想"
+    },
+    "felt": {
+      "meaning": "感到"
+    },
+    "maybe": {
+      "meaning": "也许"
+    },
+    "bit": {
+      "meaning": "一点"
+    },
+    "of": {
+      "meaning": "的"
     },
     "societal pressure": {
-      "translation": "feeling that you should do something because lots of other people expect you to",
-      "source": "official"
+      "meaning": "社会压力"
+    },
+    "work": {
+      "meaning": "工作"
+    },
+    "being": {
+      "meaning": "处于"
+    },
+    "at": {
+      "meaning": "在"
+    },
+    "uni": {
+      "meaning": "大学"
+    },
+    "where": {
+      "meaning": "那里"
+    },
+    "it": {
+      "meaning": "它"
     },
     "the norm": {
-      "translation": "the usual or common thing to do",
-      "source": "official"
+      "meaning": "常态"
+    },
+    "just": {
+      "meaning": "只是"
+    },
+    "join in": {
+      "meaning": "参与"
+    },
+    "you'd": {
+      "meaning": "你会"
+    },
+    "probably": {
+      "meaning": "大概"
+    },
+    "get": {
+      "meaning": "得到"
+    },
+    "few": {
+      "meaning": "几个"
+    },
+    "weird": {
+      "meaning": "怪异的"
+    },
+    "glances": {
+      "meaning": "瞥视"
+    },
+    "if": {
+      "meaning": "如果"
+    },
+    "you're": {
+      "meaning": "你是"
+    },
+    "I'm": {
+      "meaning": "我是"
+    },
+    "going to": {
+      "meaning": "将要"
+    },
+    "So": {
+      "meaning": "所以"
+    },
+    "Covid": {
+      "meaning": "新冠"
+    },
+    "lockdown": {
+      "meaning": "封锁"
+    },
+    "gave": {
+      "meaning": "给了"
+    },
+    "confidence": {
+      "meaning": "信心"
+    },
+    "say": {
+      "meaning": "说"
+    },
+    "let": {
+      "meaning": "让"
+    },
+    "step away from": {
+      "meaning": "远离"
+    },
+    "It's": {
+      "meaning": "它是"
+    },
+    "necessarily": {
+      "meaning": "一定"
+    },
+    "moving forward": {
+      "meaning": "今后"
+    },
+    "many": {
+      "meaning": "许多"
+    },
+    "years": {
+      "meaning": "年"
+    },
+    "would": {
+      "meaning": "会"
+    },
+    "six": {
+      "meaning": "六"
+    },
+    "now": {
+      "meaning": "现在"
+    },
+    "says": {
+      "meaning": "说"
+    },
+    "he": {
+      "meaning": "他"
+    },
+    "feeling": {
+      "meaning": "感觉"
+    },
+    "need": {
+      "meaning": "需要"
+    },
+    "because": {
+      "meaning": "因为"
+    },
+    "lots": {
+      "meaning": "很多"
+    },
+    "around": {
+      "meaning": "周围"
+    },
+    "are": {
+      "meaning": "是"
+    },
+    "doing": {
+      "meaning": "做"
+    },
+    "Right": {
+      "meaning": "对"
+    },
+    "drinking": {
+      "meaning": "喝酒"
+    },
+    "university": {
+      "meaning": "大学"
+    },
+    "after": {
+      "meaning": "之后"
+    },
+    "way": {
+      "meaning": "方式"
+    },
+    "saying": {
+      "meaning": "说"
+    },
+    "normal": {
+      "meaning": "正常的"
+    },
+    "common": {
+      "meaning": "常见的"
+    },
+    "during": {
+      "meaning": "期间"
+    },
+    "pandemic": {
+      "meaning": "疫情"
+    },
+    "unable": {
+      "meaning": "不能"
+    },
+    "socialise": {
+      "meaning": "社交"
+    },
+    "visit": {
+      "meaning": "去"
+    },
+    "pubs": {
+      "meaning": "酒馆"
+    },
+    "bars": {
+      "meaning": "酒吧"
+    },
+    "attitude": {
+      "meaning": "态度"
+    },
+    "changed": {
+      "meaning": "改变了"
+    },
+    "decided": {
+      "meaning": "决定"
+    },
+    "hasn't": {
+      "meaning": "没有"
+    },
+    "had": {
+      "meaning": "有"
+    },
+    "about": {
+      "meaning": "大约"
+    },
+    "seems": {
+      "meaning": "似乎"
+    },
+    "share": {
+      "meaning": "分享"
+    },
+    "their": {
+      "meaning": "他们的"
+    },
+    "experience": {
+      "meaning": "经历"
+    },
+    "on": {
+      "meaning": "在"
+    },
+    "social media": {
+      "meaning": "社交媒体"
+    },
+    "recently": {
+      "meaning": "最近"
+    },
+    "there's": {
+      "meaning": "有"
+    },
+    "a bit of a change": {
+      "meaning": "一点变化"
+    },
+    "hasn't there": {
+      "meaning": "是吧"
+    },
+    "Whilst": {
+      "meaning": "然而，当…时"
+    },
+    "use": {
+      "meaning": "使用"
+    },
+    "less": {
+      "meaning": "更少的"
+    },
+    "no": {
+      "meaning": "没有"
+    },
+    "to go out": {
+      "meaning": "外出"
+    },
+    "fun": {
+      "meaning": "乐趣"
+    },
+    "They argue": {
+      "meaning": "他们争论说"
+    },
+    "we're": {
+      "meaning": "我们是"
+    },
+    "too": {
+      "meaning": "太"
+    },
+    "worried": {
+      "meaning": "担心的"
+    },
+    "fitness": {
+      "meaning": "健身"
+    },
+    "wellness": {
+      "meaning": "健康养生"
+    },
+    "having": {
+      "meaning": "有，喝"
+    },
+    "good time": {
+      "meaning": "好时光"
+    },
+    "fine": {
+      "meaning": "没问题的"
+    },
+    "Millie": {
+      "meaning": "人名：米莉"
+    },
+    "talking": {
+      "meaning": "谈论"
+    },
+    "more about this": {
+      "meaning": "更多谈论这个"
+    },
+    "we": {
+      "meaning": "我们"
+    },
+    "rise": {
+      "meaning": "兴起"
     },
     "self-optimisation content": {
-      "translation": "videos, posts and other media about being fit, healthy and achieving big goals",
-      "source": "official"
+      "meaning": "自我提升类内容"
+    },
+    "I think unfortunately": {
+      "meaning": "我认为不幸的是"
+    },
+    "sobriety": {
+      "meaning": "戒酒状态"
+    },
+    "kind of": {
+      "meaning": "有点，算是"
+    },
+    "got": {
+      "meaning": "被"
+    },
+    "swept in": {
+      "meaning": "被卷入"
+    },
+    "with that": {
+      "meaning": "随着那股潮流"
+    },
+    "got touted": {
+      "meaning": "被大肆宣扬"
+    },
+    "as": {
+      "meaning": "作为"
+    },
+    "this way": {
+      "meaning": "这种方式"
+    },
+    "you know": {
+      "meaning": "你知道"
+    },
+    "get up": {
+      "meaning": "起床"
+    },
+    "5am": {
+      "meaning": "凌晨五点"
+    },
+    "a HYROX": {
+      "meaning": "HYROX健身赛"
+    },
+    "And": {
+      "meaning": "而且"
+    },
+    "of us": {
+      "meaning": "我们中的人"
+    },
+    "that's": {
+      "meaning": "那是"
+    },
+    "reality": {
+      "meaning": "现实"
+    },
+    "not drinking": {
+      "meaning": "不喝酒"
+    },
+    "It's that": {
+      "meaning": "其实是因为"
+    },
+    "we do it": {
+      "meaning": "我们这样做"
+    },
+    "to feel": {
+      "meaning": "为了感觉"
+    },
+    "a bit": {
+      "meaning": "一点"
+    },
+    "sane": {
+      "meaning": "清醒、理智"
+    },
+    "things like that": {
+      "meaning": "诸如此类"
+    },
+    "entering": {
+      "meaning": "进入"
+    },
+    "almost": {
+      "meaning": "几乎"
+    },
+    "pushback": {
+      "meaning": "反弹、抵制"
+    },
+    "era": {
+      "meaning": "时代"
+    },
+    "of that content": {
+      "meaning": "那类内容的"
+    },
+    "you're seeing": {
+      "meaning": "你正在看到"
+    },
+    "celebrities": {
+      "meaning": "名人"
+    },
+    "it's not just": {
+      "meaning": "不只是"
+    },
+    "seeing": {
+      "meaning": "看到"
+    },
+    "smoking": {
+      "meaning": "抽烟"
+    },
+    "posting": {
+      "meaning": "发布"
+    },
+    "their Instagram": {
+      "meaning": "他们的Ins"
+    },
+    "worrying": {
+      "meaning": "担心"
+    },
+    "brand-friendly": {
+      "meaning": "适合品牌形象"
+    },
+    "thinks": {
+      "meaning": "认为"
+    },
+    "is associated with": {
+      "meaning": "与…相关联"
+    },
+    "certain": {
+      "meaning": "某些"
+    },
+    "kinds": {
+      "meaning": "种类"
+    },
+    "talk about": {
+      "meaning": "谈论"
+    },
+    "diet": {
+      "meaning": "饮食"
+    },
+    "big goals": {
+      "meaning": "远大目标"
+    },
+    "for themselves": {
+      "meaning": "为他们自己"
+    },
+    "Yes": {
+      "meaning": "是的"
+    },
+    "gets touted": {
+      "meaning": "被宣扬"
+    },
+    "a way": {
+      "meaning": "一种方式"
+    },
+    "to get up": {
+      "meaning": "起床"
+    },
+    "exercise": {
+      "meaning": "锻炼"
+    },
+    "In other words": {
+      "meaning": "换句话说"
+    },
+    "talk about it a lot": {
+      "meaning": "大谈特谈"
+    },
+    "try to": {
+      "meaning": "试图"
+    },
+    "encourage": {
+      "meaning": "鼓励"
+    },
+    "But": {
+      "meaning": "但是"
+    },
+    "isn't": {
+      "meaning": "不是"
+    },
+    "always": {
+      "meaning": "总是"
+    },
+    "super": {
+      "meaning": "非常"
+    },
+    "fit": {
+      "meaning": "健壮的"
+    },
+    "healthy": {
+      "meaning": "健康的"
+    },
+    "For her": {
+      "meaning": "对她来说"
+    },
+    "But still": {
+      "meaning": "但尽管如此"
+    },
+    "against": {
+      "meaning": "反对"
+    },
+    "content": {
+      "meaning": "内容"
+    },
+    "criticism": {
+      "meaning": "批评"
+    },
+    "pushing back": {
+      "meaning": "反击"
+    },
+    "by": {
+      "meaning": "通过"
+    },
+    "doing the opposite": {
+      "meaning": "反其道而行"
+    },
+    "For example": {
+      "meaning": "例如"
+    },
+    "celebrities post": {
+      "meaning": "名人发布"
+    },
+    "themselves": {
+      "meaning": "他们自己"
+    },
+    "everybody": {
+      "meaning": "每个人"
+    },
+    "try": {
+      "meaning": "尝试"
+    },
+    "up to": {
+      "meaning": "由…决定"
+    },
+    "individual": {
+      "meaning": "个人"
+    },
+    "enjoy": {
+      "meaning": "享受"
+    },
+    "all about balance": {
+      "meaning": "关键在于平衡"
+    },
+    "time": {
+      "meaning": "时间"
+    },
+    "reveal": {
+      "meaning": "揭晓"
+    },
+    "answer": {
+      "meaning": "答案"
+    },
+    "week's question": {
+      "meaning": "本周问题"
+    },
+    "asked": {
+      "meaning": "问"
+    },
+    "name": {
+      "meaning": "名称"
+    },
+    "correct": {
+      "meaning": "正确"
+    },
+    "Well done": {
+      "meaning": "做得好"
+    },
+    "recap": {
+      "meaning": "回顾"
+    },
+    "vocabulary": {
+      "meaning": "词汇"
+    },
+    "programme": {
+      "meaning": "节目"
+    },
+    "starting with": {
+      "meaning": "从…开始"
+    },
+    "describes": {
+      "meaning": "描述"
+    },
+    "someone": {
+      "meaning": "某人"
+    },
+    "doesn't": {
+      "meaning": "不"
+    },
+    "take": {
+      "meaning": "服用"
+    },
+    "recreational drugs": {
+      "meaning": "消遣性毒品"
+    },
+    "Saying": {
+      "meaning": "说"
+    },
+    "usual": {
+      "meaning": "通常的"
+    },
+    "expect": {
+      "meaning": "期待"
+    },
+    "achieving": {
+      "meaning": "实现"
+    },
+    "somebody": {
+      "meaning": "某人"
+    },
+    "touts": {
+      "meaning": "大力鼓吹"
+    },
+    "idea": {
+      "meaning": "想法"
+    },
+    "lifestyle": {
+      "meaning": "生活方式"
+    },
+    "convince": {
+      "meaning": "说服"
+    },
+    "trend": {
+      "meaning": "趋势"
+    },
+    "Once again": {
+      "meaning": "再一次"
+    },
+    "minutes are up": {
+      "meaning": "时间到了"
+    },
+    "forget": {
+      "meaning": "忘记"
+    },
+    "test": {
+      "meaning": "测试"
+    },
+    "learned": {
+      "meaning": "学到的"
+    },
+    "worksheet": {
+      "meaning": "练习表"
+    },
+    "website": {
+      "meaning": "网站"
+    },
+    "bbclearningenglish.com": {
+      "meaning": "BBC学习英语网站"
+    },
+    "joining us": {
+      "meaning": "收听节目"
+    },
+    "goodbye": {
+      "meaning": "再见"
+    },
+    "Goodbye": {
+      "meaning": "再见"
+    }
+  },
+  "dict": {
+    "hi": {
+      "translation": "你好",
+      "source": "context",
+      "context": "你好"
+    },
+    "neil": {
+      "translation": "尼尔（人名）",
+      "source": "context",
+      "context": "尼尔（人名）"
+    },
+    "georgie": {
+      "translation": "乔吉（人名）",
+      "source": "context",
+      "context": "乔吉（人名）"
+    },
+    "do": {
+      "translation": "助动词/做",
+      "source": "context",
+      "context": "助动词/做"
+    },
+    "you": {
+      "translation": "你",
+      "source": "context",
+      "context": "你"
+    },
+    "want": {
+      "translation": "想要",
+      "source": "context",
+      "context": "想要"
+    },
+    "to": {
+      "translation": "到；不定式标记",
+      "source": "context",
+      "context": "到；不定式标记"
+    },
+    "hear": {
+      "translation": "听",
+      "source": "context",
+      "context": "听"
+    },
+    "something": {
+      "translation": "某事",
+      "source": "context",
+      "context": "某事"
+    },
+    "quite": {
+      "translation": "相当",
+      "source": "context",
+      "context": "相当"
+    },
+    "unusual": {
+      "translation": "不寻常的",
+      "source": "context",
+      "context": "不寻常的"
+    },
+    "for": {
+      "translation": "对；为",
+      "source": "context",
+      "context": "对；为"
+    },
+    "me": {
+      "translation": "我",
+      "source": "context",
+      "context": "我"
+    },
+    "err": {
+      "translation": "呃（语气词）",
+      "source": "context",
+      "context": "呃（语气词）"
+    },
+    "yes": {
+      "translation": "是的",
+      "source": "context",
+      "context": "是的"
+    },
+    "i": {
+      "translation": "我",
+      "source": "context",
+      "context": "我"
+    },
+    "haven't had": {
+      "translation": "还没喝过/没做过",
+      "source": "context",
+      "context": "还没喝过/没做过"
+    },
+    "an": {
+      "translation": "一个（元音前）",
+      "source": "context",
+      "context": "一个（元音前）"
+    },
+    "alcoholic": {
+      "translation": "含酒精的",
+      "source": "context",
+      "context": "含酒精的"
+    },
+    "drink": {
+      "translation": "喝；饮料",
+      "source": "context",
+      "context": "喝；饮料"
+    },
+    "this": {
+      "translation": "这个",
+      "source": "context",
+      "context": "这个"
+    },
+    "year": {
+      "translation": "年",
+      "source": "context",
+      "context": "年"
+    },
+    "wow": {
+      "translation": "哇（惊叹）",
+      "source": "context",
+      "context": "哇（惊叹）"
+    },
+    "that": {
+      "translation": "那",
+      "source": "context",
+      "context": "那"
+    },
+    "is": {
+      "translation": "是",
+      "source": "context",
+      "context": "是"
+    },
+    "really": {
+      "translation": "非常",
+      "source": "context",
+      "context": "非常"
+    },
+    "impressive": {
+      "translation": "令人佩服的",
+      "source": "context",
+      "context": "令人佩服的"
+    },
+    "how": {
+      "translation": "如何",
+      "source": "context",
+      "context": "如何"
+    },
+    "feel": {
+      "translation": "感觉",
+      "source": "context",
+      "context": "感觉"
+    },
+    "like": {
+      "translation": "像",
+      "source": "context",
+      "context": "像"
+    },
+    "a": {
+      "translation": "一个",
+      "source": "context",
+      "context": "一个"
+    },
+    "new": {
+      "translation": "新的",
+      "source": "context",
+      "context": "新的"
+    },
+    "person": {
+      "translation": "人",
+      "source": "context",
+      "context": "人"
+    },
+    "very": {
+      "translation": "很",
+      "source": "context",
+      "context": "很"
+    },
+    "good": {
+      "translation": "好的",
+      "source": "context",
+      "context": "好的"
+    },
+    "have to say": {
+      "translation": "不得不说",
+      "source": "context",
+      "context": "不得不说"
+    },
+    "can't say the same": {
+      "translation": "我可不这样",
+      "source": "context",
+      "context": "我可不这样"
+    },
+    "did": {
+      "translation": "确实（强调）",
+      "source": "context",
+      "context": "确实（强调）"
+    },
+    "a few": {
+      "translation": "几个",
+      "source": "context",
+      "context": "几个"
+    },
+    "drinks": {
+      "translation": "酒；饮品",
+      "source": "context",
+      "context": "酒；饮品"
+    },
+    "at the weekend": {
+      "translation": "在周末",
+      "source": "context",
+      "context": "在周末"
+    },
+    "with": {
+      "translation": "和",
+      "source": "context",
+      "context": "和"
+    },
+    "my": {
+      "translation": "我的",
+      "source": "context",
+      "context": "我的"
+    },
+    "friends": {
+      "translation": "朋友",
+      "source": "context",
+      "context": "朋友"
+    },
+    "but": {
+      "translation": "但是",
+      "source": "context",
+      "context": "但是"
+    },
+    "in many parts of the world": {
+      "translation": "在世界许多地方",
+      "source": "context",
+      "context": "在世界许多地方"
+    },
+    "people": {
+      "translation": "人们",
+      "source": "context",
+      "context": "人们"
+    },
+    "don't": {
+      "translation": "不",
+      "source": "context",
+      "context": "不"
+    },
+    "at all": {
+      "translation": "完全不",
+      "source": "context",
+      "context": "完全不"
+    },
+    "it's very common": {
+      "translation": "很常见",
+      "source": "context",
+      "context": "很常见"
+    },
+    "until recently": {
+      "translation": "直到最近",
+      "source": "context",
+      "context": "直到最近"
+    },
+    "today": {
+      "translation": "今天",
+      "source": "context",
+      "context": "今天"
+    },
+    "on 6 minute english": {
+      "translation": "在6分钟英语节目",
+      "source": "context",
+      "context": "在6分钟英语节目"
+    },
+    "we're going to": {
+      "translation": "我们将要",
+      "source": "context",
+      "context": "我们将要"
+    },
+    "find out": {
+      "translation": "查明",
+      "source": "context",
+      "context": "查明"
+    },
+    "why": {
+      "translation": "为什么",
+      "source": "context",
+      "context": "为什么"
+    },
+    "choosing": {
+      "translation": "选择",
+      "source": "context",
+      "context": "选择"
+    },
+    "give up": {
+      "translation": "戒除；放弃",
+      "source": "context",
+      "context": "戒除；放弃"
+    },
+    "or": {
+      "translation": "或者",
+      "source": "context",
+      "context": "或者"
+    },
+    "cut down on": {
+      "translation": "减少",
+      "source": "context",
+      "context": "减少"
+    },
+    "alcohol": {
+      "translation": "酒精",
+      "source": "context",
+      "context": "酒精"
+    },
+    "and": {
+      "translation": "和",
+      "source": "context",
+      "context": "和"
+    },
+    "we'll be asking": {
+      "translation": "我们将提问",
+      "source": "context",
+      "context": "我们将提问"
+    },
+    "the end of": {
+      "translation": "……的终结",
+      "source": "context",
+      "context": "……的终结"
+    },
+    "british": {
+      "translation": "英国的",
+      "source": "context",
+      "context": "英国的"
+    },
+    "drinking culture": {
+      "translation": "饮酒文化",
+      "source": "context",
+      "context": "饮酒文化"
+    },
+    "ok": {
+      "translation": "好的",
+      "source": "context",
+      "context": "好的"
+    },
+    "let's start with": {
+      "translation": "从……开始",
+      "source": "context",
+      "context": "从……开始"
+    },
+    "quiz question": {
+      "translation": "测验问题",
+      "source": "context",
+      "context": "测验问题"
+    },
+    "other": {
+      "translation": "其他的",
+      "source": "context",
+      "context": "其他的"
+    },
+    "countries": {
+      "translation": "国家",
+      "source": "context",
+      "context": "国家"
+    },
+    "choose": {
+      "translation": "选择",
+      "source": "context",
+      "context": "选择"
+    },
+    "in the new year": {
+      "translation": "在新年",
+      "source": "context",
+      "context": "在新年"
+    },
+    "whole": {
+      "translation": "整个的",
+      "source": "context",
+      "context": "整个的"
+    },
+    "month": {
+      "translation": "月",
+      "source": "context",
+      "context": "月"
+    },
+    "january": {
+      "translation": "一月",
+      "source": "context",
+      "context": "一月"
+    },
+    "what": {
+      "translation": "什么",
+      "source": "context",
+      "context": "什么"
+    },
+    "the challenge called": {
+      "translation": "挑战叫什么",
+      "source": "context",
+      "context": "挑战叫什么"
+    },
+    "no-drink new year": {
+      "translation": "无酒新年",
+      "source": "context",
+      "context": "无酒新年"
+    },
+    "alcohol-free january": {
+      "translation": "无酒精一月",
+      "source": "context",
+      "context": "无酒精一月"
+    },
+    "dry january": {
+      "translation": "干爽一月（戒酒月）",
+      "source": "context",
+      "context": "干爽一月（戒酒月）"
+    },
+    "well": {
+      "translation": "嗯",
+      "source": "context",
+      "context": "嗯"
+    },
+    "know": {
+      "translation": "知道",
+      "source": "context",
+      "context": "知道"
+    },
+    "the answer": {
+      "translation": "答案",
+      "source": "context",
+      "context": "答案"
+    },
+    "i'm not going to give it away": {
+      "translation": "我不透露答案",
+      "source": "context",
+      "context": "我不透露答案"
+    },
+    "then": {
+      "translation": "那么",
+      "source": "context",
+      "context": "那么"
+    },
+    "our": {
+      "translation": "我们的",
+      "source": "context",
+      "context": "我们的"
+    },
+    "listeners": {
+      "translation": "听众",
+      "source": "context",
+      "context": "听众"
+    },
+    "at the end of the programme": {
+      "translation": "节目最后",
+      "source": "context",
+      "context": "节目最后"
+    },
+    "they": {
+      "translation": "他们",
+      "source": "context",
+      "context": "他们"
+    },
+    "can": {
+      "translation": "能",
+      "source": "context",
+      "context": "能"
+    },
+    "so": {
+      "translation": "所以",
+      "source": "context",
+      "context": "所以"
+    },
+    "i hear all the time": {
+      "translation": "我总听说",
+      "source": "context",
+      "context": "我总听说"
+    },
+    "younger": {
+      "translation": "更年轻的",
+      "source": "context",
+      "context": "更年轻的"
+    },
+    "as much as": {
+      "translation": "和……一样多",
+      "source": "context",
+      "context": "和……一样多"
+    },
+    "used to": {
+      "translation": "过去常常",
+      "source": "context",
+      "context": "过去常常"
+    },
+    "past": {
+      "translation": "过去",
+      "source": "context",
+      "context": "过去"
+    },
+    "is that true?": {
+      "translation": "那是真的吗",
+      "source": "context",
+      "context": "那是真的吗"
+    },
+    "surveys": {
+      "translation": "调查",
+      "source": "context",
+      "context": "调查"
+    },
+    "suggest": {
+      "translation": "表明",
+      "source": "context",
+      "context": "表明"
+    },
+    "16 to 24-year-olds": {
+      "translation": "16至24岁的人",
+      "source": "context",
+      "context": "16至24岁的人"
+    },
+    "more likely": {
+      "translation": "更有可能",
+      "source": "context",
+      "context": "更有可能"
+    },
+    "non-drinkers": {
+      "translation": "不喝酒的人",
+      "source": "context",
+      "context": "不喝酒的人"
+    },
+    "than": {
+      "translation": "比",
+      "source": "context",
+      "context": "比"
+    },
+    "older generations": {
+      "translation": "年长一代",
+      "source": "context",
+      "context": "年长一代"
+    },
+    "young": {
+      "translation": "年轻的",
+      "source": "context",
+      "context": "年轻的"
+    },
+    "sober": {
+      "translation": "不喝酒、不用毒品",
+      "source": "context",
+      "context": "不喝酒、不用毒品"
+    },
+    "means": {
+      "translation": "意味着",
+      "source": "context",
+      "context": "意味着"
+    },
+    "not": {
+      "translation": "不",
+      "source": "context",
+      "context": "不"
+    },
+    "the": {
+      "translation": "定冠词",
+      "source": "context",
+      "context": "定冠词"
+    },
+    "bbc": {
+      "translation": "英国广播公司",
+      "source": "context",
+      "context": "英国广播公司"
+    },
+    "world": {
+      "translation": "世界",
+      "source": "context",
+      "context": "世界"
+    },
+    "service": {
+      "translation": "广播服务",
+      "source": "context",
+      "context": "广播服务"
+    },
+    "podcast": {
+      "translation": "播客",
+      "source": "context",
+      "context": "播客"
+    },
+    "what in the world": {
+      "translation": "节目名称",
+      "source": "context",
+      "context": "节目名称"
+    },
+    "have": {
+      "translation": "已经",
+      "source": "context",
+      "context": "已经"
+    },
+    "been": {
+      "translation": "一直",
+      "source": "context",
+      "context": "一直"
+    },
+    "investigating": {
+      "translation": "调查",
+      "source": "context",
+      "context": "调查"
+    },
+    "presenter": {
+      "translation": "主持人",
+      "source": "context",
+      "context": "主持人"
+    },
+    "hannah": {
+      "translation": "汉娜人名",
+      "source": "context",
+      "context": "汉娜人名"
+    },
+    "gelbart": {
+      "translation": "盖尔巴特人名",
+      "source": "context",
+      "context": "盖尔巴特人名"
+    },
+    "met": {
+      "translation": "见了",
+      "source": "context",
+      "context": "见了"
+    },
+    "three": {
+      "translation": "三",
+      "source": "context",
+      "context": "三"
+    },
+    "who": {
+      "translation": "谁",
+      "source": "context",
+      "context": "谁"
+    },
+    "be": {
+      "translation": "是",
+      "source": "context",
+      "context": "是"
+    },
+    "some": {
+      "translation": "一些",
+      "source": "context",
+      "context": "一些"
+    },
+    "alcohol-free": {
+      "translation": "无酒精的",
+      "source": "context",
+      "context": "无酒精的"
+    },
+    "find": {
+      "translation": "找出",
+      "source": "context",
+      "context": "找出"
+    },
+    "out": {
+      "translation": "出来",
+      "source": "context",
+      "context": "出来"
+    },
+    "more": {
+      "translation": "更多",
+      "source": "context",
+      "context": "更多"
+    },
+    "here's": {
+      "translation": "这是",
+      "source": "context",
+      "context": "这是"
+    },
+    "daniel's": {
+      "translation": "丹尼尔的",
+      "source": "context",
+      "context": "丹尼尔的"
+    },
+    "story": {
+      "translation": "故事",
+      "source": "context",
+      "context": "故事"
+    },
+    "yeah": {
+      "translation": "是的",
+      "source": "context",
+      "context": "是的"
+    },
+    "when": {
+      "translation": "当…时",
+      "source": "context",
+      "context": "当…时"
+    },
+    "was": {
+      "translation": "是",
+      "source": "context",
+      "context": "是"
+    },
+    "in": {
+      "translation": "在",
+      "source": "context",
+      "context": "在"
+    },
+    "early": {
+      "translation": "早期的",
+      "source": "context",
+      "context": "早期的"
+    },
+    "20s": {
+      "translation": "二十多岁时",
+      "source": "context",
+      "context": "二十多岁时"
+    },
+    "think": {
+      "translation": "想",
+      "source": "context",
+      "context": "想"
+    },
+    "felt": {
+      "translation": "感到",
+      "source": "context",
+      "context": "感到"
+    },
+    "maybe": {
+      "translation": "也许",
+      "source": "context",
+      "context": "也许"
+    },
+    "bit": {
+      "translation": "一点",
+      "source": "context",
+      "context": "一点"
+    },
+    "of": {
+      "translation": "的",
+      "source": "context",
+      "context": "的"
+    },
+    "societal pressure": {
+      "translation": "社会压力",
+      "source": "context",
+      "context": "社会压力"
+    },
+    "work": {
+      "translation": "工作",
+      "source": "context",
+      "context": "工作"
+    },
+    "being": {
+      "translation": "处于",
+      "source": "context",
+      "context": "处于"
+    },
+    "at": {
+      "translation": "在",
+      "source": "context",
+      "context": "在"
+    },
+    "uni": {
+      "translation": "大学",
+      "source": "context",
+      "context": "大学"
+    },
+    "where": {
+      "translation": "那里",
+      "source": "context",
+      "context": "那里"
+    },
+    "it": {
+      "translation": "它",
+      "source": "context",
+      "context": "它"
+    },
+    "the norm": {
+      "translation": "常态",
+      "source": "context",
+      "context": "常态"
+    },
+    "just": {
+      "translation": "只是",
+      "source": "context",
+      "context": "只是"
+    },
+    "join in": {
+      "translation": "参与",
+      "source": "context",
+      "context": "参与"
+    },
+    "you'd": {
+      "translation": "你会",
+      "source": "context",
+      "context": "你会"
+    },
+    "probably": {
+      "translation": "大概",
+      "source": "context",
+      "context": "大概"
+    },
+    "get": {
+      "translation": "得到",
+      "source": "context",
+      "context": "得到"
+    },
+    "few": {
+      "translation": "几个",
+      "source": "context",
+      "context": "几个"
+    },
+    "weird": {
+      "translation": "怪异的",
+      "source": "context",
+      "context": "怪异的"
+    },
+    "glances": {
+      "translation": "瞥视",
+      "source": "context",
+      "context": "瞥视"
+    },
+    "if": {
+      "translation": "如果",
+      "source": "context",
+      "context": "如果"
+    },
+    "you're": {
+      "translation": "你是",
+      "source": "context",
+      "context": "你是"
+    },
+    "i'm": {
+      "translation": "我是",
+      "source": "context",
+      "context": "我是"
+    },
+    "going to": {
+      "translation": "将要",
+      "source": "context",
+      "context": "将要"
+    },
+    "covid": {
+      "translation": "新冠",
+      "source": "context",
+      "context": "新冠"
+    },
+    "lockdown": {
+      "translation": "封锁",
+      "source": "context",
+      "context": "封锁"
+    },
+    "gave": {
+      "translation": "给了",
+      "source": "context",
+      "context": "给了"
+    },
+    "confidence": {
+      "translation": "信心",
+      "source": "context",
+      "context": "信心"
+    },
+    "say": {
+      "translation": "说",
+      "source": "context",
+      "context": "说"
+    },
+    "let": {
+      "translation": "让",
+      "source": "context",
+      "context": "让"
+    },
+    "step away from": {
+      "translation": "远离",
+      "source": "context",
+      "context": "远离"
+    },
+    "it's": {
+      "translation": "它是",
+      "source": "context",
+      "context": "它是"
+    },
+    "necessarily": {
+      "translation": "一定",
+      "source": "context",
+      "context": "一定"
+    },
+    "moving forward": {
+      "translation": "今后",
+      "source": "context",
+      "context": "今后"
+    },
+    "many": {
+      "translation": "许多",
+      "source": "context",
+      "context": "许多"
+    },
+    "years": {
+      "translation": "年",
+      "source": "context",
+      "context": "年"
+    },
+    "would": {
+      "translation": "会",
+      "source": "context",
+      "context": "会"
+    },
+    "six": {
+      "translation": "六",
+      "source": "context",
+      "context": "六"
+    },
+    "now": {
+      "translation": "现在",
+      "source": "context",
+      "context": "现在"
+    },
+    "says": {
+      "translation": "说",
+      "source": "context",
+      "context": "说"
+    },
+    "he": {
+      "translation": "他",
+      "source": "context",
+      "context": "他"
+    },
+    "feeling": {
+      "translation": "感觉",
+      "source": "context",
+      "context": "感觉"
+    },
+    "need": {
+      "translation": "需要",
+      "source": "context",
+      "context": "需要"
+    },
+    "because": {
+      "translation": "因为",
+      "source": "context",
+      "context": "因为"
+    },
+    "lots": {
+      "translation": "很多",
+      "source": "context",
+      "context": "很多"
+    },
+    "around": {
+      "translation": "周围",
+      "source": "context",
+      "context": "周围"
+    },
+    "are": {
+      "translation": "是",
+      "source": "context",
+      "context": "是"
+    },
+    "doing": {
+      "translation": "做",
+      "source": "context",
+      "context": "做"
+    },
+    "right": {
+      "translation": "对",
+      "source": "context",
+      "context": "对"
+    },
+    "drinking": {
+      "translation": "喝酒",
+      "source": "context",
+      "context": "喝酒"
+    },
+    "university": {
+      "translation": "大学",
+      "source": "context",
+      "context": "大学"
+    },
+    "after": {
+      "translation": "之后",
+      "source": "context",
+      "context": "之后"
+    },
+    "way": {
+      "translation": "方式",
+      "source": "context",
+      "context": "方式"
+    },
+    "saying": {
+      "translation": "说",
+      "source": "context",
+      "context": "说"
+    },
+    "normal": {
+      "translation": "正常的",
+      "source": "context",
+      "context": "正常的"
+    },
+    "common": {
+      "translation": "常见的",
+      "source": "context",
+      "context": "常见的"
+    },
+    "during": {
+      "translation": "期间",
+      "source": "context",
+      "context": "期间"
+    },
+    "pandemic": {
+      "translation": "疫情",
+      "source": "context",
+      "context": "疫情"
+    },
+    "unable": {
+      "translation": "不能",
+      "source": "context",
+      "context": "不能"
+    },
+    "socialise": {
+      "translation": "社交",
+      "source": "context",
+      "context": "社交"
+    },
+    "visit": {
+      "translation": "去",
+      "source": "context",
+      "context": "去"
+    },
+    "pubs": {
+      "translation": "酒馆",
+      "source": "context",
+      "context": "酒馆"
+    },
+    "bars": {
+      "translation": "酒吧",
+      "source": "context",
+      "context": "酒吧"
+    },
+    "attitude": {
+      "translation": "态度",
+      "source": "context",
+      "context": "态度"
+    },
+    "changed": {
+      "translation": "改变了",
+      "source": "context",
+      "context": "改变了"
+    },
+    "decided": {
+      "translation": "决定",
+      "source": "context",
+      "context": "决定"
+    },
+    "hasn't": {
+      "translation": "没有",
+      "source": "context",
+      "context": "没有"
+    },
+    "had": {
+      "translation": "有",
+      "source": "context",
+      "context": "有"
+    },
+    "about": {
+      "translation": "大约",
+      "source": "context",
+      "context": "大约"
+    },
+    "seems": {
+      "translation": "似乎",
+      "source": "context",
+      "context": "似乎"
+    },
+    "share": {
+      "translation": "分享",
+      "source": "context",
+      "context": "分享"
+    },
+    "their": {
+      "translation": "他们的",
+      "source": "context",
+      "context": "他们的"
+    },
+    "experience": {
+      "translation": "经历",
+      "source": "context",
+      "context": "经历"
+    },
+    "on": {
+      "translation": "在",
+      "source": "context",
+      "context": "在"
+    },
+    "social media": {
+      "translation": "社交媒体",
+      "source": "context",
+      "context": "社交媒体"
+    },
+    "recently": {
+      "translation": "最近",
+      "source": "context",
+      "context": "最近"
+    },
+    "there's": {
+      "translation": "有",
+      "source": "context",
+      "context": "有"
+    },
+    "a bit of a change": {
+      "translation": "一点变化",
+      "source": "context",
+      "context": "一点变化"
+    },
+    "hasn't there": {
+      "translation": "是吧",
+      "source": "context",
+      "context": "是吧"
+    },
+    "whilst": {
+      "translation": "然而，当…时",
+      "source": "context",
+      "context": "然而，当…时"
+    },
+    "use": {
+      "translation": "使用",
+      "source": "context",
+      "context": "使用"
+    },
+    "less": {
+      "translation": "更少的",
+      "source": "context",
+      "context": "更少的"
+    },
+    "no": {
+      "translation": "没有",
+      "source": "context",
+      "context": "没有"
+    },
+    "to go out": {
+      "translation": "外出",
+      "source": "context",
+      "context": "外出"
+    },
+    "fun": {
+      "translation": "乐趣",
+      "source": "context",
+      "context": "乐趣"
+    },
+    "they argue": {
+      "translation": "他们争论说",
+      "source": "context",
+      "context": "他们争论说"
+    },
+    "we're": {
+      "translation": "我们是",
+      "source": "context",
+      "context": "我们是"
+    },
+    "too": {
+      "translation": "太",
+      "source": "context",
+      "context": "太"
+    },
+    "worried": {
+      "translation": "担心的",
+      "source": "context",
+      "context": "担心的"
+    },
+    "fitness": {
+      "translation": "健身",
+      "source": "context",
+      "context": "健身"
+    },
+    "wellness": {
+      "translation": "健康养生",
+      "source": "context",
+      "context": "健康养生"
+    },
+    "having": {
+      "translation": "有，喝",
+      "source": "context",
+      "context": "有，喝"
+    },
+    "good time": {
+      "translation": "好时光",
+      "source": "context",
+      "context": "好时光"
+    },
+    "fine": {
+      "translation": "没问题的",
+      "source": "context",
+      "context": "没问题的"
+    },
+    "millie": {
+      "translation": "人名：米莉",
+      "source": "context",
+      "context": "人名：米莉"
+    },
+    "talking": {
+      "translation": "谈论",
+      "source": "context",
+      "context": "谈论"
+    },
+    "more about this": {
+      "translation": "更多谈论这个",
+      "source": "context",
+      "context": "更多谈论这个"
+    },
+    "we": {
+      "translation": "我们",
+      "source": "context",
+      "context": "我们"
+    },
+    "rise": {
+      "translation": "兴起",
+      "source": "context",
+      "context": "兴起"
+    },
+    "self-optimisation content": {
+      "translation": "自我提升类内容",
+      "source": "context",
+      "context": "自我提升类内容"
+    },
+    "i think unfortunately": {
+      "translation": "我认为不幸的是",
+      "source": "context",
+      "context": "我认为不幸的是"
+    },
+    "sobriety": {
+      "translation": "戒酒状态",
+      "source": "context",
+      "context": "戒酒状态"
+    },
+    "kind of": {
+      "translation": "有点，算是",
+      "source": "context",
+      "context": "有点，算是"
+    },
+    "got": {
+      "translation": "被",
+      "source": "context",
+      "context": "被"
+    },
+    "swept in": {
+      "translation": "被卷入",
+      "source": "context",
+      "context": "被卷入"
+    },
+    "with that": {
+      "translation": "随着那股潮流",
+      "source": "context",
+      "context": "随着那股潮流"
+    },
+    "got touted": {
+      "translation": "被大肆宣扬",
+      "source": "context",
+      "context": "被大肆宣扬"
+    },
+    "as": {
+      "translation": "作为",
+      "source": "context",
+      "context": "作为"
+    },
+    "this way": {
+      "translation": "这种方式",
+      "source": "context",
+      "context": "这种方式"
+    },
+    "you know": {
+      "translation": "你知道",
+      "source": "context",
+      "context": "你知道"
+    },
+    "get up": {
+      "translation": "起床",
+      "source": "context",
+      "context": "起床"
+    },
+    "5am": {
+      "translation": "凌晨五点",
+      "source": "context",
+      "context": "凌晨五点"
+    },
+    "a hyrox": {
+      "translation": "HYROX健身赛",
+      "source": "context",
+      "context": "HYROX健身赛"
+    },
+    "of us": {
+      "translation": "我们中的人",
+      "source": "context",
+      "context": "我们中的人"
+    },
+    "that's": {
+      "translation": "那是",
+      "source": "context",
+      "context": "那是"
+    },
+    "reality": {
+      "translation": "现实",
+      "source": "context",
+      "context": "现实"
+    },
+    "not drinking": {
+      "translation": "不喝酒",
+      "source": "context",
+      "context": "不喝酒"
+    },
+    "it's that": {
+      "translation": "其实是因为",
+      "source": "context",
+      "context": "其实是因为"
+    },
+    "we do it": {
+      "translation": "我们这样做",
+      "source": "context",
+      "context": "我们这样做"
+    },
+    "to feel": {
+      "translation": "为了感觉",
+      "source": "context",
+      "context": "为了感觉"
+    },
+    "a bit": {
+      "translation": "一点",
+      "source": "context",
+      "context": "一点"
+    },
+    "sane": {
+      "translation": "清醒、理智",
+      "source": "context",
+      "context": "清醒、理智"
+    },
+    "things like that": {
+      "translation": "诸如此类",
+      "source": "context",
+      "context": "诸如此类"
+    },
+    "entering": {
+      "translation": "进入",
+      "source": "context",
+      "context": "进入"
+    },
+    "almost": {
+      "translation": "几乎",
+      "source": "context",
+      "context": "几乎"
+    },
+    "pushback": {
+      "translation": "反弹、抵制",
+      "source": "context",
+      "context": "反弹、抵制"
+    },
+    "era": {
+      "translation": "时代",
+      "source": "context",
+      "context": "时代"
+    },
+    "of that content": {
+      "translation": "那类内容的",
+      "source": "context",
+      "context": "那类内容的"
+    },
+    "you're seeing": {
+      "translation": "你正在看到",
+      "source": "context",
+      "context": "你正在看到"
+    },
+    "celebrities": {
+      "translation": "名人",
+      "source": "context",
+      "context": "名人"
+    },
+    "it's not just": {
+      "translation": "不只是",
+      "source": "context",
+      "context": "不只是"
+    },
+    "seeing": {
+      "translation": "看到",
+      "source": "context",
+      "context": "看到"
+    },
+    "smoking": {
+      "translation": "抽烟",
+      "source": "context",
+      "context": "抽烟"
+    },
+    "posting": {
+      "translation": "发布",
+      "source": "context",
+      "context": "发布"
+    },
+    "their instagram": {
+      "translation": "他们的Ins",
+      "source": "context",
+      "context": "他们的Ins"
+    },
+    "worrying": {
+      "translation": "担心",
+      "source": "context",
+      "context": "担心"
+    },
+    "brand-friendly": {
+      "translation": "适合品牌形象",
+      "source": "context",
+      "context": "适合品牌形象"
+    },
+    "thinks": {
+      "translation": "认为",
+      "source": "context",
+      "context": "认为"
+    },
+    "is associated with": {
+      "translation": "与…相关联",
+      "source": "context",
+      "context": "与…相关联"
+    },
+    "certain": {
+      "translation": "某些",
+      "source": "context",
+      "context": "某些"
+    },
+    "kinds": {
+      "translation": "种类",
+      "source": "context",
+      "context": "种类"
+    },
+    "talk about": {
+      "translation": "谈论",
+      "source": "context",
+      "context": "谈论"
+    },
+    "diet": {
+      "translation": "饮食",
+      "source": "context",
+      "context": "饮食"
+    },
+    "big goals": {
+      "translation": "远大目标",
+      "source": "context",
+      "context": "远大目标"
+    },
+    "for themselves": {
+      "translation": "为他们自己",
+      "source": "context",
+      "context": "为他们自己"
+    },
+    "gets touted": {
+      "translation": "被宣扬",
+      "source": "context",
+      "context": "被宣扬"
+    },
+    "a way": {
+      "translation": "一种方式",
+      "source": "context",
+      "context": "一种方式"
+    },
+    "to get up": {
+      "translation": "起床",
+      "source": "context",
+      "context": "起床"
+    },
+    "exercise": {
+      "translation": "锻炼",
+      "source": "context",
+      "context": "锻炼"
+    },
+    "in other words": {
+      "translation": "换句话说",
+      "source": "context",
+      "context": "换句话说"
+    },
+    "talk about it a lot": {
+      "translation": "大谈特谈",
+      "source": "context",
+      "context": "大谈特谈"
+    },
+    "try to": {
+      "translation": "试图",
+      "source": "context",
+      "context": "试图"
+    },
+    "encourage": {
+      "translation": "鼓励",
+      "source": "context",
+      "context": "鼓励"
+    },
+    "isn't": {
+      "translation": "不是",
+      "source": "context",
+      "context": "不是"
+    },
+    "always": {
+      "translation": "总是",
+      "source": "context",
+      "context": "总是"
+    },
+    "super": {
+      "translation": "非常",
+      "source": "context",
+      "context": "非常"
+    },
+    "fit": {
+      "translation": "健壮的",
+      "source": "context",
+      "context": "健壮的"
+    },
+    "healthy": {
+      "translation": "健康的",
+      "source": "context",
+      "context": "健康的"
+    },
+    "for her": {
+      "translation": "对她来说",
+      "source": "context",
+      "context": "对她来说"
+    },
+    "but still": {
+      "translation": "但尽管如此",
+      "source": "context",
+      "context": "但尽管如此"
+    },
+    "against": {
+      "translation": "反对",
+      "source": "context",
+      "context": "反对"
+    },
+    "content": {
+      "translation": "内容",
+      "source": "context",
+      "context": "内容"
+    },
+    "criticism": {
+      "translation": "批评",
+      "source": "context",
+      "context": "批评"
+    },
+    "pushing back": {
+      "translation": "反击",
+      "source": "context",
+      "context": "反击"
+    },
+    "by": {
+      "translation": "通过",
+      "source": "context",
+      "context": "通过"
+    },
+    "doing the opposite": {
+      "translation": "反其道而行",
+      "source": "context",
+      "context": "反其道而行"
+    },
+    "for example": {
+      "translation": "例如",
+      "source": "context",
+      "context": "例如"
+    },
+    "celebrities post": {
+      "translation": "名人发布",
+      "source": "context",
+      "context": "名人发布"
+    },
+    "themselves": {
+      "translation": "他们自己",
+      "source": "context",
+      "context": "他们自己"
+    },
+    "everybody": {
+      "translation": "每个人",
+      "source": "context",
+      "context": "每个人"
+    },
+    "try": {
+      "translation": "尝试",
+      "source": "context",
+      "context": "尝试"
+    },
+    "up to": {
+      "translation": "由…决定",
+      "source": "context",
+      "context": "由…决定"
+    },
+    "individual": {
+      "translation": "个人",
+      "source": "context",
+      "context": "个人"
+    },
+    "enjoy": {
+      "translation": "享受",
+      "source": "context",
+      "context": "享受"
+    },
+    "all about balance": {
+      "translation": "关键在于平衡",
+      "source": "context",
+      "context": "关键在于平衡"
+    },
+    "time": {
+      "translation": "时间",
+      "source": "context",
+      "context": "时间"
+    },
+    "reveal": {
+      "translation": "揭晓",
+      "source": "context",
+      "context": "揭晓"
+    },
+    "answer": {
+      "translation": "答案",
+      "source": "context",
+      "context": "答案"
+    },
+    "week's question": {
+      "translation": "本周问题",
+      "source": "context",
+      "context": "本周问题"
+    },
+    "asked": {
+      "translation": "问",
+      "source": "context",
+      "context": "问"
+    },
+    "name": {
+      "translation": "名称",
+      "source": "context",
+      "context": "名称"
+    },
+    "correct": {
+      "translation": "正确",
+      "source": "context",
+      "context": "正确"
+    },
+    "well done": {
+      "translation": "做得好",
+      "source": "context",
+      "context": "做得好"
+    },
+    "recap": {
+      "translation": "回顾",
+      "source": "context",
+      "context": "回顾"
+    },
+    "vocabulary": {
+      "translation": "词汇",
+      "source": "context",
+      "context": "词汇"
+    },
+    "programme": {
+      "translation": "节目",
+      "source": "context",
+      "context": "节目"
+    },
+    "starting with": {
+      "translation": "从…开始",
+      "source": "context",
+      "context": "从…开始"
+    },
+    "describes": {
+      "translation": "描述",
+      "source": "context",
+      "context": "描述"
+    },
+    "someone": {
+      "translation": "某人",
+      "source": "context",
+      "context": "某人"
+    },
+    "doesn't": {
+      "translation": "不",
+      "source": "context",
+      "context": "不"
+    },
+    "take": {
+      "translation": "服用",
+      "source": "context",
+      "context": "服用"
+    },
+    "recreational drugs": {
+      "translation": "消遣性毒品",
+      "source": "context",
+      "context": "消遣性毒品"
+    },
+    "usual": {
+      "translation": "通常的",
+      "source": "context",
+      "context": "通常的"
+    },
+    "expect": {
+      "translation": "期待",
+      "source": "context",
+      "context": "期待"
+    },
+    "achieving": {
+      "translation": "实现",
+      "source": "context",
+      "context": "实现"
+    },
+    "somebody": {
+      "translation": "某人",
+      "source": "context",
+      "context": "某人"
+    },
+    "touts": {
+      "translation": "大力鼓吹",
+      "source": "context",
+      "context": "大力鼓吹"
+    },
+    "idea": {
+      "translation": "想法",
+      "source": "context",
+      "context": "想法"
+    },
+    "lifestyle": {
+      "translation": "生活方式",
+      "source": "context",
+      "context": "生活方式"
+    },
+    "convince": {
+      "translation": "说服",
+      "source": "context",
+      "context": "说服"
+    },
+    "trend": {
+      "translation": "趋势",
+      "source": "context",
+      "context": "趋势"
+    },
+    "once again": {
+      "translation": "再一次",
+      "source": "context",
+      "context": "再一次"
+    },
+    "minutes are up": {
+      "translation": "时间到了",
+      "source": "context",
+      "context": "时间到了"
+    },
+    "forget": {
+      "translation": "忘记",
+      "source": "context",
+      "context": "忘记"
+    },
+    "test": {
+      "translation": "测试",
+      "source": "context",
+      "context": "测试"
+    },
+    "learned": {
+      "translation": "学到的",
+      "source": "context",
+      "context": "学到的"
+    },
+    "worksheet": {
+      "translation": "练习表",
+      "source": "context",
+      "context": "练习表"
+    },
+    "website": {
+      "translation": "网站",
+      "source": "context",
+      "context": "网站"
+    },
+    "bbclearningenglish.com": {
+      "translation": "BBC学习英语网站",
+      "source": "context",
+      "context": "BBC学习英语网站"
+    },
+    "joining us": {
+      "translation": "收听节目",
+      "source": "context",
+      "context": "收听节目"
+    },
+    "goodbye": {
+      "translation": "再见",
+      "source": "context",
+      "context": "再见"
     },
     "tout": {
       "translation": "praise something or talk about it a lot to get others to try it",
       "source": "official"
     },
-    "pushback": {
-      "translation": "strong criticism of a trend; people doing the opposite of a trend",
-      "source": "official"
+    "haven": {
+      "translation": "还没喝过/没做过",
+      "source": "context",
+      "context": "还没喝过/没做过",
+      "phrase": "haven't had"
+    },
+    "haventhad": {
+      "translation": "还没喝过/没做过",
+      "source": "context",
+      "context": "还没喝过/没做过",
+      "phrase": "haven't had"
+    },
+    "t": {
+      "translation": "还没喝过/没做过",
+      "source": "context",
+      "context": "还没喝过/没做过",
+      "phrase": "haven't had"
+    },
+    "havetosay": {
+      "translation": "不得不说",
+      "source": "context",
+      "context": "不得不说",
+      "phrase": "have to say"
+    },
+    "cantsaythesame": {
+      "translation": "我可不这样",
+      "source": "context",
+      "context": "我可不这样",
+      "phrase": "can't say the same"
+    },
+    "same": {
+      "translation": "我可不这样",
+      "source": "context",
+      "context": "我可不这样",
+      "phrase": "can't say the same"
+    },
+    "afew": {
+      "translation": "几个",
+      "source": "context",
+      "context": "几个",
+      "phrase": "a few"
+    },
+    "attheweekend": {
+      "translation": "在周末",
+      "source": "context",
+      "context": "在周末",
+      "phrase": "at the weekend"
+    },
+    "weekend": {
+      "translation": "在周末",
+      "source": "context",
+      "context": "在周末",
+      "phrase": "at the weekend"
+    },
+    "inmanypartsoftheworld": {
+      "translation": "在世界许多地方",
+      "source": "context",
+      "context": "在世界许多地方",
+      "phrase": "in many parts of the world"
+    },
+    "parts": {
+      "translation": "在世界许多地方",
+      "source": "context",
+      "context": "在世界许多地方",
+      "phrase": "in many parts of the world"
+    },
+    "dont": {
+      "translation": "不",
+      "source": "context",
+      "context": "不",
+      "phrase": "don't"
+    },
+    "all": {
+      "translation": "完全不",
+      "source": "context",
+      "context": "完全不",
+      "phrase": "at all"
+    },
+    "atall": {
+      "translation": "完全不",
+      "source": "context",
+      "context": "完全不",
+      "phrase": "at all"
+    },
+    "itsverycommon": {
+      "translation": "很常见",
+      "source": "context",
+      "context": "很常见",
+      "phrase": "it's very common"
+    },
+    "s": {
+      "translation": "很常见",
+      "source": "context",
+      "context": "很常见",
+      "phrase": "it's very common"
+    },
+    "until": {
+      "translation": "直到最近",
+      "source": "context",
+      "context": "直到最近",
+      "phrase": "until recently"
+    },
+    "untilrecently": {
+      "translation": "直到最近",
+      "source": "context",
+      "context": "直到最近",
+      "phrase": "until recently"
+    },
+    "6": {
+      "translation": "在6分钟英语节目",
+      "source": "context",
+      "context": "在6分钟英语节目",
+      "phrase": "on 6 minute english"
+    },
+    "english": {
+      "translation": "在6分钟英语节目",
+      "source": "context",
+      "context": "在6分钟英语节目",
+      "phrase": "on 6 minute english"
+    },
+    "minute": {
+      "translation": "在6分钟英语节目",
+      "source": "context",
+      "context": "在6分钟英语节目",
+      "phrase": "on 6 minute english"
+    },
+    "on6minuteenglish": {
+      "translation": "在6分钟英语节目",
+      "source": "context",
+      "context": "在6分钟英语节目",
+      "phrase": "on 6 minute english"
+    },
+    "going": {
+      "translation": "我们将要",
+      "source": "context",
+      "context": "我们将要",
+      "phrase": "we're going to"
+    },
+    "re": {
+      "translation": "我们将要",
+      "source": "context",
+      "context": "我们将要",
+      "phrase": "we're going to"
+    },
+    "weregoingto": {
+      "translation": "我们将要",
+      "source": "context",
+      "context": "我们将要",
+      "phrase": "we're going to"
+    },
+    "findout": {
+      "translation": "查明",
+      "source": "context",
+      "context": "查明",
+      "phrase": "find out"
+    },
+    "give": {
+      "translation": "戒除；放弃",
+      "source": "context",
+      "context": "戒除；放弃",
+      "phrase": "give up"
+    },
+    "giveup": {
+      "translation": "戒除；放弃",
+      "source": "context",
+      "context": "戒除；放弃",
+      "phrase": "give up"
+    },
+    "up": {
+      "translation": "戒除；放弃",
+      "source": "context",
+      "context": "戒除；放弃",
+      "phrase": "give up"
+    },
+    "cut": {
+      "translation": "减少",
+      "source": "context",
+      "context": "减少",
+      "phrase": "cut down on"
+    },
+    "cutdownon": {
+      "translation": "减少",
+      "source": "context",
+      "context": "减少",
+      "phrase": "cut down on"
+    },
+    "down": {
+      "translation": "减少",
+      "source": "context",
+      "context": "减少",
+      "phrase": "cut down on"
+    },
+    "asking": {
+      "translation": "我们将提问",
+      "source": "context",
+      "context": "我们将提问",
+      "phrase": "we'll be asking"
+    },
+    "ll": {
+      "translation": "我们将提问",
+      "source": "context",
+      "context": "我们将提问",
+      "phrase": "we'll be asking"
+    },
+    "wellbeasking": {
+      "translation": "我们将提问",
+      "source": "context",
+      "context": "我们将提问",
+      "phrase": "we'll be asking"
+    },
+    "end": {
+      "translation": "……的终结",
+      "source": "context",
+      "context": "……的终结",
+      "phrase": "the end of"
+    },
+    "theendof": {
+      "translation": "……的终结",
+      "source": "context",
+      "context": "……的终结",
+      "phrase": "the end of"
+    },
+    "culture": {
+      "translation": "饮酒文化",
+      "source": "context",
+      "context": "饮酒文化",
+      "phrase": "drinking culture"
+    },
+    "drinkingculture": {
+      "translation": "饮酒文化",
+      "source": "context",
+      "context": "饮酒文化",
+      "phrase": "drinking culture"
+    },
+    "letsstartwith": {
+      "translation": "从……开始",
+      "source": "context",
+      "context": "从……开始",
+      "phrase": "let's start with"
+    },
+    "start": {
+      "translation": "从……开始",
+      "source": "context",
+      "context": "从……开始",
+      "phrase": "let's start with"
+    },
+    "question": {
+      "translation": "测验问题",
+      "source": "context",
+      "context": "测验问题",
+      "phrase": "quiz question"
+    },
+    "quiz": {
+      "translation": "测验问题",
+      "source": "context",
+      "context": "测验问题",
+      "phrase": "quiz question"
+    },
+    "quizquestion": {
+      "translation": "测验问题",
+      "source": "context",
+      "context": "测验问题",
+      "phrase": "quiz question"
+    },
+    "inthenewyear": {
+      "translation": "在新年",
+      "source": "context",
+      "context": "在新年",
+      "phrase": "in the new year"
+    },
+    "called": {
+      "translation": "挑战叫什么",
+      "source": "context",
+      "context": "挑战叫什么",
+      "phrase": "the challenge called"
+    },
+    "challenge": {
+      "translation": "挑战叫什么",
+      "source": "context",
+      "context": "挑战叫什么",
+      "phrase": "the challenge called"
+    },
+    "thechallengecalled": {
+      "translation": "挑战叫什么",
+      "source": "context",
+      "context": "挑战叫什么",
+      "phrase": "the challenge called"
+    },
+    "nodrinknewyear": {
+      "translation": "无酒新年",
+      "source": "context",
+      "context": "无酒新年",
+      "phrase": "no-drink new year"
+    },
+    "alcoholfreejanuary": {
+      "translation": "无酒精一月",
+      "source": "context",
+      "context": "无酒精一月",
+      "phrase": "alcohol-free january"
+    },
+    "free": {
+      "translation": "无酒精一月",
+      "source": "context",
+      "context": "无酒精一月",
+      "phrase": "alcohol-free january"
+    },
+    "dry": {
+      "translation": "干爽一月（戒酒月）",
+      "source": "context",
+      "context": "干爽一月（戒酒月）",
+      "phrase": "dry january"
+    },
+    "dryjanuary": {
+      "translation": "干爽一月（戒酒月）",
+      "source": "context",
+      "context": "干爽一月（戒酒月）",
+      "phrase": "dry january"
+    },
+    "theanswer": {
+      "translation": "答案",
+      "source": "context",
+      "context": "答案",
+      "phrase": "the answer"
+    },
+    "away": {
+      "translation": "我不透露答案",
+      "source": "context",
+      "context": "我不透露答案",
+      "phrase": "i'm not going to give it away"
+    },
+    "imnotgoingtogiveitaway": {
+      "translation": "我不透露答案",
+      "source": "context",
+      "context": "我不透露答案",
+      "phrase": "i'm not going to give it away"
+    },
+    "m": {
+      "translation": "我不透露答案",
+      "source": "context",
+      "context": "我不透露答案",
+      "phrase": "i'm not going to give it away"
+    },
+    "attheendoftheprogramme": {
+      "translation": "节目最后",
+      "source": "context",
+      "context": "节目最后",
+      "phrase": "at the end of the programme"
+    },
+    "ihearallthetime": {
+      "translation": "我总听说",
+      "source": "context",
+      "context": "我总听说",
+      "phrase": "i hear all the time"
+    },
+    "asmuchas": {
+      "translation": "和……一样多",
+      "source": "context",
+      "context": "和……一样多",
+      "phrase": "as much as"
+    },
+    "much": {
+      "translation": "和……一样多",
+      "source": "context",
+      "context": "和……一样多",
+      "phrase": "as much as"
+    },
+    "used": {
+      "translation": "过去常常",
+      "source": "context",
+      "context": "过去常常",
+      "phrase": "used to"
+    },
+    "usedto": {
+      "translation": "过去常常",
+      "source": "context",
+      "context": "过去常常",
+      "phrase": "used to"
+    },
+    "isthattrue": {
+      "translation": "那是真的吗",
+      "source": "context",
+      "context": "那是真的吗",
+      "phrase": "is that true?"
+    },
+    "true": {
+      "translation": "那是真的吗",
+      "source": "context",
+      "context": "那是真的吗",
+      "phrase": "is that true?"
+    },
+    "16": {
+      "translation": "16至24岁的人",
+      "source": "context",
+      "context": "16至24岁的人",
+      "phrase": "16 to 24-year-olds"
+    },
+    "16to24yearolds": {
+      "translation": "16至24岁的人",
+      "source": "context",
+      "context": "16至24岁的人",
+      "phrase": "16 to 24-year-olds"
+    },
+    "24": {
+      "translation": "16至24岁的人",
+      "source": "context",
+      "context": "16至24岁的人",
+      "phrase": "16 to 24-year-olds"
+    },
+    "olds": {
+      "translation": "16至24岁的人",
+      "source": "context",
+      "context": "16至24岁的人",
+      "phrase": "16 to 24-year-olds"
+    },
+    "likely": {
+      "translation": "更有可能",
+      "source": "context",
+      "context": "更有可能",
+      "phrase": "more likely"
+    },
+    "morelikely": {
+      "translation": "更有可能",
+      "source": "context",
+      "context": "更有可能",
+      "phrase": "more likely"
+    },
+    "nondrinkers": {
+      "translation": "不喝酒的人",
+      "source": "context",
+      "context": "不喝酒的人",
+      "phrase": "non-drinkers"
+    },
+    "generations": {
+      "translation": "年长一代",
+      "source": "context",
+      "context": "年长一代",
+      "phrase": "older generations"
+    },
+    "older": {
+      "translation": "年长一代",
+      "source": "context",
+      "context": "年长一代",
+      "phrase": "older generations"
+    },
+    "oldergenerations": {
+      "translation": "年长一代",
+      "source": "context",
+      "context": "年长一代",
+      "phrase": "older generations"
+    },
+    "whatintheworld": {
+      "translation": "节目名称",
+      "source": "context",
+      "context": "节目名称",
+      "phrase": "what in the world"
+    },
+    "alcoholfree": {
+      "translation": "无酒精的",
+      "source": "context",
+      "context": "无酒精的",
+      "phrase": "alcohol-free"
+    },
+    "heres": {
+      "translation": "这是",
+      "source": "context",
+      "context": "这是",
+      "phrase": "here's"
+    },
+    "daniels": {
+      "translation": "丹尼尔的",
+      "source": "context",
+      "context": "丹尼尔的",
+      "phrase": "daniel's"
     },
     "pressure": {
-      "translation": "feeling that you should do something because lots of other people expect you to",
-      "source": "official",
+      "translation": "社会压力",
+      "source": "context",
+      "context": "社会压力",
       "phrase": "societal pressure"
     },
     "societal": {
-      "translation": "feeling that you should do something because lots of other people expect you to",
-      "source": "official",
+      "translation": "社会压力",
+      "source": "context",
+      "context": "社会压力",
       "phrase": "societal pressure"
     },
     "societalpressure": {
-      "translation": "feeling that you should do something because lots of other people expect you to",
-      "source": "official",
+      "translation": "社会压力",
+      "source": "context",
+      "context": "社会压力",
       "phrase": "societal pressure"
     },
     "norm": {
-      "translation": "the usual or common thing to do",
-      "source": "official",
+      "translation": "常态",
+      "source": "context",
+      "context": "常态",
       "phrase": "the norm"
     },
     "thenorm": {
-      "translation": "the usual or common thing to do",
-      "source": "official",
+      "translation": "常态",
+      "source": "context",
+      "context": "常态",
       "phrase": "the norm"
     },
-    "content": {
-      "translation": "videos, posts and other media about being fit, healthy and achieving big goals",
-      "source": "official",
-      "phrase": "self-optimisation content"
+    "join": {
+      "translation": "参与",
+      "source": "context",
+      "context": "参与",
+      "phrase": "join in"
+    },
+    "joinin": {
+      "translation": "参与",
+      "source": "context",
+      "context": "参与",
+      "phrase": "join in"
+    },
+    "youd": {
+      "translation": "你会",
+      "source": "context",
+      "context": "你会",
+      "phrase": "you'd"
+    },
+    "youre": {
+      "translation": "你是",
+      "source": "context",
+      "context": "你是",
+      "phrase": "you're"
+    },
+    "im": {
+      "translation": "我是",
+      "source": "context",
+      "context": "我是",
+      "phrase": "i'm"
+    },
+    "goingto": {
+      "translation": "将要",
+      "source": "context",
+      "context": "将要",
+      "phrase": "going to"
+    },
+    "from": {
+      "translation": "远离",
+      "source": "context",
+      "context": "远离",
+      "phrase": "step away from"
+    },
+    "step": {
+      "translation": "远离",
+      "source": "context",
+      "context": "远离",
+      "phrase": "step away from"
+    },
+    "stepawayfrom": {
+      "translation": "远离",
+      "source": "context",
+      "context": "远离",
+      "phrase": "step away from"
+    },
+    "its": {
+      "translation": "它是",
+      "source": "context",
+      "context": "它是",
+      "phrase": "it's"
+    },
+    "forward": {
+      "translation": "今后",
+      "source": "context",
+      "context": "今后",
+      "phrase": "moving forward"
+    },
+    "moving": {
+      "translation": "今后",
+      "source": "context",
+      "context": "今后",
+      "phrase": "moving forward"
+    },
+    "movingforward": {
+      "translation": "今后",
+      "source": "context",
+      "context": "今后",
+      "phrase": "moving forward"
+    },
+    "hasnt": {
+      "translation": "没有",
+      "source": "context",
+      "context": "没有",
+      "phrase": "hasn't"
+    },
+    "media": {
+      "translation": "社交媒体",
+      "source": "context",
+      "context": "社交媒体",
+      "phrase": "social media"
+    },
+    "social": {
+      "translation": "社交媒体",
+      "source": "context",
+      "context": "社交媒体",
+      "phrase": "social media"
+    },
+    "socialmedia": {
+      "translation": "社交媒体",
+      "source": "context",
+      "context": "社交媒体",
+      "phrase": "social media"
+    },
+    "theres": {
+      "translation": "有",
+      "source": "context",
+      "context": "有",
+      "phrase": "there's"
+    },
+    "abitofachange": {
+      "translation": "一点变化",
+      "source": "context",
+      "context": "一点变化",
+      "phrase": "a bit of a change"
+    },
+    "change": {
+      "translation": "一点变化",
+      "source": "context",
+      "context": "一点变化",
+      "phrase": "a bit of a change"
+    },
+    "hasn": {
+      "translation": "是吧",
+      "source": "context",
+      "context": "是吧",
+      "phrase": "hasn't there"
+    },
+    "hasntthere": {
+      "translation": "是吧",
+      "source": "context",
+      "context": "是吧",
+      "phrase": "hasn't there"
+    },
+    "there": {
+      "translation": "是吧",
+      "source": "context",
+      "context": "是吧",
+      "phrase": "hasn't there"
+    },
+    "go": {
+      "translation": "外出",
+      "source": "context",
+      "context": "外出",
+      "phrase": "to go out"
+    },
+    "togoout": {
+      "translation": "外出",
+      "source": "context",
+      "context": "外出",
+      "phrase": "to go out"
+    },
+    "argue": {
+      "translation": "他们争论说",
+      "source": "context",
+      "context": "他们争论说",
+      "phrase": "they argue"
+    },
+    "theyargue": {
+      "translation": "他们争论说",
+      "source": "context",
+      "context": "他们争论说",
+      "phrase": "they argue"
+    },
+    "were": {
+      "translation": "我们是",
+      "source": "context",
+      "context": "我们是",
+      "phrase": "we're"
+    },
+    "goodtime": {
+      "translation": "好时光",
+      "source": "context",
+      "context": "好时光",
+      "phrase": "good time"
+    },
+    "moreaboutthis": {
+      "translation": "更多谈论这个",
+      "source": "context",
+      "context": "更多谈论这个",
+      "phrase": "more about this"
     },
     "optimisation": {
-      "translation": "videos, posts and other media about being fit, healthy and achieving big goals",
-      "source": "official",
+      "translation": "自我提升类内容",
+      "source": "context",
+      "context": "自我提升类内容",
       "phrase": "self-optimisation content"
     },
     "self": {
-      "translation": "videos, posts and other media about being fit, healthy and achieving big goals",
-      "source": "official",
+      "translation": "自我提升类内容",
+      "source": "context",
+      "context": "自我提升类内容",
       "phrase": "self-optimisation content"
     },
     "selfoptimisationcontent": {
-      "translation": "videos, posts and other media about being fit, healthy and achieving big goals",
-      "source": "official",
+      "translation": "自我提升类内容",
+      "source": "context",
+      "context": "自我提升类内容",
       "phrase": "self-optimisation content"
+    },
+    "ithinkunfortunately": {
+      "translation": "我认为不幸的是",
+      "source": "context",
+      "context": "我认为不幸的是",
+      "phrase": "i think unfortunately"
+    },
+    "unfortunately": {
+      "translation": "我认为不幸的是",
+      "source": "context",
+      "context": "我认为不幸的是",
+      "phrase": "i think unfortunately"
+    },
+    "kind": {
+      "translation": "有点，算是",
+      "source": "context",
+      "context": "有点，算是",
+      "phrase": "kind of"
+    },
+    "kindof": {
+      "translation": "有点，算是",
+      "source": "context",
+      "context": "有点，算是",
+      "phrase": "kind of"
+    },
+    "swept": {
+      "translation": "被卷入",
+      "source": "context",
+      "context": "被卷入",
+      "phrase": "swept in"
+    },
+    "sweptin": {
+      "translation": "被卷入",
+      "source": "context",
+      "context": "被卷入",
+      "phrase": "swept in"
+    },
+    "withthat": {
+      "translation": "随着那股潮流",
+      "source": "context",
+      "context": "随着那股潮流",
+      "phrase": "with that"
+    },
+    "gottouted": {
+      "translation": "被大肆宣扬",
+      "source": "context",
+      "context": "被大肆宣扬",
+      "phrase": "got touted"
+    },
+    "touted": {
+      "translation": "被大肆宣扬",
+      "source": "context",
+      "context": "被大肆宣扬",
+      "phrase": "got touted"
+    },
+    "thisway": {
+      "translation": "这种方式",
+      "source": "context",
+      "context": "这种方式",
+      "phrase": "this way"
+    },
+    "youknow": {
+      "translation": "你知道",
+      "source": "context",
+      "context": "你知道",
+      "phrase": "you know"
+    },
+    "getup": {
+      "translation": "起床",
+      "source": "context",
+      "context": "起床",
+      "phrase": "get up"
+    },
+    "ahyrox": {
+      "translation": "HYROX健身赛",
+      "source": "context",
+      "context": "HYROX健身赛",
+      "phrase": "a hyrox"
+    },
+    "hyrox": {
+      "translation": "HYROX健身赛",
+      "source": "context",
+      "context": "HYROX健身赛",
+      "phrase": "a hyrox"
+    },
+    "ofus": {
+      "translation": "我们中的人",
+      "source": "context",
+      "context": "我们中的人",
+      "phrase": "of us"
+    },
+    "us": {
+      "translation": "我们中的人",
+      "source": "context",
+      "context": "我们中的人",
+      "phrase": "of us"
+    },
+    "thats": {
+      "translation": "那是",
+      "source": "context",
+      "context": "那是",
+      "phrase": "that's"
+    },
+    "notdrinking": {
+      "translation": "不喝酒",
+      "source": "context",
+      "context": "不喝酒",
+      "phrase": "not drinking"
+    },
+    "itsthat": {
+      "translation": "其实是因为",
+      "source": "context",
+      "context": "其实是因为",
+      "phrase": "it's that"
+    },
+    "wedoit": {
+      "translation": "我们这样做",
+      "source": "context",
+      "context": "我们这样做",
+      "phrase": "we do it"
+    },
+    "tofeel": {
+      "translation": "为了感觉",
+      "source": "context",
+      "context": "为了感觉",
+      "phrase": "to feel"
+    },
+    "abit": {
+      "translation": "一点",
+      "source": "context",
+      "context": "一点",
+      "phrase": "a bit"
+    },
+    "things": {
+      "translation": "诸如此类",
+      "source": "context",
+      "context": "诸如此类",
+      "phrase": "things like that"
+    },
+    "thingslikethat": {
+      "translation": "诸如此类",
+      "source": "context",
+      "context": "诸如此类",
+      "phrase": "things like that"
+    },
+    "ofthatcontent": {
+      "translation": "那类内容的",
+      "source": "context",
+      "context": "那类内容的",
+      "phrase": "of that content"
+    },
+    "youreseeing": {
+      "translation": "你正在看到",
+      "source": "context",
+      "context": "你正在看到",
+      "phrase": "you're seeing"
+    },
+    "itsnotjust": {
+      "translation": "不只是",
+      "source": "context",
+      "context": "不只是",
+      "phrase": "it's not just"
+    },
+    "instagram": {
+      "translation": "他们的Ins",
+      "source": "context",
+      "context": "他们的Ins",
+      "phrase": "their instagram"
+    },
+    "theirinstagram": {
+      "translation": "他们的Ins",
+      "source": "context",
+      "context": "他们的Ins",
+      "phrase": "their instagram"
+    },
+    "brandfriendly": {
+      "translation": "适合品牌形象",
+      "source": "context",
+      "context": "适合品牌形象",
+      "phrase": "brand-friendly"
+    },
+    "associated": {
+      "translation": "与…相关联",
+      "source": "context",
+      "context": "与…相关联",
+      "phrase": "is associated with"
+    },
+    "isassociatedwith": {
+      "translation": "与…相关联",
+      "source": "context",
+      "context": "与…相关联",
+      "phrase": "is associated with"
+    },
+    "talk": {
+      "translation": "谈论",
+      "source": "context",
+      "context": "谈论",
+      "phrase": "talk about"
+    },
+    "talkabout": {
+      "translation": "谈论",
+      "source": "context",
+      "context": "谈论",
+      "phrase": "talk about"
+    },
+    "big": {
+      "translation": "远大目标",
+      "source": "context",
+      "context": "远大目标",
+      "phrase": "big goals"
+    },
+    "biggoals": {
+      "translation": "远大目标",
+      "source": "context",
+      "context": "远大目标",
+      "phrase": "big goals"
+    },
+    "goals": {
+      "translation": "远大目标",
+      "source": "context",
+      "context": "远大目标",
+      "phrase": "big goals"
+    },
+    "forthemselves": {
+      "translation": "为他们自己",
+      "source": "context",
+      "context": "为他们自己",
+      "phrase": "for themselves"
+    },
+    "gets": {
+      "translation": "被宣扬",
+      "source": "context",
+      "context": "被宣扬",
+      "phrase": "gets touted"
+    },
+    "getstouted": {
+      "translation": "被宣扬",
+      "source": "context",
+      "context": "被宣扬",
+      "phrase": "gets touted"
+    },
+    "togetup": {
+      "translation": "起床",
+      "source": "context",
+      "context": "起床",
+      "phrase": "to get up"
+    },
+    "inotherwords": {
+      "translation": "换句话说",
+      "source": "context",
+      "context": "换句话说",
+      "phrase": "in other words"
+    },
+    "words": {
+      "translation": "换句话说",
+      "source": "context",
+      "context": "换句话说",
+      "phrase": "in other words"
+    },
+    "lot": {
+      "translation": "大谈特谈",
+      "source": "context",
+      "context": "大谈特谈",
+      "phrase": "talk about it a lot"
+    },
+    "talkaboutitalot": {
+      "translation": "大谈特谈",
+      "source": "context",
+      "context": "大谈特谈",
+      "phrase": "talk about it a lot"
+    },
+    "tryto": {
+      "translation": "试图",
+      "source": "context",
+      "context": "试图",
+      "phrase": "try to"
+    },
+    "isnt": {
+      "translation": "不是",
+      "source": "context",
+      "context": "不是",
+      "phrase": "isn't"
+    },
+    "forher": {
+      "translation": "对她来说",
+      "source": "context",
+      "context": "对她来说",
+      "phrase": "for her"
+    },
+    "her": {
+      "translation": "对她来说",
+      "source": "context",
+      "context": "对她来说",
+      "phrase": "for her"
+    },
+    "butstill": {
+      "translation": "但尽管如此",
+      "source": "context",
+      "context": "但尽管如此",
+      "phrase": "but still"
+    },
+    "still": {
+      "translation": "但尽管如此",
+      "source": "context",
+      "context": "但尽管如此",
+      "phrase": "but still"
+    },
+    "back": {
+      "translation": "反击",
+      "source": "context",
+      "context": "反击",
+      "phrase": "pushing back"
+    },
+    "pushing": {
+      "translation": "反击",
+      "source": "context",
+      "context": "反击",
+      "phrase": "pushing back"
+    },
+    "pushingback": {
+      "translation": "反击",
+      "source": "context",
+      "context": "反击",
+      "phrase": "pushing back"
+    },
+    "doingtheopposite": {
+      "translation": "反其道而行",
+      "source": "context",
+      "context": "反其道而行",
+      "phrase": "doing the opposite"
+    },
+    "opposite": {
+      "translation": "反其道而行",
+      "source": "context",
+      "context": "反其道而行",
+      "phrase": "doing the opposite"
+    },
+    "example": {
+      "translation": "例如",
+      "source": "context",
+      "context": "例如",
+      "phrase": "for example"
+    },
+    "forexample": {
+      "translation": "例如",
+      "source": "context",
+      "context": "例如",
+      "phrase": "for example"
+    },
+    "celebritiespost": {
+      "translation": "名人发布",
+      "source": "context",
+      "context": "名人发布",
+      "phrase": "celebrities post"
+    },
+    "post": {
+      "translation": "名人发布",
+      "source": "context",
+      "context": "名人发布",
+      "phrase": "celebrities post"
+    },
+    "upto": {
+      "translation": "由…决定",
+      "source": "context",
+      "context": "由…决定",
+      "phrase": "up to"
+    },
+    "allaboutbalance": {
+      "translation": "关键在于平衡",
+      "source": "context",
+      "context": "关键在于平衡",
+      "phrase": "all about balance"
+    },
+    "balance": {
+      "translation": "关键在于平衡",
+      "source": "context",
+      "context": "关键在于平衡",
+      "phrase": "all about balance"
+    },
+    "week": {
+      "translation": "本周问题",
+      "source": "context",
+      "context": "本周问题",
+      "phrase": "week's question"
+    },
+    "weeksquestion": {
+      "translation": "本周问题",
+      "source": "context",
+      "context": "本周问题",
+      "phrase": "week's question"
+    },
+    "done": {
+      "translation": "做得好",
+      "source": "context",
+      "context": "做得好",
+      "phrase": "well done"
+    },
+    "welldone": {
+      "translation": "做得好",
+      "source": "context",
+      "context": "做得好",
+      "phrase": "well done"
+    },
+    "starting": {
+      "translation": "从…开始",
+      "source": "context",
+      "context": "从…开始",
+      "phrase": "starting with"
+    },
+    "startingwith": {
+      "translation": "从…开始",
+      "source": "context",
+      "context": "从…开始",
+      "phrase": "starting with"
+    },
+    "doesnt": {
+      "translation": "不",
+      "source": "context",
+      "context": "不",
+      "phrase": "doesn't"
+    },
+    "drugs": {
+      "translation": "消遣性毒品",
+      "source": "context",
+      "context": "消遣性毒品",
+      "phrase": "recreational drugs"
+    },
+    "recreational": {
+      "translation": "消遣性毒品",
+      "source": "context",
+      "context": "消遣性毒品",
+      "phrase": "recreational drugs"
+    },
+    "recreationaldrugs": {
+      "translation": "消遣性毒品",
+      "source": "context",
+      "context": "消遣性毒品",
+      "phrase": "recreational drugs"
+    },
+    "again": {
+      "translation": "再一次",
+      "source": "context",
+      "context": "再一次",
+      "phrase": "once again"
+    },
+    "once": {
+      "translation": "再一次",
+      "source": "context",
+      "context": "再一次",
+      "phrase": "once again"
+    },
+    "onceagain": {
+      "translation": "再一次",
+      "source": "context",
+      "context": "再一次",
+      "phrase": "once again"
+    },
+    "minutes": {
+      "translation": "时间到了",
+      "source": "context",
+      "context": "时间到了",
+      "phrase": "minutes are up"
+    },
+    "minutesareup": {
+      "translation": "时间到了",
+      "source": "context",
+      "context": "时间到了",
+      "phrase": "minutes are up"
+    },
+    "bbclearningenglishcom": {
+      "translation": "BBC学习英语网站",
+      "source": "context",
+      "context": "BBC学习英语网站",
+      "phrase": "bbclearningenglish.com"
+    },
+    "joining": {
+      "translation": "收听节目",
+      "source": "context",
+      "context": "收听节目",
+      "phrase": "joining us"
+    },
+    "joiningus": {
+      "translation": "收听节目",
+      "source": "context",
+      "context": "收听节目",
+      "phrase": "joining us"
     }
   }
 }

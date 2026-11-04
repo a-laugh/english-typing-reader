@@ -185,76 +185,3078 @@
       "definition": "blocking the Sun's light and heat"
     }
   ],
-  "context_glossary": {},
-  "dict": {
+  "context_glossary": {
+    "Hi": {
+      "meaning": "嗨"
+    },
+    "Neil": {
+      "meaning": "尼尔，人名"
+    },
+    "Georgie": {
+      "meaning": "乔吉，人名"
+    },
+    "So": {
+      "meaning": "那么"
+    },
+    "we've": {
+      "meaning": "我们已经"
+    },
+    "just": {
+      "meaning": "刚刚"
+    },
+    "had": {
+      "meaning": "有"
+    },
+    "a": {
+      "meaning": "一"
+    },
+    "really": {
+      "meaning": "非常"
+    },
+    "hot": {
+      "meaning": "炎热的"
+    },
+    "summer": {
+      "meaning": "夏天"
+    },
+    "in": {
+      "meaning": "在"
+    },
+    "the": {
+      "meaning": "定冠词"
+    },
+    "UK": {
+      "meaning": "英国"
+    },
+    "Did": {
+      "meaning": "did过去式"
+    },
+    "you": {
+      "meaning": "你"
+    },
+    "have": {
+      "meaning": "有"
+    },
+    "air": {
+      "meaning": "空气"
+    },
+    "conditioning": {
+      "meaning": "空调调节"
+    },
+    "your": {
+      "meaning": "你的"
+    },
+    "house": {
+      "meaning": "房子"
+    },
+    "I": {
+      "meaning": "我"
+    },
+    "didn't": {
+      "meaning": "没有"
+    },
+    "wish": {
+      "meaning": "希望"
+    },
+    "because": {
+      "meaning": "因为"
+    },
+    "it": {
+      "meaning": "它"
+    },
+    "was": {
+      "meaning": "是"
+    },
+    "and": {
+      "meaning": "和"
+    },
+    "couldn't": {
+      "meaning": "不能"
+    },
+    "sleep": {
+      "meaning": "睡觉"
+    },
+    "No": {
+      "meaning": "不"
+    },
+    "one": {
+      "meaning": "一个"
+    },
+    "of": {
+      "meaning": "……的"
+    },
+    "those": {
+      "meaning": "那些"
+    },
+    "big": {
+      "meaning": "大的"
+    },
+    "fans": {
+      "meaning": "风扇"
+    },
+    "which": {
+      "meaning": "哪一个"
+    },
+    "didn't always": {
+      "meaning": "并不总是"
+    },
+    "do": {
+      "meaning": "做"
+    },
+    "its": {
+      "meaning": "它的"
+    },
+    "job": {
+      "meaning": "工作"
+    },
+    "But": {
+      "meaning": "但是"
+    },
+    "there": {
+      "meaning": "有"
+    },
+    "is": {
+      "meaning": "是"
+    },
+    "serious": {
+      "meaning": "严重的"
+    },
+    "side": {
+      "meaning": "方面"
+    },
+    "to": {
+      "meaning": "到"
+    },
+    "this": {
+      "meaning": "这个"
+    },
+    "Heat": {
+      "meaning": "高温"
+    },
+    "records": {
+      "meaning": "纪录"
+    },
+    "continue": {
+      "meaning": "继续"
+    },
+    "be": {
+      "meaning": "被"
+    },
+    "broken": {
+      "meaning": "打破"
+    },
+    "around": {
+      "meaning": "在世界各地"
+    },
+    "world": {
+      "meaning": "世界"
+    },
+    "May": {
+      "meaning": "可能"
+    },
+    "feeling": {
+      "meaning": "感觉"
+    },
+    "that": {
+      "meaning": "that从句引导词"
+    },
+    "summers": {
+      "meaning": "夏天"
+    },
+    "are": {
+      "meaning": "是"
+    },
+    "getting": {
+      "meaning": "变得"
+    },
+    "too": {
+      "meaning": "太"
+    },
+    "Have": {
+      "meaning": "have助动词"
+    },
+    "been": {
+      "meaning": "一直"
+    },
+    "using": {
+      "meaning": "使用"
+    },
+    "more": {
+      "meaning": "更多"
+    },
+    "cope": {
+      "meaning": "应对"
+    },
+    "If": {
+      "meaning": "如果"
+    },
+    "so": {
+      "meaning": "如此"
+    },
+    "you're": {
+      "meaning": "你是"
+    },
+    "not": {
+      "meaning": "不"
+    },
+    "alone": {
+      "meaning": "独自的"
+    },
+    "Experts": {
+      "meaning": "专家"
+    },
+    "predicting": {
+      "meaning": "预测"
+    },
+    "ten": {
+      "meaning": "十"
+    },
+    "new": {
+      "meaning": "新的"
+    },
+    "units": {
+      "meaning": "设备"
+    },
+    "will": {
+      "meaning": "将"
+    },
+    "installed": {
+      "meaning": "安装"
+    },
+    "every": {
+      "meaning": "每"
+    },
+    "second": {
+      "meaning": "秒"
+    },
+    "for": {
+      "meaning": "为"
+    },
+    "next": {
+      "meaning": "接下来的"
+    },
+    "30": {
+      "meaning": "三十"
+    },
+    "years": {
+      "meaning": "年"
+    },
+    "Today": {
+      "meaning": "今天"
+    },
+    "on": {
+      "meaning": "在"
+    },
+    "6 Minute English": {
+      "meaning": "六分钟英语节目"
+    },
+    "we're": {
+      "meaning": "我们是"
+    },
+    "talking": {
+      "meaning": "谈论"
+    },
+    "about": {
+      "meaning": "关于"
+    },
+    "whether": {
+      "meaning": "是否"
+    },
+    "best": {
+      "meaning": "最好的"
+    },
+    "way": {
+      "meaning": "方式"
+    },
+    "with": {
+      "meaning": "用"
+    },
+    "warming": {
+      "meaning": "变暖的"
+    },
+    "OK": {
+      "meaning": "好的"
+    },
+    "As": {
+      "meaning": "作为"
+    },
+    "always": {
+      "meaning": "总是"
+    },
+    "we'll": {
+      "meaning": "我们将"
+    },
+    "start": {
+      "meaning": "开始"
+    },
+    "quiz": {
+      "meaning": "问答"
+    },
+    "question": {
+      "meaning": "问题"
+    },
+    "modern": {
+      "meaning": "现代的"
+    },
+    "invented": {
+      "meaning": "发明"
+    },
+    "1902": {
+      "meaning": "1902年"
+    },
+    "what": {
+      "meaning": "什么"
+    },
+    "originally": {
+      "meaning": "最初"
+    },
+    "used": {
+      "meaning": "用于"
+    },
+    "a)": {
+      "meaning": "选项A"
+    },
+    "protect": {
+      "meaning": "保护"
+    },
+    "people": {
+      "meaning": "人们"
+    },
+    "hospitals": {
+      "meaning": "医院"
+    },
+    "b)": {
+      "meaning": "选项B"
+    },
+    "dry": {
+      "meaning": "弄干"
+    },
+    "ink": {
+      "meaning": "墨水"
+    },
+    "or": {
+      "meaning": "或者"
+    },
+    "c)": {
+      "meaning": "选项C"
+    },
+    "clean": {
+      "meaning": "清洁"
+    },
+    "Well": {
+      "meaning": "嗯"
+    },
+    "absolutely": {
+      "meaning": "完全"
+    },
+    "no": {
+      "meaning": "没有"
+    },
+    "idea": {
+      "meaning": "想法"
+    },
+    "I'm": {
+      "meaning": "我是"
+    },
+    "going": {
+      "meaning": "将要"
+    },
+    "guess": {
+      "meaning": "猜"
+    },
+    "say": {
+      "meaning": "说"
+    },
+    "find": {
+      "meaning": "发现"
+    },
+    "out": {
+      "meaning": "出"
+    },
+    "answer": {
+      "meaning": "答案"
+    },
+    "at": {
+      "meaning": "在"
+    },
+    "end": {
+      "meaning": "结尾"
+    },
+    "programme": {
+      "meaning": "节目"
+    },
+    "how": {
+      "meaning": "如何"
+    },
+    "uncomfortable": {
+      "meaning": "不舒服的"
+    },
+    "weather": {
+      "meaning": "天气"
+    },
+    "can": {
+      "meaning": "能够"
+    },
+    "make": {
+      "meaning": "使"
+    },
+    "feel": {
+      "meaning": "感觉"
+    },
+    "though": {
+      "meaning": "然而"
+    },
+    "comfort": {
+      "meaning": "舒适"
+    },
+    "just about": {
+      "meaning": "仅仅关于"
+    },
+    "real": {
+      "meaning": "真实的"
+    },
+    "health": {
+      "meaning": "健康"
+    },
+    "issue": {
+      "meaning": "问题"
+    },
+    "well": {
+      "meaning": "也"
+    },
+    "It's": {
+      "meaning": "它是"
+    },
+    "thought": {
+      "meaning": "认为"
+    },
+    "across": {
+      "meaning": "遍及"
+    },
+    "Europe": {
+      "meaning": "欧洲"
+    },
+    "over": {
+      "meaning": "超过"
+    },
+    "30,000": {
+      "meaning": "三万"
+    },
+    "died": {
+      "meaning": "死亡"
+    },
+    "as a result of": {
+      "meaning": "由于"
+    },
+    "this summer's": {
+      "meaning": "今年夏天的"
+    },
+    "Dr": {
+      "meaning": "博士"
+    },
+    "Radhika Khosla": {
+      "meaning": "拉迪卡·科斯拉，人名"
+    },
+    "an": {
+      "meaning": "一"
+    },
+    "expert": {
+      "meaning": "专家"
+    },
+    "climatology": {
+      "meaning": "气候学"
+    },
+    "told": {
+      "meaning": "告诉"
+    },
+    "BBC": {
+      "meaning": "英国广播公司"
+    },
+    "World Service": {
+      "meaning": "国际频道"
+    },
+    "The Climate Question": {
+      "meaning": "气候问题节目"
+    },
+    "important": {
+      "meaning": "重要的"
+    },
+    "Actually": {
+      "meaning": "其实"
+    },
     "life-saving": {
-      "translation": "used to stop people from dying",
-      "source": "official"
+      "meaning": "拯救生命的"
+    },
+    "know": {
+      "meaning": "知道"
+    },
+    "Singapore": {
+      "meaning": "新加坡"
+    },
+    "when": {
+      "meaning": "当……时"
+    },
+    "Lee Kuan Yew": {
+      "meaning": "李光耀"
+    },
+    "asked": {
+      "meaning": "被问"
+    },
+    "civilisation": {
+      "meaning": "文明"
+    },
+    "possible": {
+      "meaning": "可能的"
+    },
+    "tropics": {
+      "meaning": "热带地区"
+    },
+    "he": {
+      "meaning": "他"
+    },
+    "saying": {
+      "meaning": "说"
+    },
+    "literally": {
+      "meaning": "字面上、确实"
+    },
+    "stops": {
+      "meaning": "阻止"
+    },
+    "from": {
+      "meaning": "免于"
+    },
+    "dying": {
+      "meaning": "死亡"
+    },
+    "Yes": {
+      "meaning": "是的"
+    },
+    "she": {
+      "meaning": "她"
+    },
+    "makes": {
+      "meaning": "提出"
+    },
+    "point": {
+      "meaning": "观点"
+    },
+    "many": {
+      "meaning": "许多"
+    },
+    "parts": {
+      "meaning": "地区"
+    },
+    "live in": {
+      "meaning": "居住"
+    },
+    "without": {
+      "meaning": "没有"
+    },
+    "technology": {
+      "meaning": "技术"
+    },
+    "sounds": {
+      "meaning": "听起来"
+    },
+    "like": {
+      "meaning": "像"
+    },
+    "has": {
+      "meaning": "有"
+    },
+    "a lot": {
+      "meaning": "很多"
+    },
+    "good": {
+      "meaning": "好的"
+    },
+    "things": {
+      "meaning": "优点"
+    },
+    "all": {
+      "meaning": "全、都"
+    },
+    "positive": {
+      "meaning": "正面的"
+    },
+    "some": {
+      "meaning": "一些"
+    },
+    "downsides": {
+      "meaning": "缺点"
+    },
+    "problem": {
+      "meaning": "问题"
+    },
+    "amount": {
+      "meaning": "数量"
+    },
+    "energy": {
+      "meaning": "能源"
+    },
+    "uses": {
+      "meaning": "消耗"
+    },
+    "Let's": {
+      "meaning": "让我们"
+    },
+    "hear": {
+      "meaning": "听听"
+    },
+    "becomes": {
+      "meaning": "成为"
+    },
+    "first": {
+      "meaning": "第一个"
+    },
+    "go-to": {
+      "meaning": "首选的"
+    },
+    "solution": {
+      "meaning": "解决办法"
+    },
+    "deal": {
+      "meaning": "应对"
+    },
+    "increased": {
+      "meaning": "增加的"
+    },
+    "prolonged": {
+      "meaning": "持续的"
+    },
+    "extreme": {
+      "meaning": "极端的"
+    },
+    "face": {
+      "meaning": "面对"
+    },
+    "facing": {
+      "meaning": "正面对"
+    },
+    "places": {
+      "meaning": "施加"
+    },
+    "stresses": {
+      "meaning": "压力"
+    },
+    "system": {
+      "meaning": "系统"
+    },
+    "able": {
+      "meaning": "能够"
+    },
+    "met": {
+      "meaning": "满足"
+    },
+    "see": {
+      "meaning": "看到"
+    },
+    "the grid": {
+      "meaning": "电网"
+    },
+    "collapse": {
+      "meaning": "崩溃"
+    },
+    "emissions": {
+      "meaning": "排放"
+    },
+    "rise": {
+      "meaning": "上升"
+    },
+    "kinds": {
+      "meaning": "种类"
+    },
+    "other": {
+      "meaning": "其他的"
+    },
+    "impacts": {
+      "meaning": "影响"
+    },
+    "quite": {
+      "meaning": "相当"
+    },
+    "detrimental": {
+      "meaning": "有害的"
+    },
+    "reach": {
+      "meaning": "陷入"
+    },
+    "vicious cycle": {
+      "meaning": "恶性循环"
+    },
+    "then": {
+      "meaning": "然后"
+    },
+    "where": {
+      "meaning": "在那里"
+    },
+    "warmer": {
+      "meaning": "更暖"
+    },
+    "ourselves": {
+      "meaning": "我们自己"
+    },
+    "leading": {
+      "meaning": "导致"
+    },
+    "need": {
+      "meaning": "需要"
+    },
+    "We": {
+      "meaning": "我们"
+    },
+    "heard": {
+      "meaning": "听说"
+    },
+    "grid": {
+      "meaning": "电网"
+    },
+    "network": {
+      "meaning": "网络"
+    },
+    "distributes": {
+      "meaning": "分配、输送"
+    },
+    "electricity": {
+      "meaning": "电"
+    },
+    "towns": {
+      "meaning": "城镇"
+    },
+    "cities": {
+      "meaning": "城市"
+    },
+    "countries": {
+      "meaning": "国家"
+    },
+    "trying": {
+      "meaning": "试图"
+    },
+    "use": {
+      "meaning": "使用"
+    },
+    "than": {
+      "meaning": "比"
+    },
+    "power": {
+      "meaning": "电力"
+    },
+    "cuts": {
+      "meaning": "中断、停电"
+    },
+    "can't": {
+      "meaning": "不能"
+    },
+    "any": {
+      "meaning": "任何"
+    },
+    "creates": {
+      "meaning": "产生"
+    },
+    "lead": {
+      "meaning": "导致"
+    },
+    "warm up": {
+      "meaning": "变暖"
+    },
+    "means": {
+      "meaning": "意味着"
+    },
+    "even": {
+      "meaning": "甚至、更"
+    },
+    "so on": {
+      "meaning": "等等"
+    },
+    "calls": {
+      "meaning": "称为"
+    },
+    "circle": {
+      "meaning": "循环、圆圈"
+    },
+    "worse": {
+      "meaning": "更糟"
+    },
+    "have to": {
+      "meaning": "必须"
+    },
+    "still": {
+      "meaning": "仍然"
+    },
+    "bit": {
+      "meaning": "一点"
+    },
+    "solutions": {
+      "meaning": "解决办法"
+    },
+    "says": {
+      "meaning": "说"
+    },
+    "should": {
+      "meaning": "应该"
+    },
+    "try": {
+      "meaning": "尝试"
+    },
+    "before": {
+      "meaning": "在…之前"
+    },
+    "air conditioning": {
+      "meaning": "空调"
+    },
+    "Here": {
+      "meaning": "这里"
+    },
+    "again": {
+      "meaning": "再次"
+    },
+    "most": {
+      "meaning": "最"
+    },
+    "passive cooling": {
+      "meaning": "被动降温"
+    },
+    "Now": {
+      "meaning": "现在"
+    },
+    "take steps": {
+      "meaning": "采取措施"
+    },
+    "provide": {
+      "meaning": "提供"
+    },
+    "thermal": {
+      "meaning": "热的"
+    },
+    "intensive": {
+      "meaning": "消耗大的"
+    },
+    "ones": {
+      "meaning": "其中一些"
+    },
+    "cut": {
+      "meaning": "减少"
+    },
+    "solar gain": {
+      "meaning": "太阳热量"
+    },
+    "through": {
+      "meaning": "通过"
+    },
+    "shading": {
+      "meaning": "遮阳"
+    },
+    "cool": {
+      "meaning": "使凉爽"
+    },
+    "sun": {
+      "meaning": "太阳"
+    },
+    "blocked": {
+      "meaning": "阻挡"
+    },
+    "by": {
+      "meaning": "被、通过"
+    },
+    "could": {
+      "meaning": "可以"
+    },
+    "trees": {
+      "meaning": "树"
+    },
+    "curtains": {
+      "meaning": "窗帘"
+    },
+    "blinds": {
+      "meaning": "百叶窗"
+    },
+    "easy": {
+      "meaning": "容易的"
+    },
+    "simple": {
+      "meaning": "简单的"
+    },
+    "talks": {
+      "meaning": "谈到"
+    },
+    "importance": {
+      "meaning": "重要性"
+    },
+    "sustainable": {
+      "meaning": "可持续的"
+    },
+    "time": {
+      "meaning": "时间"
+    },
+    "think": {
+      "meaning": "认为"
+    },
+    "give": {
+      "meaning": "给出"
+    },
+    "wild": {
+      "meaning": "胡乱的"
+    },
+    "pretty": {
+      "meaning": "相当"
+    },
+    "confident": {
+      "meaning": "自信的"
+    },
+    "sadly": {
+      "meaning": "遗憾地"
+    },
+    "incorrect": {
+      "meaning": "错误的"
+    },
+    "correct": {
+      "meaning": "正确的"
+    },
+    "printing": {
+      "meaning": "印刷"
+    },
+    "company": {
+      "meaning": "公司"
+    },
+    "Brooklyn": {
+      "meaning": "布鲁克林"
+    },
+    "New York": {
+      "meaning": "纽约"
+    },
+    "Willis Carrier": {
+      "meaning": "威利斯·开利"
+    },
+    "recap": {
+      "meaning": "回顾"
+    },
+    "vocabulary": {
+      "meaning": "词汇"
+    },
+    "learned": {
+      "meaning": "学会的"
+    },
+    "starting": {
+      "meaning": "从…开始"
+    },
+    "describes": {
+      "meaning": "描述"
+    },
+    "something": {
+      "meaning": "某事物"
+    },
+    "somewhere": {
+      "meaning": "某处"
+    },
+    "live": {
+      "meaning": "居住"
+    },
+    "keeps": {
+      "meaning": "持续"
+    },
+    "fix": {
+      "meaning": "解决"
+    },
+    "building": {
+      "meaning": "建筑物"
+    },
+    "blocking": {
+      "meaning": "遮挡"
+    },
+    "once again": {
+      "meaning": "再一次"
+    },
+    "our": {
+      "meaning": "我们的"
+    },
+    "minutes": {
+      "meaning": "分钟"
+    },
+    "up": {
+      "meaning": "结束"
+    },
+    "test": {
+      "meaning": "测试"
+    },
+    "you've": {
+      "meaning": "你已经"
+    },
+    "worksheet": {
+      "meaning": "练习表"
+    },
+    "website": {
+      "meaning": "网站"
+    },
+    "thank": {
+      "meaning": "感谢"
+    },
+    "joining": {
+      "meaning": "加入"
+    },
+    "Goodbye": {
+      "meaning": "再见"
+    }
+  },
+  "dict": {
+    "hi": {
+      "translation": "嗨",
+      "source": "context",
+      "context": "嗨"
+    },
+    "neil": {
+      "translation": "尼尔，人名",
+      "source": "context",
+      "context": "尼尔，人名"
+    },
+    "georgie": {
+      "translation": "乔吉，人名",
+      "source": "context",
+      "context": "乔吉，人名"
+    },
+    "so": {
+      "translation": "那么",
+      "source": "context",
+      "context": "那么"
+    },
+    "we've": {
+      "translation": "我们已经",
+      "source": "context",
+      "context": "我们已经"
+    },
+    "just": {
+      "translation": "刚刚",
+      "source": "context",
+      "context": "刚刚"
+    },
+    "had": {
+      "translation": "有",
+      "source": "context",
+      "context": "有"
+    },
+    "a": {
+      "translation": "一",
+      "source": "context",
+      "context": "一"
+    },
+    "really": {
+      "translation": "非常",
+      "source": "context",
+      "context": "非常"
+    },
+    "hot": {
+      "translation": "炎热的",
+      "source": "context",
+      "context": "炎热的"
+    },
+    "summer": {
+      "translation": "夏天",
+      "source": "context",
+      "context": "夏天"
+    },
+    "in": {
+      "translation": "在",
+      "source": "context",
+      "context": "在"
+    },
+    "the": {
+      "translation": "定冠词",
+      "source": "context",
+      "context": "定冠词"
+    },
+    "uk": {
+      "translation": "英国",
+      "source": "context",
+      "context": "英国"
+    },
+    "did": {
+      "translation": "did过去式",
+      "source": "context",
+      "context": "did过去式"
+    },
+    "you": {
+      "translation": "你",
+      "source": "context",
+      "context": "你"
+    },
+    "have": {
+      "translation": "有",
+      "source": "context",
+      "context": "有"
+    },
+    "air": {
+      "translation": "空气",
+      "source": "context",
+      "context": "空气"
+    },
+    "conditioning": {
+      "translation": "空调调节",
+      "source": "context",
+      "context": "空调调节"
+    },
+    "your": {
+      "translation": "你的",
+      "source": "context",
+      "context": "你的"
+    },
+    "house": {
+      "translation": "房子",
+      "source": "context",
+      "context": "房子"
+    },
+    "i": {
+      "translation": "我",
+      "source": "context",
+      "context": "我"
+    },
+    "didn't": {
+      "translation": "没有",
+      "source": "context",
+      "context": "没有"
+    },
+    "wish": {
+      "translation": "希望",
+      "source": "context",
+      "context": "希望"
+    },
+    "because": {
+      "translation": "因为",
+      "source": "context",
+      "context": "因为"
+    },
+    "it": {
+      "translation": "它",
+      "source": "context",
+      "context": "它"
+    },
+    "was": {
+      "translation": "是",
+      "source": "context",
+      "context": "是"
+    },
+    "and": {
+      "translation": "和",
+      "source": "context",
+      "context": "和"
+    },
+    "couldn't": {
+      "translation": "不能",
+      "source": "context",
+      "context": "不能"
+    },
+    "sleep": {
+      "translation": "睡觉",
+      "source": "context",
+      "context": "睡觉"
+    },
+    "no": {
+      "translation": "不",
+      "source": "context",
+      "context": "不"
+    },
+    "one": {
+      "translation": "一个",
+      "source": "context",
+      "context": "一个"
+    },
+    "of": {
+      "translation": "……的",
+      "source": "context",
+      "context": "……的"
+    },
+    "those": {
+      "translation": "那些",
+      "source": "context",
+      "context": "那些"
+    },
+    "big": {
+      "translation": "大的",
+      "source": "context",
+      "context": "大的"
+    },
+    "fans": {
+      "translation": "风扇",
+      "source": "context",
+      "context": "风扇"
+    },
+    "which": {
+      "translation": "哪一个",
+      "source": "context",
+      "context": "哪一个"
+    },
+    "didn't always": {
+      "translation": "并不总是",
+      "source": "context",
+      "context": "并不总是"
+    },
+    "do": {
+      "translation": "做",
+      "source": "context",
+      "context": "做"
+    },
+    "its": {
+      "translation": "它的",
+      "source": "context",
+      "context": "它的"
+    },
+    "job": {
+      "translation": "工作",
+      "source": "context",
+      "context": "工作"
+    },
+    "but": {
+      "translation": "但是",
+      "source": "context",
+      "context": "但是"
+    },
+    "there": {
+      "translation": "有",
+      "source": "context",
+      "context": "有"
+    },
+    "is": {
+      "translation": "是",
+      "source": "context",
+      "context": "是"
+    },
+    "serious": {
+      "translation": "严重的",
+      "source": "context",
+      "context": "严重的"
+    },
+    "side": {
+      "translation": "方面",
+      "source": "context",
+      "context": "方面"
+    },
+    "to": {
+      "translation": "到",
+      "source": "context",
+      "context": "到"
+    },
+    "this": {
+      "translation": "这个",
+      "source": "context",
+      "context": "这个"
+    },
+    "heat": {
+      "translation": "高温",
+      "source": "context",
+      "context": "高温"
+    },
+    "records": {
+      "translation": "纪录",
+      "source": "context",
+      "context": "纪录"
+    },
+    "continue": {
+      "translation": "继续",
+      "source": "context",
+      "context": "继续"
+    },
+    "be": {
+      "translation": "被",
+      "source": "context",
+      "context": "被"
+    },
+    "broken": {
+      "translation": "打破",
+      "source": "context",
+      "context": "打破"
+    },
+    "around": {
+      "translation": "在世界各地",
+      "source": "context",
+      "context": "在世界各地"
+    },
+    "world": {
+      "translation": "世界",
+      "source": "context",
+      "context": "世界"
+    },
+    "may": {
+      "translation": "可能",
+      "source": "context",
+      "context": "可能"
+    },
+    "feeling": {
+      "translation": "感觉",
+      "source": "context",
+      "context": "感觉"
+    },
+    "that": {
+      "translation": "that从句引导词",
+      "source": "context",
+      "context": "that从句引导词"
+    },
+    "summers": {
+      "translation": "夏天",
+      "source": "context",
+      "context": "夏天"
+    },
+    "are": {
+      "translation": "是",
+      "source": "context",
+      "context": "是"
+    },
+    "getting": {
+      "translation": "变得",
+      "source": "context",
+      "context": "变得"
+    },
+    "too": {
+      "translation": "太",
+      "source": "context",
+      "context": "太"
+    },
+    "been": {
+      "translation": "一直",
+      "source": "context",
+      "context": "一直"
+    },
+    "using": {
+      "translation": "使用",
+      "source": "context",
+      "context": "使用"
+    },
+    "more": {
+      "translation": "更多",
+      "source": "context",
+      "context": "更多"
+    },
+    "cope": {
+      "translation": "应对",
+      "source": "context",
+      "context": "应对"
+    },
+    "if": {
+      "translation": "如果",
+      "source": "context",
+      "context": "如果"
+    },
+    "you're": {
+      "translation": "你是",
+      "source": "context",
+      "context": "你是"
+    },
+    "not": {
+      "translation": "不",
+      "source": "context",
+      "context": "不"
+    },
+    "alone": {
+      "translation": "独自的",
+      "source": "context",
+      "context": "独自的"
+    },
+    "experts": {
+      "translation": "专家",
+      "source": "context",
+      "context": "专家"
+    },
+    "predicting": {
+      "translation": "预测",
+      "source": "context",
+      "context": "预测"
+    },
+    "ten": {
+      "translation": "十",
+      "source": "context",
+      "context": "十"
+    },
+    "new": {
+      "translation": "新的",
+      "source": "context",
+      "context": "新的"
+    },
+    "units": {
+      "translation": "设备",
+      "source": "context",
+      "context": "设备"
+    },
+    "will": {
+      "translation": "将",
+      "source": "context",
+      "context": "将"
+    },
+    "installed": {
+      "translation": "安装",
+      "source": "context",
+      "context": "安装"
+    },
+    "every": {
+      "translation": "每",
+      "source": "context",
+      "context": "每"
+    },
+    "second": {
+      "translation": "秒",
+      "source": "context",
+      "context": "秒"
+    },
+    "for": {
+      "translation": "为",
+      "source": "context",
+      "context": "为"
+    },
+    "next": {
+      "translation": "接下来的",
+      "source": "context",
+      "context": "接下来的"
+    },
+    "30": {
+      "translation": "三十",
+      "source": "context",
+      "context": "三十"
+    },
+    "years": {
+      "translation": "年",
+      "source": "context",
+      "context": "年"
+    },
+    "today": {
+      "translation": "今天",
+      "source": "context",
+      "context": "今天"
+    },
+    "on": {
+      "translation": "在",
+      "source": "context",
+      "context": "在"
+    },
+    "6 minute english": {
+      "translation": "六分钟英语节目",
+      "source": "context",
+      "context": "六分钟英语节目"
+    },
+    "we're": {
+      "translation": "我们是",
+      "source": "context",
+      "context": "我们是"
+    },
+    "talking": {
+      "translation": "谈论",
+      "source": "context",
+      "context": "谈论"
+    },
+    "about": {
+      "translation": "关于",
+      "source": "context",
+      "context": "关于"
+    },
+    "whether": {
+      "translation": "是否",
+      "source": "context",
+      "context": "是否"
+    },
+    "best": {
+      "translation": "最好的",
+      "source": "context",
+      "context": "最好的"
+    },
+    "way": {
+      "translation": "方式",
+      "source": "context",
+      "context": "方式"
+    },
+    "with": {
+      "translation": "用",
+      "source": "context",
+      "context": "用"
+    },
+    "warming": {
+      "translation": "变暖的",
+      "source": "context",
+      "context": "变暖的"
+    },
+    "ok": {
+      "translation": "好的",
+      "source": "context",
+      "context": "好的"
+    },
+    "as": {
+      "translation": "作为",
+      "source": "context",
+      "context": "作为"
+    },
+    "always": {
+      "translation": "总是",
+      "source": "context",
+      "context": "总是"
+    },
+    "we'll": {
+      "translation": "我们将",
+      "source": "context",
+      "context": "我们将"
+    },
+    "start": {
+      "translation": "开始",
+      "source": "context",
+      "context": "开始"
+    },
+    "quiz": {
+      "translation": "问答",
+      "source": "context",
+      "context": "问答"
+    },
+    "question": {
+      "translation": "问题",
+      "source": "context",
+      "context": "问题"
+    },
+    "modern": {
+      "translation": "现代的",
+      "source": "context",
+      "context": "现代的"
+    },
+    "invented": {
+      "translation": "发明",
+      "source": "context",
+      "context": "发明"
+    },
+    "1902": {
+      "translation": "1902年",
+      "source": "context",
+      "context": "1902年"
+    },
+    "what": {
+      "translation": "什么",
+      "source": "context",
+      "context": "什么"
+    },
+    "originally": {
+      "translation": "最初",
+      "source": "context",
+      "context": "最初"
+    },
+    "used": {
+      "translation": "用于",
+      "source": "context",
+      "context": "用于"
+    },
+    "a)": {
+      "translation": "选项A",
+      "source": "context",
+      "context": "选项A"
+    },
+    "protect": {
+      "translation": "保护",
+      "source": "context",
+      "context": "保护"
+    },
+    "people": {
+      "translation": "人们",
+      "source": "context",
+      "context": "人们"
+    },
+    "hospitals": {
+      "translation": "医院",
+      "source": "context",
+      "context": "医院"
+    },
+    "b)": {
+      "translation": "选项B",
+      "source": "context",
+      "context": "选项B"
+    },
+    "dry": {
+      "translation": "弄干",
+      "source": "context",
+      "context": "弄干"
+    },
+    "ink": {
+      "translation": "墨水",
+      "source": "context",
+      "context": "墨水"
+    },
+    "or": {
+      "translation": "或者",
+      "source": "context",
+      "context": "或者"
+    },
+    "c)": {
+      "translation": "选项C",
+      "source": "context",
+      "context": "选项C"
+    },
+    "clean": {
+      "translation": "清洁",
+      "source": "context",
+      "context": "清洁"
+    },
+    "well": {
+      "translation": "嗯",
+      "source": "context",
+      "context": "嗯"
+    },
+    "absolutely": {
+      "translation": "完全",
+      "source": "context",
+      "context": "完全"
+    },
+    "idea": {
+      "translation": "想法",
+      "source": "context",
+      "context": "想法"
+    },
+    "i'm": {
+      "translation": "我是",
+      "source": "context",
+      "context": "我是"
+    },
+    "going": {
+      "translation": "将要",
+      "source": "context",
+      "context": "将要"
+    },
+    "guess": {
+      "translation": "猜",
+      "source": "context",
+      "context": "猜"
+    },
+    "say": {
+      "translation": "说",
+      "source": "context",
+      "context": "说"
+    },
+    "find": {
+      "translation": "发现",
+      "source": "context",
+      "context": "发现"
+    },
+    "out": {
+      "translation": "出",
+      "source": "context",
+      "context": "出"
+    },
+    "answer": {
+      "translation": "答案",
+      "source": "context",
+      "context": "答案"
+    },
+    "at": {
+      "translation": "在",
+      "source": "context",
+      "context": "在"
+    },
+    "end": {
+      "translation": "结尾",
+      "source": "context",
+      "context": "结尾"
+    },
+    "programme": {
+      "translation": "节目",
+      "source": "context",
+      "context": "节目"
+    },
+    "how": {
+      "translation": "如何",
+      "source": "context",
+      "context": "如何"
+    },
+    "uncomfortable": {
+      "translation": "不舒服的",
+      "source": "context",
+      "context": "不舒服的"
+    },
+    "weather": {
+      "translation": "天气",
+      "source": "context",
+      "context": "天气"
+    },
+    "can": {
+      "translation": "能够",
+      "source": "context",
+      "context": "能够"
+    },
+    "make": {
+      "translation": "使",
+      "source": "context",
+      "context": "使"
+    },
+    "feel": {
+      "translation": "感觉",
+      "source": "context",
+      "context": "感觉"
+    },
+    "though": {
+      "translation": "然而",
+      "source": "context",
+      "context": "然而"
+    },
+    "comfort": {
+      "translation": "舒适",
+      "source": "context",
+      "context": "舒适"
+    },
+    "just about": {
+      "translation": "仅仅关于",
+      "source": "context",
+      "context": "仅仅关于"
+    },
+    "real": {
+      "translation": "真实的",
+      "source": "context",
+      "context": "真实的"
+    },
+    "health": {
+      "translation": "健康",
+      "source": "context",
+      "context": "健康"
+    },
+    "issue": {
+      "translation": "问题",
+      "source": "context",
+      "context": "问题"
+    },
+    "it's": {
+      "translation": "它是",
+      "source": "context",
+      "context": "它是"
+    },
+    "thought": {
+      "translation": "认为",
+      "source": "context",
+      "context": "认为"
+    },
+    "across": {
+      "translation": "遍及",
+      "source": "context",
+      "context": "遍及"
+    },
+    "europe": {
+      "translation": "欧洲",
+      "source": "context",
+      "context": "欧洲"
+    },
+    "over": {
+      "translation": "超过",
+      "source": "context",
+      "context": "超过"
+    },
+    "30,000": {
+      "translation": "三万",
+      "source": "context",
+      "context": "三万"
+    },
+    "died": {
+      "translation": "死亡",
+      "source": "context",
+      "context": "死亡"
+    },
+    "as a result of": {
+      "translation": "由于",
+      "source": "context",
+      "context": "由于"
+    },
+    "this summer's": {
+      "translation": "今年夏天的",
+      "source": "context",
+      "context": "今年夏天的"
+    },
+    "dr": {
+      "translation": "博士",
+      "source": "context",
+      "context": "博士"
+    },
+    "radhika khosla": {
+      "translation": "拉迪卡·科斯拉，人名",
+      "source": "context",
+      "context": "拉迪卡·科斯拉，人名"
+    },
+    "an": {
+      "translation": "一",
+      "source": "context",
+      "context": "一"
+    },
+    "expert": {
+      "translation": "专家",
+      "source": "context",
+      "context": "专家"
+    },
+    "climatology": {
+      "translation": "气候学",
+      "source": "context",
+      "context": "气候学"
+    },
+    "told": {
+      "translation": "告诉",
+      "source": "context",
+      "context": "告诉"
+    },
+    "bbc": {
+      "translation": "英国广播公司",
+      "source": "context",
+      "context": "英国广播公司"
+    },
+    "world service": {
+      "translation": "国际频道",
+      "source": "context",
+      "context": "国际频道"
+    },
+    "the climate question": {
+      "translation": "气候问题节目",
+      "source": "context",
+      "context": "气候问题节目"
+    },
+    "important": {
+      "translation": "重要的",
+      "source": "context",
+      "context": "重要的"
+    },
+    "actually": {
+      "translation": "其实",
+      "source": "context",
+      "context": "其实"
+    },
+    "life-saving": {
+      "translation": "拯救生命的",
+      "source": "context",
+      "context": "拯救生命的"
+    },
+    "know": {
+      "translation": "知道",
+      "source": "context",
+      "context": "知道"
+    },
+    "singapore": {
+      "translation": "新加坡",
+      "source": "context",
+      "context": "新加坡"
+    },
+    "when": {
+      "translation": "当……时",
+      "source": "context",
+      "context": "当……时"
+    },
+    "lee kuan yew": {
+      "translation": "李光耀",
+      "source": "context",
+      "context": "李光耀"
+    },
+    "asked": {
+      "translation": "被问",
+      "source": "context",
+      "context": "被问"
+    },
+    "civilisation": {
+      "translation": "文明",
+      "source": "context",
+      "context": "文明"
+    },
+    "possible": {
+      "translation": "可能的",
+      "source": "context",
+      "context": "可能的"
+    },
+    "tropics": {
+      "translation": "热带地区",
+      "source": "context",
+      "context": "热带地区"
+    },
+    "he": {
+      "translation": "他",
+      "source": "context",
+      "context": "他"
+    },
+    "saying": {
+      "translation": "说",
+      "source": "context",
+      "context": "说"
+    },
+    "literally": {
+      "translation": "字面上、确实",
+      "source": "context",
+      "context": "字面上、确实"
+    },
+    "stops": {
+      "translation": "阻止",
+      "source": "context",
+      "context": "阻止"
+    },
+    "from": {
+      "translation": "免于",
+      "source": "context",
+      "context": "免于"
+    },
+    "dying": {
+      "translation": "死亡",
+      "source": "context",
+      "context": "死亡"
+    },
+    "yes": {
+      "translation": "是的",
+      "source": "context",
+      "context": "是的"
+    },
+    "she": {
+      "translation": "她",
+      "source": "context",
+      "context": "她"
+    },
+    "makes": {
+      "translation": "提出",
+      "source": "context",
+      "context": "提出"
+    },
+    "point": {
+      "translation": "观点",
+      "source": "context",
+      "context": "观点"
+    },
+    "many": {
+      "translation": "许多",
+      "source": "context",
+      "context": "许多"
+    },
+    "parts": {
+      "translation": "地区",
+      "source": "context",
+      "context": "地区"
+    },
+    "live in": {
+      "translation": "居住",
+      "source": "context",
+      "context": "居住"
+    },
+    "without": {
+      "translation": "没有",
+      "source": "context",
+      "context": "没有"
+    },
+    "technology": {
+      "translation": "技术",
+      "source": "context",
+      "context": "技术"
+    },
+    "sounds": {
+      "translation": "听起来",
+      "source": "context",
+      "context": "听起来"
+    },
+    "like": {
+      "translation": "像",
+      "source": "context",
+      "context": "像"
+    },
+    "has": {
+      "translation": "有",
+      "source": "context",
+      "context": "有"
+    },
+    "a lot": {
+      "translation": "很多",
+      "source": "context",
+      "context": "很多"
+    },
+    "good": {
+      "translation": "好的",
+      "source": "context",
+      "context": "好的"
+    },
+    "things": {
+      "translation": "优点",
+      "source": "context",
+      "context": "优点"
+    },
+    "all": {
+      "translation": "全、都",
+      "source": "context",
+      "context": "全、都"
+    },
+    "positive": {
+      "translation": "正面的",
+      "source": "context",
+      "context": "正面的"
+    },
+    "some": {
+      "translation": "一些",
+      "source": "context",
+      "context": "一些"
+    },
+    "downsides": {
+      "translation": "缺点",
+      "source": "context",
+      "context": "缺点"
+    },
+    "problem": {
+      "translation": "问题",
+      "source": "context",
+      "context": "问题"
+    },
+    "amount": {
+      "translation": "数量",
+      "source": "context",
+      "context": "数量"
+    },
+    "energy": {
+      "translation": "能源",
+      "source": "context",
+      "context": "能源"
+    },
+    "uses": {
+      "translation": "消耗",
+      "source": "context",
+      "context": "消耗"
+    },
+    "let's": {
+      "translation": "让我们",
+      "source": "context",
+      "context": "让我们"
+    },
+    "hear": {
+      "translation": "听听",
+      "source": "context",
+      "context": "听听"
+    },
+    "becomes": {
+      "translation": "成为",
+      "source": "context",
+      "context": "成为"
+    },
+    "first": {
+      "translation": "第一个",
+      "source": "context",
+      "context": "第一个"
+    },
+    "go-to": {
+      "translation": "首选的",
+      "source": "context",
+      "context": "首选的"
+    },
+    "solution": {
+      "translation": "解决办法",
+      "source": "context",
+      "context": "解决办法"
+    },
+    "deal": {
+      "translation": "应对",
+      "source": "context",
+      "context": "应对"
+    },
+    "increased": {
+      "translation": "增加的",
+      "source": "context",
+      "context": "增加的"
+    },
+    "prolonged": {
+      "translation": "持续的",
+      "source": "context",
+      "context": "持续的"
+    },
+    "extreme": {
+      "translation": "极端的",
+      "source": "context",
+      "context": "极端的"
+    },
+    "face": {
+      "translation": "面对",
+      "source": "context",
+      "context": "面对"
+    },
+    "facing": {
+      "translation": "正面对",
+      "source": "context",
+      "context": "正面对"
+    },
+    "places": {
+      "translation": "施加",
+      "source": "context",
+      "context": "施加"
+    },
+    "stresses": {
+      "translation": "压力",
+      "source": "context",
+      "context": "压力"
+    },
+    "system": {
+      "translation": "系统",
+      "source": "context",
+      "context": "系统"
+    },
+    "able": {
+      "translation": "能够",
+      "source": "context",
+      "context": "能够"
+    },
+    "met": {
+      "translation": "满足",
+      "source": "context",
+      "context": "满足"
+    },
+    "see": {
+      "translation": "看到",
+      "source": "context",
+      "context": "看到"
+    },
+    "the grid": {
+      "translation": "电网",
+      "source": "context",
+      "context": "电网"
+    },
+    "collapse": {
+      "translation": "崩溃",
+      "source": "context",
+      "context": "崩溃"
+    },
+    "emissions": {
+      "translation": "排放",
+      "source": "context",
+      "context": "排放"
+    },
+    "rise": {
+      "translation": "上升",
+      "source": "context",
+      "context": "上升"
+    },
+    "kinds": {
+      "translation": "种类",
+      "source": "context",
+      "context": "种类"
+    },
+    "other": {
+      "translation": "其他的",
+      "source": "context",
+      "context": "其他的"
+    },
+    "impacts": {
+      "translation": "影响",
+      "source": "context",
+      "context": "影响"
+    },
+    "quite": {
+      "translation": "相当",
+      "source": "context",
+      "context": "相当"
+    },
+    "detrimental": {
+      "translation": "有害的",
+      "source": "context",
+      "context": "有害的"
+    },
+    "reach": {
+      "translation": "陷入",
+      "source": "context",
+      "context": "陷入"
+    },
+    "vicious cycle": {
+      "translation": "恶性循环",
+      "source": "context",
+      "context": "恶性循环"
+    },
+    "then": {
+      "translation": "然后",
+      "source": "context",
+      "context": "然后"
+    },
+    "where": {
+      "translation": "在那里",
+      "source": "context",
+      "context": "在那里"
+    },
+    "warmer": {
+      "translation": "更暖",
+      "source": "context",
+      "context": "更暖"
+    },
+    "ourselves": {
+      "translation": "我们自己",
+      "source": "context",
+      "context": "我们自己"
+    },
+    "leading": {
+      "translation": "导致",
+      "source": "context",
+      "context": "导致"
+    },
+    "need": {
+      "translation": "需要",
+      "source": "context",
+      "context": "需要"
+    },
+    "we": {
+      "translation": "我们",
+      "source": "context",
+      "context": "我们"
+    },
+    "heard": {
+      "translation": "听说",
+      "source": "context",
+      "context": "听说"
+    },
+    "grid": {
+      "translation": "电网",
+      "source": "context",
+      "context": "电网"
+    },
+    "network": {
+      "translation": "网络",
+      "source": "context",
+      "context": "网络"
+    },
+    "distributes": {
+      "translation": "分配、输送",
+      "source": "context",
+      "context": "分配、输送"
+    },
+    "electricity": {
+      "translation": "电",
+      "source": "context",
+      "context": "电"
+    },
+    "towns": {
+      "translation": "城镇",
+      "source": "context",
+      "context": "城镇"
+    },
+    "cities": {
+      "translation": "城市",
+      "source": "context",
+      "context": "城市"
+    },
+    "countries": {
+      "translation": "国家",
+      "source": "context",
+      "context": "国家"
+    },
+    "trying": {
+      "translation": "试图",
+      "source": "context",
+      "context": "试图"
+    },
+    "use": {
+      "translation": "使用",
+      "source": "context",
+      "context": "使用"
+    },
+    "than": {
+      "translation": "比",
+      "source": "context",
+      "context": "比"
+    },
+    "power": {
+      "translation": "电力",
+      "source": "context",
+      "context": "电力"
+    },
+    "cuts": {
+      "translation": "中断、停电",
+      "source": "context",
+      "context": "中断、停电"
+    },
+    "can't": {
+      "translation": "不能",
+      "source": "context",
+      "context": "不能"
+    },
+    "any": {
+      "translation": "任何",
+      "source": "context",
+      "context": "任何"
+    },
+    "creates": {
+      "translation": "产生",
+      "source": "context",
+      "context": "产生"
+    },
+    "lead": {
+      "translation": "导致",
+      "source": "context",
+      "context": "导致"
+    },
+    "warm up": {
+      "translation": "变暖",
+      "source": "context",
+      "context": "变暖"
+    },
+    "means": {
+      "translation": "意味着",
+      "source": "context",
+      "context": "意味着"
+    },
+    "even": {
+      "translation": "甚至、更",
+      "source": "context",
+      "context": "甚至、更"
+    },
+    "so on": {
+      "translation": "等等",
+      "source": "context",
+      "context": "等等"
+    },
+    "calls": {
+      "translation": "称为",
+      "source": "context",
+      "context": "称为"
+    },
+    "circle": {
+      "translation": "循环、圆圈",
+      "source": "context",
+      "context": "循环、圆圈"
+    },
+    "worse": {
+      "translation": "更糟",
+      "source": "context",
+      "context": "更糟"
+    },
+    "have to": {
+      "translation": "必须",
+      "source": "context",
+      "context": "必须"
+    },
+    "still": {
+      "translation": "仍然",
+      "source": "context",
+      "context": "仍然"
+    },
+    "bit": {
+      "translation": "一点",
+      "source": "context",
+      "context": "一点"
+    },
+    "solutions": {
+      "translation": "解决办法",
+      "source": "context",
+      "context": "解决办法"
+    },
+    "says": {
+      "translation": "说",
+      "source": "context",
+      "context": "说"
+    },
+    "should": {
+      "translation": "应该",
+      "source": "context",
+      "context": "应该"
+    },
+    "try": {
+      "translation": "尝试",
+      "source": "context",
+      "context": "尝试"
+    },
+    "before": {
+      "translation": "在…之前",
+      "source": "context",
+      "context": "在…之前"
+    },
+    "air conditioning": {
+      "translation": "空调",
+      "source": "context",
+      "context": "空调"
+    },
+    "here": {
+      "translation": "这里",
+      "source": "context",
+      "context": "这里"
+    },
+    "again": {
+      "translation": "再次",
+      "source": "context",
+      "context": "再次"
+    },
+    "most": {
+      "translation": "最",
+      "source": "context",
+      "context": "最"
+    },
+    "passive cooling": {
+      "translation": "被动降温",
+      "source": "context",
+      "context": "被动降温"
+    },
+    "now": {
+      "translation": "现在",
+      "source": "context",
+      "context": "现在"
+    },
+    "take steps": {
+      "translation": "采取措施",
+      "source": "context",
+      "context": "采取措施"
+    },
+    "provide": {
+      "translation": "提供",
+      "source": "context",
+      "context": "提供"
+    },
+    "thermal": {
+      "translation": "热的",
+      "source": "context",
+      "context": "热的"
+    },
+    "intensive": {
+      "translation": "消耗大的",
+      "source": "context",
+      "context": "消耗大的"
+    },
+    "ones": {
+      "translation": "其中一些",
+      "source": "context",
+      "context": "其中一些"
+    },
+    "cut": {
+      "translation": "减少",
+      "source": "context",
+      "context": "减少"
+    },
+    "solar gain": {
+      "translation": "太阳热量",
+      "source": "context",
+      "context": "太阳热量"
+    },
+    "through": {
+      "translation": "通过",
+      "source": "context",
+      "context": "通过"
+    },
+    "shading": {
+      "translation": "遮阳",
+      "source": "context",
+      "context": "遮阳"
+    },
+    "cool": {
+      "translation": "使凉爽",
+      "source": "context",
+      "context": "使凉爽"
+    },
+    "sun": {
+      "translation": "太阳",
+      "source": "context",
+      "context": "太阳"
+    },
+    "blocked": {
+      "translation": "阻挡",
+      "source": "context",
+      "context": "阻挡"
+    },
+    "by": {
+      "translation": "被、通过",
+      "source": "context",
+      "context": "被、通过"
+    },
+    "could": {
+      "translation": "可以",
+      "source": "context",
+      "context": "可以"
+    },
+    "trees": {
+      "translation": "树",
+      "source": "context",
+      "context": "树"
+    },
+    "curtains": {
+      "translation": "窗帘",
+      "source": "context",
+      "context": "窗帘"
+    },
+    "blinds": {
+      "translation": "百叶窗",
+      "source": "context",
+      "context": "百叶窗"
+    },
+    "easy": {
+      "translation": "容易的",
+      "source": "context",
+      "context": "容易的"
+    },
+    "simple": {
+      "translation": "简单的",
+      "source": "context",
+      "context": "简单的"
+    },
+    "talks": {
+      "translation": "谈到",
+      "source": "context",
+      "context": "谈到"
+    },
+    "importance": {
+      "translation": "重要性",
+      "source": "context",
+      "context": "重要性"
+    },
+    "sustainable": {
+      "translation": "可持续的",
+      "source": "context",
+      "context": "可持续的"
+    },
+    "time": {
+      "translation": "时间",
+      "source": "context",
+      "context": "时间"
+    },
+    "think": {
+      "translation": "认为",
+      "source": "context",
+      "context": "认为"
+    },
+    "give": {
+      "translation": "给出",
+      "source": "context",
+      "context": "给出"
+    },
+    "wild": {
+      "translation": "胡乱的",
+      "source": "context",
+      "context": "胡乱的"
+    },
+    "pretty": {
+      "translation": "相当",
+      "source": "context",
+      "context": "相当"
+    },
+    "confident": {
+      "translation": "自信的",
+      "source": "context",
+      "context": "自信的"
+    },
+    "sadly": {
+      "translation": "遗憾地",
+      "source": "context",
+      "context": "遗憾地"
+    },
+    "incorrect": {
+      "translation": "错误的",
+      "source": "context",
+      "context": "错误的"
+    },
+    "correct": {
+      "translation": "正确的",
+      "source": "context",
+      "context": "正确的"
+    },
+    "printing": {
+      "translation": "印刷",
+      "source": "context",
+      "context": "印刷"
+    },
+    "company": {
+      "translation": "公司",
+      "source": "context",
+      "context": "公司"
+    },
+    "brooklyn": {
+      "translation": "布鲁克林",
+      "source": "context",
+      "context": "布鲁克林"
+    },
+    "new york": {
+      "translation": "纽约",
+      "source": "context",
+      "context": "纽约"
+    },
+    "willis carrier": {
+      "translation": "威利斯·开利",
+      "source": "context",
+      "context": "威利斯·开利"
+    },
+    "recap": {
+      "translation": "回顾",
+      "source": "context",
+      "context": "回顾"
+    },
+    "vocabulary": {
+      "translation": "词汇",
+      "source": "context",
+      "context": "词汇"
+    },
+    "learned": {
+      "translation": "学会的",
+      "source": "context",
+      "context": "学会的"
+    },
+    "starting": {
+      "translation": "从…开始",
+      "source": "context",
+      "context": "从…开始"
+    },
+    "describes": {
+      "translation": "描述",
+      "source": "context",
+      "context": "描述"
+    },
+    "something": {
+      "translation": "某事物",
+      "source": "context",
+      "context": "某事物"
+    },
+    "somewhere": {
+      "translation": "某处",
+      "source": "context",
+      "context": "某处"
+    },
+    "live": {
+      "translation": "居住",
+      "source": "context",
+      "context": "居住"
+    },
+    "keeps": {
+      "translation": "持续",
+      "source": "context",
+      "context": "持续"
+    },
+    "fix": {
+      "translation": "解决",
+      "source": "context",
+      "context": "解决"
+    },
+    "building": {
+      "translation": "建筑物",
+      "source": "context",
+      "context": "建筑物"
+    },
+    "blocking": {
+      "translation": "遮挡",
+      "source": "context",
+      "context": "遮挡"
+    },
+    "once again": {
+      "translation": "再一次",
+      "source": "context",
+      "context": "再一次"
+    },
+    "our": {
+      "translation": "我们的",
+      "source": "context",
+      "context": "我们的"
+    },
+    "minutes": {
+      "translation": "分钟",
+      "source": "context",
+      "context": "分钟"
+    },
+    "up": {
+      "translation": "结束",
+      "source": "context",
+      "context": "结束"
+    },
+    "test": {
+      "translation": "测试",
+      "source": "context",
+      "context": "测试"
+    },
+    "you've": {
+      "translation": "你已经",
+      "source": "context",
+      "context": "你已经"
+    },
+    "worksheet": {
+      "translation": "练习表",
+      "source": "context",
+      "context": "练习表"
+    },
+    "website": {
+      "translation": "网站",
+      "source": "context",
+      "context": "网站"
+    },
+    "thank": {
+      "translation": "感谢",
+      "source": "context",
+      "context": "感谢"
+    },
+    "joining": {
+      "translation": "加入",
+      "source": "context",
+      "context": "加入"
+    },
+    "goodbye": {
+      "translation": "再见",
+      "source": "context",
+      "context": "再见"
     },
     "inhabit": {
       "translation": "live in",
       "source": "official"
     },
-    "the grid": {
-      "translation": "the system or network that distributes electricity across different locations",
-      "source": "official"
+    "weve": {
+      "translation": "我们已经",
+      "source": "context",
+      "context": "我们已经",
+      "phrase": "we've"
     },
-    "vicious cycle": {
-      "translation": "situation where one problem leads to another problem, which then makes the first problem worse, leading to a chain of events where each cause and effect makes the original problem even worse",
-      "source": "official"
+    "didnt": {
+      "translation": "没有",
+      "source": "context",
+      "context": "没有",
+      "phrase": "didn't"
     },
-    "passive cooling": {
-      "translation": "making a building cooler without using a lot of power",
-      "source": "official"
+    "couldnt": {
+      "translation": "不能",
+      "source": "context",
+      "context": "不能",
+      "phrase": "couldn't"
     },
-    "shading": {
-      "translation": "blocking the Sun's light and heat",
-      "source": "official"
+    "didn": {
+      "translation": "并不总是",
+      "source": "context",
+      "context": "并不总是",
+      "phrase": "didn't always"
+    },
+    "didntalways": {
+      "translation": "并不总是",
+      "source": "context",
+      "context": "并不总是",
+      "phrase": "didn't always"
+    },
+    "t": {
+      "translation": "并不总是",
+      "source": "context",
+      "context": "并不总是",
+      "phrase": "didn't always"
+    },
+    "youre": {
+      "translation": "你是",
+      "source": "context",
+      "context": "你是",
+      "phrase": "you're"
+    },
+    "6": {
+      "translation": "六分钟英语节目",
+      "source": "context",
+      "context": "六分钟英语节目",
+      "phrase": "6 minute english"
+    },
+    "6minuteenglish": {
+      "translation": "六分钟英语节目",
+      "source": "context",
+      "context": "六分钟英语节目",
+      "phrase": "6 minute english"
+    },
+    "english": {
+      "translation": "六分钟英语节目",
+      "source": "context",
+      "context": "六分钟英语节目",
+      "phrase": "6 minute english"
+    },
+    "minute": {
+      "translation": "六分钟英语节目",
+      "source": "context",
+      "context": "六分钟英语节目",
+      "phrase": "6 minute english"
+    },
+    "were": {
+      "translation": "我们是",
+      "source": "context",
+      "context": "我们是",
+      "phrase": "we're"
+    },
+    "b": {
+      "translation": "选项B",
+      "source": "context",
+      "context": "选项B",
+      "phrase": "b)"
+    },
+    "c": {
+      "translation": "选项C",
+      "source": "context",
+      "context": "选项C",
+      "phrase": "c)"
+    },
+    "im": {
+      "translation": "我是",
+      "source": "context",
+      "context": "我是",
+      "phrase": "i'm"
+    },
+    "justabout": {
+      "translation": "仅仅关于",
+      "source": "context",
+      "context": "仅仅关于",
+      "phrase": "just about"
+    },
+    "30000": {
+      "translation": "三万",
+      "source": "context",
+      "context": "三万",
+      "phrase": "30,000"
+    },
+    "asaresultof": {
+      "translation": "由于",
+      "source": "context",
+      "context": "由于",
+      "phrase": "as a result of"
+    },
+    "result": {
+      "translation": "由于",
+      "source": "context",
+      "context": "由于",
+      "phrase": "as a result of"
+    },
+    "s": {
+      "translation": "今年夏天的",
+      "source": "context",
+      "context": "今年夏天的",
+      "phrase": "this summer's"
+    },
+    "thissummers": {
+      "translation": "今年夏天的",
+      "source": "context",
+      "context": "今年夏天的",
+      "phrase": "this summer's"
+    },
+    "khosla": {
+      "translation": "拉迪卡·科斯拉，人名",
+      "source": "context",
+      "context": "拉迪卡·科斯拉，人名",
+      "phrase": "radhika khosla"
+    },
+    "radhika": {
+      "translation": "拉迪卡·科斯拉，人名",
+      "source": "context",
+      "context": "拉迪卡·科斯拉，人名",
+      "phrase": "radhika khosla"
+    },
+    "radhikakhosla": {
+      "translation": "拉迪卡·科斯拉，人名",
+      "source": "context",
+      "context": "拉迪卡·科斯拉，人名",
+      "phrase": "radhika khosla"
+    },
+    "service": {
+      "translation": "国际频道",
+      "source": "context",
+      "context": "国际频道",
+      "phrase": "world service"
+    },
+    "worldservice": {
+      "translation": "国际频道",
+      "source": "context",
+      "context": "国际频道",
+      "phrase": "world service"
+    },
+    "climate": {
+      "translation": "气候问题节目",
+      "source": "context",
+      "context": "气候问题节目",
+      "phrase": "the climate question"
+    },
+    "theclimatequestion": {
+      "translation": "气候问题节目",
+      "source": "context",
+      "context": "气候问题节目",
+      "phrase": "the climate question"
     },
     "lifesaving": {
-      "translation": "used to stop people from dying",
-      "source": "official",
+      "translation": "拯救生命的",
+      "source": "context",
+      "context": "拯救生命的",
       "phrase": "life-saving"
     },
-    "grid": {
-      "translation": "the system or network that distributes electricity across different locations",
-      "source": "official",
-      "phrase": "the grid"
+    "kuan": {
+      "translation": "李光耀",
+      "source": "context",
+      "context": "李光耀",
+      "phrase": "lee kuan yew"
+    },
+    "lee": {
+      "translation": "李光耀",
+      "source": "context",
+      "context": "李光耀",
+      "phrase": "lee kuan yew"
+    },
+    "leekuanyew": {
+      "translation": "李光耀",
+      "source": "context",
+      "context": "李光耀",
+      "phrase": "lee kuan yew"
+    },
+    "yew": {
+      "translation": "李光耀",
+      "source": "context",
+      "context": "李光耀",
+      "phrase": "lee kuan yew"
+    },
+    "livein": {
+      "translation": "居住",
+      "source": "context",
+      "context": "居住",
+      "phrase": "live in"
+    },
+    "alot": {
+      "translation": "很多",
+      "source": "context",
+      "context": "很多",
+      "phrase": "a lot"
+    },
+    "lot": {
+      "translation": "很多",
+      "source": "context",
+      "context": "很多",
+      "phrase": "a lot"
+    },
+    "lets": {
+      "translation": "让我们",
+      "source": "context",
+      "context": "让我们",
+      "phrase": "let's"
+    },
+    "goto": {
+      "translation": "首选的",
+      "source": "context",
+      "context": "首选的",
+      "phrase": "go-to"
     },
     "thegrid": {
-      "translation": "the system or network that distributes electricity across different locations",
-      "source": "official",
+      "translation": "电网",
+      "source": "context",
+      "context": "电网",
       "phrase": "the grid"
     },
     "cycle": {
-      "translation": "situation where one problem leads to another problem, which then makes the first problem worse, leading to a chain of events where each cause and effect makes the original problem even worse",
-      "source": "official",
+      "translation": "恶性循环",
+      "source": "context",
+      "context": "恶性循环",
       "phrase": "vicious cycle"
     },
     "vicious": {
-      "translation": "situation where one problem leads to another problem, which then makes the first problem worse, leading to a chain of events where each cause and effect makes the original problem even worse",
-      "source": "official",
+      "translation": "恶性循环",
+      "source": "context",
+      "context": "恶性循环",
       "phrase": "vicious cycle"
     },
     "viciouscycle": {
-      "translation": "situation where one problem leads to another problem, which then makes the first problem worse, leading to a chain of events where each cause and effect makes the original problem even worse",
-      "source": "official",
+      "translation": "恶性循环",
+      "source": "context",
+      "context": "恶性循环",
       "phrase": "vicious cycle"
     },
+    "cant": {
+      "translation": "不能",
+      "source": "context",
+      "context": "不能",
+      "phrase": "can't"
+    },
+    "warm": {
+      "translation": "变暖",
+      "source": "context",
+      "context": "变暖",
+      "phrase": "warm up"
+    },
+    "warmup": {
+      "translation": "变暖",
+      "source": "context",
+      "context": "变暖",
+      "phrase": "warm up"
+    },
+    "soon": {
+      "translation": "等等",
+      "source": "context",
+      "context": "等等",
+      "phrase": "so on"
+    },
+    "haveto": {
+      "translation": "必须",
+      "source": "context",
+      "context": "必须",
+      "phrase": "have to"
+    },
+    "airconditioning": {
+      "translation": "空调",
+      "source": "context",
+      "context": "空调",
+      "phrase": "air conditioning"
+    },
     "cooling": {
-      "translation": "making a building cooler without using a lot of power",
-      "source": "official",
+      "translation": "被动降温",
+      "source": "context",
+      "context": "被动降温",
       "phrase": "passive cooling"
     },
     "passive": {
-      "translation": "making a building cooler without using a lot of power",
-      "source": "official",
+      "translation": "被动降温",
+      "source": "context",
+      "context": "被动降温",
       "phrase": "passive cooling"
     },
     "passivecooling": {
-      "translation": "making a building cooler without using a lot of power",
-      "source": "official",
+      "translation": "被动降温",
+      "source": "context",
+      "context": "被动降温",
       "phrase": "passive cooling"
+    },
+    "steps": {
+      "translation": "采取措施",
+      "source": "context",
+      "context": "采取措施",
+      "phrase": "take steps"
+    },
+    "take": {
+      "translation": "采取措施",
+      "source": "context",
+      "context": "采取措施",
+      "phrase": "take steps"
+    },
+    "takesteps": {
+      "translation": "采取措施",
+      "source": "context",
+      "context": "采取措施",
+      "phrase": "take steps"
+    },
+    "gain": {
+      "translation": "太阳热量",
+      "source": "context",
+      "context": "太阳热量",
+      "phrase": "solar gain"
+    },
+    "solar": {
+      "translation": "太阳热量",
+      "source": "context",
+      "context": "太阳热量",
+      "phrase": "solar gain"
+    },
+    "solargain": {
+      "translation": "太阳热量",
+      "source": "context",
+      "context": "太阳热量",
+      "phrase": "solar gain"
+    },
+    "newyork": {
+      "translation": "纽约",
+      "source": "context",
+      "context": "纽约",
+      "phrase": "new york"
+    },
+    "york": {
+      "translation": "纽约",
+      "source": "context",
+      "context": "纽约",
+      "phrase": "new york"
+    },
+    "carrier": {
+      "translation": "威利斯·开利",
+      "source": "context",
+      "context": "威利斯·开利",
+      "phrase": "willis carrier"
+    },
+    "willis": {
+      "translation": "威利斯·开利",
+      "source": "context",
+      "context": "威利斯·开利",
+      "phrase": "willis carrier"
+    },
+    "williscarrier": {
+      "translation": "威利斯·开利",
+      "source": "context",
+      "context": "威利斯·开利",
+      "phrase": "willis carrier"
+    },
+    "once": {
+      "translation": "再一次",
+      "source": "context",
+      "context": "再一次",
+      "phrase": "once again"
+    },
+    "onceagain": {
+      "translation": "再一次",
+      "source": "context",
+      "context": "再一次",
+      "phrase": "once again"
+    },
+    "youve": {
+      "translation": "你已经",
+      "source": "context",
+      "context": "你已经",
+      "phrase": "you've"
     }
   }
 }
