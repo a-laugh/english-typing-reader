@@ -25,6 +25,12 @@ let currentWordIndex = 0;
 let currentWordPos = 0;      // 当前词内已敲到的字母位（清洗序列下标）
 let letterSpans = [];        // 当前词各字母位的 span（与清洗序列一一对应）
 let glossWordIndex = -1;     // 行内翻译跟随的最新完成词，-1 = 无
+// 标题打字阶段：titleSeq 为标题键入序列，titlePos 为已敲到位置（=len 表示已完成）。
+// 进度（localStorage word_index）仍是对白空间下标，与标题阶段互不影响——续读时标题视为已完成
+let titleSeq = "";
+let titlePos = 0;
+let titleLetterSpans = [];
+let titleActive = false;     // 是否正处于标题阶段（控制 hint 与光标归属）
 
 // DOM 引用
 const episodeSelector = document.getElementById("episode-selector");
@@ -155,10 +161,33 @@ function populateEpisodeSelector() {
 
 function renderEpisodeMeta(entry) {
     episodeMeta.replaceChildren();
-    // 当前文章标题（大字），下挂元信息行
+    // 当前文章标题（大字）：标题阶段参与打字——未完成时字母级渲染（幽灵/已打/光标），
+    // 完成后为静态绿色完成态
     const title = document.createElement("h2");
     title.className = "episode-title";
-    title.textContent = entry.title;
+    if (titlePos < titleSeq.length) {
+        titleLetterSpans = [];
+        for (let i = 0; i < titleSeq.length; i++) {
+            const s = document.createElement("span");
+            s.textContent = titleSeq[i];
+            s.className = i < titlePos ? "t-letter-ok" : (i === titlePos ? "t-letter-rest" : "t-letter-rest");
+            title.appendChild(s);
+            titleLetterSpans.push(s);
+        }
+        const c = document.createElement("span");
+        c.className = "caret";
+        const anchor = titleLetterSpans[Math.min(titlePos, titleLetterSpans.length - 1)];
+        if (titlePos >= titleLetterSpans.length && anchor) {
+            anchor.after(c);
+        } else if (anchor) {
+            anchor.before(c);
+        } else {
+            title.appendChild(c);
+        }
+    } else {
+        title.classList.add("done");
+        title.textContent = entry.title;
+    }
     const metaRow = document.createElement("div");
     metaRow.className = "episode-meta-row";
 
@@ -381,11 +410,7 @@ function renderDialog() {
     // DOM API + textContent 构建：剧集数据来自外部站点，防存储型 XSS
     const frag = document.createDocumentFragment();
     letterSpans = []; // 当前词的字母 span 重建（仅当前词有字母级结构）
-    // 正在输入的行与带翻译浮层的行需要与上一行拉开距离（给上方浮层留空间）
-    const headroomTurns = new Set([turnIndexByWord[currentWordIndex]]);
-    if (glossWordIndex >= 0) {
-        headroomTurns.add(turnIndexByWord[glossWordIndex]);
-    }
+    let caret = null;  // 闪烁光标（零宽元素，追加在当前位置之后）
     let wordIdx = 0;
     episodeTurns.forEach((turn, ti) => {
         const words = turn.text.split(/\s+/).filter(Boolean);
@@ -394,7 +419,7 @@ function renderDialog() {
         if (ti < from || ti > to) return;
 
         const row = document.createElement("div");
-        row.className = headroomTurns.has(ti) ? "turn turn-headroom" : "turn";
+        row.className = "turn";
         if (turn.speaker) {
             const badge = document.createElement("span");
             badge.className = `speaker-badge ${speakerClass(turn.speaker)}`;
@@ -411,7 +436,7 @@ function renderDialog() {
                 span.textContent = w;
             } else if (gi === currentWordIndex) {
                 // 当前词按字符拆分：键入序列 = 剥离首尾标点后的连续子串（含词内符号），
-                // 首尾标点自动通过（不需敲）
+                // 首尾标点自动通过（不需敲）。已打字母全实色、未打半透明
                 span.className = "current-word";
                 let start = 0, end = w.length - 1;
                 while (start <= end && !/[a-z0-9]/i.test(w[start])) start++;
@@ -420,14 +445,31 @@ function renderDialog() {
                     const chSpan = document.createElement("span");
                     chSpan.textContent = w[ci];
                     if (ci >= start && ci <= end) {
-                        chSpan.dataset.pos = String(ci - start);
+                        const pos = ci - start;
+                        chSpan.dataset.pos = String(pos);
+                        chSpan.className = pos < currentWordPos ? "letter-ok" : "letter-rest";
                         letterSpans.push(chSpan);
                     } else {
                         chSpan.className = "ltr-punct";
                     }
                     span.appendChild(chSpan);
                 }
+                if (!titleActive) {
+                    // 光标插到当前字母之前（零宽，不影响布局）
+                    caret = document.createElement("span");
+                    caret.className = "caret";
+                    const anchor = letterSpans[Math.min(currentWordPos, letterSpans.length - 1)];
+                    if (currentWordPos >= letterSpans.length && anchor) {
+                        anchor.after(caret); // 词尾
+                    } else if (anchor) {
+                        anchor.before(caret);
+                    } else {
+                        span.appendChild(caret);
+                    }
+                }
             } else {
+                // 打字机幽灵后文：未打到的词半透明
+                span.className = "word-future";
                 span.textContent = w;
             }
             para.appendChild(span);
@@ -465,6 +507,11 @@ function renderHint() {
     if (currentWordIndex >= originalWords.length) {
         hintCurrent.textContent = "🎉 本期节目已完成";
         hintProgress.textContent = `进度 ${originalWords.length}/${originalWords.length} 词`;
+        return;
+    }
+    if (titleActive) {
+        hintCurrent.textContent = "先打出文章标题…";
+        hintProgress.textContent = `进度 0/${originalWords.length} 词`;
         return;
     }
     hintCurrent.replaceChildren();
@@ -505,6 +552,15 @@ async function loadEpisode(episodeId, startIndex = null) {
         currentWordIndex = Math.min(start, Math.max(0, originalWords.length - 1));
         currentWordPos = 0;
         glossWordIndex = currentWordIndex > 0 ? currentWordIndex - 1 : -1;
+
+        // 标题阶段：只有从第 0 词开始时才先打标题（续读时标题视为已完成）
+        titleSeq = typingSequence(currentEpisode.title || "");
+        titlePos = titleSeq.length;
+        titleActive = false;
+        if (start === 0 && titleSeq.length > 0) {
+            titlePos = 0;
+            titleActive = true;
+        }
 
         renderDialog();
         renderHint();
@@ -577,6 +633,33 @@ function completeCurrentWord() {
 
 function handleLetter(ch) {
     if (!currentEpisode || originalWords.length === 0) return;
+
+    // ---- 阶段一：标题打字（进度不参与对白空间，完成即进入对白）----
+    // 标题序列中的空格自动通过（无需敲空格），对白同理按词进行
+    while (titleActive && titlePos < titleSeq.length && titleSeq[titlePos] === " ") {
+        titlePos++;
+    }
+    if (titleActive && titlePos < titleSeq.length) {
+        if (normalizeChar(ch) === normalizeChar(titleSeq[titlePos])) {
+            const span = titleLetterSpans[titlePos];
+            if (span) {
+                span.classList.remove("t-letter-bad", "t-letter-rest");
+                span.classList.add("t-letter-ok", "letter-strike");
+            }
+            titlePos++;
+            if (titlePos >= titleSeq.length) {
+                titleActive = false;
+                renderEpisodeMeta(currentEpisode); // 标题定格为完成态
+                renderDialog();                    // 光标转入对白首词
+            }
+        } else {
+            const span = titleLetterSpans[titlePos];
+            if (span) span.classList.add("t-letter-bad");
+            playErrorBeep();
+        }
+        return;
+    }
+
     if (currentWordIndex >= originalWords.length) return;
     const target = typingSequence(originalWords[currentWordIndex]);
     if (!target) {
@@ -592,10 +675,16 @@ function handleLetter(ch) {
     if (normalizeChar(ch) === normalizeChar(target[currentWordPos])) {
         const span = letterSpans[currentWordPos];
         if (span) {
-            span.classList.remove("letter-bad");
-            span.classList.add("letter-ok");
+            span.classList.remove("letter-bad", "letter-rest");
+            span.classList.add("letter-ok", "letter-strike"); // 落字微动效
         }
         currentWordPos++;
+        // 光标随键位前进（零宽元素移动，无重排）
+        if (currentWordPos < target.length) {
+            const next = letterSpans[currentWordPos];
+            const caretEl = dialogDisplay.querySelector(".caret");
+            if (next && caretEl) next.before(caretEl);
+        }
         if (currentWordPos >= target.length) {
             completeCurrentWord();
         }

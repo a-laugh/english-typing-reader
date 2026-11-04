@@ -71,13 +71,30 @@ def main() -> int:
               and page.eval_on_selector("#kbd-capture", "el => getComputedStyle(el).opacity === '0'"))
         page.screenshot(path=str(SHOTS / "t2_loaded.png"))
 
-        # 逐字母敲第一个词 "Hi"（清洗序列 hi，无需空格/标点）
+        # == 标题打字阶段 ==
+        title_state = page.evaluate("() => ({ letters: document.querySelectorAll('.episode-title span').length, caret: !!document.querySelector('.episode-title .caret'), hint: document.getElementById('hint-current').textContent })")
+        check("标题进入打字态（字母化+光标）", title_state["letters"] > 10 and title_state["caret"]
+              and "标题" in title_state["hint"], str(title_state))
+        page.keyboard.type("Isaircontheanswertoaheatingworld")
+        page.wait_for_function(
+            "() => document.querySelector('.episode-title').classList.contains('done')", timeout=5000)
+        check("标题打字完成定格", True)
+        check("标题完成后光标转入对白首词",
+              page.evaluate("() => !!document.querySelector('#dialog-display .caret')"))
+        ghost_count = page.eval_on_selector_all(".word-future", "els => els.length")
+        check("幽灵后文渲染", ghost_count > 50, f"ghost={ghost_count}")
+
+        # 逐字母敲第一个词 "Hi"（清洗序列 hi，无需空格/标点）；先记录下一词位置做零位移断言
         page.click("#dialog-display")
+        pos_before = page.evaluate("() => { const s = [...document.querySelectorAll('#dialog-display .turn-text > span')].find(x => x.textContent.trim() === 'Neil.'); const r = s.getBoundingClientRect(); return [Math.round(r.x * 10), Math.round(r.y * 10)]; }")
         page.keyboard.type("hi")
         page.wait_for_function(
             "() => document.querySelectorAll('.word-correct').length === 1", timeout=3000
         )
         check("逐字母正确完词后前进（1 词标绿）", True)
+        pos_after = page.evaluate("() => { const s = [...document.querySelectorAll('#dialog-display .turn-text > span')].find(x => x.textContent.trim() === 'Neil.'); const r = s.getBoundingClientRect(); return [Math.round(r.x * 10), Math.round(r.y * 10)]; }")
+        check("完词零位移（下一词坐标不变）", pos_before == pos_after,
+              f"before={pos_before} after={pos_after}")
         check("完词播放的是构建期烘焙音频", any(u.endswith("data/audio/hi.mp3") for u in seen_requests),
               str([u for u in seen_requests if "audio" in u][:3]))
         check("烘焙音频文件在架", (ROOT / "docs" / "data" / "audio" / "hi.mp3").is_file())
@@ -102,15 +119,6 @@ def main() -> int:
             "() => document.querySelectorAll('.word-correct').length === 2", timeout=3000
         )
         check("第二词完成后累计 2 词标绿（标点自动通过）", True)
-        headroom = page.evaluate("""() => {
-            const active = document.querySelector('.turn-headroom .current-word');
-            const marginTop = active ? getComputedStyle(active.closest('.turn')).marginTop : null;
-            const plain = document.querySelector('#dialog-display .turn:not(.turn-headroom)');
-            const plainMargin = plain ? getComputedStyle(plain).marginTop : null;
-            return { active: parseFloat(marginTop), plain: parseFloat(plainMargin) };
-        }""")
-        check("当前行与上一行拉开距离", headroom["active"] and headroom["plain"] is not None
-              and headroom["active"] > headroom["plain"] + 10, str(headroom))
         gloss_count = page.eval_on_selector_all("#dialog-display .gloss", "els => els.length")
         check("浮层唯一性（无词条则为 0）", gloss_count <= 1, f"gloss 数={gloss_count}")
         page.screenshot(path=str(SHOTS / "t3_typing.png"))
@@ -131,8 +139,12 @@ def main() -> int:
         check("切换剧集从头开始（无标绿词）", True)
         meta2 = page.text_content("#episode-meta")
         check("meta 栏切换为新剧集日期", "2026-10-22" in meta2, meta2)
-        # 完成一个词，制造 261022 的进度，供 T5 模拟过期
+        # 完成标题+一个词，制造 261022 的进度，供 T5 模拟过期
+        # 标题序列（空格自动通过、内部撇号需敲）："What should you eat for a better night's sleep?"
         page.click("#dialog-display")
+        page.keyboard.type("Whatshouldyoueatforabetternight'ssleep")
+        page.wait_for_function(
+            "() => document.querySelector('.episode-title').classList.contains('done')", timeout=5000)
         page.keyboard.type("hi")
         page.wait_for_selector(".word-correct", timeout=3000)
         check("第二剧集可正常完词", True)

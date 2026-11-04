@@ -72,6 +72,18 @@ html, body {
     font-weight: 700;
     color: #076678; /* gruvbox dark blue */
     margin: 0 0 0.15rem 0;
+    min-height: 1.6em; /* 标题字母渲染切换时不塌陷 */
+}
+/* 标题打字态：字母级 span */
+.episode-title .t-letter-ok { color: #427b58; }
+.episode-title .t-letter-rest { opacity: 0.4; }
+.episode-title .t-letter-bad {
+    color: #fbf1c7;
+    background-color: #9d0006;
+    border-radius: 2px;
+}
+.episode-title.done {
+    color: #427b58; /* 标题完成态 */
 }
 .episode-meta-row {
     font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
@@ -128,10 +140,6 @@ html, body {
 .turn:last-child {
     margin-bottom: 0;
 }
-/* 正在输入的行 / 带翻译浮层的行：与上一行拉开距离，给上方浮层留出空间 */
-.turn-headroom {
-    margin-top: 1.9rem;
-}
 .speaker-badge {
     flex: 0 0 auto;
     margin-top: 0.55rem;
@@ -162,17 +170,49 @@ html, body {
     color: #427b58;
     position: relative;
 }
+/* 当前词：仅背景高亮——字重/内边距与普通词完全一致，宽度永不突变 */
 .current-word {
-    background-color: #fabd2f; /* gruvbox bright yellow */
+    background-color: #fabd2f;
     color: #3c3836;
-    padding: 1px 4px;
     border-radius: 2px;
-    font-weight: 600;
+    box-shadow: inset 0 -2px 0 #d79921;
+}
+
+/* 幽灵后文：未打到的词半透明（打字机预习感），透明度分级不改变布局 */
+.word-future {
+    opacity: 0.35;
 }
 
 /* 当前词的字母级状态 */
 .letter-ok {
     color: #427b58;
+}
+.letter-rest {
+    opacity: 0.55;
+}
+/* 打字机落字微动效 */
+.letter-strike {
+    display: inline-block; /* transform 生效 */
+    animation: strike 90ms ease-out;
+}
+@keyframes strike {
+    from { transform: scale(1.18); }
+    to { transform: scale(1); }
+}
+
+/* 闪烁块状光标：零宽 inline-block，不占文本宽度 */
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 1.05em;
+    border-left: 2px solid #9d0006;
+    margin-left: -2px; /* 边框完全被负边距抵消：净占宽 0，光标存在/移动不推文本 */
+    vertical-align: -0.15em;
+    animation: caret-blink 1s step-end infinite;
+}
+@keyframes caret-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
 .letter-bad {
     color: #fbf1c7;
