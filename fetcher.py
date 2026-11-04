@@ -638,6 +638,8 @@ def collect_words(episode: dict) -> dict[str, str]:
                 if part not in STOPWORDS:
                     remember(part)
 
+    for token in episode["title"].split():
+        remember(token)  # 标题词也要发音（标题参与打字，完词即播）
     for token in episode["transcript"].split():
         remember(token)
     for item in episode.get("vocabulary", []):

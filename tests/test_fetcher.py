@@ -581,6 +581,7 @@ def test_bake_word_dict_alias_order_deterministic():
 def test_collect_words_represents_original_spelling():
     """音频键用清洗词（与前端文件名一致），值保留原文写法给 TTS（连写词读不准）。"""
     episode = {
+        "title": "Is aircon the answer?",
         "transcript": "We've had the six-minute quiz. we've",
         "vocabulary": [{"word": "the grid", "definition": "d"}],
         "context_glossary": {"inhabit": {"meaning": "x", "sentence": "s"}},
@@ -592,6 +593,7 @@ def test_collect_words_represents_original_spelling():
     assert words["thegrid"] == "the grid"  # 短语连写键，代表原文为短语
     assert words["inhabit"] == "inhabit"  # 语境词表键
     assert "the" in words                 # 虚词也在对白里，需要发音
+    assert "aircon" in words and "answer" in words, "标题词也要发音（标题参与打字完词即播）"
 
 
 def test_prune_audio_removes_unreferenced(tmp_path, monkeypatch):
@@ -710,6 +712,7 @@ def test_generate_missing_audio_incremental(tmp_path, monkeypatch):
     monkeypatch.setattr(fetcher.edge_tts, "Communicate", FakeCommunicate)
 
     generated, failed = fetcher.generate_missing_audio([{
+        "title": "Hi hot summer",        # 标题词同入音频词集
         "transcript": "Hi hot summer",   # hi 已有；hot/summer 待生成
         "vocabulary": [],
         "context_glossary": {},
