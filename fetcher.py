@@ -837,41 +837,47 @@ def build(days: int, no_llm: bool, no_audio: bool = False, rebake: bool = False)
     skipped = 0  # 已在架、无需任何处理的剧集数
     for meta in recent:
         out_file = DATA_DIR / f"{meta['id']}.json"
+        existing: dict | None = None
         if out_file.exists():
-            # 已存在的剧集原则上跳过（幂等）；但若此前构建时 GLM 不可用/失败，
-            # context_glossary 为空且本次有 key，则补烘语境词表并重建词典，
-            # 避免「一次降级被永久固化」
-            if not no_llm and api_key:
-                try:
-                    data = json.loads(out_file.read_text(encoding="utf-8"))
-                    if not isinstance(data, dict):
-                        data = None
-                except (json.JSONDecodeError, OSError):
-                    data = None
-                # 与主路径同等的防御：半损坏文件只跳过补烘，不让异常炸掉整个构建
-                if data and "transcript" in data and not data.get("context_glossary"):
-                    log(f"补烘语境词表：{meta['id']}（此前构建无 GLM 结果）")
-                    glossary = generate_context_glossary(
-                        data["transcript"], data.get("vocabulary", []), api_key
+            try:
+                loaded = json.loads(out_file.read_text(encoding="utf-8"))
+                if isinstance(loaded, dict):
+                    existing = loaded
+            except (json.JSONDecodeError, OSError):
+                existing = None
+            # 已存在的剧集原则上跳过（幂等），两种情况除外：
+            # ① 本地文件半损坏（构建中断截断等）：当场重抓覆盖——否则下方 prune
+            #    会把它删掉，该期剧集要空窗到下次构建，且日志误记为「已在架跳过」
+            # ② 此前构建时 GLM 不可用/失败，context_glossary 为空且本次有 key：
+            #    补烘语境词表并重建词典，避免「一次降级被永久固化」
+            if existing is None:
+                log(f"本地文件 {out_file.name} 损坏/不可读，重新抓取")
+            elif not no_llm and api_key and "transcript" in existing \
+                    and not existing.get("context_glossary"):
+                log(f"补烘语境词表：{meta['id']}（此前构建无 GLM 结果）")
+                glossary = generate_context_glossary(
+                    existing["transcript"], existing.get("vocabulary", []), api_key
+                )
+                if glossary:
+                    existing["context_glossary"] = glossary
+                    existing["dict"] = bake_word_dict(existing)
+                    out_file.write_text(
+                        json.dumps(existing, ensure_ascii=False, indent=2) + "\n",
+                        encoding="utf-8",
                     )
-                    if glossary:
-                        data["context_glossary"] = glossary
-                        data["dict"] = bake_word_dict(data)
-                        out_file.write_text(
-                            json.dumps(data, ensure_ascii=False, indent=2) + "\n",
-                            encoding="utf-8",
-                        )
-                        rebaked += 1
-                        log(f"已更新 {out_file.name}，词典 {len(data['dict'])} 条")
-                    continue
-                if data:
+                    rebaked += 1
+                    log(f"已更新 {out_file.name}，词典 {len(existing['dict'])} 条")
+                else:
+                    skipped += 1  # 补烘失败仍留在架，别让汇总把它算成「新增」
+                continue
+            else:
+                if not no_llm and api_key:
                     log(f"跳过已存在剧集：{meta['id']}"
-                        f"（语境词表 {len(data.get('context_glossary') or {})} 条，非空不再重新生成）")
-                    skipped += 1
-                    continue
-            log(f"跳过已存在剧集：{meta['id']}")
-            skipped += 1
-            continue
+                        f"（语境词表 {len(existing.get('context_glossary') or {})} 条，非空不再重新生成）")
+                else:
+                    log(f"跳过已存在剧集：{meta['id']}")
+                skipped += 1
+                continue
         try:
             episode = parse_episode(http_get(meta["url"]), meta)
             if not no_llm and api_key:
@@ -940,6 +946,11 @@ def prune_and_reindex(data_dir: Path, cutoff: date) -> list[dict]:
         try:
             data = json.loads(f.read_text(encoding="utf-8"))
             pub = date.fromisoformat(data["pub_date"])
+            # 索引必需字段缺失同样按损坏处理：在这里探测走删除分支，
+            # 而不是等到下方索引构建时 KeyError 炸掉整个构建
+            missing = [k for k in ("id", "title", "pub_date", "bbc_url") if k not in data]
+            if missing:
+                raise KeyError(f"缺少字段 {missing}")
         except (json.JSONDecodeError, OSError, ValueError, KeyError) as e:
             log(f"警告：无法解析 {f.name}（{e}），删除该损坏文件")
             f.unlink()

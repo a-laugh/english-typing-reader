@@ -690,6 +690,39 @@ def test_rebake_rebuilds_dict_keeps_glossary(tmp_path, monkeypatch):
     assert "onlyofficial" not in rebaked["dict"], "旧词典整体重建而非合并"
 
 
+def test_build_refetches_corrupt_existing_episode(tmp_path, monkeypatch):
+    """本地剧集文件半损坏（构建中断截断等）：必须当场重抓，而不是当作
+    「已在架」跳过——否则 prune 把它删掉后该期要空窗到下次构建，
+    且汇总日志把它误记为新增/跳过。重抓后二次构建恢复幂等跳过。"""
+    from datetime import timedelta
+
+    data_dir = tmp_path / "episodes"
+    data_dir.mkdir()
+    (data_dir / "261029.json").write_text('{"id": "261029", "transcript": "tru', encoding="utf-8")
+    monkeypatch.setattr(fetcher, "DATA_DIR", data_dir)
+    monkeypatch.setattr(fetcher, "AUDIO_DIR", tmp_path / "audio")
+
+    ep_html = (FIXTURES / "episode-261029.html").read_text(encoding="utf-8")
+    meta = {
+        "id": "261029", "ep_num": "261029", "url": "https://www.bbc.co.uk/x",
+        "title": "T", "pub_date": (date.today() - timedelta(days=1)).isoformat(),
+    }
+    monkeypatch.setattr(fetcher, "parse_index", lambda html: [meta])
+    monkeypatch.setattr(fetcher, "http_get", lambda url: ep_html)
+
+    rc = fetcher.build(days=30, no_llm=True, no_audio=True)
+    assert rc == 0
+    refetched = json.loads((data_dir / "261029.json").read_text(encoding="utf-8"))
+    assert refetched["id"] == "261029" and len(refetched["transcript"].split()) > 800
+    index = json.loads((data_dir / "index.json").read_text(encoding="utf-8"))
+    assert [e["id"] for e in index] == ["261029"], "损坏文件重抓后在架，而非空窗到下次构建"
+
+    # 幂等：文件恢复健康后，二次构建原样跳过（字节不变）
+    before = (data_dir / "261029.json").read_text(encoding="utf-8")
+    assert fetcher.build(days=30, no_llm=True, no_audio=True) == 0
+    assert (data_dir / "261029.json").read_text(encoding="utf-8") == before
+
+
 def test_generate_missing_audio_incremental(tmp_path, monkeypatch):
     """TTS 音频：跳过已有、只补缺失；临时文件不残留。"""
     audio_dir = tmp_path / "audio"
@@ -757,6 +790,19 @@ def test_prune_and_reindex(tmp_path):
     index = json.loads((tmp_path / "index.json").read_text(encoding="utf-8"))
     assert [e["id"] for e in index] == ["261029"]
     assert set(index[0]) == {"id", "title", "pub_date", "bbc_url"}
+
+
+def test_prune_and_reindex_deletes_keyless_file(tmp_path):
+    """JSON 合法但缺索引必需字段（id/title/bbc_url）的文件按损坏删除——
+    而非等到索引构建时 KeyError 炸掉整个构建（main 只捕获 RequestException）。"""
+    _write_episode(tmp_path, "261029", "2026-10-29")
+    incomplete = {"id": "261030", "pub_date": "2026-10-30"}  # 缺 title/bbc_url
+    (tmp_path / "261030.json").write_text(json.dumps(incomplete), encoding="utf-8")
+
+    kept = fetcher.prune_and_reindex(tmp_path, date(2026, 10, 27))
+
+    assert [d["id"] for d in kept] == ["261029"]
+    assert not (tmp_path / "261030.json").exists()
 
 
 def test_prune_and_reindex_sorted_desc(tmp_path):

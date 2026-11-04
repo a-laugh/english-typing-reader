@@ -24,6 +24,9 @@ let turnIndexByWord = [];    // 每个词所属的回合下标
 let currentWordIndex = 0;
 let currentWordPos = 0;      // 当前词内已敲到的字母位（清洗序列下标）
 let letterSpans = [];        // 当前词各字母位的 span（与清洗序列一一对应）
+let wordSpans = [];          // 渲染窗口内：全局词下标 -> {span, letters}（增量更新用）
+let windowFromWord = -1;     // 当前渲染窗口覆盖的词区间 [windowFromWord, windowToWord]
+let windowToWord = -1;
 let glossWordIndex = -1;     // 行内翻译跟随的最新完成词，-1 = 无
 // 标题打字阶段：titleSeq 为标题键入序列，titlePos 为已敲到位置（=len 表示已完成）。
 // 进度（localStorage word_index）仍是对白空间下标，与标题阶段互不影响——续读时标题视为已完成
@@ -426,7 +429,10 @@ function renderDialog() {
 
     // DOM API + textContent 构建：剧集数据来自外部站点，防存储型 XSS
     const frag = document.createDocumentFragment();
-    letterSpans = []; // 当前词的字母 span 重建（仅当前词有字母级结构）
+    letterSpans = []; // 当前词的字母 span（指向 wordSpans[currentWordIndex].letters）
+    wordSpans = [];   // 全局词下标 -> {span, letters}：完词走原地增量更新，不重建 DOM
+    windowFromWord = -1;
+    windowToWord = -1;
     let caret = null;  // 闪烁光标（零宽元素，追加在当前位置之后）
     let wordIdx = 0;
     episodeTurns.forEach((turn, ti) => {
@@ -447,36 +453,39 @@ function renderDialog() {
         para.className = "turn-text";
         words.forEach((w, k) => {
             const gi = turnStart + k;
+            // 所有词一律预拆字母 span：打字中与完成态 DOM 结构完全一致，
+            // 词宽（含字母间 kerning）永不因状态切换而变 → 换行点稳定，无跳动
             const span = document.createElement("span");
-            if (gi < currentWordIndex) {
-                span.className = "word-correct";
-                span.textContent = w;
-            } else if (gi === currentWordIndex) {
-                // 当前词按字符拆分：键入序列 = 剥离首尾标点后的连续子串（含词内符号），
-                // 首尾标点自动通过（不需敲）。已打字母全实色、未打半透明
-                span.className = "current-word";
-                let start = 0, end = w.length - 1;
-                while (start <= end && !/[a-z0-9]/i.test(w[start])) start++;
-                while (end >= start && !/[a-z0-9]/i.test(w[end])) end--;
-                for (let ci = 0; ci < w.length; ci++) {
-                    const chSpan = document.createElement("span");
-                    chSpan.textContent = w[ci];
-                    if (ci >= start && ci <= end) {
-                        const pos = ci - start;
-                        chSpan.dataset.pos = String(pos);
-                        chSpan.className = pos < currentWordPos ? "letter-ok" : "letter-rest";
-                        letterSpans.push(chSpan);
-                    } else {
-                        chSpan.className = "ltr-punct";
+            span.className = gi < currentWordIndex ? "word-correct"
+                : (gi === currentWordIndex ? "current-word" : "word-future");
+            const letters = [];
+            let start = 0, end = w.length - 1;
+            while (start <= end && !/[a-z0-9]/i.test(w[start])) start++;
+            while (end >= start && !/[a-z0-9]/i.test(w[end])) end--;
+            for (let ci = 0; ci < w.length; ci++) {
+                const chSpan = document.createElement("span");
+                chSpan.textContent = w[ci];
+                if (ci >= start && ci <= end) {
+                    chSpan.dataset.pos = String(ci - start);
+                    if (gi === currentWordIndex) {
+                        chSpan.className = ci - start < currentWordPos ? "letter-ok" : "letter-rest";
                     }
-                    span.appendChild(chSpan);
+                    letters.push(chSpan);
+                } else {
+                    chSpan.className = "ltr-punct";
                 }
+                span.appendChild(chSpan);
+            }
+            if (windowFromWord < 0) windowFromWord = gi;
+            windowToWord = gi;
+            wordSpans[gi] = { span, letters };
+            if (gi === currentWordIndex) {
+                letterSpans = letters;
                 if (!titleActive) {
-                    // 光标插到当前字母之前（零宽，不影响布局）
                     caret = document.createElement("span");
                     caret.className = "caret";
-                    const anchor = letterSpans[Math.min(currentWordPos, letterSpans.length - 1)];
-                    if (currentWordPos >= letterSpans.length && anchor) {
+                    const anchor = letters[Math.min(currentWordPos, letters.length - 1)];
+                    if (currentWordPos >= letters.length && anchor) {
                         anchor.after(caret); // 词尾
                     } else if (anchor) {
                         anchor.before(caret);
@@ -484,10 +493,6 @@ function renderDialog() {
                         span.appendChild(caret);
                     }
                 }
-            } else {
-                // 打字机幽灵后文：未打到的词半透明
-                span.className = "word-future";
-                span.textContent = w;
             }
             para.appendChild(span);
             para.appendChild(document.createTextNode(" "));
@@ -630,21 +635,69 @@ function focusCapture() {
 
 function completeCurrentWord() {
     const completedWord = originalWords[currentWordIndex];
+    const completedIdx = currentWordIndex;
     currentWordIndex++;
     currentWordPos = 0;
-    glossWordIndex = currentWordIndex - 1; // 行内翻译跟随最新完成的词
-    renderDialog();
-    renderHint();
+    glossWordIndex = completedIdx; // 行内翻译跟随最新完成的词
 
+    // 原地增量更新：只换 class / 移光标，绝不重建 DOM——
+    // 全量重建会重置滚动并因 DOM 结构切换改变词宽（长段落换行点漂移、滚动条闪烁）
+    const done = wordSpans[completedIdx];
+    if (done) {
+        done.span.classList.remove("current-word");
+        done.span.classList.add("word-correct");
+        done.letters.forEach((s) => s.classList.remove("letter-rest"));
+        const prevGloss = dialogDisplay.querySelector(".gloss");
+        if (prevGloss) prevGloss.remove();
+        const glossEl = buildGloss(completedWord);
+        if (glossEl) done.span.appendChild(glossEl);
+    }
+
+    const next = wordSpans[currentWordIndex];
+    if (next) {
+        next.span.classList.remove("word-future");
+        next.span.classList.add("current-word");
+        next.letters.forEach((s) => s.classList.add("letter-rest"));
+        letterSpans = next.letters;
+        const caret = dialogDisplay.querySelector(".caret");
+        const first = letterSpans[0];
+        if (caret && first) {
+            first.before(caret);
+        }
+    }
+
+    renderHint();
     speakWord(completedWord);
     prefetchUpcomingAudio();
 
     if (currentWordIndex >= originalWords.length) {
         glossWordIndex = -1;
-        renderDialog();
+        const cur = dialogDisplay.querySelector(".current-word");
+        if (cur) cur.classList.remove("current-word");
+        // 完期没有下一个词接收光标，显式摘掉——否则它会永远停在最后一个词里闪烁
+        // （旧全量重建路径由 renderDialog 自然移除，增量路径必须自行处理）
+        const caretEl = dialogDisplay.querySelector(".caret");
+        if (caretEl) caretEl.remove();
         writeProgress(currentEpisode.id, currentWordIndex, true);
     } else {
         writeProgress(currentEpisode.id, currentWordIndex);
+        // 窗口快滑出（当前词距窗口右缘 < 1/4 窗口）才全量重渲染滑动窗口；
+        // 重渲染后立即精确滚到当前词（瞬时），避免滚动条来回闪
+        if (currentWordIndex + Math.floor(DISPLAY_WORDS_AROUND_CURRENT / 4) > windowToWord) {
+            renderDialog();
+            const cur = dialogDisplay.querySelector(".current-word");
+            if (cur) cur.scrollIntoView({ behavior: "auto", block: "center" });
+        } else {
+            // 常规路径：仅当前词真正离开视口时最小量滚动（nearest，不居中不跳动）
+            const cur = wordSpans[currentWordIndex]?.span;
+            if (cur) {
+                const displayRect = dialogDisplay.getBoundingClientRect();
+                const r = cur.getBoundingClientRect();
+                if (r.bottom > displayRect.bottom || r.top < displayRect.top) {
+                    cur.scrollIntoView({ behavior: "smooth", block: "nearest" });
+                }
+            }
+        }
     }
     renderEpisodeMeta(currentEpisode);
 }
@@ -687,8 +740,10 @@ function handleLetter(ch) {
                     // 预取下一个标题词的音频，敲完近零等待
                     const rest = titleSeq.slice(titlePos).trimStart();
                     const nextWord = rest.split(" ")[0];
-                    if (nextWord && !audioCache.has(cleanWord(nextWord))) {
-                        primeAudio(cleanWord(nextWord));
+                    const nextCleaned = cleanWord(nextWord);
+                    // 清洗后为空的词元（标题里的破折号等）没有对应音频，跳过
+                    if (nextCleaned && !audioCache.has(nextCleaned)) {
+                        primeAudio(nextCleaned);
                     }
                 }
                 titleWordStart = titlePos + 1;
@@ -725,6 +780,11 @@ function handleLetter(ch) {
         currentWordPos = 0;
         renderDialog();
         renderHint();
+        // 对白以纯标点词元收尾时，跳过即完期：也要落 done 进度，
+        // 否则完成标记永不置位（下拉无 ✓），且每次刷新都停回最后一个词重跳
+        if (currentWordIndex >= originalWords.length) {
+            writeProgress(currentEpisode.id, currentWordIndex, true);
+        }
         return;
     }
     if (currentWordPos >= target.length) return; // 完词重绘间隙的迟到按键
