@@ -190,14 +190,14 @@ html, body {
 .letter-rest {
     opacity: 0.55;
 }
-/* 打字机落字微动效 */
+/* 打字机落字微动效：filter 亮度脉冲——保持 inline 显示，不改变字距/宽度
+   （曾用 inline-block + transform，会永久破坏 kerning，完词重渲染时宽度回弹致右侧词跳动） */
 .letter-strike {
-    display: inline-block; /* transform 生效 */
-    animation: strike 90ms ease-out;
+    animation: strike 110ms ease-out;
 }
 @keyframes strike {
-    from { transform: scale(1.18); }
-    to { transform: scale(1); }
+    from { filter: brightness(1.9); }
+    to { filter: brightness(1); }
 }
 
 /* 闪烁块状光标：零宽 inline-block，不占文本宽度 */
