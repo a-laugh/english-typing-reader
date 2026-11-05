@@ -1,15 +1,16 @@
 /* 键学 · 应用层样式（自托管 Bootstrap 5.3 之上）
-   风格：GNU/pluskid 式平面布局 + Gruvbox 配色（柔和复古暖色）。
-   零卡片阴影、细分隔线、等宽装饰点缀；宽屏自适应（内容上限 1400px）。 */
+   风格：GNU emacs.gnu.org 式页面骨架（米色纸面 + 顶部深色横条 + 衬线正文）
+   配色：Modus Themes（Modus Operandi 浅色系）——Protesilaos 设计的
+   无障碍高对比调色板，语义色取自 modus-operandi 官方值。 */
 
 html, body {
     height: 100%;
     margin: 0;
 }
 .app-body {
-    /* Gruvbox light 系底色 */
-    background-color: #fbf1c7;
-    color: #3c3836;
+    /* GNU 站米色纸面 */
+    background-color: #efeadc;
+    color: #000000; /* modus fg-main */
 }
 
 /* 布局：宽屏单列，上限 1400px */
@@ -22,14 +23,18 @@ html, body {
     box-sizing: border-box;
 }
 
-/* ---- 页头：站名 + 选择器（平面，底部细线） ---- */
+/* ---- GNU 式顶部横条：站名白字于深紫底 ---- */
 .app-header {
     display: flex;
     align-items: baseline;
     flex-wrap: wrap;
     gap: 0.4rem 1rem;
-    padding: 0.2rem 0.2rem 0.6rem 0.2rem;
-    border-bottom: 2px solid #d5c4a1;
+    padding: 0.45rem 0.9rem;
+    /* GNU 站 emacs-bw 紫色系 */
+    background: linear-gradient(180deg, #622486, #4F3774);
+    border-radius: 3px;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
 }
 .app-brand {
     display: flex;
@@ -39,15 +44,16 @@ html, body {
 }
 .app-title {
     font-family: Georgia, "Times New Roman", "Songti SC", SimSun, serif;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 700;
-    letter-spacing: 0.08em;
-    color: #9d0006; /* gruvbox dark red */
+    letter-spacing: 0.1em;
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 .app-subtitle {
     font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-    font-size: 0.72rem;
-    color: #928374;
+    font-size: 0.68rem;
+    color: #e0d0f0;
     letter-spacing: 0.05em;
 }
 #episode-selector {
@@ -56,55 +62,55 @@ html, body {
     min-width: 0;
     font-size: 0.85rem;
     border-radius: 2px;
-    border-color: #d5c4a1;
-    background-color: #fbf1c7;
-    color: #3c3836;
+    border: 1px solid #4F3774;
+    background-color: #ffffff;
+    color: #000000;
 }
 
-/* 当前文章标题区 */
+/* 当前文章标题区（纸面浅底、墨字） */
 #episode-meta {
     flex-basis: 100%;
-    margin-top: 0.55rem;
+    margin-top: 0.6rem;
+    padding: 0.35rem 0.1rem 0;
 }
 .episode-title {
     font-family: Georgia, "Times New Roman", "Songti SC", SimSun, serif;
     font-size: 1.35rem;
     font-weight: 700;
-    color: #076678; /* gruvbox dark blue */
+    color: #0031a9; /* modus blue */
     margin: 0 0 0.15rem 0;
-    min-height: 1.6em; /* 标题字母渲染切换时不塌陷 */
-}
-/* 标题打字态：字母级 span */
-.episode-title .t-letter-ok { color: #427b58; }
-.episode-title .t-letter-rest { opacity: 0.4; }
-.episode-title .t-letter-bad {
-    color: #fbf1c7;
-    background-color: #9d0006;
-    border-radius: 2px;
+    min-height: 1.6em;
 }
 .episode-title.done {
-    color: #427b58; /* 标题完成态 */
+    color: #005f00; /* modus green */
+}
+.episode-title .t-letter-ok { color: #005f00; }
+.episode-title .t-letter-rest { opacity: 0.4; }
+.episode-title .t-letter-bad {
+    color: #ffffff;
+    background-color: #a60000; /* modus red */
+    border-radius: 2px;
 }
 .episode-meta-row {
     font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
     font-size: 0.75rem;
-    color: #928374;
+    color: #595959; /* modus fg-dim */
     display: flex;
     align-items: baseline;
     gap: 0.9rem;
     flex-wrap: wrap;
 }
 .episode-meta-row a {
-    color: #076678;
+    color: #0031a9; /* modus blue */
     text-decoration: none;
 }
 .episode-meta-row a:hover {
     text-decoration: underline;
 }
 .remaining-days {
-    color: #af3a03;
-    background-color: #fbeeee3;
-    border: 1px solid #e6d3b3;
+    color: #8f4b00; /* modus yellow-dark */
+    background-color: #f5efe0;
+    border: 1px solid #d9c9a0;
     border-radius: 2px;
     padding: 0 0.35em;
     margin-left: 0.4em;
@@ -113,17 +119,21 @@ html, body {
 #notice {
     margin: 0.7rem 0 0 0;
     border-radius: 2px;
-    background-color: #fbeeee3;
-    border: 1px solid #e6d3b3;
-    color: #af3a03;
+    background-color: #fff3f3;
+    border: 1px solid #ffcccc;
+    border-left: 4px solid #a60000;
+    color: #7c0000;
 }
 
-/* ---- 对白区：占据主要空间，纸面平面 ---- */
+/* ---- 对白区：纸面主体、上缘细线，衬线正文 ---- */
 #dialog-display {
     flex: 1;
     overflow-y: auto;
-    margin-top: 0.8rem;
-    padding: 1rem 0.3rem;
+    margin-top: 0.7rem;
+    padding: 1rem 1.1rem;
+    background-color: #f5f5f5; /* modus bg-inactive 纸灰 */
+    border: 1px solid #d6d6d6;
+    border-radius: 3px;
     font-family: Georgia, "Times New Roman", "Songti SC", SimSun, serif;
     font-size: 1.1rem;
     line-height: 1.95;
@@ -147,51 +157,54 @@ html, body {
     font-size: 0.7rem;
     font-weight: 700;
     letter-spacing: 0.06em;
-    color: #79740e;
+    color: #193668; /* modus fg-alt 深蓝 */
     white-space: nowrap;
 }
 .speaker-badge::before {
     content: "> ";
-    color: #b57614;
+    color: #595959;
 }
-.speaker-c0 { color: #79740e; }
-.speaker-c1 { color: #9d0006; }
-.speaker-c2 { color: #427b58; }
-.speaker-c3 { color: #8f3f71; }
-.speaker-c4 { color: #af3a03; }
+.speaker-c0 { color: #193668; }
+.speaker-c1 { color: #721045; }
+.speaker-c2 { color: #005f00; }
+.speaker-c3 { color: #5f0f6e; }
+.speaker-c4 { color: #8f4b00; }
 .turn-text {
     margin: 0;
     flex: 1;
     word-wrap: break-word;
 }
 
-/* 词态：完成词绿、当前词黄底荧光笔（Gruvbox 语义色） */
+/* 词态：modus 语义色 */
 .word-correct {
-    color: #427b58;
+    color: #005f00; /* modus green */
     position: relative;
 }
-/* 当前词：仅背景高亮——字重/内边距与普通词完全一致，宽度永不突变 */
 .current-word {
-    background-color: #fabd2f;
-    color: #3c3836;
+    background-color: #fdd700; /* modus bg-yellow-intense-ish 荧光笔 */
+    color: #000000;
     border-radius: 2px;
-    box-shadow: inset 0 -2px 0 #d79921;
+    box-shadow: inset 0 -2px 0 #b28a00;
 }
-
-/* 幽灵后文：未打到的词半透明（打字机预习感），透明度分级不改变布局 */
-.word-future {
-    opacity: 0.35;
-}
-
-/* 当前词的字母级状态 */
 .letter-ok {
-    color: #427b58;
+    color: #005f00;
+}
+.letter-bad {
+    color: #ffffff;
+    background-color: #a60000; /* modus red */
+    border-radius: 2px;
 }
 .letter-rest {
     opacity: 0.55;
 }
-/* 打字机落字微动效：filter 亮度脉冲——保持 inline 显示，不改变字距/宽度
-   （曾用 inline-block + transform，会永久破坏 kerning，完词重渲染时宽度回弹致右侧词跳动） */
+.ltr-punct {
+    opacity: 0.55;
+}
+.word-future {
+    opacity: 0.35;
+}
+
+/* 打字机落字微动效：filter 亮度脉冲（inline 保持，零布局影响） */
 .letter-strike {
     animation: strike 110ms ease-out;
 }
@@ -200,13 +213,13 @@ html, body {
     to { filter: brightness(1); }
 }
 
-/* 闪烁块状光标：零宽 inline-block，不占文本宽度 */
+/* 闪烁块状光标：净零宽（border 被负 margin 完全抵消） */
 .caret {
     display: inline-block;
     width: 0;
     height: 1.05em;
-    border-left: 2px solid #9d0006;
-    margin-left: -2px; /* 边框完全被负边距抵消：净占宽 0，光标存在/移动不推文本 */
+    border-left: 2px solid #a60000; /* modus red */
+    margin-left: -2px;
     vertical-align: -0.15em;
     animation: caret-blink 1s step-end infinite;
 }
@@ -214,16 +227,8 @@ html, body {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
 }
-.letter-bad {
-    color: #fbf1c7;
-    background-color: #9d0006;
-    border-radius: 2px;
-}
-.ltr-punct {
-    opacity: 0.55;
-}
 
-/* 行内翻译：宿主词上方的浮层——脱离文档流，出现/消失零重排 */
+/* 行内翻译：modus dark 深底浮层（脱离文档流零重排） */
 .gloss {
     position: absolute;
     bottom: calc(100% + 3px);
@@ -231,10 +236,10 @@ html, body {
     transform: translateX(-50%);
     padding: 0.05rem 0.5rem;
     border-radius: 2px;
-    background-color: #282828;
-    border: 1px solid #504945;
-    box-shadow: 0 1px 3px rgba(60, 56, 54, 0.3);
-    color: #ebdbb2;
+    background-color: #242424;
+    border: 1px solid #454545;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    color: #f4f4f4; /* modus dark fg-main 近似 */
     font-family: -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
     font-size: 0.68em;
     font-weight: 400;
@@ -246,9 +251,9 @@ html, body {
     z-index: 10;
 }
 .gloss.ctx {
-    background-color: #076678;
-    border-color: #458588;
-    color: #ebdbb2;
+    background-color: #0031a9; /* modus blue */
+    border-color: #2249c0;
+    color: #ffffff;
 }
 .gloss .gloss-tag {
     margin-right: 0.25em;
@@ -269,7 +274,7 @@ html, body {
     z-index: -1;
 }
 
-/* ---- 提示行：等宽页脚 ---- */
+/* ---- 提示行：GNU 式页脚细线 + 等宽小字 ---- */
 .app-footer {
     display: flex;
     justify-content: space-between;
@@ -277,24 +282,24 @@ html, body {
     gap: 1rem;
     margin: 0.55rem 0 0 0;
     padding: 0.45rem 0.2rem 0 0.2rem;
-    border-top: 2px solid #d5c4a1;
+    border-top: 1px solid #c9bfa8;
     font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
     font-size: 0.75rem;
-    color: #928374;
+    color: #595959;
 }
 #hint-current .hw {
-    color: #3c3836;
+    color: #000000;
     font-weight: 700;
     font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 #mute-toggle {
     cursor: pointer;
     user-select: none;
-    color: #928374;
+    color: #595959;
     margin-left: 0.6em;
 }
 #mute-toggle:hover {
-    color: #3c3836;
+    color: #000000;
 }
 
 /* 手机 */
@@ -318,7 +323,7 @@ html, body {
     }
 }
 
-/* 宽屏（≥1600px）：行距与字号微增，对白更舒展 */
+/* 宽屏（≥1600px） */
 @media (min-width: 1600px) {
     .app {
         max-width: 1560px;
