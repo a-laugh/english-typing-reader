@@ -612,12 +612,78 @@ def _parse_json_block(text: str):
     raise ValueError(f"输出中找不到可解析的 JSON 对象（{last_error}）")
 
 
-TURN_TRANSLATIONS_PROMPT = """你是专业译者。下面是 BBC 6 Minute English 一期节目的对白，按行编号给出每行的简洁中文翻译
-（口语化、一行一句、与原文行一一对应）。
+EPISODE_TRANSLATIONS_PROMPT = """你是专业译者。下面是 BBC 6 Minute English 一期节目的标题与逐句对白
+（已按句切分并编号）。请给出标题的中文翻译和每个句子的简洁中文翻译（口语化）。
 
-仅输出一个 JSON 字符串数组（不要任何其他文字），数组第 n 项就是第 n 行对白的中文翻译。示例：
-["你好，尼尔。", "你好，乔治。"]
+仅输出一个 JSON 对象（不要任何其他文字），格式：
+{"title": "标题中文翻译", "sentences": ["第1句中文", "第2句中文", ...]}
+sentences 数组长度必须与输入句数一致。
 """
+
+
+def split_sentences(text: str) -> list[str]:
+    """按句末标点切分（.!? 后跟空白）；与前端 JS 的 split(/(?<=[.!?])\s+/) 同构，
+    保证数据 sentences 与前端逐词归属对齐。缩写（Mr. 等）容忍误差。"""
+    return [s.strip() for s in re.split(r"(?<=[.!?])\s+", text) if s.strip()]
+
+
+def generate_episode_translations(title: str, sentences: list[str], api_key: str) -> dict:
+    """一期一次 LLM 调用：标题 + 逐句中文翻译。失败返回 {}（前端不显示）。"""
+    lines = "\n".join(f"{i + 1}. {s}" for i, s in enumerate(sentences))
+    prompt = (EPISODE_TRANSLATIONS_PROMPT + f"\n标题：{title}\n\n句子（共 {len(sentences)} 句）：\n{lines}")
+    url = f"{LLM_BASE_URL}/chat/completions"
+    headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
+    payload = {
+        "model": LLM_MODEL,
+        "messages": [
+            {"role": "user", "content": prompt},
+            {"role": "system", "content": "You are a precise assistant that only outputs valid JSON."},
+        ],
+        "temperature": 0.2,
+        "max_tokens": 4500,
+    }
+    if re.match(r"glm-(5\.3|4\.7)", LLM_MODEL):
+        payload["thinking"] = {"type": "enabled"}
+        payload["reasoning_effort"] = "low"
+    elif re.match(r"glm-(4\.[5-9]|[5-9])", LLM_MODEL):
+        payload["thinking"] = {"type": "disabled"}
+    content = None
+    for attempt in (1, 2):
+        try:
+            resp = requests.post(url, headers=headers, json=payload, timeout=120)
+            if resp.status_code == 429:
+                log(f"句子翻译 429 响应体: {resp.text[:200]!r}")
+            resp.raise_for_status()
+            try:
+                message = resp.json()["choices"][0]["message"]
+                content = message.get("content") or ""
+                reasoning = message.get("reasoning_content") or ""
+            except (ValueError, KeyError, IndexError) as e:
+                raise ValueError(f"GLM 响应结构异常（{e}）")
+            try:
+                result = _parse_json_block(content)
+            except ValueError:
+                if reasoning:
+                    result = _parse_json_block(reasoning)
+                else:
+                    raise
+            if not isinstance(result, dict):
+                raise ValueError("输出不是 JSON 对象")
+            return result
+        except Exception as e:
+            log(f"句子翻译第 {attempt} 次尝试失败: {e}")
+    return {}
+
+
+def bake_sentences(episode: dict, translations: dict) -> list[dict]:
+    """把切分结果与 LLM 翻译组装成 sentences: [{text, translation}]（对齐兜底）。"""
+    sents = [{"text": s, "translation": ""} for s in split_sentences(episode["transcript"])]
+    tr_list = translations.get("sentences")
+    if isinstance(tr_list, list):
+        for i, tr in enumerate(tr_list):
+            if i < len(sents) and tr:
+                sents[i]["translation"] = str(tr)
+    return sents
 
 
 def _parse_json_array_block(text: str) -> list:
@@ -652,52 +718,6 @@ def _parse_json_array_block(text: str) -> list:
         except ValueError:
             continue
     raise ValueError("输出中找不到可解析的 JSON 数组")
-
-
-def generate_turn_translations(turns: list[dict], api_key: str) -> list:
-    """一期一次 LLM 调用：整篇对白逐行中文翻译，返回字符串列表（与 turns 对齐）。失败返回 []。"""
-    lines = "\n".join(t["text"] for t in turns)
-    prompt = TURN_TRANSLATIONS_PROMPT + "\n对白（共 " + str(len(turns)) + " 行）：\n" + lines
-    url = f"{LLM_BASE_URL}/chat/completions"
-    headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
-    payload = {
-        "model": LLM_MODEL,
-        "messages": [
-            {"role": "user", "content": prompt},
-            {"role": "system", "content": "You are a precise assistant that only outputs valid JSON."},
-        ],
-        "temperature": 0.2,
-        "max_tokens": 4500,
-    }
-    if re.match(r"glm-(5\.3|4\.7)", LLM_MODEL):
-        payload["thinking"] = {"type": "enabled"}
-        payload["reasoning_effort"] = "low"
-    elif re.match(r"glm-(4\.[5-9]|[5-9])", LLM_MODEL):
-        payload["thinking"] = {"type": "disabled"}
-    content = None
-    for attempt in (1, 2):
-        try:
-            resp = requests.post(url, headers=headers, json=payload, timeout=120)
-            if resp.status_code == 429:
-                log(f"句子翻译 429 响应体: {resp.text[:200]!r}")
-            resp.raise_for_status()
-            try:
-                message = resp.json()["choices"][0]["message"]
-                content = message.get("content") or ""
-                reasoning = message.get("reasoning_content") or ""
-            except (ValueError, KeyError, IndexError) as e:
-                raise ValueError(f"GLM 响应结构异常（{e}）")
-            try:
-                result = _parse_json_array_block(content)
-            except ValueError:
-                if reasoning:
-                    result = _parse_json_array_block(reasoning)
-                else:
-                    raise
-            return [str(x) for x in result]
-        except Exception as e:
-            log(f"句子翻译第 {attempt} 次尝试失败: {e}")
-    return []
 
 
 def load_basics_keys() -> set:
@@ -1006,19 +1026,26 @@ def build(days: int, no_llm: bool, no_audio: bool = False, rebake: bool = False)
                 else:
                     skipped += 1  # 补烘失败仍留在架，别让汇总把它算成「新增」
                 continue
-            elif not no_llm and api_key and existing \
-                    and len(existing.get("turn_translations") or []) < len(existing.get("turns") or []):
-                # 老数据一次性升级：句子翻译缺失或不全时补生成（整句翻译功能上线前的存量）
+            elif not no_llm and api_key and existing and "transcript" in existing \
+                    and (not existing.get("sentences")
+                         or not any(s.get("translation") for s in existing.get("sentences") or [])):
+                # 老数据一次性升级：句子翻译缺失时按句子粒度补生成（含标题翻译）
                 log(f"补句子翻译：{meta['id']}")
-                existing["turn_translations"] = generate_turn_translations(
-                    existing["turns"], api_key
+                translations = generate_episode_translations(
+                    existing.get("title", ""),
+                    split_sentences(existing["transcript"]),
+                    api_key,
                 )
-                if existing["turn_translations"]:
+                existing["title_translation"] = str(translations.get("title", ""))
+                existing["sentences"] = bake_sentences(existing, translations)
+                existing.pop("turn_translations", None)  # 旧段落粒度字段退役
+                if any(s["translation"] for s in existing["sentences"]):
                     out_file.write_text(
                         json.dumps(existing, ensure_ascii=False, indent=2) + "\n",
                         encoding="utf-8",
                     )
-                    log(f"已补 {out_file.name} 句子翻译 {len(existing['turn_translations'])} 行")
+                    translated_n = sum(1 for s in existing["sentences"] if s["translation"])
+                    log(f"已补 {out_file.name} 句子翻译 {translated_n} 句 + 标题")
                 skipped += 1
                 continue
             else:
@@ -1037,20 +1064,28 @@ def build(days: int, no_llm: bool, no_audio: bool = False, rebake: bool = False)
                 episode["context_glossary"] = generate_glossary_for_episode(
                     episode, covered, api_key
                 )
-                episode["turn_translations"] = generate_turn_translations(
-                    episode["turns"], api_key
+                translations = generate_episode_translations(
+                    episode["title"],
+                    split_sentences(episode["transcript"]),
+                    api_key,
                 )
-                if not episode["turn_translations"]:
+                episode["title_translation"] = str(translations.get("title", ""))
+                episode["sentences"] = bake_sentences(episode, translations)
+                if not episode["title_translation"] and not any(
+                    s["translation"] for s in episode["sentences"]
+                ):
                     log(f"警告：{meta['id']} 句子翻译生成失败，前端将不显示整句翻译")
             else:
                 episode["context_glossary"] = {}
-                episode["turn_translations"] = []
+                episode["title_translation"] = ""
+                episode["sentences"] = bake_sentences(episode, {})
             episode["dict"] = bake_word_dict(episode)
             out_file.write_text(
                 json.dumps(episode, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
             )
+            translated_n = sum(1 for s in episode["sentences"] if s["translation"])
             log(f"已写入 {out_file.name}：{len(episode['transcript'].split())} 词对白，"
-                f"词典 {len(episode['dict'])} 条，句子翻译 {len(episode['turn_translations'])} 行")
+                f"词典 {len(episode['dict'])} 条，句子 {translated_n}/{len(episode['sentences'])} 句已译")
         except Exception as e:
             failures += 1
             log(f"剧集 {meta['id']} 处理失败: {e}")

@@ -62,8 +62,8 @@ def main() -> int:
         check("transcript 已渲染且首词高亮", first_word == "Hi", f"首词={first_word!r}")
         badges = page.eval_on_selector_all(".speaker-badge", "els => els.map(e => e.textContent)")
         check("对话回合带说话人徽章", len(badges) >= 3 and badges[0] == "Georgie", str(badges[:4]))
-        bar_color = page.evaluate("() => getComputedStyle(document.querySelector('.app-header')).backgroundImage")
-        check("顶栏为浅紫渐变（非深紫）", "rgb(143, 111, 192)" in bar_color, bar_color[:60])
+        bar_border = page.evaluate("() => getComputedStyle(document.querySelector('.app-header')).borderImageSource")
+        check("页头为白桦林孔式虚线（非深色横条）", "repeating-linear-gradient" in bar_border, bar_border[:70])
         meta = page.text_content("#episode-meta")
         check("meta 栏含日期与剩余天数", "2026-10-29" in meta and "剩" in meta, meta)
         hint = page.text_content("#hint-progress")
@@ -81,6 +81,9 @@ def main() -> int:
         page.wait_for_function(
             "() => document.querySelector('.episode-title').classList.contains('done')", timeout=5000)
         check("标题打字完成定格", True)
+        tt = page.evaluate("() => { const b = document.getElementById('sentence-bar'); return { hidden: b.hidden, text: b.textContent, inDialog: b.parentElement.id === 'dialog-display', pos: getComputedStyle(b).position }; }")
+        check("标题完成显示标题翻译（条在对话区内 sticky）",
+              (not tt["hidden"]) and "空调" in tt["text"] and tt["inDialog"] and tt["pos"] == "sticky", str(tt))
         check("标题完成后光标转入对白首词",
               page.evaluate("() => !!document.querySelector('#dialog-display .caret')"))
         ghost_count = page.eval_on_selector_all(".word-future", "els => els.length")

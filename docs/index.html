@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>键学 · BBC 6 Minute English 打字练习</title>
     <!-- ?v= 版本号：界面改动时同步递增，避免部署后浏览器用缓存的旧 JS 配新 HTML -->
-    <link rel="stylesheet" href="assets/bootstrap.min.css?v=20261117">
-    <link rel="stylesheet" href="assets/app.css?v=20261117">
+    <link rel="stylesheet" href="assets/bootstrap.min.css?v=20261118">
+    <link rel="stylesheet" href="assets/app.css?v=20261118">
 </head>
 <body class="app-body">
     <main class="container app">
@@ -23,9 +23,7 @@
 
         <div id="notice" class="alert alert-warning py-2 px-3 small" role="alert" hidden></div>
 
-        <div id="dialog-display" aria-label="对白" tabindex="-1"></div>
-
-        <div id="sentence-bar" hidden></div>
+        <div id="dialog-display" aria-label="对白" tabindex="-1"><div id="sentence-bar" hidden></div></div>
 
         <footer class="app-footer">
             <span id="hint-current" class="small"></span>
@@ -36,6 +34,6 @@
     <!-- 键盘捕获：视觉隐藏但可聚焦，用于唤起手机软键盘；事件冒泡到 document 统一处理 -->
     <input id="kbd-capture" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-hidden="true" tabindex="-1">
 
-    <script src="script.js?v=20261117"></script>
+    <script src="script.js?v=20261118"></script>
 </body>
 </html>

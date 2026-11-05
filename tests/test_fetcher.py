@@ -612,6 +612,71 @@ def test_prune_audio_no_dir(tmp_path, monkeypatch):
     assert fetcher.prune_audio(set()) == 0
 
 
+
+# ---------------------------------------------------------------- 句子粒度翻译
+
+
+def test_split_sentences():
+    """按句末标点切分、多标点容忍、与前端 JS /(?<=[.!?])\s+/) 同构。"""
+    text = "Hi Neil. Hi Georgie! Is this the end? No... maybe not."
+    assert fetcher.split_sentences(text) == [
+        "Hi Neil.",
+        "Hi Georgie!",
+        "Is this the end?",
+        "No...",       # 省略号本身是句末标点（前后端同构，对齐不受影响）
+        "maybe not.",
+    ]
+    assert fetcher.split_sentences("One sentence only") == ["One sentence only"]
+    assert fetcher.split_sentences("") == []
+
+
+def test_generate_episode_translations(monkeypatch):
+    """一次调用生成标题+逐句翻译；围栏 JSON 容错解析。"""
+    import threading
+    from http.server import BaseHTTPRequestHandler, HTTPServer
+    captured = {}
+
+    class Handler(BaseHTTPRequestHandler):
+        def do_POST(self):
+            length = int(self.headers.get("Content-Length", 0))
+            captured["prompt"] = json.loads(self.rfile.read(length).decode("utf-8"))["messages"][0]["content"]
+            content = '```json\n{"title": "空调是答案吗？", "sentences": ["你好，尼尔。", "你好，乔治。"]}\n```'
+            resp = json.dumps({"choices": [{"message": {"content": content}}]}).encode("utf-8")
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.send_header("Content-Length", str(len(resp)))
+            self.end_headers()
+            self.wfile.write(resp)
+
+        def log_message(self, *args):
+            pass
+
+    server = HTTPServer(("127.0.0.1", 0), Handler)
+    threading.Thread(target=server.serve_forever, daemon=True).start()
+    try:
+        monkeypatch.setattr(fetcher, "LLM_BASE_URL", f"http://127.0.0.1:{server.server_address[1]}/v1")
+        monkeypatch.setattr(fetcher, "LLM_MODEL", "glm-5.3-flash")
+        result = fetcher.generate_episode_translations(
+            "Is aircon the answer?", ["Hi Neil.", "Hi Georgie."], "k"
+        )
+        assert result == {"title": "空调是答案吗？", "sentences": ["你好，尼尔。", "你好，乔治。"]}
+        assert "Is aircon the answer?" in captured["prompt"]
+        assert "2 句" in captured["prompt"]
+    finally:
+        server.shutdown()
+        server.server_close()
+
+
+def test_bake_sentences_alignment():
+    """切分与翻译对齐：多译丢弃、缺译留空。"""
+    episode = {"transcript": "Hi Neil. Hi Georgie. Bye!"}
+    translations = {"title": "t", "sentences": ["你好，尼尔。", "你好，乔治。", "多", "多2"]}
+    sents = fetcher.bake_sentences(episode, translations)
+    assert [s["text"] for s in sents] == ["Hi Neil.", "Hi Georgie.", "Bye!"]
+    assert sents[0]["translation"] == "你好，尼尔。"
+    assert sents[2]["translation"] == "多"  # 对齐截取
+
+
 # ---------------------------------------------------------------- 全局词表挖掘
 
 

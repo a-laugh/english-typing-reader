@@ -3259,9 +3259,19 @@
       "phrase": "you've"
     }
   },
-  "turn_translations": [
-    "你好，尼尔。",
-    "你好，乔治。",
-    "所以尼尔，我们刚在英国经历了一个非常炎热的夏天。"
+  "title_translation": "空调是应对变暖世界的答案吗？",
+  "sentences": [
+    {
+      "text": "Hi Neil.",
+      "translation": "你好，尼尔。"
+    },
+    {
+      "text": "Hi Georgie.",
+      "translation": "你好，乔治。"
+    },
+    {
+      "text": "So, Neil, we've just had a really hot summer in the UK.",
+      "translation": "所以尼尔，我们刚在英国经历了一个非常炎热的夏天。"
+    }
   ]
 }

@@ -1,16 +1,15 @@
 /* 键学 · 应用层样式（自托管 Bootstrap 5.3 之上）
-   风格：GNU emacs.gnu.org 式页面骨架（米色纸面 + 顶部深色横条 + 衬线正文）
-   配色：Modus Themes（Modus Operandi 浅色系）——Protesilaos 设计的
-   无障碍高对比调色板，语义色取自 modus-operandi 官方值。 */
+   风格：白桦林——桦皮纸白底、灰绿柔和色系、桦皮孔式短横虚线分隔母题。
+   零深色横幅、零卡片阴影；语义色取森林绿系。 */
 
 html, body {
     height: 100%;
     margin: 0;
 }
 .app-body {
-    /* GNU 站米色纸面 */
-    background-color: #efeadc;
-    color: #000000; /* modus fg-main */
+    /* 桦皮纸白 */
+    background-color: #f7f6f0;
+    color: #2f3230; /* 柔黑绿 */
 }
 
 /* 布局：宽屏单列，上限 1400px */
@@ -23,18 +22,15 @@ html, body {
     box-sizing: border-box;
 }
 
-/* ---- GNU 式顶部横条：站名白字于深紫底 ---- */
+/* ---- 页头：桦木灰绿站名 + 孔式虚线底线 ---- */
 .app-header {
     display: flex;
     align-items: baseline;
     flex-wrap: wrap;
     gap: 0.4rem 1rem;
-    padding: 0.45rem 0.9rem;
-    /* GNU 站浅紫系（用户反馈深紫过暗）：#7F5AB6→#622486 亮渐变 */
-    background: linear-gradient(180deg, #8f6fc0, #622486);
-    border-radius: 3px;
-    color: #ffffff;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    padding: 0.2rem 0.2rem 0.6rem 0.2rem;
+    border-bottom: 2px solid transparent;
+    border-image: repeating-linear-gradient(90deg, #b9b4a4 0 14px, transparent 14px 24px) 1;
 }
 .app-brand {
     display: flex;
@@ -44,16 +40,15 @@ html, body {
 }
 .app-title {
     font-family: Georgia, "Times New Roman", "Songti SC", SimSun, serif;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 0.1em;
-    color: #ffffff;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    color: #5c6e52; /* 桦木灰绿 */
 }
 .app-subtitle {
     font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-    font-size: 0.68rem;
-    color: #e0d0f0;
+    font-size: 0.7rem;
+    color: #7a7d74;
     letter-spacing: 0.05em;
 }
 #episode-selector {
@@ -62,58 +57,55 @@ html, body {
     min-width: 0;
     font-size: 0.85rem;
     border-radius: 2px;
-    border: 1px solid #4F3774;
-    background-color: #ffffff;
-    color: #000000;
+    border: 1px solid #c5c1b2;
+    background-color: #fcfbf7;
+    color: #2f3230;
 }
 
-/* 当前文章标题区（纸面浅底、墨字） */
+/* 当前文章标题区 */
 #episode-meta {
     flex-basis: 100%;
     margin-top: 0.6rem;
-    padding: 0.35rem 0.5rem 0.25rem 0.5rem;
-    background-color: #ffffff;
-    border: 1px solid #ded5c2;
-    border-radius: 3px;
+    padding: 0.3rem 0.1rem 0.2rem 0.1rem;
 }
 .episode-title {
     font-family: Georgia, "Times New Roman", "Songti SC", SimSun, serif;
     font-size: 1.35rem;
     font-weight: 700;
-    color: #0031a9; /* modus blue */
+    color: #2f5d3a; /* 深叶绿 */
     margin: 0 0 0.15rem 0;
     min-height: 1.6em;
 }
 .episode-title.done {
-    color: #004d00; /* modus green 加深：白底高对比 */
+    color: #3d6b4f; /* 森林绿 */
 }
-.episode-title .t-letter-ok { color: #004d00; }
+.episode-title .t-letter-ok { color: #3d6b4f; }
 .episode-title .t-letter-rest { opacity: 0.4; }
 .episode-title .t-letter-bad {
-    color: #ffffff;
-    background-color: #a60000; /* modus red */
+    color: #fcfbf7;
+    background-color: #a8502e; /* 枫红褐 */
     border-radius: 2px;
 }
 .episode-meta-row {
     font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
     font-size: 0.75rem;
-    color: #595959; /* modus fg-dim */
+    color: #7a7d74;
     display: flex;
     align-items: baseline;
     gap: 0.9rem;
     flex-wrap: wrap;
 }
 .episode-meta-row a {
-    color: #0031a9; /* modus blue */
+    color: #4a7050;
     text-decoration: none;
 }
 .episode-meta-row a:hover {
     text-decoration: underline;
 }
 .remaining-days {
-    color: #8f4b00; /* modus yellow-dark */
-    background-color: #f5efe0;
-    border: 1px solid #d9c9a0;
+    color: #8a6d3b;
+    background-color: #f2efe3;
+    border: 1px solid #d9d2ba;
     border-radius: 2px;
     padding: 0 0.35em;
     margin-left: 0.4em;
@@ -122,29 +114,30 @@ html, body {
 #notice {
     margin: 0.7rem 0 0 0;
     border-radius: 2px;
-    background-color: #fff3f3;
-    border: 1px solid #ffcccc;
-    border-left: 4px solid #a60000;
-    color: #7c0000;
+    background-color: #f6ede4;
+    border: 1px solid #e3cdb8;
+    border-left: 4px solid #a8502e;
+    color: #7c4a2c;
 }
 
-/* ---- 对白区：纸面主体、上缘细线，衬线正文 ---- */
+/* ---- 对白区：桦皮纸面 ---- */
 #dialog-display {
     flex: 1;
     overflow-y: auto;
     margin-top: 0.7rem;
-    padding: 1rem 1.1rem;
-    background-color: #f5f5f5; /* modus bg-inactive 纸灰 */
-    border: 1px solid #d6d6d6;
+    padding: 1rem 1.1rem 0.6rem 1.1rem;
+    background-color: #fcfbf7;
+    border: 1px solid #d9d5c8;
     border-radius: 3px;
     font-family: Georgia, "Times New Roman", "Songti SC", SimSun, serif;
     font-size: 1.1rem;
     line-height: 1.95;
     text-align: left;
     overscroll-behavior: contain;
+    position: relative;
 }
 
-/* 对话回合：说话人等宽小字标签（GNU 式） */
+/* 对话回合：说话人灰绿小字标签 */
 .turn {
     display: flex;
     gap: 0.8rem;
@@ -160,41 +153,41 @@ html, body {
     font-size: 0.7rem;
     font-weight: 700;
     letter-spacing: 0.06em;
-    color: #193668; /* modus fg-alt 深蓝 */
+    color: #5c6e52;
     white-space: nowrap;
 }
 .speaker-badge::before {
-    content: "> ";
-    color: #595959;
+    content: "· ";
+    color: #a8ab9e;
 }
-.speaker-c0 { color: #193668; }
-.speaker-c1 { color: #721045; }
-.speaker-c2 { color: #005f00; }
-.speaker-c3 { color: #5f0f6e; }
-.speaker-c4 { color: #8f4b00; }
+.speaker-c0 { color: #546a5b; }
+.speaker-c1 { color: #7a5c50; }
+.speaker-c2 { color: #4a7050; }
+.speaker-c3 { color: #6a5f7a; }
+.speaker-c4 { color: #7a6a3f; }
 .turn-text {
     margin: 0;
     flex: 1;
     word-wrap: break-word;
 }
 
-/* 词态：modus 语义色 */
+/* 词态：森林绿系 */
 .word-correct {
-    color: #005f00; /* modus green */
+    color: #3d6b4f; /* 森林绿 */
     position: relative;
 }
 .current-word {
-    background-color: #fdd700; /* modus bg-yellow-intense-ish 荧光笔 */
-    color: #000000;
+    background-color: #d8e8c4; /* 嫩叶绿 */
+    color: #2f3230;
     border-radius: 2px;
-    box-shadow: inset 0 -2px 0 #b28a00;
+    box-shadow: inset 0 -2px 0 #93b27a; /* 叶脉下划线 */
 }
 .letter-ok {
-    color: #005f00;
+    color: #3d6b4f;
 }
 .letter-bad {
-    color: #ffffff;
-    background-color: #a60000; /* modus red */
+    color: #fcfbf7;
+    background-color: #a8502e;
     border-radius: 2px;
 }
 .letter-rest {
@@ -221,7 +214,7 @@ html, body {
     display: inline-block;
     width: 0;
     height: 1.05em;
-    border-left: 2px solid #a60000; /* modus red */
+    border-left: 2px solid #5c6e52; /* 桦木灰绿 */
     margin-left: -2px;
     vertical-align: -0.15em;
     animation: caret-blink 1s step-end infinite;
@@ -231,7 +224,7 @@ html, body {
     50% { opacity: 0; }
 }
 
-/* 行内翻译：modus dark 深底浮层（脱离文档流零重排） */
+/* 行内词翻译：桦皮深灰底浮层（脱离文档流零重排） */
 .gloss {
     position: absolute;
     bottom: calc(100% + 3px);
@@ -239,10 +232,10 @@ html, body {
     transform: translateX(-50%);
     padding: 0.05rem 0.5rem;
     border-radius: 2px;
-    background-color: #242424;
-    border: 1px solid #454545;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-    color: #f4f4f4; /* modus dark fg-main 近似 */
+    background-color: #3a4034; /* 桦皮深灰绿 */
+    border: 1px solid #4d554a;
+    box-shadow: 0 1px 3px rgba(47, 50, 48, 0.25);
+    color: #eef1e8;
     font-family: -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
     font-size: 0.68em;
     font-weight: 400;
@@ -254,14 +247,40 @@ html, body {
     z-index: 10;
 }
 .gloss.ctx {
-    background-color: #0031a9; /* modus blue */
-    border-color: #2249c0;
-    color: #ffffff;
+    background-color: #34523c; /* 深叶绿 */
+    border-color: #4a7050;
+    color: #e8f1e4;
 }
 .gloss .gloss-tag {
     margin-right: 0.25em;
     font-size: 0.9em;
     opacity: 0.7;
+}
+
+/* 整句翻译条：对话区底部固定（sticky）——浮于幽灵预览之上，
+   不占文档流（零布局位移）、不遮打字焦点（焦点居中，条贴底缘） */
+#sentence-bar {
+    position: sticky;
+    bottom: 0;
+    display: block;
+    margin: 0.4rem -1.1rem -0.6rem -1.1rem; /* 抵消对话区内边距，通栏贴底 */
+    padding: 1.1rem 1.1rem 0.55rem 1.1rem; /* 顶部留渐隐过渡带 */
+    background: linear-gradient(180deg, rgba(252, 251, 247, 0) 0, rgba(237, 242, 226, 0.9) 40%, #edf2e2 100%);
+    font-family: -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+    font-size: 0.95rem;
+    color: #2f3a2c;
+    text-align: left;
+    min-height: 1.3em;
+    pointer-events: none;
+    z-index: 5;
+}
+#sentence-bar .sb-inner {
+    display: inline-block;
+    background-color: #edf2e2;
+    border-left: 4px solid #4a7050;
+    border-radius: 2px;
+    padding: 0.25rem 0.8rem;
+    max-width: 100%;
 }
 
 /* 键盘捕获输入：视觉隐藏但保持可聚焦 */
@@ -277,22 +296,7 @@ html, body {
     z-index: -1;
 }
 
-/* ---- 整句翻译条：一句话打完后在底部显示该句中文 ---- */
-#sentence-bar {
-    margin: 0.6rem 0 0 0;
-    padding: 0.4rem 0.8rem;
-    background-color: #ffffff;
-    border: 1px solid #ded5c2;
-    border-left: 4px solid #0031a9; /* modus blue */
-    border-radius: 3px;
-    font-family: -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
-    font-size: 0.92rem;
-    color: #1a1a1a;
-    text-align: left;
-    min-height: 1.4em;
-}
-
-/* ---- 提示行：GNU 式页脚细线 + 等宽小字 ---- */
+/* ---- 提示行：孔式虚线顶线 + 等宽小字 ---- */
 .app-footer {
     display: flex;
     justify-content: space-between;
@@ -300,24 +304,25 @@ html, body {
     gap: 1rem;
     margin: 0.55rem 0 0 0;
     padding: 0.45rem 0.2rem 0 0.2rem;
-    border-top: 1px solid #c9bfa8;
+    border-top: 2px solid transparent;
+    border-image: repeating-linear-gradient(90deg, #b9b4a4 0 14px, transparent 14px 24px) 1;
     font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
     font-size: 0.75rem;
-    color: #595959;
+    color: #7a7d74;
 }
 #hint-current .hw {
-    color: #000000;
+    color: #2f3230;
     font-weight: 700;
     font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 #mute-toggle {
     cursor: pointer;
     user-select: none;
-    color: #595959;
+    color: #7a7d74;
     margin-left: 0.6em;
 }
 #mute-toggle:hover {
-    color: #000000;
+    color: #2f3230;
 }
 
 /* 手机 */

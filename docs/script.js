@@ -27,6 +27,8 @@ let letterSpans = [];        // 当前词各字母位的 span（与清洗序列�
 let wordSpans = [];          // 渲染窗口内：全局词下标 -> {span, letters}（增量更新用）
 let windowFromWord = -1;     // 当前渲染窗口覆盖的词区间 [windowFromWord, windowToWord]
 let windowToWord = -1;
+let sentenceIndexByWord = []; // 每个词所属句子下标（句子粒度翻译）
+let episodeSentences = [];    // [{text, translation}]（构建期切分+翻译，缺数据时本地切分兜底）
 let glossWordIndex = -1;     // 行内翻译跟随的最新完成词，-1 = 无
 // 标题打字阶段：titleSeq 为标题键入序列，titlePos 为已敲到位置（=len 表示已完成）。
 // 进度（localStorage word_index）仍是对白空间下标，与标题阶段互不影响——续读时标题视为已完成
@@ -421,6 +423,27 @@ function flattenEpisode() {
             turnIndexByWord.push(ti);
         });
     });
+
+    // 句子索引：数据自带 sentences（构建期切分+翻译）；老数据本地同构切分兜底（无翻译）
+    if (Array.isArray(currentEpisode.sentences) && currentEpisode.sentences.length > 0) {
+        episodeSentences = currentEpisode.sentences;
+    } else {
+        episodeSentences = currentEpisode.transcript
+            .split(/(?<=[.!?])\s+/).filter(Boolean)
+            .map((text) => ({ text, translation: "" }));
+    }
+    // 逐词归属句子：按各句词数累进（句子来自同一 transcript 的同构切分，词序天然对齐）
+    sentenceIndexByWord = [];
+    episodeSentences.forEach((s, idx) => {
+        const n = s.text.split(/\s+/).filter(Boolean).length;
+        for (let k = 0; k < n && sentenceIndexByWord.length < originalWords.length; k++) {
+            sentenceIndexByWord.push(idx);
+        }
+    });
+    // 容错：切分误差导致余词时，归入最后一句
+    while (sentenceIndexByWord.length < originalWords.length) {
+        sentenceIndexByWord.push(episodeSentences.length - 1);
+    }
 }
 
 function renderDialog() {
@@ -509,6 +532,10 @@ function renderDialog() {
         frag.appendChild(row);
     });
     dialogDisplay.replaceChildren(frag);
+    // sentence-bar 常驻对话区末尾（sticky 底部）：全量重渲染后重新挂回并保留当前内容
+    if (sentenceBar && sentenceBar.parentElement !== dialogDisplay) {
+        dialogDisplay.appendChild(sentenceBar);
+    }
 
     const currentWordSpan = dialogDisplay.querySelector(".current-word");
     if (currentWordSpan) {
@@ -593,12 +620,12 @@ async function loadEpisode(episodeId, startIndex = null) {
         renderDialog();
         renderHint();
         renderEpisodeMeta(currentEpisode);
-        // 续读时恢复上次完成句的翻译（句子边界：start-1 与 start 分属不同回合）
+        // 续读时恢复上次完成句的翻译（句子边界：start-1 与 start 分属不同句）
         if (start > 0 && start <= originalWords.length) {
-            const prevTurn = turnIndexByWord[start - 1];
-            const curTurn = start < originalWords.length ? turnIndexByWord[start] : null;
-            if (curTurn === null || curTurn !== prevTurn) {
-                showSentenceTranslation(prevTurn);
+            const prevSent = sentenceIndexByWord[start - 1];
+            const curSent = start < originalWords.length ? sentenceIndexByWord[start] : null;
+            if (curSent === null || curSent !== prevSent) {
+                showSentenceTranslation(prevSent);
             }
         }
         prefetchUpcomingAudio();
@@ -646,13 +673,28 @@ function focusCapture() {
     if (kbdCapture) kbdCapture.focus({ preventScroll: true });
 }
 
-function showSentenceTranslation(turnIdx) {
-    if (!currentEpisode || turnIdx === undefined || turnIdx === null || turnIdx < 0) return;
-    const tt = currentEpisode.turn_translations;
-    const text = Array.isArray(tt) ? tt[turnIdx] : null;
-    if (text && sentenceBar) {
+function showSentenceTranslation(sentenceIdx) {
+    if (!currentEpisode || sentenceIdx === undefined || sentenceIdx === null || sentenceIdx < 0) return;
+    const s = episodeSentences[sentenceIdx];
+    if (s && s.translation && sentenceBar) {
         sentenceBar.hidden = false;
-        sentenceBar.textContent = `📄 ${text}`;
+        sentenceBar.replaceChildren();
+        const inner = document.createElement("span");
+        inner.className = "sb-inner";
+        inner.textContent = `📄 ${s.translation}`;
+        sentenceBar.appendChild(inner);
+    }
+}
+
+function showTitleTranslation() {
+    const t = currentEpisode && currentEpisode.title_translation;
+    if (t && sentenceBar) {
+        sentenceBar.hidden = false;
+        sentenceBar.replaceChildren();
+        const inner = document.createElement("span");
+        inner.className = "sb-inner";
+        inner.textContent = `📄 ${t}`;
+        sentenceBar.appendChild(inner);
     }
 }
 
@@ -689,12 +731,12 @@ function completeCurrentWord() {
         }
     }
 
-    // 整句打完（下一词进入新回合，或全篇完成）：底部显示该句中文翻译
-    const doneTurnIdx = turnIndexByWord[completedIdx];
-    const nextTurnIdx = currentWordIndex < originalWords.length
-        ? turnIndexByWord[currentWordIndex] : null;
-    if (nextTurnIdx === null || nextTurnIdx !== doneTurnIdx) {
-        showSentenceTranslation(doneTurnIdx);
+    // 整句打完（下一词进入新句子，或全篇完成）：底部显示该句中文翻译
+    const doneSentIdx = sentenceIndexByWord[completedIdx];
+    const nextSentIdx = currentWordIndex < originalWords.length
+        ? sentenceIndexByWord[currentWordIndex] : null;
+    if (nextSentIdx === null || nextSentIdx !== doneSentIdx) {
+        showSentenceTranslation(doneSentIdx);
     }
 
     renderHint();
@@ -794,6 +836,7 @@ function handleLetter(ch) {
                 titleActive = false;
                 renderEpisodeMeta(currentEpisode); // 标题定格为完成态
                 renderDialog();                    // 光标转入对白首词
+                showTitleTranslation();            // 标题也要整句翻译
             }
         } else {
             const span = titleLetterSpans[titlePos];
