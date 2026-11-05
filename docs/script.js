@@ -42,6 +42,7 @@ const episodeSelector = document.getElementById("episode-selector");
 const episodeMeta = document.getElementById("episode-meta");
 const noticeBar = document.getElementById("notice");
 const dialogDisplay = document.getElementById("dialog-display");
+const sentenceBar = document.getElementById("sentence-bar");
 const kbdCapture = document.getElementById("kbd-capture");
 const hintCurrent = document.getElementById("hint-current");
 const hintProgress = document.getElementById("hint-progress");
@@ -585,9 +586,21 @@ async function loadEpisode(episodeId, startIndex = null) {
             titleActive = true;
         }
 
+        if (sentenceBar) {
+            sentenceBar.hidden = true;
+            sentenceBar.textContent = "";
+        }
         renderDialog();
         renderHint();
         renderEpisodeMeta(currentEpisode);
+        // 续读时恢复上次完成句的翻译（句子边界：start-1 与 start 分属不同回合）
+        if (start > 0 && start <= originalWords.length) {
+            const prevTurn = turnIndexByWord[start - 1];
+            const curTurn = start < originalWords.length ? turnIndexByWord[start] : null;
+            if (curTurn === null || curTurn !== prevTurn) {
+                showSentenceTranslation(prevTurn);
+            }
+        }
         prefetchUpcomingAudio();
         focusCapture();
     } catch (error) {
@@ -633,6 +646,16 @@ function focusCapture() {
     if (kbdCapture) kbdCapture.focus({ preventScroll: true });
 }
 
+function showSentenceTranslation(turnIdx) {
+    if (!currentEpisode || turnIdx === undefined || turnIdx === null || turnIdx < 0) return;
+    const tt = currentEpisode.turn_translations;
+    const text = Array.isArray(tt) ? tt[turnIdx] : null;
+    if (text && sentenceBar) {
+        sentenceBar.hidden = false;
+        sentenceBar.textContent = `📄 ${text}`;
+    }
+}
+
 function completeCurrentWord() {
     const completedWord = originalWords[currentWordIndex];
     const completedIdx = currentWordIndex;
@@ -664,6 +687,14 @@ function completeCurrentWord() {
         if (caret && first) {
             first.before(caret);
         }
+    }
+
+    // 整句打完（下一词进入新回合，或全篇完成）：底部显示该句中文翻译
+    const doneTurnIdx = turnIndexByWord[completedIdx];
+    const nextTurnIdx = currentWordIndex < originalWords.length
+        ? turnIndexByWord[currentWordIndex] : null;
+    if (nextTurnIdx === null || nextTurnIdx !== doneTurnIdx) {
+        showSentenceTranslation(doneTurnIdx);
     }
 
     renderHint();

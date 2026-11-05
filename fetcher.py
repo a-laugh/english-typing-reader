@@ -612,6 +612,141 @@ def _parse_json_block(text: str):
     raise ValueError(f"输出中找不到可解析的 JSON 对象（{last_error}）")
 
 
+TURN_TRANSLATIONS_PROMPT = """你是专业译者。下面是 BBC 6 Minute English 一期节目的对白，按行编号给出每行的简洁中文翻译
+（口语化、一行一句、与原文行一一对应）。
+
+仅输出一个 JSON 字符串数组（不要任何其他文字），数组第 n 项就是第 n 行对白的中文翻译。示例：
+["你好，尼尔。", "你好，乔治。"]
+"""
+
+
+def _parse_json_array_block(text: str) -> list:
+    """容错提取 LLM 输出的 JSON 字符串数组（含截断抢救）。"""
+    text = re.sub(r"^```(?:json)?\s*|\s*```$", "", text.strip(), flags=re.MULTILINE)
+
+    def parse(candidate: str) -> list:
+        try:
+            v = json.loads(candidate)
+            if isinstance(v, list):
+                return v
+        except json.JSONDecodeError:
+            pass
+        try:
+            v = ast.literal_eval(candidate)
+            if isinstance(v, list):
+                return v
+        except (ValueError, SyntaxError, TypeError):
+            pass
+        raise ValueError("无法解析为 JSON 数组")
+
+    candidates = [text]
+    start, end = text.find("["), text.rfind("]")
+    if start != -1 and end > start:
+        candidates.append(text[start : end + 1])
+    cut = text.rfind('",')
+    if cut > start:
+        candidates.append(text[start : cut + 1] + "]")
+    for c in candidates:
+        try:
+            return parse(c)
+        except ValueError:
+            continue
+    raise ValueError("输出中找不到可解析的 JSON 数组")
+
+
+def generate_turn_translations(turns: list[dict], api_key: str) -> list:
+    """一期一次 LLM 调用：整篇对白逐行中文翻译，返回字符串列表（与 turns 对齐）。失败返回 []。"""
+    lines = "\n".join(t["text"] for t in turns)
+    prompt = TURN_TRANSLATIONS_PROMPT + "\n对白（共 " + str(len(turns)) + " 行）：\n" + lines
+    url = f"{LLM_BASE_URL}/chat/completions"
+    headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
+    payload = {
+        "model": LLM_MODEL,
+        "messages": [
+            {"role": "user", "content": prompt},
+            {"role": "system", "content": "You are a precise assistant that only outputs valid JSON."},
+        ],
+        "temperature": 0.2,
+        "max_tokens": 4500,
+    }
+    if re.match(r"glm-(5\.3|4\.7)", LLM_MODEL):
+        payload["thinking"] = {"type": "enabled"}
+        payload["reasoning_effort"] = "low"
+    elif re.match(r"glm-(4\.[5-9]|[5-9])", LLM_MODEL):
+        payload["thinking"] = {"type": "disabled"}
+    content = None
+    for attempt in (1, 2):
+        try:
+            resp = requests.post(url, headers=headers, json=payload, timeout=120)
+            if resp.status_code == 429:
+                log(f"句子翻译 429 响应体: {resp.text[:200]!r}")
+            resp.raise_for_status()
+            try:
+                message = resp.json()["choices"][0]["message"]
+                content = message.get("content") or ""
+                reasoning = message.get("reasoning_content") or ""
+            except (ValueError, KeyError, IndexError) as e:
+                raise ValueError(f"GLM 响应结构异常（{e}）")
+            try:
+                result = _parse_json_array_block(content)
+            except ValueError:
+                if reasoning:
+                    result = _parse_json_array_block(reasoning)
+                else:
+                    raise
+            return [str(x) for x in result]
+        except Exception as e:
+            log(f"句子翻译第 {attempt} 次尝试失败: {e}")
+    return []
+
+
+def load_basics_keys() -> set:
+    """前端基础词表键（docs/assets/basics.json）——已覆盖词，无需 LLM。"""
+    p = Path(__file__).resolve().parent / "docs" / "assets" / "basics.json"
+    try:
+        return set(json.loads(p.read_text(encoding="utf-8")))
+    except (OSError, json.JSONDecodeError):
+        return set()
+
+
+def generate_glossary_for_episode(episode: dict, covered: set, api_key: str) -> dict:
+    """优先使用全局词表缓存，LLM 只补缺失词（定向词表逐块请求）。
+
+    官方词汇表词始终交给 LLM（数量少、且需要语境中文化，英文官方释义不如中文）。
+    返回 {词: {meaning}}（仅缺失词 + 官方词汇词的语境释义）。
+    """
+    vocab_words = {item.get("word", "").strip().lower()
+                   for item in episode.get("vocabulary", []) if item.get("word")}
+    calls = skipped = 0
+    glossary: dict = {}
+    vocab_lines = "\n".join(
+        f"{item.get('word', '')}: {item.get('definition', '')}".strip()
+        for item in episode.get("vocabulary", []) if item.get("word")
+    )
+    for chunk in _chunk_transcript(episode["transcript"], GLOSSARY_CHUNK_WORDS):
+        wanted = []
+        for token in chunk_text_tokens(chunk):
+            if (token not in covered and token not in wanted) and (
+                token in vocab_words or clean_word(token) not in covered
+            ):
+                # 官方词汇表词的原文键（可能带短语/连字符）也收
+                wanted.append(token)
+        if not wanted:
+            skipped += 1
+            continue
+        parts = [GLOSSARY_TARGETED_PROMPT]
+        if vocab_lines:
+            parts.append(f"官方词汇表（全期通用）：\n{vocab_lines}")
+        parts.append("指定词表（只输出这些词）：\n" + "、".join(wanted))
+        parts.append("对白：\n" + "\n".join(chunk))
+        part = _glm_glossary_call("\n\n".join(parts), api_key, f"补词 {episode['id']}")
+        calls += 1
+        if part:
+            merge_glossary_entries(glossary, part)
+    log(f"词表缓存优先：跳过 {skipped} 个无缺词块，LLM 补 {len(glossary)} 词（{calls} 次调用）")
+    return glossary
+
+
 # ---------------------------------------------------------------------------
 # 构建期 TTS 音频（edge-tts）
 # ---------------------------------------------------------------------------
@@ -835,6 +970,8 @@ def build(days: int, no_llm: bool, no_audio: bool = False, rebake: bool = False)
     failures = 0
     rebaked = 0  # 一次性补烘语境词表的已有剧集数
     skipped = 0  # 已在架、无需任何处理的剧集数
+    global_glossary = load_global_glossary()  # 词表缓存：新剧集优先复用，LLM 只补缺
+    basics_keys = load_basics_keys()
     for meta in recent:
         out_file = DATA_DIR / f"{meta['id']}.json"
         existing: dict | None = None
@@ -855,9 +992,8 @@ def build(days: int, no_llm: bool, no_audio: bool = False, rebake: bool = False)
             elif not no_llm and api_key and "transcript" in existing \
                     and not existing.get("context_glossary"):
                 log(f"补烘语境词表：{meta['id']}（此前构建无 GLM 结果）")
-                glossary = generate_context_glossary(
-                    existing["transcript"], existing.get("vocabulary", []), api_key
-                )
+                covered = set(global_glossary) | basics_keys
+                glossary = generate_glossary_for_episode(existing, covered, api_key)
                 if glossary:
                     existing["context_glossary"] = glossary
                     existing["dict"] = bake_word_dict(existing)
@@ -870,6 +1006,21 @@ def build(days: int, no_llm: bool, no_audio: bool = False, rebake: bool = False)
                 else:
                     skipped += 1  # 补烘失败仍留在架，别让汇总把它算成「新增」
                 continue
+            elif not no_llm and api_key and existing \
+                    and len(existing.get("turn_translations") or []) < len(existing.get("turns") or []):
+                # 老数据一次性升级：句子翻译缺失或不全时补生成（整句翻译功能上线前的存量）
+                log(f"补句子翻译：{meta['id']}")
+                existing["turn_translations"] = generate_turn_translations(
+                    existing["turns"], api_key
+                )
+                if existing["turn_translations"]:
+                    out_file.write_text(
+                        json.dumps(existing, ensure_ascii=False, indent=2) + "\n",
+                        encoding="utf-8",
+                    )
+                    log(f"已补 {out_file.name} 句子翻译 {len(existing['turn_translations'])} 行")
+                skipped += 1
+                continue
             else:
                 if not no_llm and api_key:
                     log(f"跳过已存在剧集：{meta['id']}"
@@ -881,17 +1032,25 @@ def build(days: int, no_llm: bool, no_audio: bool = False, rebake: bool = False)
         try:
             episode = parse_episode(http_get(meta["url"]), meta)
             if not no_llm and api_key:
-                episode["context_glossary"] = generate_context_glossary(
-                    episode["transcript"], episode.get("vocabulary", []), api_key
+                # 优先使用全局词表缓存，LLM 只补缺失词 + 官方词汇表中文化
+                covered = set(global_glossary) | basics_keys
+                episode["context_glossary"] = generate_glossary_for_episode(
+                    episode, covered, api_key
                 )
+                episode["turn_translations"] = generate_turn_translations(
+                    episode["turns"], api_key
+                )
+                if not episode["turn_translations"]:
+                    log(f"警告：{meta['id']} 句子翻译生成失败，前端将不显示整句翻译")
             else:
                 episode["context_glossary"] = {}
+                episode["turn_translations"] = []
             episode["dict"] = bake_word_dict(episode)
             out_file.write_text(
                 json.dumps(episode, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
             )
             log(f"已写入 {out_file.name}：{len(episode['transcript'].split())} 词对白，"
-                f"词典 {len(episode['dict'])} 条")
+                f"词典 {len(episode['dict'])} 条，句子翻译 {len(episode['turn_translations'])} 行")
         except Exception as e:
             failures += 1
             log(f"剧集 {meta['id']} 处理失败: {e}")
@@ -899,7 +1058,6 @@ def build(days: int, no_llm: bool, no_audio: bool = False, rebake: bool = False)
         f"补烘 {rebaked} 期，跳过（已在架）{skipped} 期")
 
     # 全局词表自生长：本期新生成的语境词表并入 glossary.json（先到先得）
-    global_glossary = load_global_glossary()
     grew = 0
     for meta in recent:
         f = DATA_DIR / f"{meta['id']}.json"

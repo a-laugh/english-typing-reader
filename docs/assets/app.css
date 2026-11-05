@@ -30,11 +30,11 @@ html, body {
     flex-wrap: wrap;
     gap: 0.4rem 1rem;
     padding: 0.45rem 0.9rem;
-    /* GNU 站 emacs-bw 紫色系 */
-    background: linear-gradient(180deg, #622486, #4F3774);
+    /* GNU 站浅紫系（用户反馈深紫过暗）：#7F5AB6→#622486 亮渐变 */
+    background: linear-gradient(180deg, #8f6fc0, #622486);
     border-radius: 3px;
     color: #ffffff;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 .app-brand {
     display: flex;
@@ -71,7 +71,10 @@ html, body {
 #episode-meta {
     flex-basis: 100%;
     margin-top: 0.6rem;
-    padding: 0.35rem 0.1rem 0;
+    padding: 0.35rem 0.5rem 0.25rem 0.5rem;
+    background-color: #ffffff;
+    border: 1px solid #ded5c2;
+    border-radius: 3px;
 }
 .episode-title {
     font-family: Georgia, "Times New Roman", "Songti SC", SimSun, serif;
@@ -82,9 +85,9 @@ html, body {
     min-height: 1.6em;
 }
 .episode-title.done {
-    color: #005f00; /* modus green */
+    color: #004d00; /* modus green 加深：白底高对比 */
 }
-.episode-title .t-letter-ok { color: #005f00; }
+.episode-title .t-letter-ok { color: #004d00; }
 .episode-title .t-letter-rest { opacity: 0.4; }
 .episode-title .t-letter-bad {
     color: #ffffff;
@@ -272,6 +275,21 @@ html, body {
     border: none;
     padding: 0;
     z-index: -1;
+}
+
+/* ---- 整句翻译条：一句话打完后在底部显示该句中文 ---- */
+#sentence-bar {
+    margin: 0.6rem 0 0 0;
+    padding: 0.4rem 0.8rem;
+    background-color: #ffffff;
+    border: 1px solid #ded5c2;
+    border-left: 4px solid #0031a9; /* modus blue */
+    border-radius: 3px;
+    font-family: -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+    font-size: 0.92rem;
+    color: #1a1a1a;
+    text-align: left;
+    min-height: 1.4em;
 }
 
 /* ---- 提示行：GNU 式页脚细线 + 等宽小字 ---- */

@@ -62,6 +62,8 @@ def main() -> int:
         check("transcript 已渲染且首词高亮", first_word == "Hi", f"首词={first_word!r}")
         badges = page.eval_on_selector_all(".speaker-badge", "els => els.map(e => e.textContent)")
         check("对话回合带说话人徽章", len(badges) >= 3 and badges[0] == "Georgie", str(badges[:4]))
+        bar_color = page.evaluate("() => getComputedStyle(document.querySelector('.app-header')).backgroundImage")
+        check("顶栏为浅紫渐变（非深紫）", "rgb(143, 111, 192)" in bar_color, bar_color[:60])
         meta = page.text_content("#episode-meta")
         check("meta 栏含日期与剩余天数", "2026-10-29" in meta and "剩" in meta, meta)
         hint = page.text_content("#hint-progress")
@@ -119,6 +121,9 @@ def main() -> int:
             "() => document.querySelectorAll('.word-correct').length === 2", timeout=3000
         )
         check("第二词完成后累计 2 词标绿（标点自动通过）", True)
+        # 整句打完（回合 0 = "Hi Neil." 两词）→ 底部显示该句中文翻译
+        sb = page.evaluate("() => ({ hidden: document.getElementById('sentence-bar').hidden, text: document.getElementById('sentence-bar').textContent })")
+        check("整句打完底部显示句子翻译", (not sb["hidden"]) and "尼尔" in sb["text"], str(sb))
         gloss_count = page.eval_on_selector_all("#dialog-display .gloss", "els => els.length")
         check("浮层唯一性（无词条则为 0）", gloss_count <= 1, f"gloss 数={gloss_count}")
         page.screenshot(path=str(SHOTS / "t3_typing.png"))
