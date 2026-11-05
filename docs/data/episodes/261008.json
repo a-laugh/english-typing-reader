@@ -4218,46 +4218,331 @@
       "phrase": "joining us"
     }
   },
-  "turn_translations": [
-    "嗨，尼尔。",
-    "嗨，乔吉。想听点对我来说挺不寻常的事吗？",
-    "呃，想啊！",
-    "我今年还没喝过酒。",
-    "哇！真厉害。你感觉怎么样？像换了个人？",
-    "我得说，确实感觉很好。",
-    "我可不敢这么说——周末我还和朋友们喝了几杯。但在世界很多地方，人们根本不喝酒。在英国喝酒很常见——不过最近情况变了。今天的6分钟英语，我们要探究为什么很多人选择戒酒或少喝酒，还要问一个问题：“英国饮酒文化的末日到了吗？”",
-    "好。尼尔，先来个问答。英国和其他国家很多人新年一月整个月戒酒，这个挑战叫什么？是：a) 无酒新年 b) 无酒精一月，还是 c) 涸月一月？",
-    "嗯，我知道答案，但我不打算透露。",
-    "好吧，那听众们可以在节目最后知道答案。",
-    "是的。那乔吉，我总听说现在的年轻人喝得比以前少了。是真的吗？",
-    "嗯，在英国，调查显示16到24岁的年轻人比老一辈更有可能不喝酒。",
-    "那么，为什么越来越多年轻人选择清醒？也就是不喝酒。",
-    "BBC全球服务播客《世界上发生了什么》一直在调查这件事。主持人汉娜·格尔巴特见了三位选择清醒的年轻人，一起喝无酒精饮品，了解更多情况。来听听丹尼尔的故事：",
-    "对，我现在完全不喝酒，但二十岁出头的时候，我觉得可能有种社会压力——你懂的，工作应酬或上大学，跟着喝才是常态。你要是说“我不掺和”，估计会招来怪异的眼神。我以前也跟着喝，后来新冠封控让我有了点信心说：“好，我就退出吧。这不是我以后想继续做的事。”",
-    "那你清醒多久了？",
-    "到现在大概六年了。",
-    "六年？",
-    "丹尼尔说他年轻时感受到了喝酒的社会压力。社会压力就是因为周围很多人都在做某件事，让你觉得自己也该做。",
-    "对。丹尼尔说在大学里和下班后喝酒是常态。常态就是说某件事很正常或很普遍。",
-    "但在新冠疫情期间，英国人没法社交、去酒吧，丹尼尔对酒的态度变了。之后他决定戒酒，至今大约六年没喝了。",
-    "那么乔吉，看起来很多年轻人完全不喝酒，很多人还在社交媒体上分享自己戒酒的经历。但最近好像有点变化，是吧？",
-    "是的。虽然很多人用社交媒体分享少喝酒或完全不喝酒的经历，但也有人说想多出去玩、和朋友喝酒开心。他们觉得我们对健身养生太焦虑了，喝点酒找乐子没什么。听听米莉在BBC全球服务播客《世界上发生了什么》里的更多说法：",
-    "我觉得曾经兴起过一种自我优化类内容。不幸的是，戒酒也被卷进去了，被吹成一种早上五点起床、参加HYROX健身赛的生活方式。但对很多人来说，不喝酒其实不是那样，我们戒酒只是为了头脑更清醒些，诸如此类。所以我觉得现在对这类内容几乎是进入了反弹时代，你看那些名人……不只是酒，越来越多名人抽烟，还发到Instagram上，不在乎这影不影响品牌形象。",
-    "好，米莉认为戒酒和某些自我优化内容联系在一起，人们谈论健身、饮食和远大目标。",
-    "是的，米莉说戒酒被吹捧成一种早上五点起床锻炼的方式。换句话说，人们大肆宣传，劝别人去做。",
-    "但米莉说戒酒并不总是为了超级健康。对她来说，是为了保持清醒的头脑。",
-    "不过，米莉认为自我优化内容正在遭到反弹。反弹就是对这类内容的批评，人们用相反的做法来抵制。比如很多名人晒自己喝酒抽烟。",
-    "嗯，乔吉，我决定尝试戒酒一整年，但我不认为每个人都该这么做，除非他们愿意。这完全看个人。",
-    "是啊，我还是喜欢和朋友们喝几杯。我觉得关键就是平衡。好了尼尔，该公布本周问题的答案了。我问的是：“人们一月戒酒叫什么名字？”",
-    "对，答案是“涸月一月”。",
-    "答对了，真棒！我们来回顾一下本期学到的词汇，首先是清醒，形容不喝酒或不动消遣性毒品的人。",
-    "社会压力是因为很多人期待你做某事而产生的感觉。",
-    "说某事是常态，就是说它很平常或很普遍。",
-    "自我优化内容指关于健身、健康和实现远大目标的视频和帖子。",
-    "如果有人吹捧某个想法或生活方式，就是大量谈论它并试图说服人们去做。",
-    "反弹是对某种趋势的强烈批评，人们反其道而行之。",
-    "又到了我们六分钟结束的时候，别忘了到我们网站bbclearningenglish.com上用练习题测试你学到了什么。",
-    "谢谢收听，再见。",
-    "再见！"
+  "title_translation": "人们喝的酒变少了吗？",
+  "sentences": [
+    {
+      "text": "Hi Neil.",
+      "translation": "嗨，Neil。"
+    },
+    {
+      "text": "Hi Georgie.",
+      "translation": "嗨，Georgie。"
+    },
+    {
+      "text": "Do you want to hear something quite unusual for me?",
+      "translation": "想听点对我来说挺不寻常的事吗？"
+    },
+    {
+      "text": "Err, yes!",
+      "translation": "呃，想啊！"
+    },
+    {
+      "text": "I haven't had an alcoholic drink this year.",
+      "translation": "我今年还没喝过酒呢。"
+    },
+    {
+      "text": "Wow!",
+      "translation": "哇！"
+    },
+    {
+      "text": "That is really impressive.",
+      "translation": "真厉害。"
+    },
+    {
+      "text": "How do you feel?",
+      "translation": "你感觉怎么样？"
+    },
+    {
+      "text": "Like a new person?",
+      "translation": "像换了个人似的？"
+    },
+    {
+      "text": "I do feel very good, I have to say.",
+      "translation": "说实话，我真的感觉很好。"
+    },
+    {
+      "text": "I can't say the same – I did have a few alcoholic drinks at the weekend with my friends.",
+      "translation": "我可不能这么说——周末我和朋友喝了几杯。"
+    },
+    {
+      "text": "But in many parts of the world, people don't drink alcohol at all.",
+      "translation": "但在世界许多地方，人们完全不喝酒。"
+    },
+    {
+      "text": "In the UK it's very common – that is until recently.",
+      "translation": "在英国喝酒很常见——直到最近才有所改变。"
+    },
+    {
+      "text": "Today on 6 Minute English, we're going to find out why many people are choosing to give up or cut down on alcohol, and we'll be asking, \"Is this the end of British drinking culture?\"\nOK.",
+      "translation": "今天的六分钟英语，我们要探究为什么很多人选择戒酒或少喝酒，还要问一个问题：“英国的饮酒文化要终结了吗？”"
+    },
+    {
+      "text": "Neil, let's start with a quiz question.",
+      "translation": "好的。"
+    },
+    {
+      "text": "Many people in the UK and other countries choose to give up alcohol in the new year for the whole of the month of January, but what is the challenge called?",
+      "translation": "Neil，先来个测验问题。"
+    },
+    {
+      "text": "Is it: a) No-drink New Year b) Alcohol-free January, or c) Dry January?",
+      "translation": "在英国和其他国家，很多人新的一年里一整月都不喝酒，也就是整个一月，这个挑战叫什么？"
+    },
+    {
+      "text": "Well, I know the answer to this, but I'm not going to give it away.",
+      "translation": "是：a) 无酒新年，b) 无酒精一月，还是 c) 干燥一月？"
+    },
+    {
+      "text": "OK.",
+      "translation": "嗯，我知道答案，但我不说。"
+    },
+    {
+      "text": "Well, then our listeners can find out the answer at the end of the programme.",
+      "translation": "好吧。"
+    },
+    {
+      "text": "Yes, they can.",
+      "translation": "那听众们可以在节目最后知道答案。"
+    },
+    {
+      "text": "So, Georgie, I hear all the time that younger people don't drink as much alcohol today as they used to in the past.",
+      "translation": "是的，可以。"
+    },
+    {
+      "text": "Is that true?",
+      "translation": "Georgie，我经常听说现在的年轻人喝得比以前少了。"
+    },
+    {
+      "text": "Well, in the UK, surveys suggest that 16 to 24-year-olds are more likely to be non-drinkers than the older generations.",
+      "translation": "是真的吗？"
+    },
+    {
+      "text": "OK.",
+      "translation": "嗯，在英国，调查显示16到24岁的年轻人比老一辈更可能不喝酒。"
+    },
+    {
+      "text": "So, why are more young people choosing to be sober?",
+      "translation": "哦。"
+    },
+    {
+      "text": "That means not to drink alcohol.",
+      "translation": "那为什么越来越多年轻人选择滴酒不沾呢？"
+    },
+    {
+      "text": "Well, the BBC World Service podcast What in the World have been investigating this.",
+      "translation": "就是指不喝酒。"
+    },
+    {
+      "text": "Presenter Hannah Gelbart met three young people who choose to be sober for some alcohol-free drinks to find out more.",
+      "translation": "BBC世界服务的播客《What in the World》对此做了调查。"
+    },
+    {
+      "text": "Here's Daniel's story:\nYeah.",
+      "translation": "主持人Hannah Gelbart见了三位选择不喝酒的年轻人，一起喝无酒精饮品，了解更多情况。"
+    },
+    {
+      "text": "So, today I don't drink at all, but when I was in my early 20s, I think I felt maybe a bit of, like, societal pressure – you know, work drinks or being at uni, where it was the norm to just join in.",
+      "translation": "来听听Daniel的故事："
+    },
+    {
+      "text": "I think you'd probably get a few weird glances if you're like, \"Yeah, I'm not going to join in at all.\" So, I did that and I think Covid lockdown just gave me a bit of confidence to say, \"OK, let me step away from this.",
+      "translation": "对。"
+    },
+    {
+      "text": "It's not necessarily something I want to do moving forward.\"\nSo, how many years have you been sober for?",
+      "translation": "我现在完全不喝酒了，但我二十岁出头的时候，感觉可能有点社会压力——你知道的，工作应酬喝酒，或者上大学时跟着一起喝是常态。"
+    },
+    {
+      "text": "I would say it's been six years now.",
+      "translation": "如果你说“我不参与”，可能会被人投来奇怪的目光。所以我当时也喝了，我觉得新冠封控给了我一点信心，让我说：好吧，我退出。"
+    },
+    {
+      "text": "Six years?",
+      "translation": "这不是我以后想继续做的事。"
+    },
+    {
+      "text": "So, Daniel says that when he was younger, he felt societal pressure to drink alcohol.",
+      "translation": "那你戒酒多少年了？"
+    },
+    {
+      "text": "Societal pressure is feeling like you need to do something because lots of people around you are doing it.",
+      "translation": "我算是戒了六年了。"
+    },
+    {
+      "text": "Right.",
+      "translation": "六年？"
+    },
+    {
+      "text": "So, Daniel says drinking was the norm at university and after work.",
+      "translation": "Daniel说，他年轻时感受到喝酒的社会压力。"
+    },
+    {
+      "text": "The norm is a way of saying that something is normal or common.",
+      "translation": "社会压力就是觉得你必须做某件事，因为周围很多人都在做。"
+    },
+    {
+      "text": "But during the Covid-19 pandemic, when people in the UK were unable to socialise and visit pubs and bars, Daniel's attitude to alcohol changed.",
+      "translation": "对。"
+    },
+    {
+      "text": "After that, he decided to be sober and he hasn't had a drink for about six years.",
+      "translation": "Daniel说，在大学里和下班后喝酒是常态。"
+    },
+    {
+      "text": "So, Georgie, it seems like many young people don't drink at all and lots of them share their experience of being sober on social media.",
+      "translation": "“常态”就是说某件事是正常的、普遍的。"
+    },
+    {
+      "text": "But recently there's been a bit of a change, hasn't there?",
+      "translation": "但在新冠疫情期间，英国人不能社交、不能去酒吧，Daniel对酒的态度改变了。"
+    },
+    {
+      "text": "Yes.",
+      "translation": "从那以后，他决定戒酒，到现在大约六年没喝了。"
+    },
+    {
+      "text": "Whilst many people use social media to share their experience of drinking less alcohol or no alcohol at all, some people have been saying that they want to go out more and drink and have fun with friends.",
+      "translation": "所以Georgie，好像很多年轻人完全不喝酒，而且很多人在社交媒体上分享戒酒经历。"
+    },
+    {
+      "text": "They argue we're too worried about fitness and wellness, and that drinking some alcohol to have a good time is fine.",
+      "translation": "但最近有点变化，是吧？"
+    },
+    {
+      "text": "Here's Millie talking more about this to BBC World Service podcast What in the World:\nI think we had this, like, rise of self-optimisation content.",
+      "translation": "是的。"
+    },
+    {
+      "text": "I think unfortunately sobriety, kind of, got swept in with that and it got touted as this way to, you know, get up at 5am, do a HYROX.",
+      "translation": "虽然很多人用社交媒体分享少喝酒或不喝酒的经历，但也有人说他们想多出去玩，和朋友喝酒找乐子。"
+    },
+    {
+      "text": "And, you know, for many of us, that's probably not our reality with not drinking.",
+      "translation": "他们认为我们太担心健身和健康了，喝点酒开心一下没什么问题。"
+    },
+    {
+      "text": "It's that we do it to feel a bit more sane or, you know, things like that.",
+      "translation": "来听听Millie对BBC世界服务播客《What in the World》说得更详细的看法："
+    },
+    {
+      "text": "And so, I think now we are entering this, like, almost pushback era of that content and you're seeing celebrities...",
+      "translation": "我觉得我们经历了一股自我优化内容的兴起。"
+    },
+    {
+      "text": "Like, it's not just alcohol – you're seeing more celebrities smoking and, like, posting that on their Instagram and not worrying if it's brand-friendly.",
+      "translation": "很不幸，戒酒也被卷进去了，被吹捧成一种早上五点起床、去练HYROX（健身比赛）的方式。"
+    },
+    {
+      "text": "OK.",
+      "translation": "对我们很多人来说，不喝酒可能不是那样——"
+    },
+    {
+      "text": "So, Millie thinks that being sober is associated with certain kinds of self-optimisation content, where people talk about fitness, diet and having big goals for themselves.",
+      "translation": "我们只是为了头脑更清醒一点之类的。"
+    },
+    {
+      "text": "Yes, and Millie says being sober gets touted as a way to get up at 5am to exercise.",
+      "translation": "所以我觉得我们现在正进入对这类内容的反扑时代，你会看到名人……"
+    },
+    {
+      "text": "In other words, people talk about it a lot and try to encourage people to do it.",
+      "translation": "不只是酒——你会看到更多名人抽烟，把抽烟照片发到Instagram上，不在乎是否适合品牌形象。"
+    },
+    {
+      "text": "But Millie says that being sober isn't always about being super fit and healthy.",
+      "translation": "哦。"
+    },
+    {
+      "text": "For her, it's about being sane.",
+      "translation": "Millie认为戒酒和某种自我优化内容联系在一起，就是人们谈健身、饮食和给自己定大目标。"
+    },
+    {
+      "text": "But still, Millie thinks there's a pushback against self-optimisation content.",
+      "translation": "是的，Millie说戒酒被吹捧成一种早上五点起床锻炼的方式。"
+    },
+    {
+      "text": "Pushback means a criticism of the content, and people are pushing back by doing the opposite.",
+      "translation": "也就是说，人们大肆宣传，试图鼓励大家去做。"
+    },
+    {
+      "text": "For example, lots of celebrities post about themselves drinking and smoking.",
+      "translation": "但Millie说，戒酒不一定是为了超级健康健美。"
+    },
+    {
+      "text": "Well, Georgie, I've decided to try to give up alcohol for a whole year, but I don't think everybody should do that if they don't want to.",
+      "translation": "对她来说，是为了保持头脑清醒。"
+    },
+    {
+      "text": "It's really up to the individual.",
+      "translation": "不过，Millie认为现在对自我优化内容出现了一种反扑。"
+    },
+    {
+      "text": "Yeah, I still enjoy having a few drinks with my friends.",
+      "translation": "“反扑”就是批评这类内容，人们用相反的方式来反击。"
+    },
+    {
+      "text": "I think it's just all about balance, really.",
+      "translation": "比如，很多名人发自己喝酒抽烟的照片。"
+    },
+    {
+      "text": "OK.",
+      "translation": "Georgie，我决定尝试戒酒一整年，但我不认为每个人都得这么做，如果他们不想的话。"
+    },
+    {
+      "text": "Neil, it's time to reveal the answer to this week's question.",
+      "translation": "这完全取决于个人。"
+    },
+    {
+      "text": "I asked, \"What was the name given for when people give up alcohol in January?\"\nYes.",
+      "translation": "是啊，我还是喜欢和朋友喝几杯。"
+    },
+    {
+      "text": "And the answer is Dry January.",
+      "translation": "我觉得关键就是平衡。"
+    },
+    {
+      "text": "That is correct.",
+      "translation": "好。"
+    },
+    {
+      "text": "Well done!",
+      "translation": "Neil，该揭晓本周问题的答案了。"
+    },
+    {
+      "text": "Let's recap the vocabulary we learned in this programme, starting with sober, which describes someone who doesn't drink alcohol or take recreational drugs.",
+      "translation": "我问的是：“人们在一月戒酒的活动叫什么名字？”"
+    },
+    {
+      "text": "Societal pressure is the feeling that you should do something because lots of other people expect you to.",
+      "translation": "对。"
+    },
+    {
+      "text": "Saying something is the norm is a way to say it's usual or common.",
+      "translation": "答案是“干燥一月”（Dry January）。"
+    },
+    {
+      "text": "Self-optimisation content means videos and posts about being fit, healthy and achieving big goals.",
+      "translation": "答对了！"
+    },
+    {
+      "text": "If somebody touts an idea or lifestyle, they talk about it a lot and try to convince people to do it.",
+      "translation": "干得好！"
+    },
+    {
+      "text": "And pushback is strong criticism of a trend, and people doing the opposite.",
+      "translation": "我们来回顾一下本期学到的词汇，首先是sober，指不喝酒或不用消遣性毒品的人。"
+    },
+    {
+      "text": "Once again, our six minutes are up, but don't forget to test what you've learned with the worksheet on our website, bbclearningenglish.com.",
+      "translation": "社会压力是因为很多人期望你做某事而产生的感受。"
+    },
+    {
+      "text": "Thank you for joining us and goodbye.",
+      "translation": "说某事是“常态”，就是说它很平常、很普遍。"
+    },
+    {
+      "text": "Goodbye!",
+      "translation": "自我优化内容指关于健身、健康和实现大目标的视频和帖子。"
+    }
   ]
 }
