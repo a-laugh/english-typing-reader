@@ -1,0 +1,2846 @@
+{
+  "id": "261105",
+  "title": "Could vaccines cure cancer?",
+  "pub_date": "2026-11-05",
+  "bbc_url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english_2026/ep-261105",
+  "mp3_url": "https://downloads.bbc.co.uk/learningenglish/features/6min/261105_6_minute_english_could_vaccines_cure_cancer_download.mp3",
+  "transcript": "Hi Phil.\nHi Georgie.\nPhil, have you had many vaccines in your life? So, these are injections to protect you from diseases.\nOh, I've had loads. I had all the ones you have when you’re a child, but I've also had some for travelling and working abroad so… yeah, I've had lots.\nOK. Well, many of us will have had vaccines to stop us getting common diseases such as flu or Covid 19, but could injections help us fight more complicated diseases too? In this episode of 6 Minute English, we'll be looking at some new research that has scientists very excited, and we'll be asking the question, 'Could vaccines cure cancer?'\nOK. Let's start with a quiz question, Phil. There are lots of different types of cancer affecting many parts of the body, but according to the World Health Organisation, what is the most common cancer worldwide? Is it: a) lung cancer, b) skin cancer, or c) stomach cancer?\nWell, I don't know. I'm going to guess b) skin cancer.\nWell, we'll find out the answer at the end of the programme.\nRight. Now, this idea of a vaccine that could cure cancer sounds really interesting. Could you tell us a bit more about it, Georgie?\nWell, scientists have been trying to develop a cancer vaccine for quite a long time. If you think about many existing cancer treatments, such as radiotherapy and chemotherapy, these have quite a few side effects. But the idea is that a cancer vaccine would help the body's natural immune system help fight the disease, which could have fewer side effects and also be more effective. Scientists are particularly hopeful about a new vaccine developed to treat skin cancer. BBC Radio 4 programme Inside Science has been hearing about the latest research. Cancer cell biologist Anne Willis spoke to presenter Tom Whipple.\nI guess this moment has been quite a long time coming, hasn't it? There's been some false dawns in cancer vaccines.\nI mean, there's been a lot of work in this space, and it's all been very encouraging, particularly in the animal models, but getting this to translate into humans can be a much harder, longer process, so it's very exciting that there's this breakthrough – apparent breakthrough – that's come through today.\nTom says that the development of the cancer vaccine has been a long time coming, and this means that it's taken a lot of time to achieve.\nYes. Tom also says there have been some false dawns, an expression meaning that something looks like it's improving when it's actually not.\nAnne says there's been a lot of work in this space. Space here means field of research – so, in this context, research into cancer vaccines.\nScientists think they might have made a breakthrough. That means they've made significant progress.\nAnd Georgie, these vaccines that we're talking about, they aren't quite like the ones that we're all familiar with, are they? This isn't a vaccine to prevent you from getting skin cancer, is it?\nNo. The vaccine being tested is used to treat people after they've had a tumour removed. It's used to target any cancer cells that have been spread around the body, to stop the cancer from coming back, and the vaccine is made specially for each patient by looking at the cancerous cells in the tumour that's been removed. Anne Willis explained more to BBC Radio 4's Inside Science.\nSo, cancer cells are very different from normal cells. They contain lots of mutations. So, you sequence the DNA of the cancer cell to work out how it's different from a normal cell. And then, particularly for the bits of the cancer that's different on the surface of the cell, you take those bits of DNA and then you put them into the RNA vaccine, and then they'll make these bits of proteins that get recognised by the immune system. So, it's a way of priming the immune system to the cancer.\nAnne is saying that the scientists work out what in the cancer cells is different and put these bits into the vaccine.\nRight. The vaccine then becomes a way of priming the immune system to cancer. If you prime something, you get it ready. The vaccine basically helps the immune system get better at recognising and fighting cancer cells in the body.\nNow, that sounds like some really clever science here. Could it make a big difference, Georgie?\nWell, more trials are needed, but scientists are hopeful. Here's Anne Willis again talking to Tom Whipple, presenter of Inside Science.\nAre you excited?\nOh, I mean, very! I'm just, you know… anything that will improve lives of cancer patients is always wonderful. And actually, seeing that this extraordinary technology is, sort of, starting to reach its promise – this is very exciting for everybody.\nSo, Anne is excited. She says that after a long time working on this technology, it's starting to reach its promise. And promise here means positive potential.\nOK. Phil, I think it's time I revealed the answer to my question. I asked you, \"What is the most common form of cancer worldwide?\" You said skin cancer, but the answer is actually lung cancer. In 2024, there were an estimated 2.4 million cases worldwide, according to the World Health Organisation.\nOK. Let's recap the vocabulary we learned in this programme, starting with the expression a long time coming, which means something has taken a long time to achieve.\nA false dawn is when something appears to be improving, when it actually isn't.\nSpace can mean field of research.\nA breakthrough refers to making significant progress with something.\nIf you prime something, you get it ready.\nAnd promise can mean positive potential.\nOnce again, our six minutes are up. Test what you've learned with the worksheet on our website. And that's bbclearningenglish.com.\nThanks for joining us and goodbye.\nBye.",
+  "turns": [
+    {
+      "speaker": "Georgie",
+      "text": "Hi Phil."
+    },
+    {
+      "speaker": "Phil",
+      "text": "Hi Georgie."
+    },
+    {
+      "speaker": "Georgie",
+      "text": "Phil, have you had many vaccines in your life? So, these are injections to protect you from diseases."
+    },
+    {
+      "speaker": "Phil",
+      "text": "Oh, I've had loads. I had all the ones you have when you’re a child, but I've also had some for travelling and working abroad so… yeah, I've had lots."
+    },
+    {
+      "speaker": "Georgie",
+      "text": "OK. Well, many of us will have had vaccines to stop us getting common diseases such as flu or Covid 19, but could injections help us fight more complicated diseases too? In this episode of 6 Minute English, we'll be looking at some new research that has scientists very excited, and we'll be asking the question, 'Could vaccines cure cancer?'"
+    },
+    {
+      "speaker": "Georgie",
+      "text": "OK. Let's start with a quiz question, Phil. There are lots of different types of cancer affecting many parts of the body, but according to the World Health Organisation, what is the most common cancer worldwide? Is it: a) lung cancer, b) skin cancer, or c) stomach cancer?"
+    },
+    {
+      "speaker": "Phil",
+      "text": "Well, I don't know. I'm going to guess b) skin cancer."
+    },
+    {
+      "speaker": "Georgie",
+      "text": "Well, we'll find out the answer at the end of the programme."
+    },
+    {
+      "speaker": "Phil",
+      "text": "Right. Now, this idea of a vaccine that could cure cancer sounds really interesting. Could you tell us a bit more about it, Georgie?"
+    },
+    {
+      "speaker": "Georgie",
+      "text": "Well, scientists have been trying to develop a cancer vaccine for quite a long time. If you think about many existing cancer treatments, such as radiotherapy and chemotherapy, these have quite a few side effects. But the idea is that a cancer vaccine would help the body's natural immune system help fight the disease, which could have fewer side effects and also be more effective. Scientists are particularly hopeful about a new vaccine developed to treat skin cancer. BBC Radio 4 programme Inside Science has been hearing about the latest research. Cancer cell biologist Anne Willis spoke to presenter Tom Whipple."
+    },
+    {
+      "speaker": "Tom Whipple",
+      "text": "I guess this moment has been quite a long time coming, hasn't it? There's been some false dawns in cancer vaccines."
+    },
+    {
+      "speaker": "Anne Willis",
+      "text": "I mean, there's been a lot of work in this space, and it's all been very encouraging, particularly in the animal models, but getting this to translate into humans can be a much harder, longer process, so it's very exciting that there's this breakthrough – apparent breakthrough – that's come through today."
+    },
+    {
+      "speaker": "Phil",
+      "text": "Tom says that the development of the cancer vaccine has been a long time coming, and this means that it's taken a lot of time to achieve."
+    },
+    {
+      "speaker": "Georgie",
+      "text": "Yes. Tom also says there have been some false dawns, an expression meaning that something looks like it's improving when it's actually not."
+    },
+    {
+      "speaker": "Phil",
+      "text": "Anne says there's been a lot of work in this space. Space here means field of research – so, in this context, research into cancer vaccines."
+    },
+    {
+      "speaker": "Georgie",
+      "text": "Scientists think they might have made a breakthrough. That means they've made significant progress."
+    },
+    {
+      "speaker": "Phil",
+      "text": "And Georgie, these vaccines that we're talking about, they aren't quite like the ones that we're all familiar with, are they? This isn't a vaccine to prevent you from getting skin cancer, is it?"
+    },
+    {
+      "speaker": "Georgie",
+      "text": "No. The vaccine being tested is used to treat people after they've had a tumour removed. It's used to target any cancer cells that have been spread around the body, to stop the cancer from coming back, and the vaccine is made specially for each patient by looking at the cancerous cells in the tumour that's been removed. Anne Willis explained more to BBC Radio 4's Inside Science."
+    },
+    {
+      "speaker": "Anne Willis",
+      "text": "So, cancer cells are very different from normal cells. They contain lots of mutations. So, you sequence the DNA of the cancer cell to work out how it's different from a normal cell. And then, particularly for the bits of the cancer that's different on the surface of the cell, you take those bits of DNA and then you put them into the RNA vaccine, and then they'll make these bits of proteins that get recognised by the immune system. So, it's a way of priming the immune system to the cancer."
+    },
+    {
+      "speaker": "Phil",
+      "text": "Anne is saying that the scientists work out what in the cancer cells is different and put these bits into the vaccine."
+    },
+    {
+      "speaker": "Georgie",
+      "text": "Right. The vaccine then becomes a way of priming the immune system to cancer. If you prime something, you get it ready. The vaccine basically helps the immune system get better at recognising and fighting cancer cells in the body."
+    },
+    {
+      "speaker": "Phil",
+      "text": "Now, that sounds like some really clever science here. Could it make a big difference, Georgie?"
+    },
+    {
+      "speaker": "Georgie",
+      "text": "Well, more trials are needed, but scientists are hopeful. Here's Anne Willis again talking to Tom Whipple, presenter of Inside Science."
+    },
+    {
+      "speaker": "Tom Whipple",
+      "text": "Are you excited?"
+    },
+    {
+      "speaker": "Anne Willis",
+      "text": "Oh, I mean, very! I'm just, you know… anything that will improve lives of cancer patients is always wonderful. And actually, seeing that this extraordinary technology is, sort of, starting to reach its promise – this is very exciting for everybody."
+    },
+    {
+      "speaker": "Phil",
+      "text": "So, Anne is excited. She says that after a long time working on this technology, it's starting to reach its promise. And promise here means positive potential."
+    },
+    {
+      "speaker": "Georgie",
+      "text": "OK. Phil, I think it's time I revealed the answer to my question. I asked you, \"What is the most common form of cancer worldwide?\" You said skin cancer, but the answer is actually lung cancer. In 2024, there were an estimated 2.4 million cases worldwide, according to the World Health Organisation."
+    },
+    {
+      "speaker": "Phil",
+      "text": "OK. Let's recap the vocabulary we learned in this programme, starting with the expression a long time coming, which means something has taken a long time to achieve."
+    },
+    {
+      "speaker": "Georgie",
+      "text": "A false dawn is when something appears to be improving, when it actually isn't."
+    },
+    {
+      "speaker": "Phil",
+      "text": "Space can mean field of research."
+    },
+    {
+      "speaker": "Georgie",
+      "text": "A breakthrough refers to making significant progress with something."
+    },
+    {
+      "speaker": "Phil",
+      "text": "If you prime something, you get it ready."
+    },
+    {
+      "speaker": "Georgie",
+      "text": "And promise can mean positive potential."
+    },
+    {
+      "speaker": "Phil",
+      "text": "Once again, our six minutes are up. Test what you've learned with the worksheet on our website. And that's bbclearningenglish.com."
+    },
+    {
+      "speaker": "Georgie",
+      "text": "Thanks for joining us and goodbye."
+    },
+    {
+      "speaker": "Phil",
+      "text": "Bye."
+    }
+  ],
+  "vocabulary": [
+    {
+      "word": "a long time coming",
+      "definition": "taking a long time to achieve"
+    },
+    {
+      "word": "false dawn",
+      "definition": "situation where something appears to be improving, when actually it isn't"
+    },
+    {
+      "word": "space",
+      "definition": "field of research"
+    },
+    {
+      "word": "breakthrough",
+      "definition": "significant progress in something"
+    },
+    {
+      "word": "prime (something)",
+      "definition": "get (something) ready"
+    },
+    {
+      "word": "promise",
+      "definition": "positive potential"
+    }
+  ],
+  "context_glossary": {
+    "Hi": {
+      "meaning": "你好"
+    },
+    "Phil": {
+      "meaning": "菲尔（人名）"
+    },
+    "Georgie": {
+      "meaning": "乔吉（人名）"
+    },
+    "have": {
+      "meaning": "有"
+    },
+    "you": {
+      "meaning": "你"
+    },
+    "had": {
+      "meaning": "打过；有（过去分词）"
+    },
+    "many": {
+      "meaning": "许多"
+    },
+    "vaccines": {
+      "meaning": "疫苗"
+    },
+    "in": {
+      "meaning": "在"
+    },
+    "your": {
+      "meaning": "你的"
+    },
+    "life": {
+      "meaning": "一生"
+    },
+    "So": {
+      "meaning": "那么"
+    },
+    "these": {
+      "meaning": "这些"
+    },
+    "are": {
+      "meaning": "是"
+    },
+    "injections": {
+      "meaning": "注射"
+    },
+    "to": {
+      "meaning": "（不定式）"
+    },
+    "protect": {
+      "meaning": "保护"
+    },
+    "from": {
+      "meaning": "免于"
+    },
+    "diseases": {
+      "meaning": "疾病"
+    },
+    "Oh": {
+      "meaning": "哦"
+    },
+    "I": {
+      "meaning": "我"
+    },
+    "'ve": {
+      "meaning": "已（have缩写）"
+    },
+    "loads": {
+      "meaning": "很多"
+    },
+    "all": {
+      "meaning": "所有"
+    },
+    "the": {
+      "meaning": "定冠词"
+    },
+    "ones": {
+      "meaning": "那些"
+    },
+    "when": {
+      "meaning": "当……时"
+    },
+    "a": {
+      "meaning": "一（个）"
+    },
+    "child": {
+      "meaning": "儿童"
+    },
+    "but": {
+      "meaning": "但是"
+    },
+    "also": {
+      "meaning": "也"
+    },
+    "some": {
+      "meaning": "一些"
+    },
+    "for": {
+      "meaning": "为了"
+    },
+    "travelling": {
+      "meaning": "旅行"
+    },
+    "and": {
+      "meaning": "和"
+    },
+    "working": {
+      "meaning": "工作"
+    },
+    "abroad": {
+      "meaning": "在国外"
+    },
+    "yeah": {
+      "meaning": "是的"
+    },
+    "lots": {
+      "meaning": "很多"
+    },
+    "OK": {
+      "meaning": "好的"
+    },
+    "Well": {
+      "meaning": "嗯"
+    },
+    "us": {
+      "meaning": "我们"
+    },
+    "will": {
+      "meaning": "将"
+    },
+    "stop": {
+      "meaning": "阻止"
+    },
+    "getting": {
+      "meaning": "患上"
+    },
+    "common": {
+      "meaning": "常见的"
+    },
+    "such": {
+      "meaning": "例如"
+    },
+    "as": {
+      "meaning": "如"
+    },
+    "flu": {
+      "meaning": "流感"
+    },
+    "or": {
+      "meaning": "或"
+    },
+    "Covid 19": {
+      "meaning": "新冠肺炎"
+    },
+    "could": {
+      "meaning": "能"
+    },
+    "help": {
+      "meaning": "帮助"
+    },
+    "fight": {
+      "meaning": "对抗"
+    },
+    "more": {
+      "meaning": "更"
+    },
+    "complicated": {
+      "meaning": "复杂的"
+    },
+    "too": {
+      "meaning": "也"
+    },
+    "In": {
+      "meaning": "在"
+    },
+    "this": {
+      "meaning": "这"
+    },
+    "episode": {
+      "meaning": "一期节目"
+    },
+    "of": {
+      "meaning": "的"
+    },
+    "6": {
+      "meaning": "六"
+    },
+    "Minute": {
+      "meaning": "分钟"
+    },
+    "English": {
+      "meaning": "英语"
+    },
+    "we'll": {
+      "meaning": "我们将"
+    },
+    "be": {
+      "meaning": "进行（be doing）"
+    },
+    "looking": {
+      "meaning": "看"
+    },
+    "at": {
+      "meaning": "在"
+    },
+    "new": {
+      "meaning": "新的"
+    },
+    "research": {
+      "meaning": "研究"
+    },
+    "that": {
+      "meaning": "（引导从句）"
+    },
+    "has": {
+      "meaning": "使"
+    },
+    "scientists": {
+      "meaning": "科学家"
+    },
+    "very": {
+      "meaning": "非常"
+    },
+    "excited": {
+      "meaning": "兴奋的"
+    },
+    "we'll be asking": {
+      "meaning": "我们将提问"
+    },
+    "question": {
+      "meaning": "问题"
+    },
+    "'Could vaccines cure cancer?'": {
+      "meaning": "疫苗能治愈癌症吗？"
+    },
+    "cure": {
+      "meaning": "治愈"
+    },
+    "cancer": {
+      "meaning": "癌症"
+    },
+    "Let's": {
+      "meaning": "让我们"
+    },
+    "start": {
+      "meaning": "开始"
+    },
+    "with": {
+      "meaning": "用"
+    },
+    "quiz": {
+      "meaning": "测验"
+    },
+    "There": {
+      "meaning": "有（there be）"
+    },
+    "different": {
+      "meaning": "不同的"
+    },
+    "types": {
+      "meaning": "类型"
+    },
+    "affecting": {
+      "meaning": "影响"
+    },
+    "parts": {
+      "meaning": "部位"
+    },
+    "body": {
+      "meaning": "身体"
+    },
+    "according": {
+      "meaning": "根据"
+    },
+    "World": {
+      "meaning": "世界"
+    },
+    "Health": {
+      "meaning": "卫生"
+    },
+    "Organisation": {
+      "meaning": "组织"
+    },
+    "what": {
+      "meaning": "什么"
+    },
+    "is": {
+      "meaning": "是"
+    },
+    "most": {
+      "meaning": "最"
+    },
+    "worldwide": {
+      "meaning": "全球的"
+    },
+    "Is it": {
+      "meaning": "是不是"
+    },
+    "lung": {
+      "meaning": "肺"
+    },
+    "skin": {
+      "meaning": "皮肤"
+    },
+    "stomach": {
+      "meaning": "胃"
+    },
+    "don't": {
+      "meaning": "不（do not缩写）"
+    },
+    "know": {
+      "meaning": "知道"
+    },
+    "I'm": {
+      "meaning": "我是"
+    },
+    "going": {
+      "meaning": "要（打算）"
+    },
+    "guess": {
+      "meaning": "猜"
+    },
+    "find": {
+      "meaning": "找出"
+    },
+    "out": {
+      "meaning": "出"
+    },
+    "answer": {
+      "meaning": "答案"
+    },
+    "end": {
+      "meaning": "结尾"
+    },
+    "programme": {
+      "meaning": "节目"
+    },
+    "Right": {
+      "meaning": "好"
+    },
+    "Now": {
+      "meaning": "现在"
+    },
+    "idea": {
+      "meaning": "想法"
+    },
+    "sound(s)": {
+      "meaning": "听起来"
+    },
+    "really": {
+      "meaning": "非常"
+    },
+    "interesting": {
+      "meaning": "有趣的"
+    },
+    "tell": {
+      "meaning": "告诉"
+    },
+    "bit": {
+      "meaning": "一点"
+    },
+    "about": {
+      "meaning": "关于"
+    },
+    "it": {
+      "meaning": "它"
+    },
+    "space": {
+      "meaning": "研究领域"
+    },
+    "breakthrough": {
+      "meaning": "重大突破"
+    },
+    "prime (something)": {
+      "meaning": "使（某物）就绪"
+    },
+    "promise": {
+      "meaning": "良好潜力"
+    },
+    "a long time coming": {
+      "meaning": "酝酿已久"
+    },
+    "false dawn": {
+      "meaning": "昙花一现的希望"
+    },
+    "been": {
+      "meaning": "已经（be的过去分词）"
+    },
+    "trying": {
+      "meaning": "尝试"
+    },
+    "develop": {
+      "meaning": "研发"
+    },
+    "quite": {
+      "meaning": "相当"
+    },
+    "long": {
+      "meaning": "长的"
+    },
+    "time": {
+      "meaning": "时间"
+    },
+    "think": {
+      "meaning": "认为"
+    },
+    "existing": {
+      "meaning": "现有的"
+    },
+    "treatments": {
+      "meaning": "治疗方法"
+    },
+    "radiotherapy": {
+      "meaning": "放疗"
+    },
+    "chemotherapy": {
+      "meaning": "化疗"
+    },
+    "few": {
+      "meaning": "一些"
+    },
+    "side": {
+      "meaning": "副的"
+    },
+    "effects": {
+      "meaning": "效应；副作用"
+    },
+    "natural": {
+      "meaning": "自然的"
+    },
+    "immune": {
+      "meaning": "免疫的"
+    },
+    "system": {
+      "meaning": "系统"
+    },
+    "disease": {
+      "meaning": "疾病"
+    },
+    "which": {
+      "meaning": "这，哪个"
+    },
+    "fewer": {
+      "meaning": "更少的"
+    },
+    "effective": {
+      "meaning": "有效的"
+    },
+    "particularly": {
+      "meaning": "尤其"
+    },
+    "hopeful": {
+      "meaning": "充满希望的"
+    },
+    "developed": {
+      "meaning": "研发的"
+    },
+    "treat": {
+      "meaning": "治疗"
+    },
+    "hearing": {
+      "meaning": "听到"
+    },
+    "latest": {
+      "meaning": "最新的"
+    },
+    "cell": {
+      "meaning": "细胞"
+    },
+    "biologist": {
+      "meaning": "生物学家"
+    },
+    "Anne": {
+      "meaning": "安妮（人名）"
+    },
+    "Willis": {
+      "meaning": "威利斯（姓氏）"
+    },
+    "spoke": {
+      "meaning": "说话（speak过去式）"
+    },
+    "presenter": {
+      "meaning": "主持人"
+    },
+    "Tom": {
+      "meaning": "汤姆（人名）"
+    },
+    "Whipple": {
+      "meaning": "惠普尔（姓氏）"
+    },
+    "moment": {
+      "meaning": "时刻"
+    },
+    "hasn't": {
+      "meaning": "还没有"
+    },
+    "there's": {
+      "meaning": "有"
+    },
+    "dawns": {
+      "meaning": "曙光；假象曙光"
+    },
+    "mean": {
+      "meaning": "意思是"
+    },
+    "lot": {
+      "meaning": "大量"
+    },
+    "work": {
+      "meaning": "工作；研究"
+    },
+    "encouraging": {
+      "meaning": "令人鼓舞的"
+    },
+    "animal": {
+      "meaning": "动物"
+    },
+    "models": {
+      "meaning": "模型"
+    },
+    "translate": {
+      "meaning": "转化"
+    },
+    "humans": {
+      "meaning": "人类"
+    },
+    "much": {
+      "meaning": "更加"
+    },
+    "harder": {
+      "meaning": "更难的"
+    },
+    "longer": {
+      "meaning": "更长的"
+    },
+    "process": {
+      "meaning": "过程"
+    },
+    "can": {
+      "meaning": "能够"
+    },
+    "exciting": {
+      "meaning": "令人兴奋的"
+    },
+    "apparent": {
+      "meaning": "表面上的"
+    },
+    "come": {
+      "meaning": "来"
+    },
+    "through": {
+      "meaning": "通过"
+    },
+    "today": {
+      "meaning": "今天"
+    },
+    "into": {
+      "meaning": "进入"
+    },
+    "says": {
+      "meaning": "说"
+    },
+    "development": {
+      "meaning": "研发；发展"
+    },
+    "taken": {
+      "meaning": "花费（时间）"
+    },
+    "achieve": {
+      "meaning": "实现"
+    },
+    "expression": {
+      "meaning": "表达；习语"
+    },
+    "looks": {
+      "meaning": "看起来"
+    },
+    "actually": {
+      "meaning": "实际上"
+    },
+    "improving": {
+      "meaning": "好转"
+    },
+    "might": {
+      "meaning": "可能"
+    },
+    "made": {
+      "meaning": "取得；做出"
+    },
+    "significant": {
+      "meaning": "重大的"
+    },
+    "progress": {
+      "meaning": "进展"
+    },
+    "we're": {
+      "meaning": "我们是"
+    },
+    "talking": {
+      "meaning": "谈论"
+    },
+    "like": {
+      "meaning": "像"
+    },
+    "familiar": {
+      "meaning": "熟悉的"
+    },
+    "aren't": {
+      "meaning": "不是"
+    },
+    "isn't": {
+      "meaning": "不是"
+    },
+    "prevent": {
+      "meaning": "预防"
+    },
+    "No": {
+      "meaning": "不"
+    },
+    "being": {
+      "meaning": "正在被"
+    },
+    "tested": {
+      "meaning": "受测试的"
+    },
+    "used": {
+      "meaning": "被用来"
+    },
+    "people": {
+      "meaning": "人们"
+    },
+    "after": {
+      "meaning": "在…之后"
+    },
+    "they've": {
+      "meaning": "他们已经"
+    },
+    "tumour": {
+      "meaning": "肿瘤"
+    },
+    "removed": {
+      "meaning": "切除的"
+    },
+    "target": {
+      "meaning": "瞄准、攻击"
+    },
+    "any": {
+      "meaning": "任何"
+    },
+    "spread": {
+      "meaning": "扩散"
+    },
+    "around": {
+      "meaning": "到处"
+    },
+    "back": {
+      "meaning": "回来"
+    },
+    "specially": {
+      "meaning": "特别地"
+    },
+    "each": {
+      "meaning": "每个"
+    },
+    "patient": {
+      "meaning": "病人"
+    },
+    "by": {
+      "meaning": "通过"
+    },
+    "cancerous": {
+      "meaning": "癌性的"
+    },
+    "cells": {
+      "meaning": "细胞"
+    },
+    "that's": {
+      "meaning": "即"
+    },
+    "explained": {
+      "meaning": "解释"
+    },
+    "BBC": {
+      "meaning": "英国广播公司"
+    },
+    "Radio": {
+      "meaning": "广播电台"
+    },
+    "Inside": {
+      "meaning": "内幕"
+    },
+    "Science": {
+      "meaning": "科学"
+    },
+    "normal": {
+      "meaning": "正常的"
+    },
+    "contain": {
+      "meaning": "含有"
+    },
+    "mutations": {
+      "meaning": "突变"
+    },
+    "sequence": {
+      "meaning": "测序"
+    },
+    "DNA": {
+      "meaning": "脱氧核糖核酸"
+    },
+    "how": {
+      "meaning": "如何"
+    },
+    "bits": {
+      "meaning": "片段"
+    },
+    "surface": {
+      "meaning": "表面"
+    },
+    "put": {
+      "meaning": "放入"
+    },
+    "them": {
+      "meaning": "它们"
+    },
+    "RNA": {
+      "meaning": "核糖核酸"
+    },
+    "they'll": {
+      "meaning": "它们将"
+    },
+    "make": {
+      "meaning": "制造"
+    },
+    "proteins": {
+      "meaning": "蛋白质"
+    },
+    "recognised": {
+      "meaning": "被识别"
+    },
+    "way": {
+      "meaning": "方法"
+    },
+    "priming": {
+      "meaning": "使准备好"
+    },
+    "saying": {
+      "meaning": "说"
+    },
+    "becomes": {
+      "meaning": "成为"
+    },
+    "if": {
+      "meaning": "如果"
+    },
+    "prime": {
+      "meaning": "使准备好"
+    },
+    "basically": {
+      "meaning": "基本上"
+    },
+    "helps": {
+      "meaning": "帮助"
+    },
+    "better": {
+      "meaning": "更好"
+    },
+    "recognising": {
+      "meaning": "识别"
+    },
+    "fighting": {
+      "meaning": "对抗"
+    },
+    "clever": {
+      "meaning": "聪明的"
+    },
+    "difference": {
+      "meaning": "影响"
+    },
+    "trials": {
+      "meaning": "试验"
+    },
+    "needed": {
+      "meaning": "需要的"
+    },
+    "again": {
+      "meaning": "再次"
+    },
+    "Are": {
+      "meaning": "是吗"
+    },
+    "just": {
+      "meaning": "只是"
+    },
+    "anything": {
+      "meaning": "任何事物"
+    },
+    "improve": {
+      "meaning": "改善"
+    },
+    "lives": {
+      "meaning": "生活"
+    },
+    "patients": {
+      "meaning": "病人"
+    },
+    "always": {
+      "meaning": "总是"
+    },
+    "wonderful": {
+      "meaning": "极好的"
+    },
+    "seeing": {
+      "meaning": "看到"
+    },
+    "extraordinary": {
+      "meaning": "非凡的"
+    },
+    "technology": {
+      "meaning": "技术"
+    },
+    "sort of": {
+      "meaning": "可以说"
+    },
+    "starting": {
+      "meaning": "开始"
+    },
+    "reach": {
+      "meaning": "达到"
+    },
+    "its": {
+      "meaning": "它的"
+    },
+    "everybody": {
+      "meaning": "每个人"
+    },
+    "she": {
+      "meaning": "她"
+    },
+    "on": {
+      "meaning": "在……上"
+    },
+    "it's": {
+      "meaning": "它是"
+    },
+    "revealed": {
+      "meaning": "揭晓"
+    },
+    "asked": {
+      "meaning": "问"
+    },
+    "form": {
+      "meaning": "类型"
+    },
+    "estimated": {
+      "meaning": "估计的"
+    },
+    "cases": {
+      "meaning": "病例"
+    },
+    "million": {
+      "meaning": "百万"
+    },
+    "potential": {
+      "meaning": "潜力"
+    },
+    "recap": {
+      "meaning": "回顾"
+    },
+    "learned": {
+      "meaning": "学到的"
+    },
+    "something": {
+      "meaning": "某事"
+    },
+    "appears": {
+      "meaning": "似乎"
+    },
+    "field": {
+      "meaning": "领域"
+    },
+    "refers": {
+      "meaning": "指"
+    },
+    "making": {
+      "meaning": "取得"
+    },
+    "ready": {
+      "meaning": "准备就绪"
+    },
+    "Once": {
+      "meaning": "一次"
+    },
+    "our": {
+      "meaning": "我们的"
+    },
+    "six": {
+      "meaning": "六"
+    },
+    "minutes": {
+      "meaning": "分钟"
+    },
+    "up": {
+      "meaning": "结束"
+    },
+    "Test": {
+      "meaning": "测试"
+    },
+    "you've": {
+      "meaning": "你已经"
+    },
+    "worksheet": {
+      "meaning": "练习表"
+    },
+    "website": {
+      "meaning": "网站"
+    },
+    "bbclearningenglish.com": {
+      "meaning": "节目网址"
+    },
+    "Thanks": {
+      "meaning": "感谢"
+    },
+    "joining": {
+      "meaning": "加入"
+    },
+    "goodbye": {
+      "meaning": "再见"
+    },
+    "Bye": {
+      "meaning": "拜拜"
+    }
+  },
+  "dict": {
+    "hi": {
+      "translation": "你好",
+      "source": "context",
+      "context": "你好"
+    },
+    "phil": {
+      "translation": "菲尔（人名）",
+      "source": "context",
+      "context": "菲尔（人名）"
+    },
+    "georgie": {
+      "translation": "乔吉（人名）",
+      "source": "context",
+      "context": "乔吉（人名）"
+    },
+    "have": {
+      "translation": "有",
+      "source": "context",
+      "context": "有"
+    },
+    "you": {
+      "translation": "你",
+      "source": "context",
+      "context": "你"
+    },
+    "had": {
+      "translation": "打过；有（过去分词）",
+      "source": "context",
+      "context": "打过；有（过去分词）"
+    },
+    "many": {
+      "translation": "许多",
+      "source": "context",
+      "context": "许多"
+    },
+    "vaccines": {
+      "translation": "疫苗",
+      "source": "context",
+      "context": "疫苗"
+    },
+    "in": {
+      "translation": "在",
+      "source": "context",
+      "context": "在"
+    },
+    "your": {
+      "translation": "你的",
+      "source": "context",
+      "context": "你的"
+    },
+    "life": {
+      "translation": "一生",
+      "source": "context",
+      "context": "一生"
+    },
+    "so": {
+      "translation": "那么",
+      "source": "context",
+      "context": "那么"
+    },
+    "these": {
+      "translation": "这些",
+      "source": "context",
+      "context": "这些"
+    },
+    "are": {
+      "translation": "是",
+      "source": "context",
+      "context": "是"
+    },
+    "injections": {
+      "translation": "注射",
+      "source": "context",
+      "context": "注射"
+    },
+    "to": {
+      "translation": "（不定式）",
+      "source": "context",
+      "context": "（不定式）"
+    },
+    "protect": {
+      "translation": "保护",
+      "source": "context",
+      "context": "保护"
+    },
+    "from": {
+      "translation": "免于",
+      "source": "context",
+      "context": "免于"
+    },
+    "diseases": {
+      "translation": "疾病",
+      "source": "context",
+      "context": "疾病"
+    },
+    "oh": {
+      "translation": "哦",
+      "source": "context",
+      "context": "哦"
+    },
+    "i": {
+      "translation": "我",
+      "source": "context",
+      "context": "我"
+    },
+    "'ve": {
+      "translation": "已（have缩写）",
+      "source": "context",
+      "context": "已（have缩写）"
+    },
+    "loads": {
+      "translation": "很多",
+      "source": "context",
+      "context": "很多"
+    },
+    "all": {
+      "translation": "所有",
+      "source": "context",
+      "context": "所有"
+    },
+    "the": {
+      "translation": "定冠词",
+      "source": "context",
+      "context": "定冠词"
+    },
+    "ones": {
+      "translation": "那些",
+      "source": "context",
+      "context": "那些"
+    },
+    "when": {
+      "translation": "当……时",
+      "source": "context",
+      "context": "当……时"
+    },
+    "a": {
+      "translation": "一（个）",
+      "source": "context",
+      "context": "一（个）"
+    },
+    "child": {
+      "translation": "儿童",
+      "source": "context",
+      "context": "儿童"
+    },
+    "but": {
+      "translation": "但是",
+      "source": "context",
+      "context": "但是"
+    },
+    "also": {
+      "translation": "也",
+      "source": "context",
+      "context": "也"
+    },
+    "some": {
+      "translation": "一些",
+      "source": "context",
+      "context": "一些"
+    },
+    "for": {
+      "translation": "为了",
+      "source": "context",
+      "context": "为了"
+    },
+    "travelling": {
+      "translation": "旅行",
+      "source": "context",
+      "context": "旅行"
+    },
+    "and": {
+      "translation": "和",
+      "source": "context",
+      "context": "和"
+    },
+    "working": {
+      "translation": "工作",
+      "source": "context",
+      "context": "工作"
+    },
+    "abroad": {
+      "translation": "在国外",
+      "source": "context",
+      "context": "在国外"
+    },
+    "yeah": {
+      "translation": "是的",
+      "source": "context",
+      "context": "是的"
+    },
+    "lots": {
+      "translation": "很多",
+      "source": "context",
+      "context": "很多"
+    },
+    "ok": {
+      "translation": "好的",
+      "source": "context",
+      "context": "好的"
+    },
+    "well": {
+      "translation": "嗯",
+      "source": "context",
+      "context": "嗯"
+    },
+    "us": {
+      "translation": "我们",
+      "source": "context",
+      "context": "我们"
+    },
+    "will": {
+      "translation": "将",
+      "source": "context",
+      "context": "将"
+    },
+    "stop": {
+      "translation": "阻止",
+      "source": "context",
+      "context": "阻止"
+    },
+    "getting": {
+      "translation": "患上",
+      "source": "context",
+      "context": "患上"
+    },
+    "common": {
+      "translation": "常见的",
+      "source": "context",
+      "context": "常见的"
+    },
+    "such": {
+      "translation": "例如",
+      "source": "context",
+      "context": "例如"
+    },
+    "as": {
+      "translation": "如",
+      "source": "context",
+      "context": "如"
+    },
+    "flu": {
+      "translation": "流感",
+      "source": "context",
+      "context": "流感"
+    },
+    "or": {
+      "translation": "或",
+      "source": "context",
+      "context": "或"
+    },
+    "covid 19": {
+      "translation": "新冠肺炎",
+      "source": "context",
+      "context": "新冠肺炎"
+    },
+    "could": {
+      "translation": "能",
+      "source": "context",
+      "context": "能"
+    },
+    "help": {
+      "translation": "帮助",
+      "source": "context",
+      "context": "帮助"
+    },
+    "fight": {
+      "translation": "对抗",
+      "source": "context",
+      "context": "对抗"
+    },
+    "more": {
+      "translation": "更",
+      "source": "context",
+      "context": "更"
+    },
+    "complicated": {
+      "translation": "复杂的",
+      "source": "context",
+      "context": "复杂的"
+    },
+    "too": {
+      "translation": "也",
+      "source": "context",
+      "context": "也"
+    },
+    "this": {
+      "translation": "这",
+      "source": "context",
+      "context": "这"
+    },
+    "episode": {
+      "translation": "一期节目",
+      "source": "context",
+      "context": "一期节目"
+    },
+    "of": {
+      "translation": "的",
+      "source": "context",
+      "context": "的"
+    },
+    "6": {
+      "translation": "六",
+      "source": "context",
+      "context": "六"
+    },
+    "minute": {
+      "translation": "分钟",
+      "source": "context",
+      "context": "分钟"
+    },
+    "english": {
+      "translation": "英语",
+      "source": "context",
+      "context": "英语"
+    },
+    "we'll": {
+      "translation": "我们将",
+      "source": "context",
+      "context": "我们将"
+    },
+    "be": {
+      "translation": "进行（be doing）",
+      "source": "context",
+      "context": "进行（be doing）"
+    },
+    "looking": {
+      "translation": "看",
+      "source": "context",
+      "context": "看"
+    },
+    "at": {
+      "translation": "在",
+      "source": "context",
+      "context": "在"
+    },
+    "new": {
+      "translation": "新的",
+      "source": "context",
+      "context": "新的"
+    },
+    "research": {
+      "translation": "研究",
+      "source": "context",
+      "context": "研究"
+    },
+    "that": {
+      "translation": "（引导从句）",
+      "source": "context",
+      "context": "（引导从句）"
+    },
+    "has": {
+      "translation": "使",
+      "source": "context",
+      "context": "使"
+    },
+    "scientists": {
+      "translation": "科学家",
+      "source": "context",
+      "context": "科学家"
+    },
+    "very": {
+      "translation": "非常",
+      "source": "context",
+      "context": "非常"
+    },
+    "excited": {
+      "translation": "兴奋的",
+      "source": "context",
+      "context": "兴奋的"
+    },
+    "we'll be asking": {
+      "translation": "我们将提问",
+      "source": "context",
+      "context": "我们将提问"
+    },
+    "question": {
+      "translation": "问题",
+      "source": "context",
+      "context": "问题"
+    },
+    "'could vaccines cure cancer?'": {
+      "translation": "疫苗能治愈癌症吗？",
+      "source": "context",
+      "context": "疫苗能治愈癌症吗？"
+    },
+    "cure": {
+      "translation": "治愈",
+      "source": "context",
+      "context": "治愈"
+    },
+    "cancer": {
+      "translation": "癌症",
+      "source": "context",
+      "context": "癌症"
+    },
+    "let's": {
+      "translation": "让我们",
+      "source": "context",
+      "context": "让我们"
+    },
+    "start": {
+      "translation": "开始",
+      "source": "context",
+      "context": "开始"
+    },
+    "with": {
+      "translation": "用",
+      "source": "context",
+      "context": "用"
+    },
+    "quiz": {
+      "translation": "测验",
+      "source": "context",
+      "context": "测验"
+    },
+    "there": {
+      "translation": "有（there be）",
+      "source": "context",
+      "context": "有（there be）"
+    },
+    "different": {
+      "translation": "不同的",
+      "source": "context",
+      "context": "不同的"
+    },
+    "types": {
+      "translation": "类型",
+      "source": "context",
+      "context": "类型"
+    },
+    "affecting": {
+      "translation": "影响",
+      "source": "context",
+      "context": "影响"
+    },
+    "parts": {
+      "translation": "部位",
+      "source": "context",
+      "context": "部位"
+    },
+    "body": {
+      "translation": "身体",
+      "source": "context",
+      "context": "身体"
+    },
+    "according": {
+      "translation": "根据",
+      "source": "context",
+      "context": "根据"
+    },
+    "world": {
+      "translation": "世界",
+      "source": "context",
+      "context": "世界"
+    },
+    "health": {
+      "translation": "卫生",
+      "source": "context",
+      "context": "卫生"
+    },
+    "organisation": {
+      "translation": "组织",
+      "source": "context",
+      "context": "组织"
+    },
+    "what": {
+      "translation": "什么",
+      "source": "context",
+      "context": "什么"
+    },
+    "is": {
+      "translation": "是",
+      "source": "context",
+      "context": "是"
+    },
+    "most": {
+      "translation": "最",
+      "source": "context",
+      "context": "最"
+    },
+    "worldwide": {
+      "translation": "全球的",
+      "source": "context",
+      "context": "全球的"
+    },
+    "is it": {
+      "translation": "是不是",
+      "source": "context",
+      "context": "是不是"
+    },
+    "lung": {
+      "translation": "肺",
+      "source": "context",
+      "context": "肺"
+    },
+    "skin": {
+      "translation": "皮肤",
+      "source": "context",
+      "context": "皮肤"
+    },
+    "stomach": {
+      "translation": "胃",
+      "source": "context",
+      "context": "胃"
+    },
+    "don't": {
+      "translation": "不（do not缩写）",
+      "source": "context",
+      "context": "不（do not缩写）"
+    },
+    "know": {
+      "translation": "知道",
+      "source": "context",
+      "context": "知道"
+    },
+    "i'm": {
+      "translation": "我是",
+      "source": "context",
+      "context": "我是"
+    },
+    "going": {
+      "translation": "要（打算）",
+      "source": "context",
+      "context": "要（打算）"
+    },
+    "guess": {
+      "translation": "猜",
+      "source": "context",
+      "context": "猜"
+    },
+    "find": {
+      "translation": "找出",
+      "source": "context",
+      "context": "找出"
+    },
+    "out": {
+      "translation": "出",
+      "source": "context",
+      "context": "出"
+    },
+    "answer": {
+      "translation": "答案",
+      "source": "context",
+      "context": "答案"
+    },
+    "end": {
+      "translation": "结尾",
+      "source": "context",
+      "context": "结尾"
+    },
+    "programme": {
+      "translation": "节目",
+      "source": "context",
+      "context": "节目"
+    },
+    "right": {
+      "translation": "好",
+      "source": "context",
+      "context": "好"
+    },
+    "now": {
+      "translation": "现在",
+      "source": "context",
+      "context": "现在"
+    },
+    "idea": {
+      "translation": "想法",
+      "source": "context",
+      "context": "想法"
+    },
+    "sound(s)": {
+      "translation": "听起来",
+      "source": "context",
+      "context": "听起来"
+    },
+    "really": {
+      "translation": "非常",
+      "source": "context",
+      "context": "非常"
+    },
+    "interesting": {
+      "translation": "有趣的",
+      "source": "context",
+      "context": "有趣的"
+    },
+    "tell": {
+      "translation": "告诉",
+      "source": "context",
+      "context": "告诉"
+    },
+    "bit": {
+      "translation": "一点",
+      "source": "context",
+      "context": "一点"
+    },
+    "about": {
+      "translation": "关于",
+      "source": "context",
+      "context": "关于"
+    },
+    "it": {
+      "translation": "它",
+      "source": "context",
+      "context": "它"
+    },
+    "space": {
+      "translation": "研究领域",
+      "source": "context",
+      "context": "研究领域"
+    },
+    "breakthrough": {
+      "translation": "重大突破",
+      "source": "context",
+      "context": "重大突破"
+    },
+    "prime (something)": {
+      "translation": "使（某物）就绪",
+      "source": "context",
+      "context": "使（某物）就绪"
+    },
+    "promise": {
+      "translation": "良好潜力",
+      "source": "context",
+      "context": "良好潜力"
+    },
+    "a long time coming": {
+      "translation": "酝酿已久",
+      "source": "context",
+      "context": "酝酿已久"
+    },
+    "false dawn": {
+      "translation": "昙花一现的希望",
+      "source": "context",
+      "context": "昙花一现的希望"
+    },
+    "been": {
+      "translation": "已经（be的过去分词）",
+      "source": "context",
+      "context": "已经（be的过去分词）"
+    },
+    "trying": {
+      "translation": "尝试",
+      "source": "context",
+      "context": "尝试"
+    },
+    "develop": {
+      "translation": "研发",
+      "source": "context",
+      "context": "研发"
+    },
+    "quite": {
+      "translation": "相当",
+      "source": "context",
+      "context": "相当"
+    },
+    "long": {
+      "translation": "长的",
+      "source": "context",
+      "context": "长的"
+    },
+    "time": {
+      "translation": "时间",
+      "source": "context",
+      "context": "时间"
+    },
+    "think": {
+      "translation": "认为",
+      "source": "context",
+      "context": "认为"
+    },
+    "existing": {
+      "translation": "现有的",
+      "source": "context",
+      "context": "现有的"
+    },
+    "treatments": {
+      "translation": "治疗方法",
+      "source": "context",
+      "context": "治疗方法"
+    },
+    "radiotherapy": {
+      "translation": "放疗",
+      "source": "context",
+      "context": "放疗"
+    },
+    "chemotherapy": {
+      "translation": "化疗",
+      "source": "context",
+      "context": "化疗"
+    },
+    "few": {
+      "translation": "一些",
+      "source": "context",
+      "context": "一些"
+    },
+    "side": {
+      "translation": "副的",
+      "source": "context",
+      "context": "副的"
+    },
+    "effects": {
+      "translation": "效应；副作用",
+      "source": "context",
+      "context": "效应；副作用"
+    },
+    "natural": {
+      "translation": "自然的",
+      "source": "context",
+      "context": "自然的"
+    },
+    "immune": {
+      "translation": "免疫的",
+      "source": "context",
+      "context": "免疫的"
+    },
+    "system": {
+      "translation": "系统",
+      "source": "context",
+      "context": "系统"
+    },
+    "disease": {
+      "translation": "疾病",
+      "source": "context",
+      "context": "疾病"
+    },
+    "which": {
+      "translation": "这，哪个",
+      "source": "context",
+      "context": "这，哪个"
+    },
+    "fewer": {
+      "translation": "更少的",
+      "source": "context",
+      "context": "更少的"
+    },
+    "effective": {
+      "translation": "有效的",
+      "source": "context",
+      "context": "有效的"
+    },
+    "particularly": {
+      "translation": "尤其",
+      "source": "context",
+      "context": "尤其"
+    },
+    "hopeful": {
+      "translation": "充满希望的",
+      "source": "context",
+      "context": "充满希望的"
+    },
+    "developed": {
+      "translation": "研发的",
+      "source": "context",
+      "context": "研发的"
+    },
+    "treat": {
+      "translation": "治疗",
+      "source": "context",
+      "context": "治疗"
+    },
+    "hearing": {
+      "translation": "听到",
+      "source": "context",
+      "context": "听到"
+    },
+    "latest": {
+      "translation": "最新的",
+      "source": "context",
+      "context": "最新的"
+    },
+    "cell": {
+      "translation": "细胞",
+      "source": "context",
+      "context": "细胞"
+    },
+    "biologist": {
+      "translation": "生物学家",
+      "source": "context",
+      "context": "生物学家"
+    },
+    "anne": {
+      "translation": "安妮（人名）",
+      "source": "context",
+      "context": "安妮（人名）"
+    },
+    "willis": {
+      "translation": "威利斯（姓氏）",
+      "source": "context",
+      "context": "威利斯（姓氏）"
+    },
+    "spoke": {
+      "translation": "说话（speak过去式）",
+      "source": "context",
+      "context": "说话（speak过去式）"
+    },
+    "presenter": {
+      "translation": "主持人",
+      "source": "context",
+      "context": "主持人"
+    },
+    "tom": {
+      "translation": "汤姆（人名）",
+      "source": "context",
+      "context": "汤姆（人名）"
+    },
+    "whipple": {
+      "translation": "惠普尔（姓氏）",
+      "source": "context",
+      "context": "惠普尔（姓氏）"
+    },
+    "moment": {
+      "translation": "时刻",
+      "source": "context",
+      "context": "时刻"
+    },
+    "hasn't": {
+      "translation": "还没有",
+      "source": "context",
+      "context": "还没有"
+    },
+    "there's": {
+      "translation": "有",
+      "source": "context",
+      "context": "有"
+    },
+    "dawns": {
+      "translation": "曙光；假象曙光",
+      "source": "context",
+      "context": "曙光；假象曙光"
+    },
+    "mean": {
+      "translation": "意思是",
+      "source": "context",
+      "context": "意思是"
+    },
+    "lot": {
+      "translation": "大量",
+      "source": "context",
+      "context": "大量"
+    },
+    "work": {
+      "translation": "工作；研究",
+      "source": "context",
+      "context": "工作；研究"
+    },
+    "encouraging": {
+      "translation": "令人鼓舞的",
+      "source": "context",
+      "context": "令人鼓舞的"
+    },
+    "animal": {
+      "translation": "动物",
+      "source": "context",
+      "context": "动物"
+    },
+    "models": {
+      "translation": "模型",
+      "source": "context",
+      "context": "模型"
+    },
+    "translate": {
+      "translation": "转化",
+      "source": "context",
+      "context": "转化"
+    },
+    "humans": {
+      "translation": "人类",
+      "source": "context",
+      "context": "人类"
+    },
+    "much": {
+      "translation": "更加",
+      "source": "context",
+      "context": "更加"
+    },
+    "harder": {
+      "translation": "更难的",
+      "source": "context",
+      "context": "更难的"
+    },
+    "longer": {
+      "translation": "更长的",
+      "source": "context",
+      "context": "更长的"
+    },
+    "process": {
+      "translation": "过程",
+      "source": "context",
+      "context": "过程"
+    },
+    "can": {
+      "translation": "能够",
+      "source": "context",
+      "context": "能够"
+    },
+    "exciting": {
+      "translation": "令人兴奋的",
+      "source": "context",
+      "context": "令人兴奋的"
+    },
+    "apparent": {
+      "translation": "表面上的",
+      "source": "context",
+      "context": "表面上的"
+    },
+    "come": {
+      "translation": "来",
+      "source": "context",
+      "context": "来"
+    },
+    "through": {
+      "translation": "通过",
+      "source": "context",
+      "context": "通过"
+    },
+    "today": {
+      "translation": "今天",
+      "source": "context",
+      "context": "今天"
+    },
+    "into": {
+      "translation": "进入",
+      "source": "context",
+      "context": "进入"
+    },
+    "says": {
+      "translation": "说",
+      "source": "context",
+      "context": "说"
+    },
+    "development": {
+      "translation": "研发；发展",
+      "source": "context",
+      "context": "研发；发展"
+    },
+    "taken": {
+      "translation": "花费（时间）",
+      "source": "context",
+      "context": "花费（时间）"
+    },
+    "achieve": {
+      "translation": "实现",
+      "source": "context",
+      "context": "实现"
+    },
+    "expression": {
+      "translation": "表达；习语",
+      "source": "context",
+      "context": "表达；习语"
+    },
+    "looks": {
+      "translation": "看起来",
+      "source": "context",
+      "context": "看起来"
+    },
+    "actually": {
+      "translation": "实际上",
+      "source": "context",
+      "context": "实际上"
+    },
+    "improving": {
+      "translation": "好转",
+      "source": "context",
+      "context": "好转"
+    },
+    "might": {
+      "translation": "可能",
+      "source": "context",
+      "context": "可能"
+    },
+    "made": {
+      "translation": "取得；做出",
+      "source": "context",
+      "context": "取得；做出"
+    },
+    "significant": {
+      "translation": "重大的",
+      "source": "context",
+      "context": "重大的"
+    },
+    "progress": {
+      "translation": "进展",
+      "source": "context",
+      "context": "进展"
+    },
+    "we're": {
+      "translation": "我们是",
+      "source": "context",
+      "context": "我们是"
+    },
+    "talking": {
+      "translation": "谈论",
+      "source": "context",
+      "context": "谈论"
+    },
+    "like": {
+      "translation": "像",
+      "source": "context",
+      "context": "像"
+    },
+    "familiar": {
+      "translation": "熟悉的",
+      "source": "context",
+      "context": "熟悉的"
+    },
+    "aren't": {
+      "translation": "不是",
+      "source": "context",
+      "context": "不是"
+    },
+    "isn't": {
+      "translation": "不是",
+      "source": "context",
+      "context": "不是"
+    },
+    "prevent": {
+      "translation": "预防",
+      "source": "context",
+      "context": "预防"
+    },
+    "no": {
+      "translation": "不",
+      "source": "context",
+      "context": "不"
+    },
+    "being": {
+      "translation": "正在被",
+      "source": "context",
+      "context": "正在被"
+    },
+    "tested": {
+      "translation": "受测试的",
+      "source": "context",
+      "context": "受测试的"
+    },
+    "used": {
+      "translation": "被用来",
+      "source": "context",
+      "context": "被用来"
+    },
+    "people": {
+      "translation": "人们",
+      "source": "context",
+      "context": "人们"
+    },
+    "after": {
+      "translation": "在…之后",
+      "source": "context",
+      "context": "在…之后"
+    },
+    "they've": {
+      "translation": "他们已经",
+      "source": "context",
+      "context": "他们已经"
+    },
+    "tumour": {
+      "translation": "肿瘤",
+      "source": "context",
+      "context": "肿瘤"
+    },
+    "removed": {
+      "translation": "切除的",
+      "source": "context",
+      "context": "切除的"
+    },
+    "target": {
+      "translation": "瞄准、攻击",
+      "source": "context",
+      "context": "瞄准、攻击"
+    },
+    "any": {
+      "translation": "任何",
+      "source": "context",
+      "context": "任何"
+    },
+    "spread": {
+      "translation": "扩散",
+      "source": "context",
+      "context": "扩散"
+    },
+    "around": {
+      "translation": "到处",
+      "source": "context",
+      "context": "到处"
+    },
+    "back": {
+      "translation": "回来",
+      "source": "context",
+      "context": "回来"
+    },
+    "specially": {
+      "translation": "特别地",
+      "source": "context",
+      "context": "特别地"
+    },
+    "each": {
+      "translation": "每个",
+      "source": "context",
+      "context": "每个"
+    },
+    "patient": {
+      "translation": "病人",
+      "source": "context",
+      "context": "病人"
+    },
+    "by": {
+      "translation": "通过",
+      "source": "context",
+      "context": "通过"
+    },
+    "cancerous": {
+      "translation": "癌性的",
+      "source": "context",
+      "context": "癌性的"
+    },
+    "cells": {
+      "translation": "细胞",
+      "source": "context",
+      "context": "细胞"
+    },
+    "that's": {
+      "translation": "即",
+      "source": "context",
+      "context": "即"
+    },
+    "explained": {
+      "translation": "解释",
+      "source": "context",
+      "context": "解释"
+    },
+    "bbc": {
+      "translation": "英国广播公司",
+      "source": "context",
+      "context": "英国广播公司"
+    },
+    "radio": {
+      "translation": "广播电台",
+      "source": "context",
+      "context": "广播电台"
+    },
+    "inside": {
+      "translation": "内幕",
+      "source": "context",
+      "context": "内幕"
+    },
+    "science": {
+      "translation": "科学",
+      "source": "context",
+      "context": "科学"
+    },
+    "normal": {
+      "translation": "正常的",
+      "source": "context",
+      "context": "正常的"
+    },
+    "contain": {
+      "translation": "含有",
+      "source": "context",
+      "context": "含有"
+    },
+    "mutations": {
+      "translation": "突变",
+      "source": "context",
+      "context": "突变"
+    },
+    "sequence": {
+      "translation": "测序",
+      "source": "context",
+      "context": "测序"
+    },
+    "dna": {
+      "translation": "脱氧核糖核酸",
+      "source": "context",
+      "context": "脱氧核糖核酸"
+    },
+    "how": {
+      "translation": "如何",
+      "source": "context",
+      "context": "如何"
+    },
+    "bits": {
+      "translation": "片段",
+      "source": "context",
+      "context": "片段"
+    },
+    "surface": {
+      "translation": "表面",
+      "source": "context",
+      "context": "表面"
+    },
+    "put": {
+      "translation": "放入",
+      "source": "context",
+      "context": "放入"
+    },
+    "them": {
+      "translation": "它们",
+      "source": "context",
+      "context": "它们"
+    },
+    "rna": {
+      "translation": "核糖核酸",
+      "source": "context",
+      "context": "核糖核酸"
+    },
+    "they'll": {
+      "translation": "它们将",
+      "source": "context",
+      "context": "它们将"
+    },
+    "make": {
+      "translation": "制造",
+      "source": "context",
+      "context": "制造"
+    },
+    "proteins": {
+      "translation": "蛋白质",
+      "source": "context",
+      "context": "蛋白质"
+    },
+    "recognised": {
+      "translation": "被识别",
+      "source": "context",
+      "context": "被识别"
+    },
+    "way": {
+      "translation": "方法",
+      "source": "context",
+      "context": "方法"
+    },
+    "priming": {
+      "translation": "使准备好",
+      "source": "context",
+      "context": "使准备好"
+    },
+    "saying": {
+      "translation": "说",
+      "source": "context",
+      "context": "说"
+    },
+    "becomes": {
+      "translation": "成为",
+      "source": "context",
+      "context": "成为"
+    },
+    "if": {
+      "translation": "如果",
+      "source": "context",
+      "context": "如果"
+    },
+    "prime": {
+      "translation": "使准备好",
+      "source": "context",
+      "context": "使准备好"
+    },
+    "basically": {
+      "translation": "基本上",
+      "source": "context",
+      "context": "基本上"
+    },
+    "helps": {
+      "translation": "帮助",
+      "source": "context",
+      "context": "帮助"
+    },
+    "better": {
+      "translation": "更好",
+      "source": "context",
+      "context": "更好"
+    },
+    "recognising": {
+      "translation": "识别",
+      "source": "context",
+      "context": "识别"
+    },
+    "fighting": {
+      "translation": "对抗",
+      "source": "context",
+      "context": "对抗"
+    },
+    "clever": {
+      "translation": "聪明的",
+      "source": "context",
+      "context": "聪明的"
+    },
+    "difference": {
+      "translation": "影响",
+      "source": "context",
+      "context": "影响"
+    },
+    "trials": {
+      "translation": "试验",
+      "source": "context",
+      "context": "试验"
+    },
+    "needed": {
+      "translation": "需要的",
+      "source": "context",
+      "context": "需要的"
+    },
+    "again": {
+      "translation": "再次",
+      "source": "context",
+      "context": "再次"
+    },
+    "just": {
+      "translation": "只是",
+      "source": "context",
+      "context": "只是"
+    },
+    "anything": {
+      "translation": "任何事物",
+      "source": "context",
+      "context": "任何事物"
+    },
+    "improve": {
+      "translation": "改善",
+      "source": "context",
+      "context": "改善"
+    },
+    "lives": {
+      "translation": "生活",
+      "source": "context",
+      "context": "生活"
+    },
+    "patients": {
+      "translation": "病人",
+      "source": "context",
+      "context": "病人"
+    },
+    "always": {
+      "translation": "总是",
+      "source": "context",
+      "context": "总是"
+    },
+    "wonderful": {
+      "translation": "极好的",
+      "source": "context",
+      "context": "极好的"
+    },
+    "seeing": {
+      "translation": "看到",
+      "source": "context",
+      "context": "看到"
+    },
+    "extraordinary": {
+      "translation": "非凡的",
+      "source": "context",
+      "context": "非凡的"
+    },
+    "technology": {
+      "translation": "技术",
+      "source": "context",
+      "context": "技术"
+    },
+    "sort of": {
+      "translation": "可以说",
+      "source": "context",
+      "context": "可以说"
+    },
+    "starting": {
+      "translation": "开始",
+      "source": "context",
+      "context": "开始"
+    },
+    "reach": {
+      "translation": "达到",
+      "source": "context",
+      "context": "达到"
+    },
+    "its": {
+      "translation": "它的",
+      "source": "context",
+      "context": "它的"
+    },
+    "everybody": {
+      "translation": "每个人",
+      "source": "context",
+      "context": "每个人"
+    },
+    "she": {
+      "translation": "她",
+      "source": "context",
+      "context": "她"
+    },
+    "on": {
+      "translation": "在……上",
+      "source": "context",
+      "context": "在……上"
+    },
+    "it's": {
+      "translation": "它是",
+      "source": "context",
+      "context": "它是"
+    },
+    "revealed": {
+      "translation": "揭晓",
+      "source": "context",
+      "context": "揭晓"
+    },
+    "asked": {
+      "translation": "问",
+      "source": "context",
+      "context": "问"
+    },
+    "form": {
+      "translation": "类型",
+      "source": "context",
+      "context": "类型"
+    },
+    "estimated": {
+      "translation": "估计的",
+      "source": "context",
+      "context": "估计的"
+    },
+    "cases": {
+      "translation": "病例",
+      "source": "context",
+      "context": "病例"
+    },
+    "million": {
+      "translation": "百万",
+      "source": "context",
+      "context": "百万"
+    },
+    "potential": {
+      "translation": "潜力",
+      "source": "context",
+      "context": "潜力"
+    },
+    "recap": {
+      "translation": "回顾",
+      "source": "context",
+      "context": "回顾"
+    },
+    "learned": {
+      "translation": "学到的",
+      "source": "context",
+      "context": "学到的"
+    },
+    "something": {
+      "translation": "某事",
+      "source": "context",
+      "context": "某事"
+    },
+    "appears": {
+      "translation": "似乎",
+      "source": "context",
+      "context": "似乎"
+    },
+    "field": {
+      "translation": "领域",
+      "source": "context",
+      "context": "领域"
+    },
+    "refers": {
+      "translation": "指",
+      "source": "context",
+      "context": "指"
+    },
+    "making": {
+      "translation": "取得",
+      "source": "context",
+      "context": "取得"
+    },
+    "ready": {
+      "translation": "准备就绪",
+      "source": "context",
+      "context": "准备就绪"
+    },
+    "once": {
+      "translation": "一次",
+      "source": "context",
+      "context": "一次"
+    },
+    "our": {
+      "translation": "我们的",
+      "source": "context",
+      "context": "我们的"
+    },
+    "six": {
+      "translation": "六",
+      "source": "context",
+      "context": "六"
+    },
+    "minutes": {
+      "translation": "分钟",
+      "source": "context",
+      "context": "分钟"
+    },
+    "up": {
+      "translation": "结束",
+      "source": "context",
+      "context": "结束"
+    },
+    "test": {
+      "translation": "测试",
+      "source": "context",
+      "context": "测试"
+    },
+    "you've": {
+      "translation": "你已经",
+      "source": "context",
+      "context": "你已经"
+    },
+    "worksheet": {
+      "translation": "练习表",
+      "source": "context",
+      "context": "练习表"
+    },
+    "website": {
+      "translation": "网站",
+      "source": "context",
+      "context": "网站"
+    },
+    "bbclearningenglish.com": {
+      "translation": "节目网址",
+      "source": "context",
+      "context": "节目网址"
+    },
+    "thanks": {
+      "translation": "感谢",
+      "source": "context",
+      "context": "感谢"
+    },
+    "joining": {
+      "translation": "加入",
+      "source": "context",
+      "context": "加入"
+    },
+    "goodbye": {
+      "translation": "再见",
+      "source": "context",
+      "context": "再见"
+    },
+    "bye": {
+      "translation": "拜拜",
+      "source": "context",
+      "context": "拜拜"
+    },
+    "ve": {
+      "translation": "已（have缩写）",
+      "source": "context",
+      "context": "已（have缩写）",
+      "phrase": "'ve"
+    },
+    "19": {
+      "translation": "新冠肺炎",
+      "source": "context",
+      "context": "新冠肺炎",
+      "phrase": "covid 19"
+    },
+    "covid": {
+      "translation": "新冠肺炎",
+      "source": "context",
+      "context": "新冠肺炎",
+      "phrase": "covid 19"
+    },
+    "covid19": {
+      "translation": "新冠肺炎",
+      "source": "context",
+      "context": "新冠肺炎",
+      "phrase": "covid 19"
+    },
+    "asking": {
+      "translation": "我们将提问",
+      "source": "context",
+      "context": "我们将提问",
+      "phrase": "we'll be asking"
+    },
+    "ll": {
+      "translation": "我们将提问",
+      "source": "context",
+      "context": "我们将提问",
+      "phrase": "we'll be asking"
+    },
+    "we": {
+      "translation": "我们将提问",
+      "source": "context",
+      "context": "我们将提问",
+      "phrase": "we'll be asking"
+    },
+    "wellbeasking": {
+      "translation": "我们将提问",
+      "source": "context",
+      "context": "我们将提问",
+      "phrase": "we'll be asking"
+    },
+    "couldvaccinescurecancer": {
+      "translation": "疫苗能治愈癌症吗？",
+      "source": "context",
+      "context": "疫苗能治愈癌症吗？",
+      "phrase": "'could vaccines cure cancer?'"
+    },
+    "lets": {
+      "translation": "让我们",
+      "source": "context",
+      "context": "让我们",
+      "phrase": "let's"
+    },
+    "isit": {
+      "translation": "是不是",
+      "source": "context",
+      "context": "是不是",
+      "phrase": "is it"
+    },
+    "dont": {
+      "translation": "不（do not缩写）",
+      "source": "context",
+      "context": "不（do not缩写）",
+      "phrase": "don't"
+    },
+    "im": {
+      "translation": "我是",
+      "source": "context",
+      "context": "我是",
+      "phrase": "i'm"
+    },
+    "sounds": {
+      "translation": "听起来",
+      "source": "context",
+      "context": "听起来",
+      "phrase": "sound(s)"
+    },
+    "primesomething": {
+      "translation": "使（某物）就绪",
+      "source": "context",
+      "context": "使（某物）就绪",
+      "phrase": "prime (something)"
+    },
+    "alongtimecoming": {
+      "translation": "酝酿已久",
+      "source": "context",
+      "context": "酝酿已久",
+      "phrase": "a long time coming"
+    },
+    "coming": {
+      "translation": "酝酿已久",
+      "source": "context",
+      "context": "酝酿已久",
+      "phrase": "a long time coming"
+    },
+    "dawn": {
+      "translation": "昙花一现的希望",
+      "source": "context",
+      "context": "昙花一现的希望",
+      "phrase": "false dawn"
+    },
+    "false": {
+      "translation": "昙花一现的希望",
+      "source": "context",
+      "context": "昙花一现的希望",
+      "phrase": "false dawn"
+    },
+    "falsedawn": {
+      "translation": "昙花一现的希望",
+      "source": "context",
+      "context": "昙花一现的希望",
+      "phrase": "false dawn"
+    },
+    "hasnt": {
+      "translation": "还没有",
+      "source": "context",
+      "context": "还没有",
+      "phrase": "hasn't"
+    },
+    "theres": {
+      "translation": "有",
+      "source": "context",
+      "context": "有",
+      "phrase": "there's"
+    },
+    "were": {
+      "translation": "我们是",
+      "source": "context",
+      "context": "我们是",
+      "phrase": "we're"
+    },
+    "arent": {
+      "translation": "不是",
+      "source": "context",
+      "context": "不是",
+      "phrase": "aren't"
+    },
+    "isnt": {
+      "translation": "不是",
+      "source": "context",
+      "context": "不是",
+      "phrase": "isn't"
+    },
+    "theyve": {
+      "translation": "他们已经",
+      "source": "context",
+      "context": "他们已经",
+      "phrase": "they've"
+    },
+    "thats": {
+      "translation": "即",
+      "source": "context",
+      "context": "即",
+      "phrase": "that's"
+    },
+    "theyll": {
+      "translation": "它们将",
+      "source": "context",
+      "context": "它们将",
+      "phrase": "they'll"
+    },
+    "sort": {
+      "translation": "可以说",
+      "source": "context",
+      "context": "可以说",
+      "phrase": "sort of"
+    },
+    "sortof": {
+      "translation": "可以说",
+      "source": "context",
+      "context": "可以说",
+      "phrase": "sort of"
+    },
+    "youve": {
+      "translation": "你已经",
+      "source": "context",
+      "context": "你已经",
+      "phrase": "you've"
+    },
+    "bbclearningenglishcom": {
+      "translation": "节目网址",
+      "source": "context",
+      "context": "节目网址",
+      "phrase": "bbclearningenglish.com"
+    }
+  }
+}
