@@ -1,14 +1,14 @@
 /* 键学 · 应用层样式（自托管 Bootstrap 5.3 之上）
-   配色：ef-bio（Protesilaos ef-themes 的生物系深色主题，实测取色）——
-   #111 墨底、生物荧光绿、青蓝点缀；深色纸面 + 打字机居中滚动。 */
+   配色：ef-spring（Protesilaos ef-themes，ef-bio 的亮色对应主题，实测取色）——
+   #f6fff9 青绿纸白底、森林绿/蓝/青点缀；亮色纸面 + 打字机居中滚动。 */
 
 html, body {
     height: 100%;
     margin: 0;
 }
 .app-body {
-    background-color: #111111; /* ef-bio bg-main */
-    color: #cfdfd5; /* ef-bio fg-main */
+    background-color: #f6fff9; /* ef-spring bg-main 青绿纸白 */
+    color: #34494a; /* ef-spring fg-main */
 }
 
 /* 布局：宽屏单列，上限 1400px */
@@ -28,7 +28,7 @@ html, body {
     flex-wrap: wrap;
     gap: 0.4rem 1rem;
     padding: 0.2rem 0.2rem 0.6rem 0.2rem;
-    border-bottom: 1px solid #222522; /* ef-bio bg-dim */
+    border-bottom: 1px solid #c0c6c3; /* ef-spring bg-active */
 }
 .app-brand {
     display: flex;
@@ -41,13 +41,12 @@ html, body {
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 0.1em;
-    color: #35f038; /* ef-bio cursor 荧光绿 */
-    text-shadow: 0 0 8px rgba(53, 240, 56, 0.35);
+    color: #1a870f; /* ef-spring green 森林绿 */
 }
 .app-subtitle {
     font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
     font-size: 0.7rem;
-    color: #808f80; /* ef-bio fg-dim */
+    color: #777294; /* ef-spring fg-dim */
     letter-spacing: 0.05em;
 }
 #episode-selector {
@@ -56,9 +55,9 @@ html, body {
     min-width: 0;
     font-size: 0.85rem;
     border-radius: 2px;
-    border: 1px solid #505250; /* ef-bio bg-active */
-    background-color: #222522; /* bg-dim */
-    color: #cfdfd5;
+    border: 1px solid #c0c6c3; /* ef-spring bg-active */
+    background-color: #ffffff;
+    color: #34494a;
 }
 
 /* 当前文章标题区 */
@@ -71,40 +70,40 @@ html, body {
     font-family: Georgia, "Times New Roman", "Songti SC", SimSun, serif;
     font-size: 1.35rem;
     font-weight: 700;
-    color: #37aff6; /* ef-bio blue */
+    color: #375cc6; /* ef-spring blue */
     margin: 0 0 0.15rem 0;
     min-height: 1.6em;
 }
 .episode-title.done {
-    color: #3fb83f; /* ef-bio green */
+    color: #1a870f; /* ef-spring green */
 }
-.episode-title .t-letter-ok { color: #3fb83f; }
+.episode-title .t-letter-ok { color: #1a870f; }
 .episode-title .t-letter-rest { opacity: 0.45; }
 .episode-title .t-letter-bad {
-    color: #111111;
-    background-color: #ef6560; /* ef-bio red */
+    color: #ffffff;
+    background-color: #c42d2f; /* ef-spring red */
     border-radius: 2px;
 }
 .episode-meta-row {
     font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
     font-size: 0.75rem;
-    color: #808f80;
+    color: #777294;
     display: flex;
     align-items: baseline;
     gap: 0.9rem;
     flex-wrap: wrap;
 }
 .episode-meta-row a {
-    color: #6fc5ef; /* ef-bio cyan */
+    color: #1f6fbf; /* ef-spring cyan */
     text-decoration: none;
 }
 .episode-meta-row a:hover {
     text-decoration: underline;
 }
 .remaining-days {
-    color: #d4aa02; /* ef-bio yellow */
-    background-color: #222522;
-    border: 1px solid #505250;
+    color: #a45f22; /* ef-spring yellow */
+    background-color: #e8f0f0; /* bg-dim */
+    border: 1px solid #c0c6c3;
     border-radius: 2px;
     padding: 0 0.35em;
     margin-left: 0.4em;
@@ -113,9 +112,9 @@ html, body {
 #notice {
     margin: 0.7rem 0 0 0;
     border-radius: 2px;
-    background-color: #65201a; /* ef-bio bg-red-subtle */
-    border: 1px solid #b02930; /* bg-red-intense */
-    color: #ef6560;
+    background-color: #ffcfbf; /* ef-spring bg-red-subtle */
+    border: 1px solid #ff8f88; /* bg-red-intense */
+    color: #c42d2f;
 }
 
 /* ---- 打字纸面：wrapper 定位翻译条，dialog 滚动 ---- */
@@ -133,16 +132,23 @@ html, body {
     height: 100%;
     box-sizing: border-box;
     overflow-y: auto;
+    /* 打字机纸面：滚动跟随当前行，无需手动滚动条——隐藏之 */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* 旧 Edge */
     /* 底部留出翻译条渐隐带高度，避免末行文字长期藏在条后 */
     padding: 1rem 1.1rem 7rem 1.1rem;
-    background-color: #161716; /* bg-main 微亮变体（纸面） */
-    border: 1px solid #222522;
+    background-color: #ffffff; /* ef-spring 纸面白 */
+    border: 1px solid #e0e6e3; /* bg-alt */
     border-radius: 3px;
     font-family: Georgia, "Times New Roman", "Songti SC", SimSun, serif;
     font-size: 1.1rem;
     line-height: 1.95;
     text-align: left;
     overscroll-behavior: contain;
+}
+
+#dialog-display::-webkit-scrollbar {
+    display: none; /* Chromium：隐藏右侧滚动条 */
 }
 
 /* 打字机纸带引带：首尾空白使第一行/最后一行都能滚到视口中央
@@ -170,41 +176,41 @@ html, body {
     font-size: 0.7rem;
     font-weight: 700;
     letter-spacing: 0.06em;
-    color: #8fcfaf; /* ef-bio fg-alt */
+    color: #9d5e7a; /* ef-spring fg-alt */
     white-space: nowrap;
 }
 .speaker-badge::before {
     content: "· ";
-    color: #808f80;
+    color: #777294;
 }
-.speaker-c0 { color: #8fcfaf; }
-.speaker-c1 { color: #d38faf; } /* ef-bio magenta */
-.speaker-c2 { color: #3fb83f; } /* green */
-.speaker-c3 { color: #37aff6; } /* blue */
-.speaker-c4 { color: #d4aa02; } /* yellow */
+.speaker-c0 { color: #007f68; } /* green-cooler */
+.speaker-c1 { color: #9d5e7a; } /* fg-alt */
+.speaker-c2 { color: #1a870f; } /* green */
+.speaker-c3 { color: #375cc6; } /* blue */
+.speaker-c4 { color: #a45f22; } /* yellow */
 .turn-text {
     margin: 0;
     flex: 1;
     word-wrap: break-word;
 }
 
-/* 词态：ef-bio 语义色 */
+/* 词态：ef-spring 语义色 */
 .word-correct {
-    color: #3fb83f; /* ef-bio green */
+    color: #1a870f; /* ef-spring green */
     position: relative;
 }
 .current-word {
-    background-color: #0a4425; /* ef-bio bg-green-subtle */
-    color: #7fc07f; /* green-faint 亮绿 */
+    background-color: #b2faa5; /* ef-spring bg-green-subtle */
+    color: #34494a;
     border-radius: 2px;
-    box-shadow: inset 0 -2px 0 #407430; /* bg-green-intense 作下划线 */
+    box-shadow: inset 0 -2px 0 #4a7d00; /* green-warmer 作下划线 */
 }
 .letter-ok {
-    color: #3fb83f;
+    color: #1a870f;
 }
 .letter-bad {
-    color: #111111;
-    background-color: #ef6560; /* ef-bio red */
+    color: #ffffff;
+    background-color: #c42d2f; /* ef-spring red */
     border-radius: 2px;
 }
 .letter-rest {
@@ -222,19 +228,18 @@ html, body {
     animation: strike 110ms ease-out;
 }
 @keyframes strike {
-    from { filter: brightness(2.1); }
+    from { filter: brightness(0.55); } /* 亮色底：落字瞬间加深一闪 */
     to { filter: brightness(1); }
 }
 
-/* 闪烁块状光标：净零宽 + 荧光绿微光（ef-bio cursor） */
+/* 闪烁块状光标：净零宽（ef-spring cursor 洋红） */
 .caret {
     display: inline-block;
     width: 0;
     height: 1.05em;
-    border-left: 2px solid #35f038; /* ef-bio cursor */
+    border-left: 2px solid #bf005f; /* ef-spring cursor 洋红 */
     margin-left: -2px;
     vertical-align: -0.15em;
-    box-shadow: 0 0 6px rgba(53, 240, 56, 0.5);
     animation: caret-blink 1s step-end infinite;
 }
 @keyframes caret-blink {
@@ -250,10 +255,10 @@ html, body {
     transform: translateX(-50%);
     padding: 0.05rem 0.5rem;
     border-radius: 2px;
-    background-color: #1a3863; /* ef-bio bg-blue-subtle */
-    border: 1px solid #37aff6;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-    color: #cfdfd5;
+    background-color: #375cc6; /* ef-spring blue */
+    border: 1px solid #2a47a8;
+    box-shadow: 0 1px 3px rgba(52, 73, 74, 0.25);
+    color: #ffffff;
     font-family: -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
     font-size: 0.68em;
     font-weight: 400;
@@ -265,9 +270,9 @@ html, body {
     z-index: 10;
 }
 .gloss.ctx {
-    background-color: #113e57; /* ef-bio bg-cyan-subtle */
-    border-color: #6fc5ef;
-    color: #e8f4fa;
+    background-color: #1f6fbf; /* ef-spring cyan */
+    border-color: #185a9e;
+    color: #ffffff;
 }
 .gloss .gloss-tag {
     margin-right: 0.25em;
@@ -284,10 +289,10 @@ html, body {
     bottom: 0;
     display: block;
     padding: 1.2rem 1.1rem 0.6rem 1.1rem; /* 顶部渐隐过渡带 */
-    background: linear-gradient(180deg, rgba(22, 23, 22, 0) 0, rgba(22, 23, 22, 0.92) 45%, #161716 100%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.92) 45%, #ffffff 100%);
     font-family: -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
     font-size: 0.95rem;
-    color: #cfdfd5;
+    color: #34494a;
     text-align: left;
     min-height: 1.3em;
     pointer-events: none;
@@ -296,8 +301,8 @@ html, body {
 }
 #sentence-bar .sb-inner {
     display: inline-block;
-    background-color: #222522; /* bg-dim */
-    border-left: 4px solid #3fb83f; /* green */
+    background-color: #e8f0f0; /* ef-spring bg-dim */
+    border-left: 4px solid #1a870f; /* green */
     border-radius: 2px;
     padding: 0.25rem 0.8rem;
     max-width: 100%;
@@ -324,24 +329,24 @@ html, body {
     gap: 1rem;
     margin: 0.55rem 0 0 0;
     padding: 0.45rem 0.2rem 0 0.2rem;
-    border-top: 1px solid #222522;
+    border-top: 1px solid #c0c6c3;
     font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
     font-size: 0.75rem;
-    color: #808f80;
+    color: #777294;
 }
 #hint-current .hw {
-    color: #cfdfd5;
+    color: #34494a;
     font-weight: 700;
     font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 #mute-toggle {
     cursor: pointer;
     user-select: none;
-    color: #808f80;
+    color: #777294;
     margin-left: 0.6em;
 }
 #mute-toggle:hover {
-    color: #cfdfd5;
+    color: #34494a;
 }
 
 /* 手机 */
