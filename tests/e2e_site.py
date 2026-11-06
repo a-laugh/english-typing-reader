@@ -62,8 +62,8 @@ def main() -> int:
         check("transcript 已渲染且首词高亮", first_word == "Hi", f"首词={first_word!r}")
         badges = page.eval_on_selector_all(".speaker-badge", "els => els.map(e => e.textContent)")
         check("对话回合带说话人徽章", len(badges) >= 3 and badges[0] == "Georgie", str(badges[:4]))
-        bar_border = page.evaluate("() => getComputedStyle(document.querySelector('.app-header')).borderImageSource")
-        check("页头为白桦林孔式虚线（非深色横条）", "repeating-linear-gradient" in bar_border, bar_border[:70])
+        bar_bg = page.evaluate("() => getComputedStyle(document.querySelector('.app-header')).backgroundColor")
+        check("页头为 ef-bio 墨底实线（无深色横条渐变）", bar_bg in ("rgb(17, 17, 17)", "rgba(0, 0, 0, 0)"), bar_bg)
         meta = page.text_content("#episode-meta")
         check("meta 栏含日期与剩余天数", "2026-10-29" in meta and "剩" in meta, meta)
         hint = page.text_content("#hint-progress")
@@ -81,9 +81,9 @@ def main() -> int:
         page.wait_for_function(
             "() => document.querySelector('.episode-title').classList.contains('done')", timeout=5000)
         check("标题打字完成定格", True)
-        tt = page.evaluate("() => { const b = document.getElementById('sentence-bar'); return { hidden: b.hidden, text: b.textContent, inDialog: b.parentElement.id === 'dialog-display', pos: getComputedStyle(b).position }; }")
-        check("标题完成显示标题翻译（条在对话区内 sticky）",
-              (not tt["hidden"]) and "空调" in tt["text"] and tt["inDialog"] and tt["pos"] == "sticky", str(tt))
+        tt = page.evaluate("() => { const b = document.getElementById('sentence-bar'); const d = document.getElementById('dialog-display'); return { hidden: b.hidden, text: b.textContent, parent: b.parentElement.id, pos: getComputedStyle(b).position, atBottom: Math.abs(b.getBoundingClientRect().bottom - d.getBoundingClientRect().bottom) < 3 }; }")
+        check("标题完成显示标题翻译（条 absolute 钉底对话区）",
+              (not tt["hidden"]) and "空调" in tt["text"] and tt["parent"] == "dialog-area" and tt["pos"] == "absolute" and tt["atBottom"], str(tt))
         check("标题完成后光标转入对白首词",
               page.evaluate("() => !!document.querySelector('#dialog-display .caret')"))
         ghost_count = page.eval_on_selector_all(".word-future", "els => els.length")

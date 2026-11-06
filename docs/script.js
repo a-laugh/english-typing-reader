@@ -453,6 +453,10 @@ function renderDialog() {
 
     // DOM API + textContent 构建：剧集数据来自外部站点，防存储型 XSS
     const frag = document.createDocumentFragment();
+    // 打字机纸带引带：首尾空白让 block:center 从第一行起就有效
+    const lead = document.createElement("div");
+    lead.className = "paper-lead";
+    frag.appendChild(lead);
     letterSpans = []; // 当前词的字母 span（指向 wordSpans[currentWordIndex].letters）
     wordSpans = [];   // 全局词下标 -> {span, letters}：完词走原地增量更新，不重建 DOM
     windowFromWord = -1;
@@ -531,20 +535,15 @@ function renderDialog() {
         row.appendChild(para);
         frag.appendChild(row);
     });
+    const tail = document.createElement("div");
+    tail.className = "paper-tail";
+    frag.appendChild(tail);
     dialogDisplay.replaceChildren(frag);
-    // sentence-bar 常驻对话区末尾（sticky 底部）：全量重渲染后重新挂回并保留当前内容
-    if (sentenceBar && sentenceBar.parentElement !== dialogDisplay) {
-        dialogDisplay.appendChild(sentenceBar);
-    }
 
     const currentWordSpan = dialogDisplay.querySelector(".current-word");
     if (currentWordSpan) {
-        const displayRect = dialogDisplay.getBoundingClientRect();
-        const wordRect = currentWordSpan.getBoundingClientRect();
-        const visible = wordRect.top >= displayRect.top && wordRect.bottom <= displayRect.bottom;
-        if (!visible) {
-            currentWordSpan.scrollIntoView({ behavior: "smooth", block: "center" });
-        }
+        // 打字机模式：加载/滑窗/续读后当前词直接居中（加载场景用瞬时滚动，避免长距动画）
+        currentWordSpan.scrollIntoView({ behavior: "auto", block: "center" });
     }
 }
 
@@ -761,14 +760,10 @@ function completeCurrentWord() {
             const cur = dialogDisplay.querySelector(".current-word");
             if (cur) cur.scrollIntoView({ behavior: "auto", block: "center" });
         } else {
-            // 常规路径：仅当前词真正离开视口时最小量滚动（nearest，不居中不跳动）
+            // 打字机模式：当前词始终平滑滚到视口中央——眼睛不动、纸面在动
             const cur = wordSpans[currentWordIndex]?.span;
             if (cur) {
-                const displayRect = dialogDisplay.getBoundingClientRect();
-                const r = cur.getBoundingClientRect();
-                if (r.bottom > displayRect.bottom || r.top < displayRect.top) {
-                    cur.scrollIntoView({ behavior: "smooth", block: "nearest" });
-                }
+                cur.scrollIntoView({ behavior: "smooth", block: "center" });
             }
         }
     }

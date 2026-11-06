@@ -1,15 +1,14 @@
 /* 键学 · 应用层样式（自托管 Bootstrap 5.3 之上）
-   风格：白桦林——桦皮纸白底、灰绿柔和色系、桦皮孔式短横虚线分隔母题。
-   零深色横幅、零卡片阴影；语义色取森林绿系。 */
+   配色：ef-bio（Protesilaos ef-themes 的生物系深色主题，实测取色）——
+   #111 墨底、生物荧光绿、青蓝点缀；深色纸面 + 打字机居中滚动。 */
 
 html, body {
     height: 100%;
     margin: 0;
 }
 .app-body {
-    /* 桦皮纸白 */
-    background-color: #f7f6f0;
-    color: #2f3230; /* 柔黑绿 */
+    background-color: #111111; /* ef-bio bg-main */
+    color: #cfdfd5; /* ef-bio fg-main */
 }
 
 /* 布局：宽屏单列，上限 1400px */
@@ -22,15 +21,14 @@ html, body {
     box-sizing: border-box;
 }
 
-/* ---- 页头：桦木灰绿站名 + 孔式虚线底线 ---- */
+/* ---- 页头：fg-dim 辅助色 + 荧光绿站名 ---- */
 .app-header {
     display: flex;
     align-items: baseline;
     flex-wrap: wrap;
     gap: 0.4rem 1rem;
     padding: 0.2rem 0.2rem 0.6rem 0.2rem;
-    border-bottom: 2px solid transparent;
-    border-image: repeating-linear-gradient(90deg, #b9b4a4 0 14px, transparent 14px 24px) 1;
+    border-bottom: 1px solid #222522; /* ef-bio bg-dim */
 }
 .app-brand {
     display: flex;
@@ -43,12 +41,13 @@ html, body {
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 0.1em;
-    color: #5c6e52; /* 桦木灰绿 */
+    color: #35f038; /* ef-bio cursor 荧光绿 */
+    text-shadow: 0 0 8px rgba(53, 240, 56, 0.35);
 }
 .app-subtitle {
     font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
     font-size: 0.7rem;
-    color: #7a7d74;
+    color: #808f80; /* ef-bio fg-dim */
     letter-spacing: 0.05em;
 }
 #episode-selector {
@@ -57,9 +56,9 @@ html, body {
     min-width: 0;
     font-size: 0.85rem;
     border-radius: 2px;
-    border: 1px solid #c5c1b2;
-    background-color: #fcfbf7;
-    color: #2f3230;
+    border: 1px solid #505250; /* ef-bio bg-active */
+    background-color: #222522; /* bg-dim */
+    color: #cfdfd5;
 }
 
 /* 当前文章标题区 */
@@ -72,40 +71,40 @@ html, body {
     font-family: Georgia, "Times New Roman", "Songti SC", SimSun, serif;
     font-size: 1.35rem;
     font-weight: 700;
-    color: #2f5d3a; /* 深叶绿 */
+    color: #37aff6; /* ef-bio blue */
     margin: 0 0 0.15rem 0;
     min-height: 1.6em;
 }
 .episode-title.done {
-    color: #3d6b4f; /* 森林绿 */
+    color: #3fb83f; /* ef-bio green */
 }
-.episode-title .t-letter-ok { color: #3d6b4f; }
-.episode-title .t-letter-rest { opacity: 0.4; }
+.episode-title .t-letter-ok { color: #3fb83f; }
+.episode-title .t-letter-rest { opacity: 0.45; }
 .episode-title .t-letter-bad {
-    color: #fcfbf7;
-    background-color: #a8502e; /* 枫红褐 */
+    color: #111111;
+    background-color: #ef6560; /* ef-bio red */
     border-radius: 2px;
 }
 .episode-meta-row {
     font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
     font-size: 0.75rem;
-    color: #7a7d74;
+    color: #808f80;
     display: flex;
     align-items: baseline;
     gap: 0.9rem;
     flex-wrap: wrap;
 }
 .episode-meta-row a {
-    color: #4a7050;
+    color: #6fc5ef; /* ef-bio cyan */
     text-decoration: none;
 }
 .episode-meta-row a:hover {
     text-decoration: underline;
 }
 .remaining-days {
-    color: #8a6d3b;
-    background-color: #f2efe3;
-    border: 1px solid #d9d2ba;
+    color: #d4aa02; /* ef-bio yellow */
+    background-color: #222522;
+    border: 1px solid #505250;
     border-radius: 2px;
     padding: 0 0.35em;
     margin-left: 0.4em;
@@ -114,30 +113,48 @@ html, body {
 #notice {
     margin: 0.7rem 0 0 0;
     border-radius: 2px;
-    background-color: #f6ede4;
-    border: 1px solid #e3cdb8;
-    border-left: 4px solid #a8502e;
-    color: #7c4a2c;
+    background-color: #65201a; /* ef-bio bg-red-subtle */
+    border: 1px solid #b02930; /* bg-red-intense */
+    color: #ef6560;
 }
 
-/* ---- 对白区：桦皮纸面 ---- */
-#dialog-display {
+/* ---- 打字纸面：wrapper 定位翻译条，dialog 滚动 ---- */
+#dialog-area {
+    position: relative;
     flex: 1;
-    overflow-y: auto;
+    min-height: 0;
     margin-top: 0.7rem;
-    padding: 1rem 1.1rem 0.6rem 1.1rem;
-    background-color: #fcfbf7;
-    border: 1px solid #d9d5c8;
+}
+#dialog-display {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow-y: auto;
+    /* 底部留出翻译条渐隐带高度，避免末行文字长期藏在条后 */
+    padding: 1rem 1.1rem 7rem 1.1rem;
+    background-color: #161716; /* bg-main 微亮变体（纸面） */
+    border: 1px solid #222522;
     border-radius: 3px;
     font-family: Georgia, "Times New Roman", "Songti SC", SimSun, serif;
     font-size: 1.1rem;
     line-height: 1.95;
     text-align: left;
     overscroll-behavior: contain;
-    position: relative;
 }
 
-/* 对话回合：说话人灰绿小字标签 */
+/* 打字机纸带引带：首尾空白使第一行/最后一行都能滚到视口中央
+   （scrollIntoView block:center 不被滚动边界钳制） */
+.paper-lead, .paper-tail {
+    flex: none;
+    width: 100%;
+}
+.paper-lead { height: calc(50vh - 140px); min-height: 3rem; }
+.paper-tail { height: calc(50vh - 110px); min-height: 5rem; }
+
+/* 对话回合：说话人 fg-dim 等宽小字标签 */
 .turn {
     display: flex;
     gap: 0.8rem;
@@ -153,45 +170,45 @@ html, body {
     font-size: 0.7rem;
     font-weight: 700;
     letter-spacing: 0.06em;
-    color: #5c6e52;
+    color: #8fcfaf; /* ef-bio fg-alt */
     white-space: nowrap;
 }
 .speaker-badge::before {
     content: "· ";
-    color: #a8ab9e;
+    color: #808f80;
 }
-.speaker-c0 { color: #546a5b; }
-.speaker-c1 { color: #7a5c50; }
-.speaker-c2 { color: #4a7050; }
-.speaker-c3 { color: #6a5f7a; }
-.speaker-c4 { color: #7a6a3f; }
+.speaker-c0 { color: #8fcfaf; }
+.speaker-c1 { color: #d38faf; } /* ef-bio magenta */
+.speaker-c2 { color: #3fb83f; } /* green */
+.speaker-c3 { color: #37aff6; } /* blue */
+.speaker-c4 { color: #d4aa02; } /* yellow */
 .turn-text {
     margin: 0;
     flex: 1;
     word-wrap: break-word;
 }
 
-/* 词态：森林绿系 */
+/* 词态：ef-bio 语义色 */
 .word-correct {
-    color: #3d6b4f; /* 森林绿 */
+    color: #3fb83f; /* ef-bio green */
     position: relative;
 }
 .current-word {
-    background-color: #d8e8c4; /* 嫩叶绿 */
-    color: #2f3230;
+    background-color: #0a4425; /* ef-bio bg-green-subtle */
+    color: #7fc07f; /* green-faint 亮绿 */
     border-radius: 2px;
-    box-shadow: inset 0 -2px 0 #93b27a; /* 叶脉下划线 */
+    box-shadow: inset 0 -2px 0 #407430; /* bg-green-intense 作下划线 */
 }
 .letter-ok {
-    color: #3d6b4f;
+    color: #3fb83f;
 }
 .letter-bad {
-    color: #fcfbf7;
-    background-color: #a8502e;
+    color: #111111;
+    background-color: #ef6560; /* ef-bio red */
     border-radius: 2px;
 }
 .letter-rest {
-    opacity: 0.55;
+    opacity: 0.6;
 }
 .ltr-punct {
     opacity: 0.55;
@@ -205,18 +222,19 @@ html, body {
     animation: strike 110ms ease-out;
 }
 @keyframes strike {
-    from { filter: brightness(1.9); }
+    from { filter: brightness(2.1); }
     to { filter: brightness(1); }
 }
 
-/* 闪烁块状光标：净零宽（border 被负 margin 完全抵消） */
+/* 闪烁块状光标：净零宽 + 荧光绿微光（ef-bio cursor） */
 .caret {
     display: inline-block;
     width: 0;
     height: 1.05em;
-    border-left: 2px solid #5c6e52; /* 桦木灰绿 */
+    border-left: 2px solid #35f038; /* ef-bio cursor */
     margin-left: -2px;
     vertical-align: -0.15em;
+    box-shadow: 0 0 6px rgba(53, 240, 56, 0.5);
     animation: caret-blink 1s step-end infinite;
 }
 @keyframes caret-blink {
@@ -224,7 +242,7 @@ html, body {
     50% { opacity: 0; }
 }
 
-/* 行内词翻译：桦皮深灰底浮层（脱离文档流零重排） */
+/* 行内词翻译：bg-blue-subtle 深蓝底浮层（脱离文档流零重排） */
 .gloss {
     position: absolute;
     bottom: calc(100% + 3px);
@@ -232,10 +250,10 @@ html, body {
     transform: translateX(-50%);
     padding: 0.05rem 0.5rem;
     border-radius: 2px;
-    background-color: #3a4034; /* 桦皮深灰绿 */
-    border: 1px solid #4d554a;
-    box-shadow: 0 1px 3px rgba(47, 50, 48, 0.25);
-    color: #eef1e8;
+    background-color: #1a3863; /* ef-bio bg-blue-subtle */
+    border: 1px solid #37aff6;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    color: #cfdfd5;
     font-family: -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
     font-size: 0.68em;
     font-weight: 400;
@@ -247,9 +265,9 @@ html, body {
     z-index: 10;
 }
 .gloss.ctx {
-    background-color: #34523c; /* 深叶绿 */
-    border-color: #4a7050;
-    color: #e8f1e4;
+    background-color: #113e57; /* ef-bio bg-cyan-subtle */
+    border-color: #6fc5ef;
+    color: #e8f4fa;
 }
 .gloss .gloss-tag {
     margin-right: 0.25em;
@@ -257,27 +275,29 @@ html, body {
     opacity: 0.7;
 }
 
-/* 整句翻译条：对话区底部固定（sticky）——浮于幽灵预览之上，
-   不占文档流（零布局位移）、不遮打字焦点（焦点居中，条贴底缘） */
+/* 整句翻译条：wrapper 内 absolute 钉底——无论内容长短都贴对话区底缘，
+   修复大显示器上内容不满时 sticky 浮在半空的问题 */
 #sentence-bar {
-    position: sticky;
+    position: absolute;
+    left: 0;
+    right: 0;
     bottom: 0;
     display: block;
-    margin: 0.4rem -1.1rem -0.6rem -1.1rem; /* 抵消对话区内边距，通栏贴底 */
-    padding: 1.1rem 1.1rem 0.55rem 1.1rem; /* 顶部留渐隐过渡带 */
-    background: linear-gradient(180deg, rgba(252, 251, 247, 0) 0, rgba(237, 242, 226, 0.9) 40%, #edf2e2 100%);
+    padding: 1.2rem 1.1rem 0.6rem 1.1rem; /* 顶部渐隐过渡带 */
+    background: linear-gradient(180deg, rgba(22, 23, 22, 0) 0, rgba(22, 23, 22, 0.92) 45%, #161716 100%);
     font-family: -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
     font-size: 0.95rem;
-    color: #2f3a2c;
+    color: #cfdfd5;
     text-align: left;
     min-height: 1.3em;
     pointer-events: none;
     z-index: 5;
+    border-radius: 0 0 3px 3px;
 }
 #sentence-bar .sb-inner {
     display: inline-block;
-    background-color: #edf2e2;
-    border-left: 4px solid #4a7050;
+    background-color: #222522; /* bg-dim */
+    border-left: 4px solid #3fb83f; /* green */
     border-radius: 2px;
     padding: 0.25rem 0.8rem;
     max-width: 100%;
@@ -296,7 +316,7 @@ html, body {
     z-index: -1;
 }
 
-/* ---- 提示行：孔式虚线顶线 + 等宽小字 ---- */
+/* ---- 提示行 ---- */
 .app-footer {
     display: flex;
     justify-content: space-between;
@@ -304,25 +324,24 @@ html, body {
     gap: 1rem;
     margin: 0.55rem 0 0 0;
     padding: 0.45rem 0.2rem 0 0.2rem;
-    border-top: 2px solid transparent;
-    border-image: repeating-linear-gradient(90deg, #b9b4a4 0 14px, transparent 14px 24px) 1;
+    border-top: 1px solid #222522;
     font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
     font-size: 0.75rem;
-    color: #7a7d74;
+    color: #808f80;
 }
 #hint-current .hw {
-    color: #2f3230;
+    color: #cfdfd5;
     font-weight: 700;
     font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 #mute-toggle {
     cursor: pointer;
     user-select: none;
-    color: #7a7d74;
+    color: #808f80;
     margin-left: 0.6em;
 }
 #mute-toggle:hover {
-    color: #2f3230;
+    color: #cfdfd5;
 }
 
 /* 手机 */
