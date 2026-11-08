@@ -195,6 +195,13 @@ html, body {
 }
 
 /* 词态：ef-spring 语义色 */
+/* 整词不拆行：逐字母 span 之间浏览器可自由换行，长词跨行时会出现
+   已打字母留在上一行、未打字母在下一行的断裂——与普通文本节点的
+   整词保护行为对齐 */
+.word-correct, .current-word, .word-future, .t-word {
+    white-space: nowrap;
+}
+
 .word-correct {
     color: #1a870f; /* ef-spring green */
     position: relative;

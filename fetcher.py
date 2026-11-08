@@ -621,10 +621,21 @@ sentences 数组长度必须与输入句数一致。
 """
 
 
+# 句边界 = 句末标点(可连续/省略号) + 可选收尾引号/括号 + 空白；切点在引号之后。
+# BBC 大量使用 'Could vaccines cure cancer?' 式引号句，纯 (?<=[.!?])\s+ 会在 ? 与 ' 之间
+# 漏切——与前端 JS 的 splitSentences() 同构（同正则同算法），保证数据 sentences
+# 与前端逐词归属对齐。缩写（Mr. 等）容忍误差。
+SENTENCE_BOUNDARY_RE = re.compile(r'([.!?]+["' + "'" + r'\u201d\u2019)]*)\s+')
+
+
 def split_sentences(text: str) -> list[str]:
-    """按句末标点切分（.!? 后跟空白）；与前端 JS 的 split(/(?<=[.!?])\s+/) 同构，
-    保证数据 sentences 与前端逐词归属对齐。缩写（Mr. 等）容忍误差。"""
-    return [s.strip() for s in re.split(r"(?<=[.!?])\s+", text) if s.strip()]
+    parts, last = [], 0
+    for m in SENTENCE_BOUNDARY_RE.finditer(text):
+        parts.append(text[last : m.end(1)])
+        last = m.end()
+    parts.append(text[last:])
+    return [p.strip() for p in parts if p.strip()]
+
 
 
 def generate_episode_translations(title: str, sentences: list[str], api_key: str) -> dict:
@@ -1028,9 +1039,12 @@ def build(days: int, no_llm: bool, no_audio: bool = False, rebake: bool = False)
                 continue
             elif not no_llm and api_key and existing and "transcript" in existing \
                     and (not existing.get("sentences")
-                         or not any(s.get("translation") for s in existing.get("sentences") or [])):
-                # 老数据一次性升级：句子翻译缺失时按句子粒度补生成（含标题翻译）
-                log(f"补句子翻译：{meta['id']}")
+                         or not any(s.get("translation") for s in existing.get("sentences") or [])
+                         or [s.get("text") for s in existing.get("sentences") or []]
+                            != split_sentences(existing["transcript"])):
+                # 老数据升级：翻译缺失，或句子切分与当前切分器不一致（切分规则
+                # 迭代过引号感知版本）→ 按句子粒度重新生成（含标题翻译）
+                log(f"补句子翻译：{meta['id']}（缺失/切分漂移）")
                 translations = generate_episode_translations(
                     existing.get("title", ""),
                     split_sentences(existing["transcript"]),

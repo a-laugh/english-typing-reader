@@ -410,6 +410,24 @@ function speakerClass(name) {
     return SPEAKER_CLASSES[h % SPEAKER_CLASSES.length];
 }
 
+// 句边界切分：与 fetcher.py 的 split_sentences 同构（同正则同算法），仅作老数据兜底；
+// 数据侧 sentences 由构建期生成并落盘，正常路径不执行此函数
+function splitSentences(text) {
+    // 与 fetcher.py 的 SENTENCE_BOUNDARY_RE 同构：句末标点+可选收尾引号/括号+空白，
+    // 切点在引号之后（?' 式引号句不漏切）
+    const re = /([.!?]+["'\u201d\u2019)]*)\s+/g;
+    const parts = [];
+    let last = 0;
+    let m;
+    while ((m = re.exec(text)) !== null) {
+        parts.push(text.slice(last, m.index + m[1].length));
+        last = m.index + m[0].length;
+        re.lastIndex = last;
+    }
+    parts.push(text.slice(last));
+    return parts.filter((p) => p.trim());
+}
+
 function flattenEpisode() {
     // 兼容无 turns 的旧数据：由 transcript 构造单一伪回合
     episodeTurns = currentEpisode.turns && currentEpisode.turns.length
@@ -428,8 +446,7 @@ function flattenEpisode() {
     if (Array.isArray(currentEpisode.sentences) && currentEpisode.sentences.length > 0) {
         episodeSentences = currentEpisode.sentences;
     } else {
-        episodeSentences = currentEpisode.transcript
-            .split(/(?<=[.!?])\s+/).filter(Boolean)
+        episodeSentences = splitSentences(currentEpisode.transcript)
             .map((text) => ({ text, translation: "" }));
     }
     // 逐词归属句子：按各句词数累进（句子来自同一 transcript 的同构切分，词序天然对齐）

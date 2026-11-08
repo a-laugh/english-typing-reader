@@ -626,6 +626,20 @@ def test_split_sentences():
         "No...",       # 省略号本身是句末标点（前后端同构，对齐不受影响）
         "maybe not.",
     ]
+    # 引号包句（实测 261105 bug：?' 后跟换行曾漏切，导致整句翻译错位）
+    quoted = "we'll be asking, 'Could vaccines cure cancer?'\nOK. Well, many."
+    assert fetcher.split_sentences(quoted) == [
+        "we'll be asking, 'Could vaccines cure cancer?'",
+        "OK.",
+        "Well, many.",
+    ]
+    # 括号/双引号收尾同样在切点之前（"No!" 是完整引语句，其后切分）
+    assert fetcher.split_sentences('(Really?) Yes. He said "No!" twice.') == [
+        "(Really?)",
+        "Yes.",
+        'He said "No!"',
+        "twice.",
+    ]
     assert fetcher.split_sentences("One sentence only") == ["One sentence only"]
     assert fetcher.split_sentences("") == []
 
