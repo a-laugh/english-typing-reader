@@ -644,6 +644,24 @@ def test_split_sentences():
     assert fetcher.split_sentences("") == []
 
 
+def test_split_units_clause_level():
+    """翻译单元 = 子句：句内逗号/冒号/分号切分（两侧 >=4 词才切），词数守恒。"""
+    text = ("Hi Neil. In this episode of 6 Minute English, we'll be looking at some new research, "
+            "and we'll be asking the question, 'Could vaccines cure cancer?'\nOK. Yes, of course.")
+    units = fetcher.split_units(text)
+    assert units == [
+        "Hi Neil.",
+        "In this episode of 6 Minute English,",       # 逗号后两侧均 >=4 词 → 切
+        "we'll be looking at some new research,",
+        "and we'll be asking the question,",
+        "'Could vaccines cure cancer?'",
+        "OK.",
+        "Yes, of course.",   # 两侧不足 4 词，不切
+    ], units
+    # 词数守恒（对齐前提）
+    assert sum(len(u.split()) for u in units) == len(text.split())
+
+
 def test_generate_episode_translations(monkeypatch):
     """一次调用生成标题+逐句翻译；围栏 JSON 容错解析。"""
     import threading

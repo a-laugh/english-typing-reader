@@ -428,6 +428,31 @@ function splitSentences(text) {
     return parts.filter((p) => p.trim());
 }
 
+// 翻译单元 = 子句：句内再按逗号/冒号/分号切（两侧 ≥4 词才切），与
+// fetcher.py 的 split_units 同构——仅作老数据兜底，正常数据由构建期落盘
+const CLAUSE_MIN_WORDS = 4;
+function splitUnits(text) {
+    const units = [];
+    for (const sent of splitSentences(text)) {
+        const re = /(?<=[,:;])\s+/g;
+        let subLast = 0;
+        let m;
+        while ((m = re.exec(sent)) !== null) {
+            const cand = sent.slice(subLast, m.index);
+            const rest = sent.slice(m.index + m[0].length);
+            if (cand.trim().split(/\s+/).length >= CLAUSE_MIN_WORDS
+                && rest.trim().split(/\s+/).length >= CLAUSE_MIN_WORDS) {
+                if (cand.trim()) units.push(cand.trim());
+                subLast = m.index + m[0].length;
+            }
+            // lookbehind 匹配零宽：lastIndex 需手动推进避免死循环
+            re.lastIndex = m.index + m[0].length;
+        }
+        units.push(sent.slice(subLast).trim());
+    }
+    return units.filter((u) => u);
+}
+
 function flattenEpisode() {
     // 兼容无 turns 的旧数据：由 transcript 构造单一伪回合
     episodeTurns = currentEpisode.turns && currentEpisode.turns.length
@@ -446,7 +471,7 @@ function flattenEpisode() {
     if (Array.isArray(currentEpisode.sentences) && currentEpisode.sentences.length > 0) {
         episodeSentences = currentEpisode.sentences;
     } else {
-        episodeSentences = splitSentences(currentEpisode.transcript)
+        episodeSentences = splitUnits(currentEpisode.transcript)
             .map((text) => ({ text, translation: "" }));
     }
     // 逐词归属句子：按各句词数累进（句子来自同一 transcript 的同构切分，词序天然对齐）

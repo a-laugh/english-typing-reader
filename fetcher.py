@@ -612,8 +612,8 @@ def _parse_json_block(text: str):
     raise ValueError(f"输出中找不到可解析的 JSON 对象（{last_error}）")
 
 
-EPISODE_TRANSLATIONS_PROMPT = """你是专业译者。下面是 BBC 6 Minute English 一期节目的标题与逐句对白
-（已按句切分并编号）。请给出标题的中文翻译和每个句子的简洁中文翻译（口语化）。
+EPISODE_TRANSLATIONS_PROMPT = """你是专业译者。下面是 BBC 6 Minute English 一期节目的标题与逐条对白
+（已按子句/短句切分并编号）。请给出标题的中文翻译和每条的简洁中文翻译（口语化）。
 
 仅输出一个 JSON 对象（不要任何其他文字），格式：
 {"title": "标题中文翻译", "sentences": ["第1句中文", "第2句中文", ...]}
@@ -636,6 +636,30 @@ def split_sentences(text: str) -> list[str]:
     parts.append(text[last:])
     return [p.strip() for p in parts if p.strip()]
 
+
+
+# 子句内分隔：逗号/冒号/分号 + 空白。两侧都至少 CLAUSE_MIN_WORDS 词才切，
+# 避免把 "Yes, of course." / "Hi, Neil." 之类短语切碎
+CLAUSE_BREAK_RE = re.compile(r"(?<=[,:;])\s+")
+CLAUSE_MIN_WORDS = 4
+
+
+def split_units(text: str) -> list[str]:
+    """翻译单元 = 子句：整句切分后，句内再按逗号/冒号/分号切（短于 4 词不切）。
+    整句动辄 30-50 词太长（实测 261105 最长 52 词），子句粒度（实测均 8.7 词）
+    打完即翻、反馈更即时。与前端 JS 的 splitUnits() 同构。"""
+    units = []
+    for sent in split_sentences(text):
+        sub_last = 0
+        for cm in CLAUSE_BREAK_RE.finditer(sent):
+            cand = sent[sub_last : cm.start()]
+            rest = sent[cm.end() :]
+            if len(cand.split()) >= CLAUSE_MIN_WORDS and len(rest.split()) >= CLAUSE_MIN_WORDS:
+                if cand.strip():
+                    units.append(cand.strip())
+                sub_last = cm.end()
+        units.append(sent[sub_last:].strip())
+    return [u for u in units if u]
 
 
 def generate_episode_translations(title: str, sentences: list[str], api_key: str) -> dict:
@@ -687,8 +711,9 @@ def generate_episode_translations(title: str, sentences: list[str], api_key: str
 
 
 def bake_sentences(episode: dict, translations: dict) -> list[dict]:
-    """把切分结果与 LLM 翻译组装成 sentences: [{text, translation}]（对齐兜底）。"""
-    sents = [{"text": s, "translation": ""} for s in split_sentences(episode["transcript"])]
+    """把切分结果与 LLM 翻译组装成 sentences: [{text, translation}]（对齐兜底）。
+    JSON 字段名保留 sentences（前端契约），内容为子句级翻译单元。"""
+    sents = [{"text": s, "translation": ""} for s in split_units(episode["transcript"])]
     tr_list = translations.get("sentences")
     if isinstance(tr_list, list):
         for i, tr in enumerate(tr_list):
@@ -1041,13 +1066,13 @@ def build(days: int, no_llm: bool, no_audio: bool = False, rebake: bool = False)
                     and (not existing.get("sentences")
                          or not any(s.get("translation") for s in existing.get("sentences") or [])
                          or [s.get("text") for s in existing.get("sentences") or []]
-                            != split_sentences(existing["transcript"])):
+                            != split_units(existing["transcript"])):
                 # 老数据升级：翻译缺失，或句子切分与当前切分器不一致（切分规则
                 # 迭代过引号感知版本）→ 按句子粒度重新生成（含标题翻译）
                 log(f"补句子翻译：{meta['id']}（缺失/切分漂移）")
                 translations = generate_episode_translations(
                     existing.get("title", ""),
-                    split_sentences(existing["transcript"]),
+                    split_units(existing["transcript"]),
                     api_key,
                 )
                 existing["title_translation"] = str(translations.get("title", ""))
@@ -1080,7 +1105,7 @@ def build(days: int, no_llm: bool, no_audio: bool = False, rebake: bool = False)
                 )
                 translations = generate_episode_translations(
                     episode["title"],
-                    split_sentences(episode["transcript"]),
+                    split_units(episode["transcript"]),
                     api_key,
                 )
                 episode["title_translation"] = str(translations.get("title", ""))
