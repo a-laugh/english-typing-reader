@@ -3259,19 +3259,495 @@
       "phrase": "you've"
     }
   },
-  "title_translation": "空调是应对变暖世界的答案吗？",
+  "title_translation": "空调能拯救变暖的世界吗？",
   "sentences": [
     {
       "text": "Hi Neil.",
-      "translation": "你好，尼尔。"
+      "translation": "嗨，尼尔。"
     },
     {
       "text": "Hi Georgie.",
-      "translation": "你好，乔治。"
+      "translation": "嗨，乔琪。"
     },
     {
       "text": "So, Neil, we've just had a really hot summer in the UK.",
-      "translation": "所以尼尔，我们刚在英国经历了一个非常炎热的夏天。"
+      "translation": "尼尔，英国刚度过了一个特别热的夏天。"
+    },
+    {
+      "text": "Did you have air conditioning in your house?",
+      "translation": "你家里装空调了吗？"
+    },
+    {
+      "text": "I didn't have air conditioning in my house.",
+      "translation": "我家没装空调。"
+    },
+    {
+      "text": "I wish I had,",
+      "translation": "真希望装了，"
+    },
+    {
+      "text": "because it was really hot and I couldn't sleep.",
+      "translation": "因为实在太热了，我都睡不着觉。"
+    },
+    {
+      "text": "No, I had one of those big fans,",
+      "translation": "我用的是那种大风扇，"
+    },
+    {
+      "text": "which didn't always do its job.",
+      "translation": "但效果不太行。"
+    },
+    {
+      "text": "But there is a really serious side to this.",
+      "translation": "不过这事儿背后还有很严肃的一面。"
+    },
+    {
+      "text": "Heat records continue to be broken around the world.",
+      "translation": "世界各地的高温纪录不断被打破。"
+    },
+    {
+      "text": "You may be feeling that summers are getting too hot.",
+      "translation": "你可能也觉得夏天越来越热了。"
+    },
+    {
+      "text": "Have you been using air conditioning more to cope?",
+      "translation": "你有没有更多用空调来应对？"
+    },
+    {
+      "text": "If so, you're not alone.",
+      "translation": "如果有，你不是一个人。"
+    },
+    {
+      "text": "Experts are predicting that ten new air conditioning units will be installed every second for the next 30 years.",
+      "translation": "专家预测，未来30年每秒钟都会新安装10台空调。"
+    },
+    {
+      "text": "Today on 6 Minute English,",
+      "translation": "欢迎收听今天的《六分钟英语》，"
+    },
+    {
+      "text": "we're talking about this and whether air conditioning really is the best way to cope with a warming world.",
+      "translation": "我们要聊聊这个话题：空调真的是应对全球变暖的最佳办法吗？"
+    },
+    {
+      "text": "OK.",
+      "translation": "好的。"
+    },
+    {
+      "text": "As always, Neil, we'll start with a quiz question.",
+      "translation": "老规矩，尼尔，我们先来个测验题。"
+    },
+    {
+      "text": "So, modern air conditioning was invented in 1902,",
+      "translation": "现代空调发明于1902年，"
+    },
+    {
+      "text": "but what was it originally used for?",
+      "translation": "但它最初是用来做什么的？"
+    },
+    {
+      "text": "Is it: a) to protect people in hospitals,",
+      "translation": "选项：a) 保护医院里的病人，"
+    },
+    {
+      "text": "b) to dry ink,",
+      "translation": "b) 给墨水风干，"
+    },
+    {
+      "text": "or c) to clean air?",
+      "translation": "还是 c) 净化空气？"
+    },
+    {
+      "text": "Well, I have absolutely no idea, Georgie.",
+      "translation": "我完全不知道，乔琪。"
+    },
+    {
+      "text": "I'm going to guess and say c) clean air.",
+      "translation": "我猜是c) 净化空气吧。"
+    },
+    {
+      "text": "OK, Neil, we'll find out the answer at the end of the programme.",
+      "translation": "好，尼尔，节目最后揭晓答案。"
+    },
+    {
+      "text": "OK.",
+      "translation": "好的。"
+    },
+    {
+      "text": "Georgie, we've been talking about how uncomfortable the hot weather can make you feel in the summer.",
+      "translation": "乔琪，我们刚说到夏天炎热的天气让人多难受。"
+    },
+    {
+      "text": "Is air conditioning all about comfort, though?",
+      "translation": "但空调就是为了舒服吗？"
+    },
+    {
+      "text": "No, it's not just about comfort.",
+      "translation": "不，不只是为了舒服。"
+    },
+    {
+      "text": "Summer heat can be a real health issue as well.",
+      "translation": "夏季高温真的是个健康问题。"
+    },
+    {
+      "text": "It's thought that across Europe,",
+      "translation": "据估计，"
+    },
+    {
+      "text": "over 30,000 people died as a result of this summer's heat.",
+      "translation": "今年夏天整个欧洲有超过3万人死于高温。"
+    },
+    {
+      "text": "Dr Radhika Khosla, an expert in climatology,",
+      "translation": "气候学专家拉迪卡·科斯拉博士"
+    },
+    {
+      "text": "told BBC World Service's The Climate Question how important air conditioning can be:",
+      "translation": "在BBC《气候问题》节目里谈到了空调的重要性："
+    },
+    {
+      "text": "Actually, air conditioning is life-saving.",
+      "translation": "其实，空调是能救命的东西。"
+    },
+    {
+      "text": "You know, in Singapore,",
+      "translation": "你知道吗，在新加坡，"
+    },
+    {
+      "text": "when Lee Kuan Yew was asked what made civilisation possible in the tropics,",
+      "translation": "有人问李光耀是什么让热带地区的文明成为可能，"
+    },
+    {
+      "text": "he said it was air conditioning.",
+      "translation": "他说是空调。"
+    },
+    {
+      "text": "And there are so many large parts of the world where we would not be able to inhabit if we did not have air conditioning.",
+      "translation": "如果没有空调，世界上很多大面积的地区根本没法住人。"
+    },
+    {
+      "text": "So, Radhika is saying that air conditioning is life-saving.",
+      "translation": "拉迪卡是说空调能救命。"
+    },
+    {
+      "text": "It literally stops people from dying.",
+      "translation": "它真的能让人不因高温而死。"
+    },
+    {
+      "text": "Yes, and she makes the point that there are many parts of the world that we would not be able to inhabit – that means live in – without this technology.",
+      "translation": "对，她还指出，如果没有这项技术，世界许多地方我们都无法居住。"
+    },
+    {
+      "text": "OK Georgie.",
+      "translation": "好的，乔琪。"
+    },
+    {
+      "text": "So, it sounds like air conditioning has a lot of good things about it.",
+      "translation": "听起来空调好处很多啊。"
+    },
+    {
+      "text": "Is it all positive, though?",
+      "translation": "那它是百利而无一害吗？"
+    },
+    {
+      "text": "No.",
+      "translation": "不是。"
+    },
+    {
+      "text": "There are some serious downsides.",
+      "translation": "它也有一些严重的缺点。"
+    },
+    {
+      "text": "So, one big problem with air conditioning is the amount of energy it uses.",
+      "translation": "空调的一个大问题就是耗电量太大。"
+    },
+    {
+      "text": "Let's hear more from Radhika talking to The Climate Question:",
+      "translation": "我们再来听听拉迪卡在《气候问题》节目里怎么说的："
+    },
+    {
+      "text": "When air conditioning becomes the first,",
+      "translation": "当空调成为我们应对"
+    },
+    {
+      "text": "go-to solution for how we deal with the increased,",
+      "translation": "越来越、长期和极端高温的第一选择时——"
+    },
+    {
+      "text": "prolonged and extreme heat that we're going to face and are facing,",
+      "translation": "这种高温我们已经在面对了——"
+    },
+    {
+      "text": "it places stresses across the system that are not able to be met.",
+      "translation": "就会给电力系统带来无法承受的压力。"
+    },
+    {
+      "text": "So, you know, we're going to see the grid collapse.",
+      "translation": "所以我们将会看到电网崩溃，"
+    },
+    {
+      "text": "We're going to see emissions rise.",
+      "translation": "排放量上升，"
+    },
+    {
+      "text": "We're going to see all kinds of other impacts that actually are quite detrimental.",
+      "translation": "还会出现各种其他相当有害的影响。"
+    },
+    {
+      "text": "And we reach a vicious cycle,",
+      "translation": "于是我们就陷入了一个恶性循环，"
+    },
+    {
+      "text": "because then you're in a world where it's getting warmer.",
+      "translation": "因为到那时世界越来越热，"
+    },
+    {
+      "text": "We're using air conditioning to be able to protect ourselves.",
+      "translation": "我们靠空调保护自己，"
+    },
+    {
+      "text": "That's leading to more emissions and more energy use.",
+      "translation": "这又导致更多排放、更多能源消耗，"
+    },
+    {
+      "text": "That is then making the world warmer.",
+      "translation": "进而让世界更热，"
+    },
+    {
+      "text": "And then we need more air conditioning.",
+      "translation": "然后我们就需要更多空调。"
+    },
+    {
+      "text": "We heard about the grid.",
+      "translation": "我们刚听到“电网”这个词。"
+    },
+    {
+      "text": "The grid is the network that distributes electricity across towns, cities and countries.",
+      "translation": "电网就是把电输送到城镇、城市和各个国家的网络。"
+    },
+    {
+      "text": "If people are trying to use more electricity than it can cope with,",
+      "translation": "如果人们用电超过了它的承载能力，"
+    },
+    {
+      "text": "then the grid can collapse – you get power cuts,",
+      "translation": "电网就会崩溃——也就是停电，"
+    },
+    {
+      "text": "which is when you can't get any electricity.",
+      "translation": "就是完全没电可用。"
+    },
+    {
+      "text": "We heard that air conditioning creates emissions,",
+      "translation": "空调会产生排放，"
+    },
+    {
+      "text": "which can lead the world to warm up,",
+      "translation": "这会让全球变暖，"
+    },
+    {
+      "text": "which means we then need more air conditioning.",
+      "translation": "意味着我们需要更多空调。"
+    },
+    {
+      "text": "This makes the world even warmer and so on.",
+      "translation": "这让世界更热，如此循环。"
+    },
+    {
+      "text": "And Radhika calls this a vicious cycle.",
+      "translation": "拉迪卡称之为恶性循环。"
+    },
+    {
+      "text": "A vicious cycle, or a vicious circle,",
+      "translation": "恶性循环，"
+    },
+    {
+      "text": "is where a solution to a problem actually makes it worse,",
+      "translation": "就是解决问题的方法反而让问题更糟，"
+    },
+    {
+      "text": "which means you have to do more and that makes the problem even worse still.",
+      "translation": "结果你不得不做得更多，问题就更严重了。"
+    },
+    {
+      "text": "OK.",
+      "translation": "好。"
+    },
+    {
+      "text": "Well, that sounds like a bit of a problem.",
+      "translation": "这听起来确实是个麻烦。"
+    },
+    {
+      "text": "What are the solutions?",
+      "translation": "那有什么解决办法呢？"
+    },
+    {
+      "text": "Well, Radhika says that there are some things we should try first before using air conditioning,",
+      "translation": "拉迪卡说，在用空调之前，应该先尝试一些别的办法，"
+    },
+    {
+      "text": "which will still be important.",
+      "translation": "当然空调仍然很重要。"
+    },
+    {
+      "text": "Here she is again talking to The Climate Question.",
+      "translation": "她再次在《气候问题》节目里说道："
+    },
+    {
+      "text": "So, one of the most important things is to do passive cooling first.",
+      "translation": "最重要的一点是先做被动降温。"
+    },
+    {
+      "text": "Now, passive cooling is when we take steps to provide thermal comfort that are not energy intensive.",
+      "translation": "被动降温指的是用不耗能的措施来达到体感舒适。"
+    },
+    {
+      "text": "Some of the most important ones are first to cut solar gain,",
+      "translation": "其中最重要的措施之一就是减少太阳得热，"
+    },
+    {
+      "text": "which is through things like shading.",
+      "translation": "比如通过遮阳来实现。"
+    },
+    {
+      "text": "Passive cooling is where you cool your house down without using a lot of energy.",
+      "translation": "被动降温就是不费大量能源来给房子降温。"
+    },
+    {
+      "text": "Yes, heat from the sun can be blocked by shading,",
+      "translation": "对，太阳的热量可以被遮挡，"
+    },
+    {
+      "text": "which could be with trees, curtains or blinds.",
+      "translation": "可以用树木、窗帘或百叶窗来遮阳。"
+    },
+    {
+      "text": "OK Georgie.",
+      "translation": "好的，乔琪。"
+    },
+    {
+      "text": "So, passive cooling and shading – that sounds really easy.",
+      "translation": "被动降温和遮阳——听起来挺容易的。"
+    },
+    {
+      "text": "Is it that simple?",
+      "translation": "真有那么简单吗？"
+    },
+    {
+      "text": "No, that's not all we have to do.",
+      "translation": "不，光这些还不够。"
+    },
+    {
+      "text": "Radhika also talks about the importance of using sustainable energy to power the air conditioning that we still will need.",
+      "translation": "拉迪卡还谈到，用可持续能源来给我们仍然需要的空调供电也很重要。"
+    },
+    {
+      "text": "OK Georgie.",
+      "translation": "好了，乔琪，"
+    },
+    {
+      "text": "It's time, I think,",
+      "translation": "我觉得现在是时候"
+    },
+    {
+      "text": "for you to give the answer to the question you asked us.",
+      "translation": "请你公布刚才那个问题的答案了。"
+    },
+    {
+      "text": "Yes, Neil.",
+      "translation": "好的，尼尔。"
+    },
+    {
+      "text": "I asked you what modern air conditioning was used for when it was first invented in 1902.",
+      "translation": "我问你现代空调1902年刚发明时是用来做什么的。"
+    },
+    {
+      "text": "And I had a wild guess.",
+      "translation": "我胡乱猜了一下。"
+    },
+    {
+      "text": "I said c) to clean air.",
+      "translation": "我选了c) 净化空气。"
+    },
+    {
+      "text": "But you know what?",
+      "translation": "但你知道吗？"
+    },
+    {
+      "text": "I'm feeling pretty confident now.",
+      "translation": "我现在感觉相当有信心。"
+    },
+    {
+      "text": "Sadly, you are incorrect.",
+      "translation": "很遗憾，你答错了。"
+    },
+    {
+      "text": "The correct answer was b) to dry ink.",
+      "translation": "正确答案是b) 给墨水风干。"
+    },
+    {
+      "text": "It was invented by Willis Carrier at a printing company in Brooklyn, New York.",
+      "translation": "它是威利斯·开利在纽约布鲁克林一家印刷公司发明的。"
+    },
+    {
+      "text": "OK.",
+      "translation": "好的。"
+    },
+    {
+      "text": "Let's recap the vocabulary we learned in this programme,",
+      "translation": "我们来回顾一下本期节目学到的词汇，"
+    },
+    {
+      "text": "starting with life-saving, which describes something that stops people from dying.",
+      "translation": "首先是life-saving，指能挽救生命、防止人死去的东西。"
+    },
+    {
+      "text": "If it's possible to inhabit somewhere,",
+      "translation": "如果可以inhabit某个地方，"
+    },
+    {
+      "text": "that means it's possible to live there.",
+      "translation": "意思是可以在那里居住。"
+    },
+    {
+      "text": "The grid is the system or network that distributes electricity across towns, cities, and countries.",
+      "translation": "电网是把电力输送到城镇、城市和国家的系统或网络。"
+    },
+    {
+      "text": "A vicious cycle is where a solution to a problem also makes it worse,",
+      "translation": "恶性循环是指解决问题的办法反而让问题更糟，"
+    },
+    {
+      "text": "meaning the problem just keeps getting even worse as you try to fix it.",
+      "translation": "意思是越想解决问题，问题就越严重。"
+    },
+    {
+      "text": "Passive cooling is where you make a building cooler without using a lot of power.",
+      "translation": "被动降温就是不耗费大量电力来给建筑降温。"
+    },
+    {
+      "text": "And shading is blocking the sun's light and heat.",
+      "translation": "遮阳就是挡住太阳的光和热。"
+    },
+    {
+      "text": "Once again, our six minutes are up.",
+      "translation": "又到了我们六分钟结束的时候。"
+    },
+    {
+      "text": "Test what you've learned with the worksheet on our website, bbclearningenglish.com.",
+      "translation": "可以到我们网站bbclearningenglish.com上的练习页检验一下你学到的东西。"
+    },
+    {
+      "text": "Thank you for joining us.",
+      "translation": "感谢收听。"
+    },
+    {
+      "text": "Goodbye.",
+      "translation": "再见。"
+    },
+    {
+      "text": "Goodbye!",
+      "translation": "再见！"
     }
   ]
 }

@@ -3315,7 +3315,7 @@
       "phrase": "feed information"
     }
   },
-  "title_translation": "吃什么能让你睡得更好？",
+  "title_translation": "吃什么能让你睡个好觉？",
   "sentences": [
     {
       "text": "Hi Georgie.",
@@ -3327,303 +3327,443 @@
     },
     {
       "text": "Now, Phil, do you ever struggle to get a good night's sleep?",
-      "translation": "那，Phil，你有没有过晚上睡不好的时候？"
+      "translation": "那么，Phil，你有没有过晚上睡不好的时候？"
     },
     {
       "text": "You know, I do sometimes.",
       "translation": "你知道吗，我有时候确实会。"
     },
     {
-      "text": "If I've been thinking about something a lot, or even worse, if I've had a cup of coffee later than I should, sometimes I can lie there for hours.",
-      "translation": "如果我想事情想得太多，或者更糟的是，咖啡喝晚了，有时候我能躺好几个小时睡不着。"
+      "text": "If I've been thinking about something a lot,",
+      "translation": "如果我一直想着某件事，"
+    },
+    {
+      "text": "or even worse, if I've had a cup of coffee later than I should,",
+      "translation": "或者更糟的是，如果我不该喝咖啡的时候喝了杯咖啡，"
+    },
+    {
+      "text": "sometimes I can lie there for hours.",
+      "translation": "有时我会在床上躺好几个小时。"
     },
     {
       "text": "Yes.",
       "translation": "是的。"
     },
     {
-      "text": "Well, many of us will be familiar with that feeling of lying in bed, feeling really tired, but just not being able to go to sleep, but what causes us to struggle to sleep and is there anything we can do about it?",
-      "translation": "我们很多人都熟悉这种感觉：躺在床上很累，却就是睡不着。那到底是什么让我们难以入睡，我们又能做点什么呢？"
+      "text": "Well, many of us will be familiar with that feeling of lying in bed,",
+      "translation": "嗯，我们很多人都有过那种感觉：躺在床上，"
+    },
+    {
+      "text": "feeling really tired, but just not being able to go to sleep,",
+      "translation": "觉得特别累，却怎么也睡不着，"
+    },
+    {
+      "text": "but what causes us to struggle to sleep and is there anything we can do about it?",
+      "translation": "但到底是什么让我们难以入睡，我们能做点什么吗？"
     },
     {
       "text": "Well, researchers have for a while been interested in the link between what we eat and how we sleep.",
-      "translation": "研究人员一段时间以来一直对饮食和睡眠之间的关系很感兴趣。"
+      "translation": "其实，研究者们一段时间以来一直对饮食和睡眠之间的关系很感兴趣。"
     },
     {
-      "text": "Today on 6 Minute English, we'll be talking about this and asking, \"What should you eat for a better night's sleep?\"\nOK.",
-      "translation": "今天在《六分钟英语》里，我们就来聊聊这个话题，问问：\"吃什么能让你睡得更好？\""
+      "text": "Today on 6 Minute English,",
+      "translation": "今天的《六分钟英语》，"
+    },
+    {
+      "text": "we'll be talking about this and asking,",
+      "translation": "我们就来聊聊这个话题，并且问一问："
+    },
+    {
+      "text": "\"What should you eat for a better night's sleep?\"",
+      "translation": "“吃什么能让你睡得更好？”"
+    },
+    {
+      "text": "OK.",
+      "translation": "好的。"
     },
     {
       "text": "Phil, let's start with a quiz question.",
-      "translation": "好的。"
+      "translation": "Phil，我们先用一个测验问题开始。"
     },
     {
-      "text": "So, adults need between 7–9 hours sleep a night to stay healthy, according to experts, but what percentage of people in the UK say they get less than this?",
-      "translation": "Phil，我们先来个问答。"
+      "text": "So, adults need between 7–9 hours sleep a night to stay healthy,",
+      "translation": "专家说，成年人每晚需要7到9小时的睡眠才能保持健康，"
     },
     {
-      "text": "Is it: a) 15%, b) 25%, or c) 35%?",
-      "translation": "专家说，成年人每晚需要7到9小时的睡眠才能保持健康，但英国有多少人说自己睡眠不足这个标准呢？"
+      "text": "according to experts, but what percentage of people in the UK say they get less than this?",
+      "translation": "但英国有多少百分比的人说自己睡眠不足这个数呢？"
+    },
+    {
+      "text": "Is it: a) 15%,",
+      "translation": "是：a) 15%，"
+    },
+    {
+      "text": "b) 25%, or c) 35%?",
+      "translation": "b) 25%，还是 c) 35%？"
     },
     {
       "text": "OK.",
-      "translation": "是 a) 15%，b) 25%，还是 c) 35%？"
-    },
-    {
-      "text": "I think people find sleeping hard, so I think it's going to be c) 35%.",
       "translation": "好。"
     },
     {
+      "text": "I think people find sleeping hard,",
+      "translation": "我觉得大家觉得睡觉挺难的，"
+    },
+    {
+      "text": "so I think it's going to be c) 35%.",
+      "translation": "所以我猜是 c) 35%。"
+    },
+    {
       "text": "OK.",
-      "translation": "我觉得大家都觉得睡觉挺难的，所以我选 c) 35%。"
+      "translation": "好。"
     },
     {
       "text": "Well, we'll find out the answer later in the programme.",
-      "translation": "好的。"
-    },
-    {
-      "text": "Georgie, you've been looking at the research on this.",
       "translation": "我们稍后在节目里揭晓答案。"
     },
     {
+      "text": "Georgie, you've been looking at the research on this.",
+      "translation": "Georgie，你一直在看这方面的研究。"
+    },
+    {
       "text": "Do scientists think that what we eat affects how we sleep?",
-      "translation": "Georgie，你一直在研究这方面的资料。"
+      "translation": "科学家们认为我们吃什么会影响睡眠吗？"
     },
     {
       "text": "Yes, they do.",
-      "translation": "科学家认为我们的饮食会影响睡眠吗？"
-    },
-    {
-      "text": "Scientists have done some long-term studies.",
       "translation": "是的，他们这么认为。"
     },
     {
-      "text": "So, looking at large groups of people over a long period of time, and they found that a healthier diet is associated with better quality sleep.",
-      "translation": "科学家做了一些长期研究。"
+      "text": "Scientists have done some long-term studies.",
+      "translation": "科学家做过一些长期研究。"
+    },
+    {
+      "text": "So, looking at large groups of people over a long period of time,",
+      "translation": "也就是长时间跟踪大量人群，"
+    },
+    {
+      "text": "and they found that a healthier diet is associated with better quality sleep.",
+      "translation": "发现更健康的饮食与更好的睡眠质量相关。"
     },
     {
       "text": "They've also done some smaller studies looking in more detail at exactly what people are eating and then studying how they sleep in a laboratory.",
-      "translation": "也就是长期观察大群体的人，他们发现更健康的饮食与更好的睡眠质量相关。"
+      "translation": "他们还做了一些更小型的研究，更详细地观察人们具体吃什么，然后在实验室里研究他们的睡眠。"
     },
     {
       "text": "OK.",
-      "translation": "他们还做了一些更小型的研究，更详细地看人们具体吃什么，然后在实验室里研究他们的睡眠。"
+      "translation": "好。"
     },
     {
-      "text": "And in these studies, have they found that particular foods are better for our sleep than others?",
-      "translation": "好的。"
+      "text": "And in these studies,",
+      "translation": "在这些研究中，"
+    },
+    {
+      "text": "have they found that particular foods are better for our sleep than others?",
+      "translation": "他们有没有发现某些食物比其他食物更有助于睡眠？"
     },
     {
       "text": "Well, it's less about particular foods and more about particular nutrients.",
-      "translation": "在这些研究中，他们有没有发现某些食物比其他的更有利于睡眠？"
+      "translation": "其实关键不在于特定的食物，而在于特定的营养素。"
     },
     {
       "text": "So, nutrients means important things your body needs to survive and be healthy.",
-      "translation": "其实关键不在某种具体食物，而在于特定的营养素。"
+      "translation": "营养素指的是身体生存和保持健康所需要的重要物质。"
     },
     {
       "text": "For example, protein is a nutrient.",
-      "translation": "营养素指的是身体生存和保持健康所需的重要物质。"
-    },
-    {
-      "text": "BBC World Service programme The Food Chain has been speaking to researcher Professor Marie-Pierre St-Onge about which nutrients are important for sleep.",
       "translation": "比如，蛋白质就是一种营养素。"
     },
     {
-      "text": "So, diets that look more like a Mediterranean pattern – higher in fruits and vegetables, whole grains, lower in animal-based foods, lower in sugar.",
-      "translation": "BBC World Service 的节目 The Food Chain 采访了研究员 Marie-Pierre St-Onge 教授，谈哪些营养素对睡眠很重要。"
+      "text": "BBC World Service programme The Food Chain has been speaking to researcher Professor Marie-Pierre St-Onge about which nutrients are important for sleep.",
+      "translation": "BBC世界服务频道的节目《食物链》采访了研究者Marie-Pierre St-Onge教授，谈谈哪些营养素对睡眠很重要。"
     },
     {
-      "text": "But then from our own research, where we evaluate food intakes in the lab, we see different...",
-      "translation": "那些更像地中海模式的饮食——水果蔬菜多、全谷物多，动物性食品少、糖少。"
+      "text": "So, diets that look more like a Mediterranean pattern – higher in fruits and vegetables,",
+      "translation": "那些更像地中海式饮食模式的饮食——水果和蔬菜较多，"
+    },
+    {
+      "text": "whole grains, lower in animal-based foods, lower in sugar.",
+      "translation": "全谷物较多，动物性食物较少，糖较少。"
+    },
+    {
+      "text": "But then from our own research,",
+      "translation": "但从我们自己的研究来看，"
+    },
+    {
+      "text": "where we evaluate food intakes in the lab, we see different...",
+      "translation": "我们在实验室里评估食物摄入时，看到的是不同的……"
     },
     {
       "text": "similar patterns, really.",
-      "translation": "但根据我们自己在实验室里评估食物摄入的研究，我们也看到了不同……"
+      "translation": "其实是相似的模式。"
     },
     {
-      "text": "But when we talk about nutrients, diets that are higher in fibre, which we find in fruits and vegetables and whole grains, and lower in saturated fats, which we find in more plant-based types of foods, are associated with more deep sleep at night.",
-      "translation": "其实是很相似的模式。"
+      "text": "But when we talk about nutrients,",
+      "translation": "但当我们谈到营养素时，"
+    },
+    {
+      "text": "diets that are higher in fibre,",
+      "translation": "富含纤维的饮食——"
+    },
+    {
+      "text": "which we find in fruits and vegetables and whole grains,",
+      "translation": "纤维存在于水果、蔬菜和全谷物中——"
+    },
+    {
+      "text": "and lower in saturated fats,",
+      "translation": "同时饱和脂肪较少，"
+    },
+    {
+      "text": "which we find in more plant-based types of foods,",
+      "translation": "饱和脂肪主要存在于植物性食物中，"
+    },
+    {
+      "text": "are associated with more deep sleep at night.",
+      "translation": "这样的饮食与夜间更多深度睡眠相关。"
     },
     {
       "text": "Marie-Pierre says that Mediterranean-style diets are associated with good sleep.",
-      "translation": "但说到营养素，纤维含量高（存在于水果、蔬菜和全谷物中）、饱和脂肪含量低（在植物性食物里也有）的饮食，与夜间更多深度睡眠相关。"
+      "translation": "Marie-Pierre说地中海式饮食与良好睡眠相关。"
     },
     {
       "text": "A Mediterranean diet includes lots of vegetables and less animal-based foods such as meat and dairy.",
-      "translation": "Marie-Pierre 说地中海式饮食与好睡眠相关。"
+      "translation": "地中海饮食包括大量蔬菜，以及较少的动物性食物，比如肉类和奶制品。"
     },
     {
-      "text": "Yes, and Marie-Pierre's own research shows that some nutrients, such as fibre, are important for sleep and others, such as saturated fats, are less important.",
-      "translation": "地中海饮食包括大量蔬菜，较少的肉类和乳制品等动物性食物。"
+      "text": "Yes, and Marie-Pierre's own research shows that some nutrients,",
+      "translation": "是的，Marie-Pierre自己的研究表明，某些营养素，"
+    },
+    {
+      "text": "such as fibre, are important for sleep and others,",
+      "translation": "比如纤维，对睡眠很重要，而另一些，"
+    },
+    {
+      "text": "such as saturated fats, are less important.",
+      "translation": "比如饱和脂肪，就没那么重要。"
     },
     {
       "text": "Saturated fat is a type of fat mainly found in meat and dairy that's thought to be bad for your health.",
-      "translation": "是的，Marie-Pierre 自己的研究表明，某些营养素比如纤维对睡眠很重要，而另一些比如饱和脂肪就没那么重要。"
+      "translation": "饱和脂肪是一种主要存在于肉类和奶制品中的脂肪，被认为对健康有害。"
     },
     {
       "text": "Right.",
-      "translation": "饱和脂肪是一种主要存在于肉类和乳制品中的脂肪，被认为对健康有害。"
-    },
-    {
-      "text": "And according to Marie-Pierre, eating less saturated fat and more nutrients like fibre is associated with more deep sleep at night.",
       "translation": "对。"
     },
     {
+      "text": "And according to Marie-Pierre,",
+      "translation": "根据Marie-Pierre的说法，"
+    },
+    {
+      "text": "eating less saturated fat and more nutrients like fibre is associated with more deep sleep at night.",
+      "translation": "少吃饱和脂肪、多吃纤维等营养素，与夜间更多深度睡眠相关。"
+    },
+    {
       "text": "A deep sleep is when you are more fully asleep and your body is able to rest.",
-      "translation": "而且根据 Marie-Pierre 的说法，少吃饱和脂肪、多吃纤维这类营养素，与夜间更多深度睡眠相关。"
+      "translation": "深度睡眠是指你睡得更沉，身体能够得到休息。"
     },
     {
       "text": "So, Georgie, it sounds like thinking about our diets is important if we want to improve our sleep.",
-      "translation": "深睡眠是指你睡得更沉，身体能够得到休息的状态。"
+      "translation": "所以，Georgie，看来如果我们想改善睡眠，注意饮食是很重要的。"
     },
     {
       "text": "And now I've heard that certain foods have a lot of nutrients that can be helpful for sleep.",
-      "translation": "所以，Georgie，听起来如果我们想改善睡眠，注意饮食挺重要的。"
+      "translation": "我还听说有些食物含有大量对睡眠有帮助的营养素。"
     },
     {
       "text": "Is that true?",
-      "translation": "我还听说有些食物含有对睡眠有帮助的营养素。"
-    },
-    {
-      "text": "Well, there is some limited research on specific foods and their impact on sleep.",
       "translation": "是真的吗？"
     },
     {
-      "text": "So, for example, scientists have been studying kiwi fruits and also tart cherry juice.",
+      "text": "Well, there is some limited research on specific foods and their impact on sleep.",
       "translation": "关于特定食物及其对睡眠的影响，确实有一些有限的研究。"
     },
     {
+      "text": "So, for example, scientists have been studying kiwi fruits and also tart cherry juice.",
+      "translation": "比如，科学家们一直在研究猕猴桃，还有酸樱桃汁。"
+    },
+    {
       "text": "And you may also see adverts for supplements that claim to improve sleep.",
-      "translation": "比如，科学家一直在研究猕猴桃和酸樱桃汁。"
+      "translation": "你可能还看到过宣称能改善睡眠的补充剂的广告。"
     },
     {
-      "text": "Supplements are tablets you take, which contain particular nutrients that you might not get in your everyday diet.",
-      "translation": "你可能还见过声称能改善睡眠的补充剂的广告。"
+      "text": "Supplements are tablets you take,",
+      "translation": "补充剂是你服用的药片，"
     },
     {
-      "text": "But experts say that focusing on our whole diet, rather than one particular fruit or supplement, is going to be the most effective.",
-      "translation": "补充剂是你服用的药片，含有日常饮食中可能摄取不到的特定营养素。"
+      "text": "which contain particular nutrients that you might not get in your everyday diet.",
+      "translation": "含有你日常饮食中可能摄取不到的特定营养素。"
+    },
+    {
+      "text": "But experts say that focusing on our whole diet,",
+      "translation": "但专家说，关注我们整体的饮食，"
+    },
+    {
+      "text": "rather than one particular fruit or supplement,",
+      "translation": "而不是某种特定的水果或补充剂，"
+    },
+    {
+      "text": "is going to be the most effective.",
+      "translation": "才是最有效的方式。"
     },
     {
       "text": "Here's sleep doctor Allie Hare explaining more to BBC World Service programme The Food Chain.",
-      "translation": "但专家说，关注整体饮食，而不是某一种水果或补充剂，才是最有效的。"
+      "translation": "睡眠医生Allie Hare在BBC世界服务频道节目《食物链》中对此做了更多解释。"
     },
     {
       "text": "I think people are looking for the one supplement often or the...",
-      "translation": "睡眠医生 Allie Hare 在 BBC World Service 的节目 The Food Chain 上进一步解释了这一点。"
-    },
-    {
-      "text": "you know, we're fed a lot of these things, aren't we, on social media?",
       "translation": "我觉得人们常常在寻找某一种补充剂，或者……"
     },
     {
-      "text": "This magical powder or this magical tablet that you can take that will, you know, help you sleep better immediately from tonight.",
-      "translation": "你知道的，社交媒体上给我们灌输了好多这类东西，对吧？"
+      "text": "you know, we're fed a lot of these things,",
+      "translation": "你知道，我们总是被灌输这些东西，"
     },
     {
-      "text": "And of course, you know, Marie-Pierre and I know that there is no such magic bullet, unfortunately.",
-      "translation": "这种神奇粉末或神奇药片，吃了它今晚就能立刻睡得更好。"
+      "text": "aren't we, on social media?",
+      "translation": "对吧，在社交媒体上？"
     },
     {
-      "text": "And if there was, I'm sure, you know, we would be...",
-      "translation": "当然，Marie-Pierre 和我都知道，遗憾的是并没有这种灵丹妙药。"
+      "text": "This magical powder or this magical tablet that you can take that will,",
+      "translation": "这种神奇粉末，或者这种神奇药片，吃了之后，"
+    },
+    {
+      "text": "you know, help you sleep better immediately from tonight.",
+      "translation": "你知道，从今晚开始就能立刻睡得更好。"
+    },
+    {
+      "text": "And of course, you know,",
+      "translation": "当然了，你知道，"
+    },
+    {
+      "text": "Marie-Pierre and I know that there is no such magic bullet, unfortunately.",
+      "translation": "Marie-Pierre和我都知道，很遗憾，根本没有这样的灵丹妙药。"
+    },
+    {
+      "text": "And if there was,",
+      "translation": "如果真有的话，"
+    },
+    {
+      "text": "I'm sure, you know, we would be...",
+      "translation": "我敢肯定，我们早就……"
     },
     {
       "text": "we would be doing very well for ourselves.",
-      "translation": "如果真有的话，我相信我们会……"
+      "translation": "我们早就发财了。"
     },
     {
       "text": "Allie says people are looking for a supplement that can help them sleep.",
-      "translation": "我们会赚翻了。"
+      "translation": "Allie说人们都在寻找一种能帮助睡眠的补充剂。"
     },
     {
       "text": "Yes.",
-      "translation": "Allie 说人们在寻找能帮助睡眠的补充剂。"
-    },
-    {
-      "text": "She says we are fed information on social media about magical tablets.",
       "translation": "是的。"
     },
     {
-      "text": "If you are fed information, you are given lots of it in a continuous way.",
-      "translation": "她说社交媒体上不断给我们灌输关于神奇药片的信息。"
+      "text": "She says we are fed information on social media about magical tablets.",
+      "translation": "她说我们在社交媒体上被灌输了大量关于神奇药片的信息。"
     },
     {
-      "text": "But Allie argues that experts know there's no magic bullet to help you sleep, and a magic bullet refers to a simple and effective solution to a problem that's usually one that doesn't exist.",
-      "translation": "如果信息被\"喂\"给你，意思是你被持续不断地接收到大量这类信息。"
+      "text": "If you are fed information,",
+      "translation": "如果你被“喂”了信息，"
+    },
+    {
+      "text": "you are given lots of it in a continuous way.",
+      "translation": "意思是持续不断地接收到大量信息。"
+    },
+    {
+      "text": "But Allie argues that experts know there's no magic bullet to help you sleep,",
+      "translation": "但Allie认为，专家们知道没有什么帮助睡眠的灵丹妙药，"
+    },
+    {
+      "text": "and a magic bullet refers to a simple and effective solution to a problem that's usually one that doesn't exist.",
+      "translation": "“灵丹妙药”指的是一种简单有效的解决办法，通常是并不存在的那种。"
     },
     {
       "text": "OK.",
-      "translation": "但 Allie 认为专家们都知道没有帮助睡眠的灵丹妙药，\"magic bullet\"指的是一种简单有效的解决办法，而且通常这种办法并不存在。"
+      "translation": "好。"
     },
     {
       "text": "Well, now I think it's time to find out the answer to your quiz question, Georgie.",
-      "translation": "好的。"
+      "translation": "现在我觉得该揭晓你测验问题的答案了，Georgie。"
     },
     {
       "text": "Yes.",
-      "translation": "好了，现在该揭晓你那个问答题的答案了，Georgie。"
+      "translation": "好的。"
     },
     {
       "text": "I asked you what percentage of UK adults say they get less than seven hours sleep a night.",
-      "translation": "好的。"
+      "translation": "我问你，英国有多少百分比的成年人说他们每晚睡眠不足七小时。"
     },
     {
       "text": "And I said I thought it was c) 35%.",
-      "translation": "我问你，有多少百分比的英国成年人说自己每晚睡眠不足七小时。"
-    },
-    {
-      "text": "You are correct, Phil.",
       "translation": "我说我觉得是 c) 35%。"
     },
     {
-      "text": "Yes, 35% of adults say they get six hours or less sleep a night, according to a study by YouGov.",
-      "translation": "你答对了，Phil。"
+      "text": "You are correct, Phil.",
+      "translation": "答对了，Phil。"
+    },
+    {
+      "text": "Yes, 35% of adults say they get six hours or less sleep a night,",
+      "translation": "是的，35%的成年人说他们每晚睡眠只有六小时或更少，"
+    },
+    {
+      "text": "according to a study by YouGov.",
+      "translation": "这是根据YouGov的一项调查。"
     },
     {
       "text": "OK.",
-      "translation": "是的，根据 YouGov 的一项调查，35%的成年人说他们每晚睡眠只有六小时或更少。"
+      "translation": "好。"
     },
     {
-      "text": "Let's recap the vocabulary we learned in this programme, starting with nutrients, which are important things your body needs to survive and be healthy.",
-      "translation": "好的。"
+      "text": "Let's recap the vocabulary we learned in this programme,",
+      "translation": "我们来回顾一下本期节目中学到的词汇，"
+    },
+    {
+      "text": "starting with nutrients, which are important things your body needs to survive and be healthy.",
+      "translation": "首先是“营养素”，指身体生存和保持健康所需要的重要物质。"
     },
     {
       "text": "Saturated fats are fats mainly found in meat and dairy products that are thought to be bad for our health.",
-      "translation": "我们来回顾一下这期节目学到的词汇，从营养素开始，它是身体生存和保持健康所需的重要物质。"
+      "translation": "“饱和脂肪”是主要存在于肉类和奶制品中的脂肪，被认为对健康有害。"
     },
     {
       "text": "A deep sleep is when your body is fully asleep and able to rest.",
-      "translation": "饱和脂肪是主要存在于肉类和乳制品中的脂肪，被认为对健康有害。"
+      "translation": "“深度睡眠”是指你的身体完全睡着并能够休息。"
     },
     {
       "text": "Supplements are tablets or other things which contain particular nutrients you might not get in your everyday diet.",
-      "translation": "深睡眠是指身体完全睡着并能够得到休息的状态。"
+      "translation": "“补充剂”是含有你日常饮食中可能摄取不到的特定营养素的药片或其他东西。"
     },
     {
       "text": "To feed information means to give lots of it in a continuous way.",
-      "translation": "补充剂是含有日常饮食中可能摄取不到的特定营养素的药片或其他东西。"
+      "translation": "“被喂信息”指的是持续不断地接收到大量信息。"
     },
     {
-      "text": "And a magic bullet is a simple and effective solution, and it's often one that doesn't exist.",
-      "translation": "\"feed information\"意思是以持续的方式给人灌输大量信息。"
+      "text": "And a magic bullet is a simple and effective solution,",
+      "translation": "“灵丹妙药”是一种简单有效的解决办法，"
     },
     {
-      "text": "Once again, our six minutes are up, but don't forget you can test what you've learned with the worksheet on our website.",
-      "translation": "而\"magic bullet\"是一种简单有效的解决办法，而且通常这种办法并不存在。"
+      "text": "and it's often one that doesn't exist.",
+      "translation": "而且往往是不存在的那种。"
+    },
+    {
+      "text": "Once again, our six minutes are up,",
+      "translation": "我们的六分钟时间又到了，"
+    },
+    {
+      "text": "but don't forget you can test what you've learned with the worksheet on our website.",
+      "translation": "但别忘了，你可以用我们网站上的练习题测试一下自己学到了什么。"
     },
     {
       "text": "Go to bbclearningenglish.com.",
-      "translation": "又到了节目的六分钟结束的时候了，但别忘了你可以用我们网站上的练习题来测试你学到了什么。"
-    },
-    {
-      "text": "Thanks for joining us and goodbye.",
       "translation": "访问 bbclearningenglish.com。"
     },
     {
-      "text": "Goodbye!",
+      "text": "Thanks for joining us and goodbye.",
       "translation": "感谢收听，再见。"
+    },
+    {
+      "text": "Goodbye!",
+      "translation": "再见！"
     }
   ]
 }
