@@ -1,5 +1,11 @@
 [
   {
+    "id": "261122",
+    "title": "Learning from different generations",
+    "pub_date": "2026-11-22",
+    "bbc_url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english_2026/ep-261122"
+  },
+  {
     "id": "261105",
     "title": "Could vaccines cure cancer?",
     "pub_date": "2026-11-05",
@@ -16,11 +22,5 @@
     "title": "What should you eat for a better night’s sleep?",
     "pub_date": "2026-10-22",
     "bbc_url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english_2026/ep-261022"
-  },
-  {
-    "id": "261015",
-    "title": "Why do people buy gold?",
-    "pub_date": "2026-10-15",
-    "bbc_url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english_2026/ep-261015"
   }
 ]
