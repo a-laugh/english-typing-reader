@@ -23,7 +23,7 @@ import re
 import sys
 import time
 import uuid
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 import edge_tts
@@ -34,6 +34,8 @@ INDEX_URL = "https://www.bbc.co.uk/learningenglish/english/features/6-minute-eng
 EPISODE_PATH_RE = re.compile(
     r"^/learningenglish/english/features/6-minute-english_(\d{4})/ep-(\d{6})$"
 )
+# 索引卡片 .details h3 的显示文本，如 "Episode 261112 / 12 Nov 2026"
+CARD_DATE_RE = re.compile(r"(\d{1,2}\s+[A-Z][a-z]{2}\s+\d{4})")
 DATA_DIR = Path(__file__).resolve().parent / "docs" / "data" / "episodes"
 
 # 全局内建词表（历史剧集挖掘 + 周构建自生长）：{清洗词: 中文释义}。
@@ -84,11 +86,32 @@ def http_get(url: str) -> str:
 # 索引页解析
 # ---------------------------------------------------------------------------
 
+def _card_pub_date(a) -> date | None:
+    """向上找剧集卡片（.details h3）里的显示日期并解析；找不到返回 None。"""
+    node = a
+    for _ in range(5):
+        node = node.parent
+        if node is None or not hasattr(node, "select_one"):
+            break
+        h3 = node.select_one(".details h3")
+        if h3 is None:
+            continue
+        dm = CARD_DATE_RE.search(h3.get_text(" ", strip=True))
+        if dm is None:
+            return None
+        try:
+            return datetime.strptime(dm.group(1), "%d %b %Y").date()
+        except ValueError:
+            return None
+    return None
+
+
 def parse_index(html: str) -> list[dict]:
     """解析栏目索引页，返回去重后的剧集列表（按页面出现顺序）。
 
     ep 链接形如 /learningenglish/english/features/6-minute-english_2026/ep-261029，
-    ep 号本身编码日期 YYMMDD，与 URL 年份段互相印证。
+    发布日期优先取卡片上显示的日期文本（如 "12 Nov 2026"）：BBC 偶发 slug 手误
+    （ep-261122 实际 12 Nov 发布），slug 编码的 YYMMDD 只做兜底。
     """
     soup = BeautifulSoup(html, "lxml")
     seen: dict[str, dict] = {}
@@ -97,10 +120,12 @@ def parse_index(html: str) -> list[dict]:
         if not m:
             continue
         year, ep_num = int(m.group(1)), m.group(2)
-        try:
-            pub_date = date(year, int(ep_num[2:4]), int(ep_num[4:6]))
-        except ValueError:
-            continue
+        pub_date = _card_pub_date(a)
+        if pub_date is None:
+            try:
+                pub_date = date(year, int(ep_num[2:4]), int(ep_num[4:6]))
+            except ValueError:
+                continue
         ep_id = ep_num
         if ep_id not in seen:
             seen[ep_id] = {

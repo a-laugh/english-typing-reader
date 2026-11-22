@@ -59,6 +59,35 @@ def test_parse_index_date_decoding(index_episodes):
     assert by_id["261015"]["pub_date"] == "2026-10-15"
 
 
+def test_parse_index_card_date_overrides_slug():
+    """slug 手误时以卡片显示日期为准（真实事件：ep-261122 实际 12 Nov 2026 发布）。"""
+    html = """
+    <li class="course-content-item"><div class="text">
+      <h2><a href="/learningenglish/english/features/6-minute-english_2026/ep-261122">
+        Learning from different generations</a></h2>
+      <div class="details"><h3><b>Episode 261112</b> / 12 Nov 2026</h3></div>
+    </div></li>
+    <li class="course-content-item"><div class="text">
+      <h2><a href="/learningenglish/english/features/6-minute-english_2026/ep-261119">
+        Are microplastics harming us?</a></h2>
+      <div class="details"><h3><b>Episode 261119</b> / 19 Nov 2026</h3></div>
+    </div></li>
+    """
+    by_id = {e["id"]: e for e in fetcher.parse_index(html)}
+    assert by_id["261122"]["pub_date"] == "2026-11-12"
+    assert by_id["261119"]["pub_date"] == "2026-11-19"
+
+
+def test_parse_index_slug_date_fallback():
+    """卡片无日期文本（改版兜底）时回退 slug 编码的 YYMMDD。"""
+    html = (
+        '<h2><a href="/learningenglish/english/features/6-minute-english_2026/ep-261105">'
+        "Could vaccines cure cancer?</a></h2>"
+    )
+    eps = fetcher.parse_index(html)
+    assert eps[0]["pub_date"] == "2026-11-05"
+
+
 # ---------------------------------------------------------------- 剧集页
 
 
